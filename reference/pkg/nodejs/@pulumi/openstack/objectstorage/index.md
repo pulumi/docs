@@ -8,12 +8,15 @@ title: Module objectstorage
 
 * <a href="#Container">class Container</a>
 * <a href="#ContainerObject">class ContainerObject</a>
+* <a href="#TempUrl">class TempUrl</a>
 * <a href="#ContainerArgs">interface ContainerArgs</a>
 * <a href="#ContainerObjectArgs">interface ContainerObjectArgs</a>
 * <a href="#ContainerObjectState">interface ContainerObjectState</a>
 * <a href="#ContainerState">interface ContainerState</a>
+* <a href="#TempUrlArgs">interface TempUrlArgs</a>
+* <a href="#TempUrlState">interface TempUrlState</a>
 
-<a href="/objectstorage/container.ts">objectstorage/container.ts</a> <a href="/objectstorage/containerObject.ts">objectstorage/containerObject.ts</a> 
+<a href="/objectstorage/container.ts">objectstorage/container.ts</a> <a href="/objectstorage/containerObject.ts">objectstorage/containerObject.ts</a> <a href="/objectstorage/tempUrl.ts">objectstorage/tempUrl.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Container">
@@ -507,6 +510,178 @@ public transId: pulumi.Output<string>;
 
 A unique transaction ID for this request. Your service provider might
 need this value if you report a problem.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="TempUrl">
+<a class="pdoc-member-name" href="/objectstorage/tempUrl.ts#L16">class TempUrl</a>
+</h2>
+
+Use this resource to generate an OpenStack Object Storage temporary URL.
+
+The temporary URL will be valid for as long as TTL is set to (in seconds).
+Once the URL has expired, it will no longer be valid, but the resource
+will remain in place. If you wish to automatically regenerate a URL, set
+the `regenerate` argument to `true`. This will create a new resource with
+a new ID and URL.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L61">constructor</a>
+</h3>
+
+```typescript
+new TempUrl(name: string, args: TempUrlArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a TempUrl resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L25">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TempUrlState): TempUrl
+```
+
+
+Get an existing TempUrl resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L32">property container</a>
+</h3>
+
+```typescript
+public container: pulumi.Output<string>;
+```
+
+
+The container name the object belongs to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L37">property method</a>
+</h3>
+
+```typescript
+public method: pulumi.Output<string | undefined>;
+```
+
+
+The method allowed when accessing this URL.
+Valid values are `GET`, and `POST`. Default is `GET`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L41">property object</a>
+</h3>
+
+```typescript
+public object: pulumi.Output<string>;
+```
+
+
+The object name the tempurl is for.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L47">property regenerate</a>
+</h3>
+
+```typescript
+public regenerate: pulumi.Output<boolean | undefined>;
+```
+
+
+Whether to automatically regenerate the URL when
+it has expired. If set to true, this will create a new resource with a new
+ID and new URL. Defaults to false.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L51">property region</a>
+</h3>
+
+```typescript
+public region: pulumi.Output<string>;
+```
+
+
+The region the tempurl is located in.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L52">property split</a>
+</h3>
+
+```typescript
+public split: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L57">property ttl</a>
+</h3>
+
+```typescript
+public ttl: pulumi.Output<number>;
+```
+
+
+The TTL, in seconds, for the URL. For how long it should
+be valid.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L61">property url</a>
+</h3>
+
+```typescript
+public url: pulumi.Output<string>;
+```
+
+
+The URL
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1190,4 +1365,183 @@ region?: pulumi.Input<string>;
 The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
+
+<h2 class="pdoc-module-header" id="TempUrlArgs">
+<a class="pdoc-member-name" href="/objectstorage/tempUrl.ts#L149">interface TempUrlArgs</a>
+</h2>
+
+The set of arguments for constructing a TempUrl resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L153">property container</a>
+</h3>
+
+```typescript
+container: pulumi.Input<string>;
+```
+
+
+The container name the object belongs to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L158">property method</a>
+</h3>
+
+```typescript
+method?: pulumi.Input<string>;
+```
+
+
+The method allowed when accessing this URL.
+Valid values are `GET`, and `POST`. Default is `GET`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L162">property object</a>
+</h3>
+
+```typescript
+object: pulumi.Input<string>;
+```
+
+
+The object name the tempurl is for.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L168">property regenerate</a>
+</h3>
+
+```typescript
+regenerate?: pulumi.Input<boolean>;
+```
+
+
+Whether to automatically regenerate the URL when
+it has expired. If set to true, this will create a new resource with a new
+ID and new URL. Defaults to false.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L172">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region the tempurl is located in.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L173">property split</a>
+</h3>
+
+```typescript
+split?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L178">property ttl</a>
+</h3>
+
+```typescript
+ttl: pulumi.Input<number>;
+```
+
+
+The TTL, in seconds, for the URL. For how long it should
+be valid.
+
+<h2 class="pdoc-module-header" id="TempUrlState">
+<a class="pdoc-member-name" href="/objectstorage/tempUrl.ts#L110">interface TempUrlState</a>
+</h2>
+
+Input properties used for looking up and filtering TempUrl resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L114">property container</a>
+</h3>
+
+```typescript
+container?: pulumi.Input<string>;
+```
+
+
+The container name the object belongs to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L119">property method</a>
+</h3>
+
+```typescript
+method?: pulumi.Input<string>;
+```
+
+
+The method allowed when accessing this URL.
+Valid values are `GET`, and `POST`. Default is `GET`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L123">property object</a>
+</h3>
+
+```typescript
+object?: pulumi.Input<string>;
+```
+
+
+The object name the tempurl is for.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L129">property regenerate</a>
+</h3>
+
+```typescript
+regenerate?: pulumi.Input<boolean>;
+```
+
+
+Whether to automatically regenerate the URL when
+it has expired. If set to true, this will create a new resource with a new
+ID and new URL. Defaults to false.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L133">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region the tempurl is located in.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L134">property split</a>
+</h3>
+
+```typescript
+split?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L139">property ttl</a>
+</h3>
+
+```typescript
+ttl?: pulumi.Input<number>;
+```
+
+
+The TTL, in seconds, for the URL. For how long it should
+be valid.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/objectstorage/tempUrl.ts#L143">property url</a>
+</h3>
+
+```typescript
+url?: pulumi.Input<string>;
+```
+
+
+The URL
 

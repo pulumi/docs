@@ -86,7 +86,7 @@ public charset: pulumi.Output<string>;
 The charset value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
-for more details and supported values. Postgres databases are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features),
+for more details and supported values. Postgres databases are in beta
 and have limited `charset` support; they only support a value of `UTF8` at creation time.
 
 <h3 class="pdoc-member-header">
@@ -101,7 +101,7 @@ public collation: pulumi.Output<string>;
 The collation value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
-for more details and supported values. Postgres databases are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features),
+for more details and supported values. Postgres databases are in beta
 and have limited `collation` support; they only support a value of `en_US.UTF8` at creation time.
 
 <h3 class="pdoc-member-header">
@@ -256,7 +256,7 @@ The MySQL version to
 use. Can be `MYSQL_5_6`, `MYSQL_5_7` or `POSTGRES_9_6` for second-generation
 instances, or `MYSQL_5_5` or `MYSQL_5_6` for first-generation instances.
 See [Second Generation Capabilities](https://cloud.google.com/sql/docs/1st-2nd-gen-differences)
-for more information. `POSTGRES_9_6` support is in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features).
+for more information. `POSTGRES_9_6` support is in beta.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L46">property firstIpAddress</a>
@@ -573,7 +573,7 @@ charset?: pulumi.Input<string>;
 The charset value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
-for more details and supported values. Postgres databases are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features),
+for more details and supported values. Postgres databases are in beta
 and have limited `charset` support; they only support a value of `UTF8` at creation time.
 
 <h3 class="pdoc-member-header">
@@ -588,7 +588,7 @@ collation?: pulumi.Input<string>;
 The collation value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
-for more details and supported values. Postgres databases are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features),
+for more details and supported values. Postgres databases are in beta
 and have limited `collation` support; they only support a value of `en_US.UTF8` at creation time.
 
 <h3 class="pdoc-member-header">
@@ -644,7 +644,7 @@ The MySQL version to
 use. Can be `MYSQL_5_6`, `MYSQL_5_7` or `POSTGRES_9_6` for second-generation
 instances, or `MYSQL_5_5` or `MYSQL_5_6` for first-generation instances.
 See [Second Generation Capabilities](https://cloud.google.com/sql/docs/1st-2nd-gen-differences)
-for more information. `POSTGRES_9_6` support is in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features).
+for more information. `POSTGRES_9_6` support is in beta.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L235">property masterInstanceName</a>
@@ -756,7 +756,7 @@ The MySQL version to
 use. Can be `MYSQL_5_6`, `MYSQL_5_7` or `POSTGRES_9_6` for second-generation
 instances, or `MYSQL_5_5` or `MYSQL_5_6` for first-generation instances.
 See [Second Generation Capabilities](https://cloud.google.com/sql/docs/1st-2nd-gen-differences)
-for more information. `POSTGRES_9_6` support is in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features).
+for more information. `POSTGRES_9_6` support is in beta.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/sql/databaseInstance.ts#L166">property firstIpAddress</a>
@@ -908,7 +908,7 @@ charset?: pulumi.Input<string>;
 The charset value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
-for more details and supported values. Postgres databases are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features),
+for more details and supported values. Postgres databases are in beta
 and have limited `charset` support; they only support a value of `UTF8` at creation time.
 
 <h3 class="pdoc-member-header">
@@ -923,7 +923,7 @@ collation?: pulumi.Input<string>;
 The collation value. See MySQL's
 [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html)
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
-for more details and supported values. Postgres databases are in [Beta](https://www.terraform.io/docs/providers/google/index.html#beta-features),
+for more details and supported values. Postgres databases are in beta
 and have limited `collation` support; they only support a value of `en_US.UTF8` at creation time.
 
 <h3 class="pdoc-member-header">

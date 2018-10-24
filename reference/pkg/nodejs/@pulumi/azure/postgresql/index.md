@@ -10,6 +10,7 @@ title: Module postgresql
 * <a href="#Database">class Database</a>
 * <a href="#FirewallRule">class FirewallRule</a>
 * <a href="#Server">class Server</a>
+* <a href="#VirtualNetworkRule">class VirtualNetworkRule</a>
 * <a href="#ConfigurationArgs">interface ConfigurationArgs</a>
 * <a href="#ConfigurationState">interface ConfigurationState</a>
 * <a href="#DatabaseArgs">interface DatabaseArgs</a>
@@ -18,8 +19,10 @@ title: Module postgresql
 * <a href="#FirewallRuleState">interface FirewallRuleState</a>
 * <a href="#ServerArgs">interface ServerArgs</a>
 * <a href="#ServerState">interface ServerState</a>
+* <a href="#VirtualNetworkRuleArgs">interface VirtualNetworkRuleArgs</a>
+* <a href="#VirtualNetworkRuleState">interface VirtualNetworkRuleState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/configuration.ts">postgresql/configuration.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/database.ts">postgresql/database.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/firewallRule.ts">postgresql/firewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/server.ts">postgresql/server.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/configuration.ts">postgresql/configuration.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/database.ts">postgresql/database.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/firewallRule.ts">postgresql/firewallRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/server.ts">postgresql/server.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts">postgresql/virtualNetworkRule.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Configuration">
@@ -606,6 +609,140 @@ public version: pulumi.Output<string>;
 
 
 Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, and `10.0`. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="VirtualNetworkRule">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L12">class VirtualNetworkRule</a>
+</h2>
+
+Manages a PostgreSQL Virtual Network Rule.
+
+-> **NOTE:** PostgreSQL Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet)
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L44">constructor</a>
+</h3>
+
+```typescript
+new VirtualNetworkRule(name: string, args: VirtualNetworkRuleArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a VirtualNetworkRule resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkRuleState): VirtualNetworkRule
+```
+
+
+Get an existing VirtualNetworkRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L28">property ignoreMissingVnetServiceEndpoint</a>
+</h3>
+
+```typescript
+public ignoreMissingVnetServiceEndpoint: pulumi.Output<boolean | undefined>;
+```
+
+
+Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L32">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L36">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L40">property serverName</a>
+</h3>
+
+```typescript
+public serverName: pulumi.Output<string>;
+```
+
+
+The name of the SQL Server to which this PostgreSQL virtual network rule will be applied to. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L44">property subnetId</a>
+</h3>
+
+```typescript
+public subnetId: pulumi.Output<string>;
+```
+
+
+The ID of the subnet that the PostgreSQL server will be connected to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="ConfigurationArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/configuration.ts#L101">interface ConfigurationArgs</a>
@@ -1197,4 +1334,126 @@ version?: pulumi.Input<string>;
 
 
 Specifies the version of PostgreSQL to use. Valid values are `9.5`, `9.6`, and `10.0`. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="VirtualNetworkRuleArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L113">interface VirtualNetworkRuleArgs</a>
+</h2>
+
+The set of arguments for constructing a VirtualNetworkRule resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L117">property ignoreMissingVnetServiceEndpoint</a>
+</h3>
+
+```typescript
+ignoreMissingVnetServiceEndpoint?: pulumi.Input<boolean>;
+```
+
+
+Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L121">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L125">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L129">property serverName</a>
+</h3>
+
+```typescript
+serverName: pulumi.Input<string>;
+```
+
+
+The name of the SQL Server to which this PostgreSQL virtual network rule will be applied to. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L133">property subnetId</a>
+</h3>
+
+```typescript
+subnetId: pulumi.Input<string>;
+```
+
+
+The ID of the subnet that the PostgreSQL server will be connected to.
+
+<h2 class="pdoc-module-header" id="VirtualNetworkRuleState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L87">interface VirtualNetworkRuleState</a>
+</h2>
+
+Input properties used for looking up and filtering VirtualNetworkRule resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L91">property ignoreMissingVnetServiceEndpoint</a>
+</h3>
+
+```typescript
+ignoreMissingVnetServiceEndpoint?: pulumi.Input<boolean>;
+```
+
+
+Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L95">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L99">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L103">property serverName</a>
+</h3>
+
+```typescript
+serverName?: pulumi.Input<string>;
+```
+
+
+The name of the SQL Server to which this PostgreSQL virtual network rule will be applied to. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/postgresql/virtualNetworkRule.ts#L107">property subnetId</a>
+</h3>
+
+```typescript
+subnetId?: pulumi.Input<string>;
+```
+
+
+The ID of the subnet that the PostgreSQL server will be connected to.
 

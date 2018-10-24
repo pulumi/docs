@@ -41,7 +41,7 @@ and
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L210">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L227">constructor</a>
 </h3>
 
 ```typescript
@@ -137,7 +137,7 @@ public description: pulumi.Output<string | undefined>;
 Description of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L54">property enableBinaryAuthorization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L56">property enableBinaryAuthorization</a>
 </h3>
 
 ```typescript
@@ -147,9 +147,11 @@ public enableBinaryAuthorization: pulumi.Output<boolean | undefined>;
 
 Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L60">property enableKubernetesAlpha</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L62">property enableKubernetesAlpha</a>
 </h3>
 
 ```typescript
@@ -162,7 +164,7 @@ this cluster. Note that when this option is enabled, the cluster cannot be upgra
 and will be automatically deleted after 30 days.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L67">property enableLegacyAbac</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L69">property enableLegacyAbac</a>
 </h3>
 
 ```typescript
@@ -176,7 +178,21 @@ will have statically granted permissions beyond those provided by the RBAC confi
 Defaults to `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L71">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L76">property enableTpu</a>
+</h3>
+
+```typescript
+public enableTpu: pulumi.Output<boolean | undefined>;
+```
+
+
+Whether to enable Cloud TPU resources in this cluster.
+See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L80">property endpoint</a>
 </h3>
 
 ```typescript
@@ -199,7 +215,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L76">property initialNodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L85">property initialNodeCount</a>
 </h3>
 
 ```typescript
@@ -211,7 +227,7 @@ The number of nodes to create in this
 cluster (not including the Kubernetes master). Must be set if `node_pool` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L81">property instanceGroupUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L90">property instanceGroupUrls</a>
 </h3>
 
 ```typescript
@@ -223,7 +239,7 @@ List of instance group URLs which have been assigned
 to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L87">property ipAllocationPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L96">property ipAllocationPolicy</a>
 </h3>
 
 ```typescript
@@ -236,7 +252,7 @@ This will activate IP aliases. See the [official documentation](https://cloud.go
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L93">property loggingService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L102">property loggingService</a>
 </h3>
 
 ```typescript
@@ -249,7 +265,7 @@ write logs to. Available options include `logging.googleapis.com`,
 `logging.googleapis.com/kubernetes` (beta), and `none`. Defaults to `logging.googleapis.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L98">property maintenancePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L107">property maintenancePolicy</a>
 </h3>
 
 ```typescript
@@ -261,7 +277,7 @@ The maintenance policy to use for the cluster. Structure is
 documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L103">property masterAuth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L112">property masterAuth</a>
 </h3>
 
 ```typescript
@@ -273,7 +289,7 @@ The authentication information for accessing the
 Kubernetes master. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L109">property masterAuthorizedNetworksConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L118">property masterAuthorizedNetworksConfig</a>
 </h3>
 
 ```typescript
@@ -286,7 +302,7 @@ for master authorized networks. Omit the nested `cidr_blocks` attribute to disal
 external access (except the cluster node IPs, which GKE automatically whitelists).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L115">property masterIpv4CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L127">property masterIpv4CidrBlock</a>
 </h3>
 
 ```typescript
@@ -294,12 +310,15 @@ public masterIpv4CidrBlock: pulumi.Output<string | undefined>;
 ```
 
 
-) Specifies a private
+Specifies a private
 [RFC1918](https://tools.ietf.org/html/rfc1918) block for the master's VPC. The master range must not overlap with any subnet in your cluster's VPC.
 The master and your cluster use VPC peering. Must be specified in CIDR notation and must be `/28` subnet.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+This field is deprecated, use `private_cluster_config.master_ipv4_cidr_block` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L121">property masterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L133">property masterVersion</a>
 </h3>
 
 ```typescript
@@ -312,7 +331,7 @@ be different than the `min_master_version` set in the config if the master
 has been updated by GKE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L129">property minMasterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L141">property minMasterVersion</a>
 </h3>
 
 ```typescript
@@ -327,7 +346,7 @@ If unset, the cluster's version will be set by GKE to the version of the most re
 official release (which is not necessarily the latest version).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L139">property monitoringService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L151">property monitoringService</a>
 </h3>
 
 ```typescript
@@ -344,7 +363,7 @@ Available options include
 Defaults to `monitoring.googleapis.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L144">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L156">property name</a>
 </h3>
 
 ```typescript
@@ -356,7 +375,7 @@ The name of the cluster, unique within the project and
 zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L150">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L162">property network</a>
 </h3>
 
 ```typescript
@@ -369,7 +388,7 @@ network to which the cluster is connected. For Shared VPC, set this to the self 
 shared network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L156">property networkPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L168">property networkPolicy</a>
 </h3>
 
 ```typescript
@@ -382,7 +401,7 @@ Configuration options for the
 feature. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L161">property nodeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L173">property nodeConfig</a>
 </h3>
 
 ```typescript
@@ -394,7 +413,7 @@ Parameters used in creating the cluster's nodes.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L166">property nodePools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L178">property nodePools</a>
 </h3>
 
 ```typescript
@@ -406,7 +425,7 @@ List of node pools associated with this cluster.
 See google_container_node_pool for schema.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L172">property nodeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L184">property nodeVersion</a>
 </h3>
 
 ```typescript
@@ -419,7 +438,7 @@ or set to the same value as `min_master_version` on create. Defaults to the defa
 version set by GKE which is not necessarily the latest version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L178">property podSecurityPolicyConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L192">property podSecurityPolicyConfig</a>
 </h3>
 
 ```typescript
@@ -427,12 +446,14 @@ public podSecurityPolicyConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-) Configuration for the
+Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L185">property privateCluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L202">property privateCluster</a>
 </h3>
 
 ```typescript
@@ -440,13 +461,16 @@ public privateCluster: pulumi.Output<boolean | undefined>;
 ```
 
 
-) If true, a
+If true, a
 [private cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters) will be created, meaning
 nodes do not get public IP addresses. It is mandatory to specify `master_ipv4_cidr_block` and
 `ip_allocation_policy` with this option.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+This field is deprecated, use `private_cluster_config.enable_private_nodes` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L190">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L207">property project</a>
 </h3>
 
 ```typescript
@@ -458,7 +482,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L191">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L208">property region</a>
 </h3>
 
 ```typescript
@@ -466,7 +490,7 @@ public region: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L195">property removeDefaultNodePool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L212">property removeDefaultNodePool</a>
 </h3>
 
 ```typescript
@@ -477,7 +501,7 @@ public removeDefaultNodePool: pulumi.Output<boolean | undefined>;
 If true, deletes the default node pool upon cluster creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L199">property resourceLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L216">property resourceLabels</a>
 </h3>
 
 ```typescript
@@ -488,7 +512,7 @@ public resourceLabels: pulumi.Output<{ ... } | undefined>;
 The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L204">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L221">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -512,7 +536,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L210">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L227">property zone</a>
 </h3>
 
 ```typescript
@@ -534,7 +558,7 @@ and
 [API](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L90">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L94">constructor</a>
 </h3>
 
 ```typescript
@@ -648,20 +672,22 @@ Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L51">property maxPodsPerNode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L53">property maxPodsPerNode</a>
 </h3>
 
 ```typescript
-public maxPodsPerNode: pulumi.Output<number | undefined>;
+public maxPodsPerNode: pulumi.Output<number>;
 ```
 
 
 The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
 pools belonging to clusters that do not have IP Aliasing enabled.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L56">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L58">property name</a>
 </h3>
 
 ```typescript
@@ -673,7 +699,7 @@ The name of the node pool. If left blank, Terraform will
 auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L61">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L63">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -685,7 +711,7 @@ Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L66">property nodeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L68">property nodeConfig</a>
 </h3>
 
 ```typescript
@@ -697,7 +723,7 @@ The node configuration of the pool. See
 google_container_cluster for schema.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L71">property nodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L73">property nodeCount</a>
 </h3>
 
 ```typescript
@@ -709,7 +735,7 @@ The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L76">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L78">property project</a>
 </h3>
 
 ```typescript
@@ -721,7 +747,7 @@ The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L80">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L84">property region</a>
 </h3>
 
 ```typescript
@@ -730,6 +756,8 @@ public region: pulumi.Output<string | undefined>;
 
 
 The region in which the cluster resides (for regional clusters).
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -744,7 +772,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L86">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L90">property version</a>
 </h3>
 
 ```typescript
@@ -757,7 +785,7 @@ and `auto_upgrade` are both specified, they will fight each other for what the n
 be, so setting both is highly discouraged.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L90">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L94">property zone</a>
 </h3>
 
 ```typescript
@@ -834,13 +862,13 @@ This data source fetches the project name, and provides the appropriate URLs to 
 The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.
 
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L488">interface ClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L524">interface ClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L495">property additionalZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L531">property additionalZones</a>
 </h3>
 
 ```typescript
@@ -854,7 +882,7 @@ configured, the number of nodes specified in `initial_node_count` is created in
 all specified zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L500">property addonsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L536">property addonsConfig</a>
 </h3>
 
 ```typescript
@@ -866,7 +894,7 @@ The configuration for addons supported by GKE.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L505">property clusterIpv4Cidr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L541">property clusterIpv4Cidr</a>
 </h3>
 
 ```typescript
@@ -878,7 +906,7 @@ The IP address range of the kubernetes pods in
 this cluster. Default is an automatically assigned CIDR.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L509">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L545">property description</a>
 </h3>
 
 ```typescript
@@ -889,7 +917,7 @@ description?: pulumi.Input<string>;
 Description of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L514">property enableBinaryAuthorization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L552">property enableBinaryAuthorization</a>
 </h3>
 
 ```typescript
@@ -899,9 +927,11 @@ enableBinaryAuthorization?: pulumi.Input<boolean>;
 
 Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L520">property enableKubernetesAlpha</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L558">property enableKubernetesAlpha</a>
 </h3>
 
 ```typescript
@@ -914,7 +944,7 @@ this cluster. Note that when this option is enabled, the cluster cannot be upgra
 and will be automatically deleted after 30 days.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L527">property enableLegacyAbac</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L565">property enableLegacyAbac</a>
 </h3>
 
 ```typescript
@@ -928,7 +958,21 @@ will have statically granted permissions beyond those provided by the RBAC confi
 Defaults to `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L532">property initialNodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L572">property enableTpu</a>
+</h3>
+
+```typescript
+enableTpu?: pulumi.Input<boolean>;
+```
+
+
+Whether to enable Cloud TPU resources in this cluster.
+See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L577">property initialNodeCount</a>
 </h3>
 
 ```typescript
@@ -940,7 +984,7 @@ The number of nodes to create in this
 cluster (not including the Kubernetes master). Must be set if `node_pool` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L538">property ipAllocationPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L583">property ipAllocationPolicy</a>
 </h3>
 
 ```typescript
@@ -953,7 +997,7 @@ This will activate IP aliases. See the [official documentation](https://cloud.go
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L544">property loggingService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L589">property loggingService</a>
 </h3>
 
 ```typescript
@@ -966,7 +1010,7 @@ write logs to. Available options include `logging.googleapis.com`,
 `logging.googleapis.com/kubernetes` (beta), and `none`. Defaults to `logging.googleapis.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L549">property maintenancePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L594">property maintenancePolicy</a>
 </h3>
 
 ```typescript
@@ -978,7 +1022,7 @@ The maintenance policy to use for the cluster. Structure is
 documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L554">property masterAuth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L599">property masterAuth</a>
 </h3>
 
 ```typescript
@@ -990,7 +1034,7 @@ The authentication information for accessing the
 Kubernetes master. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L560">property masterAuthorizedNetworksConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L605">property masterAuthorizedNetworksConfig</a>
 </h3>
 
 ```typescript
@@ -1003,7 +1047,7 @@ for master authorized networks. Omit the nested `cidr_blocks` attribute to disal
 external access (except the cluster node IPs, which GKE automatically whitelists).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L566">property masterIpv4CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L614">property masterIpv4CidrBlock</a>
 </h3>
 
 ```typescript
@@ -1011,12 +1055,15 @@ masterIpv4CidrBlock?: pulumi.Input<string>;
 ```
 
 
-) Specifies a private
+Specifies a private
 [RFC1918](https://tools.ietf.org/html/rfc1918) block for the master's VPC. The master range must not overlap with any subnet in your cluster's VPC.
 The master and your cluster use VPC peering. Must be specified in CIDR notation and must be `/28` subnet.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+This field is deprecated, use `private_cluster_config.master_ipv4_cidr_block` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L574">property minMasterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L622">property minMasterVersion</a>
 </h3>
 
 ```typescript
@@ -1031,7 +1078,7 @@ If unset, the cluster's version will be set by GKE to the version of the most re
 official release (which is not necessarily the latest version).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L584">property monitoringService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L632">property monitoringService</a>
 </h3>
 
 ```typescript
@@ -1048,7 +1095,7 @@ Available options include
 Defaults to `monitoring.googleapis.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L589">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L637">property name</a>
 </h3>
 
 ```typescript
@@ -1060,7 +1107,7 @@ The name of the cluster, unique within the project and
 zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L595">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L643">property network</a>
 </h3>
 
 ```typescript
@@ -1073,7 +1120,7 @@ network to which the cluster is connected. For Shared VPC, set this to the self 
 shared network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L601">property networkPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L649">property networkPolicy</a>
 </h3>
 
 ```typescript
@@ -1086,7 +1133,7 @@ Configuration options for the
 feature. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L606">property nodeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L654">property nodeConfig</a>
 </h3>
 
 ```typescript
@@ -1098,7 +1145,7 @@ Parameters used in creating the cluster's nodes.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L611">property nodePools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L659">property nodePools</a>
 </h3>
 
 ```typescript
@@ -1110,7 +1157,7 @@ List of node pools associated with this cluster.
 See google_container_node_pool for schema.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L617">property nodeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L665">property nodeVersion</a>
 </h3>
 
 ```typescript
@@ -1123,7 +1170,7 @@ or set to the same value as `min_master_version` on create. Defaults to the defa
 version set by GKE which is not necessarily the latest version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L623">property podSecurityPolicyConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L673">property podSecurityPolicyConfig</a>
 </h3>
 
 ```typescript
@@ -1131,12 +1178,14 @@ podSecurityPolicyConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-) Configuration for the
+Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L630">property privateCluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L683">property privateCluster</a>
 </h3>
 
 ```typescript
@@ -1144,13 +1193,16 @@ privateCluster?: pulumi.Input<boolean>;
 ```
 
 
-) If true, a
+If true, a
 [private cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters) will be created, meaning
 nodes do not get public IP addresses. It is mandatory to specify `master_ipv4_cidr_block` and
 `ip_allocation_policy` with this option.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+This field is deprecated, use `private_cluster_config.enable_private_nodes` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L635">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L688">property project</a>
 </h3>
 
 ```typescript
@@ -1162,7 +1214,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L636">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L689">property region</a>
 </h3>
 
 ```typescript
@@ -1170,7 +1222,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L640">property removeDefaultNodePool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L693">property removeDefaultNodePool</a>
 </h3>
 
 ```typescript
@@ -1181,7 +1233,7 @@ removeDefaultNodePool?: pulumi.Input<boolean>;
 If true, deletes the default node pool upon cluster creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L644">property resourceLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L697">property resourceLabels</a>
 </h3>
 
 ```typescript
@@ -1192,7 +1244,7 @@ resourceLabels?: pulumi.Input<{ ... }>;
 The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L649">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L702">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -1204,7 +1256,7 @@ The name or self_link of the Google Compute Engine subnetwork in
 which the cluster's instances are launched.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L655">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L708">property zone</a>
 </h3>
 
 ```typescript
@@ -1217,13 +1269,13 @@ in `initial_node_count` should be created in. Only one of `zone` and `region`
 may be set. If neither zone nor region are set, the provider zone is used.
 
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L300">interface ClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L319">interface ClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L307">property additionalZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L326">property additionalZones</a>
 </h3>
 
 ```typescript
@@ -1237,7 +1289,7 @@ configured, the number of nodes specified in `initial_node_count` is created in
 all specified zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L312">property addonsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L331">property addonsConfig</a>
 </h3>
 
 ```typescript
@@ -1249,7 +1301,7 @@ The configuration for addons supported by GKE.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L317">property clusterIpv4Cidr</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L336">property clusterIpv4Cidr</a>
 </h3>
 
 ```typescript
@@ -1261,7 +1313,7 @@ The IP address range of the kubernetes pods in
 this cluster. Default is an automatically assigned CIDR.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L321">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L340">property description</a>
 </h3>
 
 ```typescript
@@ -1272,7 +1324,7 @@ description?: pulumi.Input<string>;
 Description of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L326">property enableBinaryAuthorization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L347">property enableBinaryAuthorization</a>
 </h3>
 
 ```typescript
@@ -1282,9 +1334,11 @@ enableBinaryAuthorization?: pulumi.Input<boolean>;
 
 Enable Binary Authorization for this cluster.
 If enabled, all container images will be validated by Google Binary Authorization.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L332">property enableKubernetesAlpha</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L353">property enableKubernetesAlpha</a>
 </h3>
 
 ```typescript
@@ -1297,7 +1351,7 @@ this cluster. Note that when this option is enabled, the cluster cannot be upgra
 and will be automatically deleted after 30 days.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L339">property enableLegacyAbac</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L360">property enableLegacyAbac</a>
 </h3>
 
 ```typescript
@@ -1311,7 +1365,21 @@ will have statically granted permissions beyond those provided by the RBAC confi
 Defaults to `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L343">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L367">property enableTpu</a>
+</h3>
+
+```typescript
+enableTpu?: pulumi.Input<boolean>;
+```
+
+
+Whether to enable Cloud TPU resources in this cluster.
+See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L371">property endpoint</a>
 </h3>
 
 ```typescript
@@ -1322,7 +1390,7 @@ endpoint?: pulumi.Input<string>;
 The IP address of this cluster's Kubernetes master.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L348">property initialNodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L376">property initialNodeCount</a>
 </h3>
 
 ```typescript
@@ -1334,7 +1402,7 @@ The number of nodes to create in this
 cluster (not including the Kubernetes master). Must be set if `node_pool` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L353">property instanceGroupUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L381">property instanceGroupUrls</a>
 </h3>
 
 ```typescript
@@ -1346,7 +1414,7 @@ List of instance group URLs which have been assigned
 to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L359">property ipAllocationPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L387">property ipAllocationPolicy</a>
 </h3>
 
 ```typescript
@@ -1359,7 +1427,7 @@ This will activate IP aliases. See the [official documentation](https://cloud.go
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L365">property loggingService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L393">property loggingService</a>
 </h3>
 
 ```typescript
@@ -1372,7 +1440,7 @@ write logs to. Available options include `logging.googleapis.com`,
 `logging.googleapis.com/kubernetes` (beta), and `none`. Defaults to `logging.googleapis.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L370">property maintenancePolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L398">property maintenancePolicy</a>
 </h3>
 
 ```typescript
@@ -1384,7 +1452,7 @@ The maintenance policy to use for the cluster. Structure is
 documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L375">property masterAuth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L403">property masterAuth</a>
 </h3>
 
 ```typescript
@@ -1396,7 +1464,7 @@ The authentication information for accessing the
 Kubernetes master. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L381">property masterAuthorizedNetworksConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L409">property masterAuthorizedNetworksConfig</a>
 </h3>
 
 ```typescript
@@ -1409,7 +1477,7 @@ for master authorized networks. Omit the nested `cidr_blocks` attribute to disal
 external access (except the cluster node IPs, which GKE automatically whitelists).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L387">property masterIpv4CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L418">property masterIpv4CidrBlock</a>
 </h3>
 
 ```typescript
@@ -1417,12 +1485,15 @@ masterIpv4CidrBlock?: pulumi.Input<string>;
 ```
 
 
-) Specifies a private
+Specifies a private
 [RFC1918](https://tools.ietf.org/html/rfc1918) block for the master's VPC. The master range must not overlap with any subnet in your cluster's VPC.
 The master and your cluster use VPC peering. Must be specified in CIDR notation and must be `/28` subnet.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+This field is deprecated, use `private_cluster_config.master_ipv4_cidr_block` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L393">property masterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L424">property masterVersion</a>
 </h3>
 
 ```typescript
@@ -1435,7 +1506,7 @@ be different than the `min_master_version` set in the config if the master
 has been updated by GKE.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L401">property minMasterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L432">property minMasterVersion</a>
 </h3>
 
 ```typescript
@@ -1450,7 +1521,7 @@ If unset, the cluster's version will be set by GKE to the version of the most re
 official release (which is not necessarily the latest version).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L411">property monitoringService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L442">property monitoringService</a>
 </h3>
 
 ```typescript
@@ -1467,7 +1538,7 @@ Available options include
 Defaults to `monitoring.googleapis.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L416">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L447">property name</a>
 </h3>
 
 ```typescript
@@ -1479,7 +1550,7 @@ The name of the cluster, unique within the project and
 zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L422">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L453">property network</a>
 </h3>
 
 ```typescript
@@ -1492,7 +1563,7 @@ network to which the cluster is connected. For Shared VPC, set this to the self 
 shared network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L428">property networkPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L459">property networkPolicy</a>
 </h3>
 
 ```typescript
@@ -1505,7 +1576,7 @@ Configuration options for the
 feature. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L433">property nodeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L464">property nodeConfig</a>
 </h3>
 
 ```typescript
@@ -1517,7 +1588,7 @@ Parameters used in creating the cluster's nodes.
 Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L438">property nodePools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L469">property nodePools</a>
 </h3>
 
 ```typescript
@@ -1529,7 +1600,7 @@ List of node pools associated with this cluster.
 See google_container_node_pool for schema.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L444">property nodeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L475">property nodeVersion</a>
 </h3>
 
 ```typescript
@@ -1542,7 +1613,7 @@ or set to the same value as `min_master_version` on create. Defaults to the defa
 version set by GKE which is not necessarily the latest version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L450">property podSecurityPolicyConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L483">property podSecurityPolicyConfig</a>
 </h3>
 
 ```typescript
@@ -1550,12 +1621,14 @@ podSecurityPolicyConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-) Configuration for the
+Configuration for the
 [PodSecurityPolicy](https://cloud.google.com/kubernetes-engine/docs/how-to/pod-security-policies) feature.
 Structure is documented below.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L457">property privateCluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L493">property privateCluster</a>
 </h3>
 
 ```typescript
@@ -1563,13 +1636,16 @@ privateCluster?: pulumi.Input<boolean>;
 ```
 
 
-) If true, a
+If true, a
 [private cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters) will be created, meaning
 nodes do not get public IP addresses. It is mandatory to specify `master_ipv4_cidr_block` and
 `ip_allocation_policy` with this option.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
+This field is deprecated, use `private_cluster_config.enable_private_nodes` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L462">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L498">property project</a>
 </h3>
 
 ```typescript
@@ -1581,7 +1657,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L463">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L499">property region</a>
 </h3>
 
 ```typescript
@@ -1589,7 +1665,7 @@ region?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L467">property removeDefaultNodePool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L503">property removeDefaultNodePool</a>
 </h3>
 
 ```typescript
@@ -1600,7 +1676,7 @@ removeDefaultNodePool?: pulumi.Input<boolean>;
 If true, deletes the default node pool upon cluster creation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L471">property resourceLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L507">property resourceLabels</a>
 </h3>
 
 ```typescript
@@ -1611,7 +1687,7 @@ resourceLabels?: pulumi.Input<{ ... }>;
 The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L476">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L512">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -1623,7 +1699,7 @@ The name or self_link of the Google Compute Engine subnetwork in
 which the cluster's instances are launched.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L482">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/cluster.ts#L518">property zone</a>
 </h3>
 
 ```typescript
@@ -1743,7 +1819,15 @@ enableLegacyAbac: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L47">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L47">property enableTpu</a>
+</h3>
+
+```typescript
+enableTpu: boolean;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L48">property endpoint</a>
 </h3>
 
 ```typescript
@@ -1751,7 +1835,7 @@ endpoint: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L72">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L73">property id</a>
 </h3>
 
 ```typescript
@@ -1762,7 +1846,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L48">property initialNodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L49">property initialNodeCount</a>
 </h3>
 
 ```typescript
@@ -1770,7 +1854,7 @@ initialNodeCount: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L49">property instanceGroupUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L50">property instanceGroupUrls</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1862,7 @@ instanceGroupUrls: string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L50">property ipAllocationPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L51">property ipAllocationPolicies</a>
 </h3>
 
 ```typescript
@@ -1786,7 +1870,7 @@ ipAllocationPolicies: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L51">property loggingService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L52">property loggingService</a>
 </h3>
 
 ```typescript
@@ -1794,7 +1878,7 @@ loggingService: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L52">property maintenancePolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L53">property maintenancePolicies</a>
 </h3>
 
 ```typescript
@@ -1802,7 +1886,7 @@ maintenancePolicies: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L54">property masterAuthorizedNetworksConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L55">property masterAuthorizedNetworksConfigs</a>
 </h3>
 
 ```typescript
@@ -1810,7 +1894,7 @@ masterAuthorizedNetworksConfigs: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L53">property masterAuths</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L54">property masterAuths</a>
 </h3>
 
 ```typescript
@@ -1818,7 +1902,7 @@ masterAuths: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L55">property masterIpv4CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L56">property masterIpv4CidrBlock</a>
 </h3>
 
 ```typescript
@@ -1826,7 +1910,7 @@ masterIpv4CidrBlock: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L56">property masterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L57">property masterVersion</a>
 </h3>
 
 ```typescript
@@ -1834,7 +1918,7 @@ masterVersion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L57">property minMasterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L58">property minMasterVersion</a>
 </h3>
 
 ```typescript
@@ -1842,7 +1926,7 @@ minMasterVersion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L58">property monitoringService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L59">property monitoringService</a>
 </h3>
 
 ```typescript
@@ -1850,7 +1934,7 @@ monitoringService: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L59">property network</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L60">property network</a>
 </h3>
 
 ```typescript
@@ -1858,7 +1942,7 @@ network: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L60">property networkPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L61">property networkPolicies</a>
 </h3>
 
 ```typescript
@@ -1866,7 +1950,7 @@ networkPolicies: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L61">property nodeConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L62">property nodeConfigs</a>
 </h3>
 
 ```typescript
@@ -1874,7 +1958,7 @@ nodeConfigs: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L62">property nodePools</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L63">property nodePools</a>
 </h3>
 
 ```typescript
@@ -1882,7 +1966,7 @@ nodePools: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L63">property nodeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L64">property nodeVersion</a>
 </h3>
 
 ```typescript
@@ -1890,7 +1974,7 @@ nodeVersion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L64">property podSecurityPolicyConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L65">property podSecurityPolicyConfigs</a>
 </h3>
 
 ```typescript
@@ -1898,7 +1982,7 @@ podSecurityPolicyConfigs: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L65">property privateCluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L66">property privateCluster</a>
 </h3>
 
 ```typescript
@@ -1906,7 +1990,7 @@ privateCluster: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L66">property removeDefaultNodePool</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L67">property removeDefaultNodePool</a>
 </h3>
 
 ```typescript
@@ -1914,7 +1998,7 @@ removeDefaultNodePool: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L67">property resourceLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L68">property resourceLabels</a>
 </h3>
 
 ```typescript
@@ -1922,7 +2006,7 @@ resourceLabels: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L68">property subnetwork</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getCluster.ts#L69">property subnetwork</a>
 </h3>
 
 ```typescript
@@ -1948,7 +2032,7 @@ ID of the project to list available cluster versions for. Should match the proje
 Defaults to the project that the provider is authenticated with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L51">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L52">property region</a>
 </h3>
 
 ```typescript
@@ -1958,10 +2042,11 @@ region?: string;
 
 Region to list available cluster versions for. Should match the region the cluster will be deployed in.
 For regional clusters, this value must be specified and cannot be inferred from provider-level region. One of zone,
-region, or provider-level zone is required.
+region, or provider-level zone is required. This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L56">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L57">property zone</a>
 </h3>
 
 ```typescript
@@ -1970,16 +2055,16 @@ zone?: string;
 
 
 Zone to list available cluster versions for. Should match the zone the cluster will be deployed in.
-If not specified, the provider-level zone is used. One of zone, region, or provider-level zone is required.
+If not specified, the provider-level zone is used. One of zone or provider-level zone is required.
 
 <h2 class="pdoc-module-header" id="GetEngineVersionsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L62">interface GetEngineVersionsResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L63">interface GetEngineVersionsResult</a>
 </h2>
 
 A collection of values returned by getEngineVersions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L66">property defaultClusterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L67">property defaultClusterVersion</a>
 </h3>
 
 ```typescript
@@ -1990,7 +2075,7 @@ defaultClusterVersion: string;
 Version of Kubernetes the service deploys by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L86">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L87">property id</a>
 </h3>
 
 ```typescript
@@ -2001,7 +2086,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L70">property latestMasterVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L71">property latestMasterVersion</a>
 </h3>
 
 ```typescript
@@ -2012,7 +2097,7 @@ latestMasterVersion: string;
 The latest version available in the given zone for use with master instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L74">property latestNodeVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L75">property latestNodeVersion</a>
 </h3>
 
 ```typescript
@@ -2023,7 +2108,7 @@ latestNodeVersion: string;
 The latest version available in the given zone for use with node instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L78">property validMasterVersions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L79">property validMasterVersions</a>
 </h3>
 
 ```typescript
@@ -2034,7 +2119,7 @@ validMasterVersions: string[];
 A list of versions available in the given zone for use with master instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L82">property validNodeVersions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getEngineVersions.ts#L83">property validNodeVersions</a>
 </h3>
 
 ```typescript
@@ -2179,13 +2264,13 @@ repositoryUrl: string;
 ```
 
 <h2 class="pdoc-module-header" id="NodePoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L216">interface NodePoolArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L224">interface NodePoolArgs</a>
 </h2>
 
 The set of arguments for constructing a NodePool resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L221">property autoscaling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L229">property autoscaling</a>
 </h3>
 
 ```typescript
@@ -2197,7 +2282,7 @@ Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L225">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L233">property cluster</a>
 </h3>
 
 ```typescript
@@ -2208,7 +2293,7 @@ cluster: pulumi.Input<string>;
 The cluster to create the node pool for.  Cluster must be present in `zone` provided for zonal clusters.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L230">property initialNodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L238">property initialNodeCount</a>
 </h3>
 
 ```typescript
@@ -2220,7 +2305,7 @@ The initial node count for the pool. Changing this will force
 recreation of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L235">property management</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L243">property management</a>
 </h3>
 
 ```typescript
@@ -2232,7 +2317,7 @@ Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L241">property maxPodsPerNode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L251">property maxPodsPerNode</a>
 </h3>
 
 ```typescript
@@ -2243,9 +2328,11 @@ maxPodsPerNode?: pulumi.Input<number>;
 The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
 pools belonging to clusters that do not have IP Aliasing enabled.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L246">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L256">property name</a>
 </h3>
 
 ```typescript
@@ -2257,7 +2344,7 @@ The name of the node pool. If left blank, Terraform will
 auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L251">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L261">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2269,7 +2356,7 @@ Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L256">property nodeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L266">property nodeConfig</a>
 </h3>
 
 ```typescript
@@ -2281,7 +2368,7 @@ The node configuration of the pool. See
 google_container_cluster for schema.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L261">property nodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L271">property nodeCount</a>
 </h3>
 
 ```typescript
@@ -2293,7 +2380,7 @@ The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L266">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L276">property project</a>
 </h3>
 
 ```typescript
@@ -2305,7 +2392,7 @@ The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L270">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L282">property region</a>
 </h3>
 
 ```typescript
@@ -2314,9 +2401,11 @@ region?: pulumi.Input<string>;
 
 
 The region in which the cluster resides (for regional clusters).
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L276">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L288">property version</a>
 </h3>
 
 ```typescript
@@ -2329,7 +2418,7 @@ and `auto_upgrade` are both specified, they will fight each other for what the n
 be, so setting both is highly discouraged.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L280">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L292">property zone</a>
 </h3>
 
 ```typescript
@@ -2340,13 +2429,13 @@ zone?: pulumi.Input<string>;
 The zone in which the cluster resides.
 
 <h2 class="pdoc-module-header" id="NodePoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L145">interface NodePoolState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L149">interface NodePoolState</a>
 </h2>
 
 Input properties used for looking up and filtering NodePool resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L150">property autoscaling</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L154">property autoscaling</a>
 </h3>
 
 ```typescript
@@ -2358,7 +2447,7 @@ Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L154">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L158">property cluster</a>
 </h3>
 
 ```typescript
@@ -2369,7 +2458,7 @@ cluster?: pulumi.Input<string>;
 The cluster to create the node pool for.  Cluster must be present in `zone` provided for zonal clusters.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L159">property initialNodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L163">property initialNodeCount</a>
 </h3>
 
 ```typescript
@@ -2381,7 +2470,7 @@ The initial node count for the pool. Changing this will force
 recreation of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L160">property instanceGroupUrls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L164">property instanceGroupUrls</a>
 </h3>
 
 ```typescript
@@ -2389,7 +2478,7 @@ instanceGroupUrls?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L165">property management</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L169">property management</a>
 </h3>
 
 ```typescript
@@ -2401,7 +2490,7 @@ Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L171">property maxPodsPerNode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L177">property maxPodsPerNode</a>
 </h3>
 
 ```typescript
@@ -2412,9 +2501,11 @@ maxPodsPerNode?: pulumi.Input<number>;
 The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
 pools belonging to clusters that do not have IP Aliasing enabled.
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L176">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L182">property name</a>
 </h3>
 
 ```typescript
@@ -2426,7 +2517,7 @@ The name of the node pool. If left blank, Terraform will
 auto-generate a unique name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L181">property namePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L187">property namePrefix</a>
 </h3>
 
 ```typescript
@@ -2438,7 +2529,7 @@ Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L186">property nodeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L192">property nodeConfig</a>
 </h3>
 
 ```typescript
@@ -2450,7 +2541,7 @@ The node configuration of the pool. See
 google_container_cluster for schema.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L191">property nodeCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L197">property nodeCount</a>
 </h3>
 
 ```typescript
@@ -2462,7 +2553,7 @@ The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L196">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L202">property project</a>
 </h3>
 
 ```typescript
@@ -2474,7 +2565,7 @@ The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L200">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L208">property region</a>
 </h3>
 
 ```typescript
@@ -2483,9 +2574,11 @@ region?: pulumi.Input<string>;
 
 
 The region in which the cluster resides (for regional clusters).
+This property is in beta, and should be used with the terraform-provider-google-beta provider.
+See [Provider Versions](https://terraform.io/docs/providers/google/provider_versions.html) for more details on beta fields.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L206">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L214">property version</a>
 </h3>
 
 ```typescript
@@ -2498,7 +2591,7 @@ and `auto_upgrade` are both specified, they will fight each other for what the n
 be, so setting both is highly discouraged.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L210">property zone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L218">property zone</a>
 </h3>
 
 ```typescript

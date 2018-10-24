@@ -12,11 +12,17 @@ title: Module compute
 * <a href="#Image">class Image</a>
 * <a href="#ManagedDisk">class ManagedDisk</a>
 * <a href="#ScaleSet">class ScaleSet</a>
+* <a href="#SharedImage">class SharedImage</a>
+* <a href="#SharedImageGallery">class SharedImageGallery</a>
+* <a href="#SharedImageVersion">class SharedImageVersion</a>
 * <a href="#Snapshot">class Snapshot</a>
 * <a href="#VirtualMachine">class VirtualMachine</a>
 * <a href="#getImage">function getImage</a>
 * <a href="#getManagedDisk">function getManagedDisk</a>
 * <a href="#getPlatformImage">function getPlatformImage</a>
+* <a href="#getSharedImage">function getSharedImage</a>
+* <a href="#getSharedImageGallery">function getSharedImageGallery</a>
+* <a href="#getSharedImageVersion">function getSharedImageVersion</a>
 * <a href="#getSnapshot">function getSnapshot</a>
 * <a href="#AvailabilitySetArgs">interface AvailabilitySetArgs</a>
 * <a href="#AvailabilitySetState">interface AvailabilitySetState</a>
@@ -30,6 +36,12 @@ title: Module compute
 * <a href="#GetManagedDiskResult">interface GetManagedDiskResult</a>
 * <a href="#GetPlatformImageArgs">interface GetPlatformImageArgs</a>
 * <a href="#GetPlatformImageResult">interface GetPlatformImageResult</a>
+* <a href="#GetSharedImageArgs">interface GetSharedImageArgs</a>
+* <a href="#GetSharedImageGalleryArgs">interface GetSharedImageGalleryArgs</a>
+* <a href="#GetSharedImageGalleryResult">interface GetSharedImageGalleryResult</a>
+* <a href="#GetSharedImageResult">interface GetSharedImageResult</a>
+* <a href="#GetSharedImageVersionArgs">interface GetSharedImageVersionArgs</a>
+* <a href="#GetSharedImageVersionResult">interface GetSharedImageVersionResult</a>
 * <a href="#GetSnapshotArgs">interface GetSnapshotArgs</a>
 * <a href="#GetSnapshotResult">interface GetSnapshotResult</a>
 * <a href="#ImageArgs">interface ImageArgs</a>
@@ -38,12 +50,18 @@ title: Module compute
 * <a href="#ManagedDiskState">interface ManagedDiskState</a>
 * <a href="#ScaleSetArgs">interface ScaleSetArgs</a>
 * <a href="#ScaleSetState">interface ScaleSetState</a>
+* <a href="#SharedImageArgs">interface SharedImageArgs</a>
+* <a href="#SharedImageGalleryArgs">interface SharedImageGalleryArgs</a>
+* <a href="#SharedImageGalleryState">interface SharedImageGalleryState</a>
+* <a href="#SharedImageState">interface SharedImageState</a>
+* <a href="#SharedImageVersionArgs">interface SharedImageVersionArgs</a>
+* <a href="#SharedImageVersionState">interface SharedImageVersionState</a>
 * <a href="#SnapshotArgs">interface SnapshotArgs</a>
 * <a href="#SnapshotState">interface SnapshotState</a>
 * <a href="#VirtualMachineArgs">interface VirtualMachineArgs</a>
 * <a href="#VirtualMachineState">interface VirtualMachineState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/availabilitySet.ts">compute/availabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts">compute/dataDiskAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts">compute/extension.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts">compute/getImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts">compute/getManagedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts">compute/getPlatformImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts">compute/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/image.ts">compute/image.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts">compute/managedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts">compute/scaleSet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/snapshot.ts">compute/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts">compute/virtualMachine.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/availabilitySet.ts">compute/availabilitySet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/dataDiskAttachment.ts">compute/dataDiskAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts">compute/extension.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getImage.ts">compute/getImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts">compute/getManagedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts">compute/getPlatformImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts">compute/getSharedImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts">compute/getSharedImageGallery.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts">compute/getSharedImageVersion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts">compute/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/image.ts">compute/image.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts">compute/managedDisk.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts">compute/scaleSet.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts">compute/sharedImage.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts">compute/sharedImageGallery.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts">compute/sharedImageVersion.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/snapshot.ts">compute/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/virtualMachine.ts">compute/virtualMachine.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="AvailabilitySet">
@@ -1272,6 +1290,523 @@ public zones: pulumi.Output<string[] | undefined>;
 
 A collection of availability zones to spread the Virtual Machines over.
 
+<h2 class="pdoc-module-header" id="SharedImage">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L12">class SharedImage</a>
+</h2>
+
+Manages a Shared Image within a Shared Image Gallery.
+
+-> **NOTE** Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L65">constructor</a>
+</h3>
+
+```typescript
+new SharedImage(name: string, args: SharedImageArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a SharedImage resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageState): SharedImage
+```
+
+
+Get an existing SharedImage resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L28">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+A description of this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L32">property eula</a>
+</h3>
+
+```typescript
+public eula: pulumi.Output<string | undefined>;
+```
+
+
+The End User Licence Agreement for the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L36">property galleryName</a>
+</h3>
+
+```typescript
+public galleryName: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L37">property identifier</a>
+</h3>
+
+```typescript
+public identifier: pulumi.Output<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L41">property location</a>
+</h3>
+
+```typescript
+public location: pulumi.Output<string>;
+```
+
+
+Specifies the supported Azure location where the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L45">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Shared Image. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L49">property osType</a>
+</h3>
+
+```typescript
+public osType: pulumi.Output<string>;
+```
+
+
+The type of Operating System present in this Shared Image. Possible values are `Linux` and `Windows`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L53">property privacyStatementUri</a>
+</h3>
+
+```typescript
+public privacyStatementUri: pulumi.Output<string | undefined>;
+```
+
+
+The URI containing the Privacy Statement associated with this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L57">property releaseNoteUri</a>
+</h3>
+
+```typescript
+public releaseNoteUri: pulumi.Output<string | undefined>;
+```
+
+
+The URI containing the Release Notes associated with this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L61">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L65">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... }>;
+```
+
+
+A mapping of tags to assign to the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="SharedImageGallery">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L12">class SharedImageGallery</a>
+</h2>
+
+Manages a Shared Image Gallery.
+
+-> **NOTE** Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L45">constructor</a>
+</h3>
+
+```typescript
+new SharedImageGallery(name: string, args: SharedImageGalleryArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a SharedImageGallery resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageGalleryState): SharedImageGallery
+```
+
+
+Get an existing SharedImageGallery resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L28">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+A description for this Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L32">property location</a>
+</h3>
+
+```typescript
+public location: pulumi.Output<string>;
+```
+
+
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L36">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Shared Image Gallery. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L40">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which to create the Shared Image Gallery. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L44">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... }>;
+```
+
+
+A mapping of tags to assign to the Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L45">property uniqueName</a>
+</h3>
+
+```typescript
+public uniqueName: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="SharedImageVersion">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L12">class SharedImageVersion</a>
+</h2>
+
+Manages a Version of a Shared Image within a Shared Image Gallery.
+
+-> **NOTE** Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L60">constructor</a>
+</h3>
+
+```typescript
+new SharedImageVersion(name: string, args: SharedImageVersionArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a SharedImageVersion resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageVersionState): SharedImageVersion
+```
+
+
+Get an existing SharedImageVersion resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L28">property excludeFromLatest</a>
+</h3>
+
+```typescript
+public excludeFromLatest: pulumi.Output<boolean | undefined>;
+```
+
+
+Should this Image Version be excluded from the `latest` filter? If set to `true` this Image Version won't be returned for the `latest` version. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L32">property galleryName</a>
+</h3>
+
+```typescript
+public galleryName: pulumi.Output<string>;
+```
+
+
+The name of the Shared Image Gallery in which the Shared Image exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L36">property imageName</a>
+</h3>
+
+```typescript
+public imageName: pulumi.Output<string>;
+```
+
+
+The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L40">property location</a>
+</h3>
+
+```typescript
+public location: pulumi.Output<string>;
+```
+
+
+The Azure Region in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L44">property managedImageId</a>
+</h3>
+
+```typescript
+public managedImageId: pulumi.Output<string>;
+```
+
+
+The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L48">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L52">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the Resource Group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L56">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... }>;
+```
+
+
+A collection of tags which should be applied to this resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L60">property targetRegions</a>
+</h3>
+
+```typescript
+public targetRegions: pulumi.Output<{ ... }[]>;
+```
+
+
+One or more `target_region` blocks as documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="Snapshot">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/snapshot.ts#L10">class Snapshot</a>
 </h2>
@@ -1783,7 +2318,7 @@ getImage(args: GetImageArgs, opts?: pulumi.InvokeOptions): Promise<GetImageResul
 ```
 
 
-Use this data source to access information about an Image.
+Use this data source to access information about an existing Image.
 
 <h2 class="pdoc-module-header" id="getManagedDisk">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getManagedDisk.ts#L10">function getManagedDisk</a>
@@ -1794,7 +2329,7 @@ getManagedDisk(args: GetManagedDiskArgs, opts?: pulumi.InvokeOptions): Promise<G
 ```
 
 
-Use this data source to access the properties of an existing Azure Managed Disk.
+Use this data source to access information about an existing Managed Disk.
 
 <h2 class="pdoc-module-header" id="getPlatformImage">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts#L10">function getPlatformImage</a>
@@ -1805,7 +2340,46 @@ getPlatformImage(args: GetPlatformImageArgs, opts?: pulumi.InvokeOptions): Promi
 ```
 
 
-Use this data source to access the properties of an Azure Platform Image.
+Use this data source to access information about a Platform Image.
+
+<h2 class="pdoc-module-header" id="getSharedImage">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L12">function getSharedImage</a>
+</h2>
+
+```typescript
+getSharedImage(args: GetSharedImageArgs, opts?: pulumi.InvokeOptions): Promise<GetSharedImageResult>
+```
+
+
+Use this data source to access information about an existing Shared Image within a Shared Image Gallery.
+
+-> **NOTE** Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/).
+
+<h2 class="pdoc-module-header" id="getSharedImageGallery">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L12">function getSharedImageGallery</a>
+</h2>
+
+```typescript
+getSharedImageGallery(args: GetSharedImageGalleryArgs, opts?: pulumi.InvokeOptions): Promise<GetSharedImageGalleryResult>
+```
+
+
+Use this data source to access information about an existing Shared Image Gallery.
+
+-> **NOTE** Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/).
+
+<h2 class="pdoc-module-header" id="getSharedImageVersion">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L12">function getSharedImageVersion</a>
+</h2>
+
+```typescript
+getSharedImageVersion(args: GetSharedImageVersionArgs, opts?: pulumi.InvokeOptions): Promise<GetSharedImageVersionResult>
+```
+
+
+Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.
+
+-> **NOTE** Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/).
 
 <h2 class="pdoc-module-header" id="getSnapshot">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts#L10">function getSnapshot</a>
@@ -1816,7 +2390,7 @@ getSnapshot(args: GetSnapshotArgs, opts?: pulumi.InvokeOptions): Promise<GetSnap
 ```
 
 
-Use this data source to access the properties of a Snapshot of an Disk.
+Use this data source to access information about an existing Snapshot.
 
 <h2 class="pdoc-module-header" id="AvailabilitySetArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/availabilitySet.ts#L128">interface AvailabilitySetArgs</a>
@@ -2724,6 +3298,355 @@ version: string;
 
 
 The latest version of the Platform Image.
+
+<h2 class="pdoc-module-header" id="GetSharedImageArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L23">interface GetSharedImageArgs</a>
+</h2>
+
+A collection of arguments for invoking getSharedImage.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L27">property galleryName</a>
+</h3>
+
+```typescript
+galleryName: string;
+```
+
+
+The name of the Shared Image Gallery in which the Shared Image exists.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L31">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+The name of the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L35">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: string;
+```
+
+
+The name of the Resource Group in which the Shared Image Gallery exists.
+
+<h2 class="pdoc-module-header" id="GetSharedImageGalleryArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L22">interface GetSharedImageGalleryArgs</a>
+</h2>
+
+A collection of arguments for invoking getSharedImageGallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L26">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+The name of the Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L30">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: string;
+```
+
+
+The name of the Resource Group in which the Shared Image Gallery exists.
+
+<h2 class="pdoc-module-header" id="GetSharedImageGalleryResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L36">interface GetSharedImageGalleryResult</a>
+</h2>
+
+A collection of values returned by getSharedImageGallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L40">property description</a>
+</h3>
+
+```typescript
+description: string;
+```
+
+
+A description for the Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L53">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L41">property location</a>
+</h3>
+
+```typescript
+location: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L45">property tags</a>
+</h3>
+
+```typescript
+tags: { ... };
+```
+
+
+A mapping of tags which are assigned to the Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageGallery.ts#L49">property uniqueName</a>
+</h3>
+
+```typescript
+uniqueName: string;
+```
+
+
+The unique name assigned to the Shared Image Gallery.
+
+<h2 class="pdoc-module-header" id="GetSharedImageResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L41">interface GetSharedImageResult</a>
+</h2>
+
+A collection of values returned by getSharedImage.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L45">property description</a>
+</h3>
+
+```typescript
+description: string;
+```
+
+
+The description of this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L49">property eula</a>
+</h3>
+
+```typescript
+eula: string;
+```
+
+
+The End User Licence Agreement for the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L74">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L50">property identifiers</a>
+</h3>
+
+```typescript
+identifiers: { ... }[];
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L54">property location</a>
+</h3>
+
+```typescript
+location: string;
+```
+
+
+The supported Azure location where the Shared Image Gallery exists.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L58">property osType</a>
+</h3>
+
+```typescript
+osType: string;
+```
+
+
+The type of Operating System present in this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L62">property privacyStatementUri</a>
+</h3>
+
+```typescript
+privacyStatementUri: string;
+```
+
+
+The URI containing the Privacy Statement for this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L66">property releaseNoteUri</a>
+</h3>
+
+```typescript
+releaseNoteUri: string;
+```
+
+
+The URI containing the Release Notes for this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImage.ts#L70">property tags</a>
+</h3>
+
+```typescript
+tags: { ... };
+```
+
+
+A mapping of tags assigned to the Shared Image.
+
+<h2 class="pdoc-module-header" id="GetSharedImageVersionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L24">interface GetSharedImageVersionArgs</a>
+</h2>
+
+A collection of arguments for invoking getSharedImageVersion.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L28">property galleryName</a>
+</h3>
+
+```typescript
+galleryName: string;
+```
+
+
+The name of the Shared Image in which the Shared Image exists.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L32">property imageName</a>
+</h3>
+
+```typescript
+imageName: string;
+```
+
+
+The name of the Shared Image in which this Version exists.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L36">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+The name of the Image Version.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L40">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: string;
+```
+
+
+The name of the Resource Group in which the Shared Image Gallery exists.
+
+<h2 class="pdoc-module-header" id="GetSharedImageVersionResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L46">interface GetSharedImageVersionResult</a>
+</h2>
+
+A collection of values returned by getSharedImageVersion.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L50">property excludeFromLatest</a>
+</h3>
+
+```typescript
+excludeFromLatest: boolean;
+```
+
+
+Is this Image Version excluded from the `latest` filter?
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L70">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L54">property location</a>
+</h3>
+
+```typescript
+location: string;
+```
+
+
+The supported Azure location where the Shared Image Gallery exists.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L58">property managedImageId</a>
+</h3>
+
+```typescript
+managedImageId: string;
+```
+
+
+The ID of the Managed Image which was the source of this Shared Image Version.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L62">property tags</a>
+</h3>
+
+```typescript
+tags: { ... };
+```
+
+
+A mapping of tags assigned to the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSharedImageVersion.ts#L66">property targetRegions</a>
+</h3>
+
+```typescript
+targetRegions: { ... }[];
+```
+
+
+One or more `target_region` blocks as documented below.
 
 <h2 class="pdoc-module-header" id="GetSnapshotArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getSnapshot.ts#L20">interface GetSnapshotArgs</a>
@@ -3841,6 +4764,594 @@ zones?: pulumi.Input<pulumi.Input<string>[]>;
 
 
 A collection of availability zones to spread the Virtual Machines over.
+
+<h2 class="pdoc-module-header" id="SharedImageArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L173">interface SharedImageArgs</a>
+</h2>
+
+The set of arguments for constructing a SharedImage resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L177">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description of this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L181">property eula</a>
+</h3>
+
+```typescript
+eula?: pulumi.Input<string>;
+```
+
+
+The End User Licence Agreement for the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L185">property galleryName</a>
+</h3>
+
+```typescript
+galleryName: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L186">property identifier</a>
+</h3>
+
+```typescript
+identifier: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L190">property location</a>
+</h3>
+
+```typescript
+location: pulumi.Input<string>;
+```
+
+
+Specifies the supported Azure location where the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L194">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Shared Image. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L198">property osType</a>
+</h3>
+
+```typescript
+osType: pulumi.Input<string>;
+```
+
+
+The type of Operating System present in this Shared Image. Possible values are `Linux` and `Windows`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L202">property privacyStatementUri</a>
+</h3>
+
+```typescript
+privacyStatementUri?: pulumi.Input<string>;
+```
+
+
+The URI containing the Privacy Statement associated with this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L206">property releaseNoteUri</a>
+</h3>
+
+```typescript
+releaseNoteUri?: pulumi.Input<string>;
+```
+
+
+The URI containing the Release Notes associated with this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L210">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L214">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the Shared Image.
+
+<h2 class="pdoc-module-header" id="SharedImageGalleryArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L114">interface SharedImageGalleryArgs</a>
+</h2>
+
+The set of arguments for constructing a SharedImageGallery resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L118">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description for this Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L122">property location</a>
+</h3>
+
+```typescript
+location: pulumi.Input<string>;
+```
+
+
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L126">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Shared Image Gallery. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L130">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which to create the Shared Image Gallery. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L134">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the Shared Image Gallery.
+
+<h2 class="pdoc-module-header" id="SharedImageGalleryState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L87">interface SharedImageGalleryState</a>
+</h2>
+
+Input properties used for looking up and filtering SharedImageGallery resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L91">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description for this Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L95">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L99">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Shared Image Gallery. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L103">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which to create the Shared Image Gallery. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L107">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the Shared Image Gallery.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageGallery.ts#L108">property uniqueName</a>
+</h3>
+
+```typescript
+uniqueName?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="SharedImageState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L126">interface SharedImageState</a>
+</h2>
+
+Input properties used for looking up and filtering SharedImage resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L130">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description of this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L134">property eula</a>
+</h3>
+
+```typescript
+eula?: pulumi.Input<string>;
+```
+
+
+The End User Licence Agreement for the Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L138">property galleryName</a>
+</h3>
+
+```typescript
+galleryName?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L139">property identifier</a>
+</h3>
+
+```typescript
+identifier?: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L143">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+
+Specifies the supported Azure location where the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L147">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Shared Image. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L151">property osType</a>
+</h3>
+
+```typescript
+osType?: pulumi.Input<string>;
+```
+
+
+The type of Operating System present in this Shared Image. Possible values are `Linux` and `Windows`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L155">property privacyStatementUri</a>
+</h3>
+
+```typescript
+privacyStatementUri?: pulumi.Input<string>;
+```
+
+
+The URI containing the Privacy Statement associated with this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L159">property releaseNoteUri</a>
+</h3>
+
+```typescript
+releaseNoteUri?: pulumi.Input<string>;
+```
+
+
+The URI containing the Release Notes associated with this Shared Image.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L163">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImage.ts#L167">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the Shared Image.
+
+<h2 class="pdoc-module-header" id="SharedImageVersionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L162">interface SharedImageVersionArgs</a>
+</h2>
+
+The set of arguments for constructing a SharedImageVersion resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L166">property excludeFromLatest</a>
+</h3>
+
+```typescript
+excludeFromLatest?: pulumi.Input<boolean>;
+```
+
+
+Should this Image Version be excluded from the `latest` filter? If set to `true` this Image Version won't be returned for the `latest` version. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L170">property galleryName</a>
+</h3>
+
+```typescript
+galleryName: pulumi.Input<string>;
+```
+
+
+The name of the Shared Image Gallery in which the Shared Image exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L174">property imageName</a>
+</h3>
+
+```typescript
+imageName: pulumi.Input<string>;
+```
+
+
+The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L178">property location</a>
+</h3>
+
+```typescript
+location: pulumi.Input<string>;
+```
+
+
+The Azure Region in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L182">property managedImageId</a>
+</h3>
+
+```typescript
+managedImageId: pulumi.Input<string>;
+```
+
+
+The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L186">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L190">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the Resource Group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L194">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A collection of tags which should be applied to this resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L198">property targetRegions</a>
+</h3>
+
+```typescript
+targetRegions: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+One or more `target_region` blocks as documented below.
+
+<h2 class="pdoc-module-header" id="SharedImageVersionState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L120">interface SharedImageVersionState</a>
+</h2>
+
+Input properties used for looking up and filtering SharedImageVersion resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L124">property excludeFromLatest</a>
+</h3>
+
+```typescript
+excludeFromLatest?: pulumi.Input<boolean>;
+```
+
+
+Should this Image Version be excluded from the `latest` filter? If set to `true` this Image Version won't be returned for the `latest` version. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L128">property galleryName</a>
+</h3>
+
+```typescript
+galleryName?: pulumi.Input<string>;
+```
+
+
+The name of the Shared Image Gallery in which the Shared Image exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L132">property imageName</a>
+</h3>
+
+```typescript
+imageName?: pulumi.Input<string>;
+```
+
+
+The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L136">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+
+The Azure Region in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L140">property managedImageId</a>
+</h3>
+
+```typescript
+managedImageId?: pulumi.Input<string>;
+```
+
+
+The ID of the Managed Image which should be used for this Shared Image Version. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L144">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The version number for this Image Version, such as `1.0.0`. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L148">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the Resource Group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L152">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A collection of tags which should be applied to this resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/sharedImageVersion.ts#L156">property targetRegions</a>
+</h3>
+
+```typescript
+targetRegions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+One or more `target_region` blocks as documented below.
 
 <h2 class="pdoc-module-header" id="SnapshotArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/snapshot.ts#L149">interface SnapshotArgs</a>

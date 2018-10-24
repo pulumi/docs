@@ -26,7 +26,7 @@ and
 [API](https://cloud.google.com/functions/docs/apis).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L89">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L96">constructor</a>
 </h3>
 
 ```typescript
@@ -117,7 +117,18 @@ public environmentVariables: pulumi.Output<{ ... } | undefined>;
 A set of key/value environment variable pairs to assign to the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L45">property httpsTriggerUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L45">property eventTrigger</a>
+</h3>
+
+```typescript
+public eventTrigger: pulumi.Output<{ ... }>;
+```
+
+
+A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L49">property httpsTriggerUrl</a>
 </h3>
 
 ```typescript
@@ -140,7 +151,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L49">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L53">property labels</a>
 </h3>
 
 ```typescript
@@ -151,7 +162,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A set of key/value label pairs to assign to the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L53">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L57">property name</a>
 </h3>
 
 ```typescript
@@ -162,7 +173,7 @@ public name: pulumi.Output<string>;
 A user-defined name of the function. Function names must be unique globally.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L57">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L61">property project</a>
 </h3>
 
 ```typescript
@@ -173,7 +184,7 @@ public project: pulumi.Output<string>;
 Project of the function. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L61">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L65">property region</a>
 </h3>
 
 ```typescript
@@ -184,18 +195,19 @@ public region: pulumi.Output<string>;
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L65">property retryOnFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L70">property retryOnFailure</a>
 </h3>
 
 ```typescript
-public retryOnFailure: pulumi.Output<boolean | undefined>;
+public retryOnFailure: pulumi.Output<boolean>;
 ```
 
 
 Whether the function should be retried on failure. This only applies to bucket and topic triggers, not HTTPS triggers.
+Deprecated. Use `event_trigger.failure_policy.retry` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L69">property sourceArchiveBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L74">property sourceArchiveBucket</a>
 </h3>
 
 ```typescript
@@ -206,7 +218,7 @@ public sourceArchiveBucket: pulumi.Output<string>;
 The GCS bucket containing the zip archive which contains the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L73">property sourceArchiveObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L78">property sourceArchiveObject</a>
 </h3>
 
 ```typescript
@@ -217,7 +229,7 @@ public sourceArchiveObject: pulumi.Output<string>;
 The source archive object (file) in archive bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L77">property timeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L82">property timeout</a>
 </h3>
 
 ```typescript
@@ -228,18 +240,19 @@ public timeout: pulumi.Output<number | undefined>;
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L81">property triggerBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L87">property triggerBucket</a>
 </h3>
 
 ```typescript
-public triggerBucket: pulumi.Output<string | undefined>;
+public triggerBucket: pulumi.Output<string>;
 ```
 
 
 Google Cloud Storage bucket name. Every change in files in this bucket will trigger function execution. Cannot be used with `trigger_http` and `trigger_topic`.
+Deprecated. Use `event_trigger` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L85">property triggerHttp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L91">property triggerHttp</a>
 </h3>
 
 ```typescript
@@ -250,15 +263,16 @@ public triggerHttp: pulumi.Output<boolean | undefined>;
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L89">property triggerTopic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L96">property triggerTopic</a>
 </h3>
 
 ```typescript
-public triggerTopic: pulumi.Output<string | undefined>;
+public triggerTopic: pulumi.Output<string>;
 ```
 
 
 Name of Pub/Sub topic. Every message published in this topic will trigger function execution with message contents passed as input data. Cannot be used with `trigger_http` and `trigger_bucket`.
+Deprecated. Use `event_trigger` instead.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -286,13 +300,13 @@ the [official documentation](https://cloud.google.com/functions/docs/)
 and [API](https://cloud.google.com/functions/docs/apis).
 
 <h2 class="pdoc-module-header" id="FunctionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L221">interface FunctionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L237">interface FunctionArgs</a>
 </h2>
 
 The set of arguments for constructing a Function resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L225">property availableMemoryMb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L241">property availableMemoryMb</a>
 </h3>
 
 ```typescript
@@ -303,7 +317,7 @@ availableMemoryMb?: pulumi.Input<number>;
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L229">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L245">property description</a>
 </h3>
 
 ```typescript
@@ -314,7 +328,7 @@ description?: pulumi.Input<string>;
 Description of the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L233">property entryPoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L249">property entryPoint</a>
 </h3>
 
 ```typescript
@@ -325,7 +339,7 @@ entryPoint?: pulumi.Input<string>;
 Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L237">property environmentVariables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L253">property environmentVariables</a>
 </h3>
 
 ```typescript
@@ -336,7 +350,18 @@ environmentVariables?: pulumi.Input<{ ... }>;
 A set of key/value environment variable pairs to assign to the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L241">property httpsTriggerUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L257">property eventTrigger</a>
+</h3>
+
+```typescript
+eventTrigger?: pulumi.Input<{ ... }>;
+```
+
+
+A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L261">property httpsTriggerUrl</a>
 </h3>
 
 ```typescript
@@ -347,7 +372,7 @@ httpsTriggerUrl?: pulumi.Input<string>;
 URL which triggers function execution. Returned only if `trigger_http` is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L245">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L265">property labels</a>
 </h3>
 
 ```typescript
@@ -358,7 +383,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L249">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L269">property name</a>
 </h3>
 
 ```typescript
@@ -369,7 +394,7 @@ name?: pulumi.Input<string>;
 A user-defined name of the function. Function names must be unique globally.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L253">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L273">property project</a>
 </h3>
 
 ```typescript
@@ -380,7 +405,7 @@ project?: pulumi.Input<string>;
 Project of the function. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L257">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L277">property region</a>
 </h3>
 
 ```typescript
@@ -391,7 +416,7 @@ region?: pulumi.Input<string>;
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L261">property retryOnFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L282">property retryOnFailure</a>
 </h3>
 
 ```typescript
@@ -400,9 +425,10 @@ retryOnFailure?: pulumi.Input<boolean>;
 
 
 Whether the function should be retried on failure. This only applies to bucket and topic triggers, not HTTPS triggers.
+Deprecated. Use `event_trigger.failure_policy.retry` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L265">property sourceArchiveBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L286">property sourceArchiveBucket</a>
 </h3>
 
 ```typescript
@@ -413,7 +439,7 @@ sourceArchiveBucket: pulumi.Input<string>;
 The GCS bucket containing the zip archive which contains the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L269">property sourceArchiveObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L290">property sourceArchiveObject</a>
 </h3>
 
 ```typescript
@@ -424,7 +450,7 @@ sourceArchiveObject: pulumi.Input<string>;
 The source archive object (file) in archive bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L273">property timeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L294">property timeout</a>
 </h3>
 
 ```typescript
@@ -435,7 +461,7 @@ timeout?: pulumi.Input<number>;
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L277">property triggerBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L299">property triggerBucket</a>
 </h3>
 
 ```typescript
@@ -444,9 +470,10 @@ triggerBucket?: pulumi.Input<string>;
 
 
 Google Cloud Storage bucket name. Every change in files in this bucket will trigger function execution. Cannot be used with `trigger_http` and `trigger_topic`.
+Deprecated. Use `event_trigger` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L281">property triggerHttp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L303">property triggerHttp</a>
 </h3>
 
 ```typescript
@@ -457,7 +484,7 @@ triggerHttp?: pulumi.Input<boolean>;
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L285">property triggerTopic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L308">property triggerTopic</a>
 </h3>
 
 ```typescript
@@ -466,15 +493,16 @@ triggerTopic?: pulumi.Input<string>;
 
 
 Name of Pub/Sub topic. Every message published in this topic will trigger function execution with message contents passed as input data. Cannot be used with `trigger_http` and `trigger_bucket`.
+Deprecated. Use `event_trigger` instead.
 
 <h2 class="pdoc-module-header" id="FunctionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L151">interface FunctionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L160">interface FunctionState</a>
 </h2>
 
 Input properties used for looking up and filtering Function resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L155">property availableMemoryMb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L164">property availableMemoryMb</a>
 </h3>
 
 ```typescript
@@ -485,7 +513,7 @@ availableMemoryMb?: pulumi.Input<number>;
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L159">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L168">property description</a>
 </h3>
 
 ```typescript
@@ -496,7 +524,7 @@ description?: pulumi.Input<string>;
 Description of the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L163">property entryPoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L172">property entryPoint</a>
 </h3>
 
 ```typescript
@@ -507,7 +535,7 @@ entryPoint?: pulumi.Input<string>;
 Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L167">property environmentVariables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L176">property environmentVariables</a>
 </h3>
 
 ```typescript
@@ -518,7 +546,18 @@ environmentVariables?: pulumi.Input<{ ... }>;
 A set of key/value environment variable pairs to assign to the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L171">property httpsTriggerUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L180">property eventTrigger</a>
+</h3>
+
+```typescript
+eventTrigger?: pulumi.Input<{ ... }>;
+```
+
+
+A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L184">property httpsTriggerUrl</a>
 </h3>
 
 ```typescript
@@ -529,7 +568,7 @@ httpsTriggerUrl?: pulumi.Input<string>;
 URL which triggers function execution. Returned only if `trigger_http` is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L175">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L188">property labels</a>
 </h3>
 
 ```typescript
@@ -540,7 +579,7 @@ labels?: pulumi.Input<{ ... }>;
 A set of key/value label pairs to assign to the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L179">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L192">property name</a>
 </h3>
 
 ```typescript
@@ -551,7 +590,7 @@ name?: pulumi.Input<string>;
 A user-defined name of the function. Function names must be unique globally.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L183">property project</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L196">property project</a>
 </h3>
 
 ```typescript
@@ -562,7 +601,7 @@ project?: pulumi.Input<string>;
 Project of the function. If it is not provided, the provider project is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L187">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L200">property region</a>
 </h3>
 
 ```typescript
@@ -573,7 +612,7 @@ region?: pulumi.Input<string>;
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L191">property retryOnFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L205">property retryOnFailure</a>
 </h3>
 
 ```typescript
@@ -582,9 +621,10 @@ retryOnFailure?: pulumi.Input<boolean>;
 
 
 Whether the function should be retried on failure. This only applies to bucket and topic triggers, not HTTPS triggers.
+Deprecated. Use `event_trigger.failure_policy.retry` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L195">property sourceArchiveBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L209">property sourceArchiveBucket</a>
 </h3>
 
 ```typescript
@@ -595,7 +635,7 @@ sourceArchiveBucket?: pulumi.Input<string>;
 The GCS bucket containing the zip archive which contains the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L199">property sourceArchiveObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L213">property sourceArchiveObject</a>
 </h3>
 
 ```typescript
@@ -606,7 +646,7 @@ sourceArchiveObject?: pulumi.Input<string>;
 The source archive object (file) in archive bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L203">property timeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L217">property timeout</a>
 </h3>
 
 ```typescript
@@ -617,7 +657,7 @@ timeout?: pulumi.Input<number>;
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L207">property triggerBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L222">property triggerBucket</a>
 </h3>
 
 ```typescript
@@ -626,9 +666,10 @@ triggerBucket?: pulumi.Input<string>;
 
 
 Google Cloud Storage bucket name. Every change in files in this bucket will trigger function execution. Cannot be used with `trigger_http` and `trigger_topic`.
+Deprecated. Use `event_trigger` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L211">property triggerHttp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L226">property triggerHttp</a>
 </h3>
 
 ```typescript
@@ -639,7 +680,7 @@ triggerHttp?: pulumi.Input<boolean>;
 Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L215">property triggerTopic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/function.ts#L231">property triggerTopic</a>
 </h3>
 
 ```typescript
@@ -648,6 +689,7 @@ triggerTopic?: pulumi.Input<string>;
 
 
 Name of Pub/Sub topic. Every message published in this topic will trigger function execution with message contents passed as input data. Cannot be used with `trigger_http` and `trigger_bucket`.
+Deprecated. Use `event_trigger` instead.
 
 <h2 class="pdoc-module-header" id="GetFunctionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L23">interface GetFunctionArgs</a>
@@ -738,7 +780,18 @@ environmentVariables: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L60">property httpsTriggerUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L60">property eventTriggers</a>
+</h3>
+
+```typescript
+eventTriggers: { ... }[];
+```
+
+
+A source that fires events in response to a condition in another service. Structure is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L64">property httpsTriggerUrl</a>
 </h3>
 
 ```typescript
@@ -749,7 +802,7 @@ httpsTriggerUrl: string;
 If function is triggered by HTTP, trigger URL is set here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L93">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L97">property id</a>
 </h3>
 
 ```typescript
@@ -760,7 +813,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L64">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L68">property labels</a>
 </h3>
 
 ```typescript
@@ -771,7 +824,7 @@ labels: { ... };
 A map of labels applied to this function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L65">property retryOnFailure</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L69">property retryOnFailure</a>
 </h3>
 
 ```typescript
@@ -779,7 +832,7 @@ retryOnFailure: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L69">property sourceArchiveBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L73">property sourceArchiveBucket</a>
 </h3>
 
 ```typescript
@@ -790,7 +843,7 @@ sourceArchiveBucket: string;
 The GCS bucket containing the zip archive which contains the function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L73">property sourceArchiveObject</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L77">property sourceArchiveObject</a>
 </h3>
 
 ```typescript
@@ -801,7 +854,7 @@ sourceArchiveObject: string;
 The source archive object (file) in archive bucket.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L77">property timeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L81">property timeout</a>
 </h3>
 
 ```typescript
@@ -812,7 +865,7 @@ timeout: number;
 Function execution timeout (in seconds).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L81">property triggerBucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L85">property triggerBucket</a>
 </h3>
 
 ```typescript
@@ -820,10 +873,10 @@ triggerBucket: string;
 ```
 
 
-If function is triggered by bucket, bucket name is set here.
+If function is triggered by bucket, bucket name is set here. Deprecated. Use `event_trigger` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L85">property triggerHttp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L89">property triggerHttp</a>
 </h3>
 
 ```typescript
@@ -834,7 +887,7 @@ triggerHttp: boolean;
 If function is triggered by HTTP, this boolean is set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L89">property triggerTopic</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudfunctions/getFunction.ts#L93">property triggerTopic</a>
 </h3>
 
 ```typescript
@@ -842,5 +895,5 @@ triggerTopic: string;
 ```
 
 
-If function is triggered by Pub/Sub topic, name of topic is set here.
+If function is triggered by Pub/Sub topic, name of topic is set here. Deprecated. Use `event_trigger` instead.
 

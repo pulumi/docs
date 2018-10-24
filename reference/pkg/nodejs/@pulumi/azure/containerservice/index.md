@@ -29,10 +29,13 @@ title: Module containerservice
 
 
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L7">class Group</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L10">class Group</a>
 </h2>
+
+Manage as an Azure Container Group instance.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L31">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L67">constructor</a>
 </h3>
 
 ```typescript
@@ -47,7 +50,7 @@ Create a Group resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L16">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -79,28 +82,37 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L20">property containers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L26">property containers</a>
 </h3>
 
 ```typescript
 public containers: pulumi.Output<{ ... }[]>;
 ```
 
+
+The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L21">property dnsNameLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L30">property dnsNameLabel</a>
 </h3>
 
 ```typescript
 public dnsNameLabel: pulumi.Output<string | undefined>;
 ```
 
+
+The DNS label/name for the container groups IP.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L22">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L34">property fqdn</a>
 </h3>
 
 ```typescript
 public fqdn: pulumi.Output<string>;
 ```
+
+
+The FQDN of the container group derived from `dns_name_label`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -115,71 +127,95 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L23">property imageRegistryCredentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L38">property imageRegistryCredentials</a>
 </h3>
 
 ```typescript
 public imageRegistryCredentials: pulumi.Output<{ ... }[] | undefined>;
 ```
 
+
+Set image registry credentials for the group as documented in the `image_registry_credential` block below
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L24">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L42">property ipAddress</a>
 </h3>
 
 ```typescript
 public ipAddress: pulumi.Output<string>;
 ```
 
+
+The IP address allocated to the container group.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L25">property ipAddressType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L46">property ipAddressType</a>
 </h3>
 
 ```typescript
 public ipAddressType: pulumi.Output<string | undefined>;
 ```
 
+
+Specifies the ip address type of the container. `Public` is the only acceptable value at this time. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L26">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L50">property location</a>
 </h3>
 
 ```typescript
 public location: pulumi.Output<string>;
 ```
 
+
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L27">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L54">property name</a>
 </h3>
 
 ```typescript
 public name: pulumi.Output<string>;
 ```
 
+
+Specifies the name of the Container Group. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L28">property osType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L58">property osType</a>
 </h3>
 
 ```typescript
 public osType: pulumi.Output<string>;
 ```
 
+
+The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L29">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L62">property resourceGroupName</a>
 </h3>
 
 ```typescript
 public resourceGroupName: pulumi.Output<string>;
 ```
 
+
+The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L30">property restartPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L66">property restartPolicy</a>
 </h3>
 
 ```typescript
 public restartPolicy: pulumi.Output<string | undefined>;
 ```
 
+
+Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L31">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L67">property tags</a>
 </h3>
 
 ```typescript
@@ -890,7 +926,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getKubernetesCluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L14">function getKubernetesCluster</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L13">function getKubernetesCluster</a>
 </h2>
 
 ```typescript
@@ -898,11 +934,10 @@ getKubernetesCluster(args: GetKubernetesClusterArgs, opts?: pulumi.InvokeOptions
 ```
 
 
-Gets information about a managed Kubernetes Cluster (AKS)
+Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).
 
 ~> **Note:** All arguments including the client secret will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
-
 
 <h2 class="pdoc-module-header" id="getRegistry">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getRegistry.ts#L10">function getRegistry</a>
@@ -913,16 +948,16 @@ getRegistry(args: GetRegistryArgs, opts?: pulumi.InvokeOptions): Promise<GetRegi
 ```
 
 
-Use this data source to access information about a Container Registry
+Use this data source to access information about an existing Container Registry.
 
 <h2 class="pdoc-module-header" id="GetKubernetesClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L24">interface GetKubernetesClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L23">interface GetKubernetesClusterArgs</a>
 </h2>
 
 A collection of arguments for invoking getKubernetesCluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L28">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L27">property name</a>
 </h3>
 
 ```typescript
@@ -933,7 +968,7 @@ name: string;
 The name of the managed Kubernetes Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L32">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L31">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -944,13 +979,13 @@ resourceGroupName: string;
 The name of the Resource Group in which the managed Kubernetes Cluster exists.
 
 <h2 class="pdoc-module-header" id="GetKubernetesClusterResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L38">interface GetKubernetesClusterResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L37">interface GetKubernetesClusterResult</a>
 </h2>
 
 A collection of values returned by getKubernetesCluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L42">property addonProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L41">property addonProfiles</a>
 </h3>
 
 ```typescript
@@ -961,7 +996,7 @@ addonProfiles: { ... }[];
 A `addon_profile` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L46">property agentPoolProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L45">property agentPoolProfiles</a>
 </h3>
 
 ```typescript
@@ -972,7 +1007,7 @@ agentPoolProfiles: { ... }[];
 One or more `agent_profile_pool` blocks as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L50">property dnsPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L49">property dnsPrefix</a>
 </h3>
 
 ```typescript
@@ -983,7 +1018,7 @@ dnsPrefix: string;
 The DNS Prefix of the managed Kubernetes cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L54">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L53">property fqdn</a>
 </h3>
 
 ```typescript
@@ -994,7 +1029,7 @@ fqdn: string;
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L94">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L93">property id</a>
 </h3>
 
 ```typescript
@@ -1005,7 +1040,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L62">property kubeConfigRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L61">property kubeConfigRaw</a>
 </h3>
 
 ```typescript
@@ -1016,7 +1051,7 @@ kubeConfigRaw: string;
 Base64 encoded Kubernetes configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L58">property kubeConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L57">property kubeConfigs</a>
 </h3>
 
 ```typescript
@@ -1027,7 +1062,7 @@ kubeConfigs: { ... }[];
 A `kube_config` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L66">property kubernetesVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L65">property kubernetesVersion</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1073,7 @@ kubernetesVersion: string;
 The version of Kubernetes used on the managed Kubernetes Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L70">property linuxProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L69">property linuxProfiles</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1084,7 @@ linuxProfiles: { ... }[];
 A `linux_profile` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L74">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L73">property location</a>
 </h3>
 
 ```typescript
@@ -1060,7 +1095,7 @@ location: string;
 The Azure Region in which the managed Kubernetes Cluster exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L78">property networkProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L77">property networkProfiles</a>
 </h3>
 
 ```typescript
@@ -1071,7 +1106,7 @@ networkProfiles: { ... }[];
 A `network_profile` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L82">property nodeResourceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L81">property nodeResourceGroup</a>
 </h3>
 
 ```typescript
@@ -1082,7 +1117,7 @@ nodeResourceGroup: string;
 Auto-generated Resource Group containing AKS Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L86">property servicePrincipals</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L85">property servicePrincipals</a>
 </h3>
 
 ```typescript
@@ -1093,7 +1128,7 @@ servicePrincipals: { ... }[];
 A `service_principal` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L90">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L89">property tags</a>
 </h3>
 
 ```typescript
@@ -1226,85 +1261,112 @@ storageAccountId: string;
 The ID of the Storage Account used for this Container Registry. This is only returned for `Classic` SKU's.
 
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L109">interface GroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L178">interface GroupArgs</a>
 </h2>
 
 The set of arguments for constructing a Group resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L110">property containers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L182">property containers</a>
 </h3>
 
 ```typescript
 containers: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
+
+The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L111">property dnsNameLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L186">property dnsNameLabel</a>
 </h3>
 
 ```typescript
 dnsNameLabel?: pulumi.Input<string>;
 ```
 
+
+The DNS label/name for the container groups IP.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L112">property imageRegistryCredentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L190">property imageRegistryCredentials</a>
 </h3>
 
 ```typescript
 imageRegistryCredentials?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
+
+Set image registry credentials for the group as documented in the `image_registry_credential` block below
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L113">property ipAddressType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L194">property ipAddressType</a>
 </h3>
 
 ```typescript
 ipAddressType?: pulumi.Input<string>;
 ```
 
+
+Specifies the ip address type of the container. `Public` is the only acceptable value at this time. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L114">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L198">property location</a>
 </h3>
 
 ```typescript
 location: pulumi.Input<string>;
 ```
 
+
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L115">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L202">property name</a>
 </h3>
 
 ```typescript
 name?: pulumi.Input<string>;
 ```
 
+
+Specifies the name of the Container Group. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L116">property osType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L206">property osType</a>
 </h3>
 
 ```typescript
 osType: pulumi.Input<string>;
 ```
 
+
+The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L117">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L210">property resourceGroupName</a>
 </h3>
 
 ```typescript
 resourceGroupName: pulumi.Input<string>;
 ```
 
+
+The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L118">property restartPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L214">property restartPolicy</a>
 </h3>
 
 ```typescript
 restartPolicy?: pulumi.Input<string>;
 ```
 
+
+Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L119">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L215">property tags</a>
 </h3>
 
 ```typescript
@@ -1312,101 +1374,134 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L91">interface GroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L127">interface GroupState</a>
 </h2>
 
 Input properties used for looking up and filtering Group resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L92">property containers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L131">property containers</a>
 </h3>
 
 ```typescript
 containers?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
+
+The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L93">property dnsNameLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L135">property dnsNameLabel</a>
 </h3>
 
 ```typescript
 dnsNameLabel?: pulumi.Input<string>;
 ```
 
+
+The DNS label/name for the container groups IP.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L94">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L139">property fqdn</a>
 </h3>
 
 ```typescript
 fqdn?: pulumi.Input<string>;
 ```
 
+
+The FQDN of the container group derived from `dns_name_label`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L95">property imageRegistryCredentials</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L143">property imageRegistryCredentials</a>
 </h3>
 
 ```typescript
 imageRegistryCredentials?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
+
+Set image registry credentials for the group as documented in the `image_registry_credential` block below
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L96">property ipAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L147">property ipAddress</a>
 </h3>
 
 ```typescript
 ipAddress?: pulumi.Input<string>;
 ```
 
+
+The IP address allocated to the container group.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L97">property ipAddressType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L151">property ipAddressType</a>
 </h3>
 
 ```typescript
 ipAddressType?: pulumi.Input<string>;
 ```
 
+
+Specifies the ip address type of the container. `Public` is the only acceptable value at this time. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L98">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L155">property location</a>
 </h3>
 
 ```typescript
 location?: pulumi.Input<string>;
 ```
 
+
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L99">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L159">property name</a>
 </h3>
 
 ```typescript
 name?: pulumi.Input<string>;
 ```
 
+
+Specifies the name of the Container Group. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L100">property osType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L163">property osType</a>
 </h3>
 
 ```typescript
 osType?: pulumi.Input<string>;
 ```
 
+
+The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L101">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L167">property resourceGroupName</a>
 </h3>
 
 ```typescript
 resourceGroupName?: pulumi.Input<string>;
 ```
 
+
+The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L102">property restartPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L171">property restartPolicy</a>
 </h3>
 
 ```typescript
 restartPolicy?: pulumi.Input<string>;
 ```
 
+
+Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L103">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/group.ts#L172">property tags</a>
 </h3>
 
 ```typescript

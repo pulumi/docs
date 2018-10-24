@@ -418,7 +418,7 @@ If `true`, Terraform will wait for the service to reach a steady state (like [`a
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/taskDefinition.ts#L10">class TaskDefinition</a>
 </h2>
 
-Provides an ECS task definition to be used in `aws_ecs_service`.
+Manages a revision of an ECS task definition to be used in `aws_ecs_service`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecs/taskDefinition.ts#L75">constructor</a>

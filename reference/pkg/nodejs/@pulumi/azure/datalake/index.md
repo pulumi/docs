@@ -744,7 +744,7 @@ getStore(args: GetStoreArgs, opts?: pulumi.InvokeOptions): Promise<GetStoreResul
 ```
 
 
-Use this data source to obtain information about a Data Lake Store.
+Use this data source to access information about an existing Data Lake Store.
 
 <h2 class="pdoc-module-header" id="AnalyticsAccountArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/datalake/analyticsAccount.ts#L121">interface AnalyticsAccountArgs</a>

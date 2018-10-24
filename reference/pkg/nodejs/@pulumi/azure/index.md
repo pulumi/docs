@@ -29,23 +29,28 @@ import * as azure from "@pulumi/azure";
 <h2 class="pdoc-module-header">Modules</h2>
 
 * <a href="ad">ad</a>
+* <a href="apimanagement">apimanagement</a>
 * <a href="appinsights">appinsights</a>
 * <a href="appservice">appservice</a>
 * <a href="automation">automation</a>
 * <a href="autoscale">autoscale</a>
 * <a href="cdn">cdn</a>
+* <a href="cognitive">cognitive</a>
 * <a href="compute">compute</a>
 * <a href="config">config</a>
 * <a href="containerservice">containerservice</a>
 * <a href="core">core</a>
 * <a href="cosmosdb">cosmosdb</a>
+* <a href="databricks">databricks</a>
 * <a href="datalake">datalake</a>
+* <a href="devtest">devtest</a>
 * <a href="dns">dns</a>
 * <a href="eventhub">eventhub</a>
 * <a href="iot">iot</a>
 * <a href="keyvault">keyvault</a>
 * <a href="lb">lb</a>
 * <a href="logicapps">logicapps</a>
+* <a href="managementgroups">managementgroups</a>
 * <a href="managementresource">managementresource</a>
 * <a href="monitoring">monitoring</a>
 * <a href="msi">msi</a>
@@ -61,6 +66,7 @@ import * as azure from "@pulumi/azure";
 * <a href="role">role</a>
 * <a href="scheduler">scheduler</a>
 * <a href="search">search</a>
+* <a href="securitycenter">securitycenter</a>
 * <a href="servicefabric">servicefabric</a>
 * <a href="sql">sql</a>
 * <a href="storage">storage</a>

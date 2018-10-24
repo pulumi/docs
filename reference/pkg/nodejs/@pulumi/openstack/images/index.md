@@ -23,7 +23,7 @@ title: Module images
 Manages a V2 Image resource within OpenStack Glance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L140">constructor</a>
+<a class="pdoc-child-name" href="/images/image.ts#L141">constructor</a>
 </h3>
 
 ```typescript
@@ -240,7 +240,7 @@ public owner: pulumi.Output<string>;
 The id of the openstack user who owns the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L94">property properties</a>
+<a class="pdoc-child-name" href="/images/image.ts#L95">property properties</a>
 </h3>
 
 ```typescript
@@ -249,10 +249,11 @@ public properties: pulumi.Output<{ ... }>;
 
 
 A map of key/value pairs to set freeform
-information about an image.
+information about an image. See the "Notes" section for further
+information about properties.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L99">property protected</a>
+<a class="pdoc-child-name" href="/images/image.ts#L100">property protected</a>
 </h3>
 
 ```typescript
@@ -264,7 +265,7 @@ If true, image will not be deletable.
 Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L106">property region</a>
+<a class="pdoc-child-name" href="/images/image.ts#L107">property region</a>
 </h3>
 
 ```typescript
@@ -278,7 +279,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L111">property schema</a>
+<a class="pdoc-child-name" href="/images/image.ts#L112">property schema</a>
 </h3>
 
 ```typescript
@@ -290,7 +291,7 @@ The path to the JSON-schema that represent
 the image or image
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L115">property sizeBytes</a>
+<a class="pdoc-child-name" href="/images/image.ts#L116">property sizeBytes</a>
 </h3>
 
 ```typescript
@@ -301,7 +302,7 @@ public sizeBytes: pulumi.Output<number>;
 The size in bytes of the data associated with the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L120">property status</a>
+<a class="pdoc-child-name" href="/images/image.ts#L121">property status</a>
 </h3>
 
 ```typescript
@@ -313,7 +314,7 @@ The status of the image. It can be "queued", "active"
 or "saving".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L125">property tags</a>
+<a class="pdoc-child-name" href="/images/image.ts#L126">property tags</a>
 </h3>
 
 ```typescript
@@ -325,7 +326,7 @@ The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L129">property updateAt</a>
+<a class="pdoc-child-name" href="/images/image.ts#L130">property updateAt</a>
 </h3>
 
 ```typescript
@@ -348,7 +349,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L134">property verifyChecksum</a>
+<a class="pdoc-child-name" href="/images/image.ts#L135">property verifyChecksum</a>
 </h3>
 
 ```typescript
@@ -360,7 +361,7 @@ If false, the checksum will not be verified
 once the image is finished uploading. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L140">property visibility</a>
+<a class="pdoc-child-name" href="/images/image.ts#L141">property visibility</a>
 </h3>
 
 ```typescript
@@ -670,13 +671,13 @@ updatedAt: string;
 ```
 
 <h2 class="pdoc-module-header" id="ImageArgs">
-<a class="pdoc-member-name" href="/images/image.ts#L340">interface ImageArgs</a>
+<a class="pdoc-member-name" href="/images/image.ts#L342">interface ImageArgs</a>
 </h2>
 
 The set of arguments for constructing a Image resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L345">property containerFormat</a>
+<a class="pdoc-child-name" href="/images/image.ts#L347">property containerFormat</a>
 </h3>
 
 ```typescript
@@ -688,7 +689,7 @@ The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L350">property diskFormat</a>
+<a class="pdoc-child-name" href="/images/image.ts#L352">property diskFormat</a>
 </h3>
 
 ```typescript
@@ -700,7 +701,7 @@ The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L356">property imageCachePath</a>
+<a class="pdoc-child-name" href="/images/image.ts#L358">property imageCachePath</a>
 </h3>
 
 ```typescript
@@ -713,7 +714,7 @@ be downloaded. Images will be stored with a filename corresponding to
 the url's md5 hash. Defaults to "$HOME/.terraform/image_cache"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L364">property imageSourceUrl</a>
+<a class="pdoc-child-name" href="/images/image.ts#L366">property imageSourceUrl</a>
 </h3>
 
 ```typescript
@@ -728,7 +729,7 @@ does not yet provide a way to do so.
 Conflicts with `local_file_path`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L369">property localFilePath</a>
+<a class="pdoc-child-name" href="/images/image.ts#L371">property localFilePath</a>
 </h3>
 
 ```typescript
@@ -740,7 +741,7 @@ This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L374">property minDiskGb</a>
+<a class="pdoc-child-name" href="/images/image.ts#L376">property minDiskGb</a>
 </h3>
 
 ```typescript
@@ -752,7 +753,7 @@ Amount of disk space (in GB) required to boot image.
 Defaults to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L379">property minRamMb</a>
+<a class="pdoc-child-name" href="/images/image.ts#L381">property minRamMb</a>
 </h3>
 
 ```typescript
@@ -764,7 +765,7 @@ Amount of ram (in MB) required to boot image.
 Defauts to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L383">property name</a>
+<a class="pdoc-child-name" href="/images/image.ts#L385">property name</a>
 </h3>
 
 ```typescript
@@ -775,7 +776,7 @@ name?: pulumi.Input<string>;
 The name of the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L388">property properties</a>
+<a class="pdoc-child-name" href="/images/image.ts#L391">property properties</a>
 </h3>
 
 ```typescript
@@ -784,10 +785,11 @@ properties?: pulumi.Input<{ ... }>;
 
 
 A map of key/value pairs to set freeform
-information about an image.
+information about an image. See the "Notes" section for further
+information about properties.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L393">property protected</a>
+<a class="pdoc-child-name" href="/images/image.ts#L396">property protected</a>
 </h3>
 
 ```typescript
@@ -799,7 +801,7 @@ If true, image will not be deletable.
 Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L400">property region</a>
+<a class="pdoc-child-name" href="/images/image.ts#L403">property region</a>
 </h3>
 
 ```typescript
@@ -813,7 +815,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L405">property tags</a>
+<a class="pdoc-child-name" href="/images/image.ts#L408">property tags</a>
 </h3>
 
 ```typescript
@@ -825,7 +827,7 @@ The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L410">property verifyChecksum</a>
+<a class="pdoc-child-name" href="/images/image.ts#L413">property verifyChecksum</a>
 </h3>
 
 ```typescript
@@ -837,7 +839,7 @@ If false, the checksum will not be verified
 once the image is finished uploading. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L416">property visibility</a>
+<a class="pdoc-child-name" href="/images/image.ts#L419">property visibility</a>
 </h3>
 
 ```typescript
@@ -850,13 +852,13 @@ The visibility of the image. Must be one of
 visibility depends upon the configuration of the OpenStack cloud.
 
 <h2 class="pdoc-module-header" id="ImageState">
-<a class="pdoc-member-name" href="/images/image.ts#L216">interface ImageState</a>
+<a class="pdoc-member-name" href="/images/image.ts#L217">interface ImageState</a>
 </h2>
 
 Input properties used for looking up and filtering Image resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L220">property checksum</a>
+<a class="pdoc-child-name" href="/images/image.ts#L221">property checksum</a>
 </h3>
 
 ```typescript
@@ -867,7 +869,7 @@ checksum?: pulumi.Input<string>;
 The checksum of the data associated with the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L225">property containerFormat</a>
+<a class="pdoc-child-name" href="/images/image.ts#L226">property containerFormat</a>
 </h3>
 
 ```typescript
@@ -879,7 +881,7 @@ The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L229">property createdAt</a>
+<a class="pdoc-child-name" href="/images/image.ts#L230">property createdAt</a>
 </h3>
 
 ```typescript
@@ -890,7 +892,7 @@ createdAt?: pulumi.Input<string>;
 The date the image was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L234">property diskFormat</a>
+<a class="pdoc-child-name" href="/images/image.ts#L235">property diskFormat</a>
 </h3>
 
 ```typescript
@@ -902,7 +904,7 @@ The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L240">property file</a>
+<a class="pdoc-child-name" href="/images/image.ts#L241">property file</a>
 </h3>
 
 ```typescript
@@ -915,7 +917,7 @@ endpoint that represent the location of the image
 or the path to retrieve it.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L246">property imageCachePath</a>
+<a class="pdoc-child-name" href="/images/image.ts#L247">property imageCachePath</a>
 </h3>
 
 ```typescript
@@ -928,7 +930,7 @@ be downloaded. Images will be stored with a filename corresponding to
 the url's md5 hash. Defaults to "$HOME/.terraform/image_cache"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L254">property imageSourceUrl</a>
+<a class="pdoc-child-name" href="/images/image.ts#L255">property imageSourceUrl</a>
 </h3>
 
 ```typescript
@@ -943,7 +945,7 @@ does not yet provide a way to do so.
 Conflicts with `local_file_path`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L259">property localFilePath</a>
+<a class="pdoc-child-name" href="/images/image.ts#L260">property localFilePath</a>
 </h3>
 
 ```typescript
@@ -955,7 +957,7 @@ This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L265">property metadata</a>
+<a class="pdoc-child-name" href="/images/image.ts#L266">property metadata</a>
 </h3>
 
 ```typescript
@@ -968,7 +970,7 @@ Image metadata allow for meaningfully define the image properties
 and tags. See http://docs.openstack.org/developer/glance/metadefs-concepts.html.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L270">property minDiskGb</a>
+<a class="pdoc-child-name" href="/images/image.ts#L271">property minDiskGb</a>
 </h3>
 
 ```typescript
@@ -980,7 +982,7 @@ Amount of disk space (in GB) required to boot image.
 Defaults to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L275">property minRamMb</a>
+<a class="pdoc-child-name" href="/images/image.ts#L276">property minRamMb</a>
 </h3>
 
 ```typescript
@@ -992,7 +994,7 @@ Amount of ram (in MB) required to boot image.
 Defauts to 0.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L279">property name</a>
+<a class="pdoc-child-name" href="/images/image.ts#L280">property name</a>
 </h3>
 
 ```typescript
@@ -1003,7 +1005,7 @@ name?: pulumi.Input<string>;
 The name of the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L283">property owner</a>
+<a class="pdoc-child-name" href="/images/image.ts#L284">property owner</a>
 </h3>
 
 ```typescript
@@ -1014,7 +1016,7 @@ owner?: pulumi.Input<string>;
 The id of the openstack user who owns the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L288">property properties</a>
+<a class="pdoc-child-name" href="/images/image.ts#L290">property properties</a>
 </h3>
 
 ```typescript
@@ -1023,10 +1025,11 @@ properties?: pulumi.Input<{ ... }>;
 
 
 A map of key/value pairs to set freeform
-information about an image.
+information about an image. See the "Notes" section for further
+information about properties.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L293">property protected</a>
+<a class="pdoc-child-name" href="/images/image.ts#L295">property protected</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1041,7 @@ If true, image will not be deletable.
 Defaults to false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L300">property region</a>
+<a class="pdoc-child-name" href="/images/image.ts#L302">property region</a>
 </h3>
 
 ```typescript
@@ -1052,7 +1055,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L305">property schema</a>
+<a class="pdoc-child-name" href="/images/image.ts#L307">property schema</a>
 </h3>
 
 ```typescript
@@ -1064,7 +1067,7 @@ The path to the JSON-schema that represent
 the image or image
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L309">property sizeBytes</a>
+<a class="pdoc-child-name" href="/images/image.ts#L311">property sizeBytes</a>
 </h3>
 
 ```typescript
@@ -1075,7 +1078,7 @@ sizeBytes?: pulumi.Input<number>;
 The size in bytes of the data associated with the image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L314">property status</a>
+<a class="pdoc-child-name" href="/images/image.ts#L316">property status</a>
 </h3>
 
 ```typescript
@@ -1087,7 +1090,7 @@ The status of the image. It can be "queued", "active"
 or "saving".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L319">property tags</a>
+<a class="pdoc-child-name" href="/images/image.ts#L321">property tags</a>
 </h3>
 
 ```typescript
@@ -1099,7 +1102,7 @@ The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L323">property updateAt</a>
+<a class="pdoc-child-name" href="/images/image.ts#L325">property updateAt</a>
 </h3>
 
 ```typescript
@@ -1110,7 +1113,7 @@ updateAt?: pulumi.Input<string>;
 The date the image was last updated.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L328">property verifyChecksum</a>
+<a class="pdoc-child-name" href="/images/image.ts#L330">property verifyChecksum</a>
 </h3>
 
 ```typescript
@@ -1122,7 +1125,7 @@ If false, the checksum will not be verified
 once the image is finished uploading. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/images/image.ts#L334">property visibility</a>
+<a class="pdoc-child-name" href="/images/image.ts#L336">property visibility</a>
 </h3>
 
 ```typescript

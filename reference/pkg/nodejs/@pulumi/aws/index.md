@@ -100,6 +100,7 @@ import * as aws from "@pulumi/aws";
 * <a href="cloud9">cloud9</a>
 * <a href="cloudformation">cloudformation</a>
 * <a href="cloudfront">cloudfront</a>
+* <a href="cloudhsmv2">cloudhsmv2</a>
 * <a href="cloudtrail">cloudtrail</a>
 * <a href="cloudwatch">cloudwatch</a>
 * <a href="codebuild">codebuild</a>
@@ -142,6 +143,7 @@ import * as aws from "@pulumi/aws";
 * <a href="neptune">neptune</a>
 * <a href="opsworks">opsworks</a>
 * <a href="organizations">organizations</a>
+* <a href="pinpoint">pinpoint</a>
 * <a href="pricing">pricing</a>
 * <a href="rds">rds</a>
 * <a href="redshift">redshift</a>
@@ -161,6 +163,7 @@ import * as aws from "@pulumi/aws";
 * <a href="swf">swf</a>
 * <a href="waf">waf</a>
 * <a href="wafregional">wafregional</a>
+* <a href="workspaces">workspaces</a>
 
 <h2 class="pdoc-module-header" id="Provider">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/provider.ts#L12">class Provider</a>

@@ -507,7 +507,7 @@ getHub(args: GetHubArgs, opts?: pulumi.InvokeOptions): Promise<GetHubResult>
 ```
 
 
-Gets information about the specified Notification Hub within a Notification Hub Namespace.
+Use this data source to access information about an existing Notification Hub within a Notification Hub Namespace.
 
 <h2 class="pdoc-module-header" id="getNamespace">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/notificationhub/getNamespace.ts#L10">function getNamespace</a>
@@ -518,7 +518,7 @@ getNamespace(args: GetNamespaceArgs, opts?: pulumi.InvokeOptions): Promise<GetNa
 ```
 
 
-Gets information about the specified Notification Hub Namespace.
+Use this data source to access information about an existing Notification Hub Namespace.
 
 <h2 class="pdoc-module-header" id="AuthorizationRuleArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/notificationhub/authorizationRule.ts#L151">interface AuthorizationRuleArgs</a>

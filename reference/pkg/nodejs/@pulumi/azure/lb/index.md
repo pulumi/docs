@@ -961,7 +961,7 @@ public backendPort: pulumi.Output<number>;
 ```
 
 
-The port used for internal connections on the endpoint. Possible values range between 1 and 65535, inclusive.
+The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/rule.ts#L36">property enableFloatingIp</a>
@@ -1002,7 +1002,7 @@ public frontendPort: pulumi.Output<number>;
 ```
 
 
-The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 1 and 65534, inclusive.
+The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 0 and 65534, inclusive.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -2059,7 +2059,7 @@ backendPort: pulumi.Input<number>;
 ```
 
 
-The port used for internal connections on the endpoint. Possible values range between 1 and 65535, inclusive.
+The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/rule.ts#L212">property enableFloatingIp</a>
@@ -2092,7 +2092,7 @@ frontendPort: pulumi.Input<number>;
 ```
 
 
-The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 1 and 65534, inclusive.
+The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 0 and 65534, inclusive.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/rule.ts#L224">property idleTimeoutInMinutes</a>
@@ -2205,7 +2205,7 @@ backendPort?: pulumi.Input<number>;
 ```
 
 
-The port used for internal connections on the endpoint. Possible values range between 1 and 65535, inclusive.
+The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/rule.ts#L156">property enableFloatingIp</a>
@@ -2246,7 +2246,7 @@ frontendPort?: pulumi.Input<number>;
 ```
 
 
-The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 1 and 65534, inclusive.
+The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 0 and 65534, inclusive.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/lb/rule.ts#L169">property idleTimeoutInMinutes</a>

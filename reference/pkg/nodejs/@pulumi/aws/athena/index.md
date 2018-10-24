@@ -23,7 +23,7 @@ title: Module athena
 Provides an Athena database.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -81,7 +81,18 @@ public bucket: pulumi.Output<string>;
 Name of s3 bucket to save the results of the query execution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L30">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L30">property encryptionConfiguration</a>
+</h3>
+
+```typescript
+public encryptionConfiguration: pulumi.Output<{ ... } | undefined>;
+```
+
+
+The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L34">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -104,7 +115,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L34">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -248,13 +259,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L85">interface DatabaseArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L95">interface DatabaseArgs</a>
 </h2>
 
 The set of arguments for constructing a Database resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L89">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L99">property bucket</a>
 </h3>
 
 ```typescript
@@ -265,7 +276,18 @@ bucket: pulumi.Input<string>;
 Name of s3 bucket to save the results of the query execution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L93">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L103">property encryptionConfiguration</a>
+</h3>
+
+```typescript
+encryptionConfiguration?: pulumi.Input<{ ... }>;
+```
+
+
+The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L107">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -276,7 +298,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L97">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L111">property name</a>
 </h3>
 
 ```typescript
@@ -287,13 +309,13 @@ name?: pulumi.Input<string>;
 Name of the database to create.
 
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L67">interface DatabaseState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L73">interface DatabaseState</a>
 </h2>
 
 Input properties used for looking up and filtering Database resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L71">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L77">property bucket</a>
 </h3>
 
 ```typescript
@@ -304,7 +326,18 @@ bucket?: pulumi.Input<string>;
 Name of s3 bucket to save the results of the query execution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L75">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L81">property encryptionConfiguration</a>
+</h3>
+
+```typescript
+encryptionConfiguration?: pulumi.Input<{ ... }>;
+```
+
+
+The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L85">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -315,7 +348,7 @@ forceDestroy?: pulumi.Input<boolean>;
 A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L79">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/athena/database.ts#L89">property name</a>
 </h3>
 
 ```typescript

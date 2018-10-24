@@ -8,15 +8,20 @@ title: Module kinesis
 
 * <a href="#FirehoseDeliveryStream">class FirehoseDeliveryStream</a>
 * <a href="#Stream">class Stream</a>
+* <a href="#StreamEventSubscription">class StreamEventSubscription</a>
 * <a href="#getStream">function getStream</a>
 * <a href="#FirehoseDeliveryStreamArgs">interface FirehoseDeliveryStreamArgs</a>
 * <a href="#FirehoseDeliveryStreamState">interface FirehoseDeliveryStreamState</a>
 * <a href="#GetStreamArgs">interface GetStreamArgs</a>
 * <a href="#GetStreamResult">interface GetStreamResult</a>
 * <a href="#StreamArgs">interface StreamArgs</a>
+* <a href="#StreamEvent">interface StreamEvent</a>
+* <a href="#StreamEventRecord">interface StreamEventRecord</a>
+* <a href="#StreamEventSubscriptionArgs">interface StreamEventSubscriptionArgs</a>
 * <a href="#StreamState">interface StreamState</a>
+* <a href="#StreamEventHandler">type StreamEventHandler</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts">kinesis/firehoseDeliveryStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts">kinesis/getStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts">kinesis/stream.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts">kinesis/firehoseDeliveryStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts">kinesis/getStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts">kinesis/kinesisMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts">kinesis/stream.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="FirehoseDeliveryStream">
@@ -372,6 +377,85 @@ public tags: pulumi.Output<Tags | undefined>;
 
 
 A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="StreamEventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L65">class StreamEventSubscription</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L67">constructor</a>
+</h3>
+
+```typescript
+new StreamEventSubscription(name: string, stream: stream.Stream, handler: StreamEventHandler, args: StreamEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+</h3>
+
+```typescript
+protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L67">property eventSourceMapping</a>
+</h3>
+
+```typescript
+public eventSourceMapping: lambda.EventSourceMapping;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L227">property func</a>
+</h3>
+
+```typescript
+public func: LambdaFunction;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L226">property permission</a>
+</h3>
+
+```typescript
+public permission: permission.Permission;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L66">property stream</a>
+</h3>
+
+```typescript
+public stream: pulumi.Output<stream.Stream>;
+```
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -862,6 +946,126 @@ tags?: pulumi.Input<Tags>;
 
 A mapping of tags to assign to the resource.
 
+<h2 class="pdoc-module-header" id="StreamEvent">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L43">interface StreamEvent</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L44">property Records</a>
+</h3>
+
+```typescript
+Records: StreamEventRecord[];
+```
+
+<h2 class="pdoc-module-header" id="StreamEventRecord">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L47">interface StreamEventRecord</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L60">property awsRegion</a>
+</h3>
+
+```typescript
+awsRegion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L55">property eventID</a>
+</h3>
+
+```typescript
+eventID: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L58">property eventName</a>
+</h3>
+
+```typescript
+eventName: aws:kinesis:record;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L54">property eventSource</a>
+</h3>
+
+```typescript
+eventSource: aws:kinesis;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L59">property eventSourceARN</a>
+</h3>
+
+```typescript
+eventSourceARN: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L57">property eventVersion</a>
+</h3>
+
+```typescript
+eventVersion: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L56">property invokeIdentityArn</a>
+</h3>
+
+```typescript
+invokeIdentityArn: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L48">property kinesis</a>
+</h3>
+
+```typescript
+kinesis: { ... };
+```
+
+<h2 class="pdoc-module-header" id="StreamEventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L20">interface StreamEventSubscriptionArgs</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L25">property batchSize</a>
+</h3>
+
+```typescript
+batchSize?: number;
+```
+
+
+The largest number of records that Lambda will retrieve from your event source at the time of
+invocation. Defaults to `100` for Kinesis.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L32">property startingPosition</a>
+</h3>
+
+```typescript
+startingPosition: TRIM_HORIZON | LATEST | AT_TIMESTAMP;
+```
+
+
+The position in the stream where AWS Lambda should start reading. Must be one of either
+`TRIM_HORIZON`, `LATEST` or `AT_TIMESTAMP`.  If `AT_TIMESTAMP` is provided,
+[startingPositionTimestamp] must be provided as well.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L40">property startingPositionTimestamp</a>
+</h3>
+
+```typescript
+startingPositionTimestamp?: number;
+```
+
+
+The timestamp of the data record from which to start reading. Used with shard iterator type
+AT_TIMESTAMP. If a record with this exact timestamp does not exist, the iterator returned is
+for the next (later) record. If the timestamp is older than the current trim horizon, the
+iterator returned is for the oldest untrimmed data record (TRIM_HORIZON).
+
 <h2 class="pdoc-module-header" id="StreamState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts#L105">interface StreamState</a>
 </h2>
@@ -958,4 +1162,12 @@ tags?: pulumi.Input<Tags>;
 
 
 A mapping of tags to assign to the resource.
+
+<h2 class="pdoc-module-header" id="StreamEventHandler">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L63">type StreamEventHandler</a>
+</h2>
+
+```typescript
+type StreamEventHandler = lambda.EventHandler<StreamEvent, void>;
+```
 

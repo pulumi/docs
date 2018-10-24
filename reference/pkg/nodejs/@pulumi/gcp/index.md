@@ -28,6 +28,7 @@ import * as gcp from "@pulumi/gcp";
 
 <h2 class="pdoc-module-header">Modules</h2>
 
+* <a href="appengine">appengine</a>
 * <a href="bigquery">bigquery</a>
 * <a href="bigtable">bigtable</a>
 * <a href="binaryauthorization">binaryauthorization</a>
@@ -42,9 +43,11 @@ import * as gcp from "@pulumi/gcp";
 * <a href="dataproc">dataproc</a>
 * <a href="dns">dns</a>
 * <a href="endpoints">endpoints</a>
+* <a href="filestore">filestore</a>
 * <a href="folder">folder</a>
 * <a href="kms">kms</a>
 * <a href="logging">logging</a>
+* <a href="monitoring">monitoring</a>
 * <a href="organizations">organizations</a>
 * <a href="projects">projects</a>
 * <a href="pubsub">pubsub</a>

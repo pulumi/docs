@@ -83,7 +83,7 @@ for more information.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L197">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L201">constructor</a>
 </h3>
 
 ```typescript
@@ -265,7 +265,18 @@ public dbSubnetGroupName: pulumi.Output<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every [`aws_rds_cluster_instance`](https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html) in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L98">property enabledCloudwatchLogsExports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L97">property deletionProtection</a>
+</h3>
+
+```typescript
+public deletionProtection: pulumi.Output<boolean | undefined>;
+```
+
+
+If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L102">property enabledCloudwatchLogsExports</a>
 </h3>
 
 ```typescript
@@ -277,7 +288,7 @@ List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L102">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L106">property endpoint</a>
 </h3>
 
 ```typescript
@@ -288,7 +299,7 @@ public endpoint: pulumi.Output<string>;
 The DNS address of the RDS instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L106">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L110">property engine</a>
 </h3>
 
 ```typescript
@@ -299,7 +310,7 @@ public engine: pulumi.Output<string | undefined>;
 The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L110">property engineMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L114">property engineMode</a>
 </h3>
 
 ```typescript
@@ -310,7 +321,7 @@ public engineMode: pulumi.Output<string | undefined>;
 The database engine mode. Valid values: `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L114">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L118">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -318,10 +329,10 @@ public engineVersion: pulumi.Output<string>;
 ```
 
 
-The database engine version.
+The database engine version. Updating this argument results in an outage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L120">property finalSnapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L124">property finalSnapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -334,7 +345,7 @@ when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L124">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L128">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -345,7 +356,7 @@ public hostedZoneId: pulumi.Output<string>;
 The Route53 Hosted Zone ID of the endpoint
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L128">property iamDatabaseAuthenticationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L132">property iamDatabaseAuthenticationEnabled</a>
 </h3>
 
 ```typescript
@@ -356,7 +367,7 @@ public iamDatabaseAuthenticationEnabled: pulumi.Output<boolean | undefined>;
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation][6] for availability and limitations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L132">property iamRoles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L136">property iamRoles</a>
 </h3>
 
 ```typescript
@@ -379,7 +390,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L136">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L140">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -390,7 +401,7 @@ public kmsKeyId: pulumi.Output<string>;
 The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L141">property masterPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L145">property masterPassword</a>
 </h3>
 
 ```typescript
@@ -402,7 +413,7 @@ Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L145">property masterUsername</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L149">property masterUsername</a>
 </h3>
 
 ```typescript
@@ -413,7 +424,7 @@ public masterUsername: pulumi.Output<string>;
 Username for the master DB user. Please refer to the [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L149">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L153">property port</a>
 </h3>
 
 ```typescript
@@ -424,7 +435,7 @@ public port: pulumi.Output<number>;
 The port on which the DB accepts connections
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L154">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L158">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -436,7 +447,7 @@ The daily time range during which automated backups are created if automated bac
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L158">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L162">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -447,7 +458,7 @@ public preferredMaintenanceWindow: pulumi.Output<string>;
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L163">property readerEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L167">property readerEndpoint</a>
 </h3>
 
 ```typescript
@@ -459,7 +470,7 @@ A read-only endpoint for the Aurora cluster, automatically
 load-balanced across replicas
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L167">property replicationSourceIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L171">property replicationSourceIdentifier</a>
 </h3>
 
 ```typescript
@@ -470,7 +481,7 @@ public replicationSourceIdentifier: pulumi.Output<string | undefined>;
 ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L168">property s3Import</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L172">property s3Import</a>
 </h3>
 
 ```typescript
@@ -478,7 +489,7 @@ public s3Import: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L172">property scalingConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L176">property scalingConfiguration</a>
 </h3>
 
 ```typescript
@@ -489,7 +500,7 @@ public scalingConfiguration: pulumi.Output<{ ... } | undefined>;
 Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L176">property skipFinalSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L180">property skipFinalSnapshot</a>
 </h3>
 
 ```typescript
@@ -500,7 +511,7 @@ public skipFinalSnapshot: pulumi.Output<boolean | undefined>;
 Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L180">property snapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L184">property snapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -511,7 +522,7 @@ public snapshotIdentifier: pulumi.Output<string | undefined>;
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L184">property sourceRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L188">property sourceRegion</a>
 </h3>
 
 ```typescript
@@ -522,7 +533,7 @@ public sourceRegion: pulumi.Output<string | undefined>;
 The source region for an encrypted replica DB cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L188">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L192">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -533,7 +544,7 @@ public storageEncrypted: pulumi.Output<boolean | undefined>;
 Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L192">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L196">property tags</a>
 </h3>
 
 ```typescript
@@ -556,7 +567,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L197">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L201">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -568,7 +579,7 @@ List of VPC security groups to associate
 with the Cluster
 
 <h2 class="pdoc-module-header" id="ClusterInstance">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L23">class ClusterInstance</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L25">class ClusterInstance</a>
 </h2>
 
 Provides an RDS Cluster Resource Instance. A Cluster Instance Resource defines
@@ -584,8 +595,10 @@ Cluster, or you may specify different Cluster Instance resources with various
 
 For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.
 
+~> **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`prevent_destroy` lifecycle behavior](https://www.terraform.io/docs/configuration/resources.html#prevent_destroy) to your Terraform resource configuration if you desire protection from accidental deletion.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L168">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L170">constructor</a>
 </h3>
 
 ```typescript
@@ -600,7 +613,7 @@ Create a ClusterInstance resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L32">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L34">method get</a>
 </h3>
 
 ```typescript
@@ -632,7 +645,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L40">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L42">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -644,7 +657,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L44">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L46">property arn</a>
 </h3>
 
 ```typescript
@@ -655,7 +668,7 @@ public arn: pulumi.Output<string>;
 Amazon Resource Name (ARN) of cluster instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L48">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L50">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -666,7 +679,7 @@ public autoMinorVersionUpgrade: pulumi.Output<boolean | undefined>;
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L52">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L54">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -677,7 +690,7 @@ public availabilityZone: pulumi.Output<string>;
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L56">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L58">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -688,7 +701,7 @@ public clusterIdentifier: pulumi.Output<string>;
 The identifier of the [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L60">property dbParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L62">property dbParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -699,7 +712,7 @@ public dbParameterGroupName: pulumi.Output<string>;
 The name of the DB parameter group to associate with this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L64">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L66">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -710,7 +723,7 @@ public dbSubnetGroupName: pulumi.Output<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L68">property dbiResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L70">property dbiResourceId</a>
 </h3>
 
 ```typescript
@@ -721,7 +734,7 @@ public dbiResourceId: pulumi.Output<string>;
 The region-unique, immutable identifier for the DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L72">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L74">property endpoint</a>
 </h3>
 
 ```typescript
@@ -732,7 +745,7 @@ public endpoint: pulumi.Output<string>;
 The DNS address for this instance. May not be writable
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L79">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L81">property engine</a>
 </h3>
 
 ```typescript
@@ -746,7 +759,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L83">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L85">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -769,7 +782,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L87">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L89">property identifier</a>
 </h3>
 
 ```typescript
@@ -780,7 +793,7 @@ public identifier: pulumi.Output<string>;
 The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L91">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L93">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -791,7 +804,7 @@ public identifierPrefix: pulumi.Output<string>;
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L110">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L112">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -817,7 +830,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 - db.r4.16xlarge
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L114">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L116">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -828,7 +841,7 @@ public kmsKeyId: pulumi.Output<string>;
 The ARN for the KMS encryption key if one is set to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L118">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L120">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -839,7 +852,7 @@ public monitoringInterval: pulumi.Output<number | undefined>;
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L124">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L126">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -852,7 +865,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L128">property performanceInsightsEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L130">property performanceInsightsEnabled</a>
 </h3>
 
 ```typescript
@@ -863,7 +876,7 @@ public performanceInsightsEnabled: pulumi.Output<boolean>;
 Specifies whether Performance Insights is enabled or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L132">property performanceInsightsKmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L134">property performanceInsightsKmsKeyId</a>
 </h3>
 
 ```typescript
@@ -874,7 +887,7 @@ public performanceInsightsKmsKeyId: pulumi.Output<string>;
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L136">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L138">property port</a>
 </h3>
 
 ```typescript
@@ -885,7 +898,7 @@ public port: pulumi.Output<number>;
 The database port
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L141">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L143">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -897,7 +910,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L146">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L148">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -909,7 +922,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L150">property promotionTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L152">property promotionTier</a>
 </h3>
 
 ```typescript
@@ -920,7 +933,7 @@ public promotionTier: pulumi.Output<number | undefined>;
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L156">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L158">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -933,7 +946,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L160">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L162">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -944,7 +957,7 @@ public storageEncrypted: pulumi.Output<boolean>;
 Specifies whether the DB cluster is encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L164">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L166">property tags</a>
 </h3>
 
 ```typescript
@@ -967,7 +980,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L168">property writer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L170">property writer</a>
 </h3>
 
 ```typescript
@@ -1576,7 +1589,7 @@ the raw state as plain-text. [Read more about sensitive data in
 state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L332">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L336">constructor</a>
 </h3>
 
 ```typescript
@@ -1718,7 +1731,7 @@ public backupRetentionPeriod: pulumi.Output<number>;
 
 
 The days to retain backups for. Must be
-`1` or greater to be a source for a [Read Replica][1].
+between `0` and `35`. When creating a Read Replica the value must be greater than `0`. [See Read Replica][1].
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L91">property backupWindow</a>
@@ -1791,7 +1804,18 @@ action CreateDBInstanceReadReplica](https://docs.aws.amazon.com/AmazonRDS/latest
 for additional read replica contraints.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L124">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L124">property deletionProtection</a>
+</h3>
+
+```typescript
+public deletionProtection: pulumi.Output<boolean | undefined>;
+```
+
+
+If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L128">property domain</a>
 </h3>
 
 ```typescript
@@ -1802,7 +1826,7 @@ public domain: pulumi.Output<string | undefined>;
 The ID of the Directory Service Active Directory domain to create the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L128">property domainIamRoleName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L132">property domainIamRoleName</a>
 </h3>
 
 ```typescript
@@ -1813,7 +1837,7 @@ public domainIamRoleName: pulumi.Output<string | undefined>;
 The name of the IAM role to be used when making API calls to the Directory Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L132">property enabledCloudwatchLogsExports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L136">property enabledCloudwatchLogsExports</a>
 </h3>
 
 ```typescript
@@ -1824,7 +1848,7 @@ public enabledCloudwatchLogsExports: pulumi.Output<string[] | undefined>;
 List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L136">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L140">property endpoint</a>
 </h3>
 
 ```typescript
@@ -1835,7 +1859,7 @@ public endpoint: pulumi.Output<string>;
 The connection endpoint in `address:port` format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L145">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L149">property engine</a>
 </h3>
 
 ```typescript
@@ -1851,7 +1875,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L153">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L157">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -1866,7 +1890,7 @@ For supported values, see the EngineVersion parameter in [API action CreateDBIns
 Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L158">property finalSnapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L162">property finalSnapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -1878,7 +1902,7 @@ The name of your final DB snapshot
 when this DB instance is deleted. If omitted, no final snapshot will be made.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L163">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L167">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -1890,7 +1914,7 @@ The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L169">property iamDatabaseAuthenticationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L173">property iamDatabaseAuthenticationEnabled</a>
 </h3>
 
 ```typescript
@@ -1915,7 +1939,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L174">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L178">property identifier</a>
 </h3>
 
 ```typescript
@@ -1927,7 +1951,7 @@ The name of the RDS instance,
 if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L179">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L183">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -1939,7 +1963,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L183">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L187">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -1950,7 +1974,7 @@ public instanceClass: pulumi.Output<string>;
 The instance type of the RDS instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L188">property iops</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L192">property iops</a>
 </h3>
 
 ```typescript
@@ -1962,7 +1986,7 @@ The amount of provisioned IOPS. Setting this implies a
 storage_type of "io1".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L193">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L197">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -1974,7 +1998,7 @@ The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L198">property licenseModel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L202">property licenseModel</a>
 </h3>
 
 ```typescript
@@ -1986,7 +2010,7 @@ public licenseModel: pulumi.Output<string>;
 SE1) License model information for this DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L206">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L210">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -2001,7 +2025,7 @@ docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstan
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L213">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L217">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -2015,7 +2039,7 @@ collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L221">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L225">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -2030,7 +2054,7 @@ Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monit
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L225">property multiAz</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L229">property multiAz</a>
 </h3>
 
 ```typescript
@@ -2041,7 +2065,7 @@ public multiAz: pulumi.Output<boolean>;
 Specifies if the RDS instance is multi-AZ
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L229">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L233">property name</a>
 </h3>
 
 ```typescript
@@ -2052,7 +2076,7 @@ public name: pulumi.Output<string>;
 The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L233">property optionGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L237">property optionGroupName</a>
 </h3>
 
 ```typescript
@@ -2063,7 +2087,7 @@ public optionGroupName: pulumi.Output<string>;
 Name of the DB option group to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L238">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L242">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -2075,7 +2099,7 @@ Name of the DB parameter group to
 associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L244">property password</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L248">property password</a>
 </h3>
 
 ```typescript
@@ -2088,7 +2112,7 @@ is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L248">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L252">property port</a>
 </h3>
 
 ```typescript
@@ -2099,7 +2123,7 @@ public port: pulumi.Output<number>;
 The port on which the DB accepts connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L253">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L257">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -2111,7 +2135,7 @@ Bool to control if instance is publicly
 accessible. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L254">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L258">property replicas</a>
 </h3>
 
 ```typescript
@@ -2119,7 +2143,7 @@ public replicas: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L264">property replicateSourceDb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L268">property replicateSourceDb</a>
 </h3>
 
 ```typescript
@@ -2136,7 +2160,7 @@ PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest
 for more information on using Replication.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L268">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L272">property resourceId</a>
 </h3>
 
 ```typescript
@@ -2147,7 +2171,7 @@ public resourceId: pulumi.Output<string>;
 The RDS Resource ID of this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L272">property s3Import</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L276">property s3Import</a>
 </h3>
 
 ```typescript
@@ -2158,7 +2182,7 @@ public s3Import: pulumi.Output<{ ... } | undefined>;
 Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L278">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L282">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -2171,7 +2195,7 @@ associate. Only used for [DB Instances on the _EC2-Classic_
 Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L286">property skipFinalSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L290">property skipFinalSnapshot</a>
 </h3>
 
 ```typescript
@@ -2186,7 +2210,7 @@ instance is deleted, using the value from `final_snapshot_identifier`. Default
 is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L292">property snapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L296">property snapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -2199,7 +2223,7 @@ database from a snapshot. This correlates to the snapshot ID you'd find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L296">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L300">property status</a>
 </h3>
 
 ```typescript
@@ -2210,7 +2234,7 @@ public status: pulumi.Output<string>;
 The RDS instance status.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L303">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L307">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -2224,7 +2248,7 @@ is ignored and you should instead declare `kms_key_id` with a valid ARN. The
 default is `false` if not specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L310">property storageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L314">property storageType</a>
 </h3>
 
 ```typescript
@@ -2238,7 +2262,7 @@ specified, "standard" if not. Note that this behaviour is different from the AWS
 web console, where the default is "gp2".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L314">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L318">property tags</a>
 </h3>
 
 ```typescript
@@ -2249,7 +2273,7 @@ public tags: pulumi.Output<Tags | undefined>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L322">property timezone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L326">property timezone</a>
 </h3>
 
 ```typescript
@@ -2276,7 +2300,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L327">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L331">property username</a>
 </h3>
 
 ```typescript
@@ -2288,7 +2312,7 @@ public username: pulumi.Output<string>;
 is provided) Username for the master DB user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L332">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L336">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -3244,13 +3268,13 @@ Use this data source to get information about a DB Snapshot for use when provisi
 See the [`aws_db_cluster_snapshot` data source](https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html) for DB Cluster snapshots.
 
 <h2 class="pdoc-module-header" id="ClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L456">interface ClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L466">interface ClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a Cluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L462">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L472">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -3263,7 +3287,7 @@ are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L467">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L477">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -3275,7 +3299,7 @@ A list of EC2 Availability Zones that
 instances in the DB cluster can be created in
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L471">property backtrackWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L481">property backtrackWindow</a>
 </h3>
 
 ```typescript
@@ -3286,7 +3310,7 @@ backtrackWindow?: pulumi.Input<number>;
 The target backtrack window, in seconds. Only available for `aurora` engine currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L475">property backupRetentionPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L485">property backupRetentionPeriod</a>
 </h3>
 
 ```typescript
@@ -3297,7 +3321,7 @@ backupRetentionPeriod?: pulumi.Input<number>;
 The days to retain backups for. Default `1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L479">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L489">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -3308,7 +3332,7 @@ clusterIdentifier?: pulumi.Input<string>;
 The cluster identifier. If omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L483">property clusterIdentifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L493">property clusterIdentifierPrefix</a>
 </h3>
 
 ```typescript
@@ -3319,7 +3343,7 @@ clusterIdentifierPrefix?: pulumi.Input<string>;
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L487">property clusterMembers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L497">property clusterMembers</a>
 </h3>
 
 ```typescript
@@ -3330,7 +3354,7 @@ clusterMembers?: pulumi.Input<pulumi.Input<string>[]>;
 List of RDS Instances that are a part of this cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L491">property databaseName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L501">property databaseName</a>
 </h3>
 
 ```typescript
@@ -3341,7 +3365,7 @@ databaseName?: pulumi.Input<string>;
 Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L495">property dbClusterParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L505">property dbClusterParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -3352,7 +3376,7 @@ dbClusterParameterGroupName?: pulumi.Input<string>;
 A cluster parameter group to associate with the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L499">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L509">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -3363,7 +3387,18 @@ dbSubnetGroupName?: pulumi.Input<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every [`aws_rds_cluster_instance`](https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html) in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L504">property enabledCloudwatchLogsExports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L513">property deletionProtection</a>
+</h3>
+
+```typescript
+deletionProtection?: pulumi.Input<boolean>;
+```
+
+
+If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L518">property enabledCloudwatchLogsExports</a>
 </h3>
 
 ```typescript
@@ -3375,7 +3410,7 @@ List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L508">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L522">property engine</a>
 </h3>
 
 ```typescript
@@ -3386,7 +3421,7 @@ engine?: pulumi.Input<string>;
 The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L512">property engineMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L526">property engineMode</a>
 </h3>
 
 ```typescript
@@ -3397,7 +3432,7 @@ engineMode?: pulumi.Input<string>;
 The database engine mode. Valid values: `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L516">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L530">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -3405,10 +3440,10 @@ engineVersion?: pulumi.Input<string>;
 ```
 
 
-The database engine version.
+The database engine version. Updating this argument results in an outage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L522">property finalSnapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L536">property finalSnapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -3421,7 +3456,7 @@ when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L526">property iamDatabaseAuthenticationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L540">property iamDatabaseAuthenticationEnabled</a>
 </h3>
 
 ```typescript
@@ -3432,7 +3467,7 @@ iamDatabaseAuthenticationEnabled?: pulumi.Input<boolean>;
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation][6] for availability and limitations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L530">property iamRoles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L544">property iamRoles</a>
 </h3>
 
 ```typescript
@@ -3443,7 +3478,7 @@ iamRoles?: pulumi.Input<pulumi.Input<string>[]>;
 A List of ARNs for the IAM roles to associate to the RDS Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L534">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L548">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -3454,7 +3489,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L539">property masterPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L553">property masterPassword</a>
 </h3>
 
 ```typescript
@@ -3466,7 +3501,7 @@ Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L543">property masterUsername</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L557">property masterUsername</a>
 </h3>
 
 ```typescript
@@ -3477,7 +3512,7 @@ masterUsername?: pulumi.Input<string>;
 Username for the master DB user. Please refer to the [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L547">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L561">property port</a>
 </h3>
 
 ```typescript
@@ -3488,7 +3523,7 @@ port?: pulumi.Input<number>;
 The port on which the DB accepts connections
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L552">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L566">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -3500,7 +3535,7 @@ The daily time range during which automated backups are created if automated bac
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L556">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L570">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -3511,7 +3546,7 @@ preferredMaintenanceWindow?: pulumi.Input<string>;
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L560">property replicationSourceIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L574">property replicationSourceIdentifier</a>
 </h3>
 
 ```typescript
@@ -3522,7 +3557,7 @@ replicationSourceIdentifier?: pulumi.Input<string>;
 ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L561">property s3Import</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L575">property s3Import</a>
 </h3>
 
 ```typescript
@@ -3530,7 +3565,7 @@ s3Import?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L565">property scalingConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L579">property scalingConfiguration</a>
 </h3>
 
 ```typescript
@@ -3541,7 +3576,7 @@ scalingConfiguration?: pulumi.Input<{ ... }>;
 Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L569">property skipFinalSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L583">property skipFinalSnapshot</a>
 </h3>
 
 ```typescript
@@ -3552,7 +3587,7 @@ skipFinalSnapshot?: pulumi.Input<boolean>;
 Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L573">property snapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L587">property snapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -3563,7 +3598,7 @@ snapshotIdentifier?: pulumi.Input<string>;
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L577">property sourceRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L591">property sourceRegion</a>
 </h3>
 
 ```typescript
@@ -3574,7 +3609,7 @@ sourceRegion?: pulumi.Input<string>;
 The source region for an encrypted replica DB cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L581">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L595">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -3585,7 +3620,7 @@ storageEncrypted?: pulumi.Input<boolean>;
 Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L585">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L599">property tags</a>
 </h3>
 
 ```typescript
@@ -3596,7 +3631,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the DB cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L590">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L604">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -3608,13 +3643,13 @@ List of VPC security groups to associate
 with the Cluster
 
 <h2 class="pdoc-module-header" id="ClusterInstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L391">interface ClusterInstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L393">interface ClusterInstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a ClusterInstance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L396">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L398">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -3626,7 +3661,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L400">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L402">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -3637,7 +3672,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L404">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L406">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -3648,7 +3683,7 @@ availabilityZone?: pulumi.Input<string>;
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L408">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L410">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -3659,7 +3694,7 @@ clusterIdentifier: pulumi.Input<string>;
 The identifier of the [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L412">property dbParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L414">property dbParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -3670,7 +3705,7 @@ dbParameterGroupName?: pulumi.Input<string>;
 The name of the DB parameter group to associate with this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L416">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L418">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -3681,7 +3716,7 @@ dbSubnetGroupName?: pulumi.Input<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L423">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L425">property engine</a>
 </h3>
 
 ```typescript
@@ -3695,7 +3730,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L427">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L429">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -3706,7 +3741,7 @@ engineVersion?: pulumi.Input<string>;
 The database engine version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L431">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L433">property identifier</a>
 </h3>
 
 ```typescript
@@ -3717,7 +3752,7 @@ identifier?: pulumi.Input<string>;
 The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L435">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L437">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -3728,7 +3763,7 @@ identifierPrefix?: pulumi.Input<string>;
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L454">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L456">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -3754,7 +3789,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 - db.r4.16xlarge
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L458">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L460">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -3765,7 +3800,7 @@ monitoringInterval?: pulumi.Input<number>;
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L464">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L466">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -3778,7 +3813,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L468">property performanceInsightsEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L470">property performanceInsightsEnabled</a>
 </h3>
 
 ```typescript
@@ -3789,7 +3824,7 @@ performanceInsightsEnabled?: pulumi.Input<boolean>;
 Specifies whether Performance Insights is enabled or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L472">property performanceInsightsKmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L474">property performanceInsightsKmsKeyId</a>
 </h3>
 
 ```typescript
@@ -3800,7 +3835,7 @@ performanceInsightsKmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L477">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L479">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -3812,7 +3847,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L482">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L484">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -3824,7 +3859,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L486">property promotionTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L488">property promotionTier</a>
 </h3>
 
 ```typescript
@@ -3835,7 +3870,7 @@ promotionTier?: pulumi.Input<number>;
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L492">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L494">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -3848,7 +3883,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L496">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L498">property tags</a>
 </h3>
 
 ```typescript
@@ -3859,13 +3894,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the instance.
 
 <h2 class="pdoc-module-header" id="ClusterInstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L252">interface ClusterInstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L254">interface ClusterInstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering ClusterInstance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L257">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L259">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -3877,7 +3912,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L261">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L263">property arn</a>
 </h3>
 
 ```typescript
@@ -3888,7 +3923,7 @@ arn?: pulumi.Input<string>;
 Amazon Resource Name (ARN) of cluster instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L265">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L267">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -3899,7 +3934,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L269">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L271">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -3910,7 +3945,7 @@ availabilityZone?: pulumi.Input<string>;
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L273">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L275">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -3921,7 +3956,7 @@ clusterIdentifier?: pulumi.Input<string>;
 The identifier of the [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L277">property dbParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L279">property dbParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -3932,7 +3967,7 @@ dbParameterGroupName?: pulumi.Input<string>;
 The name of the DB parameter group to associate with this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L281">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L283">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -3943,7 +3978,7 @@ dbSubnetGroupName?: pulumi.Input<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L285">property dbiResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L287">property dbiResourceId</a>
 </h3>
 
 ```typescript
@@ -3954,7 +3989,7 @@ dbiResourceId?: pulumi.Input<string>;
 The region-unique, immutable identifier for the DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L289">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L291">property endpoint</a>
 </h3>
 
 ```typescript
@@ -3965,7 +4000,7 @@ endpoint?: pulumi.Input<string>;
 The DNS address for this instance. May not be writable
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L296">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L298">property engine</a>
 </h3>
 
 ```typescript
@@ -3979,7 +4014,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L300">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L302">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -3990,7 +4025,7 @@ engineVersion?: pulumi.Input<string>;
 The database engine version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L304">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L306">property identifier</a>
 </h3>
 
 ```typescript
@@ -4001,7 +4036,7 @@ identifier?: pulumi.Input<string>;
 The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L308">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L310">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -4012,7 +4047,7 @@ identifierPrefix?: pulumi.Input<string>;
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L327">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L329">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -4038,7 +4073,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 - db.r4.16xlarge
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L331">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L333">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -4049,7 +4084,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key if one is set to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L335">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L337">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -4060,7 +4095,7 @@ monitoringInterval?: pulumi.Input<number>;
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L341">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L343">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -4073,7 +4108,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L345">property performanceInsightsEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L347">property performanceInsightsEnabled</a>
 </h3>
 
 ```typescript
@@ -4084,7 +4119,7 @@ performanceInsightsEnabled?: pulumi.Input<boolean>;
 Specifies whether Performance Insights is enabled or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L349">property performanceInsightsKmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L351">property performanceInsightsKmsKeyId</a>
 </h3>
 
 ```typescript
@@ -4095,7 +4130,7 @@ performanceInsightsKmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L353">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L355">property port</a>
 </h3>
 
 ```typescript
@@ -4106,7 +4141,7 @@ port?: pulumi.Input<number>;
 The database port
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L358">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L360">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -4118,7 +4153,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L363">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L365">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -4130,7 +4165,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L367">property promotionTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L369">property promotionTier</a>
 </h3>
 
 ```typescript
@@ -4141,7 +4176,7 @@ promotionTier?: pulumi.Input<number>;
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L373">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L375">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -4154,7 +4189,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L377">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L379">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -4165,7 +4200,7 @@ storageEncrypted?: pulumi.Input<boolean>;
 Specifies whether the DB cluster is encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L381">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L383">property tags</a>
 </h3>
 
 ```typescript
@@ -4176,7 +4211,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L385">property writer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L387">property writer</a>
 </h3>
 
 ```typescript
@@ -4535,13 +4570,13 @@ vpcId?: pulumi.Input<string>;
 The VPC ID associated with the DB cluster snapshot.
 
 <h2 class="pdoc-module-header" id="ClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L295">interface ClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L301">interface ClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L301">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L307">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -4554,7 +4589,7 @@ are applied immediately, or during the next maintenance window. Default is
 `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L305">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L311">property arn</a>
 </h3>
 
 ```typescript
@@ -4565,7 +4600,7 @@ arn?: pulumi.Input<string>;
 Amazon Resource Name (ARN) of cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L310">property availabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L316">property availabilityZones</a>
 </h3>
 
 ```typescript
@@ -4577,7 +4612,7 @@ A list of EC2 Availability Zones that
 instances in the DB cluster can be created in
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L314">property backtrackWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L320">property backtrackWindow</a>
 </h3>
 
 ```typescript
@@ -4588,7 +4623,7 @@ backtrackWindow?: pulumi.Input<number>;
 The target backtrack window, in seconds. Only available for `aurora` engine currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L318">property backupRetentionPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L324">property backupRetentionPeriod</a>
 </h3>
 
 ```typescript
@@ -4599,7 +4634,7 @@ backupRetentionPeriod?: pulumi.Input<number>;
 The days to retain backups for. Default `1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L322">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L328">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -4610,7 +4645,7 @@ clusterIdentifier?: pulumi.Input<string>;
 The cluster identifier. If omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L326">property clusterIdentifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L332">property clusterIdentifierPrefix</a>
 </h3>
 
 ```typescript
@@ -4621,7 +4656,7 @@ clusterIdentifierPrefix?: pulumi.Input<string>;
 Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L330">property clusterMembers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L336">property clusterMembers</a>
 </h3>
 
 ```typescript
@@ -4632,7 +4667,7 @@ clusterMembers?: pulumi.Input<pulumi.Input<string>[]>;
 List of RDS Instances that are a part of this cluster
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L334">property clusterResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L340">property clusterResourceId</a>
 </h3>
 
 ```typescript
@@ -4643,7 +4678,7 @@ clusterResourceId?: pulumi.Input<string>;
 The RDS Cluster Resource ID
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L338">property databaseName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L344">property databaseName</a>
 </h3>
 
 ```typescript
@@ -4654,7 +4689,7 @@ databaseName?: pulumi.Input<string>;
 Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L342">property dbClusterParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L348">property dbClusterParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -4665,7 +4700,7 @@ dbClusterParameterGroupName?: pulumi.Input<string>;
 A cluster parameter group to associate with the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L346">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L352">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -4676,7 +4711,18 @@ dbSubnetGroupName?: pulumi.Input<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every [`aws_rds_cluster_instance`](https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html) in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L351">property enabledCloudwatchLogsExports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L356">property deletionProtection</a>
+</h3>
+
+```typescript
+deletionProtection?: pulumi.Input<boolean>;
+```
+
+
+If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L361">property enabledCloudwatchLogsExports</a>
 </h3>
 
 ```typescript
@@ -4688,7 +4734,7 @@ List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `error`, `general`, `slowquery`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L355">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L365">property endpoint</a>
 </h3>
 
 ```typescript
@@ -4699,7 +4745,7 @@ endpoint?: pulumi.Input<string>;
 The DNS address of the RDS instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L359">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L369">property engine</a>
 </h3>
 
 ```typescript
@@ -4710,7 +4756,7 @@ engine?: pulumi.Input<string>;
 The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L363">property engineMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L373">property engineMode</a>
 </h3>
 
 ```typescript
@@ -4721,7 +4767,7 @@ engineMode?: pulumi.Input<string>;
 The database engine mode. Valid values: `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L367">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L377">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -4729,10 +4775,10 @@ engineVersion?: pulumi.Input<string>;
 ```
 
 
-The database engine version.
+The database engine version. Updating this argument results in an outage.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L373">property finalSnapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L383">property finalSnapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -4745,7 +4791,7 @@ when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L377">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L387">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -4756,7 +4802,7 @@ hostedZoneId?: pulumi.Input<string>;
 The Route53 Hosted Zone ID of the endpoint
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L381">property iamDatabaseAuthenticationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L391">property iamDatabaseAuthenticationEnabled</a>
 </h3>
 
 ```typescript
@@ -4767,7 +4813,7 @@ iamDatabaseAuthenticationEnabled?: pulumi.Input<boolean>;
 Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation][6] for availability and limitations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L385">property iamRoles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L395">property iamRoles</a>
 </h3>
 
 ```typescript
@@ -4778,7 +4824,7 @@ iamRoles?: pulumi.Input<pulumi.Input<string>[]>;
 A List of ARNs for the IAM roles to associate to the RDS Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L389">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L399">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -4789,7 +4835,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L394">property masterPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L404">property masterPassword</a>
 </h3>
 
 ```typescript
@@ -4801,7 +4847,7 @@ Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L398">property masterUsername</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L408">property masterUsername</a>
 </h3>
 
 ```typescript
@@ -4812,7 +4858,7 @@ masterUsername?: pulumi.Input<string>;
 Username for the master DB user. Please refer to the [RDS Naming Constraints][5]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L402">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L412">property port</a>
 </h3>
 
 ```typescript
@@ -4823,7 +4869,7 @@ port?: pulumi.Input<number>;
 The port on which the DB accepts connections
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L407">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L417">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -4835,7 +4881,7 @@ The daily time range during which automated backups are created if automated bac
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L411">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L421">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -4846,7 +4892,7 @@ preferredMaintenanceWindow?: pulumi.Input<string>;
 The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L416">property readerEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L426">property readerEndpoint</a>
 </h3>
 
 ```typescript
@@ -4858,7 +4904,7 @@ A read-only endpoint for the Aurora cluster, automatically
 load-balanced across replicas
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L420">property replicationSourceIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L430">property replicationSourceIdentifier</a>
 </h3>
 
 ```typescript
@@ -4869,7 +4915,7 @@ replicationSourceIdentifier?: pulumi.Input<string>;
 ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L421">property s3Import</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L431">property s3Import</a>
 </h3>
 
 ```typescript
@@ -4877,7 +4923,7 @@ s3Import?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L425">property scalingConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L435">property scalingConfiguration</a>
 </h3>
 
 ```typescript
@@ -4888,7 +4934,7 @@ scalingConfiguration?: pulumi.Input<{ ... }>;
 Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L429">property skipFinalSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L439">property skipFinalSnapshot</a>
 </h3>
 
 ```typescript
@@ -4899,7 +4945,7 @@ skipFinalSnapshot?: pulumi.Input<boolean>;
 Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L433">property snapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L443">property snapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -4910,7 +4956,7 @@ snapshotIdentifier?: pulumi.Input<string>;
 Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L437">property sourceRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L447">property sourceRegion</a>
 </h3>
 
 ```typescript
@@ -4921,7 +4967,7 @@ sourceRegion?: pulumi.Input<string>;
 The source region for an encrypted replica DB cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L441">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L451">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -4932,7 +4978,7 @@ storageEncrypted?: pulumi.Input<boolean>;
 Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L445">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L455">property tags</a>
 </h3>
 
 ```typescript
@@ -4943,7 +4989,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the DB cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L450">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts#L460">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -6389,13 +6435,13 @@ vpcId: string;
 Specifies the ID of the VPC associated with the DB snapshot.
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L758">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L768">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L763">property allocatedStorage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L773">property allocatedStorage</a>
 </h3>
 
 ```typescript
@@ -6407,7 +6453,7 @@ allocatedStorage?: pulumi.Input<number>;
 `replicate_source_db` is provided) The allocated storage in gibibytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L769">property allowMajorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L779">property allowMajorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -6420,7 +6466,7 @@ upgrades are allowed. Changing this parameter does not result in an outage and
 the change is asynchronously applied as soon as possible.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L777">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L787">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -6435,7 +6481,7 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L783">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L793">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -6448,7 +6494,7 @@ will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L787">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L797">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -6459,7 +6505,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ for the RDS instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L792">property backupRetentionPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L802">property backupRetentionPeriod</a>
 </h3>
 
 ```typescript
@@ -6468,10 +6514,10 @@ backupRetentionPeriod?: pulumi.Input<number>;
 
 
 The days to retain backups for. Must be
-`1` or greater to be a source for a [Read Replica][1].
+between `0` and `35`. When creating a Read Replica the value must be greater than `0`. [See Read Replica][1].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L798">property backupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L808">property backupWindow</a>
 </h3>
 
 ```typescript
@@ -6484,7 +6530,7 @@ automated backups are created if they are enabled. Example: "09:46-10:16". Must
 not overlap with `maintenance_window`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L806">property characterSetName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L816">property characterSetName</a>
 </h3>
 
 ```typescript
@@ -6499,7 +6545,7 @@ RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleChara
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L812">property copyTagsToSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L822">property copyTagsToSnapshot</a>
 </h3>
 
 ```typescript
@@ -6512,7 +6558,7 @@ On delete, copy all Instance
 Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L822">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L832">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -6529,7 +6575,18 @@ action CreateDBInstanceReadReplica](https://docs.aws.amazon.com/AmazonRDS/latest
 for additional read replica contraints.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L826">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L836">property deletionProtection</a>
+</h3>
+
+```typescript
+deletionProtection?: pulumi.Input<boolean>;
+```
+
+
+If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L840">property domain</a>
 </h3>
 
 ```typescript
@@ -6540,7 +6597,7 @@ domain?: pulumi.Input<string>;
 The ID of the Directory Service Active Directory domain to create the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L830">property domainIamRoleName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L844">property domainIamRoleName</a>
 </h3>
 
 ```typescript
@@ -6551,7 +6608,7 @@ domainIamRoleName?: pulumi.Input<string>;
 The name of the IAM role to be used when making API calls to the Directory Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L834">property enabledCloudwatchLogsExports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L848">property enabledCloudwatchLogsExports</a>
 </h3>
 
 ```typescript
@@ -6562,7 +6619,7 @@ enabledCloudwatchLogsExports?: pulumi.Input<pulumi.Input<string>[]>;
 List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L843">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L857">property engine</a>
 </h3>
 
 ```typescript
@@ -6578,7 +6635,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L851">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L865">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -6593,7 +6650,7 @@ For supported values, see the EngineVersion parameter in [API action CreateDBIns
 Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L856">property finalSnapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L870">property finalSnapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -6605,7 +6662,7 @@ The name of your final DB snapshot
 when this DB instance is deleted. If omitted, no final snapshot will be made.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L862">property iamDatabaseAuthenticationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L876">property iamDatabaseAuthenticationEnabled</a>
 </h3>
 
 ```typescript
@@ -6618,7 +6675,7 @@ mappings of AWS Identity and Access Management (IAM) accounts to database
 accounts is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L867">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L881">property identifier</a>
 </h3>
 
 ```typescript
@@ -6630,7 +6687,7 @@ The name of the RDS instance,
 if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L872">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L886">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -6642,7 +6699,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L876">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L890">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -6653,7 +6710,7 @@ instanceClass: pulumi.Input<string>;
 The instance type of the RDS instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L881">property iops</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L895">property iops</a>
 </h3>
 
 ```typescript
@@ -6665,7 +6722,7 @@ The amount of provisioned IOPS. Setting this implies a
 storage_type of "io1".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L886">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L900">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -6677,7 +6734,7 @@ The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L891">property licenseModel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L905">property licenseModel</a>
 </h3>
 
 ```typescript
@@ -6689,7 +6746,7 @@ licenseModel?: pulumi.Input<string>;
 SE1) License model information for this DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L899">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L913">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -6704,7 +6761,7 @@ docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstan
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L906">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L920">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -6718,7 +6775,7 @@ collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L914">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L928">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -6733,7 +6790,7 @@ Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monit
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L918">property multiAz</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L932">property multiAz</a>
 </h3>
 
 ```typescript
@@ -6744,7 +6801,7 @@ multiAz?: pulumi.Input<boolean>;
 Specifies if the RDS instance is multi-AZ
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L922">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L936">property name</a>
 </h3>
 
 ```typescript
@@ -6755,7 +6812,7 @@ name?: pulumi.Input<string>;
 The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L926">property optionGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L940">property optionGroupName</a>
 </h3>
 
 ```typescript
@@ -6766,7 +6823,7 @@ optionGroupName?: pulumi.Input<string>;
 Name of the DB option group to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L931">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L945">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -6778,7 +6835,7 @@ Name of the DB parameter group to
 associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L937">property password</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L951">property password</a>
 </h3>
 
 ```typescript
@@ -6791,7 +6848,7 @@ is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L941">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L955">property port</a>
 </h3>
 
 ```typescript
@@ -6802,7 +6859,7 @@ port?: pulumi.Input<number>;
 The port on which the DB accepts connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L946">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L960">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -6814,7 +6871,7 @@ Bool to control if instance is publicly
 accessible. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L956">property replicateSourceDb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L970">property replicateSourceDb</a>
 </h3>
 
 ```typescript
@@ -6831,7 +6888,7 @@ PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest
 for more information on using Replication.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L960">property s3Import</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L974">property s3Import</a>
 </h3>
 
 ```typescript
@@ -6842,7 +6899,7 @@ s3Import?: pulumi.Input<{ ... }>;
 Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L966">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L980">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -6855,7 +6912,7 @@ associate. Only used for [DB Instances on the _EC2-Classic_
 Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L974">property skipFinalSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L988">property skipFinalSnapshot</a>
 </h3>
 
 ```typescript
@@ -6870,7 +6927,7 @@ instance is deleted, using the value from `final_snapshot_identifier`. Default
 is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L980">property snapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L994">property snapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -6883,7 +6940,7 @@ database from a snapshot. This correlates to the snapshot ID you'd find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L987">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1001">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -6897,7 +6954,7 @@ is ignored and you should instead declare `kms_key_id` with a valid ARN. The
 default is `false` if not specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L994">property storageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1008">property storageType</a>
 </h3>
 
 ```typescript
@@ -6911,7 +6968,7 @@ specified, "standard" if not. Note that this behaviour is different from the AWS
 web console, where the default is "gp2".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L998">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1012">property tags</a>
 </h3>
 
 ```typescript
@@ -6922,7 +6979,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1006">property timezone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1020">property timezone</a>
 </h3>
 
 ```typescript
@@ -6937,7 +6994,7 @@ Guide](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1011">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1025">property username</a>
 </h3>
 
 ```typescript
@@ -6949,7 +7006,7 @@ username?: pulumi.Input<string>;
 is provided) Username for the master DB user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1016">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L1030">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -6961,13 +7018,13 @@ List of VPC security groups to
 associate.
 
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L463">interface InstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L469">interface InstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering Instance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L467">property address</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L473">property address</a>
 </h3>
 
 ```typescript
@@ -6978,7 +7035,7 @@ address?: pulumi.Input<string>;
 The hostname of the RDS instance. See also `endpoint` and `port`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L472">property allocatedStorage</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L478">property allocatedStorage</a>
 </h3>
 
 ```typescript
@@ -6990,7 +7047,7 @@ allocatedStorage?: pulumi.Input<number>;
 `replicate_source_db` is provided) The allocated storage in gibibytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L478">property allowMajorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L484">property allowMajorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -7003,7 +7060,7 @@ upgrades are allowed. Changing this parameter does not result in an outage and
 the change is asynchronously applied as soon as possible.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L486">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L492">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -7018,7 +7075,7 @@ information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DB
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L490">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L496">property arn</a>
 </h3>
 
 ```typescript
@@ -7029,7 +7086,7 @@ arn?: pulumi.Input<string>;
 The ARN of the RDS instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L496">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L502">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -7042,7 +7099,7 @@ will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L500">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L506">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -7053,7 +7110,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ for the RDS instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L505">property backupRetentionPeriod</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L511">property backupRetentionPeriod</a>
 </h3>
 
 ```typescript
@@ -7062,10 +7119,10 @@ backupRetentionPeriod?: pulumi.Input<number>;
 
 
 The days to retain backups for. Must be
-`1` or greater to be a source for a [Read Replica][1].
+between `0` and `35`. When creating a Read Replica the value must be greater than `0`. [See Read Replica][1].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L511">property backupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L517">property backupWindow</a>
 </h3>
 
 ```typescript
@@ -7078,7 +7135,7 @@ automated backups are created if they are enabled. Example: "09:46-10:16". Must
 not overlap with `maintenance_window`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L516">property caCertIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L522">property caCertIdentifier</a>
 </h3>
 
 ```typescript
@@ -7090,7 +7147,7 @@ Specifies the identifier of the CA certificate for the
 DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L524">property characterSetName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L530">property characterSetName</a>
 </h3>
 
 ```typescript
@@ -7105,7 +7162,7 @@ RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleChara
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L530">property copyTagsToSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L536">property copyTagsToSnapshot</a>
 </h3>
 
 ```typescript
@@ -7118,7 +7175,7 @@ On delete, copy all Instance
 Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L540">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L546">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -7135,7 +7192,18 @@ action CreateDBInstanceReadReplica](https://docs.aws.amazon.com/AmazonRDS/latest
 for additional read replica contraints.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L544">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L550">property deletionProtection</a>
+</h3>
+
+```typescript
+deletionProtection?: pulumi.Input<boolean>;
+```
+
+
+If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L554">property domain</a>
 </h3>
 
 ```typescript
@@ -7146,7 +7214,7 @@ domain?: pulumi.Input<string>;
 The ID of the Directory Service Active Directory domain to create the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L548">property domainIamRoleName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L558">property domainIamRoleName</a>
 </h3>
 
 ```typescript
@@ -7157,7 +7225,7 @@ domainIamRoleName?: pulumi.Input<string>;
 The name of the IAM role to be used when making API calls to the Directory Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L552">property enabledCloudwatchLogsExports</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L562">property enabledCloudwatchLogsExports</a>
 </h3>
 
 ```typescript
@@ -7168,7 +7236,7 @@ enabledCloudwatchLogsExports?: pulumi.Input<pulumi.Input<string>[]>;
 List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L556">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L566">property endpoint</a>
 </h3>
 
 ```typescript
@@ -7179,7 +7247,7 @@ endpoint?: pulumi.Input<string>;
 The connection endpoint in `address:port` format.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L565">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L575">property engine</a>
 </h3>
 
 ```typescript
@@ -7195,7 +7263,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L573">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L583">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -7210,7 +7278,7 @@ For supported values, see the EngineVersion parameter in [API action CreateDBIns
 Note that for Amazon Aurora instances the engine version must match the [DB cluster](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s engine version'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L578">property finalSnapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L588">property finalSnapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -7222,7 +7290,7 @@ The name of your final DB snapshot
 when this DB instance is deleted. If omitted, no final snapshot will be made.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L583">property hostedZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L593">property hostedZoneId</a>
 </h3>
 
 ```typescript
@@ -7234,7 +7302,7 @@ The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L589">property iamDatabaseAuthenticationEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L599">property iamDatabaseAuthenticationEnabled</a>
 </h3>
 
 ```typescript
@@ -7247,7 +7315,7 @@ mappings of AWS Identity and Access Management (IAM) accounts to database
 accounts is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L594">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L604">property identifier</a>
 </h3>
 
 ```typescript
@@ -7259,7 +7327,7 @@ The name of the RDS instance,
 if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L599">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L609">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -7271,7 +7339,7 @@ Creates a unique
 identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L603">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L613">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -7282,7 +7350,7 @@ instanceClass?: pulumi.Input<string>;
 The instance type of the RDS instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L608">property iops</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L618">property iops</a>
 </h3>
 
 ```typescript
@@ -7294,7 +7362,7 @@ The amount of provisioned IOPS. Setting this implies a
 storage_type of "io1".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L613">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L623">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -7306,7 +7374,7 @@ The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L618">property licenseModel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L628">property licenseModel</a>
 </h3>
 
 ```typescript
@@ -7318,7 +7386,7 @@ licenseModel?: pulumi.Input<string>;
 SE1) License model information for this DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L626">property maintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L636">property maintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -7333,7 +7401,7 @@ docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstan
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L633">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L643">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -7347,7 +7415,7 @@ collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L641">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L651">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -7362,7 +7430,7 @@ Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monit
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L645">property multiAz</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L655">property multiAz</a>
 </h3>
 
 ```typescript
@@ -7373,7 +7441,7 @@ multiAz?: pulumi.Input<boolean>;
 Specifies if the RDS instance is multi-AZ
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L649">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L659">property name</a>
 </h3>
 
 ```typescript
@@ -7384,7 +7452,7 @@ name?: pulumi.Input<string>;
 The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L653">property optionGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L663">property optionGroupName</a>
 </h3>
 
 ```typescript
@@ -7395,7 +7463,7 @@ optionGroupName?: pulumi.Input<string>;
 Name of the DB option group to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L658">property parameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L668">property parameterGroupName</a>
 </h3>
 
 ```typescript
@@ -7407,7 +7475,7 @@ Name of the DB parameter group to
 associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L664">property password</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L674">property password</a>
 </h3>
 
 ```typescript
@@ -7420,7 +7488,7 @@ is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L668">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L678">property port</a>
 </h3>
 
 ```typescript
@@ -7431,7 +7499,7 @@ port?: pulumi.Input<number>;
 The port on which the DB accepts connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L673">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L683">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -7443,7 +7511,7 @@ Bool to control if instance is publicly
 accessible. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L674">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L684">property replicas</a>
 </h3>
 
 ```typescript
@@ -7451,7 +7519,7 @@ replicas?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L684">property replicateSourceDb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L694">property replicateSourceDb</a>
 </h3>
 
 ```typescript
@@ -7468,7 +7536,7 @@ PostgreSQL and MySQL Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest
 for more information on using Replication.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L688">property resourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L698">property resourceId</a>
 </h3>
 
 ```typescript
@@ -7479,7 +7547,7 @@ resourceId?: pulumi.Input<string>;
 The RDS Resource ID of this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L692">property s3Import</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L702">property s3Import</a>
 </h3>
 
 ```typescript
@@ -7490,7 +7558,7 @@ s3Import?: pulumi.Input<{ ... }>;
 Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L698">property securityGroupNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L708">property securityGroupNames</a>
 </h3>
 
 ```typescript
@@ -7503,7 +7571,7 @@ associate. Only used for [DB Instances on the _EC2-Classic_
 Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L706">property skipFinalSnapshot</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L716">property skipFinalSnapshot</a>
 </h3>
 
 ```typescript
@@ -7518,7 +7586,7 @@ instance is deleted, using the value from `final_snapshot_identifier`. Default
 is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L712">property snapshotIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L722">property snapshotIdentifier</a>
 </h3>
 
 ```typescript
@@ -7531,7 +7599,7 @@ database from a snapshot. This correlates to the snapshot ID you'd find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L716">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L726">property status</a>
 </h3>
 
 ```typescript
@@ -7542,7 +7610,7 @@ status?: pulumi.Input<string>;
 The RDS instance status.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L723">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L733">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -7556,7 +7624,7 @@ is ignored and you should instead declare `kms_key_id` with a valid ARN. The
 default is `false` if not specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L730">property storageType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L740">property storageType</a>
 </h3>
 
 ```typescript
@@ -7570,7 +7638,7 @@ specified, "standard" if not. Note that this behaviour is different from the AWS
 web console, where the default is "gp2".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L734">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L744">property tags</a>
 </h3>
 
 ```typescript
@@ -7581,7 +7649,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L742">property timezone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L752">property timezone</a>
 </h3>
 
 ```typescript
@@ -7596,7 +7664,7 @@ Guide](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L747">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L757">property username</a>
 </h3>
 
 ```typescript
@@ -7608,7 +7676,7 @@ username?: pulumi.Input<string>;
 is provided) Username for the master DB user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L752">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L762">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript

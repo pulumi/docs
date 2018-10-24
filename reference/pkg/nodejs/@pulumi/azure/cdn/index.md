@@ -423,7 +423,7 @@ getProfile(args: GetProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetProfil
 ```
 
 
-Use this data source to access information about a CDN Profile.
+Use this data source to access information about an existing CDN Profile.
 
 <h2 class="pdoc-module-header" id="EndpointArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/cdn/endpoint.ts#L228">interface EndpointArgs</a>

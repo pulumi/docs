@@ -173,7 +173,7 @@ public parameters: pulumi.Output<{ ... }>;
 ```
 
 
-A list of Parameter structures that specify input parameters for the stack.
+A map of Parameter structures that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L64">property policyBody</a>
@@ -296,7 +296,7 @@ name: string;
 ```
 
 
-The name of the cross stack reference
+The name of the export as it appears in the console or from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
 
 <h2 class="pdoc-module-header" id="GetExportResult">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/getExport.ts#L32">interface GetExportResult</a>
@@ -565,7 +565,7 @@ parameters?: pulumi.Input<{ ... }>;
 ```
 
 
-A list of Parameter structures that specify input parameters for the stack.
+A map of Parameter structures that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L240">property policyBody</a>
@@ -730,7 +730,7 @@ parameters?: pulumi.Input<{ ... }>;
 ```
 
 
-A list of Parameter structures that specify input parameters for the stack.
+A map of Parameter structures that specify input parameters for the stack.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudformation/stack.ts#L177">property policyBody</a>

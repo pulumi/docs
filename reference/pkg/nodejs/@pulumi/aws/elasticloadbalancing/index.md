@@ -171,7 +171,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancing/attachment.ts#L17">class Attachment</a>
 </h2>
 
-Provides an Elastic Load Balancer Attachment resource.
+Attaches an EC2 instance to an Elastic Load Balancer (ELB). For attaching resources with Application Load Balancer (ALB) or Network Load Balancer (NLB), see the [`aws_lb_target_group_attachment` resource](https://www.terraform.io/docs/providers/aws/r/lb_target_group_attachment.html).
 
 ~> **NOTE on ELB Instances and ELB Attachments:** Terraform currently provides
 both a standalone ELB Attachment resource (describing an instance attached to

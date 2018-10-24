@@ -147,7 +147,7 @@ deployments.
 Provides an AppSync DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L58">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L62">constructor</a>
 </h3>
 
 ```typescript
@@ -249,6 +249,17 @@ public elasticsearchConfig: pulumi.Output<{ ... } | undefined>;
 Amazon Elasticsearch settings. See below
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L46">property httpConfig</a>
+</h3>
+
+```typescript
+public httpConfig: pulumi.Output<{ ... } | undefined>;
+```
+
+
+HTTP settings. See below
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
@@ -261,7 +272,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L46">property lambdaConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L50">property lambdaConfig</a>
 </h3>
 
 ```typescript
@@ -272,7 +283,7 @@ public lambdaConfig: pulumi.Output<{ ... } | undefined>;
 AWS Lambda settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L54">property name</a>
 </h3>
 
 ```typescript
@@ -283,7 +294,7 @@ public name: pulumi.Output<string>;
 A user-supplied name for the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L54">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L58">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -294,7 +305,7 @@ public serviceRoleArn: pulumi.Output<string | undefined>;
 The IAM service role ARN for the data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L58">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L62">property type</a>
 </h3>
 
 ```typescript
@@ -302,7 +313,7 @@ public type: pulumi.Output<string>;
 ```
 
 
-The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB` and `AMAZON_ELASTICSEARCH`, `NONE`.
+The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -323,7 +334,7 @@ deployments.
 Provides an AppSync GraphQL API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -389,7 +400,7 @@ public authenticationType: pulumi.Output<string>;
 ```
 
 
-The authentication type. Valid values: `API_KEY`, `AWS_IAM` and `AMAZON_COGNITO_USER_POOLS`
+The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -404,7 +415,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L34">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L34">property logConfig</a>
+</h3>
+
+```typescript
+public logConfig: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Nested argument containing logging configuration. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -413,6 +435,28 @@ public name: pulumi.Output<string>;
 
 
 A user-supplied name for the GraphqlApi.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L42">property openidConnectConfig</a>
+</h3>
+
+```typescript
+public openidConnectConfig: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Nested argument containing OpenID Connect configuration. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L46">property uris</a>
+</h3>
+
+```typescript
+public uris: pulumi.Output<{ ... }>;
+```
+
+
+Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -427,7 +471,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L38">property userPoolConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L50">property userPoolConfig</a>
 </h3>
 
 ```typescript
@@ -435,7 +479,7 @@ public userPoolConfig: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-The Amazon Cognito User Pool configuration. See below
+The Amazon Cognito User Pool configuration. Defined below.
 
 <h2 class="pdoc-module-header" id="ApiKeyArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/apiKey.ts#L95">interface ApiKeyArgs</a>
@@ -527,13 +571,13 @@ key?: pulumi.Input<string>;
 The API key
 
 <h2 class="pdoc-module-header" id="DataSourceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L148">interface DataSourceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L158">interface DataSourceArgs</a>
 </h2>
 
 The set of arguments for constructing a DataSource resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L152">property apiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L162">property apiId</a>
 </h3>
 
 ```typescript
@@ -544,7 +588,7 @@ apiId: pulumi.Input<string>;
 The API ID for the GraphQL API for the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L156">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L166">property description</a>
 </h3>
 
 ```typescript
@@ -555,7 +599,7 @@ description?: pulumi.Input<string>;
 A description of the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L160">property dynamodbConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L170">property dynamodbConfig</a>
 </h3>
 
 ```typescript
@@ -566,7 +610,7 @@ dynamodbConfig?: pulumi.Input<{ ... }>;
 DynamoDB settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L164">property elasticsearchConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L174">property elasticsearchConfig</a>
 </h3>
 
 ```typescript
@@ -577,7 +621,18 @@ elasticsearchConfig?: pulumi.Input<{ ... }>;
 Amazon Elasticsearch settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L168">property lambdaConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L178">property httpConfig</a>
+</h3>
+
+```typescript
+httpConfig?: pulumi.Input<{ ... }>;
+```
+
+
+HTTP settings. See below
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L182">property lambdaConfig</a>
 </h3>
 
 ```typescript
@@ -588,7 +643,7 @@ lambdaConfig?: pulumi.Input<{ ... }>;
 AWS Lambda settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L172">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L186">property name</a>
 </h3>
 
 ```typescript
@@ -599,7 +654,7 @@ name?: pulumi.Input<string>;
 A user-supplied name for the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L176">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L190">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -610,7 +665,7 @@ serviceRoleArn?: pulumi.Input<string>;
 The IAM service role ARN for the data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L180">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L194">property type</a>
 </h3>
 
 ```typescript
@@ -618,16 +673,16 @@ type: pulumi.Input<string>;
 ```
 
 
-The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB` and `AMAZON_ELASTICSEARCH`, `NONE`.
+The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 
 <h2 class="pdoc-module-header" id="DataSourceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L106">interface DataSourceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L112">interface DataSourceState</a>
 </h2>
 
 Input properties used for looking up and filtering DataSource resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L110">property apiId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L116">property apiId</a>
 </h3>
 
 ```typescript
@@ -638,7 +693,7 @@ apiId?: pulumi.Input<string>;
 The API ID for the GraphQL API for the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L114">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L120">property arn</a>
 </h3>
 
 ```typescript
@@ -649,7 +704,7 @@ arn?: pulumi.Input<string>;
 The ARN
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L118">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L124">property description</a>
 </h3>
 
 ```typescript
@@ -660,7 +715,7 @@ description?: pulumi.Input<string>;
 A description of the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L122">property dynamodbConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L128">property dynamodbConfig</a>
 </h3>
 
 ```typescript
@@ -671,7 +726,7 @@ dynamodbConfig?: pulumi.Input<{ ... }>;
 DynamoDB settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L126">property elasticsearchConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L132">property elasticsearchConfig</a>
 </h3>
 
 ```typescript
@@ -682,7 +737,18 @@ elasticsearchConfig?: pulumi.Input<{ ... }>;
 Amazon Elasticsearch settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L130">property lambdaConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L136">property httpConfig</a>
+</h3>
+
+```typescript
+httpConfig?: pulumi.Input<{ ... }>;
+```
+
+
+HTTP settings. See below
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L140">property lambdaConfig</a>
 </h3>
 
 ```typescript
@@ -693,7 +759,7 @@ lambdaConfig?: pulumi.Input<{ ... }>;
 AWS Lambda settings. See below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L134">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L144">property name</a>
 </h3>
 
 ```typescript
@@ -704,7 +770,7 @@ name?: pulumi.Input<string>;
 A user-supplied name for the DataSource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L138">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L148">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -715,7 +781,7 @@ serviceRoleArn?: pulumi.Input<string>;
 The IAM service role ARN for the data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L142">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/dataSource.ts#L152">property type</a>
 </h3>
 
 ```typescript
@@ -723,16 +789,16 @@ type?: pulumi.Input<string>;
 ```
 
 
-The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB` and `AMAZON_ELASTICSEARCH`, `NONE`.
+The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 
 <h2 class="pdoc-module-header" id="GraphQLApiArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L95">interface GraphQLApiArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L125">interface GraphQLApiArgs</a>
 </h2>
 
 The set of arguments for constructing a GraphQLApi resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L99">property authenticationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L129">property authenticationType</a>
 </h3>
 
 ```typescript
@@ -740,10 +806,21 @@ authenticationType: pulumi.Input<string>;
 ```
 
 
-The authentication type. Valid values: `API_KEY`, `AWS_IAM` and `AMAZON_COGNITO_USER_POOLS`
+The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L133">property logConfig</a>
+</h3>
+
+```typescript
+logConfig?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument containing logging configuration. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L137">property name</a>
 </h3>
 
 ```typescript
@@ -754,7 +831,18 @@ name?: pulumi.Input<string>;
 A user-supplied name for the GraphqlApi.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L107">property userPoolConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L141">property openidConnectConfig</a>
+</h3>
+
+```typescript
+openidConnectConfig?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument containing OpenID Connect configuration. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L145">property userPoolConfig</a>
 </h3>
 
 ```typescript
@@ -762,16 +850,16 @@ userPoolConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-The Amazon Cognito User Pool configuration. See below
+The Amazon Cognito User Pool configuration. Defined below.
 
 <h2 class="pdoc-module-header" id="GraphQLApiState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L73">interface GraphQLApiState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L91">interface GraphQLApiState</a>
 </h2>
 
 Input properties used for looking up and filtering GraphQLApi resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L77">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L95">property arn</a>
 </h3>
 
 ```typescript
@@ -782,7 +870,7 @@ arn?: pulumi.Input<string>;
 The ARN
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L81">property authenticationType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L99">property authenticationType</a>
 </h3>
 
 ```typescript
@@ -790,10 +878,21 @@ authenticationType?: pulumi.Input<string>;
 ```
 
 
-The authentication type. Valid values: `API_KEY`, `AWS_IAM` and `AMAZON_COGNITO_USER_POOLS`
+The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L85">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L103">property logConfig</a>
+</h3>
+
+```typescript
+logConfig?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument containing logging configuration. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L107">property name</a>
 </h3>
 
 ```typescript
@@ -804,7 +903,29 @@ name?: pulumi.Input<string>;
 A user-supplied name for the GraphqlApi.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L89">property userPoolConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L111">property openidConnectConfig</a>
+</h3>
+
+```typescript
+openidConnectConfig?: pulumi.Input<{ ... }>;
+```
+
+
+Nested argument containing OpenID Connect configuration. Defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L115">property uris</a>
+</h3>
+
+```typescript
+uris?: pulumi.Input<{ ... }>;
+```
+
+
+Map of URIs associated with the API. e.g. `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/appsync/graphQLApi.ts#L119">property userPoolConfig</a>
 </h3>
 
 ```typescript
@@ -812,5 +933,5 @@ userPoolConfig?: pulumi.Input<{ ... }>;
 ```
 
 
-The Amazon Cognito User Pool configuration. See below
+The Amazon Cognito User Pool configuration. Defined below.
 

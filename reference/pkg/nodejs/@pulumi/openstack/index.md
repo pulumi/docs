@@ -32,6 +32,7 @@ import * as openstack from "@pulumi/openstack";
 * <a href="blockstorage">blockstorage</a>
 * <a href="compute">compute</a>
 * <a href="config">config</a>
+* <a href="containerinfra">containerinfra</a>
 * <a href="database">database</a>
 * <a href="dns">dns</a>
 * <a href="firewall">firewall</a>

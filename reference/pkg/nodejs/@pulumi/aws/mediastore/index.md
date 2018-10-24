@@ -211,7 +211,7 @@ public policy: pulumi.Output<string>;
 ```
 
 
-The contents of the policy.
+The contents of the policy. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -268,7 +268,7 @@ policy: pulumi.Input<string>;
 ```
 
 
-The contents of the policy.
+The contents of the policy. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
 
 <h2 class="pdoc-module-header" id="ContainerPolicyState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/containerPolicy.ts#L64">interface ContainerPolicyState</a>
@@ -296,7 +296,7 @@ policy?: pulumi.Input<string>;
 ```
 
 
-The contents of the policy.
+The contents of the policy. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
 
 <h2 class="pdoc-module-header" id="ContainerState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mediastore/container.ts#L64">interface ContainerState</a>

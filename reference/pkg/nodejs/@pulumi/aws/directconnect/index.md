@@ -212,7 +212,7 @@ The ID of the Direct Connect virtual interface on which to create the BGP peer.
 Provides a Connection of Direct Connect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L44">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L48">constructor</a>
 </h3>
 
 ```typescript
@@ -293,7 +293,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L36">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L36">property jumboFrameCapable</a>
+</h3>
+
+```typescript
+public jumboFrameCapable: pulumi.Output<boolean>;
+```
+
+
+Boolean value representing if jumbo frames have been enabled for this connection.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L40">property location</a>
 </h3>
 
 ```typescript
@@ -304,7 +315,7 @@ public location: pulumi.Output<string>;
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L40">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -315,7 +326,7 @@ public name: pulumi.Output<string>;
 The name of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L44">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L48">property tags</a>
 </h3>
 
 ```typescript
@@ -1997,13 +2008,13 @@ virtualInterfaceId?: pulumi.Input<string>;
 The ID of the Direct Connect virtual interface on which to create the BGP peer.
 
 <h2 class="pdoc-module-header" id="ConnectionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L110">interface ConnectionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L120">interface ConnectionArgs</a>
 </h2>
 
 The set of arguments for constructing a Connection resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L114">property bandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L124">property bandwidth</a>
 </h3>
 
 ```typescript
@@ -2014,7 +2025,7 @@ bandwidth: pulumi.Input<string>;
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L118">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L128">property location</a>
 </h3>
 
 ```typescript
@@ -2025,7 +2036,7 @@ location: pulumi.Input<string>;
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L122">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L132">property name</a>
 </h3>
 
 ```typescript
@@ -2036,7 +2047,7 @@ name?: pulumi.Input<string>;
 The name of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L126">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L136">property tags</a>
 </h3>
 
 ```typescript
@@ -2103,13 +2114,13 @@ lagId?: pulumi.Input<string>;
 The ID of the LAG with which to associate the connection.
 
 <h2 class="pdoc-module-header" id="ConnectionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L84">interface ConnectionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L90">interface ConnectionState</a>
 </h2>
 
 Input properties used for looking up and filtering Connection resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L88">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L94">property arn</a>
 </h3>
 
 ```typescript
@@ -2120,7 +2131,7 @@ arn?: pulumi.Input<string>;
 The ARN of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L92">property bandwidth</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L98">property bandwidth</a>
 </h3>
 
 ```typescript
@@ -2131,7 +2142,18 @@ bandwidth?: pulumi.Input<string>;
 The bandwidth of the connection. Available values: 1Gbps, 10Gbps. Case sensitive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L96">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L102">property jumboFrameCapable</a>
+</h3>
+
+```typescript
+jumboFrameCapable?: pulumi.Input<boolean>;
+```
+
+
+Boolean value representing if jumbo frames have been enabled for this connection.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L106">property location</a>
 </h3>
 
 ```typescript
@@ -2142,7 +2164,7 @@ location?: pulumi.Input<string>;
 The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L100">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L110">property name</a>
 </h3>
 
 ```typescript
@@ -2153,7 +2175,7 @@ name?: pulumi.Input<string>;
 The name of the connection.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L104">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/connection.ts#L114">property tags</a>
 </h3>
 
 ```typescript
