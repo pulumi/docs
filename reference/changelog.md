@@ -83,7 +83,7 @@ redirect_from: /install/changelog.html
 
 ## v0.16.1 {#v161}https://github.com/pulumi/pulumi/pull/2069
 
-Released on October 15, 2018
+Released on October 23, 2018
 
 In addition to the 0.16.1 CLI release, we've released new versions `@pulumi/aws`, `@pulumi/azure`, `@pulumi/gcp`, and `@pulumi/openstack`.
 
@@ -102,12 +102,12 @@ In addition to the 0.16.1 CLI release, we've released new versions `@pulumi/aws`
 
 - Update to the v1.14.0 version of the AWS Provider [pulumi/pulumi-aws#355](https://github.com/pulumi/pulumi-aws/pull/355)
 - Add definitions for S3 Canned ACLs [pulumi/pulumi-aws#351](https://github.com/pulumi/pulumi-aws/pull/355)
-- Add serverless methods to Kenisis streams [pulumi/pulumi-aws#345](https://github.com/pulumi/pulumi-aws/pull/345)
+- Add serverless methods to Kinesis streams [pulumi/pulumi-aws#345](https://github.com/pulumi/pulumi-aws/pull/345)
 
 ### @pulumi/azure 0.16.3
 
 - Update to the v1.17.0 version of the Azure Provider [pulumi/pulumi-azure#137](https://github.com/pulumi/pulumi-azure/pull/137)
-- Fix an issue where the provider could fail with an error about a go type converison failing [pulumi/pulumi-azure#138](https://github.com/pulumi/pulumi-azure/pull/138)
+- Fix an issue where the provider could fail with an error about a Go type converison failing [pulumi/pulumi-azure#138](https://github.com/pulumi/pulumi-azure/pull/138)
 
 ### @pulumi/gcp 0.16.1
 
@@ -158,7 +158,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 ### @pulumi/aws 0.16.0
 
-- Moved all `@pulumi/aws-serverless` features down into `@pulumi/aws`.  Event handlers are now available as methods like `bucket.onObjectCreated` off of instances of `aws.s3.Bucket` and all other Lambda event sources.  In addition, the `aws.apigateway.x.API` type is available for simple construction of API Gateways directly in the `@pulumi/aws` package.
+- Moved all `@pulumi/aws-serverless` features down into `@pulumi/aws`.  Event handlers are now available as methods like `bucket.onObjectCreated` from instances of `aws.s3.Bucket` and all other Lambda event sources.  In addition, the `aws.apigateway.x.API` type is available for simple construction of API Gateways directly in the `@pulumi/aws` package.
 - Added richer typing for many EC2 and Autoscaling resources.  Thanks to [@jen20](https://github.com/jen20)! [pulumi/pulumi-aws#323](https://github.com/pulumi/pulumi-aws/pull/323) [pulumi/pulumi-aws#324](https://github.com/pulumi/pulumi-aws/pull/324)
 - Adopted `v1.38.0` of the AWS Terraform Provider. [pulumi/pulumi-aws#341](https://github.com/pulumi/pulumi-aws/pull/341)
 
