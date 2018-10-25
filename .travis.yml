@@ -11,7 +11,7 @@ before_install:
 - ./scripts/travisqueue.sh start
 # Install required tools.
 # pulumi
-- curl -L https://get.pulumi.com/ | bash -s -- --version 0.16.0
+- curl -L https://get.pulumi.com/ | bash -s -- --version 0.16.2-dev-1540331970-gb14d2593
 - export PATH=$PATH:$HOME/.pulumi/bin
 # yarn
 - npm i -g yarn

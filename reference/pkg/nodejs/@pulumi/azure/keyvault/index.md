@@ -576,7 +576,7 @@ Manages a Key Vault.
 ~> **NOTE:** It's possible to define Key Vault Access Policies both within the `azurerm_key_vault` resource via the `access_policy` block and by using the `azurerm_key_vault_access_policy` resource. However it's not possible to use both methods to manage Access Policies within a KeyVault, since there'll be conflicts.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L80">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L72">constructor</a>
 </h3>
 
 ```typescript
@@ -623,7 +623,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L29">property accessPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L28">property accessPolicies</a>
 </h3>
 
 ```typescript
@@ -631,11 +631,10 @@ public accessPolicies: pulumi.Output<{ ... }[]>;
 ```
 
 
-An access policy block as described below. A maximum of 16
-may be declared.
+An access policy block as described below. A maximum of 16 may be declared.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L35">property enabledForDeployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L32">property enabledForDeployment</a>
 </h3>
 
 ```typescript
@@ -643,12 +642,10 @@ public enabledForDeployment: pulumi.Output<boolean | undefined>;
 ```
 
 
-Boolean flag to specify whether Azure Virtual
-Machines are permitted to retrieve certificates stored as secrets from the key
-vault. Defaults to false.
+Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L41">property enabledForDiskEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L36">property enabledForDiskEncryption</a>
 </h3>
 
 ```typescript
@@ -656,12 +653,10 @@ public enabledForDiskEncryption: pulumi.Output<boolean | undefined>;
 ```
 
 
-Boolean flag to specify whether Azure
-Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-Defaults to false.
+Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L47">property enabledForTemplateDeployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L40">property enabledForTemplateDeployment</a>
 </h3>
 
 ```typescript
@@ -669,9 +664,7 @@ public enabledForTemplateDeployment: pulumi.Output<boolean | undefined>;
 ```
 
 
-Boolean flag to specify whether
-Azure Resource Manager is permitted to retrieve secrets from the key vault.
-Defaults to false.
+Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -686,7 +679,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L52">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L44">property location</a>
 </h3>
 
 ```typescript
@@ -694,11 +687,10 @@ public location: pulumi.Output<string>;
 ```
 
 
-Specifies the supported Azure location where the resource exists.
-Changing this forces a new resource to be created.
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L57">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L48">property name</a>
 </h3>
 
 ```typescript
@@ -706,11 +698,21 @@ public name: pulumi.Output<string>;
 ```
 
 
-SKU name to specify whether the key vault is a `standard`
-or `premium` vault.
+Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L62">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L52">property networkAcls</a>
+</h3>
+
+```typescript
+public networkAcls: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A `network_acls` block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L56">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -718,11 +720,10 @@ public resourceGroupName: pulumi.Output<string>;
 ```
 
 
-The name of the resource group in which to
-create the Key Vault. Changing this forces a new resource to be created.
+The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L66">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L60">property sku</a>
 </h3>
 
 ```typescript
@@ -733,7 +734,7 @@ public sku: pulumi.Output<{ ... }>;
 An SKU block as described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L70">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L64">property tags</a>
 </h3>
 
 ```typescript
@@ -744,7 +745,7 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L76">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L68">property tenantId</a>
 </h3>
 
 ```typescript
@@ -752,9 +753,7 @@ public tenantId: pulumi.Output<string>;
 ```
 
 
-The Azure Active Directory tenant ID that should be used
-for authenticating requests to the key vault. Must match the `tenant_id` used
-above.
+The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -769,7 +768,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L80">property vaultUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L72">property vaultUri</a>
 </h3>
 
 ```typescript
@@ -777,7 +776,7 @@ public vaultUri: pulumi.Output<string>;
 ```
 
 
-The URI of the vault for performing operations on keys and secrets.
+The URI of the Key Vault, used for performing operations on keys and secrets.
 
 <h2 class="pdoc-module-header" id="Secret">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/secret.ts#L13">class Secret</a>
@@ -945,7 +944,7 @@ getKeyVault(args: GetKeyVaultArgs, opts?: pulumi.InvokeOptions): Promise<GetKeyV
 ```
 
 
-Gets information about a Key Vault.
+Use this data source to access information about an existing Key Vault.
 
 <h2 class="pdoc-module-header" id="getSecret">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getSecret.ts#L13">function getSecret</a>
@@ -956,7 +955,7 @@ getSecret(args: GetSecretArgs, opts?: pulumi.InvokeOptions): Promise<GetSecretRe
 ```
 
 
-Returns information about the specified Key Vault Secret.
+Use this data source to access information about an existing Key Vault Secret.
 
 ~> **Note:** All arguments including the secret value will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
@@ -1487,7 +1486,7 @@ enabledForTemplateDeployment: boolean;
 Can Azure Resource Manager retrieve secrets from the Key Vault?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L74">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L75">property id</a>
 </h3>
 
 ```typescript
@@ -1509,7 +1508,15 @@ location: string;
 The Azure Region in which the Key Vault exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L58">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L55">property networkAcls</a>
+</h3>
+
+```typescript
+networkAcls: { ... }[];
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L59">property sku</a>
 </h3>
 
 ```typescript
@@ -1520,7 +1527,7 @@ sku: { ... };
 A `sku` block as described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L62">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L63">property tags</a>
 </h3>
 
 ```typescript
@@ -1531,7 +1538,7 @@ tags: { ... };
 A mapping of tags assigned to the Key Vault.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L66">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L67">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1542,7 +1549,7 @@ tenantId: string;
 The Azure Active Directory Tenant ID used to authenticate requests for this Key Vault.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L70">property vaultUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L71">property vaultUri</a>
 </h3>
 
 ```typescript
@@ -1819,13 +1826,13 @@ version?: pulumi.Input<string>;
 The current version of the Key Vault Key.
 
 <h2 class="pdoc-module-header" id="KeyVaultArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L200">interface KeyVaultArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L186">interface KeyVaultArgs</a>
 </h2>
 
 The set of arguments for constructing a KeyVault resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L205">property accessPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L190">property accessPolicies</a>
 </h3>
 
 ```typescript
@@ -1833,11 +1840,10 @@ accessPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-An access policy block as described below. A maximum of 16
-may be declared.
+An access policy block as described below. A maximum of 16 may be declared.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L211">property enabledForDeployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L194">property enabledForDeployment</a>
 </h3>
 
 ```typescript
@@ -1845,12 +1851,10 @@ enabledForDeployment?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag to specify whether Azure Virtual
-Machines are permitted to retrieve certificates stored as secrets from the key
-vault. Defaults to false.
+Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L217">property enabledForDiskEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L198">property enabledForDiskEncryption</a>
 </h3>
 
 ```typescript
@@ -1858,12 +1862,10 @@ enabledForDiskEncryption?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag to specify whether Azure
-Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-Defaults to false.
+Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L223">property enabledForTemplateDeployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L202">property enabledForTemplateDeployment</a>
 </h3>
 
 ```typescript
@@ -1871,12 +1873,10 @@ enabledForTemplateDeployment?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag to specify whether
-Azure Resource Manager is permitted to retrieve secrets from the key vault.
-Defaults to false.
+Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L228">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L206">property location</a>
 </h3>
 
 ```typescript
@@ -1884,11 +1884,10 @@ location: pulumi.Input<string>;
 ```
 
 
-Specifies the supported Azure location where the resource exists.
-Changing this forces a new resource to be created.
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L233">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L210">property name</a>
 </h3>
 
 ```typescript
@@ -1896,11 +1895,21 @@ name?: pulumi.Input<string>;
 ```
 
 
-SKU name to specify whether the key vault is a `standard`
-or `premium` vault.
+Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L238">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L214">property networkAcls</a>
+</h3>
+
+```typescript
+networkAcls?: pulumi.Input<{ ... }>;
+```
+
+
+A `network_acls` block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L218">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1908,11 +1917,10 @@ resourceGroupName: pulumi.Input<string>;
 ```
 
 
-The name of the resource group in which to
-create the Key Vault. Changing this forces a new resource to be created.
+The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L242">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L222">property sku</a>
 </h3>
 
 ```typescript
@@ -1923,7 +1931,7 @@ sku: pulumi.Input<{ ... }>;
 An SKU block as described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L246">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L226">property tags</a>
 </h3>
 
 ```typescript
@@ -1934,7 +1942,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L252">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L230">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1942,18 +1950,16 @@ tenantId: pulumi.Input<string>;
 ```
 
 
-The Azure Active Directory tenant ID that should be used
-for authenticating requests to the key vault. Must match the `tenant_id` used
-above.
+The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 <h2 class="pdoc-module-header" id="KeyVaultState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L138">interface KeyVaultState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L132">interface KeyVaultState</a>
 </h2>
 
 Input properties used for looking up and filtering KeyVault resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L143">property accessPolicies</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L136">property accessPolicies</a>
 </h3>
 
 ```typescript
@@ -1961,11 +1967,10 @@ accessPolicies?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-An access policy block as described below. A maximum of 16
-may be declared.
+An access policy block as described below. A maximum of 16 may be declared.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L149">property enabledForDeployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L140">property enabledForDeployment</a>
 </h3>
 
 ```typescript
@@ -1973,12 +1978,10 @@ enabledForDeployment?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag to specify whether Azure Virtual
-Machines are permitted to retrieve certificates stored as secrets from the key
-vault. Defaults to false.
+Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L155">property enabledForDiskEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L144">property enabledForDiskEncryption</a>
 </h3>
 
 ```typescript
@@ -1986,12 +1989,10 @@ enabledForDiskEncryption?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag to specify whether Azure
-Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-Defaults to false.
+Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L161">property enabledForTemplateDeployment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L148">property enabledForTemplateDeployment</a>
 </h3>
 
 ```typescript
@@ -1999,12 +2000,10 @@ enabledForTemplateDeployment?: pulumi.Input<boolean>;
 ```
 
 
-Boolean flag to specify whether
-Azure Resource Manager is permitted to retrieve secrets from the key vault.
-Defaults to false.
+Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L166">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L152">property location</a>
 </h3>
 
 ```typescript
@@ -2012,11 +2011,10 @@ location?: pulumi.Input<string>;
 ```
 
 
-Specifies the supported Azure location where the resource exists.
-Changing this forces a new resource to be created.
+Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L171">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L156">property name</a>
 </h3>
 
 ```typescript
@@ -2024,11 +2022,21 @@ name?: pulumi.Input<string>;
 ```
 
 
-SKU name to specify whether the key vault is a `standard`
-or `premium` vault.
+Specifies the name of the Key Vault. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L176">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L160">property networkAcls</a>
+</h3>
+
+```typescript
+networkAcls?: pulumi.Input<{ ... }>;
+```
+
+
+A `network_acls` block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L164">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2036,11 +2044,10 @@ resourceGroupName?: pulumi.Input<string>;
 ```
 
 
-The name of the resource group in which to
-create the Key Vault. Changing this forces a new resource to be created.
+The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L180">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L168">property sku</a>
 </h3>
 
 ```typescript
@@ -2051,7 +2058,7 @@ sku?: pulumi.Input<{ ... }>;
 An SKU block as described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L184">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L172">property tags</a>
 </h3>
 
 ```typescript
@@ -2062,7 +2069,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L190">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L176">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2070,12 +2077,10 @@ tenantId?: pulumi.Input<string>;
 ```
 
 
-The Azure Active Directory tenant ID that should be used
-for authenticating requests to the key vault. Must match the `tenant_id` used
-above.
+The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L194">property vaultUri</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts#L180">property vaultUri</a>
 </h3>
 
 ```typescript
@@ -2083,7 +2088,7 @@ vaultUri?: pulumi.Input<string>;
 ```
 
 
-The URI of the vault for performing operations on keys and secrets.
+The URI of the Key Vault, used for performing operations on keys and secrets.
 
 <h2 class="pdoc-module-header" id="SecretArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/secret.ts#L121">interface SecretArgs</a>

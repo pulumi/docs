@@ -523,7 +523,7 @@ associated. Defaults to false.
 Manages a V2 VM instance resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L152">constructor</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L157">constructor</a>
 </h3>
 
 ```typescript
@@ -883,6 +883,18 @@ public userData: pulumi.Output<string | undefined>;
 
 The user data to provide when launching the instance.
 Changing this creates a new server.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/instance.ts#L157">property vendorOptions</a>
+</h3>
+
+```typescript
+public vendorOptions: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Map of additional vendor-specific options.
+Supported options are described below.
 
 <h2 class="pdoc-module-header" id="Keypair">
 <a class="pdoc-member-name" href="/compute/keypair.ts#L16">class Keypair</a>
@@ -2156,13 +2168,13 @@ region: string;
 See Argument Reference above.
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="/compute/instance.ts#L358">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="/compute/instance.ts#L370">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L363">property accessIpV4</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L375">property accessIpV4</a>
 </h3>
 
 ```typescript
@@ -2174,7 +2186,7 @@ The first detected Fixed IPv4 address _or_ the
 Floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L367">property accessIpV6</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L379">property accessIpV6</a>
 </h3>
 
 ```typescript
@@ -2185,7 +2197,7 @@ accessIpV6?: pulumi.Input<string>;
 The first detected Fixed IPv6 address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L372">property adminPass</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L384">property adminPass</a>
 </h3>
 
 ```typescript
@@ -2197,7 +2209,7 @@ The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L377">property availabilityZone</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L389">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -2209,7 +2221,7 @@ The availability zone in which to create
 the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L386">property blockDevices</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L398">property blockDevices</a>
 </h3>
 
 ```typescript
@@ -2225,7 +2237,7 @@ following [reference](http://docs.openstack.org/developer/nova/block_device_mapp
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L391">property configDrive</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L403">property configDrive</a>
 </h3>
 
 ```typescript
@@ -2237,7 +2249,7 @@ Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L396">property flavorId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L408">property flavorId</a>
 </h3>
 
 ```typescript
@@ -2249,7 +2261,7 @@ The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L401">property flavorName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L413">property flavorName</a>
 </h3>
 
 ```typescript
@@ -2261,7 +2273,7 @@ The name of the
 desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L407">property forceDelete</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L419">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -2274,7 +2286,7 @@ forcefully deleted. This is useful for environments that have reclaim / soft
 deletion enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L413">property imageId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L425">property imageId</a>
 </h3>
 
 ```typescript
@@ -2287,7 +2299,7 @@ from a volume. Do not specify if booting from a volume.) The image ID of
 the desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L419">property imageName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L431">property imageName</a>
 </h3>
 
 ```typescript
@@ -2300,7 +2312,7 @@ from a volume. Do not specify if booting from a volume.) The name of the
 desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L425">property keyPair</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L437">property keyPair</a>
 </h3>
 
 ```typescript
@@ -2313,7 +2325,7 @@ pair must already be created and associated with the tenant's account.
 Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L430">property metadata</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L442">property metadata</a>
 </h3>
 
 ```typescript
@@ -2325,7 +2337,7 @@ Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L434">property name</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L446">property name</a>
 </h3>
 
 ```typescript
@@ -2336,7 +2348,7 @@ name?: pulumi.Input<string>;
 A unique name for the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L440">property networks</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L452">property networks</a>
 </h3>
 
 ```typescript
@@ -2349,7 +2361,7 @@ instance. The network object structure is documented below. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L446">property personalities</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L458">property personalities</a>
 </h3>
 
 ```typescript
@@ -2362,7 +2374,7 @@ defining one or more files and their contents. The personality structure
 is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L453">property powerState</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L465">property powerState</a>
 </h3>
 
 ```typescript
@@ -2376,7 +2388,7 @@ the VM will be stopped immediately after build and the provisioners like
 remote-exec or files are not supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L459">property region</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L471">property region</a>
 </h3>
 
 ```typescript
@@ -2389,7 +2401,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L464">property schedulerHints</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L476">property schedulerHints</a>
 </h3>
 
 ```typescript
@@ -2401,7 +2413,7 @@ Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L472">property securityGroups</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L484">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -2416,7 +2428,7 @@ instance to networks using Ports, place the security groups on the Port
 and not the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L478">property stopBeforeDestroy</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L490">property stopBeforeDestroy</a>
 </h3>
 
 ```typescript
@@ -2429,7 +2441,7 @@ before destroying it, thus giving chance for guest OS daemons to stop correctly.
 If instance doesn't stop within timeout, it will be destroyed anyway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L483">property userData</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L495">property userData</a>
 </h3>
 
 ```typescript
@@ -2440,14 +2452,26 @@ userData?: pulumi.Input<string>;
 The user data to provide when launching the instance.
 Changing this creates a new server.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/instance.ts#L500">property vendorOptions</a>
+</h3>
+
+```typescript
+vendorOptions?: pulumi.Input<{ ... }>;
+```
+
+
+Map of additional vendor-specific options.
+Supported options are described below.
+
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="/compute/instance.ts#L222">interface InstanceState</a>
+<a class="pdoc-member-name" href="/compute/instance.ts#L229">interface InstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering Instance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L227">property accessIpV4</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L234">property accessIpV4</a>
 </h3>
 
 ```typescript
@@ -2459,7 +2483,7 @@ The first detected Fixed IPv4 address _or_ the
 Floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L231">property accessIpV6</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L238">property accessIpV6</a>
 </h3>
 
 ```typescript
@@ -2470,7 +2494,7 @@ accessIpV6?: pulumi.Input<string>;
 The first detected Fixed IPv6 address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L236">property adminPass</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L243">property adminPass</a>
 </h3>
 
 ```typescript
@@ -2482,7 +2506,7 @@ The administrative password to assign to the server.
 Changing this changes the root password on the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L241">property allMetadata</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L248">property allMetadata</a>
 </h3>
 
 ```typescript
@@ -2494,7 +2518,7 @@ Contains all instance metadata, even metadata not set
 by Terraform.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L246">property availabilityZone</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L253">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -2506,7 +2530,7 @@ The availability zone in which to create
 the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L255">property blockDevices</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L262">property blockDevices</a>
 </h3>
 
 ```typescript
@@ -2522,7 +2546,7 @@ following [reference](http://docs.openstack.org/developer/nova/block_device_mapp
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L260">property configDrive</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L267">property configDrive</a>
 </h3>
 
 ```typescript
@@ -2534,7 +2558,7 @@ Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L265">property flavorId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L272">property flavorId</a>
 </h3>
 
 ```typescript
@@ -2546,7 +2570,7 @@ The flavor ID of
 the desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L270">property flavorName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L277">property flavorName</a>
 </h3>
 
 ```typescript
@@ -2558,7 +2582,7 @@ The name of the
 desired flavor for the server. Changing this resizes the existing server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L276">property forceDelete</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L283">property forceDelete</a>
 </h3>
 
 ```typescript
@@ -2571,7 +2595,7 @@ forcefully deleted. This is useful for environments that have reclaim / soft
 deletion enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L282">property imageId</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L289">property imageId</a>
 </h3>
 
 ```typescript
@@ -2584,7 +2608,7 @@ from a volume. Do not specify if booting from a volume.) The image ID of
 the desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L288">property imageName</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L295">property imageName</a>
 </h3>
 
 ```typescript
@@ -2597,7 +2621,7 @@ from a volume. Do not specify if booting from a volume.) The name of the
 desired image for the server. Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L294">property keyPair</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L301">property keyPair</a>
 </h3>
 
 ```typescript
@@ -2610,7 +2634,7 @@ pair must already be created and associated with the tenant's account.
 Changing this creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L299">property metadata</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L306">property metadata</a>
 </h3>
 
 ```typescript
@@ -2622,7 +2646,7 @@ Metadata key/value pairs to make available from
 within the instance. Changing this updates the existing server metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L303">property name</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L310">property name</a>
 </h3>
 
 ```typescript
@@ -2633,7 +2657,7 @@ name?: pulumi.Input<string>;
 A unique name for the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L309">property networks</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L316">property networks</a>
 </h3>
 
 ```typescript
@@ -2646,7 +2670,7 @@ instance. The network object structure is documented below. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L315">property personalities</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L322">property personalities</a>
 </h3>
 
 ```typescript
@@ -2659,7 +2683,7 @@ defining one or more files and their contents. The personality structure
 is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L322">property powerState</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L329">property powerState</a>
 </h3>
 
 ```typescript
@@ -2673,7 +2697,7 @@ the VM will be stopped immediately after build and the provisioners like
 remote-exec or files are not supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L328">property region</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L335">property region</a>
 </h3>
 
 ```typescript
@@ -2686,7 +2710,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L333">property schedulerHints</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L340">property schedulerHints</a>
 </h3>
 
 ```typescript
@@ -2698,7 +2722,7 @@ Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L341">property securityGroups</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L348">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -2713,7 +2737,7 @@ instance to networks using Ports, place the security groups on the Port
 and not the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L347">property stopBeforeDestroy</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L354">property stopBeforeDestroy</a>
 </h3>
 
 ```typescript
@@ -2726,7 +2750,7 @@ before destroying it, thus giving chance for guest OS daemons to stop correctly.
 If instance doesn't stop within timeout, it will be destroyed anyway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/instance.ts#L352">property userData</a>
+<a class="pdoc-child-name" href="/compute/instance.ts#L359">property userData</a>
 </h3>
 
 ```typescript
@@ -2736,6 +2760,18 @@ userData?: pulumi.Input<string>;
 
 The user data to provide when launching the instance.
 Changing this creates a new server.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/instance.ts#L364">property vendorOptions</a>
+</h3>
+
+```typescript
+vendorOptions?: pulumi.Input<{ ... }>;
+```
+
+
+Map of additional vendor-specific options.
+Supported options are described below.
 
 <h2 class="pdoc-module-header" id="KeypairArgs">
 <a class="pdoc-member-name" href="/compute/keypair.ts#L134">interface KeypairArgs</a>

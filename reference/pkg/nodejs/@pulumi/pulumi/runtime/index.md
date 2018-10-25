@@ -188,7 +188,7 @@ deserializeProperty(prop: any): any
 deserializeProperty unpacks some special types, reversing the above process.
 
 <h2 class="pdoc-module-header" id="disconnect">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L163">function disconnect</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L162">function disconnect</a>
 </h2>
 
 ```typescript
@@ -200,7 +200,7 @@ disconnect permanently disconnects from the server, closing the connections.  It
 queue to drain.  If any RPCs come in afterwards, however, they will crash the process.
 
 <h2 class="pdoc-module-header" id="disconnectSync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L181">function disconnectSync</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L180">function disconnectSync</a>
 </h2>
 
 ```typescript
@@ -291,7 +291,7 @@ getProject(): string | undefined
 Get the project being run by the current update.
 
 <h2 class="pdoc-module-header" id="getRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L225">function getRootResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L224">function getRootResource</a>
 </h2>
 
 ```typescript
@@ -446,7 +446,7 @@ rewriteSuperReferences(code: string, isStatic: boolean): string
 ```
 
 <h2 class="pdoc-module-header" id="rpcKeepAlive">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L212">function rpcKeepAlive</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L211">function rpcKeepAlive</a>
 </h2>
 
 ```typescript
@@ -481,7 +481,7 @@ serialize(): boolean
 serialize returns true if resource operations should be serialized.
 
 <h2 class="pdoc-module-header" id="serializeFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L89">function serializeFunction</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L83">function serializeFunction</a>
 </h2>
 
 ```typescript
@@ -503,7 +503,7 @@ There are several known limitations:
   function.
 
 <h2 class="pdoc-module-header" id="serializeFunctionAsync">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L105">function serializeFunctionAsync</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L99">function serializeFunctionAsync</a>
 </h2>
 
 ```typescript
@@ -566,7 +566,7 @@ setIsDryRun(val: boolean): void
 ```
 
 <h2 class="pdoc-module-header" id="setRootResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L262">function setRootResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/settings.ts#L261">function setRootResource</a>
 </h2>
 
 ```typescript
@@ -1007,7 +1007,7 @@ info?: PropertyInfo;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">interface PropertyMap</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L113">method __@iterator</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L113">method __@iterator</a>
 </h3>
 
 ```typescript
@@ -1018,7 +1018,7 @@ __@iterator(): IterableIterator<[, Entry, PropertyInfoAndValue]>
 Returns an iterable of entries in the map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L22">method clear</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L22">method clear</a>
 </h3>
 
 ```typescript
@@ -1026,7 +1026,7 @@ clear(): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L23">method delete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L23">method delete</a>
 </h3>
 
 ```typescript
@@ -1034,7 +1034,7 @@ delete(key: Entry): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L118">method entries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L118">method entries</a>
 </h3>
 
 ```typescript
@@ -1045,7 +1045,7 @@ entries(): IterableIterator<[, Entry, PropertyInfoAndValue]>
 Returns an iterable of key, value pairs for every entry in the map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L24">method forEach</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L24">method forEach</a>
 </h3>
 
 ```typescript
@@ -1053,7 +1053,7 @@ forEach(callbackfn: { ... }, thisArg?: any): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1061,7 @@ get(key: Entry): PropertyInfoAndValue | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L26">method has</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L26">method has</a>
 </h3>
 
 ```typescript
@@ -1069,7 +1069,7 @@ has(key: Entry): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L123">method keys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L123">method keys</a>
 </h3>
 
 ```typescript
@@ -1080,7 +1080,7 @@ keys(): IterableIterator<Entry>
 Returns an iterable of keys in the map
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L27">method set</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L27">method set</a>
 </h3>
 
 ```typescript
@@ -1088,7 +1088,7 @@ set(key: Entry, value: PropertyInfoAndValue): this
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L128">method values</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L128">method values</a>
 </h3>
 
 ```typescript
@@ -1099,7 +1099,7 @@ values(): IterableIterator<PropertyInfoAndValue>
 Returns an iterable of values in the map
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L35">property Map</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L35">property Map</a>
 </h3>
 
 ```typescript
@@ -1107,7 +1107,7 @@ Map: MapConstructor;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L130">property __@toStringTag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L130">property __@toStringTag</a>
 </h3>
 
 ```typescript
@@ -1115,7 +1115,7 @@ __@toStringTag: Map;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/luke/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L28">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typescript/lib/lib.es2015.collection.d.ts#L28">property size</a>
 </h3>
 
 ```typescript
@@ -1196,19 +1196,6 @@ exportName: string;
 
 
 The name of the exported module member.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L69">property requiredPackages</a>
-</h3>
-
-```typescript
-requiredPackages: Set<string>;
-```
-
-
-The set of packages that we emitted explicit 'require' calls to ourself when serializing the
-closure. Can be used by downstream consumers to ensure that these modules will be include
-unilaterally.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/serializeClosure.ts#L59">property text</a>

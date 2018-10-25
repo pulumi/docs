@@ -459,7 +459,7 @@ Environments are often things such as `development`, `integration`, or
 `production`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L129">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L134">constructor</a>
 </h3>
 
 ```typescript
@@ -641,7 +641,19 @@ A unique name for this Environment. This name is used
 in the application URL
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L84">property pollInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L82">property platformArn</a>
+</h3>
+
+```typescript
+public platformArn: pulumi.Output<string>;
+```
+
+
+The [ARN][2] of the Elastic Beanstalk [Platform][3]
+to use in deployment
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L89">property pollInterval</a>
 </h3>
 
 ```typescript
@@ -655,7 +667,7 @@ for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L88">property queues</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L93">property queues</a>
 </h3>
 
 ```typescript
@@ -666,7 +678,7 @@ public queues: pulumi.Output<string[]>;
 SQS queues in use by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L94">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L99">property settings</a>
 </h3>
 
 ```typescript
@@ -679,7 +691,7 @@ override specific values that are set as defaults. The format is detailed
 below in Option Settings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L99">property solutionStackName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L104">property solutionStackName</a>
 </h3>
 
 ```typescript
@@ -691,7 +703,7 @@ A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L103">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L108">property tags</a>
 </h3>
 
 ```typescript
@@ -702,7 +714,7 @@ public tags: pulumi.Output<Tags | undefined>;
 A set of tags to apply to the Environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L108">property templateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L113">property templateName</a>
 </h3>
 
 ```typescript
@@ -714,7 +726,7 @@ The name of the Elastic Beanstalk Configuration
 template to use in deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L113">property tier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L118">property tier</a>
 </h3>
 
 ```typescript
@@ -726,7 +738,7 @@ Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L117">property triggers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L122">property triggers</a>
 </h3>
 
 ```typescript
@@ -749,7 +761,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L122">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L127">property version</a>
 </h3>
 
 ```typescript
@@ -761,7 +773,7 @@ The name of the Elastic Beanstalk Application Version
 to use in deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L129">property waitForReadyTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L134">property waitForReadyTimeout</a>
 </h3>
 
 ```typescript
@@ -1165,13 +1177,13 @@ A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation][1]
 
 <h2 class="pdoc-module-header" id="EnvironmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L302">interface EnvironmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L314">interface EnvironmentArgs</a>
 </h2>
 
 The set of arguments for constructing a Environment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L307">property application</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L319">property application</a>
 </h3>
 
 ```typescript
@@ -1183,7 +1195,7 @@ Name of the application that contains the version
 to be deployed
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L312">property cnamePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L324">property cnamePrefix</a>
 </h3>
 
 ```typescript
@@ -1195,7 +1207,7 @@ Prefix to use for the fully qualified DNS name of
 the Environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L316">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L328">property description</a>
 </h3>
 
 ```typescript
@@ -1206,7 +1218,7 @@ description?: pulumi.Input<string>;
 Short description of the Environment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L321">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L333">property name</a>
 </h3>
 
 ```typescript
@@ -1218,7 +1230,19 @@ A unique name for this Environment. This name is used
 in the application URL
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L328">property pollInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L338">property platformArn</a>
+</h3>
+
+```typescript
+platformArn?: pulumi.Input<string>;
+```
+
+
+The [ARN][2] of the Elastic Beanstalk [Platform][3]
+to use in deployment
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L345">property pollInterval</a>
 </h3>
 
 ```typescript
@@ -1232,7 +1256,7 @@ for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L334">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L351">property settings</a>
 </h3>
 
 ```typescript
@@ -1245,7 +1269,7 @@ override specific values that are set as defaults. The format is detailed
 below in Option Settings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L339">property solutionStackName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L356">property solutionStackName</a>
 </h3>
 
 ```typescript
@@ -1257,7 +1281,7 @@ A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L343">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L360">property tags</a>
 </h3>
 
 ```typescript
@@ -1268,7 +1292,7 @@ tags?: pulumi.Input<Tags>;
 A set of tags to apply to the Environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L348">property templateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L365">property templateName</a>
 </h3>
 
 ```typescript
@@ -1280,7 +1304,7 @@ The name of the Elastic Beanstalk Configuration
 template to use in deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L353">property tier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L370">property tier</a>
 </h3>
 
 ```typescript
@@ -1292,7 +1316,7 @@ Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L358">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L375">property version</a>
 </h3>
 
 ```typescript
@@ -1304,7 +1328,7 @@ The name of the Elastic Beanstalk Application Version
 to use in deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L365">property waitForReadyTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L382">property waitForReadyTimeout</a>
 </h3>
 
 ```typescript
@@ -1318,13 +1342,13 @@ wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
 
 <h2 class="pdoc-module-header" id="EnvironmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L198">interface EnvironmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L205">interface EnvironmentState</a>
 </h2>
 
 Input properties used for looking up and filtering Environment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L204">property allSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L211">property allSettings</a>
 </h3>
 
 ```typescript
@@ -1337,7 +1361,7 @@ are a combination of default settings and their overrides from `setting` in
 the configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L209">property application</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L216">property application</a>
 </h3>
 
 ```typescript
@@ -1349,7 +1373,7 @@ Name of the application that contains the version
 to be deployed
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L210">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L217">property arn</a>
 </h3>
 
 ```typescript
@@ -1357,7 +1381,7 @@ arn?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L214">property autoscalingGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L221">property autoscalingGroups</a>
 </h3>
 
 ```typescript
@@ -1368,7 +1392,7 @@ autoscalingGroups?: pulumi.Input<pulumi.Input<string>[]>;
 The autoscaling groups used by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L218">property cname</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L225">property cname</a>
 </h3>
 
 ```typescript
@@ -1379,7 +1403,7 @@ cname?: pulumi.Input<string>;
 Fully qualified DNS name for the Environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L223">property cnamePrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L230">property cnamePrefix</a>
 </h3>
 
 ```typescript
@@ -1391,7 +1415,7 @@ Prefix to use for the fully qualified DNS name of
 the Environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L227">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L234">property description</a>
 </h3>
 
 ```typescript
@@ -1402,7 +1426,7 @@ description?: pulumi.Input<string>;
 Short description of the Environment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L231">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L238">property instances</a>
 </h3>
 
 ```typescript
@@ -1413,7 +1437,7 @@ instances?: pulumi.Input<pulumi.Input<string>[]>;
 Instances used by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L235">property launchConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L242">property launchConfigurations</a>
 </h3>
 
 ```typescript
@@ -1424,7 +1448,7 @@ launchConfigurations?: pulumi.Input<pulumi.Input<string>[]>;
 Launch configurations in use by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L239">property loadBalancers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L246">property loadBalancers</a>
 </h3>
 
 ```typescript
@@ -1435,7 +1459,7 @@ loadBalancers?: pulumi.Input<pulumi.Input<string>[]>;
 Elastic load balancers in use by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L244">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L251">property name</a>
 </h3>
 
 ```typescript
@@ -1447,7 +1471,19 @@ A unique name for this Environment. This name is used
 in the application URL
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L251">property pollInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L256">property platformArn</a>
+</h3>
+
+```typescript
+platformArn?: pulumi.Input<string>;
+```
+
+
+The [ARN][2] of the Elastic Beanstalk [Platform][3]
+to use in deployment
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L263">property pollInterval</a>
 </h3>
 
 ```typescript
@@ -1461,7 +1497,7 @@ for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L255">property queues</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L267">property queues</a>
 </h3>
 
 ```typescript
@@ -1472,7 +1508,7 @@ queues?: pulumi.Input<pulumi.Input<string>[]>;
 SQS queues in use by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L261">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L273">property settings</a>
 </h3>
 
 ```typescript
@@ -1485,7 +1521,7 @@ override specific values that are set as defaults. The format is detailed
 below in Option Settings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L266">property solutionStackName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L278">property solutionStackName</a>
 </h3>
 
 ```typescript
@@ -1497,7 +1533,7 @@ A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L270">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L282">property tags</a>
 </h3>
 
 ```typescript
@@ -1508,7 +1544,7 @@ tags?: pulumi.Input<Tags>;
 A set of tags to apply to the Environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L275">property templateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L287">property templateName</a>
 </h3>
 
 ```typescript
@@ -1520,7 +1556,7 @@ The name of the Elastic Beanstalk Configuration
 template to use in deployment
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L280">property tier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L292">property tier</a>
 </h3>
 
 ```typescript
@@ -1532,7 +1568,7 @@ Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L284">property triggers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L296">property triggers</a>
 </h3>
 
 ```typescript
@@ -1543,7 +1579,7 @@ triggers?: pulumi.Input<pulumi.Input<string>[]>;
 Autoscaling triggers in use by this environment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L289">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L301">property version</a>
 </h3>
 
 ```typescript
@@ -1555,7 +1591,7 @@ The name of the Elastic Beanstalk Application Version
 to use in deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L296">property waitForReadyTimeout</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticbeanstalk/environment.ts#L308">property waitForReadyTimeout</a>
 </h3>
 
 ```typescript

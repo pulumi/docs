@@ -7,13 +7,17 @@ title: Module redshift
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Cluster">class Cluster</a>
+* <a href="#EventSubscription">class EventSubscription</a>
 * <a href="#ParameterGroup">class ParameterGroup</a>
 * <a href="#SecurityGroup">class SecurityGroup</a>
+* <a href="#SnapshotCopyGrant">class SnapshotCopyGrant</a>
 * <a href="#SubnetGroup">class SubnetGroup</a>
 * <a href="#getCluster">function getCluster</a>
 * <a href="#getServiceAccount">function getServiceAccount</a>
 * <a href="#ClusterArgs">interface ClusterArgs</a>
 * <a href="#ClusterState">interface ClusterState</a>
+* <a href="#EventSubscriptionArgs">interface EventSubscriptionArgs</a>
+* <a href="#EventSubscriptionState">interface EventSubscriptionState</a>
 * <a href="#GetClusterArgs">interface GetClusterArgs</a>
 * <a href="#GetClusterResult">interface GetClusterResult</a>
 * <a href="#GetServiceAccountArgs">interface GetServiceAccountArgs</a>
@@ -22,10 +26,12 @@ title: Module redshift
 * <a href="#ParameterGroupState">interface ParameterGroupState</a>
 * <a href="#SecurityGroupArgs">interface SecurityGroupArgs</a>
 * <a href="#SecurityGroupState">interface SecurityGroupState</a>
+* <a href="#SnapshotCopyGrantArgs">interface SnapshotCopyGrantArgs</a>
+* <a href="#SnapshotCopyGrantState">interface SnapshotCopyGrantState</a>
 * <a href="#SubnetGroupArgs">interface SubnetGroupArgs</a>
 * <a href="#SubnetGroupState">interface SubnetGroupState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/cluster.ts">redshift/cluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getCluster.ts">redshift/getCluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getServiceAccount.ts">redshift/getServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/parameterGroup.ts">redshift/parameterGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/securityGroup.ts">redshift/securityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/subnetGroup.ts">redshift/subnetGroup.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/cluster.ts">redshift/cluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts">redshift/eventSubscription.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getCluster.ts">redshift/getCluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getServiceAccount.ts">redshift/getServiceAccount.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/parameterGroup.ts">redshift/parameterGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/securityGroup.ts">redshift/securityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts">redshift/snapshotCopyGrant.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/subnetGroup.ts">redshift/subnetGroup.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Cluster">
@@ -531,6 +537,187 @@ public vpcSecurityGroupIds: pulumi.Output<string[]>;
 
 A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 
+<h2 class="pdoc-module-header" id="EventSubscription">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L10">class EventSubscription</a>
+</h2>
+
+Provides a Redshift event subscription resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L56">constructor</a>
+</h3>
+
+```typescript
+new EventSubscription(name: string, args: EventSubscriptionArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a EventSubscription resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSubscriptionState): EventSubscription
+```
+
+
+Get an existing EventSubscription resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L23">property customerAwsId</a>
+</h3>
+
+```typescript
+public customerAwsId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L27">property enabled</a>
+</h3>
+
+```typescript
+public enabled: pulumi.Output<boolean | undefined>;
+```
+
+
+A boolean flag to enable/disable the subscription. Defaults to true.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L31">property eventCategories</a>
+</h3>
+
+```typescript
+public eventCategories: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L35">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The name of the Redshift event subscription.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L39">property severity</a>
+</h3>
+
+```typescript
+public severity: pulumi.Output<string | undefined>;
+```
+
+
+The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L43">property snsTopicArn</a>
+</h3>
+
+```typescript
+public snsTopicArn: pulumi.Output<string>;
+```
+
+
+The ARN of the SNS topic to send events to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L47">property sourceIds</a>
+</h3>
+
+```typescript
+public sourceIds: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L51">property sourceType</a>
+</h3>
+
+```typescript
+public sourceType: pulumi.Output<string | undefined>;
+```
+
+
+The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L52">property status</a>
+</h3>
+
+```typescript
+public status: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L56">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="ParameterGroup">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/parameterGroup.ts#L10">class ParameterGroup</a>
 </h2>
@@ -749,6 +936,115 @@ public name: pulumi.Output<string>;
 
 
 The name of the Redshift security group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="SnapshotCopyGrant">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L12">class SnapshotCopyGrant</a>
+</h2>
+
+Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.
+
+Note that the grant must exist in the destination region, and not in the region of the cluster.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L33">constructor</a>
+</h3>
+
+```typescript
+new SnapshotCopyGrant(name: string, args: SnapshotCopyGrantArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a SnapshotCopyGrant resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotCopyGrantState): SnapshotCopyGrant
+```
+
+
+Get an existing SnapshotCopyGrant resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L28">property kmsKeyId</a>
+</h3>
+
+```typescript
+public kmsKeyId: pulumi.Output<string>;
+```
+
+
+The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L32">property snapshotCopyGrantName</a>
+</h3>
+
+```typescript
+public snapshotCopyGrantName: pulumi.Output<string>;
+```
+
+
+A friendly name for identifying the grant.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L33">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... } | undefined>;
+```
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1753,6 +2049,210 @@ vpcSecurityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 
 A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.
 
+<h2 class="pdoc-module-header" id="EventSubscriptionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L143">interface EventSubscriptionArgs</a>
+</h2>
+
+The set of arguments for constructing a EventSubscription resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L147">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+
+A boolean flag to enable/disable the subscription. Defaults to true.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L151">property eventCategories</a>
+</h3>
+
+```typescript
+eventCategories?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L155">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of the Redshift event subscription.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L159">property severity</a>
+</h3>
+
+```typescript
+severity?: pulumi.Input<string>;
+```
+
+
+The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L163">property snsTopicArn</a>
+</h3>
+
+```typescript
+snsTopicArn: pulumi.Input<string>;
+```
+
+
+The ARN of the SNS topic to send events to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L167">property sourceIds</a>
+</h3>
+
+```typescript
+sourceIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L171">property sourceType</a>
+</h3>
+
+```typescript
+sourceType?: pulumi.Input<string>;
+```
+
+
+The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L175">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h2 class="pdoc-module-header" id="EventSubscriptionState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L103">interface EventSubscriptionState</a>
+</h2>
+
+Input properties used for looking up and filtering EventSubscription resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L104">property customerAwsId</a>
+</h3>
+
+```typescript
+customerAwsId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L108">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+
+A boolean flag to enable/disable the subscription. Defaults to true.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L112">property eventCategories</a>
+</h3>
+
+```typescript
+eventCategories?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L116">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of the Redshift event subscription.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L120">property severity</a>
+</h3>
+
+```typescript
+severity?: pulumi.Input<string>;
+```
+
+
+The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L124">property snsTopicArn</a>
+</h3>
+
+```typescript
+snsTopicArn?: pulumi.Input<string>;
+```
+
+
+The ARN of the SNS topic to send events to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L128">property sourceIds</a>
+</h3>
+
+```typescript
+sourceIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L132">property sourceType</a>
+</h3>
+
+```typescript
+sourceType?: pulumi.Input<string>;
+```
+
+
+The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L133">property status</a>
+</h3>
+
+```typescript
+status?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/eventSubscription.ts#L137">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
 <h2 class="pdoc-module-header" id="GetClusterArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/getCluster.ts#L20">interface GetClusterArgs</a>
 </h2>
@@ -2323,6 +2823,78 @@ name?: pulumi.Input<string>;
 
 
 The name of the Redshift security group.
+
+<h2 class="pdoc-module-header" id="SnapshotCopyGrantArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L81">interface SnapshotCopyGrantArgs</a>
+</h2>
+
+The set of arguments for constructing a SnapshotCopyGrant resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L85">property kmsKeyId</a>
+</h3>
+
+```typescript
+kmsKeyId?: pulumi.Input<string>;
+```
+
+
+The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L89">property snapshotCopyGrantName</a>
+</h3>
+
+```typescript
+snapshotCopyGrantName: pulumi.Input<string>;
+```
+
+
+A friendly name for identifying the grant.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L90">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+<h2 class="pdoc-module-header" id="SnapshotCopyGrantState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L66">interface SnapshotCopyGrantState</a>
+</h2>
+
+Input properties used for looking up and filtering SnapshotCopyGrant resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L70">property kmsKeyId</a>
+</h3>
+
+```typescript
+kmsKeyId?: pulumi.Input<string>;
+```
+
+
+The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L74">property snapshotCopyGrantName</a>
+</h3>
+
+```typescript
+snapshotCopyGrantName?: pulumi.Input<string>;
+```
+
+
+A friendly name for identifying the grant.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/snapshotCopyGrant.ts#L75">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
 
 <h2 class="pdoc-module-header" id="SubnetGroupArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/redshift/subnetGroup.ts#L97">interface SubnetGroupArgs</a>

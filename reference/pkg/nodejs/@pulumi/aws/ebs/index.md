@@ -7,6 +7,7 @@ title: Module ebs
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Snapshot">class Snapshot</a>
+* <a href="#SnapshotCopy">class SnapshotCopy</a>
 * <a href="#Volume">class Volume</a>
 * <a href="#getSnapshot">function getSnapshot</a>
 * <a href="#getSnapshotIds">function getSnapshotIds</a>
@@ -18,11 +19,13 @@ title: Module ebs
 * <a href="#GetVolumeArgs">interface GetVolumeArgs</a>
 * <a href="#GetVolumeResult">interface GetVolumeResult</a>
 * <a href="#SnapshotArgs">interface SnapshotArgs</a>
+* <a href="#SnapshotCopyArgs">interface SnapshotCopyArgs</a>
+* <a href="#SnapshotCopyState">interface SnapshotCopyState</a>
 * <a href="#SnapshotState">interface SnapshotState</a>
 * <a href="#VolumeArgs">interface VolumeArgs</a>
 * <a href="#VolumeState">interface VolumeState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshot.ts">ebs/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshotIds.ts">ebs/getSnapshotIds.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getVolume.ts">ebs/getVolume.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts">ebs/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts">ebs/volume.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshot.ts">ebs/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getSnapshotIds.ts">ebs/getSnapshotIds.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/getVolume.ts">ebs/getVolume.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts">ebs/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts">ebs/snapshotCopy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts">ebs/volume.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Snapshot">
@@ -192,6 +195,199 @@ The Volume ID of which to make a snapshot.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L60">property volumeSize</a>
+</h3>
+
+```typescript
+public volumeSize: pulumi.Output<number>;
+```
+
+
+The size of the drive in GiBs.
+
+<h2 class="pdoc-module-header" id="SnapshotCopy">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L12">class SnapshotCopy</a>
+</h2>
+
+Creates a Snapshot of a snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L63">constructor</a>
+</h3>
+
+```typescript
+new SnapshotCopy(name: string, args: SnapshotCopyArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a SnapshotCopy resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotCopyState): SnapshotCopy
+```
+
+
+Get an existing SnapshotCopy resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L30">property dataEncryptionKeyId</a>
+</h3>
+
+```typescript
+public dataEncryptionKeyId: pulumi.Output<string>;
+```
+
+
+The data encryption key identifier for the snapshot.
+* `source_snapshot_id` The ARN of the copied snapshot.
+* `source_region` The region of the source snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L34">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+A description of what the snapshot is.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L38">property encrypted</a>
+</h3>
+
+```typescript
+public encrypted: pulumi.Output<boolean | undefined>;
+```
+
+
+Whether the snapshot is encrypted.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L44">property kmsKeyId</a>
+</h3>
+
+```typescript
+public kmsKeyId: pulumi.Output<string | undefined>;
+```
+
+
+The ARN for the KMS encryption key.
+* `source_snapshot_id` The ARN for the snapshot to be copied.
+* `source_region` The region of the source snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L48">property ownerAlias</a>
+</h3>
+
+```typescript
+public ownerAlias: pulumi.Output<string>;
+```
+
+
+Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L52">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The AWS account ID of the snapshot owner.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L53">property sourceRegion</a>
+</h3>
+
+```typescript
+public sourceRegion: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L54">property sourceSnapshotId</a>
+</h3>
+
+```typescript
+public sourceSnapshotId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L58">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<Tags | undefined>;
+```
+
+
+A mapping of tags for the snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L59">property volumeId</a>
+</h3>
+
+```typescript
+public volumeId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L63">property volumeSize</a>
 </h3>
 
 ```typescript
@@ -891,6 +1087,196 @@ volumeId: pulumi.Input<string>;
 
 
 The Volume ID of which to make a snapshot.
+
+<h2 class="pdoc-module-header" id="SnapshotCopyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L160">interface SnapshotCopyArgs</a>
+</h2>
+
+The set of arguments for constructing a SnapshotCopy resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L164">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description of what the snapshot is.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L168">property encrypted</a>
+</h3>
+
+```typescript
+encrypted?: pulumi.Input<boolean>;
+```
+
+
+Whether the snapshot is encrypted.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L174">property kmsKeyId</a>
+</h3>
+
+```typescript
+kmsKeyId?: pulumi.Input<string>;
+```
+
+
+The ARN for the KMS encryption key.
+* `source_snapshot_id` The ARN for the snapshot to be copied.
+* `source_region` The region of the source snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L175">property sourceRegion</a>
+</h3>
+
+```typescript
+sourceRegion: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L176">property sourceSnapshotId</a>
+</h3>
+
+```typescript
+sourceSnapshotId: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L180">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<Tags>;
+```
+
+
+A mapping of tags for the snapshot.
+
+<h2 class="pdoc-module-header" id="SnapshotCopyState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L115">interface SnapshotCopyState</a>
+</h2>
+
+Input properties used for looking up and filtering SnapshotCopy resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L121">property dataEncryptionKeyId</a>
+</h3>
+
+```typescript
+dataEncryptionKeyId?: pulumi.Input<string>;
+```
+
+
+The data encryption key identifier for the snapshot.
+* `source_snapshot_id` The ARN of the copied snapshot.
+* `source_region` The region of the source snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L125">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description of what the snapshot is.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L129">property encrypted</a>
+</h3>
+
+```typescript
+encrypted?: pulumi.Input<boolean>;
+```
+
+
+Whether the snapshot is encrypted.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L135">property kmsKeyId</a>
+</h3>
+
+```typescript
+kmsKeyId?: pulumi.Input<string>;
+```
+
+
+The ARN for the KMS encryption key.
+* `source_snapshot_id` The ARN for the snapshot to be copied.
+* `source_region` The region of the source snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L139">property ownerAlias</a>
+</h3>
+
+```typescript
+ownerAlias?: pulumi.Input<string>;
+```
+
+
+Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L143">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The AWS account ID of the snapshot owner.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L144">property sourceRegion</a>
+</h3>
+
+```typescript
+sourceRegion?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L145">property sourceSnapshotId</a>
+</h3>
+
+```typescript
+sourceSnapshotId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L149">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<Tags>;
+```
+
+
+A mapping of tags for the snapshot.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L150">property volumeId</a>
+</h3>
+
+```typescript
+volumeId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshotCopy.ts#L154">property volumeSize</a>
+</h3>
+
+```typescript
+volumeSize?: pulumi.Input<number>;
+```
+
+
+The size of the drive in GiBs.
 
 <h2 class="pdoc-module-header" id="SnapshotState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/snapshot.ts#L105">interface SnapshotState</a>

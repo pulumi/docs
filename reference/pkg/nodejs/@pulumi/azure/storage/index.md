@@ -732,7 +732,7 @@ public containerAccessType: pulumi.Output<string | undefined>;
 ```
 
 
-The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`. Changing this forces a new resource to be created.
+The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -1341,7 +1341,7 @@ getAccount(args: GetAccountArgs, opts?: pulumi.InvokeOptions): Promise<GetAccoun
 ```
 
 
-Gets information about the specified Storage Account.
+Use this data source to access information about an existing Storage Account.
 
 <h2 class="pdoc-module-header" id="getAccountSAS">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/getAccountSAS.ts#L15">function getAccountSAS</a>
@@ -1352,7 +1352,7 @@ getAccountSAS(args: GetAccountSASArgs, opts?: pulumi.InvokeOptions): Promise<Get
 ```
 
 
-Use this data source to create a Shared Access Signature (SAS) for an Azure Storage Account.
+Use this data source to obtain a Shared Access Signature (SAS Token) for an existing Storage Account.
 
 Shared access signatures allow fine-grained, ephemeral access control to various aspects of an Azure Storage Account.
 
@@ -2180,7 +2180,7 @@ containerAccessType?: pulumi.Input<string>;
 ```
 
 
-The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`. Changing this forces a new resource to be created.
+The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/container.ts#L120">property name</a>
@@ -2232,7 +2232,7 @@ containerAccessType?: pulumi.Input<string>;
 ```
 
 
-The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`. Changing this forces a new resource to be created.
+The 'interface' for access the container provides. Can be either `blob`, `container` or `private`. Defaults to `private`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/storage/container.ts#L92">property name</a>

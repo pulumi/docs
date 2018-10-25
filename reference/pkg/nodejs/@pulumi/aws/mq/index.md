@@ -41,7 +41,7 @@ brief downtime as the broker reboots.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L105">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L106">constructor</a>
 </h3>
 
 ```typescript
@@ -174,7 +174,7 @@ public engineVersion: pulumi.Output<string>;
 ```
 
 
-The version of the broker engine. Currently, Amazon MQ supports only `5.15.0`.
+The version of the broker engine. Currently, Amazon MQ supports only `5.15.0` or `5.15.6`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L74">property hostInstanceType</a>
@@ -200,7 +200,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L85">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L86">property instances</a>
 </h3>
 
 ```typescript
@@ -210,6 +210,7 @@ public instances: pulumi.Output<{ ... }[]>;
 
 A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+* `instances.0.ip_address` - The IP Address of the broker.
 * `instances.0.endpoints` - The broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -218,7 +219,7 @@ A list of information about allocated brokers (both active & standby).
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L89">property maintenanceWindowStartTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L90">property maintenanceWindowStartTime</a>
 </h3>
 
 ```typescript
@@ -229,7 +230,7 @@ public maintenanceWindowStartTime: pulumi.Output<{ ... }>;
 Maintenance window start time. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L93">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L94">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -240,7 +241,7 @@ public publiclyAccessible: pulumi.Output<boolean | undefined>;
 Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L97">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L98">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -251,7 +252,7 @@ public securityGroups: pulumi.Output<string[]>;
 The list of security group IDs assigned to the broker.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L101">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L102">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -274,7 +275,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L105">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L106">property users</a>
 </h3>
 
 ```typescript
@@ -454,13 +455,13 @@ getBroker(args?: GetBrokerArgs, opts?: pulumi.InvokeOptions): Promise<GetBrokerR
 Provides information about a MQ Broker.
 
 <h2 class="pdoc-module-header" id="BrokerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L251">interface BrokerArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L253">interface BrokerArgs</a>
 </h2>
 
 The set of arguments for constructing a Broker resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L256">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L258">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -472,7 +473,7 @@ Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L260">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L262">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -483,7 +484,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L264">property brokerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L266">property brokerName</a>
 </h3>
 
 ```typescript
@@ -494,7 +495,7 @@ brokerName: pulumi.Input<string>;
 The name of the broker.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L268">property configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L270">property configuration</a>
 </h3>
 
 ```typescript
@@ -505,7 +506,7 @@ configuration?: pulumi.Input<{ ... }>;
 Configuration of the broker. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L272">property deploymentMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L274">property deploymentMode</a>
 </h3>
 
 ```typescript
@@ -516,7 +517,7 @@ deploymentMode?: pulumi.Input<string>;
 The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L276">property engineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L278">property engineType</a>
 </h3>
 
 ```typescript
@@ -527,7 +528,7 @@ engineType: pulumi.Input<string>;
 The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L280">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L282">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -535,10 +536,10 @@ engineVersion: pulumi.Input<string>;
 ```
 
 
-The version of the broker engine. Currently, Amazon MQ supports only `5.15.0`.
+The version of the broker engine. Currently, Amazon MQ supports only `5.15.0` or `5.15.6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L284">property hostInstanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L286">property hostInstanceType</a>
 </h3>
 
 ```typescript
@@ -549,7 +550,7 @@ hostInstanceType: pulumi.Input<string>;
 The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L288">property maintenanceWindowStartTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L290">property maintenanceWindowStartTime</a>
 </h3>
 
 ```typescript
@@ -560,7 +561,7 @@ maintenanceWindowStartTime?: pulumi.Input<{ ... }>;
 Maintenance window start time. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L292">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L294">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -571,7 +572,7 @@ publiclyAccessible?: pulumi.Input<boolean>;
 Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L296">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L298">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -582,7 +583,7 @@ securityGroups: pulumi.Input<pulumi.Input<string>[]>;
 The list of security group IDs assigned to the broker.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L300">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L302">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -593,7 +594,7 @@ subnetIds?: pulumi.Input<pulumi.Input<string>[]>;
 The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L304">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L306">property users</a>
 </h3>
 
 ```typescript
@@ -604,13 +605,13 @@ users: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The list of all ActiveMQ usernames for the specified broker. See below.
 
 <h2 class="pdoc-module-header" id="BrokerState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L177">interface BrokerState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L178">interface BrokerState</a>
 </h2>
 
 Input properties used for looking up and filtering Broker resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L182">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L183">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -622,7 +623,7 @@ Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L186">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L187">property arn</a>
 </h3>
 
 ```typescript
@@ -633,7 +634,7 @@ arn?: pulumi.Input<string>;
 The ARN of the broker.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L190">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L191">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -644,7 +645,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L194">property brokerName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L195">property brokerName</a>
 </h3>
 
 ```typescript
@@ -655,7 +656,7 @@ brokerName?: pulumi.Input<string>;
 The name of the broker.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L198">property configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L199">property configuration</a>
 </h3>
 
 ```typescript
@@ -666,7 +667,7 @@ configuration?: pulumi.Input<{ ... }>;
 Configuration of the broker. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L202">property deploymentMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L203">property deploymentMode</a>
 </h3>
 
 ```typescript
@@ -677,7 +678,7 @@ deploymentMode?: pulumi.Input<string>;
 The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L206">property engineType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L207">property engineType</a>
 </h3>
 
 ```typescript
@@ -688,7 +689,7 @@ engineType?: pulumi.Input<string>;
 The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L210">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L211">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -696,10 +697,10 @@ engineVersion?: pulumi.Input<string>;
 ```
 
 
-The version of the broker engine. Currently, Amazon MQ supports only `5.15.0`.
+The version of the broker engine. Currently, Amazon MQ supports only `5.15.0` or `5.15.6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L214">property hostInstanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L215">property hostInstanceType</a>
 </h3>
 
 ```typescript
@@ -710,7 +711,7 @@ hostInstanceType?: pulumi.Input<string>;
 The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L225">property instances</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L227">property instances</a>
 </h3>
 
 ```typescript
@@ -720,6 +721,7 @@ instances?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 
 A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
+* `instances.0.ip_address` - The IP Address of the broker.
 * `instances.0.endpoints` - The broker's wire-level protocol endpoints in the following order & format referenceable e.g. as `instances.0.endpoints.0` (SSL):
 * `ssl://broker-id.mq.us-west-2.amazonaws.com:61617`
 * `amqp+ssl://broker-id.mq.us-west-2.amazonaws.com:5671`
@@ -728,7 +730,7 @@ A list of information about allocated brokers (both active & standby).
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L229">property maintenanceWindowStartTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L231">property maintenanceWindowStartTime</a>
 </h3>
 
 ```typescript
@@ -739,7 +741,7 @@ maintenanceWindowStartTime?: pulumi.Input<{ ... }>;
 Maintenance window start time. See below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L233">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L235">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -750,7 +752,7 @@ publiclyAccessible?: pulumi.Input<boolean>;
 Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L237">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L239">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -761,7 +763,7 @@ securityGroups?: pulumi.Input<pulumi.Input<string>[]>;
 The list of security group IDs assigned to the broker.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L241">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L243">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -772,7 +774,7 @@ subnetIds?: pulumi.Input<pulumi.Input<string>[]>;
 The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L245">property users</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/mq/broker.ts#L247">property users</a>
 </h3>
 
 ```typescript

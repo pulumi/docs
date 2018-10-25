@@ -3051,7 +3051,7 @@ public policy: pulumi.Output<string | undefined>;
 ```
 
 
-JSON formatted policy document that controls access to the API Gateway
+JSON formatted policy document that controls access to the API Gateway. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L68">property rootResourceId</a>
@@ -6721,7 +6721,7 @@ policy?: pulumi.Input<string>;
 ```
 
 
-JSON formatted policy document that controls access to the API Gateway
+JSON formatted policy document that controls access to the API Gateway. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html)
 
 <h2 class="pdoc-module-header" id="RestApiState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L114">interface RestApiState</a>
@@ -6839,7 +6839,7 @@ policy?: pulumi.Input<string>;
 ```
 
 
-JSON formatted policy document that controls access to the API Gateway
+JSON formatted policy document that controls access to the API Gateway. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts#L160">property rootResourceId</a>

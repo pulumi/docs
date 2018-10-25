@@ -17,6 +17,7 @@ title: Module lambda
 * <a href="#getInvocation">function getInvocation</a>
 * <a href="#AliasArgs">interface AliasArgs</a>
 * <a href="#AliasState">interface AliasState</a>
+* <a href="#CallbackFunctionArgs">interface CallbackFunctionArgs</a>
 * <a href="#Context">interface Context</a>
 * <a href="#EventSourceMappingArgs">interface EventSourceMappingArgs</a>
 * <a href="#EventSourceMappingState">interface EventSourceMappingState</a>
@@ -40,9 +41,9 @@ title: Module lambda
 * <a href="#NodeJSRuntime">let NodeJSRuntime</a>
 * <a href="#Python2d7Runtime">let Python2d7Runtime</a>
 * <a href="#Python3d6Runtime">let Python3d6Runtime</a>
+* <a href="#BaseCallbackFunctionArgs">type BaseCallbackFunctionArgs</a>
 * <a href="#Callback">type Callback</a>
 * <a href="#CallbackFactory">type CallbackFactory</a>
-* <a href="#CallbackFunctionArgs">type CallbackFunctionArgs</a>
 * <a href="#EventHandler">type EventHandler</a>
 * <a href="#Runtime">type Runtime</a>
 
@@ -196,7 +197,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="CallbackFunction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L245">class CallbackFunction</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L254">class CallbackFunction</a>
 </h2>
 
 A CallbackFunction is a special type of aws.lambda.Function that can be created out of an actual
@@ -206,7 +207,7 @@ https://github.com/pulumi/docs/blob/master/reference/serializing-functions.md fo
 details on this process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L245">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L254">constructor</a>
 </h3>
 
 ```typescript
@@ -424,7 +425,7 @@ public role: pulumi.Output<ARN>;
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L367">property roleInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L376">property roleInstance</a>
 </h3>
 
 ```typescript
@@ -763,14 +764,14 @@ public uuid: pulumi.Output<string>;
 The UUID of the created event source mapping.
 
 <h2 class="pdoc-module-header" id="EventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L216">class EventSubscription</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L225">class EventSubscription</a>
 </h2>
 
 Base type for all subscription types.  An event subscription represents a connection between some
 AWS resource an an AWS lambda that will be triggered when something happens to that resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L227">constructor</a>
 </h3>
 
 ```typescript
@@ -802,7 +803,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property func</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L227">property func</a>
 </h3>
 
 ```typescript
@@ -810,7 +811,7 @@ public func: LambdaFunction;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L217">property permission</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L226">property permission</a>
 </h3>
 
 ```typescript
@@ -1379,7 +1380,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="createFunctionFromEventHandler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L227">function createFunctionFromEventHandler</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L236">function createFunctionFromEventHandler</a>
 </h2>
 
 ```typescript
@@ -1542,6 +1543,46 @@ routingConfig?: pulumi.Input<{ ... }>;
 
 
 The Lambda alias' route configuration settings. Fields documented below
+
+<h2 class="pdoc-module-header" id="CallbackFunctionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L201">interface CallbackFunctionArgs</a>
+</h2>
+
+CallbackFunctionArgs provides configuration options for the serverless Function.  It is
+effectively equivalent to [aws.lambda.FunctionArgs] except with a few important differences
+documented at the property level.  For example, [role] is an actual iam.Role instance, and not an
+ARN. Properties like [runtime] are now optional.  And some properties (like [code]) are entirely
+disallowed.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L206">property callback</a>
+</h3>
+
+```typescript
+callback?: Callback<E, R>;
+```
+
+
+The Javascript callback to use as the entrypoint for the AWS Lambda out of.  Either
+[callback] or [callbackFactory] must be provided.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L218">property callbackFactory</a>
+</h3>
+
+```typescript
+callbackFactory?: CallbackFactory<E, R>;
+```
+
+
+The Javascript function instance that will be called to produce the callback function that is
+the entrypoint for the AWS Lambda. Either [callback] or [callbackFactory] must be
+provided.
+
+This form is useful when there is expensive initialization work that should only be executed
+once.  The factory-function will be invoked once when the final AWS Lambda module is loaded.
+It can run whatever code it needs, and will end by returning the actual function that Lambda
+will call into each time the Lambda is invoked.
 
 <h2 class="pdoc-module-header" id="Context">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L29">interface Context</a>
@@ -3055,6 +3096,21 @@ let Python2d7Runtime: Runtime = "python2.7";
 let Python3d6Runtime: Runtime = "python3.6";
 ```
 
+<h2 class="pdoc-module-header" id="BaseCallbackFunctionArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L157">type BaseCallbackFunctionArgs</a>
+</h2>
+
+```typescript
+type BaseCallbackFunctionArgs = utils.Overwrite<FunctionArgs, { ... }>;
+```
+
+
+BaseCallbackFunctionArgs provides configuration options for the serverless Function.  It is
+effectively equivalent to [aws.lambda.FunctionArgs] except with a few important differences
+documented at the property level.  For example, [role] is an actual iam.Role instance, and not an
+ARN. Properties like [runtime] are now optional.  And some properties (like [code]) are entirely
+disallowed.
+
 <h2 class="pdoc-module-header" id="Callback">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L131">type Callback</a>
 </h2>
@@ -3095,21 +3151,6 @@ CallbackFactory is the signature for a function that will be called once to prod
 entrypoint function that AWS Lambda will invoke.  It can be used to initialize expensive state
 once that can then be used across all invocations of the Lambda (as long as the Lambda is using
 the same warm node instance).
-
-<h2 class="pdoc-module-header" id="CallbackFunctionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L157">type CallbackFunctionArgs</a>
-</h2>
-
-```typescript
-type CallbackFunctionArgs = utils.Overwrite<FunctionArgs, { ... }>;
-```
-
-
-CallbackFunctionArgs provides configuration options for the serverless Function.  It is
-effectively equivalent to [aws.lambda.FunctionArgs] except with a few important differences
-documented at the property level.  For example, [role] is an actual iam.Role instance, and not an
-ARN. Properties like [runtime] are now optional.  And some properties (like [code]) are entirely
-disallowed.
 
 <h2 class="pdoc-module-header" id="EventHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L148">type EventHandler</a>

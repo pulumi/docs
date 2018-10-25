@@ -306,7 +306,7 @@ getBuiltinRoleDefinition(args: GetBuiltinRoleDefinitionArgs, opts?: pulumi.Invok
 ```
 
 
-Use this data source to access the properties of a built-in Role Definition. To access information about a custom Role Definition, please see the `azurerm_role_definition` data source instead.
+Use this data source to access information about a built-in Role Definition. To access information about a custom Role Definition, please see the `azurerm_role_definition` data source instead.
 
 <h2 class="pdoc-module-header" id="getRoleDefinition">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/getRoleDefinition.ts#L10">function getRoleDefinition</a>
@@ -317,7 +317,7 @@ getRoleDefinition(args: GetRoleDefinitionArgs, opts?: pulumi.InvokeOptions): Pro
 ```
 
 
-Use this data source to access the properties of a custom Role Definition. To access information about a built-in Role Definition, please see the `azurerm_builtin_role_definition` data source instead.
+Use this data source to access information about an existing Custom Role Definition. To access information about a built-in Role Definition, please see the `azurerm_builtin_role_definition` data source instead.
 
 <h2 class="pdoc-module-header" id="AssignmentArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/role/assignment.ts#L108">interface AssignmentArgs</a>

@@ -1183,7 +1183,7 @@ getAppService(args: GetAppServiceArgs, opts?: pulumi.InvokeOptions): Promise<Get
 ```
 
 
-Use this data source to obtain information about an App Service.
+Use this data source to access information about an existing App Service.
 
 <h2 class="pdoc-module-header" id="getAppServicePlan">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/getAppServicePlan.ts#L10">function getAppServicePlan</a>
@@ -1194,7 +1194,7 @@ getAppServicePlan(args: GetAppServicePlanArgs, opts?: pulumi.InvokeOptions): Pro
 ```
 
 
-Use this data source to obtain information about an App Service Plan (formerly known as a `Server Farm`).
+Use this data source to access information about an existing App Service Plan (formerly known as a `Server Farm`).
 
 <h2 class="pdoc-module-header" id="ActiveSlotArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/activeSlot.ts#L93">interface ActiveSlotArgs</a>

@@ -23,6 +23,11 @@ redirect_from: /install/changelog.html
         </tr>
     </thead>
     <tbody>
+            <tr>
+            <th scope="row"><a href="#v161">0.16.1</a></th>
+            <td>2018/10/23</td>
+            <td>{% include sdk-links.html version='0.16.1' %}</td>
+        </tr>
         <tr>
             <th scope="row"><a href="#v160">0.16.0</a></th>
             <td>2018/10/15</td>
@@ -76,6 +81,42 @@ redirect_from: /install/changelog.html
     </tbody>
 </table>
 
+## v0.16.1 {#v161}https://github.com/pulumi/pulumi/pull/2069
+
+Released on October 23, 2018
+
+In addition to the 0.16.1 CLI release, we've released new versions `@pulumi/aws`, `@pulumi/azure`, `@pulumi/gcp`, and `@pulumi/openstack`.
+
+### Pulumi CLI
+
+### @pulumi/pulumi 0.16.1
+
+ - A new top-level CLI command “pulumi state” was added to assist in making targeted edits to the state of a stack. Two subcommands, “pulumi state delete” and “pulumi state unprotect”, can be used to delete or unprotect individual resources respectively within a Pulumi stack. [pulumi/pulumi#2024](https://github.com/pulumi/pulumi/pull/2024)
+- Default to allowing as many parallel operations as possible [pulumi/pulumi#2065](https://github.com/pulumi/pulumi/pull/2065)
+- Fixed an issue with the generated type for an Unwrap expression when using TypeScript [pulumi/pulumi#2061](https://github.com/pulumi/pulumi/pull/2061)
+- Improve error messages when resource plugins can't be loaded or when a checkpoint is invalid [pulumi/pulumi#2078](https://github.com/pulumi/pulumi/pull/2078)
+- Fix link to the Pulumi Web Console in the CLI for a stack [pulumi/pulumi#2075](https://github.com/pulumi/pulumi/pull/2075)
+- Attach git commit metadata to Pulumi updates in some additional cases [pulumi/pulumi#2062](https://github.com/pulumi/pulumi/pull/2062) and [pulumi/pulumi#2069](https://github.com/pulumi/pulumi/pull/2069)
+
+### @pulumi/aws 0.16.1
+
+- Update to the v1.14.0 version of the AWS Provider [pulumi/pulumi-aws#355](https://github.com/pulumi/pulumi-aws/pull/355)
+- Add definitions for S3 Canned ACLs [pulumi/pulumi-aws#351](https://github.com/pulumi/pulumi-aws/pull/355)
+- Add serverless methods to Kinesis streams [pulumi/pulumi-aws#345](https://github.com/pulumi/pulumi-aws/pull/345)
+
+### @pulumi/azure 0.16.3
+
+- Update to the v1.17.0 version of the Azure Provider [pulumi/pulumi-azure#137](https://github.com/pulumi/pulumi-azure/pull/137)
+- Fix an issue where the provider could fail with an error about a Go type converison failing [pulumi/pulumi-azure#138](https://github.com/pulumi/pulumi-azure/pull/138)
+
+### @pulumi/gcp 0.16.1
+
+- Update to the v1.19.1 version of the GCP Provider [pulumi/pulumi-gcp#54](https://github.com/pulumi/pulumi-gcp/pull/54)
+
+### @pulumi/openstack 0.16.1
+
+- Update to the v1.10.0 version of the OpenStack Provider [pulumi/pulumi-openstack#15](https://github.com/pulumi/pulumi-openstack/pull/15)
+
 ## v0.16.0 {#v160}
 
 Released on October 15, 2018
@@ -88,7 +129,7 @@ Major features of this release include:
 
 #### Improvements to CLI output
 
-Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistency and simplicity of the display. 
+Default colors that fit better for both light and dark terminals.  Overall updates to rendering of previews/updates for consistency and simplicity of the display.
 
 #### Parallelized resource deletion
 
@@ -103,7 +144,7 @@ The Pulumi GitHub App previously supported just TravisCI.  With this release the
 In addition to the above features, we've made a handfull of day to day improvements in the CLI:
 - Support for `zsh` completions. Thanks to [@Tirke](https://github.com/Tirke)!) [pulumi/pulumi#1967](https://github.com/pulumi/pulumi/pull/1967)
 - JSON formatting support for `pulumi stack output`. [pulumi/pulumi#2000](https://github.com/pulumi/pulumi/pull/2000)
-- Added a `Dockerfile` for the Pulumi CLI and development environment for use in hosted environments. 
+- Added a `Dockerfile` for the Pulumi CLI and development environment for use in hosted environments.
 
 ### Pulumi Console
 
@@ -117,7 +158,7 @@ In addition to the above features, we've made a handfull of day to day improveme
 
 ### @pulumi/aws 0.16.0
 
-- Moved all `@pulumi/aws-serverless` features down into `@pulumi/aws`.  Event handlers are now available as methods like `bucket.onObjectCreated` off of instances of `aws.s3.Bucket` and all other Lambda event sources.  In addition, the `aws.apigateway.x.API` type is available for simple construction of API Gateways directly in the `@pulumi/aws` package.  
+- Moved all `@pulumi/aws-serverless` features down into `@pulumi/aws`.  Event handlers are now available as methods like `bucket.onObjectCreated` from instances of `aws.s3.Bucket` and all other Lambda event sources.  In addition, the `aws.apigateway.x.API` type is available for simple construction of API Gateways directly in the `@pulumi/aws` package.
 - Added richer typing for many EC2 and Autoscaling resources.  Thanks to [@jen20](https://github.com/jen20)! [pulumi/pulumi-aws#323](https://github.com/pulumi/pulumi-aws/pull/323) [pulumi/pulumi-aws#324](https://github.com/pulumi/pulumi-aws/pull/324)
 - Adopted `v1.38.0` of the AWS Terraform Provider. [pulumi/pulumi-aws#341](https://github.com/pulumi/pulumi-aws/pull/341)
 
@@ -156,7 +197,7 @@ Added a new provider for VMware vSphere, enabling deployment and management of r
 
 ### @pulumi/eks 0.16.0
 
-Added a new package for deploying a complete AWS Elastic Kubernetes Service (EKS) cluster.  
+Added a new package for deploying a complete AWS Elastic Kubernetes Service (EKS) cluster.
 
 ### @pulumi/openstack 0.16.0
 

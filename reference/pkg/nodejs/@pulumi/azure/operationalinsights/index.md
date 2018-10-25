@@ -355,7 +355,7 @@ getAnalyticsWorkspace(args: GetAnalyticsWorkspaceArgs, opts?: pulumi.InvokeOptio
 ```
 
 
-Gets information about the specified Log Analytics (formally Operational Insights) Workspace.
+Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.
 
 <h2 class="pdoc-module-header" id="AnalyticsSolutionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L124">interface AnalyticsSolutionArgs</a>

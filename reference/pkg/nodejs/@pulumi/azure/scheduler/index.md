@@ -380,7 +380,7 @@ getJobCollection(args: GetJobCollectionArgs, opts?: pulumi.InvokeOptions): Promi
 ```
 
 
-Use this data source to access the properties of an Azure scheduler job collection.
+Use this data source to access information about an existing Scheduler Job Collection.
 
 <h2 class="pdoc-module-header" id="GetJobCollectionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/scheduler/getJobCollection.ts#L20">interface GetJobCollectionArgs</a>

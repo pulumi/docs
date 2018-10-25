@@ -295,7 +295,7 @@ public parameters: pulumi.Output<{ ... } | undefined>;
 ```
 
 
-Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
+A map of initialization parameters for the SerDe, in key-value form.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/catalogTable.ts#L50">property partitionKeys</a>
@@ -1405,7 +1405,7 @@ parameters?: pulumi.Input<{ ... }>;
 ```
 
 
-Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
+A map of initialization parameters for the SerDe, in key-value form.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/catalogTable.ts#L203">property partitionKeys</a>
@@ -1543,7 +1543,7 @@ parameters?: pulumi.Input<{ ... }>;
 ```
 
 
-Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
+A map of initialization parameters for the SerDe, in key-value form.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/catalogTable.ts#L149">property partitionKeys</a>

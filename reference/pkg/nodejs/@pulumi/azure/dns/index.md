@@ -1517,7 +1517,7 @@ getZone(args: GetZoneArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneResult>
 ```
 
 
-Use this data source to obtain information about a DNS Zone.
+Use this data source to access information about an existing DNS Zone.
 
 <h2 class="pdoc-module-header" id="ARecordArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/aRecord.ts#L118">interface ARecordArgs</a>

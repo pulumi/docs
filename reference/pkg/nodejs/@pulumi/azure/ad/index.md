@@ -111,7 +111,7 @@ public homepage: pulumi.Output<string>;
 ```
 
 
-The URL to the application's home page. If no homepage is specified this defaults to `http://{name}`.
+The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -425,7 +425,7 @@ getApplication(args?: GetApplicationArgs, opts?: pulumi.InvokeOptions): Promise<
 ```
 
 
-Gets information about an Application within Azure Active Directory.
+Use this data source to access information about an existing Application within Azure Active Directory.
 
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
@@ -438,7 +438,7 @@ getServicePrincipal(args?: GetServicePrincipalArgs, opts?: pulumi.InvokeOptions)
 ```
 
 
-Gets information about a Service Principal associated with an Application within Azure Active Directory.
+Gets information about an existing Service Principal associated with an Application within Azure Active Directory.
 
 -> **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
@@ -468,7 +468,7 @@ homepage?: pulumi.Input<string>;
 ```
 
 
-The URL to the application's home page. If no homepage is specified this defaults to `http://{name}`.
+The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L136">property identifierUris</a>
@@ -551,7 +551,7 @@ homepage?: pulumi.Input<string>;
 ```
 
 
-The URL to the application's home page. If no homepage is specified this defaults to `http://{name}`.
+The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/ad/application.ts#L106">property identifierUris</a>

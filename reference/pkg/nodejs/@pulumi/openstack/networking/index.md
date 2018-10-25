@@ -20,6 +20,7 @@ title: Module networking
 * <a href="#SubnetRoute">class SubnetRoute</a>
 * <a href="#getFloatingIp">function getFloatingIp</a>
 * <a href="#getNetwork">function getNetwork</a>
+* <a href="#getRouter">function getRouter</a>
 * <a href="#getSecGroup">function getSecGroup</a>
 * <a href="#getSubnet">function getSubnet</a>
 * <a href="#getSubnetPool">function getSubnetPool</a>
@@ -31,6 +32,8 @@ title: Module networking
 * <a href="#GetFloatingIpResult">interface GetFloatingIpResult</a>
 * <a href="#GetNetworkArgs">interface GetNetworkArgs</a>
 * <a href="#GetNetworkResult">interface GetNetworkResult</a>
+* <a href="#GetRouterArgs">interface GetRouterArgs</a>
+* <a href="#GetRouterResult">interface GetRouterResult</a>
 * <a href="#GetSecGroupArgs">interface GetSecGroupArgs</a>
 * <a href="#GetSecGroupResult">interface GetSecGroupResult</a>
 * <a href="#GetSubnetArgs">interface GetSubnetArgs</a>
@@ -58,7 +61,7 @@ title: Module networking
 * <a href="#SubnetRouteState">interface SubnetRouteState</a>
 * <a href="#SubnetState">interface SubnetState</a>
 
-<a href="/networking/floatingIp.ts">networking/floatingIp.ts</a> <a href="/networking/floatingIpAssociate.ts">networking/floatingIpAssociate.ts</a> <a href="/networking/getFloatingIp.ts">networking/getFloatingIp.ts</a> <a href="/networking/getNetwork.ts">networking/getNetwork.ts</a> <a href="/networking/getSecGroup.ts">networking/getSecGroup.ts</a> <a href="/networking/getSubnet.ts">networking/getSubnet.ts</a> <a href="/networking/getSubnetPool.ts">networking/getSubnetPool.ts</a> <a href="/networking/network.ts">networking/network.ts</a> <a href="/networking/port.ts">networking/port.ts</a> <a href="/networking/router.ts">networking/router.ts</a> <a href="/networking/routerInterface.ts">networking/routerInterface.ts</a> <a href="/networking/routerRoute.ts">networking/routerRoute.ts</a> <a href="/networking/secGroup.ts">networking/secGroup.ts</a> <a href="/networking/secGroupRule.ts">networking/secGroupRule.ts</a> <a href="/networking/subnet.ts">networking/subnet.ts</a> <a href="/networking/subnetPool.ts">networking/subnetPool.ts</a> <a href="/networking/subnetRoute.ts">networking/subnetRoute.ts</a> 
+<a href="/networking/floatingIp.ts">networking/floatingIp.ts</a> <a href="/networking/floatingIpAssociate.ts">networking/floatingIpAssociate.ts</a> <a href="/networking/getFloatingIp.ts">networking/getFloatingIp.ts</a> <a href="/networking/getNetwork.ts">networking/getNetwork.ts</a> <a href="/networking/getRouter.ts">networking/getRouter.ts</a> <a href="/networking/getSecGroup.ts">networking/getSecGroup.ts</a> <a href="/networking/getSubnet.ts">networking/getSubnet.ts</a> <a href="/networking/getSubnetPool.ts">networking/getSubnetPool.ts</a> <a href="/networking/network.ts">networking/network.ts</a> <a href="/networking/port.ts">networking/port.ts</a> <a href="/networking/router.ts">networking/router.ts</a> <a href="/networking/routerInterface.ts">networking/routerInterface.ts</a> <a href="/networking/routerRoute.ts">networking/routerRoute.ts</a> <a href="/networking/secGroup.ts">networking/secGroup.ts</a> <a href="/networking/secGroupRule.ts">networking/secGroupRule.ts</a> <a href="/networking/subnet.ts">networking/subnet.ts</a> <a href="/networking/subnetPool.ts">networking/subnetPool.ts</a> <a href="/networking/subnetRoute.ts">networking/subnetRoute.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="FloatingIp">
@@ -557,7 +560,7 @@ Map of additional options.
 Manages a V2 port resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L105">constructor</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L111">constructor</a>
 </h3>
 
 ```typescript
@@ -686,8 +689,8 @@ public fixedIps: pulumi.Output<{ ... }[] | undefined>;
 ```
 
 
-An array of desired IPs for this port. The structure is
-described below.
+An array of desired IPs for
+this port. The structure is described below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -738,7 +741,20 @@ The ID of the network to attach the port to. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L82">property noSecurityGroups</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L80">property noFixedIp</a>
+</h3>
+
+```typescript
+public noFixedIp: pulumi.Output<boolean | undefined>;
+```
+
+
+Create a port with no fixed
+IP address. This will also remove any fixed IPs previously set on a port. `true`
+is the only valid value for this argument.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L88">property noSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -753,7 +769,7 @@ behavior of the Networking service, which is to usually apply the "default"
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L89">property region</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L95">property region</a>
 </h3>
 
 ```typescript
@@ -767,7 +783,7 @@ A networking client is needed to create a port. If omitted, the
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L96">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L102">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -781,7 +797,7 @@ specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L101">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L107">property tenantId</a>
 </h3>
 
 ```typescript
@@ -805,7 +821,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L105">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L111">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1452,7 +1468,7 @@ Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L101">constructor</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L105">constructor</a>
 </h3>
 
 ```typescript
@@ -1499,7 +1515,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L29">property direction</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L28">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+A description of the rule. Changing this creates a new security group rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L33">property direction</a>
 </h3>
 
 ```typescript
@@ -1511,7 +1538,7 @@ The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L34">property ethertype</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L38">property ethertype</a>
 </h3>
 
 ```typescript
@@ -1535,7 +1562,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L40">property portRangeMax</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L44">property portRangeMax</a>
 </h3>
 
 ```typescript
@@ -1548,7 +1575,7 @@ integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L46">property portRangeMin</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L50">property portRangeMin</a>
 </h3>
 
 ```typescript
@@ -1561,7 +1588,7 @@ integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L71">property protocol</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L75">property protocol</a>
 </h3>
 
 ```typescript
@@ -1593,7 +1620,7 @@ The layer 4 protocol type, valid values are following. Changing this creates a n
 * __vrrp__
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L78">property region</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L82">property region</a>
 </h3>
 
 ```typescript
@@ -1607,7 +1634,7 @@ A networking client is needed to create a port. If omitted, the
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L84">property remoteGroupId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L88">property remoteGroupId</a>
 </h3>
 
 ```typescript
@@ -1620,7 +1647,7 @@ Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L89">property remoteIpPrefix</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L93">property remoteIpPrefix</a>
 </h3>
 
 ```typescript
@@ -1632,7 +1659,7 @@ The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L95">property securityGroupId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L99">property securityGroupId</a>
 </h3>
 
 ```typescript
@@ -1645,7 +1672,7 @@ to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L101">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L105">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2385,6 +2412,17 @@ getNetwork(args?: GetNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetNetwo
 
 Use this data source to get the ID of an available OpenStack network.
 
+<h2 class="pdoc-module-header" id="getRouter">
+<a class="pdoc-member-name" href="/networking/getRouter.ts#L10">function getRouter</a>
+</h2>
+
+```typescript
+getRouter(args?: GetRouterArgs, opts?: pulumi.InvokeOptions): Promise<GetRouterResult>
+```
+
+
+Use this data source to get the ID of an available OpenStack router.
+
 <h2 class="pdoc-module-header" id="getSecGroup">
 <a class="pdoc-member-name" href="/networking/getSecGroup.ts#L10">function getSecGroup</a>
 </h2>
@@ -2967,6 +3005,160 @@ shared: string;
 
 (Optional)  Specifies whether the network resource can be accessed
 by any tenant or not.
+
+<h2 class="pdoc-module-header" id="GetRouterArgs">
+<a class="pdoc-member-name" href="/networking/getRouter.ts#L27">interface GetRouterArgs</a>
+</h2>
+
+A collection of arguments for invoking getRouter.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L31">property adminStateUp</a>
+</h3>
+
+```typescript
+adminStateUp?: boolean;
+```
+
+
+Administrative up/down status for the router (must be "true" or "false" if provided).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L35">property distributed</a>
+</h3>
+
+```typescript
+distributed?: boolean;
+```
+
+
+Indicates whether or not to get a distributed router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L36">property enableSnat</a>
+</h3>
+
+```typescript
+enableSnat?: boolean;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L40">property name</a>
+</h3>
+
+```typescript
+name?: string;
+```
+
+
+The name of the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L46">property region</a>
+</h3>
+
+```typescript
+region?: string;
+```
+
+
+The region in which to obtain the V2 Neutron client.
+A Neutron client is needed to retrieve router ids. If omitted, the
+`region` argument of the provider is used.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L50">property routerId</a>
+</h3>
+
+```typescript
+routerId?: string;
+```
+
+
+The UUID of the router resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L54">property status</a>
+</h3>
+
+```typescript
+status?: string;
+```
+
+
+The status of the router (ACTIVE/DOWN).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L58">property tenantId</a>
+</h3>
+
+```typescript
+tenantId?: string;
+```
+
+
+The owner of the router.
+
+<h2 class="pdoc-module-header" id="GetRouterResult">
+<a class="pdoc-member-name" href="/networking/getRouter.ts#L64">interface GetRouterResult</a>
+</h2>
+
+A collection of values returned by getRouter.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L68">property availabilityZoneHints</a>
+</h3>
+
+```typescript
+availabilityZoneHints: string[];
+```
+
+
+The availability zone that is used to make router resources highly available.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L72">property enableSnat</a>
+</h3>
+
+```typescript
+enableSnat: boolean;
+```
+
+
+The value that points out if the Source NAT is enabled on the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L76">property externalFixedIps</a>
+</h3>
+
+```typescript
+externalFixedIps: { ... }[];
+```
+
+
+The external fixed IPs of the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L80">property externalNetworkId</a>
+</h3>
+
+```typescript
+externalNetworkId: string;
+```
+
+
+The network UUID of an external gateway for the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/getRouter.ts#L84">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetSecGroupArgs">
 <a class="pdoc-member-name" href="/networking/getSecGroup.ts#L23">interface GetSecGroupArgs</a>
@@ -3934,13 +4126,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="PortArgs">
-<a class="pdoc-member-name" href="/networking/port.ts#L251">interface PortArgs</a>
+<a class="pdoc-member-name" href="/networking/port.ts#L265">interface PortArgs</a>
 </h2>
 
 The set of arguments for constructing a Port resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L257">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L271">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3953,7 +4145,7 @@ Administrative up/down status for the port
 `admin_state_up` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L263">property allowedAddressPairs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L277">property allowedAddressPairs</a>
 </h3>
 
 ```typescript
@@ -3966,7 +4158,7 @@ addresses that can be active on this port. The structure is described
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L268">property deviceId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L282">property deviceId</a>
 </h3>
 
 ```typescript
@@ -3978,7 +4170,7 @@ The ID of the device attached to the port. Changing this
 creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L273">property deviceOwner</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L287">property deviceOwner</a>
 </h3>
 
 ```typescript
@@ -3990,7 +4182,7 @@ The device owner of the Port. Changing this creates
 a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L278">property fixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L292">property fixedIps</a>
 </h3>
 
 ```typescript
@@ -3998,11 +4190,11 @@ fixedIps?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-An array of desired IPs for this port. The structure is
-described below.
+An array of desired IPs for
+this port. The structure is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L283">property macAddress</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L297">property macAddress</a>
 </h3>
 
 ```typescript
@@ -4014,7 +4206,7 @@ Specify a specific MAC address for the port. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L288">property name</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L302">property name</a>
 </h3>
 
 ```typescript
@@ -4026,7 +4218,7 @@ A unique name for the port. Changing this
 updates the `name` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L293">property networkId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L307">property networkId</a>
 </h3>
 
 ```typescript
@@ -4038,7 +4230,20 @@ The ID of the network to attach the port to. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L301">property noSecurityGroups</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L313">property noFixedIp</a>
+</h3>
+
+```typescript
+noFixedIp?: pulumi.Input<boolean>;
+```
+
+
+Create a port with no fixed
+IP address. This will also remove any fixed IPs previously set on a port. `true`
+is the only valid value for this argument.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L321">property noSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -4053,7 +4258,7 @@ behavior of the Networking service, which is to usually apply the "default"
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L308">property region</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L328">property region</a>
 </h3>
 
 ```typescript
@@ -4067,7 +4272,7 @@ A networking client is needed to create a port. If omitted, the
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L315">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L335">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4081,7 +4286,7 @@ specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L320">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L340">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4093,7 +4298,7 @@ The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L324">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L344">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4104,13 +4309,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="PortState">
-<a class="pdoc-member-name" href="/networking/port.ts#L162">interface PortState</a>
+<a class="pdoc-member-name" href="/networking/port.ts#L170">interface PortState</a>
 </h2>
 
 Input properties used for looking up and filtering Port resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L168">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L176">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4123,7 +4328,7 @@ Administrative up/down status for the port
 `admin_state_up` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L173">property allFixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L181">property allFixedIps</a>
 </h3>
 
 ```typescript
@@ -4135,7 +4340,7 @@ The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L178">property allSecurityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L186">property allSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4147,7 +4352,7 @@ The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L184">property allowedAddressPairs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L192">property allowedAddressPairs</a>
 </h3>
 
 ```typescript
@@ -4160,7 +4365,7 @@ addresses that can be active on this port. The structure is described
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L189">property deviceId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L197">property deviceId</a>
 </h3>
 
 ```typescript
@@ -4172,7 +4377,7 @@ The ID of the device attached to the port. Changing this
 creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L194">property deviceOwner</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L202">property deviceOwner</a>
 </h3>
 
 ```typescript
@@ -4184,7 +4389,7 @@ The device owner of the Port. Changing this creates
 a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L199">property fixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L207">property fixedIps</a>
 </h3>
 
 ```typescript
@@ -4192,11 +4397,11 @@ fixedIps?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
-An array of desired IPs for this port. The structure is
-described below.
+An array of desired IPs for
+this port. The structure is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L204">property macAddress</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L212">property macAddress</a>
 </h3>
 
 ```typescript
@@ -4208,7 +4413,7 @@ Specify a specific MAC address for the port. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L209">property name</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L217">property name</a>
 </h3>
 
 ```typescript
@@ -4220,7 +4425,7 @@ A unique name for the port. Changing this
 updates the `name` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L214">property networkId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L222">property networkId</a>
 </h3>
 
 ```typescript
@@ -4232,7 +4437,20 @@ The ID of the network to attach the port to. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L222">property noSecurityGroups</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L228">property noFixedIp</a>
+</h3>
+
+```typescript
+noFixedIp?: pulumi.Input<boolean>;
+```
+
+
+Create a port with no fixed
+IP address. This will also remove any fixed IPs previously set on a port. `true`
+is the only valid value for this argument.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L236">property noSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -4247,7 +4465,7 @@ behavior of the Networking service, which is to usually apply the "default"
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L229">property region</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L243">property region</a>
 </h3>
 
 ```typescript
@@ -4261,7 +4479,7 @@ A networking client is needed to create a port. If omitted, the
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L236">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L250">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4275,7 +4493,7 @@ specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L241">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L255">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4287,7 +4505,7 @@ The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L245">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L259">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4914,13 +5132,24 @@ wants to create a port for another tenant. Changing this creates a new
 security group.
 
 <h2 class="pdoc-module-header" id="SecGroupRuleArgs">
-<a class="pdoc-member-name" href="/networking/secGroupRule.ts#L237">interface SecGroupRuleArgs</a>
+<a class="pdoc-member-name" href="/networking/secGroupRule.ts#L247">interface SecGroupRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a SecGroupRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L242">property direction</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L251">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description of the rule. Changing this creates a new security group rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L256">property direction</a>
 </h3>
 
 ```typescript
@@ -4932,7 +5161,7 @@ The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L247">property ethertype</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L261">property ethertype</a>
 </h3>
 
 ```typescript
@@ -4944,7 +5173,7 @@ The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L253">property portRangeMax</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L267">property portRangeMax</a>
 </h3>
 
 ```typescript
@@ -4957,7 +5186,7 @@ integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L259">property portRangeMin</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L273">property portRangeMin</a>
 </h3>
 
 ```typescript
@@ -4970,7 +5199,7 @@ integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L284">property protocol</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L298">property protocol</a>
 </h3>
 
 ```typescript
@@ -5002,7 +5231,7 @@ The layer 4 protocol type, valid values are following. Changing this creates a n
 * __vrrp__
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L291">property region</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L305">property region</a>
 </h3>
 
 ```typescript
@@ -5016,7 +5245,7 @@ A networking client is needed to create a port. If omitted, the
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L297">property remoteGroupId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L311">property remoteGroupId</a>
 </h3>
 
 ```typescript
@@ -5029,7 +5258,7 @@ Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L302">property remoteIpPrefix</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L316">property remoteIpPrefix</a>
 </h3>
 
 ```typescript
@@ -5041,7 +5270,7 @@ The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L308">property securityGroupId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L322">property securityGroupId</a>
 </h3>
 
 ```typescript
@@ -5054,7 +5283,7 @@ to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L314">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L328">property tenantId</a>
 </h3>
 
 ```typescript
@@ -5067,13 +5296,24 @@ wants to create a port for another tenant. Changing this creates a new
 security group rule.
 
 <h2 class="pdoc-module-header" id="SecGroupRuleState">
-<a class="pdoc-member-name" href="/networking/secGroupRule.ts#L154">interface SecGroupRuleState</a>
+<a class="pdoc-member-name" href="/networking/secGroupRule.ts#L160">interface SecGroupRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering SecGroupRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L159">property direction</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L164">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+A description of the rule. Changing this creates a new security group rule.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L169">property direction</a>
 </h3>
 
 ```typescript
@@ -5085,7 +5325,7 @@ The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L164">property ethertype</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L174">property ethertype</a>
 </h3>
 
 ```typescript
@@ -5097,7 +5337,7 @@ The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L170">property portRangeMax</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L180">property portRangeMax</a>
 </h3>
 
 ```typescript
@@ -5110,7 +5350,7 @@ integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L176">property portRangeMin</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L186">property portRangeMin</a>
 </h3>
 
 ```typescript
@@ -5123,7 +5363,7 @@ integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L201">property protocol</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L211">property protocol</a>
 </h3>
 
 ```typescript
@@ -5155,7 +5395,7 @@ The layer 4 protocol type, valid values are following. Changing this creates a n
 * __vrrp__
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L208">property region</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L218">property region</a>
 </h3>
 
 ```typescript
@@ -5169,7 +5409,7 @@ A networking client is needed to create a port. If omitted, the
 security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L214">property remoteGroupId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L224">property remoteGroupId</a>
 </h3>
 
 ```typescript
@@ -5182,7 +5422,7 @@ Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L219">property remoteIpPrefix</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L229">property remoteIpPrefix</a>
 </h3>
 
 ```typescript
@@ -5194,7 +5434,7 @@ The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L225">property securityGroupId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L235">property securityGroupId</a>
 </h3>
 
 ```typescript
@@ -5207,7 +5447,7 @@ to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L231">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/secGroupRule.ts#L241">property tenantId</a>
 </h3>
 
 ```typescript

@@ -960,16 +960,15 @@ public vpcId: pulumi.Output<string>;
 The identifier of the VPC in which to create the target group.
 
 <h2 class="pdoc-module-header" id="TargetGroupAttachment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L13">class TargetGroupAttachment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L12">class TargetGroupAttachment</a>
 </h2>
 
-Provides the ability to register instances and containers with a LB
-target group
+Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the [`aws_elb_attachment` resource](https://www.terraform.io/docs/providers/aws/r/elb_attachment.html).
 
 ~> **Note:** `aws_alb_target_group_attachment` is known as `aws_lb_target_group_attachment`. The functionality is identical.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L41">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L40">constructor</a>
 </h3>
 
 ```typescript
@@ -984,7 +983,7 @@ Create a TargetGroupAttachment resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L22">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -1016,7 +1015,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L29">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L28">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -1039,7 +1038,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L33">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L32">property port</a>
 </h3>
 
 ```typescript
@@ -1050,7 +1049,7 @@ public port: pulumi.Output<number | undefined>;
 The port on which targets receive traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L37">property targetGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L36">property targetGroupArn</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1060,7 @@ public targetGroupArn: pulumi.Output<string>;
 The ARN of the target group with which to register targets
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L41">property targetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L40">property targetId</a>
 </h3>
 
 ```typescript
@@ -2410,13 +2409,13 @@ vpcId: pulumi.Input<string>;
 The identifier of the VPC in which to create the target group.
 
 <h2 class="pdoc-module-header" id="TargetGroupAttachmentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L101">interface TargetGroupAttachmentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L100">interface TargetGroupAttachmentArgs</a>
 </h2>
 
 The set of arguments for constructing a TargetGroupAttachment resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L105">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L104">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -2427,7 +2426,7 @@ availabilityZone?: pulumi.Input<string>;
 The Availability Zone where the IP address of the target is to be registered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L109">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L108">property port</a>
 </h3>
 
 ```typescript
@@ -2438,7 +2437,7 @@ port?: pulumi.Input<number>;
 The port on which targets receive traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L113">property targetGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L112">property targetGroupArn</a>
 </h3>
 
 ```typescript
@@ -2449,7 +2448,7 @@ targetGroupArn: pulumi.Input<string>;
 The ARN of the target group with which to register targets
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L117">property targetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L116">property targetId</a>
 </h3>
 
 ```typescript
@@ -2460,13 +2459,13 @@ targetId: pulumi.Input<string>;
 The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address.
 
 <h2 class="pdoc-module-header" id="TargetGroupAttachmentState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L79">interface TargetGroupAttachmentState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L78">interface TargetGroupAttachmentState</a>
 </h2>
 
 Input properties used for looking up and filtering TargetGroupAttachment resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L83">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L82">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -2477,7 +2476,7 @@ availabilityZone?: pulumi.Input<string>;
 The Availability Zone where the IP address of the target is to be registered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L87">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L86">property port</a>
 </h3>
 
 ```typescript
@@ -2488,7 +2487,7 @@ port?: pulumi.Input<number>;
 The port on which targets receive traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L91">property targetGroupArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L90">property targetGroupArn</a>
 </h3>
 
 ```typescript
@@ -2499,7 +2498,7 @@ targetGroupArn?: pulumi.Input<string>;
 The ARN of the target group with which to register targets
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L95">property targetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticloadbalancingv2/targetGroupAttachment.ts#L94">property targetId</a>
 </h3>
 
 ```typescript

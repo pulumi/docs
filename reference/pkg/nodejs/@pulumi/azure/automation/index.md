@@ -8,18 +8,27 @@ title: Module automation
 
 * <a href="#Account">class Account</a>
 * <a href="#Credential">class Credential</a>
+* <a href="#DscConfiguration">class DscConfiguration</a>
+* <a href="#DscNodeConfiguration">class DscNodeConfiguration</a>
+* <a href="#Module">class Module</a>
 * <a href="#RunBook">class RunBook</a>
 * <a href="#Schedule">class Schedule</a>
 * <a href="#AccountArgs">interface AccountArgs</a>
 * <a href="#AccountState">interface AccountState</a>
 * <a href="#CredentialArgs">interface CredentialArgs</a>
 * <a href="#CredentialState">interface CredentialState</a>
+* <a href="#DscConfigurationArgs">interface DscConfigurationArgs</a>
+* <a href="#DscConfigurationState">interface DscConfigurationState</a>
+* <a href="#DscNodeConfigurationArgs">interface DscNodeConfigurationArgs</a>
+* <a href="#DscNodeConfigurationState">interface DscNodeConfigurationState</a>
+* <a href="#ModuleArgs">interface ModuleArgs</a>
+* <a href="#ModuleState">interface ModuleState</a>
 * <a href="#RunBookArgs">interface RunBookArgs</a>
 * <a href="#RunBookState">interface RunBookState</a>
 * <a href="#ScheduleArgs">interface ScheduleArgs</a>
 * <a href="#ScheduleState">interface ScheduleState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts">automation/account.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/credential.ts">automation/credential.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts">automation/runBook.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts">automation/schedule.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts">automation/account.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/credential.ts">automation/credential.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts">automation/dscConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts">automation/dscNodeConfiguration.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts">automation/module.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts">automation/runBook.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts">automation/schedule.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Account">
@@ -296,6 +305,418 @@ public username: pulumi.Output<string>;
 
 
 The username associated with this Automation Credential.
+
+<h2 class="pdoc-module-header" id="DscConfiguration">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L10">class DscConfiguration</a>
+</h2>
+
+Manages a Automation DSC Configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L51">constructor</a>
+</h3>
+
+```typescript
+new DscConfiguration(name: string, args: DscConfigurationArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a DscConfiguration resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DscConfigurationState): DscConfiguration
+```
+
+
+Get an existing DscConfiguration resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L26">property automationAccountName</a>
+</h3>
+
+```typescript
+public automationAccountName: pulumi.Output<string>;
+```
+
+
+The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L30">property contentEmbedded</a>
+</h3>
+
+```typescript
+public contentEmbedded: pulumi.Output<string>;
+```
+
+
+The PowerShell DSC Configuration script.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L34">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+Description to go with DSC Configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L38">property location</a>
+</h3>
+
+```typescript
+public location: pulumi.Output<string>;
+```
+
+
+Must be the same location as the Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L42">property logVerbose</a>
+</h3>
+
+```typescript
+public logVerbose: pulumi.Output<boolean | undefined>;
+```
+
+
+Verbose log option.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L46">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L50">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L51">property state</a>
+</h3>
+
+```typescript
+public state: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="DscNodeConfiguration">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L10">class DscNodeConfiguration</a>
+</h2>
+
+Manages a Automation DSC Node Configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L39">constructor</a>
+</h3>
+
+```typescript
+new DscNodeConfiguration(name: string, args: DscNodeConfigurationArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a DscNodeConfiguration resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DscNodeConfigurationState): DscNodeConfiguration
+```
+
+
+Get an existing DscNodeConfiguration resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L26">property automationAccountName</a>
+</h3>
+
+```typescript
+public automationAccountName: pulumi.Output<string>;
+```
+
+
+The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L27">property configurationName</a>
+</h3>
+
+```typescript
+public configurationName: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L31">property contentEmbedded</a>
+</h3>
+
+```typescript
+public contentEmbedded: pulumi.Output<string>;
+```
+
+
+The PowerShell DSC Node Configuration (mof content).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L35">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L39">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="Module">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L10">class Module</a>
+</h2>
+
+Manages a Automation Module.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L38">constructor</a>
+</h3>
+
+```typescript
+new Module(name: string, args: ModuleArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a Module resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ModuleState): Module
+```
+
+
+Get an existing Module resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L26">property automationAccountName</a>
+</h3>
+
+```typescript
+public automationAccountName: pulumi.Output<string>;
+```
+
+
+The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L30">property moduleLink</a>
+</h3>
+
+```typescript
+public moduleLink: pulumi.Output<{ ... }>;
+```
+
+
+The published Module link.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L34">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Module. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L38">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="RunBook">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L10">class RunBook</a>
@@ -974,6 +1395,388 @@ username?: pulumi.Input<string>;
 
 
 The username associated with this Automation Credential.
+
+<h2 class="pdoc-module-header" id="DscConfigurationArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L138">interface DscConfigurationArgs</a>
+</h2>
+
+The set of arguments for constructing a DscConfiguration resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L142">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName: pulumi.Input<string>;
+```
+
+
+The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L146">property contentEmbedded</a>
+</h3>
+
+```typescript
+contentEmbedded: pulumi.Input<string>;
+```
+
+
+The PowerShell DSC Configuration script.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L150">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+Description to go with DSC Configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L154">property location</a>
+</h3>
+
+```typescript
+location: pulumi.Input<string>;
+```
+
+
+Must be the same location as the Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L158">property logVerbose</a>
+</h3>
+
+```typescript
+logVerbose?: pulumi.Input<boolean>;
+```
+
+
+Verbose log option.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L162">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L166">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="DscConfigurationState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L103">interface DscConfigurationState</a>
+</h2>
+
+Input properties used for looking up and filtering DscConfiguration resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L107">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName?: pulumi.Input<string>;
+```
+
+
+The name of the automation account in which the DSC Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L111">property contentEmbedded</a>
+</h3>
+
+```typescript
+contentEmbedded?: pulumi.Input<string>;
+```
+
+
+The PowerShell DSC Configuration script.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L115">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+Description to go with DSC Configuration.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L119">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+
+Must be the same location as the Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L123">property logVerbose</a>
+</h3>
+
+```typescript
+logVerbose?: pulumi.Input<boolean>;
+```
+
+
+Verbose log option.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L127">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the DSC Configuration. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L131">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the DSC Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscConfiguration.ts#L132">property state</a>
+</h3>
+
+```typescript
+state?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="DscNodeConfigurationArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L105">interface DscNodeConfigurationArgs</a>
+</h2>
+
+The set of arguments for constructing a DscNodeConfiguration resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L109">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName: pulumi.Input<string>;
+```
+
+
+The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L113">property contentEmbedded</a>
+</h3>
+
+```typescript
+contentEmbedded: pulumi.Input<string>;
+```
+
+
+The PowerShell DSC Node Configuration (mof content).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L117">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L121">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="DscNodeConfigurationState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L82">interface DscNodeConfigurationState</a>
+</h2>
+
+Input properties used for looking up and filtering DscNodeConfiguration resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L86">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName?: pulumi.Input<string>;
+```
+
+
+The name of the automation account in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L87">property configurationName</a>
+</h3>
+
+```typescript
+configurationName?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L91">property contentEmbedded</a>
+</h3>
+
+```typescript
+contentEmbedded?: pulumi.Input<string>;
+```
+
+
+The PowerShell DSC Node Configuration (mof content).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L95">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the DSC Node Configuration. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/dscNodeConfiguration.ts#L99">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the DSC Node Configuration is created. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="ModuleArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L101">interface ModuleArgs</a>
+</h2>
+
+The set of arguments for constructing a Module resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L105">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName: pulumi.Input<string>;
+```
+
+
+The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L109">property moduleLink</a>
+</h3>
+
+```typescript
+moduleLink: pulumi.Input<{ ... }>;
+```
+
+
+The published Module link.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L113">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Module. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L117">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="ModuleState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L79">interface ModuleState</a>
+</h2>
+
+Input properties used for looking up and filtering Module resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L83">property automationAccountName</a>
+</h3>
+
+```typescript
+automationAccountName?: pulumi.Input<string>;
+```
+
+
+The name of the automation account in which the Module is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L87">property moduleLink</a>
+</h3>
+
+```typescript
+moduleLink?: pulumi.Input<{ ... }>;
+```
+
+
+The published Module link.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L91">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Module. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/module.ts#L95">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="RunBookArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L177">interface RunBookArgs</a>

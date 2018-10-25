@@ -301,7 +301,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getClientConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L11">function getClientConfig</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L10">function getClientConfig</a>
 </h2>
 
 ```typescript
@@ -309,8 +309,7 @@ getClientConfig(opts?: pulumi.InvokeOptions): Promise<GetClientConfigResult>
 ```
 
 
-Use this data source to access the configuration of the Azure Resource Manager
-provider.
+Use this data source to access the configuration of the AzureRM provider.
 
 <h2 class="pdoc-module-header" id="getResourceGroup">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getResourceGroup.ts#L10">function getResourceGroup</a>
@@ -321,7 +320,7 @@ getResourceGroup(args: GetResourceGroupArgs, opts?: pulumi.InvokeOptions): Promi
 ```
 
 
-Use this data source to access the properties of an Azure resource group.
+Use this data source to access information about an existing Resource Group.
 
 <h2 class="pdoc-module-header" id="getSubscription">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscription.ts#L10">function getSubscription</a>
@@ -332,7 +331,7 @@ getSubscription(args?: GetSubscriptionArgs, opts?: pulumi.InvokeOptions): Promis
 ```
 
 
-Use this data source to access the properties of an Azure subscription.
+Use this data source to access information about an existing Subscription.
 
 <h2 class="pdoc-module-header" id="getSubscriptions">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L10">function getSubscriptions</a>
@@ -343,16 +342,16 @@ getSubscriptions(opts?: pulumi.InvokeOptions): Promise<GetSubscriptionsResult>
 ```
 
 
-Use this data source to access a list of all Azure subscriptions currently available.
+Use this data source to access information about all the Subscriptions currently available.
 
 <h2 class="pdoc-module-header" id="GetClientConfigResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L19">interface GetClientConfigResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L18">interface GetClientConfigResult</a>
 </h2>
 
 A collection of values returned by getClientConfig.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L20">property clientId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L19">property clientId</a>
 </h3>
 
 ```typescript
@@ -360,7 +359,7 @@ clientId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L28">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L27">property id</a>
 </h3>
 
 ```typescript
@@ -371,7 +370,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L21">property servicePrincipalApplicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L20">property servicePrincipalApplicationId</a>
 </h3>
 
 ```typescript
@@ -379,7 +378,7 @@ servicePrincipalApplicationId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L22">property servicePrincipalObjectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L21">property servicePrincipalObjectId</a>
 </h3>
 
 ```typescript
@@ -387,7 +386,7 @@ servicePrincipalObjectId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L23">property subscriptionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L22">property subscriptionId</a>
 </h3>
 
 ```typescript
@@ -395,7 +394,7 @@ subscriptionId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L24">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getClientConfig.ts#L23">property tenantId</a>
 </h3>
 
 ```typescript

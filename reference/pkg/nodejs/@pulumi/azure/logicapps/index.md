@@ -821,7 +821,7 @@ getWorkflow(args: GetWorkflowArgs, opts?: pulumi.InvokeOptions): Promise<GetWork
 ```
 
 
-Gets information about a Logic App Workflow.
+Use this data source to access information about an existing Logic App Workflow.
 
 <h2 class="pdoc-module-header" id="ActionCustomArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/logicapps/actionCustom.ts#L88">interface ActionCustomArgs</a>
