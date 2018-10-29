@@ -23,7 +23,13 @@ redirect_from: /install/changelog.html
         </tr>
     </thead>
     <tbody>
-            <tr>
+
+        <tr>
+            <th scope="row"><a href="#v161">0.16.2</a></th>
+            <td>2018/10/29</td>
+            <td>{% include sdk-links.html version='0.16.2' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v161">0.16.1</a></th>
             <td>2018/10/23</td>
             <td>{% include sdk-links.html version='0.16.1' %}</td>
@@ -81,7 +87,19 @@ redirect_from: /install/changelog.html
     </tbody>
 </table>
 
-## v0.16.1 {#v161}https://github.com/pulumi/pulumi/pull/2069
+## v0.16.2 {#v162}
+
+Released on October 29, 2018
+
+### Pulumi CLI
+
+- Fix a regression that would cause resource operations to not be processed in parallel when using the latest CLI with a `@pulumi/pulumi` older than 0.16.1 [pulumi/pulumi#2123](https://github.com/pulumi/pulumi/pull/2123)
+
+### @pulumi/pulumi 0.16.1
+
+- Fail with a better error message (and in fewer cases) on Node 11. We hope to have complete support for Node 11 later this week, but for now recommend using Node 10 or earlier. [pulumi/pulumi#2098](https://github.com/pulumi/pulumi/pull/2098)
+
+## v0.16.1 {#v161}
 
 Released on October 23, 2018
 
