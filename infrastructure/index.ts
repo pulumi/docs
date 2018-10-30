@@ -32,15 +32,6 @@ const contentBucket = new aws.s3.Bucket(
             indexDocument: "index.html",
             errorDocument: "404.html",
         },
-        // The docs website serves a file dashboard.json, which is read by a few services
-        // to surface recent updates. We need to set CORS headers for that file.
-        corsRules: [
-            {
-                allowedHeaders: [ "*" ],
-                allowedOrigins: [ "*" ],
-                allowedMethods: [ "GET" ],
-            },
-        ],
     },
     {
         protect: false,
