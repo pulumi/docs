@@ -76,7 +76,7 @@ The following are samples only. You may choose to structure your configuration a
 
 The `pulumi-preview.sh` script (not shown here) is similar to the `run-pulumi.sh`, except that
 it runs the `pulumi preview` command instead of the `pulumi up` command, which is sort of a dry-run
-that only shows you changes (if any) in your infrastructure. Isn't that awesome?
+that only shows you changes (if any) in your infrastructure.
 
 ### Sample `.gitlab-ci.yml`
 ```yaml
