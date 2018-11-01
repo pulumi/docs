@@ -44,7 +44,7 @@ Each resource class derives from
 [a common `Resource` base class](/reference/pkg/nodejs/@pulumi/pulumi/index.html#Resource) defined by the Pulumi SDK,
 whose shape differs in each language.
 
-More complex resource types require additional properties, as will soon see.  Resources often have two properties:
+More complex resource types require additional properties, as we'll soon see.  Resources often have two properties:
 
 * `urn` is the Pulumi-allocated Unique Resource Name (URN) for your resource
 * `id` is the cloud provider allocated unique identifier, usually just its name or ID

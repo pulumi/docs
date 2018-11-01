@@ -10,7 +10,7 @@ NOTE: To update this page with a new binary release, do the following:
 - Update changelog.md with the latest fixes in the release
 -->
 
-First thing's first, let's install the Pulumi CLI on your machine.
+First things first, let's install the Pulumi CLI on your machine.
 
 <script>
     var oses = [ "unknown", "linux", "macos", "windows", "other" ];

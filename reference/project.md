@@ -50,4 +50,4 @@ const myTask = new cloud.Task("myTask", {
 
 ## Stack settings files {#stack-settings-file}
 
-Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack. To learn more, see [Adding and setting stack settings](config.html#config-stack).
+Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml` which contains the configuration specific to this stack. To learn more, see [Adding and configuring stack settings](config.html#config-stack).

@@ -4,7 +4,7 @@ title: Stacks
 
 A stack is an instance of your Pulumi program.
 
-You'll create and manipulate them frequently, and are one of Pulumi's most fundamental concepts.  We glossed over
+You'll create and manipulate them frequently, and they are one of Pulumi's most fundamental concepts.  We glossed over
 them in the first lesson by simply using `pulumi new` to create our first stack, but we'll now learn more about them.
 
 There are many reasons we might want more than one stack for our program:

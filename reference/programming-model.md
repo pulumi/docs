@@ -64,7 +64,7 @@ virtualmachine.dnsName.apply(dnsName => "https://" + dnsName)
 
 ## Stack output {#stack-outputs}
 
-A [stack output](stack.html#outputs) is a value that can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export value from a stack, use the following definition in the top-level of the entry point for your project:
+A [stack output](stack.html#outputs) is a value that can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
 
 **JavaScript**
 ```js

@@ -45,7 +45,8 @@ You can find additional examples of using AWS in [the Pulumi examples repo](http
 
 ## Libraries
 
-The following pacakges are available in pacakge managers:
+The following packages are available in package managers:
+
 * JavaScript/TypeScript: [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws)
 * Python: [`pulumi-aws`](https://pypi.org/project/pulumi-aws/)
 * Go: [`github.com/pulumi/pulumi-aws/sdk/go/aws`](https://github.com/pulumi/pulumi-aws)

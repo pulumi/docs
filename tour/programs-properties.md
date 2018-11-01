@@ -28,7 +28,7 @@ _, err := s3.NewBucket(ctx, "my-bucket", &s3.BucketArgs{
 })
 ```
 
-Inputs properties are key to how Pulumi works; the diffing of them instructs Pulumi how to do its deployments.  And
+Input properties are key to how Pulumi works; the diffing of them instructs Pulumi how to do its deployments.  And
 they are what the resource provider uses to perform actual creations and updates.
 
 The resulting resource object offers *output* properties that communicate its final state:

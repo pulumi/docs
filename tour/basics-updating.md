@@ -2,7 +2,7 @@
 title: Performing updates
 ---
 
-After standing up program for the first time, it will be live and running in the cloud.
+After standing up our program for the first time, it will be live and running in the cloud.
 
 From there, we may wish to make incremental updates.  This includes adding new resources, changing existing ones, or
 removing them altogether.
