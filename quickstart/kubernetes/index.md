@@ -66,7 +66,7 @@ You can find additional examples Kubernetes examples in [the Pulumi examples rep
 
 ## Libraries
 
-The following pacakges are available in pacakge managers:
+The following packages are available in package managers:
 
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/kubernetes
 
