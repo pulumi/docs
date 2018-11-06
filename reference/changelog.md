@@ -25,6 +25,11 @@ redirect_from: /install/changelog.html
     <tbody>
 
         <tr>
+            <th scope="row"><a href="#v161">0.16.3</a></th>
+            <td>2018/10/29</td>
+            <td>{% include sdk-links.html version='0.16.3' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="#v161">0.16.2</a></th>
             <td>2018/10/29</td>
             <td>{% include sdk-links.html version='0.16.2' %}</td>
@@ -86,6 +91,18 @@ redirect_from: /install/changelog.html
         </tr>
     </tbody>
 </table>
+
+## v0.16.3 {#v163}
+
+Released on November 6, 2018
+
+### Pulumi CLI
+
+There are no changes from the previous version of the Pulumi CLI, but it shares the same version as the `@pulumi/pulumi` package, which was updated
+
+### @pulumi/pulumi 0.16.3
+
+- Fully support Node 11 [pulumi/pulumi#2101](https://github.com/pulumi/pulumi/pull/2101)
 
 ## v0.16.2 {#v162}
 
