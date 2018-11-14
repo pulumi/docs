@@ -2,7 +2,10 @@
 title: "Python"
 ---
 
-> **Note:** Pulumi currently only supports Python 2.7.  This is a temporary limitation and Pulumi has been authored to support Python 3.  We just haven't tested it enough to feel good telling people to try it out.  If this is important to you, shoot us a note, and we'd be happy to get it ready for you.
+> **Note:** Pulumi >=0.16.4 only supports Python 3.6 or greater. You must have installed Python 3.6 prior to running
+> Pulumi programs, or you will likely see syntax errors - Pulumi makes use of new Python syntax that is not
+> backwards-compatible with Python 2. Past versions of Pulumi (<0.16.4) only supported Python 2.7.
+
 
 ## Getting Started
 
@@ -19,14 +22,16 @@ This will leave behind a `Pulumi.yaml` file, containing some minimal metadata ab
 
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
-It is not required, but we recommend using [`virtualenv`](http://docs.python-guide.org/en/latest/dev/virtualenvs/) for repeatable installations that work no matter your operating system.
+It is not required, but we recommend using [`pipenv`](https://pipenv.readthedocs.io/en/latest/) for repeatable installations that work no matter your operating system.
 
 ```
-$ virtualenv .
-$ . ./bin/activate
+$ pipenv --python 3
+$ pipenv install
+$ pipenv shell
 ```
 
-The first thing you'll want to do is install the Pulumi SDK package, which is listed in the template's `requirements.txt` file.
+`pipenv shell` launches a subshell with your virtual environment already activated. We highly recommend using virtual
+environments to isolate the dependencies of your projects and ensure reproducibility.
 
 ### Adding a new dependency {#packages}
 
@@ -36,5 +41,9 @@ The following Pulumi Python packages are available:
 - [pulumi_aws](https://pypi.org/project/pulumi_aws/): the AWS resource provider package, for programming AWS directly
 - [pulumi_azure](https://pypi.org/project/pulumi_azure/): the Azure resource provider package, for programming Azure directly
 - [pulumi_gcp](https://pypi.org/project/pulumi_gcp/): the Google Cloud resource provider package, for programming Google Cloud directly
+- [pulumi_kubernetes](https://pypi.org/project/pulumi_kubernetes/): The Kubernetes resource provider package, for programming Kubernetes directly.
+- [pulumi_vsphere](https://pypi.org/project/pulumi-vsphere/): The VSphere resource provider package, for programming VSphere directly.
+- [pulumi_openstack](https://pypi.org/project/pulumi-openstack/): The OpenStack resource provider package, for programming OpenStack directly.
+- [pulumi_random](https://pypi.org/project/pulumi-random/): The Random resource provider package, for generating random strings, numbers, and other things while integrating nicely with the Pulumi programming model.
 
 More packages are on their way, so please keep an eye out.  Please also let us know if there are specific packages you'd like to see sooner!
