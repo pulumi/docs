@@ -4,7 +4,7 @@ title: Azure DevOps
 
 This page details how to use [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) to manage deploying
 stacks based on commits to specific Git branches, and based on the build reason. You may also choose to introduce a
-[Manual Intervention](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/manual-intervention?view=vsts) task to control the preview vs. update step for any pulumi stack.
+[Manual Intervention](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/manual-intervention?view=vsts) task to control the preview vs. update step for any Pulumi stack.
 
 Pulumi doesn't require any particular arrangement of stacks or workflow to work in a
 continuous integration / continuous deployment system. So the steps described here can be
@@ -17,10 +17,12 @@ the steps outlined in the sample YAML file below to the Visual Designer as well.
 - An account on https://app.pulumi.com.
 - The latest CLI.
   - Installation instructions are [here](https://pulumi.io/quickstart/install.html).
-- A bare repo and set the remote URL to be your Azure DevOps project.
+- A git repo with your Azure DevOps project set as the remote URL.
   - To learn more about how to create a git repo in your DevOps project, click [here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav).
 
 ## Stack and Branch Mappings
+> The names used above are purely for demonstration purposes only. You may choose a naming convention that best suits your organization.
+
 The scripts below act on a hypothetical stack: `acme/acme-ui`.
 `acme-ui` contains the infrastructure code or `pulumi` program. It also contains an Angular-based SPA.
 The git repo for this look like this:
@@ -44,10 +46,7 @@ Learn more about the `pulumi` CLI commands [here](https://pulumi.io/reference/co
 Once your stack has been initialized, the `Pulumi.<stack-name>.yaml` file will be created with some basic configuration.
 The yaml file is used just for configuration values. All of your infrastructure will be built using your `pulumi` program.
 
-For this walkthrough, we will assume a `TypeScript`-based `pulumi` pr ogram, which will deploy resources to an Azure Subscription.
-
-**Note**: The names used above are purely for demonstration purposes only.
-You may choose a naming convention that best suits your organization.
+For this walkthrough, we will assume a `TypeScript`-based `pulumi` program, which will deploy resources to an Azure Subscription.
 
 ## Build Variables
 
@@ -105,14 +104,12 @@ case $BUILD_REASON in
   BuildCompletion|BatchedCI)
       pulumi up --yes
     ;;
-  Manual)
-      pulumi up
-    ;;
   *)
 esac
 
 # Save the stack output variables to job variables.
 # Note: Before the `pulumi up` is run for the first time, there are no stack output variables.
+# The pulumi program exports three values: resourceGroupName, storageAccountName and containerName.
 echo "##vso[task.setvariable variable=resourceGroupName;isOutput=true]$(pulumi stack output resourceGroupName)"
 echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi stack output storageAccountName)"
 echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)"
