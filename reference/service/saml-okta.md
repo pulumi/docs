@@ -25,12 +25,12 @@ give it a name, e.g. "Pulumi Cloud Console", and an icon.
 The next step is where you configure the SAML application's settings. The values to provide will
 depend on the name of your Pulumi organization, e.g. `robot-co` or `acme`.
 
-| General Setting    | Value |
-| ------------------ | ----- |
+| General Setting | Value |
+| --------------- | ----- |
 | Single sign on URL | https://api.pulumi.com/login/robot-co/sso/saml/acs |
-| Audience URI       | https://api.pulumi.com/login/robot-co/sso/saml/metadata |
-| Name ID format     | Unspecified |
-| App username       | Email |
+| Audience URI | https://api.pulumi.com/login/robot-co/sso/saml/metadata |
+| Name ID format | Unspecified |
+| App username | Email |
 
 In addition, there are two attribute statements that can optionally be provided so that users
 who log in with their Okta credentials will have proper user names.
