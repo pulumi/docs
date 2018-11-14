@@ -73,7 +73,7 @@ Update duration: 46.555593397s
 Permalink: https://app.pulumi.com/hausdorff/exposed-deployment-dev/updates/1
 ```
 
-We can see here in the `---outputs:---` section that Wordpress was allocated a public IP, in this
+We can see here in the `---outputs:---` section that nginx was allocated a public IP, in this
 case `35.226.79.225`. It is exported with a stack output variable, `frontendIp`. We can use `curl`
 and `grep` to retrieve the `<title>` of the site the proxy points at.
 
