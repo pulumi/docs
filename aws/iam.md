@@ -62,7 +62,7 @@ const role = new aws.iam.Role("myrole", {
 });
 
 const rolePolicy = new aws.iam.RolePolicy("myrolepolicy", {
-    role: role.id,
+    role: role,
     policy: JSON.stringify({
         Version: "2012-10-17",
         Statement: [{
