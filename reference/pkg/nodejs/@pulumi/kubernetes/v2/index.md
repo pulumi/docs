@@ -25,6 +25,25 @@ new Chart(releaseName: string, config: ChartOpts, opts?: pulumi.ComponentResourc
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L429">method getCustomResource</a>
+</h3>
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string): T
+```
+
+
+getCustomResource returns a resource defined by a CRD with the given group/version/kind and name.
+
+For example:
+    getCustomResource("monitoring.coreos.com/v1/ServiceMonitor", "kube-prometheus-exporter-kubernetes")
+
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string, name: string): T
+```
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
@@ -33,12 +52,18 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L89">method getResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L95">method getResource</a>
 </h3>
 
 ```typescript
 public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string): InitializerConfiguration
 ```
+
+
+getResource returns a resource defined by a built-in Kubernetes group/version/kind and name.
+
+For example:
+    getResource("apps/v1/Deployment", "nginx")
 
 
 ```typescript

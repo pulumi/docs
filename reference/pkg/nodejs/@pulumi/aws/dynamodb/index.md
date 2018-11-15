@@ -414,10 +414,10 @@ public writeCapacity: pulumi.Output<number>;
 The number of write units for this index
 
 <h2 class="pdoc-module-header" id="TableEventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L63">class TableEventSubscription</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L62">class TableEventSubscription</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L64">constructor</a>
 </h3>
 
 ```typescript
@@ -449,7 +449,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L65">property eventSourceMapping</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L64">property eventSourceMapping</a>
 </h3>
 
 ```typescript
@@ -473,7 +473,7 @@ public permission: permission.Permission;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L64">property table</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L63">property table</a>
 </h3>
 
 ```typescript
@@ -1031,10 +1031,10 @@ writeCapacity: pulumi.Input<number>;
 The number of write units for this index
 
 <h2 class="pdoc-module-header" id="TableEvent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L36">interface TableEvent</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L35">interface TableEvent</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L37">property Records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L36">property Records</a>
 </h3>
 
 ```typescript
@@ -1042,10 +1042,10 @@ Records: TableEventRecord[];
 ```
 
 <h2 class="pdoc-module-header" id="TableEventRecord">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L40">interface TableEventRecord</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L39">interface TableEventRecord</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L41">property awsRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L40">property awsRegion</a>
 </h3>
 
 ```typescript
@@ -1053,7 +1053,7 @@ awsRegion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L42">property dynamodb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L41">property dynamodb</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1061,7 @@ dynamodb: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L51">property eventID</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L50">property eventID</a>
 </h3>
 
 ```typescript
@@ -1069,7 +1069,7 @@ eventID: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L52">property eventName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L51">property eventName</a>
 </h3>
 
 ```typescript
@@ -1077,7 +1077,7 @@ eventName: INSERT | MODIFY | REMOVE;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L53">property eventSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L52">property eventSource</a>
 </h3>
 
 ```typescript
@@ -1085,7 +1085,7 @@ eventSource: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L54">property eventVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L53">property eventVersion</a>
 </h3>
 
 ```typescript
@@ -1093,7 +1093,7 @@ eventVersion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L55">property userIdentity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L54">property userIdentity</a>
 </h3>
 
 ```typescript
@@ -1101,14 +1101,14 @@ userIdentity: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="TableEventSubscriptionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L24">interface TableEventSubscriptionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L23">interface TableEventSubscriptionArgs</a>
 </h2>
 
 Arguments to control the event rule subscription.  Currently empty, but still defined in case of
 future need.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L28">property batchSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L27">property batchSize</a>
 </h3>
 
 ```typescript
@@ -1119,7 +1119,7 @@ batchSize?: number;
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L33">property startingPosition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L32">property startingPosition</a>
 </h3>
 
 ```typescript
@@ -1433,7 +1433,7 @@ writeCapacity?: pulumi.Input<number>;
 The number of write units for this index
 
 <h2 class="pdoc-module-header" id="TableEventHandler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L61">type TableEventHandler</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L60">type TableEventHandler</a>
 </h2>
 
 ```typescript

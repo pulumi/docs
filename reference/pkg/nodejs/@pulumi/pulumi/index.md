@@ -47,6 +47,7 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="asset">asset</a>
 * <a href="cmd">cmd</a>
 * <a href="dynamic">dynamic</a>
+* <a href="iterable">iterable</a>
 * <a href="log">log</a>
 * <a href="runtime">runtime</a>
 * <a href="tests">tests</a>
@@ -324,23 +325,32 @@ value as well as the Resource the value came from.  This allows for a precise 'R
 dependency graph' to be created, which properly tracks the relationship between resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L380">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L385">constructor</a>
 </h3>
 
 ```typescript
-public new Output(resources: Set<Resource>, promise: Promise<T>, isKnown: Promise<boolean>)
+public new Output(resources: Set<Resource> | Resource[] | Resource, promise: Promise<T>, isKnown: Promise<boolean>)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L377">method create</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L373">method create</a>
 </h3>
 
 ```typescript
-public static create<T>(resource: Resource, promise: Promise<T>, isKnown: Promise<boolean>): Output<T>
+public static create<T>(val: Input<T>): Output<Unwrap<T>>
+```
+
+
+create takes any Input value and converts it into an Output, deeply unwrapping nested Input
+values as necessary.
+
+
+```typescript
+public static create<T>(val: Input<T> | undefined): Output<Unwrap<T | undefined>>
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L373">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L383">method isInstance</a>
 </h3>
 
 ```typescript
@@ -717,7 +727,7 @@ stack?: undefined | string;
 ```
 
 <h2 class="pdoc-module-header" id="deploymentOnlyModule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts#L37">const deploymentOnlyModule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts#L38">const deploymentOnlyModule</a>
 </h2>
 
 ```typescript
@@ -744,7 +754,7 @@ const version: ${VERSION} = "${VERSION}";
 ```
 
 <h2 class="pdoc-module-header" id="all">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L527">function all</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L538">function all</a>
 </h2>
 
 ```typescript
@@ -830,7 +840,7 @@ getStack(): string
 getStack returns the current stack name.  It throws an exception if none is registered.
 
 <h2 class="pdoc-module-header" id="output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L470">function output</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L481">function output</a>
 </h2>
 
 ```typescript
@@ -839,7 +849,7 @@ output<T>(val: Input<T>): Output<Unwrap<T>>
 
 
 [output] takes any Input value and converts it into an Output, deeply unwrapping nested Input
-values as necessary".
+values as necessary.
 
 The expected way to use this function is like so:
 
@@ -1042,7 +1052,7 @@ type ID = string;
 ```
 
 <h2 class="pdoc-module-header" id="Input">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L577">type Input</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L589">type Input</a>
 </h2>
 
 ```typescript
@@ -1054,7 +1064,7 @@ Input is a property input for a resource.  It may be a promptly available T, a p
 for one, or the output from a existing Resource.
 
 <h2 class="pdoc-module-header" id="Inputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L583">type Inputs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L595">type Inputs</a>
 </h2>
 
 ```typescript

@@ -21,7 +21,7 @@ main(args: string[]): void
 ```
 
 <h2 class="pdoc-module-header" id="run">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts#L123">function run</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/run/run.ts#L120">function run</a>
 </h2>
 
 ```typescript

@@ -26,13 +26,17 @@ title: Module ecr
 
 
 <h2 class="pdoc-module-header" id="LifecyclePolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L10">class LifecyclePolicy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L14">class LifecyclePolicy</a>
 </h2>
 
-Provides an ECR lifecycle policy.
+Manages an ECR repository lifecycle policy.
+
+~> **NOTE:** Only one `aws_ecr_lifecycle_policy` resource can be used with the same ECR repository. To apply multiple rules, they must be combined in the `policy` JSON.
+
+~> **NOTE:** The AWS ECR API seems to reorder rules based on `rulePriority`. If you define multiple rules that are not sorted in ascending `rulePriority` order in the Terraform code, the resource will be flagged for recreation every `terraform plan`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -47,7 +51,7 @@ Create a LifecyclePolicy resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -91,7 +95,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L26">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L30">property policy</a>
 </h3>
 
 ```typescript
@@ -102,7 +106,7 @@ public policy: pulumi.Output<string>;
 The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L30">property registryId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L34">property registryId</a>
 </h3>
 
 ```typescript
@@ -113,7 +117,7 @@ public registryId: pulumi.Output<string>;
 The registry ID where the repository was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L34">property repository</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L38">property repository</a>
 </h3>
 
 ```typescript
@@ -518,13 +522,13 @@ repositoryUrl: string;
 The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
 
 <h2 class="pdoc-module-header" id="LifecyclePolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L88">interface LifecyclePolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L92">interface LifecyclePolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a LifecyclePolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L92">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L96">property policy</a>
 </h3>
 
 ```typescript
@@ -535,7 +539,7 @@ policy: pulumi.Input<string>;
 The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L96">property repository</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L100">property repository</a>
 </h3>
 
 ```typescript
@@ -546,13 +550,13 @@ repository: pulumi.Input<string>;
 Name of the repository to apply the policy.
 
 <h2 class="pdoc-module-header" id="LifecyclePolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L70">interface LifecyclePolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L74">interface LifecyclePolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering LifecyclePolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L74">property policy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L78">property policy</a>
 </h3>
 
 ```typescript
@@ -563,7 +567,7 @@ policy?: pulumi.Input<string>;
 The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L78">property registryId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L82">property registryId</a>
 </h3>
 
 ```typescript
@@ -574,7 +578,7 @@ registryId?: pulumi.Input<string>;
 The registry ID where the repository was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L82">property repository</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ecr/lifecyclePolicy.ts#L86">property repository</a>
 </h3>
 
 ```typescript

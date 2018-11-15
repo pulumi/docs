@@ -31,6 +31,25 @@ new CollectionComponentResource(resourceType: string, name: string, config: any,
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L429">method getCustomResource</a>
+</h3>
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string): T
+```
+
+
+getCustomResource returns a resource defined by a CRD with the given group/version/kind and name.
+
+For example:
+    getCustomResource("monitoring.coreos.com/v1/ServiceMonitor", "kube-prometheus-exporter-kubernetes")
+
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string, name: string): T
+```
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
@@ -39,12 +58,18 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L89">method getResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L95">method getResource</a>
 </h3>
 
 ```typescript
 public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string): InitializerConfiguration
 ```
+
+
+getResource returns a resource defined by a built-in Kubernetes group/version/kind and name.
+
+For example:
+    getResource("apps/v1/Deployment", "nginx")
 
 
 ```typescript
@@ -1698,18 +1723,37 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ConfigFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L453">class ConfigFile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L473">class ConfigFile</a>
 </h2>
 
 ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name`
 is not specified, `ConfigFile` assumes the argument `name` is the filename.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L453">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L473">constructor</a>
 </h3>
 
 ```typescript
 new ConfigFile(name: string, config?: ConfigFileOpts, opts?: pulumi.ComponentResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L429">method getCustomResource</a>
+</h3>
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string): T
+```
+
+
+getCustomResource returns a resource defined by a CRD with the given group/version/kind and name.
+
+For example:
+    getCustomResource("monitoring.coreos.com/v1/ServiceMonitor", "kube-prometheus-exporter-kubernetes")
+
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string, name: string): T
 ```
 
 <h3 class="pdoc-member-header">
@@ -1721,12 +1765,18 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L89">method getResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L95">method getResource</a>
 </h3>
 
 ```typescript
 public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string): InitializerConfiguration
 ```
+
+
+getResource returns a resource defined by a built-in Kubernetes group/version/kind and name.
+
+For example:
+    getResource("apps/v1/Deployment", "nginx")
 
 
 ```typescript
@@ -3380,7 +3430,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ConfigGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L442">class ConfigGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L462">class ConfigGroup</a>
 </h2>
 
 ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text
@@ -3399,11 +3449,30 @@ may be supplied using any of the following `ConfigGroupOpts`:
        a. `{files: "foo.yaml", yaml: "(LITERAL YAML HERE)"}`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L442">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L462">constructor</a>
 </h3>
 
 ```typescript
 new ConfigGroup(name: string, config: ConfigGroupOpts, opts?: pulumi.ComponentResourceOptions)
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L429">method getCustomResource</a>
+</h3>
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string): T
+```
+
+
+getCustomResource returns a resource defined by a CRD with the given group/version/kind and name.
+
+For example:
+    getCustomResource("monitoring.coreos.com/v1/ServiceMonitor", "kube-prometheus-exporter-kubernetes")
+
+
+```typescript
+public getCustomResource<T>(groupVersionKind: string, namespace: string, name: string): T
 ```
 
 <h3 class="pdoc-member-header">
@@ -3415,12 +3484,18 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L89">method getResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L95">method getResource</a>
 </h3>
 
 ```typescript
 public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string): InitializerConfiguration
 ```
+
+
+getResource returns a resource defined by a built-in Kubernetes group/version/kind and name.
+
+For example:
+    getResource("apps/v1/Deployment", "nginx")
 
 
 ```typescript
@@ -5082,7 +5157,7 @@ parse(config: ConfigGroupOpts, opts?: pulumi.CustomResourceOptions): { ... }
 ```
 
 <h2 class="pdoc-module-header" id="parseYamlDocument">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L465">function parseYamlDocument</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L485">function parseYamlDocument</a>
 </h2>
 
 ```typescript
@@ -5090,7 +5165,7 @@ parseYamlDocument(config: ConfigOpts, opts?: pulumi.CustomResourceOptions): { ..
 ```
 
 <h2 class="pdoc-module-header" id="parseYamlObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L480">function parseYamlObject</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L500">function parseYamlObject</a>
 </h2>
 
 ```typescript

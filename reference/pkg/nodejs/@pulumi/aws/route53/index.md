@@ -771,10 +771,10 @@ Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L12">class Zone</a>
 </h2>
 
-Provides a Route53 Hosted Zone resource.
+Manages a Route53 Hosted Zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L64">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L65">constructor</a>
 </h3>
 
 ```typescript
@@ -832,7 +832,7 @@ public comment: pulumi.Output<string>;
 A comment for the hosted zone. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L33">property delegationSetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L32">property delegationSetId</a>
 </h3>
 
 ```typescript
@@ -840,11 +840,10 @@ public delegationSetId: pulumi.Output<string | undefined>;
 ```
 
 
-The ID of the reusable delegation set whose NS records you want to assign to the hosted zone.
-Conflicts w/ `vpc_id` as delegation sets can only be used for public zones.
+The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` and `vpc_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L38">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L36">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -852,8 +851,7 @@ public forceDestroy: pulumi.Output<boolean | undefined>;
 ```
 
 
-Whether to destroy all records (possibly managed outside of Terraform)
-in the zone when destroying the zone.
+Whether to destroy all records (possibly managed outside of Terraform) in the zone when destroying the zone.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -868,7 +866,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L42">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L40">property name</a>
 </h3>
 
 ```typescript
@@ -879,7 +877,7 @@ public name: pulumi.Output<string>;
 This is the name of the hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L47">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L45">property nameServers</a>
 </h3>
 
 ```typescript
@@ -891,7 +889,7 @@ A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L51">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L49">property tags</a>
 </h3>
 
 ```typescript
@@ -914,19 +912,18 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L56">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L57">property vpcId</a>
 </h3>
 
 ```typescript
-public vpcId: pulumi.Output<string | undefined>;
+public vpcId: pulumi.Output<string>;
 ```
 
 
-The VPC to associate with a private hosted zone. Specifying `vpc_id` will create a private hosted zone.
-Conflicts w/ `delegation_set_id` as delegation sets can only be used for public zones.
+ID of the VPC to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L60">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L61">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -934,10 +931,21 @@ public vpcRegion: pulumi.Output<string>;
 ```
 
 
-The VPC's region. Defaults to the region of the AWS provider.
+Region of the VPC to associate. Defaults to AWS provider region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L64">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L53">property vpcs</a>
+</h3>
+
+```typescript
+public vpcs: pulumi.Output<{ ... }[]>;
+```
+
+
+Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with `delegation_set_id`, `vpc_id`, and `vpc_region` in this resource and any [`aws_route53_zone_association` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L65">property zoneId</a>
 </h3>
 
 ```typescript
@@ -948,13 +956,17 @@ public zoneId: pulumi.Output<string>;
 The Hosted Zone ID. This can be referenced by zone records.
 
 <h2 class="pdoc-module-header" id="ZoneAssociation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L10">class ZoneAssociation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L14">class ZoneAssociation</a>
 </h2>
 
-Provides a Route53 private Hosted Zone to VPC association resource.
+Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones.
+
+~> **NOTE:** Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the `vpc` configuration blocks available within the [`aws_route53_zone` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone.html) instead.
+
+~> **NOTE:** Terraform provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the [`aws_route53_zone` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone.html) via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic Terraform resource [lifecycle configuration block](https://www.terraform.io/docs/configuration/resources.html#lifecycle) with `ignore_changes` in the `aws_route53_zone` resource to manage additional associations via this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -969,7 +981,7 @@ Create a ZoneAssociation resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L23">method get</a>
 </h3>
 
 ```typescript
@@ -1025,7 +1037,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L26">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L30">property vpcId</a>
 </h3>
 
 ```typescript
@@ -1036,7 +1048,7 @@ public vpcId: pulumi.Output<string>;
 The VPC to associate with the private hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L30">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L34">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -1047,7 +1059,7 @@ public vpcRegion: pulumi.Output<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L34">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L38">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2119,13 +2131,13 @@ zoneId?: pulumi.Input<string>;
 Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See [`resource_elb.zone_id`](https://www.terraform.io/docs/providers/aws/r/elb.html#zone_id) for example.
 
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L152">interface ZoneArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L156">interface ZoneArgs</a>
 </h2>
 
 The set of arguments for constructing a Zone resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L156">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L160">property comment</a>
 </h3>
 
 ```typescript
@@ -2136,7 +2148,7 @@ comment?: pulumi.Input<string>;
 A comment for the hosted zone. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L161">property delegationSetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L164">property delegationSetId</a>
 </h3>
 
 ```typescript
@@ -2144,11 +2156,10 @@ delegationSetId?: pulumi.Input<string>;
 ```
 
 
-The ID of the reusable delegation set whose NS records you want to assign to the hosted zone.
-Conflicts w/ `vpc_id` as delegation sets can only be used for public zones.
+The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` and `vpc_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L166">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L168">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2156,11 +2167,10 @@ forceDestroy?: pulumi.Input<boolean>;
 ```
 
 
-Whether to destroy all records (possibly managed outside of Terraform)
-in the zone when destroying the zone.
+Whether to destroy all records (possibly managed outside of Terraform) in the zone when destroying the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L170">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L172">property name</a>
 </h3>
 
 ```typescript
@@ -2171,7 +2181,7 @@ name?: pulumi.Input<string>;
 This is the name of the hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L174">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L176">property tags</a>
 </h3>
 
 ```typescript
@@ -2182,7 +2192,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L179">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L184">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2190,11 +2200,10 @@ vpcId?: pulumi.Input<string>;
 ```
 
 
-The VPC to associate with a private hosted zone. Specifying `vpc_id` will create a private hosted zone.
-Conflicts w/ `delegation_set_id` as delegation sets can only be used for public zones.
+ID of the VPC to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L183">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L188">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2202,16 +2211,27 @@ vpcRegion?: pulumi.Input<string>;
 ```
 
 
-The VPC's region. Defaults to the region of the AWS provider.
+Region of the VPC to associate. Defaults to AWS provider region.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L180">property vpcs</a>
+</h3>
+
+```typescript
+vpcs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with `delegation_set_id`, `vpc_id`, and `vpc_region` in this resource and any [`aws_route53_zone_association` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 
 <h2 class="pdoc-module-header" id="ZoneAssociationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L88">interface ZoneAssociationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L92">interface ZoneAssociationArgs</a>
 </h2>
 
 The set of arguments for constructing a ZoneAssociation resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L92">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L96">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2222,7 +2242,7 @@ vpcId: pulumi.Input<string>;
 The VPC to associate with the private hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L96">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L100">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2233,7 +2253,7 @@ vpcRegion?: pulumi.Input<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L100">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L104">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2244,13 +2264,13 @@ zoneId: pulumi.Input<string>;
 The private hosted zone to associate.
 
 <h2 class="pdoc-module-header" id="ZoneAssociationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L70">interface ZoneAssociationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L74">interface ZoneAssociationState</a>
 </h2>
 
 Input properties used for looking up and filtering ZoneAssociation resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L74">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L78">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2261,7 +2281,7 @@ vpcId?: pulumi.Input<string>;
 The VPC to associate with the private hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L78">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L82">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2272,7 +2292,7 @@ vpcRegion?: pulumi.Input<string>;
 The VPC's region. Defaults to the region of the AWS provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L82">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts#L86">property zoneId</a>
 </h3>
 
 ```typescript
@@ -2283,13 +2303,13 @@ zoneId?: pulumi.Input<string>;
 The private hosted zone to associate.
 
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L106">interface ZoneState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L109">interface ZoneState</a>
 </h2>
 
 Input properties used for looking up and filtering Zone resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L110">property comment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L113">property comment</a>
 </h3>
 
 ```typescript
@@ -2300,7 +2320,7 @@ comment?: pulumi.Input<string>;
 A comment for the hosted zone. Defaults to 'Managed by Terraform'.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L115">property delegationSetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L117">property delegationSetId</a>
 </h3>
 
 ```typescript
@@ -2308,11 +2328,10 @@ delegationSetId?: pulumi.Input<string>;
 ```
 
 
-The ID of the reusable delegation set whose NS records you want to assign to the hosted zone.
-Conflicts w/ `vpc_id` as delegation sets can only be used for public zones.
+The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` and `vpc_id` as delegation sets can only be used for public zones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L120">property forceDestroy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L121">property forceDestroy</a>
 </h3>
 
 ```typescript
@@ -2320,11 +2339,10 @@ forceDestroy?: pulumi.Input<boolean>;
 ```
 
 
-Whether to destroy all records (possibly managed outside of Terraform)
-in the zone when destroying the zone.
+Whether to destroy all records (possibly managed outside of Terraform) in the zone when destroying the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L124">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L125">property name</a>
 </h3>
 
 ```typescript
@@ -2335,7 +2353,7 @@ name?: pulumi.Input<string>;
 This is the name of the hosted zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L129">property nameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L130">property nameServers</a>
 </h3>
 
 ```typescript
@@ -2347,7 +2365,7 @@ A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L133">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L134">property tags</a>
 </h3>
 
 ```typescript
@@ -2358,7 +2376,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L138">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L142">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2366,11 +2384,10 @@ vpcId?: pulumi.Input<string>;
 ```
 
 
-The VPC to associate with a private hosted zone. Specifying `vpc_id` will create a private hosted zone.
-Conflicts w/ `delegation_set_id` as delegation sets can only be used for public zones.
+ID of the VPC to associate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L142">property vpcRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L146">property vpcRegion</a>
 </h3>
 
 ```typescript
@@ -2378,10 +2395,21 @@ vpcRegion?: pulumi.Input<string>;
 ```
 
 
-The VPC's region. Defaults to the region of the AWS provider.
+Region of the VPC to associate. Defaults to AWS provider region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L146">property zoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L138">property vpcs</a>
+</h3>
+
+```typescript
+vpcs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with `delegation_set_id`, `vpc_id`, and `vpc_region` in this resource and any [`aws_route53_zone_association` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts#L150">property zoneId</a>
 </h3>
 
 ```typescript

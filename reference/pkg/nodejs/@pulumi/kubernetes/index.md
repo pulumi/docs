@@ -54,13 +54,13 @@ import * as kubernetes from "@pulumi/kubernetes";
 * <a href="yaml">yaml</a>
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1412">class Provider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1431">class Provider</a>
 </h2>
 
 The provider type for the kubernetes package.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1412">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1431">constructor</a>
 </h3>
 
 ```typescript
@@ -266,13 +266,13 @@ version?: undefined | string;
 ```
 
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1434">interface ProviderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1453">interface ProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a Provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1438">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1457">property cluster</a>
 </h3>
 
 ```typescript
@@ -283,7 +283,7 @@ cluster?: pulumi.Input<string>;
 If present, the name of the kubeconfig cluster to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1442">property context</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1461">property context</a>
 </h3>
 
 ```typescript
@@ -294,7 +294,7 @@ context?: pulumi.Input<string>;
 If present, the name of the kubeconfig context to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1446">property kubeconfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1465">property kubeconfig</a>
 </h3>
 
 ```typescript
@@ -305,7 +305,7 @@ kubeconfig?: pulumi.Input<string>;
 The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1450">property namespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1469">property namespace</a>
 </h3>
 
 ```typescript

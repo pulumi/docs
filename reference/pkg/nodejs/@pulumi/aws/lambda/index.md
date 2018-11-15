@@ -1274,7 +1274,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
 </h3>
 
 ```typescript
-public function: pulumi.Output<Function>;
+public function: pulumi.Output<string>;
 ```
 
 
@@ -2805,7 +2805,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
 </h3>
 
 ```typescript
-function: pulumi.Input<Function>;
+function: pulumi.Input<string | Function>;
 ```
 
 
@@ -2919,7 +2919,7 @@ The Event Source Token to validate.  Used with [Alexa Skills][1].
 </h3>
 
 ```typescript
-function?: pulumi.Input<Function>;
+function?: pulumi.Input<string | Function>;
 ```
 
 
