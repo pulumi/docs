@@ -48,6 +48,11 @@ The yaml file is used just for configuration values. All of your infrastructure 
 
 For this walkthrough, we will assume a `TypeScript`-based `pulumi` program, which will deploy resources to an Azure Subscription.
 
+### About The `pulumi` Program
+
+The code inside `infra/index.ts` creates a resource group, a storage account and a blob container in the storage account. It then `exports` three
+values using the syntax `export const <variable_name> = <value>;`. Learn more about stack outputs [here](https://pulumi.io/reference/programming-model.html#stack-outputs).
+
 ## Build Variables
 
 Build variables are an important aspect of any CI/CD pipeline. We will use some pre-defined [system build variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=vsts&tabs=yaml%2Cbatch#system-defined-variables) provided
@@ -115,7 +120,6 @@ echo "##vso[task.setvariable variable=storageAccountName;isOutput=true]$(pulumi 
 echo "##vso[task.setvariable variable=containerName;isOutput=true]$(pulumi stack output containerName)"
 
 popd
-
 ```
 
 ### Sample `azure-pipelines.yml`
