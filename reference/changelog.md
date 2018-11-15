@@ -101,17 +101,18 @@ redirect_from: /install/changelog.html
 
 Released on November 14, 2018
 
-The major feature in this release is Python 3 support. When using Python, Pulumi now requires Python 3.6 or higher.
+This release includes significant improvements to Python support in Pulumi.  Python 3.6 or greater is [now required](https://pulumi.io/reference/python.html), and Python users now get support for outputs, parallelism, improved error reporting, and Kubernetes - plus many more new and updated features.
 
 As part of this release, we've also started to use `CHANGELOG.md`'s in each repository to track changes between releases. You can read the individual changelogs in GitHub:
 
-- `[@pulumi/aws v0.16.1](https://github.com/pulumi/pulumi-aws/blob/master/CHANGELOG.md)`
-- `[@pulumi/aws-infra v0.16.1](https://github.com/pulumi/pulumi-aws-infra/blob/master/CHANGELOG.md)`
-- `[@pulumi/azure v0.16.4](https://github.com/pulumi/pulumi-azure/blob/master/CHANGELOG.md)`
-- `[@pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure v0.16.1](https://github.com/pulumi/pulumi-cloud/blob/master/CHANGELOG.md)`
-- `[@pulumi/gcp v0.16.2](https://github.com/pulumi/pulumi-gcp/blob/master/CHANGELOG.md)`
-- `[@pulumi/openstack v0.16.2](https://github.com/pulumi/pulumi-openstack/blob/master/CHANGELOG.md)`
-- `[@pulumi/vsphere v0.16.1](https://github.com/pulumi/pulumi-vsphere/blob/master/CHANGELOG.md)`
+- [`pulumi` v0.16.4](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0164-released-novemeber-12th-2018)
+- [`@pulumi/aws` v0.16.2](https://github.com/pulumi/pulumi-aws/blob/master/CHANGELOG.md#0162-released-novemeber-13th-2018)
+- [`@pulumi/aws-infra` v0.16.1](https://github.com/pulumi/pulumi-aws-infra/blob/master/CHANGELOG.md#0161-released-novemeber-13th-2018)
+- [`@pulumi/azure` v0.16.4](https://github.com/pulumi/pulumi-azure/blob/master/CHANGELOG.md#0164-released-novemeber-13th-2018)
+- [`@pulumi/cloud`, `@pulumi/cloud-aws`, `@pulumi/cloud-azure` v0.16.1](https://github.com/pulumi/pulumi-cloud/blob/master/CHANGELOG.md#0162-released-novemeber-14th-2018)
+- [`@pulumi/gcp` v0.16.2](https://github.com/pulumi/pulumi-gcp/blob/master/CHANGELOG.md#0162-released-novemeber-13th-2018)
+- [`@pulumi/openstack` v0.16.2](https://github.com/pulumi/pulumi-openstack/blob/master/CHANGELOG.md#0162-released-novemeber-13th-2018)
+- [`@pulumi/vsphere` v0.16.1](https://github.com/pulumi/pulumi-vsphere/blob/master/CHANGELOG.md#0161-released-novemeber-13th-2018)
 
 ## v0.16.3 {#v163}
 
