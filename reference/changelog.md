@@ -25,12 +25,17 @@ redirect_from: /install/changelog.html
     <tbody>
 
         <tr>
-            <th scope="row"><a href="#v161">0.16.3</a></th>
+            <th scope="row"><a href="#v164">0.16.4</a></th>
+            <td>2018/11/14</td>
+            <td>{% include sdk-links.html version='0.16.4' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="#v163">0.16.3</a></th>
             <td>2018/10/29</td>
             <td>{% include sdk-links.html version='0.16.3' %}</td>
         </tr>
         <tr>
-            <th scope="row"><a href="#v161">0.16.2</a></th>
+            <th scope="row"><a href="#v162">0.16.2</a></th>
             <td>2018/10/29</td>
             <td>{% include sdk-links.html version='0.16.2' %}</td>
         </tr>
@@ -91,6 +96,22 @@ redirect_from: /install/changelog.html
         </tr>
     </tbody>
 </table>
+
+## v0.16.4 {#v164}
+
+Released on November 14, 2018
+
+The major feature in this release is Python 3 support. When using Python, Pulumi now requires Python 3.6 or higher.
+
+As part of this release, we've also started to use `CHANGELOG.md`'s in each repository to track changes between releases. You can read the individual changelogs in GitHub:
+
+- `[@pulumi/aws v0.16.1](https://github.com/pulumi/pulumi-aws/blob/master/CHANGELOG.md)`
+- `[@pulumi/aws-infra v0.16.1](https://github.com/pulumi/pulumi-aws-infra/blob/master/CHANGELOG.md)`
+- `[@pulumi/azure v0.16.4](https://github.com/pulumi/pulumi-azure/blob/master/CHANGELOG.md)`
+- `[@pulumi/cloud, @pulumi/cloud-aws, @pulumi/cloud-azure v0.16.1](https://github.com/pulumi/pulumi-cloud/blob/master/CHANGELOG.md)`
+- `[@pulumi/gcp v0.16.2](https://github.com/pulumi/pulumi-gcp/blob/master/CHANGELOG.md)`
+- `[@pulumi/openstack v0.16.2](https://github.com/pulumi/pulumi-openstack/blob/master/CHANGELOG.md)`
+- `[@pulumi/vsphere v0.16.1](https://github.com/pulumi/pulumi-vsphere/blob/master/CHANGELOG.md)`
 
 ## v0.16.3 {#v163}
 
