@@ -19,7 +19,6 @@ import * as docker from "@pulumi/docker";
 
 * <a href="#buildAndPushImage">function buildAndPushImage</a>
 * <a href="#buildAndPushImageAsync">function buildAndPushImageAsync</a>
-* <a href="#getDigest">function getDigest</a>
 * <a href="#CacheFrom">interface CacheFrom</a>
 * <a href="#DockerBuild">interface DockerBuild</a>
 * <a href="#Registry">interface Registry</a>
@@ -28,7 +27,7 @@ import * as docker from "@pulumi/docker";
 
 
 <h2 class="pdoc-module-header" id="buildAndPushImage">
-<a class="pdoc-member-name" href="/docker.ts#L118">function buildAndPushImage</a>
+<a class="pdoc-member-name" href="/docker.ts#L116">function buildAndPushImage</a>
 </h2>
 
 ```typescript
@@ -36,19 +35,11 @@ buildAndPushImage(imageName: string, pathOrBuild: string | DockerBuild, reposito
 ```
 
 <h2 class="pdoc-module-header" id="buildAndPushImageAsync">
-<a class="pdoc-member-name" href="/docker.ts#L131">function buildAndPushImageAsync</a>
+<a class="pdoc-member-name" href="/docker.ts#L136">function buildAndPushImageAsync</a>
 </h2>
 
 ```typescript
-buildAndPushImageAsync(imageName: string, pathOrBuild: string | DockerBuild, repositoryUrl: string, logResource: pulumi.Resource, connectToRegistry?: undefined | { ... }): Promise<string>
-```
-
-<h2 class="pdoc-module-header" id="getDigest">
-<a class="pdoc-member-name" href="/docker.ts#L368">function getDigest</a>
-</h2>
-
-```typescript
-getDigest(targetImage: string, logResource: pulumi.Resource): Promise<string | undefined>
+buildAndPushImageAsync(baseImageName: string, pathOrBuild: string | DockerBuild, repositoryUrl: string, logResource: pulumi.Resource, connectToRegistry?: undefined | { ... }): Promise<string>
 ```
 
 <h2 class="pdoc-module-header" id="CacheFrom">

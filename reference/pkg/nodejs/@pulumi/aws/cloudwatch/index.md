@@ -177,7 +177,7 @@ deployments.
 Provides a resource to create a CloudWatch Events permission to support cross-account events in the current account default event bus.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L34">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L38">constructor</a>
 </h3>
 
 ```typescript
@@ -235,6 +235,17 @@ public action: pulumi.Output<string | undefined>;
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L30">property condition</a>
+</h3>
+
+```typescript
+public condition: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
@@ -247,7 +258,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L30">property principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L34">property principal</a>
 </h3>
 
 ```typescript
@@ -255,10 +266,10 @@ public principal: pulumi.Output<string>;
 ```
 
 
-The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus.
+The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L34">property statementId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L38">property statementId</a>
 </h3>
 
 ```typescript
@@ -2104,13 +2115,13 @@ subscriptionFilters: string[];
 ```
 
 <h2 class="pdoc-module-header" id="EventPermissionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L88">interface EventPermissionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L98">interface EventPermissionArgs</a>
 </h2>
 
 The set of arguments for constructing a EventPermission resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L92">property action</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L102">property action</a>
 </h3>
 
 ```typescript
@@ -2121,7 +2132,18 @@ action?: pulumi.Input<string>;
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L96">property principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L106">property condition</a>
+</h3>
+
+```typescript
+condition?: pulumi.Input<{ ... }>;
+```
+
+
+Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L110">property principal</a>
 </h3>
 
 ```typescript
@@ -2129,10 +2151,10 @@ principal: pulumi.Input<string>;
 ```
 
 
-The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus.
+The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L100">property statementId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L114">property statementId</a>
 </h3>
 
 ```typescript
@@ -2143,13 +2165,13 @@ statementId: pulumi.Input<string>;
 An identifier string for the external account that you are granting permissions to.
 
 <h2 class="pdoc-module-header" id="EventPermissionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L70">interface EventPermissionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L76">interface EventPermissionState</a>
 </h2>
 
 Input properties used for looking up and filtering EventPermission resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L74">property action</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L80">property action</a>
 </h3>
 
 ```typescript
@@ -2160,7 +2182,18 @@ action?: pulumi.Input<string>;
 The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L78">property principal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L84">property condition</a>
+</h3>
+
+```typescript
+condition?: pulumi.Input<{ ... }>;
+```
+
+
+Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L88">property principal</a>
 </h3>
 
 ```typescript
@@ -2168,10 +2201,10 @@ principal?: pulumi.Input<string>;
 ```
 
 
-The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus.
+The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L82">property statementId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cloudwatch/eventPermission.ts#L92">property statementId</a>
 </h3>
 
 ```typescript

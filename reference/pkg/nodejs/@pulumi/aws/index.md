@@ -454,7 +454,7 @@ requireWithDefault<T>(req: { ... }, def: T | undefined): T
 ```
 
 <h2 class="pdoc-module-header" id="sha1hash">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L25">function sha1hash</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L33">function sha1hash</a>
 </h2>
 
 ```typescript
@@ -2004,7 +2004,7 @@ type ARN = string;
 An ARN is an Amazon Resource Name, and uniquely identifies a region globally across all accounts and regions.
 
 <h2 class="pdoc-module-header" id="Overwrite">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L22">type Overwrite</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utils.ts#L29">type Overwrite</a>
 </h2>
 
 ```typescript

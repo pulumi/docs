@@ -16,7 +16,7 @@ title: Module apiextensions
 * <a href="v1beta1">apiextensions/v1beta1</a>
 
 <h2 class="pdoc-module-header" id="CustomResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1364">class CustomResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1384">class CustomResource</a>
 </h2>
 
 CustomResource represents an instance of a CustomResourceDefinition (CRD). For example, the
@@ -25,7 +25,7 @@ instantiate this as a Pulumi resource, one could call `new CustomResource`, pass
 `ServiceMonitor` resource definition as an argument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1389">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1408">constructor</a>
 </h3>
 
 ```typescript
@@ -40,11 +40,11 @@ Create a CustomResource resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1388">method getInputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1407">method getInputs</a>
 </h3>
 
 ```typescript
-public getInputs(): inputApi.apps.v1.DaemonSetList
+public getInputs(): CustomResourceArgs
 ```
 
 <h3 class="pdoc-member-header">
@@ -68,7 +68,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1371">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1391">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -94,7 +94,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1379">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1399">property kind</a>
 </h3>
 
 ```typescript
@@ -108,16 +108,16 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1385">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1405">property metadata</a>
 </h3>
 
 ```typescript
-public metadata: pulumi.Output<outputApi.meta.v1.ListMeta>;
+public metadata: pulumi.Output<outputApi.meta.v1.ObjectMeta>;
 ```
 
 
-Standard list metadata. More info:
-https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
+Standard object metadata; More info:
+https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -132,7 +132,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="CustomResourceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1351">interface CustomResourceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1371">interface CustomResourceArgs</a>
 </h2>
 
 CustomResourceArgs represents a resource definiton we'd use to create an instance of a
@@ -145,7 +145,7 @@ NOTE: This type is fairly loose, since other than `apiVersion` and `kind`, there
 fields required across all CRDs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1352">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1372">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -153,7 +153,7 @@ apiVersion: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1353">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1373">property kind</a>
 </h3>
 
 ```typescript
@@ -161,10 +161,10 @@ kind: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1354">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1374">property metadata</a>
 </h3>
 
 ```typescript
-metadata?: pulumi.Input<outputApi.meta.v1.ListMeta>;
+metadata?: pulumi.Input<inputApi.meta.v1.ObjectMeta>;
 ```
 

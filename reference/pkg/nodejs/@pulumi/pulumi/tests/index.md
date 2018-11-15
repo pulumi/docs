@@ -11,11 +11,11 @@ title: Module tests
 * <a href="#asyncTest">function asyncTest</a>
 * <a href="#MochaFunc">type MochaFunc</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts">tests/runtime/closure.spec.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/tsClosureCases.ts">tests/runtime/tsClosureCases.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="exportedValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/closure.spec.ts#L35">const exportedValue</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/tsClosureCases.ts#L35">const exportedValue</a>
 </h2>
 
 ```typescript

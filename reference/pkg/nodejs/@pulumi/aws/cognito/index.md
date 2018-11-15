@@ -1285,7 +1285,7 @@ List of user pool attributes the application client can write to.
 Provides a Cognito User Pool Domain resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -1343,7 +1343,18 @@ public awsAccountId: pulumi.Output<string>;
 The AWS account ID for the user pool owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L30">property cloudfrontDistributionArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L30">property certificateArn</a>
+</h3>
+
+```typescript
+public certificateArn: pulumi.Output<string | undefined>;
+```
+
+
+The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L34">property cloudfrontDistributionArn</a>
 </h3>
 
 ```typescript
@@ -1354,7 +1365,7 @@ public cloudfrontDistributionArn: pulumi.Output<string>;
 The ARN of the CloudFront distribution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L34">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L38">property domain</a>
 </h3>
 
 ```typescript
@@ -1377,7 +1388,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L38">property s3Bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L42">property s3Bucket</a>
 </h3>
 
 ```typescript
@@ -1400,7 +1411,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L42">property userPoolId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L46">property userPoolId</a>
 </h3>
 
 ```typescript
@@ -1411,7 +1422,7 @@ public userPoolId: pulumi.Output<string>;
 The user pool ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L46">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L50">property version</a>
 </h3>
 
 ```typescript
@@ -2649,13 +2660,24 @@ writeAttributes?: pulumi.Input<pulumi.Input<string>[]>;
 List of user pool attributes the application client can write to.
 
 <h2 class="pdoc-module-header" id="UserPoolDomainArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L118">interface UserPoolDomainArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L128">interface UserPoolDomainArgs</a>
 </h2>
 
 The set of arguments for constructing a UserPoolDomain resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L122">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L132">property certificateArn</a>
+</h3>
+
+```typescript
+certificateArn?: pulumi.Input<string>;
+```
+
+
+The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L136">property domain</a>
 </h3>
 
 ```typescript
@@ -2666,7 +2688,7 @@ domain: pulumi.Input<string>;
 The domain string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L126">property userPoolId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L140">property userPoolId</a>
 </h3>
 
 ```typescript
@@ -2677,13 +2699,13 @@ userPoolId: pulumi.Input<string>;
 The user pool ID.
 
 <h2 class="pdoc-module-header" id="UserPoolDomainState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L88">interface UserPoolDomainState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L94">interface UserPoolDomainState</a>
 </h2>
 
 Input properties used for looking up and filtering UserPoolDomain resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L92">property awsAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L98">property awsAccountId</a>
 </h3>
 
 ```typescript
@@ -2694,7 +2716,18 @@ awsAccountId?: pulumi.Input<string>;
 The AWS account ID for the user pool owner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L96">property cloudfrontDistributionArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L102">property certificateArn</a>
+</h3>
+
+```typescript
+certificateArn?: pulumi.Input<string>;
+```
+
+
+The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L106">property cloudfrontDistributionArn</a>
 </h3>
 
 ```typescript
@@ -2705,7 +2738,7 @@ cloudfrontDistributionArn?: pulumi.Input<string>;
 The ARN of the CloudFront distribution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L100">property domain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L110">property domain</a>
 </h3>
 
 ```typescript
@@ -2716,7 +2749,7 @@ domain?: pulumi.Input<string>;
 The domain string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L104">property s3Bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L114">property s3Bucket</a>
 </h3>
 
 ```typescript
@@ -2727,7 +2760,7 @@ s3Bucket?: pulumi.Input<string>;
 The S3 bucket where the static files for this domain are stored.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L108">property userPoolId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L118">property userPoolId</a>
 </h3>
 
 ```typescript
@@ -2738,7 +2771,7 @@ userPoolId?: pulumi.Input<string>;
 The user pool ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L112">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/cognito/userPoolDomain.ts#L122">property version</a>
 </h3>
 
 ```typescript

@@ -18,44 +18,36 @@ import * as cloudAws from "@pulumi/cloud-aws";
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#API">class API</a>
-* <a href="#Bucket">class Bucket</a>
 * <a href="#Function">class Function</a>
 * <a href="#HostPathVolume">class HostPathVolume</a>
 * <a href="#HttpDeployment">class HttpDeployment</a>
-* <a href="#HttpServer">class HttpServer</a>
 * <a href="#Service">class Service</a>
 * <a href="#SharedVolume">class SharedVolume</a>
 * <a href="#Table">class Table</a>
 * <a href="#Task">class Task</a>
 * <a href="#Topic">class Topic</a>
+* <a href="#apply">function apply</a>
 * <a href="#createCallbackFunction">function createCallbackFunction</a>
 * <a href="#createFactoryFunction">function createFactoryFunction</a>
 * <a href="#createFunction">function createFunction</a>
-* <a href="#createNameWithStackInfo">function createNameWithStackInfo</a>
 * <a href="#cron">function cron</a>
 * <a href="#daily">function daily</a>
-* <a href="#getCluster">function getCluster</a>
-* <a href="#getComputeIAMRolePolicies">function getComputeIAMRolePolicies</a>
-* <a href="#getGlobalInfrastructureResource">function getGlobalInfrastructureResource</a>
-* <a href="#getNetwork">function getNetwork</a>
-* <a href="#getOrCreateNetwork">function getOrCreateNetwork</a>
 * <a href="#hourly">function hourly</a>
 * <a href="#interval">function interval</a>
-* <a href="#setComputeIAMRolePolicies">function setComputeIAMRolePolicies</a>
+* <a href="#liftResource">function liftResource</a>
+* <a href="#sha1hash">function sha1hash</a>
 * <a href="#AWSDomain">interface AWSDomain</a>
-* <a href="#CloudCluster">interface CloudCluster</a>
-* <a href="#CloudNetwork">interface CloudNetwork</a>
 * <a href="#Endpoint">interface Endpoint</a>
 * <a href="#ProxyRoute">interface ProxyRoute</a>
 * <a href="#Route">interface Route</a>
+* <a href="#ServiceArguments">interface ServiceArguments</a>
 * <a href="#StaticRoute">interface StaticRoute</a>
 * <a href="#Volume">interface Volume</a>
-* <a href="#runLambdaInVPC">let runLambdaInVPC</a>
 * <a href="#Domain">type Domain</a>
 * <a href="#Endpoints">type Endpoints</a>
 * <a href="#HttpEndpoint">type HttpEndpoint</a>
 
-<a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts">api.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts">bucket.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/function.ts">function.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/httpServer.ts">httpServer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts">service.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts">shared.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/table.ts">table.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/timer.ts">timer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/topic.ts">topic.ts</a> 
+<a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts">api.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/function.ts">function.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts">service.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/table.ts">table.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/timer.ts">timer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/topic.ts">topic.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/utils.ts">utils.ts</a> 
 
 <h2 class="pdoc-module-header">Modules</h2>
 
@@ -168,109 +160,6 @@ public static(path: string, localPath: string, options?: cloud.ServeStaticOption
 public deployment?: HttpDeployment;
 ```
 
-<h2 class="pdoc-module-header" id="Bucket">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L21">class Bucket</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L26">constructor</a>
-</h3>
-
-```typescript
-new Bucket(name: string, opts?: pulumi.ResourceOptions)
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L93">method addHandler</a>
-</h3>
-
-```typescript
-public addHandler(name: string, handler: cloud.BucketHandler, events: string[], filter?: cloud.BucketFilter): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
-</h3>
-
-```typescript
-getProvider(moduleMember: string): ProviderResource | undefined
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
-</h3>
-
-```typescript
-static isInstance(obj: any): boolean
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L89">method onDelete</a>
-</h3>
-
-```typescript
-public onDelete(name: string, handler: cloud.BucketHandler, filter?: cloud.BucketFilter): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L85">method onPut</a>
-</h3>
-
-```typescript
-public onPut(name: string, handler: cloud.BucketHandler, filter?: cloud.BucketFilter): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
-</h3>
-
-```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L22">property bucket</a>
-</h3>
-
-```typescript
-public bucket: aws.s3.Bucket;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L26">property delete</a>
-</h3>
-
-```typescript
-public delete: { ... };
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L24">property get</a>
-</h3>
-
-```typescript
-public get: { ... };
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/bucket.ts#L25">property put</a>
-</h3>
-
-```typescript
-public put: { ... };
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
-</h3>
-
-```typescript
-urn: Output<URN>;
-```
-
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
-
 <h2 class="pdoc-module-header" id="Function">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/function.ts#L68">class Function</a>
 </h2>
@@ -335,10 +224,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="HostPathVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L854">class HostPathVolume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L862">class HostPathVolume</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L856">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L864">constructor</a>
 </h3>
 
 ```typescript
@@ -346,7 +235,7 @@ new HostPathVolume(path: string)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L867">method getHostPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L875">method getHostPath</a>
 </h3>
 
 ```typescript
@@ -354,7 +243,7 @@ getHostPath(): string
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L863">method getVolumeName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L871">method getVolumeName</a>
 </h3>
 
 ```typescript
@@ -362,7 +251,7 @@ getVolumeName(): string
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L855">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L863">property kind</a>
 </h3>
 
 ```typescript
@@ -370,7 +259,7 @@ public kind: cloud.VolumeKind;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L856">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L864">property path</a>
 </h3>
 
 ```typescript
@@ -472,70 +361,15 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-<h2 class="pdoc-module-header" id="HttpServer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/httpServer.ts#L27">class HttpServer</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/httpServer.ts#L28">constructor</a>
-</h3>
-
-```typescript
-public new HttpServer(name: string, createRequestListener: cloud.RequestListenerFactory, opts: pulumi.ComponentResourceOptions)
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
-</h3>
-
-```typescript
-getProvider(moduleMember: string): ProviderResource | undefined
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
-</h3>
-
-```typescript
-static isInstance(obj: any): boolean
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
-</h3>
-
-```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/httpServer.ts#L28">property url</a>
-</h3>
-
-```typescript
-public url: pulumi.Output<string>;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
-</h3>
-
-```typescript
-urn: Output<URN>;
-```
-
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
-
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L641">class Service</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L648">class Service</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L658">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L665">constructor</a>
 </h3>
 
 ```typescript
-new Service(name: string, args: cloud.ServiceArguments, opts?: pulumi.ResourceOptions)
+new Service(name: string, args: ServiceArguments, opts?: pulumi.ResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -547,7 +381,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L656">method getTaskRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L663">method getTaskRole</a>
 </h3>
 
 ```typescript
@@ -571,7 +405,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L645">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L652">property cluster</a>
 </h3>
 
 ```typescript
@@ -579,7 +413,7 @@ public cluster: CloudCluster;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L643">property containers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L650">property containers</a>
 </h3>
 
 ```typescript
@@ -587,7 +421,7 @@ public containers: cloud.Containers;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L649">property defaultEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L656">property defaultEndpoint</a>
 </h3>
 
 ```typescript
@@ -595,7 +429,7 @@ public defaultEndpoint: pulumi.Output<Endpoint>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L646">property ecsService</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L653">property ecsService</a>
 </h3>
 
 ```typescript
@@ -603,7 +437,7 @@ public ecsService: aws.ecs.Service;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L648">property endpoints</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L655">property endpoints</a>
 </h3>
 
 ```typescript
@@ -611,7 +445,7 @@ public endpoints: pulumi.Output<Endpoints>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L651">property getEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L658">property getEndpoint</a>
 </h3>
 
 ```typescript
@@ -619,7 +453,7 @@ public getEndpoint: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L642">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L649">property name</a>
 </h3>
 
 ```typescript
@@ -627,7 +461,7 @@ public name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L644">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L651">property replicas</a>
 </h3>
 
 ```typescript
@@ -647,10 +481,10 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="SharedVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L821">class SharedVolume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L829">class SharedVolume</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L823">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L831">constructor</a>
 </h3>
 
 ```typescript
@@ -658,7 +492,7 @@ new SharedVolume(name: string, opts?: pulumi.ResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L841">method getHostPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L849">method getHostPath</a>
 </h3>
 
 ```typescript
@@ -674,7 +508,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L835">method getVolumeName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L843">method getVolumeName</a>
 </h3>
 
 ```typescript
@@ -698,7 +532,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L822">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L830">property kind</a>
 </h3>
 
 ```typescript
@@ -706,7 +540,7 @@ public kind: cloud.VolumeKind;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L823">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L831">property name</a>
 </h3>
 
 ```typescript
@@ -837,13 +671,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Task">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L875">class Task</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L883">class Task</a>
 </h2>
 
 A Task represents a container which can be [run] dynamically whenever (and as many times as) needed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L884">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L892">constructor</a>
 </h3>
 
 ```typescript
@@ -859,7 +693,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L882">method getTaskRole</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L890">method getTaskRole</a>
 </h3>
 
 ```typescript
@@ -883,7 +717,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L876">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L884">property cluster</a>
 </h3>
 
 ```typescript
@@ -891,7 +725,7 @@ public cluster: CloudCluster;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L879">property run</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L887">property run</a>
 </h3>
 
 ```typescript
@@ -899,7 +733,7 @@ public run: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L877">property taskDefinition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L885">property taskDefinition</a>
 </h3>
 
 ```typescript
@@ -954,7 +788,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/topic.ts#L52">method subscribe</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/topic.ts#L51">method subscribe</a>
 </h3>
 
 ```typescript
@@ -997,6 +831,14 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="apply">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/utils.ts#L27">function apply</a>
+</h2>
+
+```typescript
+apply<T,U>(val: Record<string, T>, func: { ... }): Record<string, U>
+```
+
 <h2 class="pdoc-module-header" id="createCallbackFunction">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/function.ts#L30">function createCallbackFunction</a>
 </h2>
@@ -1021,14 +863,6 @@ createFactoryFunction(name: string, handler: aws.serverless.HandlerFactory, opts
 createFunction(name: string, handler: aws.serverless.Handler, opts?: pulumi.ResourceOptions): Function
 ```
 
-<h2 class="pdoc-module-header" id="createNameWithStackInfo">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L41">function createNameWithStackInfo</a>
-</h2>
-
-```typescript
-createNameWithStackInfo(requiredInfo: string): string
-```
-
 <h2 class="pdoc-module-header" id="cron">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/timer.ts#L45">function cron</a>
 </h2>
@@ -1044,49 +878,6 @@ cron(name: string, cronTab: string, handler: timer.Action, opts?: pulumi.Resourc
 ```typescript
 daily(name: string, scheduleOrHandler: timer.DailySchedule | timer.Action, handlerOrOptions?: timer.Action | pulumi.ResourceOptions, opts?: pulumi.ResourceOptions): void
 ```
-
-<h2 class="pdoc-module-header" id="getCluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L165">function getCluster</a>
-</h2>
-
-```typescript
-getCluster(): CloudCluster | undefined
-```
-
-<h2 class="pdoc-module-header" id="getComputeIAMRolePolicies">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L106">function getComputeIAMRolePolicies</a>
-</h2>
-
-```typescript
-getComputeIAMRolePolicies(): aws.ARN[]
-```
-
-<h2 class="pdoc-module-header" id="getGlobalInfrastructureResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L75">function getGlobalInfrastructureResource</a>
-</h2>
-
-```typescript
-getGlobalInfrastructureResource(): pulumi.Resource
-```
-
-<h2 class="pdoc-module-header" id="getNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L152">function getNetwork</a>
-</h2>
-
-```typescript
-getNetwork(): CloudNetwork
-```
-
-<h2 class="pdoc-module-header" id="getOrCreateNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L116">function getOrCreateNetwork</a>
-</h2>
-
-```typescript
-getOrCreateNetwork(): CloudNetwork
-```
-
-
-Get or create the network to use for container and lambda compute.
 
 <h2 class="pdoc-module-header" id="hourly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/timer.ts#L74">function hourly</a>
@@ -1104,12 +895,20 @@ hourly(name: string, scheduleOrHandler: timer.HourlySchedule | timer.Action, han
 interval(name: string, options: timer.IntervalRate, handler: timer.Action, opts?: pulumi.ResourceOptions): void
 ```
 
-<h2 class="pdoc-module-header" id="setComputeIAMRolePolicies">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L97">function setComputeIAMRolePolicies</a>
+<h2 class="pdoc-module-header" id="liftResource">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/utils.ts#L38">function liftResource</a>
 </h2>
 
 ```typescript
-setComputeIAMRolePolicies(policyARNs: string[]): void
+liftResource<T>(resource: T): pulumi.Output<T>
+```
+
+<h2 class="pdoc-module-header" id="sha1hash">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/utils.ts#L19">function sha1hash</a>
+</h2>
+
+```typescript
+sha1hash(s: string): string
 ```
 
 <h2 class="pdoc-module-header" id="AWSDomain">
@@ -1131,101 +930,8 @@ certificateArn: pulumi.Input<string>;
 domainName: string;
 ```
 
-<h2 class="pdoc-module-header" id="CloudCluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L156">interface CloudCluster</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L160">property autoScalingGroupStack</a>
-</h3>
-
-```typescript
-autoScalingGroupStack?: any;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L157">property ecsClusterARN</a>
-</h3>
-
-```typescript
-ecsClusterARN: pulumi.Output<string>;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L159">property efsMountPath</a>
-</h3>
-
-```typescript
-efsMountPath?: undefined | string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L158">property securityGroupId</a>
-</h3>
-
-```typescript
-securityGroupId?: pulumi.Output<string>;
-```
-
-<h2 class="pdoc-module-header" id="CloudNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L21">interface CloudNetwork</a>
-</h2>
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L33">property publicSubnetIds</a>
-</h3>
-
-```typescript
-publicSubnetIds: pulumi.Output<string>[];
-```
-
-
-The public subnets for the VPC.  In case [usePrivateSubnets] == false, these are the same as [subnets].
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L29">property securityGroupIds</a>
-</h3>
-
-```typescript
-securityGroupIds: pulumi.Output<string>[];
-```
-
-
-The security group IDs for the network.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/aws-infra/cluster.d.ts#L10">property subnetIds</a>
-</h3>
-
-```typescript
-subnetIds: pulumi.Input<string>[];
-```
-
-
-The network subnets for the clusters
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L25">property usePrivateSubnets</a>
-</h3>
-
-```typescript
-usePrivateSubnets: boolean;
-```
-
-
-Whether the network includes private subnets.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/aws-infra/cluster.d.ts#L6">property vpcId</a>
-</h3>
-
-```typescript
-vpcId: pulumi.Input<string>;
-```
-
-
-The VPC id of the network for the cluster
-
 <h2 class="pdoc-module-header" id="Endpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L635">interface Endpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L634">interface Endpoint</a>
 </h2>
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L242">property hostname</a>
@@ -1236,7 +942,7 @@ hostname: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L636">property loadBalancer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L635">property loadBalancer</a>
 </h3>
 
 ```typescript
@@ -1297,6 +1003,221 @@ method: string;
 path: string;
 ```
 
+<h2 class="pdoc-module-header" id="ServiceArguments">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L640">interface ServiceArguments</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L35">property build</a>
+</h3>
+
+```typescript
+build?: string | ContainerBuild;
+```
+
+
+Either a path to a folder in which a Docker build should be run to construct the image for this
+Container, or a ContainerBuild object with more detailed build instructions.  If `image` is also specified, the
+built container will be tagged with that name, but otherwise will get an auto-generated image name.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L95">property command</a>
+</h3>
+
+```typescript
+command?: pulumi.Input<string[]>;
+```
+
+
+The command line that is passed to the container. This parameter maps to
+`Cmd` in the [Create a
+container](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/#create-a-container)
+section of the [Docker Remote
+API](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/)
+and the `COMMAND` parameter to [docker run](https://docs.docker.com/engine/reference/commandline/run/). For more
+information about the Docker `CMD` parameter, go to
+https://docs.docker.com/engine/reference/builder/#cmd.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L224">property containers</a>
+</h3>
+
+```typescript
+containers?: Containers;
+```
+
+
+A collection of containers that will be deployed as part of this Service, if there are multiple.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L52">property cpu</a>
+</h3>
+
+```typescript
+cpu?: pulumi.Input<number>;
+```
+
+
+Number of CPUs for the container to use. Maps to the Docker `--cpus` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L102">property dockerLabels</a>
+</h3>
+
+```typescript
+dockerLabels?: pulumi.Input<{ ... }>;
+```
+
+
+A key/value map of labels to add to the container. This parameter maps to Labels in the [Create a
+container](https://docs.docker.com/engine/api/v1.27/#operation/ContainerCreate) section of the [Docker Remote
+API](https://docs.docker.com/engine/api/v1.27/) and the --label option to [docker
+run](https://docs.docker.com/engine/reference/run/).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L45">property environment</a>
+</h3>
+
+```typescript
+environment?: undefined | { ... };
+```
+
+
+Optional environment variables to set and make available to the container
+as it is running.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L40">property function</a>
+</h3>
+
+```typescript
+function?: undefined | { ... };
+```
+
+
+The function code to use as the implementation of the contaner.  If `function` is specified,
+neither `image` nor `build` are legal.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L645">property healthCheckGracePeriodSeconds</a>
+</h3>
+
+```typescript
+healthCheckGracePeriodSeconds?: pulumi.Input<number>;
+```
+
+
+Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent
+premature shutdown, up to 7200. Only valid for services configured to use load balancers.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L233">property host</a>
+</h3>
+
+```typescript
+host?: HostProperties;
+```
+
+
+The properties of the host where this service can run.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L29">property image</a>
+</h3>
+
+```typescript
+image?: undefined | string;
+```
+
+
+The image to use for the container.  If `image` is specified, but not `build`, the image will be
+pulled from the Docker Hub.  If `image` *and* `build` are specified, the `image` controls the
+resulting image tag for the build image that gets pushed.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L60">property memory</a>
+</h3>
+
+```typescript
+memory?: pulumi.Input<number>;
+```
+
+
+The maximum amount of memory the container will be allowed to use. Maps to the Docker
+`--memory` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L70">property memoryReservation</a>
+</h3>
+
+```typescript
+memoryReservation?: pulumi.Input<number>;
+```
+
+
+The amount of memory to reserve for the container, but the container will
+be allowed to use more memory if it's available.  At least one of
+`memory` and `memoryReservation` must be specified.  Maps to the Docker
+`--memory-reservation` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+This should be supplied in MB. i.e. A value of 1024 would equal one gigabyte.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L77">property ports</a>
+</h3>
+
+```typescript
+ports?: ContainerPort[];
+```
+
+
+An array of ports to publish from the container.  Ports are exposed using the TCP protocol.  If the [external]
+flag is true, the port will be exposed to the Internet even if the service is running in a private network.
+Maps to the Docker `--publish` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L229">property replicas</a>
+</h3>
+
+```typescript
+replicas?: undefined | number;
+```
+
+
+The number of copies of this Service's containers to deploy and maintain
+as part of the running service.  Defaults to `1`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L84">property volumes</a>
+</h3>
+
+```typescript
+volumes?: ContainerVolumeMount[];
+```
+
+
+An array of volume mounts, indicating a volume to mount and a path within
+the container at which to moung the volume.  Maps to the Docker
+`--volume` option - see
+https://docs.docker.com/engine/reference/commandline/run.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L239">property waitForSteadyState</a>
+</h3>
+
+```typescript
+waitForSteadyState?: undefined | false | true;
+```
+
+
+Determines whether the service should wait to fully transition to a new steady state on creation and updates. If
+set to false, the service may complete its deployment before it is fully ready to be used. Defaults to 'true'.
+
 <h2 class="pdoc-module-header" id="StaticRoute">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L27">interface StaticRoute</a>
 </h2>
@@ -1325,10 +1246,10 @@ path: string;
 ```
 
 <h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L808">interface Volume</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L816">interface Volume</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L810">method getHostPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L818">method getHostPath</a>
 </h3>
 
 ```typescript
@@ -1336,7 +1257,7 @@ getHostPath(): any
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L809">method getVolumeName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L817">method getVolumeName</a>
 </h3>
 
 ```typescript
@@ -1351,14 +1272,6 @@ getVolumeName(): any
 kind: VolumeKind;
 ```
 
-<h2 class="pdoc-module-header" id="runLambdaInVPC">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/shared.ts#L84">let runLambdaInVPC</a>
-</h2>
-
-```typescript
-let runLambdaInVPC: boolean =  config.usePrivateNetwork;
-```
-
 <h2 class="pdoc-module-header" id="Domain">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L54">type Domain</a>
 </h2>
@@ -1368,7 +1281,7 @@ type Domain = cloud.Domain | AWSDomain;
 ```
 
 <h2 class="pdoc-module-header" id="Endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L639">type Endpoints</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L638">type Endpoints</a>
 </h2>
 
 ```typescript

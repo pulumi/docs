@@ -8,6 +8,9 @@ title: Module pinpoint
 
 * <a href="#AdmChannel">class AdmChannel</a>
 * <a href="#ApnsChannel">class ApnsChannel</a>
+* <a href="#ApnsSandboxChannel">class ApnsSandboxChannel</a>
+* <a href="#ApnsVoipChannel">class ApnsVoipChannel</a>
+* <a href="#ApnsVoipSandboxChannel">class ApnsVoipSandboxChannel</a>
 * <a href="#App">class App</a>
 * <a href="#BaiduChannel">class BaiduChannel</a>
 * <a href="#EmailChannel">class EmailChannel</a>
@@ -18,6 +21,12 @@ title: Module pinpoint
 * <a href="#AdmChannelState">interface AdmChannelState</a>
 * <a href="#ApnsChannelArgs">interface ApnsChannelArgs</a>
 * <a href="#ApnsChannelState">interface ApnsChannelState</a>
+* <a href="#ApnsSandboxChannelArgs">interface ApnsSandboxChannelArgs</a>
+* <a href="#ApnsSandboxChannelState">interface ApnsSandboxChannelState</a>
+* <a href="#ApnsVoipChannelArgs">interface ApnsVoipChannelArgs</a>
+* <a href="#ApnsVoipChannelState">interface ApnsVoipChannelState</a>
+* <a href="#ApnsVoipSandboxChannelArgs">interface ApnsVoipSandboxChannelArgs</a>
+* <a href="#ApnsVoipSandboxChannelState">interface ApnsVoipSandboxChannelState</a>
 * <a href="#AppArgs">interface AppArgs</a>
 * <a href="#AppState">interface AppState</a>
 * <a href="#BaiduChannelArgs">interface BaiduChannelArgs</a>
@@ -31,7 +40,7 @@ title: Module pinpoint
 * <a href="#SmsChannelArgs">interface SmsChannelArgs</a>
 * <a href="#SmsChannelState">interface SmsChannelState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/admChannel.ts">pinpoint/admChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsChannel.ts">pinpoint/apnsChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/app.ts">pinpoint/app.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/baiduChannel.ts">pinpoint/baiduChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/emailChannel.ts">pinpoint/emailChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/eventStream.ts">pinpoint/eventStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/gcmChannel.ts">pinpoint/gcmChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/smsChannel.ts">pinpoint/smsChannel.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/admChannel.ts">pinpoint/admChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsChannel.ts">pinpoint/apnsChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts">pinpoint/apnsSandboxChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts">pinpoint/apnsVoipChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts">pinpoint/apnsVoipSandboxChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/app.ts">pinpoint/app.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/baiduChannel.ts">pinpoint/baiduChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/emailChannel.ts">pinpoint/emailChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/eventStream.ts">pinpoint/eventStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/gcmChannel.ts">pinpoint/gcmChannel.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/smsChannel.ts">pinpoint/smsChannel.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="AdmChannel">
@@ -287,6 +296,444 @@ public tokenKey: pulumi.Output<string | undefined>;
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsChannel.ts#L28">property tokenKeyId</a>
+</h3>
+
+```typescript
+public tokenKeyId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="ApnsSandboxChannel">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L7">class ApnsSandboxChannel</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L28">constructor</a>
+</h3>
+
+```typescript
+new ApnsSandboxChannel(name: string, args: ApnsSandboxChannelArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ApnsSandboxChannel resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L16">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsSandboxChannelState): ApnsSandboxChannel
+```
+
+
+Get an existing ApnsSandboxChannel resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L20">property applicationId</a>
+</h3>
+
+```typescript
+public applicationId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L21">property bundleId</a>
+</h3>
+
+```typescript
+public bundleId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L22">property certificate</a>
+</h3>
+
+```typescript
+public certificate: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L23">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+public defaultAuthenticationMethod: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L24">property enabled</a>
+</h3>
+
+```typescript
+public enabled: pulumi.Output<boolean | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L25">property privateKey</a>
+</h3>
+
+```typescript
+public privateKey: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L26">property teamId</a>
+</h3>
+
+```typescript
+public teamId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L27">property tokenKey</a>
+</h3>
+
+```typescript
+public tokenKey: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L28">property tokenKeyId</a>
+</h3>
+
+```typescript
+public tokenKeyId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="ApnsVoipChannel">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L7">class ApnsVoipChannel</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L28">constructor</a>
+</h3>
+
+```typescript
+new ApnsVoipChannel(name: string, args: ApnsVoipChannelArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ApnsVoipChannel resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L16">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsVoipChannelState): ApnsVoipChannel
+```
+
+
+Get an existing ApnsVoipChannel resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L20">property applicationId</a>
+</h3>
+
+```typescript
+public applicationId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L21">property bundleId</a>
+</h3>
+
+```typescript
+public bundleId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L22">property certificate</a>
+</h3>
+
+```typescript
+public certificate: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L23">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+public defaultAuthenticationMethod: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L24">property enabled</a>
+</h3>
+
+```typescript
+public enabled: pulumi.Output<boolean | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L25">property privateKey</a>
+</h3>
+
+```typescript
+public privateKey: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L26">property teamId</a>
+</h3>
+
+```typescript
+public teamId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L27">property tokenKey</a>
+</h3>
+
+```typescript
+public tokenKey: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L28">property tokenKeyId</a>
+</h3>
+
+```typescript
+public tokenKeyId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="ApnsVoipSandboxChannel">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L7">class ApnsVoipSandboxChannel</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L28">constructor</a>
+</h3>
+
+```typescript
+new ApnsVoipSandboxChannel(name: string, args: ApnsVoipSandboxChannelArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ApnsVoipSandboxChannel resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L16">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsVoipSandboxChannelState): ApnsVoipSandboxChannel
+```
+
+
+Get an existing ApnsVoipSandboxChannel resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L20">property applicationId</a>
+</h3>
+
+```typescript
+public applicationId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L21">property bundleId</a>
+</h3>
+
+```typescript
+public bundleId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L22">property certificate</a>
+</h3>
+
+```typescript
+public certificate: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L23">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+public defaultAuthenticationMethod: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L24">property enabled</a>
+</h3>
+
+```typescript
+public enabled: pulumi.Output<boolean | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L25">property privateKey</a>
+</h3>
+
+```typescript
+public privateKey: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L26">property teamId</a>
+</h3>
+
+```typescript
+public teamId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L27">property tokenKey</a>
+</h3>
+
+```typescript
+public tokenKey: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L28">property tokenKeyId</a>
 </h3>
 
 ```typescript
@@ -1263,6 +1710,474 @@ tokenKey?: pulumi.Input<string>;
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsChannel.ts#L82">property tokenKeyId</a>
+</h3>
+
+```typescript
+tokenKeyId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="ApnsSandboxChannelArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L88">interface ApnsSandboxChannelArgs</a>
+</h2>
+
+The set of arguments for constructing a ApnsSandboxChannel resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L89">property applicationId</a>
+</h3>
+
+```typescript
+applicationId: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L90">property bundleId</a>
+</h3>
+
+```typescript
+bundleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L91">property certificate</a>
+</h3>
+
+```typescript
+certificate?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L92">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+defaultAuthenticationMethod?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L93">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L94">property privateKey</a>
+</h3>
+
+```typescript
+privateKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L95">property teamId</a>
+</h3>
+
+```typescript
+teamId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L96">property tokenKey</a>
+</h3>
+
+```typescript
+tokenKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L97">property tokenKeyId</a>
+</h3>
+
+```typescript
+tokenKeyId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="ApnsSandboxChannelState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L73">interface ApnsSandboxChannelState</a>
+</h2>
+
+Input properties used for looking up and filtering ApnsSandboxChannel resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L74">property applicationId</a>
+</h3>
+
+```typescript
+applicationId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L75">property bundleId</a>
+</h3>
+
+```typescript
+bundleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L76">property certificate</a>
+</h3>
+
+```typescript
+certificate?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L77">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+defaultAuthenticationMethod?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L78">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L79">property privateKey</a>
+</h3>
+
+```typescript
+privateKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L80">property teamId</a>
+</h3>
+
+```typescript
+teamId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L81">property tokenKey</a>
+</h3>
+
+```typescript
+tokenKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsSandboxChannel.ts#L82">property tokenKeyId</a>
+</h3>
+
+```typescript
+tokenKeyId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="ApnsVoipChannelArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L88">interface ApnsVoipChannelArgs</a>
+</h2>
+
+The set of arguments for constructing a ApnsVoipChannel resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L89">property applicationId</a>
+</h3>
+
+```typescript
+applicationId: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L90">property bundleId</a>
+</h3>
+
+```typescript
+bundleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L91">property certificate</a>
+</h3>
+
+```typescript
+certificate?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L92">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+defaultAuthenticationMethod?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L93">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L94">property privateKey</a>
+</h3>
+
+```typescript
+privateKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L95">property teamId</a>
+</h3>
+
+```typescript
+teamId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L96">property tokenKey</a>
+</h3>
+
+```typescript
+tokenKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L97">property tokenKeyId</a>
+</h3>
+
+```typescript
+tokenKeyId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="ApnsVoipChannelState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L73">interface ApnsVoipChannelState</a>
+</h2>
+
+Input properties used for looking up and filtering ApnsVoipChannel resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L74">property applicationId</a>
+</h3>
+
+```typescript
+applicationId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L75">property bundleId</a>
+</h3>
+
+```typescript
+bundleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L76">property certificate</a>
+</h3>
+
+```typescript
+certificate?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L77">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+defaultAuthenticationMethod?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L78">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L79">property privateKey</a>
+</h3>
+
+```typescript
+privateKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L80">property teamId</a>
+</h3>
+
+```typescript
+teamId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L81">property tokenKey</a>
+</h3>
+
+```typescript
+tokenKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipChannel.ts#L82">property tokenKeyId</a>
+</h3>
+
+```typescript
+tokenKeyId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="ApnsVoipSandboxChannelArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L88">interface ApnsVoipSandboxChannelArgs</a>
+</h2>
+
+The set of arguments for constructing a ApnsVoipSandboxChannel resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L89">property applicationId</a>
+</h3>
+
+```typescript
+applicationId: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L90">property bundleId</a>
+</h3>
+
+```typescript
+bundleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L91">property certificate</a>
+</h3>
+
+```typescript
+certificate?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L92">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+defaultAuthenticationMethod?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L93">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L94">property privateKey</a>
+</h3>
+
+```typescript
+privateKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L95">property teamId</a>
+</h3>
+
+```typescript
+teamId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L96">property tokenKey</a>
+</h3>
+
+```typescript
+tokenKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L97">property tokenKeyId</a>
+</h3>
+
+```typescript
+tokenKeyId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="ApnsVoipSandboxChannelState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L73">interface ApnsVoipSandboxChannelState</a>
+</h2>
+
+Input properties used for looking up and filtering ApnsVoipSandboxChannel resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L74">property applicationId</a>
+</h3>
+
+```typescript
+applicationId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L75">property bundleId</a>
+</h3>
+
+```typescript
+bundleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L76">property certificate</a>
+</h3>
+
+```typescript
+certificate?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L77">property defaultAuthenticationMethod</a>
+</h3>
+
+```typescript
+defaultAuthenticationMethod?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L78">property enabled</a>
+</h3>
+
+```typescript
+enabled?: pulumi.Input<boolean>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L79">property privateKey</a>
+</h3>
+
+```typescript
+privateKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L80">property teamId</a>
+</h3>
+
+```typescript
+teamId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L81">property tokenKey</a>
+</h3>
+
+```typescript
+tokenKey?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pinpoint/apnsVoipSandboxChannel.ts#L82">property tokenKeyId</a>
 </h3>
 
 ```typescript

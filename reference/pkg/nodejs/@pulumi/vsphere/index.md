@@ -55,6 +55,9 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#getDatastore">function getDatastore</a>
 * <a href="#getDatastoreCluster">function getDatastoreCluster</a>
 * <a href="#getDistributedVirtualSwitch">function getDistributedVirtualSwitch</a>
+* <a href="#getEnv">function getEnv</a>
+* <a href="#getEnvBoolean">function getEnvBoolean</a>
+* <a href="#getEnvNumber">function getEnvNumber</a>
 * <a href="#getHost">function getHost</a>
 * <a href="#getNetwork">function getNetwork</a>
 * <a href="#getResourcePool">function getResourcePool</a>
@@ -62,6 +65,7 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#getTagCategory">function getTagCategory</a>
 * <a href="#getVirtualMachine">function getVirtualMachine</a>
 * <a href="#getVmfsDisks">function getVmfsDisks</a>
+* <a href="#requireWithDefault">function requireWithDefault</a>
 * <a href="#ComputeClusterArgs">interface ComputeClusterArgs</a>
 * <a href="#ComputeClusterHostGroupArgs">interface ComputeClusterHostGroupArgs</a>
 * <a href="#ComputeClusterHostGroupState">interface ComputeClusterHostGroupState</a>
@@ -152,14 +156,14 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#VmfsDatastoreArgs">interface VmfsDatastoreArgs</a>
 * <a href="#VmfsDatastoreState">interface VmfsDatastoreState</a>
 
-<a href="/computeCluster.ts">computeCluster.ts</a> <a href="/computeClusterHostGroup.ts">computeClusterHostGroup.ts</a> <a href="/computeClusterVmAffinityRule.ts">computeClusterVmAffinityRule.ts</a> <a href="/computeClusterVmAntiAffinityRule.ts">computeClusterVmAntiAffinityRule.ts</a> <a href="/computeClusterVmDependencyRule.ts">computeClusterVmDependencyRule.ts</a> <a href="/computeClusterVmGroup.ts">computeClusterVmGroup.ts</a> <a href="/computeClusterVmHostRule.ts">computeClusterVmHostRule.ts</a> <a href="/customAttribute.ts">customAttribute.ts</a> <a href="/datacenter.ts">datacenter.ts</a> <a href="/datastoreCluster.ts">datastoreCluster.ts</a> <a href="/datastoreClusterVmAntiAffinityRule.ts">datastoreClusterVmAntiAffinityRule.ts</a> <a href="/distributedPortGroup.ts">distributedPortGroup.ts</a> <a href="/distributedVirtualSwitch.ts">distributedVirtualSwitch.ts</a> <a href="/dpmHostOverride.ts">dpmHostOverride.ts</a> <a href="/drsVmOverride.ts">drsVmOverride.ts</a> <a href="/file.ts">file.ts</a> <a href="/folder.ts">folder.ts</a> <a href="/getComputeCluster.ts">getComputeCluster.ts</a> <a href="/getCustomAttribute.ts">getCustomAttribute.ts</a> <a href="/getDatacenter.ts">getDatacenter.ts</a> <a href="/getDatastore.ts">getDatastore.ts</a> <a href="/getDatastoreCluster.ts">getDatastoreCluster.ts</a> <a href="/getDistributedVirtualSwitch.ts">getDistributedVirtualSwitch.ts</a> <a href="/getHost.ts">getHost.ts</a> <a href="/getNetwork.ts">getNetwork.ts</a> <a href="/getResourcePool.ts">getResourcePool.ts</a> <a href="/getTag.ts">getTag.ts</a> <a href="/getTagCategory.ts">getTagCategory.ts</a> <a href="/getVirtualMachine.ts">getVirtualMachine.ts</a> <a href="/getVmfsDisks.ts">getVmfsDisks.ts</a> <a href="/haVmOverride.ts">haVmOverride.ts</a> <a href="/hostPortGroup.ts">hostPortGroup.ts</a> <a href="/hostVirtualSwitch.ts">hostVirtualSwitch.ts</a> <a href="/license.ts">license.ts</a> <a href="/nasDatastore.ts">nasDatastore.ts</a> <a href="/provider.ts">provider.ts</a> <a href="/resourcePool.ts">resourcePool.ts</a> <a href="/storageDrsVmOverride.ts">storageDrsVmOverride.ts</a> <a href="/tag.ts">tag.ts</a> <a href="/tagCategory.ts">tagCategory.ts</a> <a href="/vappContainer.ts">vappContainer.ts</a> <a href="/virtualDisk.ts">virtualDisk.ts</a> <a href="/virtualMachine.ts">virtualMachine.ts</a> <a href="/virtualMachineSnapshot.ts">virtualMachineSnapshot.ts</a> <a href="/vmfsDatastore.ts">vmfsDatastore.ts</a> 
+<a href="/computeCluster.ts">computeCluster.ts</a> <a href="/computeClusterHostGroup.ts">computeClusterHostGroup.ts</a> <a href="/computeClusterVmAffinityRule.ts">computeClusterVmAffinityRule.ts</a> <a href="/computeClusterVmAntiAffinityRule.ts">computeClusterVmAntiAffinityRule.ts</a> <a href="/computeClusterVmDependencyRule.ts">computeClusterVmDependencyRule.ts</a> <a href="/computeClusterVmGroup.ts">computeClusterVmGroup.ts</a> <a href="/computeClusterVmHostRule.ts">computeClusterVmHostRule.ts</a> <a href="/customAttribute.ts">customAttribute.ts</a> <a href="/datacenter.ts">datacenter.ts</a> <a href="/datastoreCluster.ts">datastoreCluster.ts</a> <a href="/datastoreClusterVmAntiAffinityRule.ts">datastoreClusterVmAntiAffinityRule.ts</a> <a href="/distributedPortGroup.ts">distributedPortGroup.ts</a> <a href="/distributedVirtualSwitch.ts">distributedVirtualSwitch.ts</a> <a href="/dpmHostOverride.ts">dpmHostOverride.ts</a> <a href="/drsVmOverride.ts">drsVmOverride.ts</a> <a href="/file.ts">file.ts</a> <a href="/folder.ts">folder.ts</a> <a href="/getComputeCluster.ts">getComputeCluster.ts</a> <a href="/getCustomAttribute.ts">getCustomAttribute.ts</a> <a href="/getDatacenter.ts">getDatacenter.ts</a> <a href="/getDatastore.ts">getDatastore.ts</a> <a href="/getDatastoreCluster.ts">getDatastoreCluster.ts</a> <a href="/getDistributedVirtualSwitch.ts">getDistributedVirtualSwitch.ts</a> <a href="/getHost.ts">getHost.ts</a> <a href="/getNetwork.ts">getNetwork.ts</a> <a href="/getResourcePool.ts">getResourcePool.ts</a> <a href="/getTag.ts">getTag.ts</a> <a href="/getTagCategory.ts">getTagCategory.ts</a> <a href="/getVirtualMachine.ts">getVirtualMachine.ts</a> <a href="/getVmfsDisks.ts">getVmfsDisks.ts</a> <a href="/haVmOverride.ts">haVmOverride.ts</a> <a href="/hostPortGroup.ts">hostPortGroup.ts</a> <a href="/hostVirtualSwitch.ts">hostVirtualSwitch.ts</a> <a href="/license.ts">license.ts</a> <a href="/nasDatastore.ts">nasDatastore.ts</a> <a href="/provider.ts">provider.ts</a> <a href="/resourcePool.ts">resourcePool.ts</a> <a href="/storageDrsVmOverride.ts">storageDrsVmOverride.ts</a> <a href="/tag.ts">tag.ts</a> <a href="/tagCategory.ts">tagCategory.ts</a> <a href="/utilities.ts">utilities.ts</a> <a href="/vappContainer.ts">vappContainer.ts</a> <a href="/virtualDisk.ts">virtualDisk.ts</a> <a href="/virtualMachine.ts">virtualMachine.ts</a> <a href="/virtualMachineSnapshot.ts">virtualMachineSnapshot.ts</a> <a href="/vmfsDatastore.ts">vmfsDatastore.ts</a> 
 
 <h2 class="pdoc-module-header">Modules</h2>
 
 * <a href="config">config</a>
 
 <h2 class="pdoc-module-header" id="ComputeCluster">
-<a class="pdoc-member-name" href="/computeCluster.ts#L35">class ComputeCluster</a>
+<a class="pdoc-member-name" href="/computeCluster.ts#L36">class ComputeCluster</a>
 </h2>
 
 -> **A note on the naming of this resource:** VMware refers to clusters of
@@ -191,7 +195,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L391">constructor</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L392">constructor</a>
 </h3>
 
 ```typescript
@@ -206,7 +210,7 @@ Create a ComputeCluster resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L44">method get</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L45">method get</a>
 </h3>
 
 ```typescript
@@ -238,7 +242,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L54">property customAttributes</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L55">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -252,7 +256,7 @@ value strings to set for the datastore cluster. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L59">property datacenterId</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L60">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -264,7 +268,7 @@ The [managed object ID][docs-about-morefs] of
 the datacenter to create the cluster in. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L65">property dpmAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L66">property dpmAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -277,7 +281,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L71">property dpmEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L72">property dpmEnabled</a>
 </h3>
 
 ```typescript
@@ -290,7 +294,7 @@ Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L78">property dpmThreshold</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L79">property dpmThreshold</a>
 </h3>
 
 ```typescript
@@ -304,7 +308,7 @@ This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L83">property drsAdvancedOptions</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L84">property drsAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -316,7 +320,7 @@ A key/value map that specifies advanced
 options for DRS and DPM.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L89">property drsAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L90">property drsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -329,7 +333,7 @@ virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L95">property drsEnablePredictiveDrs</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L96">property drsEnablePredictiveDrs</a>
 </h3>
 
 ```typescript
@@ -342,7 +346,7 @@ from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L100">property drsEnableVmOverrides</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L101">property drsEnableVmOverrides</a>
 </h3>
 
 ```typescript
@@ -354,7 +358,7 @@ Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L104">property drsEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L105">property drsEnabled</a>
 </h3>
 
 ```typescript
@@ -365,7 +369,7 @@ public drsEnabled: pulumi.Output<boolean | undefined>;
 Enable DRS for this cluster. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L111">property drsMigrationThreshold</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L112">property drsMigrationThreshold</a>
 </h3>
 
 ```typescript
@@ -379,7 +383,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L120">property folder</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L121">property folder</a>
 </h3>
 
 ```typescript
@@ -395,7 +399,7 @@ host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/terraform-datastore-cluster-test`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L128">property forceEvacuateOnDestroy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L129">property forceEvacuateOnDestroy</a>
 </h3>
 
 ```typescript
@@ -410,7 +414,7 @@ below). This is an advanced
 option and should only be used for testing. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L136">property haAdmissionControlFailoverHostSystemIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L137">property haAdmissionControlFailoverHostSystemIds</a>
 </h3>
 
 ```typescript
@@ -425,7 +429,7 @@ block access to the host, and DRS will ignore the host when making
 recommendations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L144">property haAdmissionControlHostFailureTolerance</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L145">property haAdmissionControlHostFailureTolerance</a>
 </h3>
 
 ```typescript
@@ -440,7 +444,7 @@ the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L151">property haAdmissionControlPerformanceTolerance</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L152">property haAdmissionControlPerformanceTolerance</a>
 </h3>
 
 ```typescript
@@ -454,7 +458,7 @@ a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L157">property haAdmissionControlPolicy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L158">property haAdmissionControlPolicy</a>
 </h3>
 
 ```typescript
@@ -467,7 +471,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L167">property haAdmissionControlResourcePercentageAutoCompute</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L168">property haAdmissionControlResourcePercentageAutoCompute</a>
 </h3>
 
 ```typescript
@@ -483,7 +487,7 @@ user-defined values. Default: `true`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L173">property haAdmissionControlResourcePercentageCpu</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L174">property haAdmissionControlResourcePercentageCpu</a>
 </h3>
 
 ```typescript
@@ -496,7 +500,7 @@ user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L179">property haAdmissionControlResourcePercentageMemory</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L180">property haAdmissionControlResourcePercentageMemory</a>
 </h3>
 
 ```typescript
@@ -509,7 +513,7 @@ user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L184">property haAdmissionControlSlotPolicyExplicitCpu</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L185">property haAdmissionControlSlotPolicyExplicitCpu</a>
 </h3>
 
 ```typescript
@@ -521,7 +525,7 @@ Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L189">property haAdmissionControlSlotPolicyExplicitMemory</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L190">property haAdmissionControlSlotPolicyExplicitMemory</a>
 </h3>
 
 ```typescript
@@ -533,7 +537,7 @@ Controls the
 user-defined memory slot size, in MB. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L196">property haAdmissionControlSlotPolicyUseExplicitSize</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L197">property haAdmissionControlSlotPolicyUseExplicitSize</a>
 </h3>
 
 ```typescript
@@ -547,7 +551,7 @@ sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L201">property haAdvancedOptions</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L202">property haAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -559,7 +563,7 @@ A key/value map that specifies advanced
 options for vSphere HA.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L208">property haDatastoreApdRecoveryAction</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L209">property haDatastoreApdRecoveryAction</a>
 </h3>
 
 ```typescript
@@ -573,7 +577,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L216">property haDatastoreApdResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L217">property haDatastoreApdResponse</a>
 </h3>
 
 ```typescript
@@ -588,7 +592,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L223">property haDatastoreApdResponseDelay</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L224">property haDatastoreApdResponseDelay</a>
 </h3>
 
 ```typescript
@@ -602,7 +606,7 @@ to wait after an APD timeout event to execute the response action defined in
 minutes. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L231">property haDatastorePdlResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L232">property haDatastorePdlResponse</a>
 </h3>
 
 ```typescript
@@ -617,7 +621,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L236">property haEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L237">property haEnabled</a>
 </h3>
 
 ```typescript
@@ -629,7 +633,7 @@ Enable vSphere HA for this cluster. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L243">property haHeartbeatDatastoreIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L244">property haHeartbeatDatastoreIds</a>
 </h3>
 
 ```typescript
@@ -643,7 +647,7 @@ when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L250">property haHeartbeatDatastorePolicy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L251">property haHeartbeatDatastorePolicy</a>
 </h3>
 
 ```typescript
@@ -657,7 +661,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L257">property haHostIsolationResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L258">property haHostIsolationResponse</a>
 </h3>
 
 ```typescript
@@ -671,7 +675,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L263">property haHostMonitoring</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L264">property haHostMonitoring</a>
 </h3>
 
 ```typescript
@@ -684,7 +688,7 @@ vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L270">property haVmComponentProtection</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L271">property haVmComponentProtection</a>
 </h3>
 
 ```typescript
@@ -698,7 +702,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L280">property haVmDependencyRestartCondition</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L281">property haVmDependencyRestartCondition</a>
 </h3>
 
 ```typescript
@@ -715,7 +719,7 @@ is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L286">property haVmFailureInterval</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L287">property haVmFailureInterval</a>
 </h3>
 
 ```typescript
@@ -728,7 +732,7 @@ is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L295">property haVmMaximumFailureWindow</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L296">property haVmMaximumFailureWindow</a>
 </h3>
 
 ```typescript
@@ -744,7 +748,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L300">property haVmMaximumResets</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L301">property haVmMaximumResets</a>
 </h3>
 
 ```typescript
@@ -756,7 +760,7 @@ The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L306">property haVmMinimumUptime</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L307">property haVmMinimumUptime</a>
 </h3>
 
 ```typescript
@@ -769,7 +773,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L312">property haVmMonitoring</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L313">property haVmMonitoring</a>
 </h3>
 
 ```typescript
@@ -782,7 +786,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L318">property haVmRestartAdditionalDelay</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L319">property haVmRestartAdditionalDelay</a>
 </h3>
 
 ```typescript
@@ -795,7 +799,7 @@ after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L324">property haVmRestartPriority</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L325">property haVmRestartPriority</a>
 </h3>
 
 ```typescript
@@ -808,7 +812,7 @@ for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L331">property haVmRestartTimeout</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L332">property haVmRestartTimeout</a>
 </h3>
 
 ```typescript
@@ -822,7 +826,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L337">property hostClusterExitTimeout</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L338">property hostClusterExitTimeout</a>
 </h3>
 
 ```typescript
@@ -835,7 +839,7 @@ operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L342">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L343">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -859,7 +863,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L346">property name</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L347">property name</a>
 </h3>
 
 ```typescript
@@ -870,7 +874,7 @@ public name: pulumi.Output<string>;
 The name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L353">property proactiveHaAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L354">property proactiveHaAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -884,7 +888,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L358">property proactiveHaEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L359">property proactiveHaEnabled</a>
 </h3>
 
 ```typescript
@@ -896,7 +900,7 @@ Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L367">property proactiveHaModerateRemediation</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L368">property proactiveHaModerateRemediation</a>
 </h3>
 
 ```typescript
@@ -912,7 +916,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L373">property proactiveHaProviderIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L374">property proactiveHaProviderIds</a>
 </h3>
 
 ```typescript
@@ -925,7 +929,7 @@ providers configured for this cluster.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L382">property proactiveHaSevereRemediation</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L383">property proactiveHaSevereRemediation</a>
 </h3>
 
 ```typescript
@@ -941,7 +945,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L386">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L387">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -952,7 +956,7 @@ public resourcePoolId: pulumi.Output<string>;
 The managed object ID of the cluster's root resource pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L391">property tags</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L392">property tags</a>
 </h3>
 
 ```typescript
@@ -976,7 +980,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ComputeClusterHostGroup">
-<a class="pdoc-member-name" href="/computeClusterHostGroup.ts#L27">class ComputeClusterHostGroup</a>
+<a class="pdoc-member-name" href="/computeClusterHostGroup.ts#L28">class ComputeClusterHostGroup</a>
 </h2>
 
 The `vsphere_compute_cluster_host_group` resource can be used to manage groups
@@ -1000,7 +1004,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L55">constructor</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L56">constructor</a>
 </h3>
 
 ```typescript
@@ -1015,7 +1019,7 @@ Create a ComputeClusterHostGroup resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L36">method get</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L37">method get</a>
 </h3>
 
 ```typescript
@@ -1047,7 +1051,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L45">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L46">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -1060,7 +1064,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L50">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L51">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -1084,7 +1088,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L55">property name</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L56">property name</a>
 </h3>
 
 ```typescript
@@ -1108,7 +1112,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmAffinityRule">
-<a class="pdoc-member-name" href="/computeClusterVmAffinityRule.ts#L34">class ComputeClusterVmAffinityRule</a>
+<a class="pdoc-member-name" href="/computeClusterVmAffinityRule.ts#L35">class ComputeClusterVmAffinityRule</a>
 </h2>
 
 The `vsphere_compute_cluster_vm_affinity_rule` resource can be used to manage
@@ -1139,7 +1143,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L70">constructor</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L71">constructor</a>
 </h3>
 
 ```typescript
@@ -1154,7 +1158,7 @@ Create a ComputeClusterVmAffinityRule resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L43">method get</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L44">method get</a>
 </h3>
 
 ```typescript
@@ -1186,7 +1190,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L52">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L53">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -1199,7 +1203,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L56">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L57">property enabled</a>
 </h3>
 
 ```typescript
@@ -1222,7 +1226,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L61">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L62">property mandatory</a>
 </h3>
 
 ```typescript
@@ -1234,7 +1238,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L65">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L66">property name</a>
 </h3>
 
 ```typescript
@@ -1257,7 +1261,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L70">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L71">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -1269,7 +1273,7 @@ The UUIDs of the virtual machines to run
 on the same host together.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmAntiAffinityRule">
-<a class="pdoc-member-name" href="/computeClusterVmAntiAffinityRule.ts#L35">class ComputeClusterVmAntiAffinityRule</a>
+<a class="pdoc-member-name" href="/computeClusterVmAntiAffinityRule.ts#L36">class ComputeClusterVmAntiAffinityRule</a>
 </h2>
 
 The `vsphere_compute_cluster_vm_anti_affinity_rule` resource can be used to
@@ -1301,7 +1305,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L71">constructor</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L72">constructor</a>
 </h3>
 
 ```typescript
@@ -1316,7 +1320,7 @@ Create a ComputeClusterVmAntiAffinityRule resource with the given unique name, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L44">method get</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L45">method get</a>
 </h3>
 
 ```typescript
@@ -1348,7 +1352,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L53">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L54">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -1361,7 +1365,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L57">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L58">property enabled</a>
 </h3>
 
 ```typescript
@@ -1384,7 +1388,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L62">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L63">property mandatory</a>
 </h3>
 
 ```typescript
@@ -1396,7 +1400,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L66">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L67">property name</a>
 </h3>
 
 ```typescript
@@ -1419,7 +1423,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L71">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L72">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -1431,7 +1435,7 @@ The UUIDs of the virtual machines to run
 on hosts different from each other.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmDependencyRule">
-<a class="pdoc-member-name" href="/computeClusterVmDependencyRule.ts#L26">class ComputeClusterVmDependencyRule</a>
+<a class="pdoc-member-name" href="/computeClusterVmDependencyRule.ts#L27">class ComputeClusterVmDependencyRule</a>
 </h2>
 
 The `vsphere_compute_cluster_vm_dependency_rule` resource can be used to manage
@@ -1454,7 +1458,7 @@ resource.
 connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L72">constructor</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L73">constructor</a>
 </h3>
 
 ```typescript
@@ -1469,7 +1473,7 @@ Create a ComputeClusterVmDependencyRule resource with the given unique name, arg
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L35">method get</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L36">method get</a>
 </h3>
 
 ```typescript
@@ -1501,7 +1505,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L44">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L45">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -1514,7 +1518,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L51">property dependencyVmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L52">property dependencyVmGroupName</a>
 </h3>
 
 ```typescript
@@ -1528,7 +1532,7 @@ rule depends on. The VMs defined in the group specified by
 group are started.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L55">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L56">property enabled</a>
 </h3>
 
 ```typescript
@@ -1551,7 +1555,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L60">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L61">property mandatory</a>
 </h3>
 
 ```typescript
@@ -1563,7 +1567,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L65">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L66">property name</a>
 </h3>
 
 ```typescript
@@ -1587,7 +1591,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L72">property vmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L73">property vmGroupName</a>
 </h3>
 
 ```typescript
@@ -1601,7 +1605,7 @@ the group specified by
 `dependency_vm_group_name` are started.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmGroup">
-<a class="pdoc-member-name" href="/computeClusterVmGroup.ts#L29">class ComputeClusterVmGroup</a>
+<a class="pdoc-member-name" href="/computeClusterVmGroup.ts#L30">class ComputeClusterVmGroup</a>
 </h2>
 
 The `vsphere_compute_cluster_vm_group` resource can be used to manage groups of
@@ -1627,7 +1631,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L57">constructor</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L58">constructor</a>
 </h3>
 
 ```typescript
@@ -1642,7 +1646,7 @@ Create a ComputeClusterVmGroup resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L38">method get</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L39">method get</a>
 </h3>
 
 ```typescript
@@ -1674,7 +1678,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L47">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L48">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -1699,7 +1703,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L52">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L53">property name</a>
 </h3>
 
 ```typescript
@@ -1723,7 +1727,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L57">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L58">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -1735,7 +1739,7 @@ The UUIDs of the virtual machines in this
 group.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmHostRule">
-<a class="pdoc-member-name" href="/computeClusterVmHostRule.ts#L31">class ComputeClusterVmHostRule</a>
+<a class="pdoc-member-name" href="/computeClusterVmHostRule.ts#L32">class ComputeClusterVmHostRule</a>
 </h2>
 
 The `vsphere_compute_cluster_vm_host_rule` resource can be used to manage
@@ -1763,7 +1767,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L80">constructor</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L81">constructor</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1782,7 @@ Create a ComputeClusterVmHostRule resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L40">method get</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L41">method get</a>
 </h3>
 
 ```typescript
@@ -1810,7 +1814,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L49">property affinityHostGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L50">property affinityHostGroupName</a>
 </h3>
 
 ```typescript
@@ -1823,7 +1827,7 @@ machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L55">property antiAffinityHostGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L56">property antiAffinityHostGroupName</a>
 </h3>
 
 ```typescript
@@ -1836,7 +1840,7 @@ virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L61">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L62">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -1849,7 +1853,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L65">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L66">property enabled</a>
 </h3>
 
 ```typescript
@@ -1872,7 +1876,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L70">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L71">property mandatory</a>
 </h3>
 
 ```typescript
@@ -1884,7 +1888,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L75">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -1908,7 +1912,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L80">property vmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L81">property vmGroupName</a>
 </h3>
 
 ```typescript
@@ -1920,7 +1924,7 @@ The name of the virtual machine group to use
 with this rule.
 
 <h2 class="pdoc-module-header" id="CustomAttribute">
-<a class="pdoc-member-name" href="/customAttribute.ts#L19">class CustomAttribute</a>
+<a class="pdoc-member-name" href="/customAttribute.ts#L20">class CustomAttribute</a>
 </h2>
 
 The `vsphere_custom_attribute` resource can be used to create and manage custom
@@ -1936,7 +1940,7 @@ For more information about custom attributes, click [here][ext-custom-attributes
 and require vCenter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L43">constructor</a>
 </h3>
 
 ```typescript
@@ -1951,7 +1955,7 @@ Create a CustomAttribute resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L28">method get</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L29">method get</a>
 </h3>
 
 ```typescript
@@ -1995,7 +1999,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L38">property managedObjectType</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L39">property managedObjectType</a>
 </h3>
 
 ```typescript
@@ -2009,7 +2013,7 @@ type. For a full list, click here. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L42">property name</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L43">property name</a>
 </h3>
 
 ```typescript
@@ -2032,14 +2036,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Datacenter">
-<a class="pdoc-member-name" href="/datacenter.ts#L10">class Datacenter</a>
+<a class="pdoc-member-name" href="/datacenter.ts#L11">class Datacenter</a>
 </h2>
 
 Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L48">constructor</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L49">constructor</a>
 </h3>
 
 ```typescript
@@ -2054,7 +2058,7 @@ Create a Datacenter resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L19">method get</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L20">method get</a>
 </h3>
 
 ```typescript
@@ -2086,7 +2090,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L29">property customAttributes</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L30">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -2100,7 +2104,7 @@ strings to set for datacenter resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L34">property folder</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L35">property folder</a>
 </h3>
 
 ```typescript
@@ -2124,7 +2128,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L38">property moid</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L39">property moid</a>
 </h3>
 
 ```typescript
@@ -2135,7 +2139,7 @@ public moid: pulumi.Output<string>;
 [Managed object ID][docs-about-morefs] of this datacenter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L43">property name</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L44">property name</a>
 </h3>
 
 ```typescript
@@ -2147,7 +2151,7 @@ The name of the datacenter. This name needs to be unique
 within the folder. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L48">property tags</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L49">property tags</a>
 </h3>
 
 ```typescript
@@ -2171,7 +2175,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatastoreCluster">
-<a class="pdoc-member-name" href="/datastoreCluster.ts#L22">class DatastoreCluster</a>
+<a class="pdoc-member-name" href="/datastoreCluster.ts#L23">class DatastoreCluster</a>
 </h2>
 
 The `vsphere_datastore_cluster` resource can be used to create and manage
@@ -2190,7 +2194,7 @@ connections.
 ~> **NOTE:** Storage DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L178">constructor</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L179">constructor</a>
 </h3>
 
 ```typescript
@@ -2205,7 +2209,7 @@ Create a DatastoreCluster resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L31">method get</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L32">method get</a>
 </h3>
 
 ```typescript
@@ -2237,7 +2241,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L41">property customAttributes</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L42">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -2251,7 +2255,7 @@ value strings to set for the datastore cluster. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L47">property datacenterId</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L48">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -2264,7 +2268,7 @@ the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L57">property folder</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L58">property folder</a>
 </h3>
 
 ```typescript
@@ -2293,7 +2297,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L61">property name</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L62">property name</a>
 </h3>
 
 ```typescript
@@ -2304,7 +2308,7 @@ public name: pulumi.Output<string>;
 The name of the datastore cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L66">property sdrsAdvancedOptions</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L67">property sdrsAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -2316,7 +2320,7 @@ A key/value map of advanced Storage DRS
 settings that are not exposed via Terraform or the vSphere client.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L71">property sdrsAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L72">property sdrsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -2328,7 +2332,7 @@ The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L76">property sdrsDefaultIntraVmAffinity</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L77">property sdrsDefaultIntraVmAffinity</a>
 </h3>
 
 ```typescript
@@ -2340,7 +2344,7 @@ When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L81">property sdrsEnabled</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L82">property sdrsEnabled</a>
 </h3>
 
 ```typescript
@@ -2352,7 +2356,7 @@ Enable Storage DRS for this datastore cluster.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L88">property sdrsFreeSpaceThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L89">property sdrsFreeSpaceThreshold</a>
 </h3>
 
 ```typescript
@@ -2366,7 +2370,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L93">property sdrsFreeSpaceThresholdMode</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L94">property sdrsFreeSpaceThresholdMode</a>
 </h3>
 
 ```typescript
@@ -2378,7 +2382,7 @@ The free space threshold to use. When set to utilization, drs_space_utilization_
 freeSpace, drs_free_space_threshold is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L99">property sdrsFreeSpaceUtilizationDifference</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L100">property sdrsFreeSpaceUtilizationDifference</a>
 </h3>
 
 ```typescript
@@ -2391,7 +2395,7 @@ percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L104">property sdrsIoBalanceAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L105">property sdrsIoBalanceAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -2403,7 +2407,7 @@ Overrides the default
 automation settings when correcting I/O load imbalances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L110">property sdrsIoLatencyThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L111">property sdrsIoLatencyThreshold</a>
 </h3>
 
 ```typescript
@@ -2416,7 +2420,7 @@ milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L115">property sdrsIoLoadBalanceEnabled</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L116">property sdrsIoLoadBalanceEnabled</a>
 </h3>
 
 ```typescript
@@ -2428,7 +2432,7 @@ Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L121">property sdrsIoLoadImbalanceThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L122">property sdrsIoLoadImbalanceThreshold</a>
 </h3>
 
 ```typescript
@@ -2441,7 +2445,7 @@ in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L130">property sdrsIoReservableIopsThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L131">property sdrsIoReservableIopsThreshold</a>
 </h3>
 
 ```typescript
@@ -2457,7 +2461,7 @@ estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L137">property sdrsIoReservablePercentThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L138">property sdrsIoReservablePercentThreshold</a>
 </h3>
 
 ```typescript
@@ -2471,7 +2475,7 @@ storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L144">property sdrsIoReservableThresholdMode</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L145">property sdrsIoReservableThresholdMode</a>
 </h3>
 
 ```typescript
@@ -2485,7 +2489,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L149">property sdrsLoadBalanceInterval</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L150">property sdrsLoadBalanceInterval</a>
 </h3>
 
 ```typescript
@@ -2497,7 +2501,7 @@ The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L154">property sdrsPolicyEnforcementAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L155">property sdrsPolicyEnforcementAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -2509,7 +2513,7 @@ Overrides the default
 automation settings when correcting storage and VM policy violations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L159">property sdrsRuleEnforcementAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L160">property sdrsRuleEnforcementAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -2521,7 +2525,7 @@ Overrides the default
 automation settings when correcting affinity rule violations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L164">property sdrsSpaceBalanceAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L165">property sdrsSpaceBalanceAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -2533,7 +2537,7 @@ Overrides the default
 automation settings when correcting disk space imbalances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L168">property sdrsSpaceUtilizationThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L169">property sdrsSpaceUtilizationThreshold</a>
 </h3>
 
 ```typescript
@@ -2544,7 +2548,7 @@ public sdrsSpaceUtilizationThreshold: pulumi.Output<number | undefined>;
 The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L173">property sdrsVmEvacuationAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L174">property sdrsVmEvacuationAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -2556,7 +2560,7 @@ Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L178">property tags</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L179">property tags</a>
 </h3>
 
 ```typescript
@@ -2580,7 +2584,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DatastoreClusterVmAntiAffinityRule">
-<a class="pdoc-member-name" href="/datastoreClusterVmAntiAffinityRule.ts#L27">class DatastoreClusterVmAntiAffinityRule</a>
+<a class="pdoc-member-name" href="/datastoreClusterVmAntiAffinityRule.ts#L28">class DatastoreClusterVmAntiAffinityRule</a>
 </h2>
 
 The `vsphere_datastore_cluster_vm_anti_affinity_rule` resource can be used to
@@ -2604,7 +2608,7 @@ connections.
 ~> **NOTE:** Storage DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L64">constructor</a>
 </h3>
 
 ```typescript
@@ -2619,7 +2623,7 @@ Create a DatastoreClusterVmAntiAffinityRule resource with the given unique name,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L36">method get</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L37">method get</a>
 </h3>
 
 ```typescript
@@ -2651,7 +2655,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L45">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L46">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -2664,7 +2668,7 @@ ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L49">property enabled</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L50">property enabled</a>
 </h3>
 
 ```typescript
@@ -2687,7 +2691,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L54">property mandatory</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L55">property mandatory</a>
 </h3>
 
 ```typescript
@@ -2699,7 +2703,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L58">property name</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -2722,7 +2726,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L63">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L64">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -2734,7 +2738,7 @@ The UUIDs of the virtual machines to run
 on different datastores from each other.
 
 <h2 class="pdoc-module-header" id="DistributedPortGroup">
-<a class="pdoc-member-name" href="/distributedPortGroup.ts#L27">class DistributedPortGroup</a>
+<a class="pdoc-member-name" href="/distributedPortGroup.ts#L28">class DistributedPortGroup</a>
 </h2>
 
 The `vsphere_distributed_port_group` resource can be used to manage vSphere
@@ -2758,7 +2762,7 @@ portgroups, see [this page][ref-vsphere-dvportgroup].
 connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L258">constructor</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L259">constructor</a>
 </h3>
 
 ```typescript
@@ -2773,7 +2777,7 @@ Create a DistributedPortGroup resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L36">method get</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L37">method get</a>
 </h3>
 
 ```typescript
@@ -2805,7 +2809,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L43">property activeUplinks</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L44">property activeUplinks</a>
 </h3>
 
 ```typescript
@@ -2816,7 +2820,7 @@ public activeUplinks: pulumi.Output<string[]>;
 List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L48">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L49">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -2828,7 +2832,7 @@ Controls whether or not the virtual network adapter is allowed to send network t
 than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L52">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L53">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -2839,7 +2843,7 @@ public allowMacChanges: pulumi.Output<boolean>;
 Controls whether or not the Media Access Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L56">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L57">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -2850,7 +2854,7 @@ public allowPromiscuous: pulumi.Output<boolean>;
 Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L61">property autoExpand</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L62">property autoExpand</a>
 </h3>
 
 ```typescript
@@ -2862,7 +2866,7 @@ Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L65">property blockAllPorts</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L66">property blockAllPorts</a>
 </h3>
 
 ```typescript
@@ -2873,7 +2877,7 @@ public blockAllPorts: pulumi.Output<boolean>;
 Indicates whether to block all ports by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L70">property blockOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L71">property blockOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -2885,7 +2889,7 @@ Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L74">property checkBeacon</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L75">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -2896,7 +2900,7 @@ public checkBeacon: pulumi.Output<boolean>;
 Enable beacon probing on the ports this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L78">property configVersion</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L79">property configVersion</a>
 </h3>
 
 ```typescript
@@ -2907,7 +2911,7 @@ public configVersion: pulumi.Output<string>;
 Version string of the configuration that this spec is trying to change.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L84">property customAttributes</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L85">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -2920,7 +2924,7 @@ value string to set for port group. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L88">property description</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L89">property description</a>
 </h3>
 
 ```typescript
@@ -2931,7 +2935,7 @@ public description: pulumi.Output<string | undefined>;
 An optional description for the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L92">property directpathGen2Allowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L93">property directpathGen2Allowed</a>
 </h3>
 
 ```typescript
@@ -2942,7 +2946,7 @@ public directpathGen2Allowed: pulumi.Output<boolean>;
 Allow VMDirectPath Gen2 on the ports this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L97">property distributedVirtualSwitchUuid</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L98">property distributedVirtualSwitchUuid</a>
 </h3>
 
 ```typescript
@@ -2954,7 +2958,7 @@ The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L101">property egressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L102">property egressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -2965,7 +2969,7 @@ public egressShapingAverageBandwidth: pulumi.Output<number>;
 The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L105">property egressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L106">property egressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -2976,7 +2980,7 @@ public egressShapingBurstSize: pulumi.Output<number>;
 The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L109">property egressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L110">property egressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -2987,7 +2991,7 @@ public egressShapingEnabled: pulumi.Output<boolean>;
 True if the traffic shaper is enabled for egress traffic on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L113">property egressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L114">property egressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -2998,7 +3002,7 @@ public egressShapingPeakBandwidth: pulumi.Output<number>;
 The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L117">property failback</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L118">property failback</a>
 </h3>
 
 ```typescript
@@ -3021,7 +3025,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L121">property ingressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L122">property ingressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -3032,7 +3036,7 @@ public ingressShapingAverageBandwidth: pulumi.Output<number>;
 The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L125">property ingressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L126">property ingressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -3043,7 +3047,7 @@ public ingressShapingBurstSize: pulumi.Output<number>;
 The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L129">property ingressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L130">property ingressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -3054,7 +3058,7 @@ public ingressShapingEnabled: pulumi.Output<boolean>;
 True if the traffic shaper is enabled for ingress traffic on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L133">property ingressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L134">property ingressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -3065,7 +3069,7 @@ public ingressShapingPeakBandwidth: pulumi.Output<number>;
 The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L137">property key</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L138">property key</a>
 </h3>
 
 ```typescript
@@ -3076,7 +3080,7 @@ public key: pulumi.Output<string>;
 The generated UUID of the portgroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L141">property lacpEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L142">property lacpEnabled</a>
 </h3>
 
 ```typescript
@@ -3087,7 +3091,7 @@ public lacpEnabled: pulumi.Output<boolean>;
 Whether or not to enable LACP on all uplink ports.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L145">property lacpMode</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L146">property lacpMode</a>
 </h3>
 
 ```typescript
@@ -3098,7 +3102,7 @@ public lacpMode: pulumi.Output<string>;
 The uplink LACP mode to use. Can be one of active or passive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L150">property livePortMovingAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L151">property livePortMovingAllowed</a>
 </h3>
 
 ```typescript
@@ -3110,7 +3114,7 @@ Allow a port in this port group to be
 moved to another port group while it is connected.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L154">property name</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L155">property name</a>
 </h3>
 
 ```typescript
@@ -3121,7 +3125,7 @@ public name: pulumi.Output<string>;
 The name of the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L158">property netflowEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L159">property netflowEnabled</a>
 </h3>
 
 ```typescript
@@ -3132,7 +3136,7 @@ public netflowEnabled: pulumi.Output<boolean>;
 Indicates whether to enable netflow on all ports.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L164">property netflowOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L165">property netflowOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3145,7 +3149,7 @@ policy][netflow-policy] on this port group to be overridden on an individual
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L170">property networkResourcePoolKey</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L171">property networkResourcePoolKey</a>
 </h3>
 
 ```typescript
@@ -3158,7 +3162,7 @@ to associate with this port group. The default is `-1`, which implies no
 association.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L175">property networkResourcePoolOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L176">property networkResourcePoolOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3170,7 +3174,7 @@ Allow the network
 resource pool set on this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L179">property notifySwitches</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L180">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -3181,7 +3185,7 @@ public notifySwitches: pulumi.Output<boolean>;
 If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L184">property numberOfPorts</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L185">property numberOfPorts</a>
 </h3>
 
 ```typescript
@@ -3193,7 +3197,7 @@ The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L189">property portConfigResetAtDisconnect</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L190">property portConfigResetAtDisconnect</a>
 </h3>
 
 ```typescript
@@ -3205,7 +3209,7 @@ Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L195">property portNameFormat</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L196">property portNameFormat</a>
 </h3>
 
 ```typescript
@@ -3218,7 +3222,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L199">property portPrivateSecondaryVlanId</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L200">property portPrivateSecondaryVlanId</a>
 </h3>
 
 ```typescript
@@ -3229,7 +3233,7 @@ public portPrivateSecondaryVlanId: pulumi.Output<number>;
 The secondary VLAN ID for this port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L205">property securityPolicyOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L206">property securityPolicyOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3242,7 +3246,7 @@ settings][sec-policy-settings] defined in this port group policy to be
 overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L211">property shapingOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L212">property shapingOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3255,7 +3259,7 @@ options][traffic-shaping-settings] on this port group policy to be overridden
 on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L215">property standbyUplinks</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L216">property standbyUplinks</a>
 </h3>
 
 ```typescript
@@ -3266,7 +3270,7 @@ public standbyUplinks: pulumi.Output<string[]>;
 List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L219">property tags</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L220">property tags</a>
 </h3>
 
 ```typescript
@@ -3277,7 +3281,7 @@ public tags: pulumi.Output<string[] | undefined>;
 A list of tag IDs to apply to this object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L224">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L225">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -3289,7 +3293,7 @@ The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_sr
 failover_explicit, or loadbalance_loadbased.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L229">property trafficFilterOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L230">property trafficFilterOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3301,7 +3305,7 @@ Allow any traffic filters on
 this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L234">property txUplink</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L235">property txUplink</a>
 </h3>
 
 ```typescript
@@ -3313,7 +3317,7 @@ If true, a copy of packets sent to the switch will always be forwarded to an upl
 packet forwarded done by the switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L239">property type</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L240">property type</a>
 </h3>
 
 ```typescript
@@ -3325,7 +3329,7 @@ The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L245">property uplinkTeamingOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L246">property uplinkTeamingOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3350,7 +3354,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L249">property vlanId</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L250">property vlanId</a>
 </h3>
 
 ```typescript
@@ -3361,7 +3365,7 @@ public vlanId: pulumi.Output<number>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L254">property vlanOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L255">property vlanOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -3373,7 +3377,7 @@ Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L258">property vlanRanges</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L259">property vlanRanges</a>
 </h3>
 
 ```typescript
@@ -3384,7 +3388,7 @@ public vlanRanges: pulumi.Output<{ ... }[]>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h2 class="pdoc-module-header" id="DistributedVirtualSwitch">
-<a class="pdoc-member-name" href="/distributedVirtualSwitch.ts#L29">class DistributedVirtualSwitch</a>
+<a class="pdoc-member-name" href="/distributedVirtualSwitch.ts#L30">class DistributedVirtualSwitch</a>
 </h2>
 
 The `vsphere_distributed_virtual_switch` resource can be used to manage VMware
@@ -3410,7 +3414,7 @@ page][ref-vsphere-dvs].
 connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L469">constructor</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L470">constructor</a>
 </h3>
 
 ```typescript
@@ -3425,7 +3429,7 @@ Create a DistributedVirtualSwitch resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L38">method get</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L39">method get</a>
 </h3>
 
 ```typescript
@@ -3457,7 +3461,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L48">property activeUplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L49">property activeUplinks</a>
 </h3>
 
 ```typescript
@@ -3471,7 +3475,7 @@ balancing. These uplinks need to match the definitions in the
 here for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L54">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L55">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -3484,7 +3488,7 @@ network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L59">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L60">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -3496,7 +3500,7 @@ Controls whether or not the Media Access
 Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L64">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L65">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -3508,7 +3512,7 @@ Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L70">property blockAllPorts</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L71">property blockAllPorts</a>
 </h3>
 
 ```typescript
@@ -3521,7 +3525,7 @@ this policy applies to, effectively blocking all network access to connected
 virtual devices.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L75">property checkBeacon</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L76">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -3533,7 +3537,7 @@ Enables beacon probing as an additional measure
 to detect NIC failure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L79">property configVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L80">property configVersion</a>
 </h3>
 
 ```typescript
@@ -3544,7 +3548,7 @@ public configVersion: pulumi.Output<string>;
 The version string of the configuration that this spec is trying to change.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L84">property contactDetail</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L85">property contactDetail</a>
 </h3>
 
 ```typescript
@@ -3556,7 +3560,7 @@ The detailed contact information for the person
 who is responsible for the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L89">property contactName</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L90">property contactName</a>
 </h3>
 
 ```typescript
@@ -3568,7 +3572,7 @@ The name of the person who is responsible for the
 DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L96">property customAttributes</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L97">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -3582,7 +3586,7 @@ value strings to set for virtual switch. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L101">property datacenterId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L102">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -3594,7 +3598,7 @@ The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L105">property description</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L106">property description</a>
 </h3>
 
 ```typescript
@@ -3605,7 +3609,7 @@ public description: pulumi.Output<string | undefined>;
 A detailed description for the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L110">property directpathGen2Allowed</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L111">property directpathGen2Allowed</a>
 </h3>
 
 ```typescript
@@ -3617,7 +3621,7 @@ Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L115">property egressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L116">property egressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -3629,7 +3633,7 @@ The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L120">property egressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L121">property egressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -3641,7 +3645,7 @@ The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L125">property egressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L126">property egressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -3653,7 +3657,7 @@ public egressShapingEnabled: pulumi.Output<boolean>;
 on the port for egress traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L130">property egressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L131">property egressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -3665,7 +3669,7 @@ The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L135">property failback</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L136">property failback</a>
 </h3>
 
 ```typescript
@@ -3677,7 +3681,7 @@ If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L139">property faulttoleranceMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L140">property faulttoleranceMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -3688,7 +3692,7 @@ public faulttoleranceMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L143">property faulttoleranceReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L144">property faulttoleranceReservationMbit</a>
 </h3>
 
 ```typescript
@@ -3699,7 +3703,7 @@ public faulttoleranceReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L147">property faulttoleranceShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L148">property faulttoleranceShareCount</a>
 </h3>
 
 ```typescript
@@ -3710,7 +3714,7 @@ public faulttoleranceShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L151">property faulttoleranceShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L152">property faulttoleranceShareLevel</a>
 </h3>
 
 ```typescript
@@ -3721,7 +3725,7 @@ public faulttoleranceShareLevel: pulumi.Output<string>;
 The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L156">property folder</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L157">property folder</a>
 </h3>
 
 ```typescript
@@ -3733,7 +3737,7 @@ The folder to create the DVS in. Forces a new resource
 if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L160">property hbrMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L161">property hbrMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -3744,7 +3748,7 @@ public hbrMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L164">property hbrReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L165">property hbrReservationMbit</a>
 </h3>
 
 ```typescript
@@ -3755,7 +3759,7 @@ public hbrReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L168">property hbrShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L169">property hbrShareCount</a>
 </h3>
 
 ```typescript
@@ -3766,7 +3770,7 @@ public hbrShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the hbr traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L172">property hbrShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L173">property hbrShareLevel</a>
 </h3>
 
 ```typescript
@@ -3777,7 +3781,7 @@ public hbrShareLevel: pulumi.Output<string>;
 The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L177">property hosts</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L178">property hosts</a>
 </h3>
 
 ```typescript
@@ -3801,7 +3805,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L182">property ingressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L183">property ingressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -3813,7 +3817,7 @@ The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L187">property ingressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L188">property ingressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -3825,7 +3829,7 @@ The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L192">property ingressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L193">property ingressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -3837,7 +3841,7 @@ public ingressShapingEnabled: pulumi.Output<boolean>;
 enabled on the port for ingress traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L197">property ingressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L198">property ingressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -3849,7 +3853,7 @@ The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L203">property ipv4Address</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L204">property ipv4Address</a>
 </h3>
 
 ```typescript
@@ -3862,7 +3866,7 @@ mostly useful when used with the Netflow arguments found
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L207">property iscsiMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L208">property iscsiMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -3873,7 +3877,7 @@ public iscsiMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L211">property iscsiReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L212">property iscsiReservationMbit</a>
 </h3>
 
 ```typescript
@@ -3884,7 +3888,7 @@ public iscsiReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L215">property iscsiShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L216">property iscsiShareCount</a>
 </h3>
 
 ```typescript
@@ -3895,7 +3899,7 @@ public iscsiShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L219">property iscsiShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L220">property iscsiShareLevel</a>
 </h3>
 
 ```typescript
@@ -3906,7 +3910,7 @@ public iscsiShareLevel: pulumi.Output<string>;
 The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L225">property lacpApiVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L226">property lacpApiVersion</a>
 </h3>
 
 ```typescript
@@ -3919,7 +3923,7 @@ version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L230">property lacpEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L231">property lacpEnabled</a>
 </h3>
 
 ```typescript
@@ -3931,7 +3935,7 @@ Enables LACP for the ports that this policy
 applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L234">property lacpMode</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L235">property lacpMode</a>
 </h3>
 
 ```typescript
@@ -3942,7 +3946,7 @@ public lacpMode: pulumi.Output<string>;
 The LACP mode. Can be one of `active` or `passive`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L239">property linkDiscoveryOperation</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L240">property linkDiscoveryOperation</a>
 </h3>
 
 ```typescript
@@ -3954,7 +3958,7 @@ Whether to `advertise` or `listen`
 for link discovery traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L244">property linkDiscoveryProtocol</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L245">property linkDiscoveryProtocol</a>
 </h3>
 
 ```typescript
@@ -3966,7 +3970,7 @@ The discovery protocol type. Valid
 types are `cdp` and `lldp`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L248">property managementMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L249">property managementMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -3977,7 +3981,7 @@ public managementMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the management traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L252">property managementReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L253">property managementReservationMbit</a>
 </h3>
 
 ```typescript
@@ -3988,7 +3992,7 @@ public managementReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L256">property managementShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L257">property managementShareCount</a>
 </h3>
 
 ```typescript
@@ -3999,7 +4003,7 @@ public managementShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the management traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L260">property managementShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L261">property managementShareLevel</a>
 </h3>
 
 ```typescript
@@ -4010,7 +4014,7 @@ public managementShareLevel: pulumi.Output<string>;
 The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L265">property maxMtu</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L266">property maxMtu</a>
 </h3>
 
 ```typescript
@@ -4022,7 +4026,7 @@ The maximum transmission unit (MTU) for the virtual
 switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L270">property multicastFilteringMode</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L271">property multicastFilteringMode</a>
 </h3>
 
 ```typescript
@@ -4034,7 +4038,7 @@ The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L274">property name</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L275">property name</a>
 </h3>
 
 ```typescript
@@ -4045,7 +4049,7 @@ public name: pulumi.Output<string>;
 The name of the distributed virtual switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L280">property netflowActiveFlowTimeout</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L281">property netflowActiveFlowTimeout</a>
 </h3>
 
 ```typescript
@@ -4058,7 +4062,7 @@ active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L286">property netflowCollectorIpAddress</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L287">property netflowCollectorIpAddress</a>
 </h3>
 
 ```typescript
@@ -4071,7 +4075,7 @@ collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L291">property netflowCollectorPort</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L292">property netflowCollectorPort</a>
 </h3>
 
 ```typescript
@@ -4083,7 +4087,7 @@ Port for the Netflow collector. This
 must be set before Netflow can be enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L296">property netflowEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L297">property netflowEnabled</a>
 </h3>
 
 ```typescript
@@ -4095,7 +4099,7 @@ Enables Netflow on all ports that this policy
 applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L302">property netflowIdleFlowTimeout</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L303">property netflowIdleFlowTimeout</a>
 </h3>
 
 ```typescript
@@ -4108,7 +4112,7 @@ idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L308">property netflowInternalFlowsOnly</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L309">property netflowInternalFlowsOnly</a>
 </h3>
 
 ```typescript
@@ -4121,7 +4125,7 @@ traffic that has both source and destination served by the same host.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L313">property netflowObservationDomainId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L314">property netflowObservationDomainId</a>
 </h3>
 
 ```typescript
@@ -4133,7 +4137,7 @@ The observation domain ID for
 the Netflow collector.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L320">property netflowSamplingRate</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L321">property netflowSamplingRate</a>
 </h3>
 
 ```typescript
@@ -4147,7 +4151,7 @@ switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L325">property networkResourceControlEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L326">property networkResourceControlEnabled</a>
 </h3>
 
 ```typescript
@@ -4159,7 +4163,7 @@ Set to `true` to enable
 network I/O control. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L330">property networkResourceControlVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L331">property networkResourceControlVersion</a>
 </h3>
 
 ```typescript
@@ -4171,7 +4175,7 @@ The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L334">property nfsMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L335">property nfsMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -4182,7 +4186,7 @@ public nfsMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L338">property nfsReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L339">property nfsReservationMbit</a>
 </h3>
 
 ```typescript
@@ -4193,7 +4197,7 @@ public nfsReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L342">property nfsShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L343">property nfsShareCount</a>
 </h3>
 
 ```typescript
@@ -4204,7 +4208,7 @@ public nfsShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the nfs traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L346">property nfsShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L347">property nfsShareLevel</a>
 </h3>
 
 ```typescript
@@ -4215,7 +4219,7 @@ public nfsShareLevel: pulumi.Output<string>;
 The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L351">property notifySwitches</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L352">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -4227,7 +4231,7 @@ If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L356">property portPrivateSecondaryVlanId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L357">property portPrivateSecondaryVlanId</a>
 </h3>
 
 ```typescript
@@ -4239,7 +4243,7 @@ Used to define a secondary VLAN
 ID when using private VLANs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L363">property standbyUplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L364">property standbyUplinks</a>
 </h3>
 
 ```typescript
@@ -4253,7 +4257,7 @@ failover. These uplinks need to match the definitions in the
 here for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L368">property tags</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L369">property tags</a>
 </h3>
 
 ```typescript
@@ -4265,7 +4269,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L374">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L375">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -4278,7 +4282,7 @@ The uplink teaming policy. Can be one of
 `failover_explicit`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L379">property txUplink</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L380">property txUplink</a>
 </h3>
 
 ```typescript
@@ -4290,7 +4294,7 @@ Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L387">property uplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L388">property uplinks</a>
 </h3>
 
 ```typescript
@@ -4317,7 +4321,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L391">property vdpMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L392">property vdpMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -4328,7 +4332,7 @@ public vdpMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L395">property vdpReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L396">property vdpReservationMbit</a>
 </h3>
 
 ```typescript
@@ -4339,7 +4343,7 @@ public vdpReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L399">property vdpShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L400">property vdpShareCount</a>
 </h3>
 
 ```typescript
@@ -4350,7 +4354,7 @@ public vdpShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the vdp traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L403">property vdpShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L404">property vdpShareLevel</a>
 </h3>
 
 ```typescript
@@ -4361,7 +4365,7 @@ public vdpShareLevel: pulumi.Output<string>;
 The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L410">property version</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L411">property version</a>
 </h3>
 
 ```typescript
@@ -4375,7 +4379,7 @@ being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L414">property virtualmachineMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L415">property virtualmachineMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -4386,7 +4390,7 @@ public virtualmachineMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L418">property virtualmachineReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L419">property virtualmachineReservationMbit</a>
 </h3>
 
 ```typescript
@@ -4397,7 +4401,7 @@ public virtualmachineReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L422">property virtualmachineShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L423">property virtualmachineShareCount</a>
 </h3>
 
 ```typescript
@@ -4408,7 +4412,7 @@ public virtualmachineShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L426">property virtualmachineShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L427">property virtualmachineShareLevel</a>
 </h3>
 
 ```typescript
@@ -4419,7 +4423,7 @@ public virtualmachineShareLevel: pulumi.Output<string>;
 The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L430">property vlanId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L431">property vlanId</a>
 </h3>
 
 ```typescript
@@ -4430,7 +4434,7 @@ public vlanId: pulumi.Output<number>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L437">property vlanRanges</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L438">property vlanRanges</a>
 </h3>
 
 ```typescript
@@ -4444,7 +4448,7 @@ and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 below:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L441">property vmotionMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L442">property vmotionMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -4455,7 +4459,7 @@ public vmotionMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L445">property vmotionReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L446">property vmotionReservationMbit</a>
 </h3>
 
 ```typescript
@@ -4466,7 +4470,7 @@ public vmotionReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L449">property vmotionShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L450">property vmotionShareCount</a>
 </h3>
 
 ```typescript
@@ -4477,7 +4481,7 @@ public vmotionShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the vmotion traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L453">property vmotionShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L454">property vmotionShareLevel</a>
 </h3>
 
 ```typescript
@@ -4488,7 +4492,7 @@ public vmotionShareLevel: pulumi.Output<string>;
 The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L457">property vsanMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L458">property vsanMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -4499,7 +4503,7 @@ public vsanMaximumMbit: pulumi.Output<number>;
 The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L461">property vsanReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L462">property vsanReservationMbit</a>
 </h3>
 
 ```typescript
@@ -4510,7 +4514,7 @@ public vsanReservationMbit: pulumi.Output<number>;
 The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L465">property vsanShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L466">property vsanShareCount</a>
 </h3>
 
 ```typescript
@@ -4521,7 +4525,7 @@ public vsanShareCount: pulumi.Output<number>;
 The amount of shares to allocate to the vsan traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L469">property vsanShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L470">property vsanShareLevel</a>
 </h3>
 
 ```typescript
@@ -4532,7 +4536,7 @@ public vsanShareLevel: pulumi.Output<string>;
 The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 
 <h2 class="pdoc-module-header" id="DpmHostOverride">
-<a class="pdoc-member-name" href="/dpmHostOverride.ts#L22">class DpmHostOverride</a>
+<a class="pdoc-member-name" href="/dpmHostOverride.ts#L23">class DpmHostOverride</a>
 </h2>
 
 The `vsphere_dpm_host_override` resource can be used to add a DPM override to a
@@ -4551,7 +4555,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L55">constructor</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L56">constructor</a>
 </h3>
 
 ```typescript
@@ -4566,7 +4570,7 @@ Create a DpmHostOverride resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L31">method get</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L32">method get</a>
 </h3>
 
 ```typescript
@@ -4598,7 +4602,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L40">property computeClusterId</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L41">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -4611,7 +4615,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L46">property dpmAutomationLevel</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L47">property dpmAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -4624,7 +4628,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L51">property dpmEnabled</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L52">property dpmEnabled</a>
 </h3>
 
 ```typescript
@@ -4636,7 +4640,7 @@ Enable DPM support for this host. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L55">property hostSystemId</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L56">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -4671,7 +4675,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="DrsVmOverride">
-<a class="pdoc-member-name" href="/drsVmOverride.ts#L22">class DrsVmOverride</a>
+<a class="pdoc-member-name" href="/drsVmOverride.ts#L23">class DrsVmOverride</a>
 </h2>
 
 The `vsphere_drs_vm_override` resource can be used to add a DRS override to a
@@ -4690,7 +4694,7 @@ connections.
 ~> **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L57">constructor</a>
 </h3>
 
 ```typescript
@@ -4705,7 +4709,7 @@ Create a DrsVmOverride resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L31">method get</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L32">method get</a>
 </h3>
 
 ```typescript
@@ -4737,7 +4741,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L40">property computeClusterId</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L41">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -4750,7 +4754,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L46">property drsAutomationLevel</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L47">property drsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -4763,7 +4767,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L51">property drsEnabled</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L52">property drsEnabled</a>
 </h3>
 
 ```typescript
@@ -4799,7 +4803,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L56">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L57">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -4811,7 +4815,7 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="File">
-<a class="pdoc-member-name" href="/file.ts#L20">class File</a>
+<a class="pdoc-member-name" href="/file.ts#L21">class File</a>
 </h2>
 
 The `vsphere_file` resource can be used to upload files (such as virtual disk
@@ -4828,7 +4832,7 @@ this may result in the destination file either being overwritten or deleted at
 the old location.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L68">constructor</a>
+<a class="pdoc-child-name" href="/file.ts#L69">constructor</a>
 </h3>
 
 ```typescript
@@ -4843,7 +4847,7 @@ Create a File resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L29">method get</a>
+<a class="pdoc-child-name" href="/file.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -4875,7 +4879,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L37">property createDirectories</a>
+<a class="pdoc-child-name" href="/file.ts#L38">property createDirectories</a>
 </h3>
 
 ```typescript
@@ -4887,7 +4891,7 @@ Create directories in `destination_file`
 path parameter if any missing for copy operation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L42">property datacenter</a>
+<a class="pdoc-child-name" href="/file.ts#L43">property datacenter</a>
 </h3>
 
 ```typescript
@@ -4899,7 +4903,7 @@ The name of a datacenter in which the file will be
 uploaded to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L47">property datastore</a>
+<a class="pdoc-child-name" href="/file.ts#L48">property datastore</a>
 </h3>
 
 ```typescript
@@ -4911,7 +4915,7 @@ The name of the datastore in which to upload the
 file to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L52">property destinationFile</a>
+<a class="pdoc-child-name" href="/file.ts#L53">property destinationFile</a>
 </h3>
 
 ```typescript
@@ -4935,7 +4939,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L57">property sourceDatacenter</a>
+<a class="pdoc-child-name" href="/file.ts#L58">property sourceDatacenter</a>
 </h3>
 
 ```typescript
@@ -4947,7 +4951,7 @@ The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L62">property sourceDatastore</a>
+<a class="pdoc-child-name" href="/file.ts#L63">property sourceDatastore</a>
 </h3>
 
 ```typescript
@@ -4959,7 +4963,7 @@ The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L68">property sourceFile</a>
+<a class="pdoc-child-name" href="/file.ts#L69">property sourceFile</a>
 </h3>
 
 ```typescript
@@ -4984,7 +4988,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Folder">
-<a class="pdoc-member-name" href="/folder.ts#L17">class Folder</a>
+<a class="pdoc-member-name" href="/folder.ts#L18">class Folder</a>
 </h2>
 
 The `vsphere_folder` resource can be used to manage vSphere inventory folders.
@@ -4998,7 +5002,7 @@ Subfolders are discovered by parsing the relative path specified in `path`, so
 as that folder exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L62">constructor</a>
+<a class="pdoc-child-name" href="/folder.ts#L63">constructor</a>
 </h3>
 
 ```typescript
@@ -5013,7 +5017,7 @@ Create a Folder resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L26">method get</a>
+<a class="pdoc-child-name" href="/folder.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -5045,7 +5049,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L35">property customAttributes</a>
+<a class="pdoc-child-name" href="/folder.ts#L36">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -5058,7 +5062,7 @@ value strings to set for folder. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L41">property datacenterId</a>
+<a class="pdoc-child-name" href="/folder.ts#L42">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -5083,7 +5087,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L50">property path</a>
+<a class="pdoc-child-name" href="/folder.ts#L51">property path</a>
 </h3>
 
 ```typescript
@@ -5099,7 +5103,7 @@ For example, given a default datacenter of `default-dc`, a folder of type
 `/default-dc/vm/terraform-test-folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L55">property tags</a>
+<a class="pdoc-child-name" href="/folder.ts#L56">property tags</a>
 </h3>
 
 ```typescript
@@ -5111,7 +5115,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L62">property type</a>
+<a class="pdoc-child-name" href="/folder.ts#L63">property type</a>
 </h3>
 
 ```typescript
@@ -5137,7 +5141,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="HaVmOverride">
-<a class="pdoc-member-name" href="/haVmOverride.ts#L20">class HaVmOverride</a>
+<a class="pdoc-member-name" href="/haVmOverride.ts#L21">class HaVmOverride</a>
 </h2>
 
 The `vsphere_ha_vm_override` resource can be used to add an override for
@@ -5154,7 +5158,7 @@ For more information on vSphere HA, see [this page][ref-vsphere-ha-clusters].
 connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L136">constructor</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L137">constructor</a>
 </h3>
 
 ```typescript
@@ -5169,7 +5173,7 @@ Create a HaVmOverride resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L29">method get</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L30">method get</a>
 </h3>
 
 ```typescript
@@ -5201,7 +5205,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L38">property computeClusterId</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L39">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -5214,7 +5218,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L46">property haDatastoreApdRecoveryAction</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L47">property haDatastoreApdRecoveryAction</a>
 </h3>
 
 ```typescript
@@ -5229,7 +5233,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L54">property haDatastoreApdResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L55">property haDatastoreApdResponse</a>
 </h3>
 
 ```typescript
@@ -5244,7 +5248,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L62">property haDatastoreApdResponseDelay</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L63">property haDatastoreApdResponseDelay</a>
 </h3>
 
 ```typescript
@@ -5259,7 +5263,7 @@ the cluster default. Default: `-1`.
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L70">property haDatastorePdlResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L71">property haDatastorePdlResponse</a>
 </h3>
 
 ```typescript
@@ -5274,7 +5278,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L77">property haHostIsolationResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L78">property haHostIsolationResponse</a>
 </h3>
 
 ```typescript
@@ -5288,7 +5292,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
 `shutdown`. Default: `clusterIsolationResponse`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L83">property haVmFailureInterval</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L84">property haVmFailureInterval</a>
 </h3>
 
 ```typescript
@@ -5301,7 +5305,7 @@ machine is not received within this configured interval, the virtual machine
 is marked as failed. The value is in seconds. Default: `30`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L92">property haVmMaximumFailureWindow</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L93">property haVmMaximumFailureWindow</a>
 </h3>
 
 ```typescript
@@ -5317,7 +5321,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L98">property haVmMaximumResets</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L99">property haVmMaximumResets</a>
 </h3>
 
 ```typescript
@@ -5330,7 +5334,7 @@ perform to this virtual machine when responding to a failure event. Default:
 `3`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L104">property haVmMinimumUptime</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L105">property haVmMinimumUptime</a>
 </h3>
 
 ```typescript
@@ -5343,7 +5347,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L110">property haVmMonitoring</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L111">property haVmMonitoring</a>
 </h3>
 
 ```typescript
@@ -5356,7 +5360,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L117">property haVmMonitoringUseClusterDefaults</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L118">property haVmMonitoringUseClusterDefaults</a>
 </h3>
 
 ```typescript
@@ -5370,7 +5374,7 @@ this resource are used for virtual machine monitoring. The default is `true`
 (use cluster defaults) - set to `false` to have overrides take effect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L124">property haVmRestartPriority</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L125">property haVmRestartPriority</a>
 </h3>
 
 ```typescript
@@ -5384,7 +5388,7 @@ machine when vSphere detects a host failure. Can be one of
 Default: `clusterRestartPriority`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L131">property haVmRestartTimeout</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L132">property haVmRestartTimeout</a>
 </h3>
 
 ```typescript
@@ -5422,7 +5426,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L136">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L137">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -5434,7 +5438,7 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="HostPortGroup">
-<a class="pdoc-member-name" href="/hostPortGroup.ts#L17">class HostPortGroup</a>
+<a class="pdoc-member-name" href="/hostPortGroup.ts#L18">class HostPortGroup</a>
 </h2>
 
 The `vsphere_host_port_group` resource can be used to manage vSphere standard
@@ -5448,7 +5452,7 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 [ref-vsphere-net-concepts]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L120">constructor</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L121">constructor</a>
 </h3>
 
 ```typescript
@@ -5463,7 +5467,7 @@ Create a HostPortGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L26">method get</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -5495,7 +5499,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L33">property activeNics</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L34">property activeNics</a>
 </h3>
 
 ```typescript
@@ -5506,7 +5510,7 @@ public activeNics: pulumi.Output<string[] | undefined>;
 List of active network adapters used for load balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L38">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L39">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -5518,7 +5522,7 @@ Controls whether or not the virtual network adapter is allowed to send network t
 than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L42">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L43">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -5529,7 +5533,7 @@ public allowMacChanges: pulumi.Output<boolean | undefined>;
 Controls whether or not the Media Access Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L46">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L47">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -5540,7 +5544,7 @@ public allowPromiscuous: pulumi.Output<boolean | undefined>;
 Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L51">property checkBeacon</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L52">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -5552,7 +5556,7 @@ Enable beacon probing. Requires that the vSwitch has been configured to use a be
 used only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L57">property computedPolicy</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L58">property computedPolicy</a>
 </h3>
 
 ```typescript
@@ -5565,7 +5569,7 @@ options][host-vswitch-policy-options] computed from defaults and overrides,
 explaining the effective policy for this port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L61">property failback</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L62">property failback</a>
 </h3>
 
 ```typescript
@@ -5576,7 +5580,7 @@ public failback: pulumi.Output<boolean | undefined>;
 If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L66">property hostSystemId</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L67">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -5600,7 +5604,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L70">property key</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L71">property key</a>
 </h3>
 
 ```typescript
@@ -5611,7 +5615,7 @@ public key: pulumi.Output<string>;
 The key for this port group as returned from the vSphere API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L75">property name</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L76">property name</a>
 </h3>
 
 ```typescript
@@ -5623,7 +5627,7 @@ The name of the port group.  Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L79">property notifySwitches</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L80">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -5634,7 +5638,7 @@ public notifySwitches: pulumi.Output<boolean | undefined>;
 If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L83">property ports</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L84">property ports</a>
 </h3>
 
 ```typescript
@@ -5645,7 +5649,7 @@ public ports: pulumi.Output<{ ... }>;
 A list of ports that currently exist and are used on this port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L87">property shapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L88">property shapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -5656,7 +5660,7 @@ public shapingAverageBandwidth: pulumi.Output<number | undefined>;
 The average bandwidth in bits per second if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L91">property shapingBurstSize</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L92">property shapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -5667,7 +5671,7 @@ public shapingBurstSize: pulumi.Output<number | undefined>;
 The maximum burst size allowed in bytes if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L95">property shapingEnabled</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L96">property shapingEnabled</a>
 </h3>
 
 ```typescript
@@ -5678,7 +5682,7 @@ public shapingEnabled: pulumi.Output<boolean | undefined>;
 Enable traffic shaping on this virtual switch or port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L99">property shapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L100">property shapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -5689,7 +5693,7 @@ public shapingPeakBandwidth: pulumi.Output<number | undefined>;
 The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L103">property standbyNics</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L104">property standbyNics</a>
 </h3>
 
 ```typescript
@@ -5700,7 +5704,7 @@ public standbyNics: pulumi.Output<string[] | undefined>;
 List of standby network adapters used for failover.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L108">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L109">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -5724,7 +5728,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L113">property virtualSwitchName</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L114">property virtualSwitchName</a>
 </h3>
 
 ```typescript
@@ -5736,7 +5740,7 @@ The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L120">property vlanId</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L121">property vlanId</a>
 </h3>
 
 ```typescript
@@ -5750,7 +5754,7 @@ ID of `4095` enables trunk mode, allowing the guest to manage its own
 tagging. Default: `0`.
 
 <h2 class="pdoc-module-header" id="HostVirtualSwitch">
-<a class="pdoc-member-name" href="/hostVirtualSwitch.ts#L18">class HostVirtualSwitch</a>
+<a class="pdoc-member-name" href="/hostVirtualSwitch.ts#L19">class HostVirtualSwitch</a>
 </h2>
 
 The `vsphere_host_virtual_switch` resource can be used to manage vSphere
@@ -5765,7 +5769,7 @@ page][ref-vsphere-net-concepts].
 [ref-vsphere-net-concepts]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L142">constructor</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L143">constructor</a>
 </h3>
 
 ```typescript
@@ -5780,7 +5784,7 @@ Create a HostVirtualSwitch resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L27">method get</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L28">method get</a>
 </h3>
 
 ```typescript
@@ -5812,7 +5816,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L35">property activeNics</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L36">property activeNics</a>
 </h3>
 
 ```typescript
@@ -5824,7 +5828,7 @@ The list of active network adapters used for load
 balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L41">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L42">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -5837,7 +5841,7 @@ network adapter is allowed to send network traffic with a different MAC
 address than that of its own. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L46">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L47">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -5849,7 +5853,7 @@ Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L52">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L53">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -5862,7 +5866,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L58">property beaconInterval</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L59">property beaconInterval</a>
 </h3>
 
 ```typescript
@@ -5875,7 +5879,7 @@ packet is sent out. This can be used with `check_beacon` to
 offer link failure capability beyond link status only. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L65">property checkBeacon</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L66">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -5889,7 +5893,7 @@ options. If this is set to `false`, only link status is used to check for
 failed NICs.  Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L71">property failback</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L72">property failback</a>
 </h3>
 
 ```typescript
@@ -5902,7 +5906,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L76">property hostSystemId</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L77">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -5926,7 +5930,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L81">property linkDiscoveryOperation</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L82">property linkDiscoveryOperation</a>
 </h3>
 
 ```typescript
@@ -5938,7 +5942,7 @@ Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L86">property linkDiscoveryProtocol</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L87">property linkDiscoveryProtocol</a>
 </h3>
 
 ```typescript
@@ -5950,7 +5954,7 @@ The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L91">property mtu</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L92">property mtu</a>
 </h3>
 
 ```typescript
@@ -5962,7 +5966,7 @@ The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L96">property name</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L97">property name</a>
 </h3>
 
 ```typescript
@@ -5974,7 +5978,7 @@ The name of the virtual switch. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L100">property networkAdapters</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L101">property networkAdapters</a>
 </h3>
 
 ```typescript
@@ -5985,7 +5989,7 @@ public networkAdapters: pulumi.Output<string[]>;
 The network interfaces to bind to the bridge.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L106">property notifySwitches</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L107">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -5998,7 +6002,7 @@ notify the broadcast network of a NIC failover, triggering cache updates.
 Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L111">property numberOfPorts</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L112">property numberOfPorts</a>
 </h3>
 
 ```typescript
@@ -6010,7 +6014,7 @@ The number of ports to create with this
 virtual switch. Default: `128`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L116">property shapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L117">property shapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -6022,7 +6026,7 @@ The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L121">property shapingBurstSize</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L122">property shapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -6034,7 +6038,7 @@ The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L126">property shapingEnabled</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L127">property shapingEnabled</a>
 </h3>
 
 ```typescript
@@ -6046,7 +6050,7 @@ Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L131">property shapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L132">property shapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -6058,7 +6062,7 @@ The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L136">property standbyNics</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L137">property standbyNics</a>
 </h3>
 
 ```typescript
@@ -6070,7 +6074,7 @@ The list of standby network adapters used for
 failover.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L142">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L143">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -6095,13 +6099,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="License">
-<a class="pdoc-member-name" href="/license.ts#L9">class License</a>
+<a class="pdoc-member-name" href="/license.ts#L10">class License</a>
 </h2>
 
 Provides a VMware vSphere license resource. This can be used to add and remove license keys.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L45">constructor</a>
+<a class="pdoc-child-name" href="/license.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -6116,7 +6120,7 @@ Create a License resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L18">method get</a>
+<a class="pdoc-child-name" href="/license.ts#L19">method get</a>
 </h3>
 
 ```typescript
@@ -6148,7 +6152,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L25">property editionKey</a>
+<a class="pdoc-child-name" href="/license.ts#L26">property editionKey</a>
 </h3>
 
 ```typescript
@@ -6171,7 +6175,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L29">property labels</a>
+<a class="pdoc-child-name" href="/license.ts#L30">property labels</a>
 </h3>
 
 ```typescript
@@ -6182,7 +6186,7 @@ public labels: pulumi.Output<{ ... } | undefined>;
 A map of key/value pairs to be attached as labels (tags) to the license key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L33">property licenseKey</a>
+<a class="pdoc-child-name" href="/license.ts#L34">property licenseKey</a>
 </h3>
 
 ```typescript
@@ -6193,7 +6197,7 @@ public licenseKey: pulumi.Output<string>;
 The license key to add.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L37">property name</a>
+<a class="pdoc-child-name" href="/license.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -6204,7 +6208,7 @@ public name: pulumi.Output<string>;
 The display name for the license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L41">property total</a>
+<a class="pdoc-child-name" href="/license.ts#L42">property total</a>
 </h3>
 
 ```typescript
@@ -6227,7 +6231,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L45">property used</a>
+<a class="pdoc-child-name" href="/license.ts#L46">property used</a>
 </h3>
 
 ```typescript
@@ -6238,7 +6242,7 @@ public used: pulumi.Output<number>;
 The number of units (example: CPUs) assigned to this license.
 
 <h2 class="pdoc-module-header" id="NasDatastore">
-<a class="pdoc-member-name" href="/nasDatastore.ts#L18">class NasDatastore</a>
+<a class="pdoc-member-name" href="/nasDatastore.ts#L19">class NasDatastore</a>
 </h2>
 
 The `vsphere_nas_datastore` resource can be used to create and manage NAS
@@ -6253,7 +6257,7 @@ multiple hosts, you must specify each host that you want to add in the
 [resource-vmfs-datastore]: /docs/providers/vsphere/r/vmfs_datastore.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L134">constructor</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L135">constructor</a>
 </h3>
 
 ```typescript
@@ -6268,7 +6272,7 @@ Create a NasDatastore resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L27">method get</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L28">method get</a>
 </h3>
 
 ```typescript
@@ -6300,7 +6304,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L37">property accessMode</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L38">property accessMode</a>
 </h3>
 
 ```typescript
@@ -6314,7 +6318,7 @@ that the datastore will be read-write depending on the permissions of the
 actual share. Default: `readWrite`. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L42">property accessible</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L43">property accessible</a>
 </h3>
 
 ```typescript
@@ -6326,7 +6330,7 @@ The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L46">property capacity</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L47">property capacity</a>
 </h3>
 
 ```typescript
@@ -6337,7 +6341,7 @@ public capacity: pulumi.Output<number>;
 Maximum capacity of the datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L53">property customAttributes</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L54">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -6351,7 +6355,7 @@ value strings to set on datasource resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L59">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L60">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -6364,7 +6368,7 @@ ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L69">property folder</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L70">property folder</a>
 </h3>
 
 ```typescript
@@ -6381,7 +6385,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `datastore_cluster_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L73">property freeSpace</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L74">property freeSpace</a>
 </h3>
 
 ```typescript
@@ -6392,7 +6396,7 @@ public freeSpace: pulumi.Output<number>;
 Available space of this datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L78">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L79">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -6416,7 +6420,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L82">property maintenanceMode</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L83">property maintenanceMode</a>
 </h3>
 
 ```typescript
@@ -6427,7 +6431,7 @@ public maintenanceMode: pulumi.Output<string>;
 The current maintenance mode state of the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L87">property multipleHostAccess</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L88">property multipleHostAccess</a>
 </h3>
 
 ```typescript
@@ -6439,7 +6443,7 @@ If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L92">property name</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L93">property name</a>
 </h3>
 
 ```typescript
@@ -6451,7 +6455,7 @@ The name of the datastore. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L97">property protocolEndpoint</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L98">property protocolEndpoint</a>
 </h3>
 
 ```typescript
@@ -6463,7 +6467,7 @@ Indicates that this NAS volume is a protocol endpoint.
 This field is only populated if the host supports virtual datastores.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L103">property remoteHosts</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L104">property remoteHosts</a>
 </h3>
 
 ```typescript
@@ -6476,7 +6480,7 @@ server or servers. Only one element should be present for NFS v3 but multiple
 can be present for NFS v4.1. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L108">property remotePath</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L109">property remotePath</a>
 </h3>
 
 ```typescript
@@ -6488,7 +6492,7 @@ The remote path of the mount point. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L114">property securityType</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L115">property securityType</a>
 </h3>
 
 ```typescript
@@ -6501,7 +6505,7 @@ Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
 if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L119">property tags</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L120">property tags</a>
 </h3>
 
 ```typescript
@@ -6513,7 +6517,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L125">property type</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L126">property type</a>
 </h3>
 
 ```typescript
@@ -6526,7 +6530,7 @@ v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L130">property uncommittedSpace</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L131">property uncommittedSpace</a>
 </h3>
 
 ```typescript
@@ -6538,7 +6542,7 @@ Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L134">property url</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L135">property url</a>
 </h3>
 
 ```typescript
@@ -6561,13 +6565,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="/provider.ts#L9">class Provider</a>
+<a class="pdoc-member-name" href="/provider.ts#L10">class Provider</a>
 </h2>
 
 The provider type for the vsphere package
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L9">constructor</a>
+<a class="pdoc-child-name" href="/provider.ts#L10">constructor</a>
 </h3>
 
 ```typescript
@@ -6626,7 +6630,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ResourcePool">
-<a class="pdoc-member-name" href="/resourcePool.ts#L15">class ResourcePool</a>
+<a class="pdoc-member-name" href="/resourcePool.ts#L16">class ResourcePool</a>
 </h2>
 
 The `vsphere_resource_pool` resource can be used to create and manage
@@ -6638,7 +6642,7 @@ page][ref-vsphere-resource_pools].
 [ref-vsphere-resource_pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L110">constructor</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L111">constructor</a>
 </h3>
 
 ```typescript
@@ -6653,7 +6657,7 @@ Create a ResourcePool resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L24">method get</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -6685,7 +6689,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L33">property cpuExpandable</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L34">property cpuExpandable</a>
 </h3>
 
 ```typescript
@@ -6698,7 +6702,7 @@ pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L39">property cpuLimit</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L40">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -6711,7 +6715,7 @@ this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L44">property cpuReservation</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L45">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -6723,7 +6727,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L52">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L53">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -6738,7 +6742,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L58">property cpuShares</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L59">property cpuShares</a>
 </h3>
 
 ```typescript
@@ -6751,7 +6755,7 @@ determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L62">property customAttributes</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L63">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -6774,7 +6778,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L68">property memoryExpandable</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L69">property memoryExpandable</a>
 </h3>
 
 ```typescript
@@ -6787,7 +6791,7 @@ pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L74">property memoryLimit</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L75">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -6800,7 +6804,7 @@ this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L79">property memoryReservation</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L80">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -6812,7 +6816,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L87">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L88">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -6827,7 +6831,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L93">property memoryShares</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L94">property memoryShares</a>
 </h3>
 
 ```typescript
@@ -6840,7 +6844,7 @@ determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L97">property name</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L98">property name</a>
 </h3>
 
 ```typescript
@@ -6851,7 +6855,7 @@ public name: pulumi.Output<string>;
 The name of the resource pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L105">property parentResourcePoolId</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L106">property parentResourcePoolId</a>
 </h3>
 
 ```typescript
@@ -6866,7 +6870,7 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L110">property tags</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L111">property tags</a>
 </h3>
 
 ```typescript
@@ -6890,7 +6894,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="StorageDrsVmOverride">
-<a class="pdoc-member-name" href="/storageDrsVmOverride.ts#L18">class StorageDrsVmOverride</a>
+<a class="pdoc-member-name" href="/storageDrsVmOverride.ts#L19">class StorageDrsVmOverride</a>
 </h2>
 
 The `vsphere_storage_drs_vm_override` resource can be used to add a Storage DRS
@@ -6905,7 +6909,7 @@ page][ref-vsphere-datastore-clusters].
 [ref-vsphere-datastore-clusters]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L62">constructor</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L63">constructor</a>
 </h3>
 
 ```typescript
@@ -6920,7 +6924,7 @@ Create a StorageDrsVmOverride resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L27">method get</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L28">method get</a>
 </h3>
 
 ```typescript
@@ -6952,7 +6956,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L36">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L37">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -6977,7 +6981,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L43">property sdrsAutomationLevel</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L44">property sdrsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -6991,7 +6995,7 @@ not specified, the datastore cluster's settings are used according to the
 [specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L49">property sdrsEnabled</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L50">property sdrsEnabled</a>
 </h3>
 
 ```typescript
@@ -7004,7 +7008,7 @@ this virtual machine. When not specified, the datastore cluster setting is
 used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L57">property sdrsIntraVmAffinity</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L58">property sdrsIntraVmAffinity</a>
 </h3>
 
 ```typescript
@@ -7031,7 +7035,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L62">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L63">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -7043,7 +7047,7 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="Tag">
-<a class="pdoc-member-name" href="/tag.ts#L18">class Tag</a>
+<a class="pdoc-member-name" href="/tag.ts#L19">class Tag</a>
 </h2>
 
 The `vsphere_tag` resource can be used to create and manage tags, which allow
@@ -7058,7 +7062,7 @@ For more information about tags, click [here][ext-tags-general].
 requires vCenter 6.0 or higher.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L44">constructor</a>
+<a class="pdoc-child-name" href="/tag.ts#L45">constructor</a>
 </h3>
 
 ```typescript
@@ -7073,7 +7077,7 @@ Create a Tag resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L27">method get</a>
+<a class="pdoc-child-name" href="/tag.ts#L28">method get</a>
 </h3>
 
 ```typescript
@@ -7105,7 +7109,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L35">property categoryId</a>
+<a class="pdoc-child-name" href="/tag.ts#L36">property categoryId</a>
 </h3>
 
 ```typescript
@@ -7117,7 +7121,7 @@ The unique identifier of the parent category in
 which this tag will be created. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L39">property description</a>
+<a class="pdoc-child-name" href="/tag.ts#L40">property description</a>
 </h3>
 
 ```typescript
@@ -7140,7 +7144,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L44">property name</a>
+<a class="pdoc-child-name" href="/tag.ts#L45">property name</a>
 </h3>
 
 ```typescript
@@ -7164,7 +7168,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="TagCategory">
-<a class="pdoc-member-name" href="/tagCategory.ts#L21">class TagCategory</a>
+<a class="pdoc-member-name" href="/tagCategory.ts#L22">class TagCategory</a>
 </h2>
 
 The `vsphere_tag_category` resource can be used to create and manage tag
@@ -7182,7 +7186,7 @@ information about tag categories specifically, click
 requires vCenter 6.0 or higher.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L54">constructor</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L55">constructor</a>
 </h3>
 
 ```typescript
@@ -7197,7 +7201,7 @@ Create a TagCategory resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L30">method get</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L31">method get</a>
 </h3>
 
 ```typescript
@@ -7229,7 +7233,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L39">property associableTypes</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L40">property associableTypes</a>
 </h3>
 
 ```typescript
@@ -7242,7 +7246,7 @@ valid to be assigned to. For a full list, click
 here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L46">property cardinality</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L47">property cardinality</a>
 </h3>
 
 ```typescript
@@ -7256,7 +7260,7 @@ be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L50">property description</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L51">property description</a>
 </h3>
 
 ```typescript
@@ -7279,7 +7283,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L54">property name</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -7302,7 +7306,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="VappContainer">
-<a class="pdoc-member-name" href="/vappContainer.ts#L15">class VappContainer</a>
+<a class="pdoc-member-name" href="/vappContainer.ts#L16">class VappContainer</a>
 </h2>
 
 The `vsphere_vapp_container` resource can be used to create and manage
@@ -7314,7 +7318,7 @@ page][ref-vsphere-vapp].
 [ref-vsphere-vapp]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L117">constructor</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L118">constructor</a>
 </h3>
 
 ```typescript
@@ -7329,7 +7333,7 @@ Create a VappContainer resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L24">method get</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -7361,7 +7365,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L33">property cpuExpandable</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L34">property cpuExpandable</a>
 </h3>
 
 ```typescript
@@ -7374,7 +7378,7 @@ container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L40">property cpuLimit</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L41">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -7388,7 +7392,7 @@ unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L45">property cpuReservation</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L46">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -7400,7 +7404,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L53">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L54">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -7415,7 +7419,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L59">property cpuShares</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L60">property cpuShares</a>
 </h3>
 
 ```typescript
@@ -7428,7 +7432,7 @@ determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L63">property customAttributes</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L64">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -7451,7 +7455,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L69">property memoryExpandable</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L70">property memoryExpandable</a>
 </h3>
 
 ```typescript
@@ -7464,7 +7468,7 @@ container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L76">property memoryLimit</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L77">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -7478,7 +7482,7 @@ unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L81">property memoryReservation</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L82">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -7490,7 +7494,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L89">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L90">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -7505,7 +7509,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L95">property memoryShares</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L96">property memoryShares</a>
 </h3>
 
 ```typescript
@@ -7518,7 +7522,7 @@ determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L99">property name</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L100">property name</a>
 </h3>
 
 ```typescript
@@ -7529,7 +7533,7 @@ public name: pulumi.Output<string>;
 The name of the vApp container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L104">property parentFolderId</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L105">property parentFolderId</a>
 </h3>
 
 ```typescript
@@ -7541,7 +7545,7 @@ The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L112">property parentResourcePoolId</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L113">property parentResourcePoolId</a>
 </h3>
 
 ```typescript
@@ -7556,7 +7560,7 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L117">property tags</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L118">property tags</a>
 </h3>
 
 ```typescript
@@ -7580,7 +7584,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="VirtualDisk">
-<a class="pdoc-member-name" href="/virtualDisk.ts#L15">class VirtualDisk</a>
+<a class="pdoc-member-name" href="/virtualDisk.ts#L16">class VirtualDisk</a>
 </h2>
 
 The `vsphere_virtual_disk` resource can be used to create virtual disks outside
@@ -7592,7 +7596,7 @@ block with the [`attach`][docs-vsphere-virtual-machine-disk-attach] parameter.
 [docs-vsphere-virtual-machine-disk-attach]: /docs/providers/vsphere/r/virtual_machine.html#attach
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L65">constructor</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -7607,7 +7611,7 @@ Create a VirtualDisk resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L24">method get</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -7639,7 +7643,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L32">property adapterType</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L33">property adapterType</a>
 </h3>
 
 ```typescript
@@ -7651,7 +7655,7 @@ The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L38">property createDirectories</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L39">property createDirectories</a>
 </h3>
 
 ```typescript
@@ -7664,7 +7668,7 @@ directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L44">property datacenter</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L45">property datacenter</a>
 </h3>
 
 ```typescript
@@ -7677,7 +7681,7 @@ disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L49">property datastore</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L50">property datastore</a>
 </h3>
 
 ```typescript
@@ -7701,7 +7705,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L53">property size</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L54">property size</a>
 </h3>
 
 ```typescript
@@ -7712,7 +7716,7 @@ public size: pulumi.Output<number>;
 Size of the disk (in GB).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L60">property type</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L61">property type</a>
 </h3>
 
 ```typescript
@@ -7738,7 +7742,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L65">property vmdkPath</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L66">property vmdkPath</a>
 </h3>
 
 ```typescript
@@ -7750,7 +7754,7 @@ The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
 
 <h2 class="pdoc-module-header" id="VirtualMachine">
-<a class="pdoc-member-name" href="/virtualMachine.ts#L17">class VirtualMachine</a>
+<a class="pdoc-member-name" href="/virtualMachine.ts#L18">class VirtualMachine</a>
 </h2>
 
 The `vsphere_virtual_machine` resource can be used to manage the complex
@@ -7764,7 +7768,7 @@ page][vmware-docs-vm-management].
 [vmware-docs-vm-management]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-55238059-912E-411F-A0E9-A7A536972A91.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L423">constructor</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L424">constructor</a>
 </h3>
 
 ```typescript
@@ -7779,7 +7783,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L26">method get</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L27">method get</a>
 </h3>
 
 ```typescript
@@ -7811,7 +7815,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L34">property alternateGuestName</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L35">property alternateGuestName</a>
 </h3>
 
 ```typescript
@@ -7823,7 +7827,7 @@ The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L39">property annotation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L40">property annotation</a>
 </h3>
 
 ```typescript
@@ -7835,7 +7839,7 @@ A user-provided description of the virtual machine.
 The default is no annotation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L44">property bootDelay</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L45">property bootDelay</a>
 </h3>
 
 ```typescript
@@ -7847,7 +7851,7 @@ The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L50">property bootRetryDelay</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L51">property bootRetryDelay</a>
 </h3>
 
 ```typescript
@@ -7860,7 +7864,7 @@ retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L56">property bootRetryEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L57">property bootRetryEnabled</a>
 </h3>
 
 ```typescript
@@ -7873,7 +7877,7 @@ fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L61">property cdrom</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L62">property cdrom</a>
 </h3>
 
 ```typescript
@@ -7885,7 +7889,7 @@ A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L67">property changeVersion</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L68">property changeVersion</a>
 </h3>
 
 ```typescript
@@ -7898,7 +7902,7 @@ configuration applied, such the timestamp of the last update to the
 configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L74">property clone</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L75">property clone</a>
 </h3>
 
 ```typescript
@@ -7912,7 +7916,7 @@ See creating a virtual machine from a
 template for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L79">property cpuHotAddEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L80">property cpuHotAddEnabled</a>
 </h3>
 
 ```typescript
@@ -7924,7 +7928,7 @@ Allow CPUs to be added to this virtual
 machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L84">property cpuHotRemoveEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L85">property cpuHotRemoveEnabled</a>
 </h3>
 
 ```typescript
@@ -7936,7 +7940,7 @@ Allow CPUs to be removed to this
 virtual machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L90">property cpuLimit</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L91">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -7949,7 +7953,7 @@ machine can consume, regardless of available resources. The default is no
 limit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L95">property cpuPerformanceCountersEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L96">property cpuPerformanceCountersEnabled</a>
 </h3>
 
 ```typescript
@@ -7961,7 +7965,7 @@ Enable CPU performance
 counters on this virtual machine. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L100">property cpuReservation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L101">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -7973,7 +7977,7 @@ The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L105">property cpuShareCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L106">property cpuShareCount</a>
 </h3>
 
 ```typescript
@@ -7985,7 +7989,7 @@ The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L110">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L111">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -7997,7 +8001,7 @@ The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L117">property customAttributes</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L118">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -8011,7 +8015,7 @@ value strings to set for virtual machine. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L125">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L126">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -8026,7 +8030,7 @@ DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L130">property datastoreId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L131">property datastoreId</a>
 </h3>
 
 ```typescript
@@ -8038,7 +8042,7 @@ The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L140">property defaultIpAddress</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L141">property defaultIpAddress</a>
 </h3>
 
 ```typescript
@@ -8055,7 +8059,7 @@ VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L145">property disks</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L146">property disks</a>
 </h3>
 
 ```typescript
@@ -8067,7 +8071,7 @@ A specification for a virtual disk device on this virtual
 machine. See disk options below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L150">property efiSecureBootEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L151">property efiSecureBootEnabled</a>
 </h3>
 
 ```typescript
@@ -8079,7 +8083,7 @@ When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L155">property enableDiskUuid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L156">property enableDiskUuid</a>
 </h3>
 
 ```typescript
@@ -8091,7 +8095,7 @@ Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L160">property enableLogging</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L161">property enableLogging</a>
 </h3>
 
 ```typescript
@@ -8103,7 +8107,7 @@ Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L166">property eptRviMode</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L167">property eptRviMode</a>
 </h3>
 
 ```typescript
@@ -8116,7 +8120,7 @@ setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L172">property extraConfig</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L173">property extraConfig</a>
 </h3>
 
 ```typescript
@@ -8129,7 +8133,7 @@ machine. Can be used to supply advanced parameters not normally in
 configuration, such as data for cloud-config (under the guestinfo namespace).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L177">property firmware</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L178">property firmware</a>
 </h3>
 
 ```typescript
@@ -8141,7 +8145,7 @@ The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L182">property folder</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L183">property folder</a>
 </h3>
 
 ```typescript
@@ -8153,7 +8157,7 @@ The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L189">property forcePowerOff</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L190">property forcePowerOff</a>
 </h3>
 
 ```typescript
@@ -8167,7 +8171,7 @@ updating or destroying (see
 the virtual machine. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L194">property guestId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L195">property guestId</a>
 </h3>
 
 ```typescript
@@ -8179,7 +8183,7 @@ The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L202">property guestIpAddresses</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L203">property guestIpAddresses</a>
 </h3>
 
 ```typescript
@@ -8194,7 +8198,7 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L211">property hostSystemId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L212">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -8210,7 +8214,7 @@ vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L217">property hvMode</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L218">property hvMode</a>
 </h3>
 
 ```typescript
@@ -8235,7 +8239,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L224">property imported</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L225">property imported</a>
 </h3>
 
 ```typescript
@@ -8249,7 +8253,7 @@ influences the behavior of the first post-import apply operation. See the
 section on importing below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L232">property latencySensitivity</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L233">property latencySensitivity</a>
 </h3>
 
 ```typescript
@@ -8264,7 +8268,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L237">property memory</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L238">property memory</a>
 </h3>
 
 ```typescript
@@ -8276,7 +8280,7 @@ The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L242">property memoryHotAddEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L243">property memoryHotAddEnabled</a>
 </h3>
 
 ```typescript
@@ -8288,7 +8292,7 @@ Allow memory to be added to this
 virtual machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L248">property memoryLimit</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L249">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -8301,7 +8305,7 @@ virtual machine can consume, regardless of available resources. The default
 is no limit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L253">property memoryReservation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L254">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -8313,7 +8317,7 @@ The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L258">property memoryShareCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L259">property memoryShareCount</a>
 </h3>
 
 ```typescript
@@ -8325,7 +8329,7 @@ The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L263">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L264">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -8337,7 +8341,7 @@ The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L270">property migrateWaitTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L271">property migrateWaitTimeout</a>
 </h3>
 
 ```typescript
@@ -8351,7 +8355,7 @@ minutes. Also see the section on virtual machine
 migration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L274">property moid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L275">property moid</a>
 </h3>
 
 ```typescript
@@ -8362,7 +8366,7 @@ public moid: pulumi.Output<string>;
 The machine object ID from VMWare
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L279">property name</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L280">property name</a>
 </h3>
 
 ```typescript
@@ -8374,7 +8378,7 @@ An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L285">property nestedHvEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L286">property nestedHvEnabled</a>
 </h3>
 
 ```typescript
@@ -8387,7 +8391,7 @@ this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L291">property networkInterfaces</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L292">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -8400,7 +8404,7 @@ virtual machine. See network interface options
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L297">property numCoresPerSocket</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L298">property numCoresPerSocket</a>
 </h3>
 
 ```typescript
@@ -8413,7 +8417,7 @@ the CPUs in this virtual machine. If specified, the value supplied to
 `num_cpus` must be evenly divisible by this value. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L302">property numCpus</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L303">property numCpus</a>
 </h3>
 
 ```typescript
@@ -8425,7 +8429,7 @@ The number of virtual processors to assign to this
 virtual machine. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L308">property rebootRequired</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L309">property rebootRequired</a>
 </h3>
 
 ```typescript
@@ -8438,7 +8442,7 @@ configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L315">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L316">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -8452,7 +8456,7 @@ See the section on virtual machine migration
 for details on changing this value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L320">property runToolsScriptsAfterPowerOn</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L321">property runToolsScriptsAfterPowerOn</a>
 </h3>
 
 ```typescript
@@ -8464,7 +8468,7 @@ Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L325">property runToolsScriptsAfterResume</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L326">property runToolsScriptsAfterResume</a>
 </h3>
 
 ```typescript
@@ -8476,7 +8480,7 @@ Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L330">property runToolsScriptsBeforeGuestReboot</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L331">property runToolsScriptsBeforeGuestReboot</a>
 </h3>
 
 ```typescript
@@ -8488,7 +8492,7 @@ Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L335">property runToolsScriptsBeforeGuestShutdown</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L336">property runToolsScriptsBeforeGuestShutdown</a>
 </h3>
 
 ```typescript
@@ -8500,7 +8504,7 @@ Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L340">property runToolsScriptsBeforeGuestStandby</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L341">property runToolsScriptsBeforeGuestStandby</a>
 </h3>
 
 ```typescript
@@ -8512,7 +8516,7 @@ Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L345">property scsiBusSharing</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L346">property scsiBusSharing</a>
 </h3>
 
 ```typescript
@@ -8524,7 +8528,7 @@ Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L352">property scsiControllerCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L353">property scsiControllerCount</a>
 </h3>
 
 ```typescript
@@ -8538,7 +8542,7 @@ of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L358">property scsiType</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L359">property scsiType</a>
 </h3>
 
 ```typescript
@@ -8551,7 +8555,7 @@ Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L365">property shutdownWaitTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L366">property shutdownWaitTimeout</a>
 </h3>
 
 ```typescript
@@ -8565,7 +8569,7 @@ machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L371">property swapPlacementPolicy</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L372">property swapPlacementPolicy</a>
 </h3>
 
 ```typescript
@@ -8578,7 +8582,7 @@ virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L376">property syncTimeWithHost</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L377">property syncTimeWithHost</a>
 </h3>
 
 ```typescript
@@ -8590,7 +8594,7 @@ Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L381">property tags</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L382">property tags</a>
 </h3>
 
 ```typescript
@@ -8614,7 +8618,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L386">property uuid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L387">property uuid</a>
 </h3>
 
 ```typescript
@@ -8626,7 +8630,7 @@ The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L394">property vapp</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L395">property vapp</a>
 </h3>
 
 ```typescript
@@ -8641,7 +8645,7 @@ configuration for
 more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L400">property vappTransports</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L401">property vappTransports</a>
 </h3>
 
 ```typescript
@@ -8654,7 +8658,7 @@ machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L405">property vmwareToolsStatus</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L406">property vmwareToolsStatus</a>
 </h3>
 
 ```typescript
@@ -8666,7 +8670,7 @@ The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L410">property vmxPath</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L411">property vmxPath</a>
 </h3>
 
 ```typescript
@@ -8678,7 +8682,7 @@ The path of the virtual machine's configuration file in the VM's
 datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L417">property waitForGuestNetRoutable</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L418">property waitForGuestNetRoutable</a>
 </h3>
 
 ```typescript
@@ -8692,7 +8696,7 @@ not wait for a default gateway, nor are IP addresses checked against any
 discovered default gateways as part of its success criteria. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L423">property waitForGuestNetTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L424">property waitForGuestNetTimeout</a>
 </h3>
 
 ```typescript
@@ -8705,7 +8709,7 @@ wait for an available IP address on this virtual machine. A value less than 1
 disables the waiter. Default: 5 minutes.
 
 <h2 class="pdoc-module-header" id="VirtualMachineSnapshot">
-<a class="pdoc-member-name" href="/virtualMachineSnapshot.ts#L30">class VirtualMachineSnapshot</a>
+<a class="pdoc-member-name" href="/virtualMachineSnapshot.ts#L31">class VirtualMachineSnapshot</a>
 </h2>
 
 The `vsphere_virtual_machine_snapshot` resource can be used to manage snapshots
@@ -8732,7 +8736,7 @@ limitation of virtual machine snapshots, see [here][ext-vm-snap-limitations].
 [ext-vm-snap-limitations]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L76">constructor</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L77">constructor</a>
 </h3>
 
 ```typescript
@@ -8747,7 +8751,7 @@ Create a VirtualMachineSnapshot resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L39">method get</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L40">method get</a>
 </h3>
 
 ```typescript
@@ -8779,7 +8783,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L48">property consolidate</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L49">property consolidate</a>
 </h3>
 
 ```typescript
@@ -8792,7 +8796,7 @@ snapshot will be consolidated into the parent when this resource is
 destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L52">property description</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L53">property description</a>
 </h3>
 
 ```typescript
@@ -8815,7 +8819,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L57">property memory</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L58">property memory</a>
 </h3>
 
 ```typescript
@@ -8827,7 +8831,7 @@ If set to `true`, a dump of the internal state of the
 virtual machine is included in the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L63">property quiesce</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L64">property quiesce</a>
 </h3>
 
 ```typescript
@@ -8840,7 +8844,7 @@ on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L68">property removeChildren</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L69">property removeChildren</a>
 </h3>
 
 ```typescript
@@ -8852,7 +8856,7 @@ If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L72">property snapshotName</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L73">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -8875,7 +8879,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L76">property virtualMachineUuid</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L77">property virtualMachineUuid</a>
 </h3>
 
 ```typescript
@@ -8886,7 +8890,7 @@ public virtualMachineUuid: pulumi.Output<string>;
 The virtual machine UUID.
 
 <h2 class="pdoc-module-header" id="VmfsDatastore">
-<a class="pdoc-member-name" href="/vmfsDatastore.ts#L16">class VmfsDatastore</a>
+<a class="pdoc-member-name" href="/vmfsDatastore.ts#L17">class VmfsDatastore</a>
 </h2>
 
 The `vsphere_vmfs_datastore` resource can be used to create and manage VMFS
@@ -8899,7 +8903,7 @@ Devices can be specified manually, or discovered using the
 [data-source-vmfs-disks]: /docs/providers/vsphere/d/vmfs_disks.html
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L104">constructor</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L105">constructor</a>
 </h3>
 
 ```typescript
@@ -8914,7 +8918,7 @@ Create a VmfsDatastore resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L25">method get</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L26">method get</a>
 </h3>
 
 ```typescript
@@ -8946,7 +8950,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L33">property accessible</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L34">property accessible</a>
 </h3>
 
 ```typescript
@@ -8958,7 +8962,7 @@ The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L37">property capacity</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L38">property capacity</a>
 </h3>
 
 ```typescript
@@ -8969,7 +8973,7 @@ public capacity: pulumi.Output<number>;
 Maximum capacity of the datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L44">property customAttributes</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L45">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -8983,7 +8987,7 @@ value string to set on datastore resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L50">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L51">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -8996,7 +9000,7 @@ ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L54">property disks</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L55">property disks</a>
 </h3>
 
 ```typescript
@@ -9007,7 +9011,7 @@ public disks: pulumi.Output<string[]>;
 The disks to use with the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L64">property folder</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L65">property folder</a>
 </h3>
 
 ```typescript
@@ -9024,7 +9028,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `datastore_cluster_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L68">property freeSpace</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L69">property freeSpace</a>
 </h3>
 
 ```typescript
@@ -9035,7 +9039,7 @@ public freeSpace: pulumi.Output<number>;
 Available space of this datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L76">property hostSystemId</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L77">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -9062,7 +9066,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L80">property maintenanceMode</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L81">property maintenanceMode</a>
 </h3>
 
 ```typescript
@@ -9073,7 +9077,7 @@ public maintenanceMode: pulumi.Output<string>;
 The current maintenance mode state of the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L85">property multipleHostAccess</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L86">property multipleHostAccess</a>
 </h3>
 
 ```typescript
@@ -9085,7 +9089,7 @@ If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L90">property name</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L91">property name</a>
 </h3>
 
 ```typescript
@@ -9097,7 +9101,7 @@ The name of the datastore. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L95">property tags</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L96">property tags</a>
 </h3>
 
 ```typescript
@@ -9109,7 +9113,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L100">property uncommittedSpace</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L101">property uncommittedSpace</a>
 </h3>
 
 ```typescript
@@ -9121,7 +9125,7 @@ Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L104">property url</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L105">property url</a>
 </h3>
 
 ```typescript
@@ -9144,7 +9148,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="getComputeCluster">
-<a class="pdoc-member-name" href="/getComputeCluster.ts#L24">function getComputeCluster</a>
+<a class="pdoc-member-name" href="/getComputeCluster.ts#L25">function getComputeCluster</a>
 </h2>
 
 ```typescript
@@ -9170,7 +9174,7 @@ details about clusters or how to work with them in Terraform.
 [docs-compute-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html
 
 <h2 class="pdoc-module-header" id="getCustomAttribute">
-<a class="pdoc-member-name" href="/getCustomAttribute.ts#L18">function getCustomAttribute</a>
+<a class="pdoc-member-name" href="/getCustomAttribute.ts#L19">function getCustomAttribute</a>
 </h2>
 
 ```typescript
@@ -9190,7 +9194,7 @@ other attributes are then populated with the data found by the search.
 and require vCenter.
 
 <h2 class="pdoc-module-header" id="getDatacenter">
-<a class="pdoc-member-name" href="/getDatacenter.ts#L14">function getDatacenter</a>
+<a class="pdoc-member-name" href="/getDatacenter.ts#L15">function getDatacenter</a>
 </h2>
 
 ```typescript
@@ -9206,7 +9210,7 @@ data source.
 [data-source-vsphere-host]: /docs/providers/vsphere/d/host.html
 
 <h2 class="pdoc-module-header" id="getDatastore">
-<a class="pdoc-member-name" href="/getDatastore.ts#L14">function getDatastore</a>
+<a class="pdoc-member-name" href="/getDatastore.ts#L15">function getDatastore</a>
 </h2>
 
 ```typescript
@@ -9222,7 +9226,7 @@ want to use to create virtual machines in using the
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
 <h2 class="pdoc-module-header" id="getDatastoreCluster">
-<a class="pdoc-member-name" href="/getDatastoreCluster.ts#L19">function getDatastoreCluster</a>
+<a class="pdoc-member-name" href="/getDatastoreCluster.ts#L20">function getDatastoreCluster</a>
 </h2>
 
 ```typescript
@@ -9243,7 +9247,7 @@ virtual machines in using the
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
 <h2 class="pdoc-module-header" id="getDistributedVirtualSwitch">
-<a class="pdoc-member-name" href="/getDistributedVirtualSwitch.ts#L18">function getDistributedVirtualSwitch</a>
+<a class="pdoc-member-name" href="/getDistributedVirtualSwitch.ts#L19">function getDistributedVirtualSwitch</a>
 </h2>
 
 ```typescript
@@ -9262,8 +9266,32 @@ an example is shown below.
 ~> **NOTE:** This data source requires vCenter and is not available on direct
 ESXi connections.
 
+<h2 class="pdoc-module-header" id="getEnv">
+<a class="pdoc-member-name" href="/utilities.ts#L7">function getEnv</a>
+</h2>
+
+```typescript
+getEnv(vars: string[]): string | undefined
+```
+
+<h2 class="pdoc-module-header" id="getEnvBoolean">
+<a class="pdoc-member-name" href="/utilities.ts#L17">function getEnvBoolean</a>
+</h2>
+
+```typescript
+getEnvBoolean(vars: string[]): boolean | undefined
+```
+
+<h2 class="pdoc-module-header" id="getEnvNumber">
+<a class="pdoc-member-name" href="/utilities.ts#L32">function getEnvNumber</a>
+</h2>
+
+```typescript
+getEnvNumber(vars: string[]): number | undefined
+```
+
 <h2 class="pdoc-module-header" id="getHost">
-<a class="pdoc-member-name" href="/getHost.ts#L11">function getHost</a>
+<a class="pdoc-member-name" href="/getHost.ts#L12">function getHost</a>
 </h2>
 
 ```typescript
@@ -9276,7 +9304,7 @@ host. This can then be used with resources or data sources that require a host
 managed object reference ID.
 
 <h2 class="pdoc-module-header" id="getNetwork">
-<a class="pdoc-member-name" href="/getNetwork.ts#L13">function getNetwork</a>
+<a class="pdoc-member-name" href="/getNetwork.ts#L14">function getNetwork</a>
 </h2>
 
 ```typescript
@@ -9291,7 +9319,7 @@ that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.
 
 <h2 class="pdoc-module-header" id="getResourcePool">
-<a class="pdoc-member-name" href="/getResourcePool.ts#L14">function getResourcePool</a>
+<a class="pdoc-member-name" href="/getResourcePool.ts#L15">function getResourcePool</a>
 </h2>
 
 ```typescript
@@ -9307,7 +9335,7 @@ that you want to use to create virtual machines in using the
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
 <h2 class="pdoc-module-header" id="getTag">
-<a class="pdoc-member-name" href="/getTag.ts#L18">function getTag</a>
+<a class="pdoc-member-name" href="/getTag.ts#L19">function getTag</a>
 </h2>
 
 ```typescript
@@ -9327,7 +9355,7 @@ the data found by the search.
 requires vCenter 6.0 or higher.
 
 <h2 class="pdoc-module-header" id="getTagCategory">
-<a class="pdoc-member-name" href="/getTagCategory.ts#L18">function getTagCategory</a>
+<a class="pdoc-member-name" href="/getTagCategory.ts#L19">function getTagCategory</a>
 </h2>
 
 ```typescript
@@ -9347,7 +9375,7 @@ then populated with the data found by the search.
 requires vCenter 6.0 or higher.
 
 <h2 class="pdoc-module-header" id="getVirtualMachine">
-<a class="pdoc-member-name" href="/getVirtualMachine.ts#L15">function getVirtualMachine</a>
+<a class="pdoc-member-name" href="/getVirtualMachine.ts#L16">function getVirtualMachine</a>
 </h2>
 
 ```typescript
@@ -9364,7 +9392,7 @@ reads the guest ID so that can be supplied as well.
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
 <h2 class="pdoc-module-header" id="getVmfsDisks">
-<a class="pdoc-member-name" href="/getVmfsDisks.ts#L14">function getVmfsDisks</a>
+<a class="pdoc-member-name" href="/getVmfsDisks.ts#L15">function getVmfsDisks</a>
 </h2>
 
 ```typescript
@@ -9379,14 +9407,22 @@ datastores based off a set of discovered disks.
 
 [data-source-vmfs-datastore]: /docs/providers/vsphere/r/vmfs_datastore.html
 
+<h2 class="pdoc-module-header" id="requireWithDefault">
+<a class="pdoc-member-name" href="/utilities.ts#L43">function requireWithDefault</a>
+</h2>
+
+```typescript
+requireWithDefault<T>(req: { ... }, def: T | undefined): T
+```
+
 <h2 class="pdoc-module-header" id="ComputeClusterArgs">
-<a class="pdoc-member-name" href="/computeCluster.ts#L874">interface ComputeClusterArgs</a>
+<a class="pdoc-member-name" href="/computeCluster.ts#L875">interface ComputeClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeCluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L881">property customAttributes</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L882">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -9400,7 +9436,7 @@ value strings to set for the datastore cluster. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L886">property datacenterId</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L887">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -9412,7 +9448,7 @@ The [managed object ID][docs-about-morefs] of
 the datacenter to create the cluster in. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L892">property dpmAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L893">property dpmAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -9425,7 +9461,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L898">property dpmEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L899">property dpmEnabled</a>
 </h3>
 
 ```typescript
@@ -9438,7 +9474,7 @@ Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L905">property dpmThreshold</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L906">property dpmThreshold</a>
 </h3>
 
 ```typescript
@@ -9452,7 +9488,7 @@ This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L910">property drsAdvancedOptions</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L911">property drsAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -9464,7 +9500,7 @@ A key/value map that specifies advanced
 options for DRS and DPM.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L916">property drsAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L917">property drsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -9477,7 +9513,7 @@ virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L922">property drsEnablePredictiveDrs</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L923">property drsEnablePredictiveDrs</a>
 </h3>
 
 ```typescript
@@ -9490,7 +9526,7 @@ from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L927">property drsEnableVmOverrides</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L928">property drsEnableVmOverrides</a>
 </h3>
 
 ```typescript
@@ -9502,7 +9538,7 @@ Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L931">property drsEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L932">property drsEnabled</a>
 </h3>
 
 ```typescript
@@ -9513,7 +9549,7 @@ drsEnabled?: pulumi.Input<boolean>;
 Enable DRS for this cluster. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L938">property drsMigrationThreshold</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L939">property drsMigrationThreshold</a>
 </h3>
 
 ```typescript
@@ -9527,7 +9563,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L947">property folder</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L948">property folder</a>
 </h3>
 
 ```typescript
@@ -9543,7 +9579,7 @@ host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/terraform-datastore-cluster-test`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L955">property forceEvacuateOnDestroy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L956">property forceEvacuateOnDestroy</a>
 </h3>
 
 ```typescript
@@ -9558,7 +9594,7 @@ below). This is an advanced
 option and should only be used for testing. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L963">property haAdmissionControlFailoverHostSystemIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L964">property haAdmissionControlFailoverHostSystemIds</a>
 </h3>
 
 ```typescript
@@ -9573,7 +9609,7 @@ block access to the host, and DRS will ignore the host when making
 recommendations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L971">property haAdmissionControlHostFailureTolerance</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L972">property haAdmissionControlHostFailureTolerance</a>
 </h3>
 
 ```typescript
@@ -9588,7 +9624,7 @@ the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L978">property haAdmissionControlPerformanceTolerance</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L979">property haAdmissionControlPerformanceTolerance</a>
 </h3>
 
 ```typescript
@@ -9602,7 +9638,7 @@ a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L984">property haAdmissionControlPolicy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L985">property haAdmissionControlPolicy</a>
 </h3>
 
 ```typescript
@@ -9615,7 +9651,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L994">property haAdmissionControlResourcePercentageAutoCompute</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L995">property haAdmissionControlResourcePercentageAutoCompute</a>
 </h3>
 
 ```typescript
@@ -9631,7 +9667,7 @@ user-defined values. Default: `true`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1000">property haAdmissionControlResourcePercentageCpu</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1001">property haAdmissionControlResourcePercentageCpu</a>
 </h3>
 
 ```typescript
@@ -9644,7 +9680,7 @@ user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1006">property haAdmissionControlResourcePercentageMemory</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1007">property haAdmissionControlResourcePercentageMemory</a>
 </h3>
 
 ```typescript
@@ -9657,7 +9693,7 @@ user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1011">property haAdmissionControlSlotPolicyExplicitCpu</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1012">property haAdmissionControlSlotPolicyExplicitCpu</a>
 </h3>
 
 ```typescript
@@ -9669,7 +9705,7 @@ Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1016">property haAdmissionControlSlotPolicyExplicitMemory</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1017">property haAdmissionControlSlotPolicyExplicitMemory</a>
 </h3>
 
 ```typescript
@@ -9681,7 +9717,7 @@ Controls the
 user-defined memory slot size, in MB. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1023">property haAdmissionControlSlotPolicyUseExplicitSize</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1024">property haAdmissionControlSlotPolicyUseExplicitSize</a>
 </h3>
 
 ```typescript
@@ -9695,7 +9731,7 @@ sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1028">property haAdvancedOptions</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1029">property haAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -9707,7 +9743,7 @@ A key/value map that specifies advanced
 options for vSphere HA.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1035">property haDatastoreApdRecoveryAction</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1036">property haDatastoreApdRecoveryAction</a>
 </h3>
 
 ```typescript
@@ -9721,7 +9757,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1043">property haDatastoreApdResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1044">property haDatastoreApdResponse</a>
 </h3>
 
 ```typescript
@@ -9736,7 +9772,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1050">property haDatastoreApdResponseDelay</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1051">property haDatastoreApdResponseDelay</a>
 </h3>
 
 ```typescript
@@ -9750,7 +9786,7 @@ to wait after an APD timeout event to execute the response action defined in
 minutes. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1058">property haDatastorePdlResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1059">property haDatastorePdlResponse</a>
 </h3>
 
 ```typescript
@@ -9765,7 +9801,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1063">property haEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1064">property haEnabled</a>
 </h3>
 
 ```typescript
@@ -9777,7 +9813,7 @@ Enable vSphere HA for this cluster. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1070">property haHeartbeatDatastoreIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1071">property haHeartbeatDatastoreIds</a>
 </h3>
 
 ```typescript
@@ -9791,7 +9827,7 @@ when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1077">property haHeartbeatDatastorePolicy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1078">property haHeartbeatDatastorePolicy</a>
 </h3>
 
 ```typescript
@@ -9805,7 +9841,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1084">property haHostIsolationResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1085">property haHostIsolationResponse</a>
 </h3>
 
 ```typescript
@@ -9819,7 +9855,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1090">property haHostMonitoring</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1091">property haHostMonitoring</a>
 </h3>
 
 ```typescript
@@ -9832,7 +9868,7 @@ vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1097">property haVmComponentProtection</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1098">property haVmComponentProtection</a>
 </h3>
 
 ```typescript
@@ -9846,7 +9882,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1107">property haVmDependencyRestartCondition</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1108">property haVmDependencyRestartCondition</a>
 </h3>
 
 ```typescript
@@ -9863,7 +9899,7 @@ is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1113">property haVmFailureInterval</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1114">property haVmFailureInterval</a>
 </h3>
 
 ```typescript
@@ -9876,7 +9912,7 @@ is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1122">property haVmMaximumFailureWindow</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1123">property haVmMaximumFailureWindow</a>
 </h3>
 
 ```typescript
@@ -9892,7 +9928,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1127">property haVmMaximumResets</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1128">property haVmMaximumResets</a>
 </h3>
 
 ```typescript
@@ -9904,7 +9940,7 @@ The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1133">property haVmMinimumUptime</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1134">property haVmMinimumUptime</a>
 </h3>
 
 ```typescript
@@ -9917,7 +9953,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1139">property haVmMonitoring</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1140">property haVmMonitoring</a>
 </h3>
 
 ```typescript
@@ -9930,7 +9966,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1145">property haVmRestartAdditionalDelay</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1146">property haVmRestartAdditionalDelay</a>
 </h3>
 
 ```typescript
@@ -9943,7 +9979,7 @@ after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1151">property haVmRestartPriority</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1152">property haVmRestartPriority</a>
 </h3>
 
 ```typescript
@@ -9956,7 +9992,7 @@ for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1158">property haVmRestartTimeout</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1159">property haVmRestartTimeout</a>
 </h3>
 
 ```typescript
@@ -9970,7 +10006,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1164">property hostClusterExitTimeout</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1165">property hostClusterExitTimeout</a>
 </h3>
 
 ```typescript
@@ -9983,7 +10019,7 @@ operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1169">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1170">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -9995,7 +10031,7 @@ The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1173">property name</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1174">property name</a>
 </h3>
 
 ```typescript
@@ -10006,7 +10042,7 @@ name?: pulumi.Input<string>;
 The name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1180">property proactiveHaAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1181">property proactiveHaAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -10020,7 +10056,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1185">property proactiveHaEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1186">property proactiveHaEnabled</a>
 </h3>
 
 ```typescript
@@ -10032,7 +10068,7 @@ Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1194">property proactiveHaModerateRemediation</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1195">property proactiveHaModerateRemediation</a>
 </h3>
 
 ```typescript
@@ -10048,7 +10084,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1200">property proactiveHaProviderIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1201">property proactiveHaProviderIds</a>
 </h3>
 
 ```typescript
@@ -10061,7 +10097,7 @@ providers configured for this cluster.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1209">property proactiveHaSevereRemediation</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1210">property proactiveHaSevereRemediation</a>
 </h3>
 
 ```typescript
@@ -10077,7 +10113,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L1214">property tags</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L1215">property tags</a>
 </h3>
 
 ```typescript
@@ -10089,13 +10125,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="ComputeClusterHostGroupArgs">
-<a class="pdoc-member-name" href="/computeClusterHostGroup.ts#L110">interface ComputeClusterHostGroupArgs</a>
+<a class="pdoc-member-name" href="/computeClusterHostGroup.ts#L111">interface ComputeClusterHostGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeClusterHostGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L116">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L117">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -10108,7 +10144,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L121">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L122">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -10120,7 +10156,7 @@ The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L126">property name</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L127">property name</a>
 </h3>
 
 ```typescript
@@ -10132,13 +10168,13 @@ The name of the host group. This must be unique in the
 cluster. Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="ComputeClusterHostGroupState">
-<a class="pdoc-member-name" href="/computeClusterHostGroup.ts#L88">interface ComputeClusterHostGroupState</a>
+<a class="pdoc-member-name" href="/computeClusterHostGroup.ts#L89">interface ComputeClusterHostGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeClusterHostGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L94">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L95">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -10151,7 +10187,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L99">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L100">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -10163,7 +10199,7 @@ The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L104">property name</a>
+<a class="pdoc-child-name" href="/computeClusterHostGroup.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -10175,13 +10211,13 @@ The name of the host group. This must be unique in the
 cluster. Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="ComputeClusterState">
-<a class="pdoc-member-name" href="/computeCluster.ts#L524">interface ComputeClusterState</a>
+<a class="pdoc-member-name" href="/computeCluster.ts#L525">interface ComputeClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeCluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L531">property customAttributes</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L532">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -10195,7 +10231,7 @@ value strings to set for the datastore cluster. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L536">property datacenterId</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L537">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -10207,7 +10243,7 @@ The [managed object ID][docs-about-morefs] of
 the datacenter to create the cluster in. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L542">property dpmAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L543">property dpmAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -10220,7 +10256,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L548">property dpmEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L549">property dpmEnabled</a>
 </h3>
 
 ```typescript
@@ -10233,7 +10269,7 @@ Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L555">property dpmThreshold</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L556">property dpmThreshold</a>
 </h3>
 
 ```typescript
@@ -10247,7 +10283,7 @@ This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L560">property drsAdvancedOptions</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L561">property drsAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -10259,7 +10295,7 @@ A key/value map that specifies advanced
 options for DRS and DPM.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L566">property drsAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L567">property drsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -10272,7 +10308,7 @@ virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L572">property drsEnablePredictiveDrs</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L573">property drsEnablePredictiveDrs</a>
 </h3>
 
 ```typescript
@@ -10285,7 +10321,7 @@ from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L577">property drsEnableVmOverrides</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L578">property drsEnableVmOverrides</a>
 </h3>
 
 ```typescript
@@ -10297,7 +10333,7 @@ Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L581">property drsEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L582">property drsEnabled</a>
 </h3>
 
 ```typescript
@@ -10308,7 +10344,7 @@ drsEnabled?: pulumi.Input<boolean>;
 Enable DRS for this cluster. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L588">property drsMigrationThreshold</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L589">property drsMigrationThreshold</a>
 </h3>
 
 ```typescript
@@ -10322,7 +10358,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L597">property folder</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L598">property folder</a>
 </h3>
 
 ```typescript
@@ -10338,7 +10374,7 @@ host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/terraform-datastore-cluster-test`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L605">property forceEvacuateOnDestroy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L606">property forceEvacuateOnDestroy</a>
 </h3>
 
 ```typescript
@@ -10353,7 +10389,7 @@ below). This is an advanced
 option and should only be used for testing. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L613">property haAdmissionControlFailoverHostSystemIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L614">property haAdmissionControlFailoverHostSystemIds</a>
 </h3>
 
 ```typescript
@@ -10368,7 +10404,7 @@ block access to the host, and DRS will ignore the host when making
 recommendations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L621">property haAdmissionControlHostFailureTolerance</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L622">property haAdmissionControlHostFailureTolerance</a>
 </h3>
 
 ```typescript
@@ -10383,7 +10419,7 @@ the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L628">property haAdmissionControlPerformanceTolerance</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L629">property haAdmissionControlPerformanceTolerance</a>
 </h3>
 
 ```typescript
@@ -10397,7 +10433,7 @@ a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L634">property haAdmissionControlPolicy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L635">property haAdmissionControlPolicy</a>
 </h3>
 
 ```typescript
@@ -10410,7 +10446,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L644">property haAdmissionControlResourcePercentageAutoCompute</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L645">property haAdmissionControlResourcePercentageAutoCompute</a>
 </h3>
 
 ```typescript
@@ -10426,7 +10462,7 @@ user-defined values. Default: `true`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L650">property haAdmissionControlResourcePercentageCpu</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L651">property haAdmissionControlResourcePercentageCpu</a>
 </h3>
 
 ```typescript
@@ -10439,7 +10475,7 @@ user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L656">property haAdmissionControlResourcePercentageMemory</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L657">property haAdmissionControlResourcePercentageMemory</a>
 </h3>
 
 ```typescript
@@ -10452,7 +10488,7 @@ user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L661">property haAdmissionControlSlotPolicyExplicitCpu</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L662">property haAdmissionControlSlotPolicyExplicitCpu</a>
 </h3>
 
 ```typescript
@@ -10464,7 +10500,7 @@ Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L666">property haAdmissionControlSlotPolicyExplicitMemory</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L667">property haAdmissionControlSlotPolicyExplicitMemory</a>
 </h3>
 
 ```typescript
@@ -10476,7 +10512,7 @@ Controls the
 user-defined memory slot size, in MB. Default: `100`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L673">property haAdmissionControlSlotPolicyUseExplicitSize</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L674">property haAdmissionControlSlotPolicyUseExplicitSize</a>
 </h3>
 
 ```typescript
@@ -10490,7 +10526,7 @@ sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L678">property haAdvancedOptions</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L679">property haAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -10502,7 +10538,7 @@ A key/value map that specifies advanced
 options for vSphere HA.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L685">property haDatastoreApdRecoveryAction</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L686">property haDatastoreApdRecoveryAction</a>
 </h3>
 
 ```typescript
@@ -10516,7 +10552,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L693">property haDatastoreApdResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L694">property haDatastoreApdResponse</a>
 </h3>
 
 ```typescript
@@ -10531,7 +10567,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L700">property haDatastoreApdResponseDelay</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L701">property haDatastoreApdResponseDelay</a>
 </h3>
 
 ```typescript
@@ -10545,7 +10581,7 @@ to wait after an APD timeout event to execute the response action defined in
 minutes. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L708">property haDatastorePdlResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L709">property haDatastorePdlResponse</a>
 </h3>
 
 ```typescript
@@ -10560,7 +10596,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L713">property haEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L714">property haEnabled</a>
 </h3>
 
 ```typescript
@@ -10572,7 +10608,7 @@ Enable vSphere HA for this cluster. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L720">property haHeartbeatDatastoreIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L721">property haHeartbeatDatastoreIds</a>
 </h3>
 
 ```typescript
@@ -10586,7 +10622,7 @@ when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L727">property haHeartbeatDatastorePolicy</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L728">property haHeartbeatDatastorePolicy</a>
 </h3>
 
 ```typescript
@@ -10600,7 +10636,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L734">property haHostIsolationResponse</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L735">property haHostIsolationResponse</a>
 </h3>
 
 ```typescript
@@ -10614,7 +10650,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L740">property haHostMonitoring</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L741">property haHostMonitoring</a>
 </h3>
 
 ```typescript
@@ -10627,7 +10663,7 @@ vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L747">property haVmComponentProtection</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L748">property haVmComponentProtection</a>
 </h3>
 
 ```typescript
@@ -10641,7 +10677,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L757">property haVmDependencyRestartCondition</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L758">property haVmDependencyRestartCondition</a>
 </h3>
 
 ```typescript
@@ -10658,7 +10694,7 @@ is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L763">property haVmFailureInterval</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L764">property haVmFailureInterval</a>
 </h3>
 
 ```typescript
@@ -10671,7 +10707,7 @@ is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L772">property haVmMaximumFailureWindow</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L773">property haVmMaximumFailureWindow</a>
 </h3>
 
 ```typescript
@@ -10687,7 +10723,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L777">property haVmMaximumResets</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L778">property haVmMaximumResets</a>
 </h3>
 
 ```typescript
@@ -10699,7 +10735,7 @@ The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L783">property haVmMinimumUptime</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L784">property haVmMinimumUptime</a>
 </h3>
 
 ```typescript
@@ -10712,7 +10748,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L789">property haVmMonitoring</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L790">property haVmMonitoring</a>
 </h3>
 
 ```typescript
@@ -10725,7 +10761,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L795">property haVmRestartAdditionalDelay</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L796">property haVmRestartAdditionalDelay</a>
 </h3>
 
 ```typescript
@@ -10738,7 +10774,7 @@ after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L801">property haVmRestartPriority</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L802">property haVmRestartPriority</a>
 </h3>
 
 ```typescript
@@ -10751,7 +10787,7 @@ for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L808">property haVmRestartTimeout</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L809">property haVmRestartTimeout</a>
 </h3>
 
 ```typescript
@@ -10765,7 +10801,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L814">property hostClusterExitTimeout</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L815">property hostClusterExitTimeout</a>
 </h3>
 
 ```typescript
@@ -10778,7 +10814,7 @@ operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L819">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L820">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -10790,7 +10826,7 @@ The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L823">property name</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L824">property name</a>
 </h3>
 
 ```typescript
@@ -10801,7 +10837,7 @@ name?: pulumi.Input<string>;
 The name of the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L830">property proactiveHaAutomationLevel</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L831">property proactiveHaAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -10815,7 +10851,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L835">property proactiveHaEnabled</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L836">property proactiveHaEnabled</a>
 </h3>
 
 ```typescript
@@ -10827,7 +10863,7 @@ Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L844">property proactiveHaModerateRemediation</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L845">property proactiveHaModerateRemediation</a>
 </h3>
 
 ```typescript
@@ -10843,7 +10879,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L850">property proactiveHaProviderIds</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L851">property proactiveHaProviderIds</a>
 </h3>
 
 ```typescript
@@ -10856,7 +10892,7 @@ providers configured for this cluster.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L859">property proactiveHaSevereRemediation</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L860">property proactiveHaSevereRemediation</a>
 </h3>
 
 ```typescript
@@ -10872,7 +10908,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L863">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L864">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -10883,7 +10919,7 @@ resourcePoolId?: pulumi.Input<string>;
 The managed object ID of the cluster's root resource pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeCluster.ts#L868">property tags</a>
+<a class="pdoc-child-name" href="/computeCluster.ts#L869">property tags</a>
 </h3>
 
 ```typescript
@@ -10895,13 +10931,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmAffinityRuleArgs">
-<a class="pdoc-member-name" href="/computeClusterVmAffinityRule.ts#L140">interface ComputeClusterVmAffinityRuleArgs</a>
+<a class="pdoc-member-name" href="/computeClusterVmAffinityRule.ts#L141">interface ComputeClusterVmAffinityRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeClusterVmAffinityRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L146">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L147">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -10914,7 +10950,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L150">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L151">property enabled</a>
 </h3>
 
 ```typescript
@@ -10925,7 +10961,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L155">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L156">property mandatory</a>
 </h3>
 
 ```typescript
@@ -10937,7 +10973,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L159">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L160">property name</a>
 </h3>
 
 ```typescript
@@ -10948,7 +10984,7 @@ name?: pulumi.Input<string>;
 The name of the rule. This must be unique in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L164">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L165">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -10960,13 +10996,13 @@ The UUIDs of the virtual machines to run
 on the same host together.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmAffinityRuleState">
-<a class="pdoc-member-name" href="/computeClusterVmAffinityRule.ts#L110">interface ComputeClusterVmAffinityRuleState</a>
+<a class="pdoc-member-name" href="/computeClusterVmAffinityRule.ts#L111">interface ComputeClusterVmAffinityRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeClusterVmAffinityRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L116">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L117">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -10979,7 +11015,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L120">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L121">property enabled</a>
 </h3>
 
 ```typescript
@@ -10990,7 +11026,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L125">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L126">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11002,7 +11038,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L129">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L130">property name</a>
 </h3>
 
 ```typescript
@@ -11013,7 +11049,7 @@ name?: pulumi.Input<string>;
 The name of the rule. This must be unique in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L134">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmAffinityRule.ts#L135">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -11025,13 +11061,13 @@ The UUIDs of the virtual machines to run
 on the same host together.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmAntiAffinityRuleArgs">
-<a class="pdoc-member-name" href="/computeClusterVmAntiAffinityRule.ts#L141">interface ComputeClusterVmAntiAffinityRuleArgs</a>
+<a class="pdoc-member-name" href="/computeClusterVmAntiAffinityRule.ts#L142">interface ComputeClusterVmAntiAffinityRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeClusterVmAntiAffinityRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L147">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L148">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11044,7 +11080,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L151">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L152">property enabled</a>
 </h3>
 
 ```typescript
@@ -11055,7 +11091,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L156">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L157">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11067,7 +11103,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L160">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L161">property name</a>
 </h3>
 
 ```typescript
@@ -11078,7 +11114,7 @@ name?: pulumi.Input<string>;
 The name of the rule. This must be unique in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L165">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L166">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -11090,13 +11126,13 @@ The UUIDs of the virtual machines to run
 on hosts different from each other.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmAntiAffinityRuleState">
-<a class="pdoc-member-name" href="/computeClusterVmAntiAffinityRule.ts#L111">interface ComputeClusterVmAntiAffinityRuleState</a>
+<a class="pdoc-member-name" href="/computeClusterVmAntiAffinityRule.ts#L112">interface ComputeClusterVmAntiAffinityRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeClusterVmAntiAffinityRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L117">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L118">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11109,7 +11145,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L121">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L122">property enabled</a>
 </h3>
 
 ```typescript
@@ -11120,7 +11156,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L126">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L127">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11132,7 +11168,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L130">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L131">property name</a>
 </h3>
 
 ```typescript
@@ -11143,7 +11179,7 @@ name?: pulumi.Input<string>;
 The name of the rule. This must be unique in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L135">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmAntiAffinityRule.ts#L136">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -11155,13 +11191,13 @@ The UUIDs of the virtual machines to run
 on hosts different from each other.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmDependencyRuleArgs">
-<a class="pdoc-member-name" href="/computeClusterVmDependencyRule.ts#L157">interface ComputeClusterVmDependencyRuleArgs</a>
+<a class="pdoc-member-name" href="/computeClusterVmDependencyRule.ts#L158">interface ComputeClusterVmDependencyRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeClusterVmDependencyRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L163">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L164">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11174,7 +11210,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L170">property dependencyVmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L171">property dependencyVmGroupName</a>
 </h3>
 
 ```typescript
@@ -11188,7 +11224,7 @@ rule depends on. The VMs defined in the group specified by
 group are started.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L174">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L175">property enabled</a>
 </h3>
 
 ```typescript
@@ -11199,7 +11235,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L179">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L180">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11211,7 +11247,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L184">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L185">property name</a>
 </h3>
 
 ```typescript
@@ -11223,7 +11259,7 @@ The name of the rule. This must be unique in the
 cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L191">property vmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L192">property vmGroupName</a>
 </h3>
 
 ```typescript
@@ -11237,13 +11273,13 @@ the group specified by
 `dependency_vm_group_name` are started.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmDependencyRuleState">
-<a class="pdoc-member-name" href="/computeClusterVmDependencyRule.ts#L117">interface ComputeClusterVmDependencyRuleState</a>
+<a class="pdoc-member-name" href="/computeClusterVmDependencyRule.ts#L118">interface ComputeClusterVmDependencyRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeClusterVmDependencyRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L123">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L124">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11256,7 +11292,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L130">property dependencyVmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L131">property dependencyVmGroupName</a>
 </h3>
 
 ```typescript
@@ -11270,7 +11306,7 @@ rule depends on. The VMs defined in the group specified by
 group are started.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L134">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L135">property enabled</a>
 </h3>
 
 ```typescript
@@ -11281,7 +11317,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L139">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L140">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11293,7 +11329,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L144">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L145">property name</a>
 </h3>
 
 ```typescript
@@ -11305,7 +11341,7 @@ The name of the rule. This must be unique in the
 cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L151">property vmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmDependencyRule.ts#L152">property vmGroupName</a>
 </h3>
 
 ```typescript
@@ -11319,13 +11355,13 @@ the group specified by
 `dependency_vm_group_name` are started.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmGroupArgs">
-<a class="pdoc-member-name" href="/computeClusterVmGroup.ts#L112">interface ComputeClusterVmGroupArgs</a>
+<a class="pdoc-member-name" href="/computeClusterVmGroup.ts#L113">interface ComputeClusterVmGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeClusterVmGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L118">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L119">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11338,7 +11374,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L123">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L124">property name</a>
 </h3>
 
 ```typescript
@@ -11350,7 +11386,7 @@ The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L128">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L129">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -11362,13 +11398,13 @@ The UUIDs of the virtual machines in this
 group.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmGroupState">
-<a class="pdoc-member-name" href="/computeClusterVmGroup.ts#L90">interface ComputeClusterVmGroupState</a>
+<a class="pdoc-member-name" href="/computeClusterVmGroup.ts#L91">interface ComputeClusterVmGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeClusterVmGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L96">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L97">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11381,7 +11417,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L101">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L102">property name</a>
 </h3>
 
 ```typescript
@@ -11393,7 +11429,7 @@ The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L106">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/computeClusterVmGroup.ts#L107">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -11405,13 +11441,13 @@ The UUIDs of the virtual machines in this
 group.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmHostRuleArgs">
-<a class="pdoc-member-name" href="/computeClusterVmHostRule.ts#L167">interface ComputeClusterVmHostRuleArgs</a>
+<a class="pdoc-member-name" href="/computeClusterVmHostRule.ts#L168">interface ComputeClusterVmHostRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a ComputeClusterVmHostRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L173">property affinityHostGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L174">property affinityHostGroupName</a>
 </h3>
 
 ```typescript
@@ -11424,7 +11460,7 @@ machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L179">property antiAffinityHostGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L180">property antiAffinityHostGroupName</a>
 </h3>
 
 ```typescript
@@ -11437,7 +11473,7 @@ virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L185">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L186">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11450,7 +11486,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L189">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L190">property enabled</a>
 </h3>
 
 ```typescript
@@ -11461,7 +11497,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L194">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L195">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11473,7 +11509,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L199">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L200">property name</a>
 </h3>
 
 ```typescript
@@ -11485,7 +11521,7 @@ The name of the rule. This must be unique in the
 cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L204">property vmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L205">property vmGroupName</a>
 </h3>
 
 ```typescript
@@ -11497,13 +11533,13 @@ The name of the virtual machine group to use
 with this rule.
 
 <h2 class="pdoc-module-header" id="ComputeClusterVmHostRuleState">
-<a class="pdoc-member-name" href="/computeClusterVmHostRule.ts#L124">interface ComputeClusterVmHostRuleState</a>
+<a class="pdoc-member-name" href="/computeClusterVmHostRule.ts#L125">interface ComputeClusterVmHostRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering ComputeClusterVmHostRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L130">property affinityHostGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L131">property affinityHostGroupName</a>
 </h3>
 
 ```typescript
@@ -11516,7 +11552,7 @@ machines defined in `vm_group_name` will be run on the
 hosts defined in this host group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L136">property antiAffinityHostGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L137">property antiAffinityHostGroupName</a>
 </h3>
 
 ```typescript
@@ -11529,7 +11565,7 @@ virtual machines defined in `vm_group_name` will _not_ be
 run on the hosts defined in this host group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L142">property computeClusterId</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L143">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -11542,7 +11578,7 @@ ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L146">property enabled</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L147">property enabled</a>
 </h3>
 
 ```typescript
@@ -11553,7 +11589,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L151">property mandatory</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L152">property mandatory</a>
 </h3>
 
 ```typescript
@@ -11565,7 +11601,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L156">property name</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L157">property name</a>
 </h3>
 
 ```typescript
@@ -11577,7 +11613,7 @@ The name of the rule. This must be unique in the
 cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L161">property vmGroupName</a>
+<a class="pdoc-child-name" href="/computeClusterVmHostRule.ts#L162">property vmGroupName</a>
 </h3>
 
 ```typescript
@@ -11589,13 +11625,13 @@ The name of the virtual machine group to use
 with this rule.
 
 <h2 class="pdoc-module-header" id="CustomAttributeArgs">
-<a class="pdoc-member-name" href="/customAttribute.ts#L87">interface CustomAttributeArgs</a>
+<a class="pdoc-member-name" href="/customAttribute.ts#L88">interface CustomAttributeArgs</a>
 </h2>
 
 The set of arguments for constructing a CustomAttribute resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L94">property managedObjectType</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L95">property managedObjectType</a>
 </h3>
 
 ```typescript
@@ -11609,7 +11645,7 @@ type. For a full list, click here. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L98">property name</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L99">property name</a>
 </h3>
 
 ```typescript
@@ -11620,13 +11656,13 @@ name?: pulumi.Input<string>;
 The name of the custom attribute.
 
 <h2 class="pdoc-module-header" id="CustomAttributeState">
-<a class="pdoc-member-name" href="/customAttribute.ts#L70">interface CustomAttributeState</a>
+<a class="pdoc-member-name" href="/customAttribute.ts#L71">interface CustomAttributeState</a>
 </h2>
 
 Input properties used for looking up and filtering CustomAttribute resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L77">property managedObjectType</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L78">property managedObjectType</a>
 </h3>
 
 ```typescript
@@ -11640,7 +11676,7 @@ type. For a full list, click here. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/customAttribute.ts#L81">property name</a>
+<a class="pdoc-child-name" href="/customAttribute.ts#L82">property name</a>
 </h3>
 
 ```typescript
@@ -11651,13 +11687,13 @@ name?: pulumi.Input<string>;
 The name of the custom attribute.
 
 <h2 class="pdoc-module-header" id="DatacenterArgs">
-<a class="pdoc-member-name" href="/datacenter.ts#L114">interface DatacenterArgs</a>
+<a class="pdoc-member-name" href="/datacenter.ts#L115">interface DatacenterArgs</a>
 </h2>
 
 The set of arguments for constructing a Datacenter resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L121">property customAttributes</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L122">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -11671,7 +11707,7 @@ strings to set for datacenter resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L126">property folder</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L127">property folder</a>
 </h3>
 
 ```typescript
@@ -11683,7 +11719,7 @@ The folder where the datacenter should be created.
 Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L131">property name</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L132">property name</a>
 </h3>
 
 ```typescript
@@ -11695,7 +11731,7 @@ The name of the datacenter. This name needs to be unique
 within the folder. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L136">property tags</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L137">property tags</a>
 </h3>
 
 ```typescript
@@ -11707,13 +11743,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="DatacenterState">
-<a class="pdoc-member-name" href="/datacenter.ts#L82">interface DatacenterState</a>
+<a class="pdoc-member-name" href="/datacenter.ts#L83">interface DatacenterState</a>
 </h2>
 
 Input properties used for looking up and filtering Datacenter resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L89">property customAttributes</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L90">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -11727,7 +11763,7 @@ strings to set for datacenter resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L94">property folder</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L95">property folder</a>
 </h3>
 
 ```typescript
@@ -11739,7 +11775,7 @@ The folder where the datacenter should be created.
 Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L98">property moid</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L99">property moid</a>
 </h3>
 
 ```typescript
@@ -11750,7 +11786,7 @@ moid?: pulumi.Input<string>;
 [Managed object ID][docs-about-morefs] of this datacenter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L103">property name</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L104">property name</a>
 </h3>
 
 ```typescript
@@ -11762,7 +11798,7 @@ The name of the datacenter. This name needs to be unique
 within the folder. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datacenter.ts#L108">property tags</a>
+<a class="pdoc-child-name" href="/datacenter.ts#L109">property tags</a>
 </h3>
 
 ```typescript
@@ -11774,13 +11810,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="DatastoreClusterArgs">
-<a class="pdoc-member-name" href="/datastoreCluster.ts#L405">interface DatastoreClusterArgs</a>
+<a class="pdoc-member-name" href="/datastoreCluster.ts#L406">interface DatastoreClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a DatastoreCluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L412">property customAttributes</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L413">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -11794,7 +11830,7 @@ value strings to set for the datastore cluster. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L418">property datacenterId</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L419">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -11807,7 +11843,7 @@ the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L428">property folder</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L429">property folder</a>
 </h3>
 
 ```typescript
@@ -11824,7 +11860,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar/terraform-datastore-cluster-test`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L432">property name</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L433">property name</a>
 </h3>
 
 ```typescript
@@ -11835,7 +11871,7 @@ name?: pulumi.Input<string>;
 The name of the datastore cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L437">property sdrsAdvancedOptions</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L438">property sdrsAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -11847,7 +11883,7 @@ A key/value map of advanced Storage DRS
 settings that are not exposed via Terraform or the vSphere client.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L442">property sdrsAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L443">property sdrsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -11859,7 +11895,7 @@ The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L447">property sdrsDefaultIntraVmAffinity</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L448">property sdrsDefaultIntraVmAffinity</a>
 </h3>
 
 ```typescript
@@ -11871,7 +11907,7 @@ When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L452">property sdrsEnabled</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L453">property sdrsEnabled</a>
 </h3>
 
 ```typescript
@@ -11883,7 +11919,7 @@ Enable Storage DRS for this datastore cluster.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L459">property sdrsFreeSpaceThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L460">property sdrsFreeSpaceThreshold</a>
 </h3>
 
 ```typescript
@@ -11897,7 +11933,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L464">property sdrsFreeSpaceThresholdMode</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L465">property sdrsFreeSpaceThresholdMode</a>
 </h3>
 
 ```typescript
@@ -11909,7 +11945,7 @@ The free space threshold to use. When set to utilization, drs_space_utilization_
 freeSpace, drs_free_space_threshold is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L470">property sdrsFreeSpaceUtilizationDifference</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L471">property sdrsFreeSpaceUtilizationDifference</a>
 </h3>
 
 ```typescript
@@ -11922,7 +11958,7 @@ percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L475">property sdrsIoBalanceAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L476">property sdrsIoBalanceAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -11934,7 +11970,7 @@ Overrides the default
 automation settings when correcting I/O load imbalances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L481">property sdrsIoLatencyThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L482">property sdrsIoLatencyThreshold</a>
 </h3>
 
 ```typescript
@@ -11947,7 +11983,7 @@ milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L486">property sdrsIoLoadBalanceEnabled</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L487">property sdrsIoLoadBalanceEnabled</a>
 </h3>
 
 ```typescript
@@ -11959,7 +11995,7 @@ Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L492">property sdrsIoLoadImbalanceThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L493">property sdrsIoLoadImbalanceThreshold</a>
 </h3>
 
 ```typescript
@@ -11972,7 +12008,7 @@ in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L501">property sdrsIoReservableIopsThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L502">property sdrsIoReservableIopsThreshold</a>
 </h3>
 
 ```typescript
@@ -11988,7 +12024,7 @@ estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L508">property sdrsIoReservablePercentThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L509">property sdrsIoReservablePercentThreshold</a>
 </h3>
 
 ```typescript
@@ -12002,7 +12038,7 @@ storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L515">property sdrsIoReservableThresholdMode</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L516">property sdrsIoReservableThresholdMode</a>
 </h3>
 
 ```typescript
@@ -12016,7 +12052,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L520">property sdrsLoadBalanceInterval</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L521">property sdrsLoadBalanceInterval</a>
 </h3>
 
 ```typescript
@@ -12028,7 +12064,7 @@ The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L525">property sdrsPolicyEnforcementAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L526">property sdrsPolicyEnforcementAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12040,7 +12076,7 @@ Overrides the default
 automation settings when correcting storage and VM policy violations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L530">property sdrsRuleEnforcementAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L531">property sdrsRuleEnforcementAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12052,7 +12088,7 @@ Overrides the default
 automation settings when correcting affinity rule violations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L535">property sdrsSpaceBalanceAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L536">property sdrsSpaceBalanceAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12064,7 +12100,7 @@ Overrides the default
 automation settings when correcting disk space imbalances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L539">property sdrsSpaceUtilizationThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L540">property sdrsSpaceUtilizationThreshold</a>
 </h3>
 
 ```typescript
@@ -12075,7 +12111,7 @@ sdrsSpaceUtilizationThreshold?: pulumi.Input<number>;
 The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L544">property sdrsVmEvacuationAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L545">property sdrsVmEvacuationAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12087,7 +12123,7 @@ Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L549">property tags</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L550">property tags</a>
 </h3>
 
 ```typescript
@@ -12099,13 +12135,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="DatastoreClusterState">
-<a class="pdoc-member-name" href="/datastoreCluster.ts#L255">interface DatastoreClusterState</a>
+<a class="pdoc-member-name" href="/datastoreCluster.ts#L256">interface DatastoreClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering DatastoreCluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L262">property customAttributes</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L263">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -12119,7 +12155,7 @@ value strings to set for the datastore cluster. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L268">property datacenterId</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L269">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -12132,7 +12168,7 @@ the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L278">property folder</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L279">property folder</a>
 </h3>
 
 ```typescript
@@ -12149,7 +12185,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `/dc1/datastore/foo/bar/terraform-datastore-cluster-test`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L282">property name</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L283">property name</a>
 </h3>
 
 ```typescript
@@ -12160,7 +12196,7 @@ name?: pulumi.Input<string>;
 The name of the datastore cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L287">property sdrsAdvancedOptions</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L288">property sdrsAdvancedOptions</a>
 </h3>
 
 ```typescript
@@ -12172,7 +12208,7 @@ A key/value map of advanced Storage DRS
 settings that are not exposed via Terraform or the vSphere client.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L292">property sdrsAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L293">property sdrsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12184,7 +12220,7 @@ The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L297">property sdrsDefaultIntraVmAffinity</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L298">property sdrsDefaultIntraVmAffinity</a>
 </h3>
 
 ```typescript
@@ -12196,7 +12232,7 @@ When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L302">property sdrsEnabled</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L303">property sdrsEnabled</a>
 </h3>
 
 ```typescript
@@ -12208,7 +12244,7 @@ Enable Storage DRS for this datastore cluster.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L309">property sdrsFreeSpaceThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L310">property sdrsFreeSpaceThreshold</a>
 </h3>
 
 ```typescript
@@ -12222,7 +12258,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L314">property sdrsFreeSpaceThresholdMode</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L315">property sdrsFreeSpaceThresholdMode</a>
 </h3>
 
 ```typescript
@@ -12234,7 +12270,7 @@ The free space threshold to use. When set to utilization, drs_space_utilization_
 freeSpace, drs_free_space_threshold is used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L320">property sdrsFreeSpaceUtilizationDifference</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L321">property sdrsFreeSpaceUtilizationDifference</a>
 </h3>
 
 ```typescript
@@ -12247,7 +12283,7 @@ percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L325">property sdrsIoBalanceAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L326">property sdrsIoBalanceAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12259,7 +12295,7 @@ Overrides the default
 automation settings when correcting I/O load imbalances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L331">property sdrsIoLatencyThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L332">property sdrsIoLatencyThreshold</a>
 </h3>
 
 ```typescript
@@ -12272,7 +12308,7 @@ milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L336">property sdrsIoLoadBalanceEnabled</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L337">property sdrsIoLoadBalanceEnabled</a>
 </h3>
 
 ```typescript
@@ -12284,7 +12320,7 @@ Enable I/O load balancing for
 this datastore cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L342">property sdrsIoLoadImbalanceThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L343">property sdrsIoLoadImbalanceThreshold</a>
 </h3>
 
 ```typescript
@@ -12297,7 +12333,7 @@ in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L351">property sdrsIoReservableIopsThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L352">property sdrsIoReservableIopsThreshold</a>
 </h3>
 
 ```typescript
@@ -12313,7 +12349,7 @@ estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L358">property sdrsIoReservablePercentThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L359">property sdrsIoReservablePercentThreshold</a>
 </h3>
 
 ```typescript
@@ -12327,7 +12363,7 @@ storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L365">property sdrsIoReservableThresholdMode</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L366">property sdrsIoReservableThresholdMode</a>
 </h3>
 
 ```typescript
@@ -12341,7 +12377,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L370">property sdrsLoadBalanceInterval</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L371">property sdrsLoadBalanceInterval</a>
 </h3>
 
 ```typescript
@@ -12353,7 +12389,7 @@ The storage DRS poll interval, in
 minutes. Default: `480` minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L375">property sdrsPolicyEnforcementAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L376">property sdrsPolicyEnforcementAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12365,7 +12401,7 @@ Overrides the default
 automation settings when correcting storage and VM policy violations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L380">property sdrsRuleEnforcementAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L381">property sdrsRuleEnforcementAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12377,7 +12413,7 @@ Overrides the default
 automation settings when correcting affinity rule violations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L385">property sdrsSpaceBalanceAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L386">property sdrsSpaceBalanceAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12389,7 +12425,7 @@ Overrides the default
 automation settings when correcting disk space imbalances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L389">property sdrsSpaceUtilizationThreshold</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L390">property sdrsSpaceUtilizationThreshold</a>
 </h3>
 
 ```typescript
@@ -12400,7 +12436,7 @@ sdrsSpaceUtilizationThreshold?: pulumi.Input<number>;
 The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L394">property sdrsVmEvacuationAutomationLevel</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L395">property sdrsVmEvacuationAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -12412,7 +12448,7 @@ Overrides the default
 automation settings when generating recommendations for datastore evacuation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreCluster.ts#L399">property tags</a>
+<a class="pdoc-child-name" href="/datastoreCluster.ts#L400">property tags</a>
 </h3>
 
 ```typescript
@@ -12424,13 +12460,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="DatastoreClusterVmAntiAffinityRuleArgs">
-<a class="pdoc-member-name" href="/datastoreClusterVmAntiAffinityRule.ts#L133">interface DatastoreClusterVmAntiAffinityRuleArgs</a>
+<a class="pdoc-member-name" href="/datastoreClusterVmAntiAffinityRule.ts#L134">interface DatastoreClusterVmAntiAffinityRuleArgs</a>
 </h2>
 
 The set of arguments for constructing a DatastoreClusterVmAntiAffinityRule resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L139">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L140">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -12443,7 +12479,7 @@ ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L143">property enabled</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L144">property enabled</a>
 </h3>
 
 ```typescript
@@ -12454,7 +12490,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L148">property mandatory</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L149">property mandatory</a>
 </h3>
 
 ```typescript
@@ -12466,7 +12502,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L152">property name</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L153">property name</a>
 </h3>
 
 ```typescript
@@ -12477,7 +12513,7 @@ name?: pulumi.Input<string>;
 The name of the rule. This must be unique in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L157">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L158">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -12489,13 +12525,13 @@ The UUIDs of the virtual machines to run
 on different datastores from each other.
 
 <h2 class="pdoc-module-header" id="DatastoreClusterVmAntiAffinityRuleState">
-<a class="pdoc-member-name" href="/datastoreClusterVmAntiAffinityRule.ts#L103">interface DatastoreClusterVmAntiAffinityRuleState</a>
+<a class="pdoc-member-name" href="/datastoreClusterVmAntiAffinityRule.ts#L104">interface DatastoreClusterVmAntiAffinityRuleState</a>
 </h2>
 
 Input properties used for looking up and filtering DatastoreClusterVmAntiAffinityRule resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L109">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L110">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -12508,7 +12544,7 @@ ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
 a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L113">property enabled</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L114">property enabled</a>
 </h3>
 
 ```typescript
@@ -12519,7 +12555,7 @@ enabled?: pulumi.Input<boolean>;
 Enable this rule in the cluster. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L118">property mandatory</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L119">property mandatory</a>
 </h3>
 
 ```typescript
@@ -12531,7 +12567,7 @@ When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L122">property name</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L123">property name</a>
 </h3>
 
 ```typescript
@@ -12542,7 +12578,7 @@ name?: pulumi.Input<string>;
 The name of the rule. This must be unique in the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L127">property virtualMachineIds</a>
+<a class="pdoc-child-name" href="/datastoreClusterVmAntiAffinityRule.ts#L128">property virtualMachineIds</a>
 </h3>
 
 ```typescript
@@ -12554,13 +12590,13 @@ The UUIDs of the virtual machines to run
 on different datastores from each other.
 
 <h2 class="pdoc-module-header" id="DistributedPortGroupArgs">
-<a class="pdoc-member-name" href="/distributedPortGroup.ts#L606">interface DistributedPortGroupArgs</a>
+<a class="pdoc-member-name" href="/distributedPortGroup.ts#L607">interface DistributedPortGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a DistributedPortGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L610">property activeUplinks</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L611">property activeUplinks</a>
 </h3>
 
 ```typescript
@@ -12571,7 +12607,7 @@ activeUplinks?: pulumi.Input<pulumi.Input<string>[]>;
 List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L615">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L616">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -12583,7 +12619,7 @@ Controls whether or not the virtual network adapter is allowed to send network t
 than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L619">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L620">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -12594,7 +12630,7 @@ allowMacChanges?: pulumi.Input<boolean>;
 Controls whether or not the Media Access Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L623">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L624">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -12605,7 +12641,7 @@ allowPromiscuous?: pulumi.Input<boolean>;
 Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L628">property autoExpand</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L629">property autoExpand</a>
 </h3>
 
 ```typescript
@@ -12617,7 +12653,7 @@ Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L632">property blockAllPorts</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L633">property blockAllPorts</a>
 </h3>
 
 ```typescript
@@ -12628,7 +12664,7 @@ blockAllPorts?: pulumi.Input<boolean>;
 Indicates whether to block all ports by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L637">property blockOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L638">property blockOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -12640,7 +12676,7 @@ Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L641">property checkBeacon</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L642">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -12651,7 +12687,7 @@ checkBeacon?: pulumi.Input<boolean>;
 Enable beacon probing on the ports this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L647">property customAttributes</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L648">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -12664,7 +12700,7 @@ value string to set for port group. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L651">property description</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L652">property description</a>
 </h3>
 
 ```typescript
@@ -12675,7 +12711,7 @@ description?: pulumi.Input<string>;
 An optional description for the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L655">property directpathGen2Allowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L656">property directpathGen2Allowed</a>
 </h3>
 
 ```typescript
@@ -12686,7 +12722,7 @@ directpathGen2Allowed?: pulumi.Input<boolean>;
 Allow VMDirectPath Gen2 on the ports this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L660">property distributedVirtualSwitchUuid</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L661">property distributedVirtualSwitchUuid</a>
 </h3>
 
 ```typescript
@@ -12698,7 +12734,7 @@ The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L664">property egressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L665">property egressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -12709,7 +12745,7 @@ egressShapingAverageBandwidth?: pulumi.Input<number>;
 The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L668">property egressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L669">property egressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -12720,7 +12756,7 @@ egressShapingBurstSize?: pulumi.Input<number>;
 The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L672">property egressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L673">property egressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -12731,7 +12767,7 @@ egressShapingEnabled?: pulumi.Input<boolean>;
 True if the traffic shaper is enabled for egress traffic on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L676">property egressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L677">property egressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -12742,7 +12778,7 @@ egressShapingPeakBandwidth?: pulumi.Input<number>;
 The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L680">property failback</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L681">property failback</a>
 </h3>
 
 ```typescript
@@ -12753,7 +12789,7 @@ failback?: pulumi.Input<boolean>;
 If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L684">property ingressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L685">property ingressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -12764,7 +12800,7 @@ ingressShapingAverageBandwidth?: pulumi.Input<number>;
 The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L688">property ingressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L689">property ingressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -12775,7 +12811,7 @@ ingressShapingBurstSize?: pulumi.Input<number>;
 The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L692">property ingressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L693">property ingressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -12786,7 +12822,7 @@ ingressShapingEnabled?: pulumi.Input<boolean>;
 True if the traffic shaper is enabled for ingress traffic on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L696">property ingressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L697">property ingressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -12797,7 +12833,7 @@ ingressShapingPeakBandwidth?: pulumi.Input<number>;
 The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L700">property lacpEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L701">property lacpEnabled</a>
 </h3>
 
 ```typescript
@@ -12808,7 +12844,7 @@ lacpEnabled?: pulumi.Input<boolean>;
 Whether or not to enable LACP on all uplink ports.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L704">property lacpMode</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L705">property lacpMode</a>
 </h3>
 
 ```typescript
@@ -12819,7 +12855,7 @@ lacpMode?: pulumi.Input<string>;
 The uplink LACP mode to use. Can be one of active or passive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L709">property livePortMovingAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L710">property livePortMovingAllowed</a>
 </h3>
 
 ```typescript
@@ -12831,7 +12867,7 @@ Allow a port in this port group to be
 moved to another port group while it is connected.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L713">property name</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L714">property name</a>
 </h3>
 
 ```typescript
@@ -12842,7 +12878,7 @@ name?: pulumi.Input<string>;
 The name of the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L717">property netflowEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L718">property netflowEnabled</a>
 </h3>
 
 ```typescript
@@ -12853,7 +12889,7 @@ netflowEnabled?: pulumi.Input<boolean>;
 Indicates whether to enable netflow on all ports.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L723">property netflowOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L724">property netflowOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -12866,7 +12902,7 @@ policy][netflow-policy] on this port group to be overridden on an individual
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L729">property networkResourcePoolKey</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L730">property networkResourcePoolKey</a>
 </h3>
 
 ```typescript
@@ -12879,7 +12915,7 @@ to associate with this port group. The default is `-1`, which implies no
 association.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L734">property networkResourcePoolOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L735">property networkResourcePoolOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -12891,7 +12927,7 @@ Allow the network
 resource pool set on this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L738">property notifySwitches</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L739">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -12902,7 +12938,7 @@ notifySwitches?: pulumi.Input<boolean>;
 If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L743">property numberOfPorts</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L744">property numberOfPorts</a>
 </h3>
 
 ```typescript
@@ -12914,7 +12950,7 @@ The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L748">property portConfigResetAtDisconnect</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L749">property portConfigResetAtDisconnect</a>
 </h3>
 
 ```typescript
@@ -12926,7 +12962,7 @@ Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L754">property portNameFormat</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L755">property portNameFormat</a>
 </h3>
 
 ```typescript
@@ -12939,7 +12975,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L758">property portPrivateSecondaryVlanId</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L759">property portPrivateSecondaryVlanId</a>
 </h3>
 
 ```typescript
@@ -12950,7 +12986,7 @@ portPrivateSecondaryVlanId?: pulumi.Input<number>;
 The secondary VLAN ID for this port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L764">property securityPolicyOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L765">property securityPolicyOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -12963,7 +12999,7 @@ settings][sec-policy-settings] defined in this port group policy to be
 overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L770">property shapingOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L771">property shapingOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -12976,7 +13012,7 @@ options][traffic-shaping-settings] on this port group policy to be overridden
 on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L774">property standbyUplinks</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L775">property standbyUplinks</a>
 </h3>
 
 ```typescript
@@ -12987,7 +13023,7 @@ standbyUplinks?: pulumi.Input<pulumi.Input<string>[]>;
 List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L778">property tags</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L779">property tags</a>
 </h3>
 
 ```typescript
@@ -12998,7 +13034,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of tag IDs to apply to this object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L783">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L784">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -13010,7 +13046,7 @@ The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_sr
 failover_explicit, or loadbalance_loadbased.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L788">property trafficFilterOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L789">property trafficFilterOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13022,7 +13058,7 @@ Allow any traffic filters on
 this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L793">property txUplink</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L794">property txUplink</a>
 </h3>
 
 ```typescript
@@ -13034,7 +13070,7 @@ If true, a copy of packets sent to the switch will always be forwarded to an upl
 packet forwarded done by the switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L798">property type</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L799">property type</a>
 </h3>
 
 ```typescript
@@ -13046,7 +13082,7 @@ The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L804">property uplinkTeamingOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L805">property uplinkTeamingOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13059,7 +13095,7 @@ options][uplink-teaming-settings] on this port group to be overridden on an
 individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L808">property vlanId</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L809">property vlanId</a>
 </h3>
 
 ```typescript
@@ -13070,7 +13106,7 @@ vlanId?: pulumi.Input<number>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L813">property vlanOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L814">property vlanOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13082,7 +13118,7 @@ Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L817">property vlanRanges</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L818">property vlanRanges</a>
 </h3>
 
 ```typescript
@@ -13093,13 +13129,13 @@ vlanRanges?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h2 class="pdoc-module-header" id="DistributedPortGroupState">
-<a class="pdoc-member-name" href="/distributedPortGroup.ts#L381">interface DistributedPortGroupState</a>
+<a class="pdoc-member-name" href="/distributedPortGroup.ts#L382">interface DistributedPortGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering DistributedPortGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L385">property activeUplinks</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L386">property activeUplinks</a>
 </h3>
 
 ```typescript
@@ -13110,7 +13146,7 @@ activeUplinks?: pulumi.Input<pulumi.Input<string>[]>;
 List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L390">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L391">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -13122,7 +13158,7 @@ Controls whether or not the virtual network adapter is allowed to send network t
 than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L394">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L395">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -13133,7 +13169,7 @@ allowMacChanges?: pulumi.Input<boolean>;
 Controls whether or not the Media Access Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L398">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L399">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -13144,7 +13180,7 @@ allowPromiscuous?: pulumi.Input<boolean>;
 Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L403">property autoExpand</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L404">property autoExpand</a>
 </h3>
 
 ```typescript
@@ -13156,7 +13192,7 @@ Allows the port group to create additional ports
 past the limit specified in `number_of_ports` if necessary. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L407">property blockAllPorts</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L408">property blockAllPorts</a>
 </h3>
 
 ```typescript
@@ -13167,7 +13203,7 @@ blockAllPorts?: pulumi.Input<boolean>;
 Indicates whether to block all ports by default.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L412">property blockOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L413">property blockOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13179,7 +13215,7 @@ Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L416">property checkBeacon</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L417">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -13190,7 +13226,7 @@ checkBeacon?: pulumi.Input<boolean>;
 Enable beacon probing on the ports this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L420">property configVersion</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L421">property configVersion</a>
 </h3>
 
 ```typescript
@@ -13201,7 +13237,7 @@ configVersion?: pulumi.Input<string>;
 Version string of the configuration that this spec is trying to change.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L426">property customAttributes</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L427">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -13214,7 +13250,7 @@ value string to set for port group. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L430">property description</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L431">property description</a>
 </h3>
 
 ```typescript
@@ -13225,7 +13261,7 @@ description?: pulumi.Input<string>;
 An optional description for the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L434">property directpathGen2Allowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L435">property directpathGen2Allowed</a>
 </h3>
 
 ```typescript
@@ -13236,7 +13272,7 @@ directpathGen2Allowed?: pulumi.Input<boolean>;
 Allow VMDirectPath Gen2 on the ports this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L439">property distributedVirtualSwitchUuid</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L440">property distributedVirtualSwitchUuid</a>
 </h3>
 
 ```typescript
@@ -13248,7 +13284,7 @@ The ID of the DVS to add the
 port group to. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L443">property egressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L444">property egressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -13259,7 +13295,7 @@ egressShapingAverageBandwidth?: pulumi.Input<number>;
 The average egress bandwidth in bits per second if egress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L447">property egressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L448">property egressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -13270,7 +13306,7 @@ egressShapingBurstSize?: pulumi.Input<number>;
 The maximum egress burst size allowed in bytes if egress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L451">property egressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L452">property egressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -13281,7 +13317,7 @@ egressShapingEnabled?: pulumi.Input<boolean>;
 True if the traffic shaper is enabled for egress traffic on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L455">property egressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L456">property egressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -13292,7 +13328,7 @@ egressShapingPeakBandwidth?: pulumi.Input<number>;
 The peak egress bandwidth during bursts in bits per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L459">property failback</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L460">property failback</a>
 </h3>
 
 ```typescript
@@ -13303,7 +13339,7 @@ failback?: pulumi.Input<boolean>;
 If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L463">property ingressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L464">property ingressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -13314,7 +13350,7 @@ ingressShapingAverageBandwidth?: pulumi.Input<number>;
 The average ingress bandwidth in bits per second if ingress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L467">property ingressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L468">property ingressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -13325,7 +13361,7 @@ ingressShapingBurstSize?: pulumi.Input<number>;
 The maximum ingress burst size allowed in bytes if ingress shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L471">property ingressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L472">property ingressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -13336,7 +13372,7 @@ ingressShapingEnabled?: pulumi.Input<boolean>;
 True if the traffic shaper is enabled for ingress traffic on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L475">property ingressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L476">property ingressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -13347,7 +13383,7 @@ ingressShapingPeakBandwidth?: pulumi.Input<number>;
 The peak ingress bandwidth during bursts in bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L479">property key</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L480">property key</a>
 </h3>
 
 ```typescript
@@ -13358,7 +13394,7 @@ key?: pulumi.Input<string>;
 The generated UUID of the portgroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L483">property lacpEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L484">property lacpEnabled</a>
 </h3>
 
 ```typescript
@@ -13369,7 +13405,7 @@ lacpEnabled?: pulumi.Input<boolean>;
 Whether or not to enable LACP on all uplink ports.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L487">property lacpMode</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L488">property lacpMode</a>
 </h3>
 
 ```typescript
@@ -13380,7 +13416,7 @@ lacpMode?: pulumi.Input<string>;
 The uplink LACP mode to use. Can be one of active or passive.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L492">property livePortMovingAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L493">property livePortMovingAllowed</a>
 </h3>
 
 ```typescript
@@ -13392,7 +13428,7 @@ Allow a port in this port group to be
 moved to another port group while it is connected.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L496">property name</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L497">property name</a>
 </h3>
 
 ```typescript
@@ -13403,7 +13439,7 @@ name?: pulumi.Input<string>;
 The name of the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L500">property netflowEnabled</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L501">property netflowEnabled</a>
 </h3>
 
 ```typescript
@@ -13414,7 +13450,7 @@ netflowEnabled?: pulumi.Input<boolean>;
 Indicates whether to enable netflow on all ports.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L506">property netflowOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L507">property netflowOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13427,7 +13463,7 @@ policy][netflow-policy] on this port group to be overridden on an individual
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L512">property networkResourcePoolKey</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L513">property networkResourcePoolKey</a>
 </h3>
 
 ```typescript
@@ -13440,7 +13476,7 @@ to associate with this port group. The default is `-1`, which implies no
 association.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L517">property networkResourcePoolOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L518">property networkResourcePoolOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13452,7 +13488,7 @@ Allow the network
 resource pool set on this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L521">property notifySwitches</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L522">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -13463,7 +13499,7 @@ notifySwitches?: pulumi.Input<boolean>;
 If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L526">property numberOfPorts</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L527">property numberOfPorts</a>
 </h3>
 
 ```typescript
@@ -13475,7 +13511,7 @@ The number of ports available on this port
 group. Cannot be decreased below the amount of used ports on the port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L531">property portConfigResetAtDisconnect</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L532">property portConfigResetAtDisconnect</a>
 </h3>
 
 ```typescript
@@ -13487,7 +13523,7 @@ Reset a port's settings to the
 settings defined on this port group policy when the port disconnects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L537">property portNameFormat</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L538">property portNameFormat</a>
 </h3>
 
 ```typescript
@@ -13500,7 +13536,7 @@ the ports in this port group. See the `portNameFormat` attribute listed
 [here][ext-vsphere-portname-format] for details on the format syntax.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L541">property portPrivateSecondaryVlanId</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L542">property portPrivateSecondaryVlanId</a>
 </h3>
 
 ```typescript
@@ -13511,7 +13547,7 @@ portPrivateSecondaryVlanId?: pulumi.Input<number>;
 The secondary VLAN ID for this port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L547">property securityPolicyOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L548">property securityPolicyOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13524,7 +13560,7 @@ settings][sec-policy-settings] defined in this port group policy to be
 overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L553">property shapingOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L554">property shapingOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13537,7 +13573,7 @@ options][traffic-shaping-settings] on this port group policy to be overridden
 on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L557">property standbyUplinks</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L558">property standbyUplinks</a>
 </h3>
 
 ```typescript
@@ -13548,7 +13584,7 @@ standbyUplinks?: pulumi.Input<pulumi.Input<string>[]>;
 List of active uplinks used for load balancing, matching the names of the uplinks assigned in the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L561">property tags</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L562">property tags</a>
 </h3>
 
 ```typescript
@@ -13559,7 +13595,7 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 A list of tag IDs to apply to this object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L566">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L567">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -13571,7 +13607,7 @@ The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_sr
 failover_explicit, or loadbalance_loadbased.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L571">property trafficFilterOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L572">property trafficFilterOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13583,7 +13619,7 @@ Allow any traffic filters on
 this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L576">property txUplink</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L577">property txUplink</a>
 </h3>
 
 ```typescript
@@ -13595,7 +13631,7 @@ If true, a copy of packets sent to the switch will always be forwarded to an upl
 packet forwarded done by the switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L581">property type</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L582">property type</a>
 </h3>
 
 ```typescript
@@ -13607,7 +13643,7 @@ The port group type. Can be one of `earlyBinding` (static
 binding) or `ephemeral`. Default: `earlyBinding`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L587">property uplinkTeamingOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L588">property uplinkTeamingOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13620,7 +13656,7 @@ options][uplink-teaming-settings] on this port group to be overridden on an
 individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L591">property vlanId</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L592">property vlanId</a>
 </h3>
 
 ```typescript
@@ -13631,7 +13667,7 @@ vlanId?: pulumi.Input<number>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L596">property vlanOverrideAllowed</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L597">property vlanOverrideAllowed</a>
 </h3>
 
 ```typescript
@@ -13643,7 +13679,7 @@ Allow the [VLAN settings][vlan-settings]
 on this port group to be overridden on an individual port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedPortGroup.ts#L600">property vlanRanges</a>
+<a class="pdoc-child-name" href="/distributedPortGroup.ts#L601">property vlanRanges</a>
 </h3>
 
 ```typescript
@@ -13654,13 +13690,13 @@ vlanRanges?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h2 class="pdoc-module-header" id="DistributedVirtualSwitchArgs">
-<a class="pdoc-member-name" href="/distributedVirtualSwitch.ts#L1108">interface DistributedVirtualSwitchArgs</a>
+<a class="pdoc-member-name" href="/distributedVirtualSwitch.ts#L1109">interface DistributedVirtualSwitchArgs</a>
 </h2>
 
 The set of arguments for constructing a DistributedVirtualSwitch resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1115">property activeUplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1116">property activeUplinks</a>
 </h3>
 
 ```typescript
@@ -13674,7 +13710,7 @@ balancing. These uplinks need to match the definitions in the
 here for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1121">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1122">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -13687,7 +13723,7 @@ network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1126">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1127">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -13699,7 +13735,7 @@ Controls whether or not the Media Access
 Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1131">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1132">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -13711,7 +13747,7 @@ Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1137">property blockAllPorts</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1138">property blockAllPorts</a>
 </h3>
 
 ```typescript
@@ -13724,7 +13760,7 @@ this policy applies to, effectively blocking all network access to connected
 virtual devices.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1142">property checkBeacon</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1143">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -13736,7 +13772,7 @@ Enables beacon probing as an additional measure
 to detect NIC failure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1147">property contactDetail</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1148">property contactDetail</a>
 </h3>
 
 ```typescript
@@ -13748,7 +13784,7 @@ The detailed contact information for the person
 who is responsible for the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1152">property contactName</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1153">property contactName</a>
 </h3>
 
 ```typescript
@@ -13760,7 +13796,7 @@ The name of the person who is responsible for the
 DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1159">property customAttributes</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1160">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -13774,7 +13810,7 @@ value strings to set for virtual switch. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1164">property datacenterId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1165">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -13786,7 +13822,7 @@ The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1168">property description</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1169">property description</a>
 </h3>
 
 ```typescript
@@ -13797,7 +13833,7 @@ description?: pulumi.Input<string>;
 A detailed description for the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1173">property directpathGen2Allowed</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1174">property directpathGen2Allowed</a>
 </h3>
 
 ```typescript
@@ -13809,7 +13845,7 @@ Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1178">property egressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1179">property egressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -13821,7 +13857,7 @@ The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1183">property egressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1184">property egressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -13833,7 +13869,7 @@ The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1188">property egressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1189">property egressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -13845,7 +13881,7 @@ egressShapingEnabled?: pulumi.Input<boolean>;
 on the port for egress traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1193">property egressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1194">property egressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -13857,7 +13893,7 @@ The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1198">property failback</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1199">property failback</a>
 </h3>
 
 ```typescript
@@ -13869,7 +13905,7 @@ If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1202">property faulttoleranceMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1203">property faulttoleranceMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -13880,7 +13916,7 @@ faulttoleranceMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1206">property faulttoleranceReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1207">property faulttoleranceReservationMbit</a>
 </h3>
 
 ```typescript
@@ -13891,7 +13927,7 @@ faulttoleranceReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1210">property faulttoleranceShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1211">property faulttoleranceShareCount</a>
 </h3>
 
 ```typescript
@@ -13902,7 +13938,7 @@ faulttoleranceShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1214">property faulttoleranceShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1215">property faulttoleranceShareLevel</a>
 </h3>
 
 ```typescript
@@ -13913,7 +13949,7 @@ faulttoleranceShareLevel?: pulumi.Input<string>;
 The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1219">property folder</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1220">property folder</a>
 </h3>
 
 ```typescript
@@ -13925,7 +13961,7 @@ The folder to create the DVS in. Forces a new resource
 if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1223">property hbrMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1224">property hbrMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -13936,7 +13972,7 @@ hbrMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1227">property hbrReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1228">property hbrReservationMbit</a>
 </h3>
 
 ```typescript
@@ -13947,7 +13983,7 @@ hbrReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1231">property hbrShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1232">property hbrShareCount</a>
 </h3>
 
 ```typescript
@@ -13958,7 +13994,7 @@ hbrShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the hbr traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1235">property hbrShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1236">property hbrShareLevel</a>
 </h3>
 
 ```typescript
@@ -13969,7 +14005,7 @@ hbrShareLevel?: pulumi.Input<string>;
 The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1240">property hosts</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1241">property hosts</a>
 </h3>
 
 ```typescript
@@ -13981,7 +14017,7 @@ Use the `host` block to declare a host specification. The
 options are:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1245">property ingressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1246">property ingressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -13993,7 +14029,7 @@ The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1250">property ingressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1251">property ingressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -14005,7 +14041,7 @@ The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1255">property ingressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1256">property ingressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -14017,7 +14053,7 @@ ingressShapingEnabled?: pulumi.Input<boolean>;
 enabled on the port for ingress traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1260">property ingressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1261">property ingressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -14029,7 +14065,7 @@ The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1266">property ipv4Address</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1267">property ipv4Address</a>
 </h3>
 
 ```typescript
@@ -14042,7 +14078,7 @@ mostly useful when used with the Netflow arguments found
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1270">property iscsiMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1271">property iscsiMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14053,7 +14089,7 @@ iscsiMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1274">property iscsiReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1275">property iscsiReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14064,7 +14100,7 @@ iscsiReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1278">property iscsiShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1279">property iscsiShareCount</a>
 </h3>
 
 ```typescript
@@ -14075,7 +14111,7 @@ iscsiShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1282">property iscsiShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1283">property iscsiShareLevel</a>
 </h3>
 
 ```typescript
@@ -14086,7 +14122,7 @@ iscsiShareLevel?: pulumi.Input<string>;
 The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1288">property lacpApiVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1289">property lacpApiVersion</a>
 </h3>
 
 ```typescript
@@ -14099,7 +14135,7 @@ version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1293">property lacpEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1294">property lacpEnabled</a>
 </h3>
 
 ```typescript
@@ -14111,7 +14147,7 @@ Enables LACP for the ports that this policy
 applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1297">property lacpMode</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1298">property lacpMode</a>
 </h3>
 
 ```typescript
@@ -14122,7 +14158,7 @@ lacpMode?: pulumi.Input<string>;
 The LACP mode. Can be one of `active` or `passive`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1302">property linkDiscoveryOperation</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1303">property linkDiscoveryOperation</a>
 </h3>
 
 ```typescript
@@ -14134,7 +14170,7 @@ Whether to `advertise` or `listen`
 for link discovery traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1307">property linkDiscoveryProtocol</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1308">property linkDiscoveryProtocol</a>
 </h3>
 
 ```typescript
@@ -14146,7 +14182,7 @@ The discovery protocol type. Valid
 types are `cdp` and `lldp`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1311">property managementMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1312">property managementMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14157,7 +14193,7 @@ managementMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the management traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1315">property managementReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1316">property managementReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14168,7 +14204,7 @@ managementReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1319">property managementShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1320">property managementShareCount</a>
 </h3>
 
 ```typescript
@@ -14179,7 +14215,7 @@ managementShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the management traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1323">property managementShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1324">property managementShareLevel</a>
 </h3>
 
 ```typescript
@@ -14190,7 +14226,7 @@ managementShareLevel?: pulumi.Input<string>;
 The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1328">property maxMtu</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1329">property maxMtu</a>
 </h3>
 
 ```typescript
@@ -14202,7 +14238,7 @@ The maximum transmission unit (MTU) for the virtual
 switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1333">property multicastFilteringMode</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1334">property multicastFilteringMode</a>
 </h3>
 
 ```typescript
@@ -14214,7 +14250,7 @@ The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1337">property name</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1338">property name</a>
 </h3>
 
 ```typescript
@@ -14225,7 +14261,7 @@ name?: pulumi.Input<string>;
 The name of the distributed virtual switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1343">property netflowActiveFlowTimeout</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1344">property netflowActiveFlowTimeout</a>
 </h3>
 
 ```typescript
@@ -14238,7 +14274,7 @@ active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1349">property netflowCollectorIpAddress</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1350">property netflowCollectorIpAddress</a>
 </h3>
 
 ```typescript
@@ -14251,7 +14287,7 @@ collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1354">property netflowCollectorPort</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1355">property netflowCollectorPort</a>
 </h3>
 
 ```typescript
@@ -14263,7 +14299,7 @@ Port for the Netflow collector. This
 must be set before Netflow can be enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1359">property netflowEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1360">property netflowEnabled</a>
 </h3>
 
 ```typescript
@@ -14275,7 +14311,7 @@ Enables Netflow on all ports that this policy
 applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1365">property netflowIdleFlowTimeout</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1366">property netflowIdleFlowTimeout</a>
 </h3>
 
 ```typescript
@@ -14288,7 +14324,7 @@ idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1371">property netflowInternalFlowsOnly</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1372">property netflowInternalFlowsOnly</a>
 </h3>
 
 ```typescript
@@ -14301,7 +14337,7 @@ traffic that has both source and destination served by the same host.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1376">property netflowObservationDomainId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1377">property netflowObservationDomainId</a>
 </h3>
 
 ```typescript
@@ -14313,7 +14349,7 @@ The observation domain ID for
 the Netflow collector.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1383">property netflowSamplingRate</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1384">property netflowSamplingRate</a>
 </h3>
 
 ```typescript
@@ -14327,7 +14363,7 @@ switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1388">property networkResourceControlEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1389">property networkResourceControlEnabled</a>
 </h3>
 
 ```typescript
@@ -14339,7 +14375,7 @@ Set to `true` to enable
 network I/O control. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1393">property networkResourceControlVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1394">property networkResourceControlVersion</a>
 </h3>
 
 ```typescript
@@ -14351,7 +14387,7 @@ The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1397">property nfsMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1398">property nfsMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14362,7 +14398,7 @@ nfsMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1401">property nfsReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1402">property nfsReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14373,7 +14409,7 @@ nfsReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1405">property nfsShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1406">property nfsShareCount</a>
 </h3>
 
 ```typescript
@@ -14384,7 +14420,7 @@ nfsShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the nfs traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1409">property nfsShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1410">property nfsShareLevel</a>
 </h3>
 
 ```typescript
@@ -14395,7 +14431,7 @@ nfsShareLevel?: pulumi.Input<string>;
 The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1414">property notifySwitches</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1415">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -14407,7 +14443,7 @@ If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1419">property portPrivateSecondaryVlanId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1420">property portPrivateSecondaryVlanId</a>
 </h3>
 
 ```typescript
@@ -14419,7 +14455,7 @@ Used to define a secondary VLAN
 ID when using private VLANs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1426">property standbyUplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1427">property standbyUplinks</a>
 </h3>
 
 ```typescript
@@ -14433,7 +14469,7 @@ failover. These uplinks need to match the definitions in the
 here for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1431">property tags</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1432">property tags</a>
 </h3>
 
 ```typescript
@@ -14445,7 +14481,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1437">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1438">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -14458,7 +14494,7 @@ The uplink teaming policy. Can be one of
 `failover_explicit`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1442">property txUplink</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1443">property txUplink</a>
 </h3>
 
 ```typescript
@@ -14470,7 +14506,7 @@ Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1450">property uplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1451">property uplinks</a>
 </h3>
 
 ```typescript
@@ -14485,7 +14521,7 @@ names.  See here for an example on how to
 use this option.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1454">property vdpMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1455">property vdpMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14496,7 +14532,7 @@ vdpMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1458">property vdpReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1459">property vdpReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14507,7 +14543,7 @@ vdpReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1462">property vdpShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1463">property vdpShareCount</a>
 </h3>
 
 ```typescript
@@ -14518,7 +14554,7 @@ vdpShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the vdp traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1466">property vdpShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1467">property vdpShareLevel</a>
 </h3>
 
 ```typescript
@@ -14529,7 +14565,7 @@ vdpShareLevel?: pulumi.Input<string>;
 The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1473">property version</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1474">property version</a>
 </h3>
 
 ```typescript
@@ -14543,7 +14579,7 @@ being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1477">property virtualmachineMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1478">property virtualmachineMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14554,7 +14590,7 @@ virtualmachineMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1481">property virtualmachineReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1482">property virtualmachineReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14565,7 +14601,7 @@ virtualmachineReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1485">property virtualmachineShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1486">property virtualmachineShareCount</a>
 </h3>
 
 ```typescript
@@ -14576,7 +14612,7 @@ virtualmachineShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1489">property virtualmachineShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1490">property virtualmachineShareLevel</a>
 </h3>
 
 ```typescript
@@ -14587,7 +14623,7 @@ virtualmachineShareLevel?: pulumi.Input<string>;
 The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1493">property vlanId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1494">property vlanId</a>
 </h3>
 
 ```typescript
@@ -14598,7 +14634,7 @@ vlanId?: pulumi.Input<number>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1500">property vlanRanges</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1501">property vlanRanges</a>
 </h3>
 
 ```typescript
@@ -14612,7 +14648,7 @@ and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 below:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1504">property vmotionMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1505">property vmotionMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14623,7 +14659,7 @@ vmotionMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1508">property vmotionReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1509">property vmotionReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14634,7 +14670,7 @@ vmotionReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1512">property vmotionShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1513">property vmotionShareCount</a>
 </h3>
 
 ```typescript
@@ -14645,7 +14681,7 @@ vmotionShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the vmotion traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1516">property vmotionShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1517">property vmotionShareLevel</a>
 </h3>
 
 ```typescript
@@ -14656,7 +14692,7 @@ vmotionShareLevel?: pulumi.Input<string>;
 The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1520">property vsanMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1521">property vsanMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14667,7 +14703,7 @@ vsanMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1524">property vsanReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1525">property vsanReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14678,7 +14714,7 @@ vsanReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1528">property vsanShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1529">property vsanShareCount</a>
 </h3>
 
 ```typescript
@@ -14689,7 +14725,7 @@ vsanShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the vsan traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1532">property vsanShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1533">property vsanShareLevel</a>
 </h3>
 
 ```typescript
@@ -14700,13 +14736,13 @@ vsanShareLevel?: pulumi.Input<string>;
 The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 
 <h2 class="pdoc-module-header" id="DistributedVirtualSwitchState">
-<a class="pdoc-member-name" href="/distributedVirtualSwitch.ts#L674">interface DistributedVirtualSwitchState</a>
+<a class="pdoc-member-name" href="/distributedVirtualSwitch.ts#L675">interface DistributedVirtualSwitchState</a>
 </h2>
 
 Input properties used for looking up and filtering DistributedVirtualSwitch resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L681">property activeUplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L682">property activeUplinks</a>
 </h3>
 
 ```typescript
@@ -14720,7 +14756,7 @@ balancing. These uplinks need to match the definitions in the
 here for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L687">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L688">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -14733,7 +14769,7 @@ network adapter is allowed to send network traffic with a different MAC
 address than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L692">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L693">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -14745,7 +14781,7 @@ Controls whether or not the Media Access
 Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L697">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L698">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -14757,7 +14793,7 @@ Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L703">property blockAllPorts</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L704">property blockAllPorts</a>
 </h3>
 
 ```typescript
@@ -14770,7 +14806,7 @@ this policy applies to, effectively blocking all network access to connected
 virtual devices.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L708">property checkBeacon</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L709">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -14782,7 +14818,7 @@ Enables beacon probing as an additional measure
 to detect NIC failure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L712">property configVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L713">property configVersion</a>
 </h3>
 
 ```typescript
@@ -14793,7 +14829,7 @@ configVersion?: pulumi.Input<string>;
 The version string of the configuration that this spec is trying to change.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L717">property contactDetail</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L718">property contactDetail</a>
 </h3>
 
 ```typescript
@@ -14805,7 +14841,7 @@ The detailed contact information for the person
 who is responsible for the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L722">property contactName</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L723">property contactName</a>
 </h3>
 
 ```typescript
@@ -14817,7 +14853,7 @@ The name of the person who is responsible for the
 DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L729">property customAttributes</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L730">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -14831,7 +14867,7 @@ value strings to set for virtual switch. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L734">property datacenterId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L735">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -14843,7 +14879,7 @@ The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L738">property description</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L739">property description</a>
 </h3>
 
 ```typescript
@@ -14854,7 +14890,7 @@ description?: pulumi.Input<string>;
 A detailed description for the DVS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L743">property directpathGen2Allowed</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L744">property directpathGen2Allowed</a>
 </h3>
 
 ```typescript
@@ -14866,7 +14902,7 @@ Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L748">property egressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L749">property egressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -14878,7 +14914,7 @@ The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L753">property egressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L754">property egressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -14890,7 +14926,7 @@ The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L758">property egressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L759">property egressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -14902,7 +14938,7 @@ egressShapingEnabled?: pulumi.Input<boolean>;
 on the port for egress traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L763">property egressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L764">property egressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -14914,7 +14950,7 @@ The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L768">property failback</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L769">property failback</a>
 </h3>
 
 ```typescript
@@ -14926,7 +14962,7 @@ If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L772">property faulttoleranceMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L773">property faulttoleranceMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14937,7 +14973,7 @@ faulttoleranceMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L776">property faulttoleranceReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L777">property faulttoleranceReservationMbit</a>
 </h3>
 
 ```typescript
@@ -14948,7 +14984,7 @@ faulttoleranceReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L780">property faulttoleranceShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L781">property faulttoleranceShareCount</a>
 </h3>
 
 ```typescript
@@ -14959,7 +14995,7 @@ faulttoleranceShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L784">property faulttoleranceShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L785">property faulttoleranceShareLevel</a>
 </h3>
 
 ```typescript
@@ -14970,7 +15006,7 @@ faulttoleranceShareLevel?: pulumi.Input<string>;
 The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L789">property folder</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L790">property folder</a>
 </h3>
 
 ```typescript
@@ -14982,7 +15018,7 @@ The folder to create the DVS in. Forces a new resource
 if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L793">property hbrMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L794">property hbrMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -14993,7 +15029,7 @@ hbrMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L797">property hbrReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L798">property hbrReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15004,7 +15040,7 @@ hbrReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L801">property hbrShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L802">property hbrShareCount</a>
 </h3>
 
 ```typescript
@@ -15015,7 +15051,7 @@ hbrShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the hbr traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L805">property hbrShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L806">property hbrShareLevel</a>
 </h3>
 
 ```typescript
@@ -15026,7 +15062,7 @@ hbrShareLevel?: pulumi.Input<string>;
 The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L810">property hosts</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L811">property hosts</a>
 </h3>
 
 ```typescript
@@ -15038,7 +15074,7 @@ Use the `host` block to declare a host specification. The
 options are:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L815">property ingressShapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L816">property ingressShapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -15050,7 +15086,7 @@ The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L820">property ingressShapingBurstSize</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L821">property ingressShapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -15062,7 +15098,7 @@ The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L825">property ingressShapingEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L826">property ingressShapingEnabled</a>
 </h3>
 
 ```typescript
@@ -15074,7 +15110,7 @@ ingressShapingEnabled?: pulumi.Input<boolean>;
 enabled on the port for ingress traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L830">property ingressShapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L831">property ingressShapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -15086,7 +15122,7 @@ The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L836">property ipv4Address</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L837">property ipv4Address</a>
 </h3>
 
 ```typescript
@@ -15099,7 +15135,7 @@ mostly useful when used with the Netflow arguments found
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L840">property iscsiMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L841">property iscsiMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15110,7 +15146,7 @@ iscsiMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L844">property iscsiReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L845">property iscsiReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15121,7 +15157,7 @@ iscsiReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L848">property iscsiShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L849">property iscsiShareCount</a>
 </h3>
 
 ```typescript
@@ -15132,7 +15168,7 @@ iscsiShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L852">property iscsiShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L853">property iscsiShareLevel</a>
 </h3>
 
 ```typescript
@@ -15143,7 +15179,7 @@ iscsiShareLevel?: pulumi.Input<string>;
 The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L858">property lacpApiVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L859">property lacpApiVersion</a>
 </h3>
 
 ```typescript
@@ -15156,7 +15192,7 @@ version to use with the switch. Possible values are `singleLag` and
 `multipleLag`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L863">property lacpEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L864">property lacpEnabled</a>
 </h3>
 
 ```typescript
@@ -15168,7 +15204,7 @@ Enables LACP for the ports that this policy
 applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L867">property lacpMode</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L868">property lacpMode</a>
 </h3>
 
 ```typescript
@@ -15179,7 +15215,7 @@ lacpMode?: pulumi.Input<string>;
 The LACP mode. Can be one of `active` or `passive`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L872">property linkDiscoveryOperation</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L873">property linkDiscoveryOperation</a>
 </h3>
 
 ```typescript
@@ -15191,7 +15227,7 @@ Whether to `advertise` or `listen`
 for link discovery traffic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L877">property linkDiscoveryProtocol</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L878">property linkDiscoveryProtocol</a>
 </h3>
 
 ```typescript
@@ -15203,7 +15239,7 @@ The discovery protocol type. Valid
 types are `cdp` and `lldp`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L881">property managementMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L882">property managementMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15214,7 +15250,7 @@ managementMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the management traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L885">property managementReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L886">property managementReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15225,7 +15261,7 @@ managementReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L889">property managementShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L890">property managementShareCount</a>
 </h3>
 
 ```typescript
@@ -15236,7 +15272,7 @@ managementShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the management traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L893">property managementShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L894">property managementShareLevel</a>
 </h3>
 
 ```typescript
@@ -15247,7 +15283,7 @@ managementShareLevel?: pulumi.Input<string>;
 The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L898">property maxMtu</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L899">property maxMtu</a>
 </h3>
 
 ```typescript
@@ -15259,7 +15295,7 @@ The maximum transmission unit (MTU) for the virtual
 switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L903">property multicastFilteringMode</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L904">property multicastFilteringMode</a>
 </h3>
 
 ```typescript
@@ -15271,7 +15307,7 @@ The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L907">property name</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L908">property name</a>
 </h3>
 
 ```typescript
@@ -15282,7 +15318,7 @@ name?: pulumi.Input<string>;
 The name of the distributed virtual switch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L913">property netflowActiveFlowTimeout</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L914">property netflowActiveFlowTimeout</a>
 </h3>
 
 ```typescript
@@ -15295,7 +15331,7 @@ active flows are forced to be exported to the collector. Allowed range is
 `60` to `3600`. Default: `60`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L919">property netflowCollectorIpAddress</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L920">property netflowCollectorIpAddress</a>
 </h3>
 
 ```typescript
@@ -15308,7 +15344,7 @@ collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
 Switch Version 6.0 or later. Must be set before Netflow can be enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L924">property netflowCollectorPort</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L925">property netflowCollectorPort</a>
 </h3>
 
 ```typescript
@@ -15320,7 +15356,7 @@ Port for the Netflow collector. This
 must be set before Netflow can be enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L929">property netflowEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L930">property netflowEnabled</a>
 </h3>
 
 ```typescript
@@ -15332,7 +15368,7 @@ Enables Netflow on all ports that this policy
 applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L935">property netflowIdleFlowTimeout</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L936">property netflowIdleFlowTimeout</a>
 </h3>
 
 ```typescript
@@ -15345,7 +15381,7 @@ idle flows are forced to be exported to the collector. Allowed range is `10`
 to `600`. Default: `15`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L941">property netflowInternalFlowsOnly</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L942">property netflowInternalFlowsOnly</a>
 </h3>
 
 ```typescript
@@ -15358,7 +15394,7 @@ traffic that has both source and destination served by the same host.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L946">property netflowObservationDomainId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L947">property netflowObservationDomainId</a>
 </h3>
 
 ```typescript
@@ -15370,7 +15406,7 @@ The observation domain ID for
 the Netflow collector.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L953">property netflowSamplingRate</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L954">property netflowSamplingRate</a>
 </h3>
 
 ```typescript
@@ -15384,7 +15420,7 @@ switch should analyze all packets. The maximum value is `1000`, which
 indicates an analysis rate of 0.001%.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L958">property networkResourceControlEnabled</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L959">property networkResourceControlEnabled</a>
 </h3>
 
 ```typescript
@@ -15396,7 +15432,7 @@ Set to `true` to enable
 network I/O control. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L963">property networkResourceControlVersion</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L964">property networkResourceControlVersion</a>
 </h3>
 
 ```typescript
@@ -15408,7 +15444,7 @@ The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L967">property nfsMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L968">property nfsMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15419,7 +15455,7 @@ nfsMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L971">property nfsReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L972">property nfsReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15430,7 +15466,7 @@ nfsReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L975">property nfsShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L976">property nfsShareCount</a>
 </h3>
 
 ```typescript
@@ -15441,7 +15477,7 @@ nfsShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the nfs traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L979">property nfsShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L980">property nfsShareLevel</a>
 </h3>
 
 ```typescript
@@ -15452,7 +15488,7 @@ nfsShareLevel?: pulumi.Input<string>;
 The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L984">property notifySwitches</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L985">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -15464,7 +15500,7 @@ If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L989">property portPrivateSecondaryVlanId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L990">property portPrivateSecondaryVlanId</a>
 </h3>
 
 ```typescript
@@ -15476,7 +15512,7 @@ Used to define a secondary VLAN
 ID when using private VLANs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L996">property standbyUplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L997">property standbyUplinks</a>
 </h3>
 
 ```typescript
@@ -15490,7 +15526,7 @@ failover. These uplinks need to match the definitions in the
 here for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1001">property tags</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1002">property tags</a>
 </h3>
 
 ```typescript
@@ -15502,7 +15538,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1007">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1008">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -15515,7 +15551,7 @@ The uplink teaming policy. Can be one of
 `failover_explicit`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1012">property txUplink</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1013">property txUplink</a>
 </h3>
 
 ```typescript
@@ -15527,7 +15563,7 @@ Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1020">property uplinks</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1021">property uplinks</a>
 </h3>
 
 ```typescript
@@ -15542,7 +15578,7 @@ names.  See here for an example on how to
 use this option.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1024">property vdpMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1025">property vdpMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15553,7 +15589,7 @@ vdpMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1028">property vdpReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1029">property vdpReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15564,7 +15600,7 @@ vdpReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1032">property vdpShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1033">property vdpShareCount</a>
 </h3>
 
 ```typescript
@@ -15575,7 +15611,7 @@ vdpShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the vdp traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1036">property vdpShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1037">property vdpShareLevel</a>
 </h3>
 
 ```typescript
@@ -15586,7 +15622,7 @@ vdpShareLevel?: pulumi.Input<string>;
 The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1043">property version</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1044">property version</a>
 </h3>
 
 ```typescript
@@ -15600,7 +15636,7 @@ being used. A DVS can be upgraded to another version, but cannot be
 downgraded.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1047">property virtualmachineMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1048">property virtualmachineMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15611,7 +15647,7 @@ virtualmachineMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1051">property virtualmachineReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1052">property virtualmachineReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15622,7 +15658,7 @@ virtualmachineReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1055">property virtualmachineShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1056">property virtualmachineShareCount</a>
 </h3>
 
 ```typescript
@@ -15633,7 +15669,7 @@ virtualmachineShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1059">property virtualmachineShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1060">property virtualmachineShareLevel</a>
 </h3>
 
 ```typescript
@@ -15644,7 +15680,7 @@ virtualmachineShareLevel?: pulumi.Input<string>;
 The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1063">property vlanId</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1064">property vlanId</a>
 </h3>
 
 ```typescript
@@ -15655,7 +15691,7 @@ vlanId?: pulumi.Input<number>;
 The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1070">property vlanRanges</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1071">property vlanRanges</a>
 </h3>
 
 ```typescript
@@ -15669,7 +15705,7 @@ and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
 below:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1074">property vmotionMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1075">property vmotionMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15680,7 +15716,7 @@ vmotionMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1078">property vmotionReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1079">property vmotionReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15691,7 +15727,7 @@ vmotionReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1082">property vmotionShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1083">property vmotionShareCount</a>
 </h3>
 
 ```typescript
@@ -15702,7 +15738,7 @@ vmotionShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the vmotion traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1086">property vmotionShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1087">property vmotionShareLevel</a>
 </h3>
 
 ```typescript
@@ -15713,7 +15749,7 @@ vmotionShareLevel?: pulumi.Input<string>;
 The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1090">property vsanMaximumMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1091">property vsanMaximumMbit</a>
 </h3>
 
 ```typescript
@@ -15724,7 +15760,7 @@ vsanMaximumMbit?: pulumi.Input<number>;
 The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1094">property vsanReservationMbit</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1095">property vsanReservationMbit</a>
 </h3>
 
 ```typescript
@@ -15735,7 +15771,7 @@ vsanReservationMbit?: pulumi.Input<number>;
 The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1098">property vsanShareCount</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1099">property vsanShareCount</a>
 </h3>
 
 ```typescript
@@ -15746,7 +15782,7 @@ vsanShareCount?: pulumi.Input<number>;
 The amount of shares to allocate to the vsan traffic class for a custom share level.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1102">property vsanShareLevel</a>
+<a class="pdoc-child-name" href="/distributedVirtualSwitch.ts#L1103">property vsanShareLevel</a>
 </h3>
 
 ```typescript
@@ -15757,13 +15793,13 @@ vsanShareLevel?: pulumi.Input<string>;
 The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 
 <h2 class="pdoc-module-header" id="DpmHostOverrideArgs">
-<a class="pdoc-member-name" href="/dpmHostOverride.ts#L120">interface DpmHostOverrideArgs</a>
+<a class="pdoc-member-name" href="/dpmHostOverride.ts#L121">interface DpmHostOverrideArgs</a>
 </h2>
 
 The set of arguments for constructing a DpmHostOverride resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L126">property computeClusterId</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L127">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -15776,7 +15812,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L132">property dpmAutomationLevel</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L133">property dpmAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -15789,7 +15825,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L137">property dpmEnabled</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L138">property dpmEnabled</a>
 </h3>
 
 ```typescript
@@ -15801,7 +15837,7 @@ Enable DPM support for this host. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L141">property hostSystemId</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L142">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -15812,13 +15848,13 @@ hostSystemId: pulumi.Input<string>;
 The managed object ID of the host.
 
 <h2 class="pdoc-module-header" id="DpmHostOverrideState">
-<a class="pdoc-member-name" href="/dpmHostOverride.ts#L93">interface DpmHostOverrideState</a>
+<a class="pdoc-member-name" href="/dpmHostOverride.ts#L94">interface DpmHostOverrideState</a>
 </h2>
 
 Input properties used for looking up and filtering DpmHostOverride resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L99">property computeClusterId</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L100">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -15831,7 +15867,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L105">property dpmAutomationLevel</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L106">property dpmAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -15844,7 +15880,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L110">property dpmEnabled</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L111">property dpmEnabled</a>
 </h3>
 
 ```typescript
@@ -15856,7 +15892,7 @@ Enable DPM support for this host. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/dpmHostOverride.ts#L114">property hostSystemId</a>
+<a class="pdoc-child-name" href="/dpmHostOverride.ts#L115">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -15867,13 +15903,13 @@ hostSystemId?: pulumi.Input<string>;
 The managed object ID of the host.
 
 <h2 class="pdoc-module-header" id="DrsVmOverrideArgs">
-<a class="pdoc-member-name" href="/drsVmOverride.ts#L122">interface DrsVmOverrideArgs</a>
+<a class="pdoc-member-name" href="/drsVmOverride.ts#L123">interface DrsVmOverrideArgs</a>
 </h2>
 
 The set of arguments for constructing a DrsVmOverride resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L128">property computeClusterId</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L129">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -15886,7 +15922,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L134">property drsAutomationLevel</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L135">property drsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -15899,7 +15935,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L139">property drsEnabled</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L140">property drsEnabled</a>
 </h3>
 
 ```typescript
@@ -15911,7 +15947,7 @@ Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L144">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L145">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -15923,13 +15959,13 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="DrsVmOverrideState">
-<a class="pdoc-member-name" href="/drsVmOverride.ts#L94">interface DrsVmOverrideState</a>
+<a class="pdoc-member-name" href="/drsVmOverride.ts#L95">interface DrsVmOverrideState</a>
 </h2>
 
 Input properties used for looking up and filtering DrsVmOverride resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L100">property computeClusterId</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L101">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -15942,7 +15978,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L106">property drsAutomationLevel</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L107">property drsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -15955,7 +15991,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L111">property drsEnabled</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L112">property drsEnabled</a>
 </h3>
 
 ```typescript
@@ -15967,7 +16003,7 @@ Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/drsVmOverride.ts#L116">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/drsVmOverride.ts#L117">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -15979,13 +16015,13 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="FileArgs">
-<a class="pdoc-member-name" href="/file.ts#L157">interface FileArgs</a>
+<a class="pdoc-member-name" href="/file.ts#L158">interface FileArgs</a>
 </h2>
 
 The set of arguments for constructing a File resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L162">property createDirectories</a>
+<a class="pdoc-child-name" href="/file.ts#L163">property createDirectories</a>
 </h3>
 
 ```typescript
@@ -15997,7 +16033,7 @@ Create directories in `destination_file`
 path parameter if any missing for copy operation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L167">property datacenter</a>
+<a class="pdoc-child-name" href="/file.ts#L168">property datacenter</a>
 </h3>
 
 ```typescript
@@ -16009,7 +16045,7 @@ The name of a datacenter in which the file will be
 uploaded to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L172">property datastore</a>
+<a class="pdoc-child-name" href="/file.ts#L173">property datastore</a>
 </h3>
 
 ```typescript
@@ -16021,7 +16057,7 @@ The name of the datastore in which to upload the
 file to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L177">property destinationFile</a>
+<a class="pdoc-child-name" href="/file.ts#L178">property destinationFile</a>
 </h3>
 
 ```typescript
@@ -16033,7 +16069,7 @@ The path to where the file should be uploaded
 or copied to on vSphere.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L182">property sourceDatacenter</a>
+<a class="pdoc-child-name" href="/file.ts#L183">property sourceDatacenter</a>
 </h3>
 
 ```typescript
@@ -16045,7 +16081,7 @@ The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L187">property sourceDatastore</a>
+<a class="pdoc-child-name" href="/file.ts#L188">property sourceDatastore</a>
 </h3>
 
 ```typescript
@@ -16057,7 +16093,7 @@ The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L193">property sourceFile</a>
+<a class="pdoc-child-name" href="/file.ts#L194">property sourceFile</a>
 </h3>
 
 ```typescript
@@ -16070,13 +16106,13 @@ Terraform host to vSphere or copied within vSphere. Forces a new resource if
 changed.
 
 <h2 class="pdoc-module-header" id="FileState">
-<a class="pdoc-member-name" href="/file.ts#L115">interface FileState</a>
+<a class="pdoc-member-name" href="/file.ts#L116">interface FileState</a>
 </h2>
 
 Input properties used for looking up and filtering File resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L120">property createDirectories</a>
+<a class="pdoc-child-name" href="/file.ts#L121">property createDirectories</a>
 </h3>
 
 ```typescript
@@ -16088,7 +16124,7 @@ Create directories in `destination_file`
 path parameter if any missing for copy operation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L125">property datacenter</a>
+<a class="pdoc-child-name" href="/file.ts#L126">property datacenter</a>
 </h3>
 
 ```typescript
@@ -16100,7 +16136,7 @@ The name of a datacenter in which the file will be
 uploaded to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L130">property datastore</a>
+<a class="pdoc-child-name" href="/file.ts#L131">property datastore</a>
 </h3>
 
 ```typescript
@@ -16112,7 +16148,7 @@ The name of the datastore in which to upload the
 file to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L135">property destinationFile</a>
+<a class="pdoc-child-name" href="/file.ts#L136">property destinationFile</a>
 </h3>
 
 ```typescript
@@ -16124,7 +16160,7 @@ The path to where the file should be uploaded
 or copied to on vSphere.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L140">property sourceDatacenter</a>
+<a class="pdoc-child-name" href="/file.ts#L141">property sourceDatacenter</a>
 </h3>
 
 ```typescript
@@ -16136,7 +16172,7 @@ The name of a datacenter in which the file
 will be copied from. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L145">property sourceDatastore</a>
+<a class="pdoc-child-name" href="/file.ts#L146">property sourceDatastore</a>
 </h3>
 
 ```typescript
@@ -16148,7 +16184,7 @@ The name of the datastore in which file will
 be copied from. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/file.ts#L151">property sourceFile</a>
+<a class="pdoc-child-name" href="/file.ts#L152">property sourceFile</a>
 </h3>
 
 ```typescript
@@ -16161,13 +16197,13 @@ Terraform host to vSphere or copied within vSphere. Forces a new resource if
 changed.
 
 <h2 class="pdoc-module-header" id="FolderArgs">
-<a class="pdoc-member-name" href="/folder.ts#L141">interface FolderArgs</a>
+<a class="pdoc-member-name" href="/folder.ts#L142">interface FolderArgs</a>
 </h2>
 
 The set of arguments for constructing a Folder resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L147">property customAttributes</a>
+<a class="pdoc-child-name" href="/folder.ts#L148">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -16180,7 +16216,7 @@ value strings to set for folder. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L153">property datacenterId</a>
+<a class="pdoc-child-name" href="/folder.ts#L154">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16193,7 +16229,7 @@ Required for all folder types except for datacenter folders. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L162">property path</a>
+<a class="pdoc-child-name" href="/folder.ts#L163">property path</a>
 </h3>
 
 ```typescript
@@ -16209,7 +16245,7 @@ For example, given a default datacenter of `default-dc`, a folder of type
 `/default-dc/vm/terraform-test-folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L167">property tags</a>
+<a class="pdoc-child-name" href="/folder.ts#L168">property tags</a>
 </h3>
 
 ```typescript
@@ -16221,7 +16257,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L174">property type</a>
+<a class="pdoc-child-name" href="/folder.ts#L175">property type</a>
 </h3>
 
 ```typescript
@@ -16235,13 +16271,13 @@ The type of folder to create. Allowed options are
 `network` for network folders. Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="FolderState">
-<a class="pdoc-member-name" href="/folder.ts#L102">interface FolderState</a>
+<a class="pdoc-member-name" href="/folder.ts#L103">interface FolderState</a>
 </h2>
 
 Input properties used for looking up and filtering Folder resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L108">property customAttributes</a>
+<a class="pdoc-child-name" href="/folder.ts#L109">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -16254,7 +16290,7 @@ value strings to set for folder. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L114">property datacenterId</a>
+<a class="pdoc-child-name" href="/folder.ts#L115">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16267,7 +16303,7 @@ Required for all folder types except for datacenter folders. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L123">property path</a>
+<a class="pdoc-child-name" href="/folder.ts#L124">property path</a>
 </h3>
 
 ```typescript
@@ -16283,7 +16319,7 @@ For example, given a default datacenter of `default-dc`, a folder of type
 `/default-dc/vm/terraform-test-folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L128">property tags</a>
+<a class="pdoc-child-name" href="/folder.ts#L129">property tags</a>
 </h3>
 
 ```typescript
@@ -16295,7 +16331,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/folder.ts#L135">property type</a>
+<a class="pdoc-child-name" href="/folder.ts#L136">property type</a>
 </h3>
 
 ```typescript
@@ -16309,13 +16345,13 @@ The type of folder to create. Allowed options are
 `network` for network folders. Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="GetComputeClusterArgs">
-<a class="pdoc-member-name" href="/getComputeCluster.ts#L34">interface GetComputeClusterArgs</a>
+<a class="pdoc-member-name" href="/getComputeCluster.ts#L35">interface GetComputeClusterArgs</a>
 </h2>
 
 A collection of arguments for invoking getComputeCluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getComputeCluster.ts#L42">property datacenterId</a>
+<a class="pdoc-child-name" href="/getComputeCluster.ts#L43">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16330,7 +16366,7 @@ default datacenters, use the id attribute from an empty `vsphere_datacenter`
 data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getComputeCluster.ts#L46">property name</a>
+<a class="pdoc-child-name" href="/getComputeCluster.ts#L47">property name</a>
 </h3>
 
 ```typescript
@@ -16341,13 +16377,13 @@ name: string;
 The name or absolute path to the cluster.
 
 <h2 class="pdoc-module-header" id="GetComputeClusterResult">
-<a class="pdoc-member-name" href="/getComputeCluster.ts#L52">interface GetComputeClusterResult</a>
+<a class="pdoc-member-name" href="/getComputeCluster.ts#L53">interface GetComputeClusterResult</a>
 </h2>
 
 A collection of values returned by getComputeCluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getComputeCluster.ts#L57">property id</a>
+<a class="pdoc-child-name" href="/getComputeCluster.ts#L58">property id</a>
 </h3>
 
 ```typescript
@@ -16358,7 +16394,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getComputeCluster.ts#L53">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/getComputeCluster.ts#L54">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -16366,13 +16402,13 @@ resourcePoolId: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetCustomAttributeArgs">
-<a class="pdoc-member-name" href="/getCustomAttribute.ts#L27">interface GetCustomAttributeArgs</a>
+<a class="pdoc-member-name" href="/getCustomAttribute.ts#L28">interface GetCustomAttributeArgs</a>
 </h2>
 
 A collection of arguments for invoking getCustomAttribute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getCustomAttribute.ts#L31">property name</a>
+<a class="pdoc-child-name" href="/getCustomAttribute.ts#L32">property name</a>
 </h3>
 
 ```typescript
@@ -16383,13 +16419,13 @@ name: string;
 The name of the custom attribute.
 
 <h2 class="pdoc-module-header" id="GetCustomAttributeResult">
-<a class="pdoc-member-name" href="/getCustomAttribute.ts#L37">interface GetCustomAttributeResult</a>
+<a class="pdoc-member-name" href="/getCustomAttribute.ts#L38">interface GetCustomAttributeResult</a>
 </h2>
 
 A collection of values returned by getCustomAttribute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getCustomAttribute.ts#L42">property id</a>
+<a class="pdoc-child-name" href="/getCustomAttribute.ts#L43">property id</a>
 </h3>
 
 ```typescript
@@ -16400,7 +16436,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getCustomAttribute.ts#L38">property managedObjectType</a>
+<a class="pdoc-child-name" href="/getCustomAttribute.ts#L39">property managedObjectType</a>
 </h3>
 
 ```typescript
@@ -16408,13 +16444,13 @@ managedObjectType: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetDatacenterArgs">
-<a class="pdoc-member-name" href="/getDatacenter.ts#L24">interface GetDatacenterArgs</a>
+<a class="pdoc-member-name" href="/getDatacenter.ts#L25">interface GetDatacenterArgs</a>
 </h2>
 
 A collection of arguments for invoking getDatacenter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatacenter.ts#L29">property name</a>
+<a class="pdoc-child-name" href="/getDatacenter.ts#L30">property name</a>
 </h3>
 
 ```typescript
@@ -16426,13 +16462,13 @@ The name of the datacenter. This can be a name or path.
 Can be omitted if there is only one datacenter in your inventory.
 
 <h2 class="pdoc-module-header" id="GetDatacenterResult">
-<a class="pdoc-member-name" href="/getDatacenter.ts#L35">interface GetDatacenterResult</a>
+<a class="pdoc-member-name" href="/getDatacenter.ts#L36">interface GetDatacenterResult</a>
 </h2>
 
 A collection of values returned by getDatacenter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatacenter.ts#L39">property id</a>
+<a class="pdoc-child-name" href="/getDatacenter.ts#L40">property id</a>
 </h3>
 
 ```typescript
@@ -16443,13 +16479,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetDatastoreArgs">
-<a class="pdoc-member-name" href="/getDatastore.ts#L24">interface GetDatastoreArgs</a>
+<a class="pdoc-member-name" href="/getDatastore.ts#L25">interface GetDatastoreArgs</a>
 </h2>
 
 A collection of arguments for invoking getDatastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatastore.ts#L32">property datacenterId</a>
+<a class="pdoc-child-name" href="/getDatastore.ts#L33">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16464,7 +16500,7 @@ default datacenters, use the id attribute from an empty `vsphere_datacenter`
 data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatastore.ts#L36">property name</a>
+<a class="pdoc-child-name" href="/getDatastore.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -16475,13 +16511,13 @@ name: string;
 The name of the datastore. This can be a name or path.
 
 <h2 class="pdoc-module-header" id="GetDatastoreClusterArgs">
-<a class="pdoc-member-name" href="/getDatastoreCluster.ts#L29">interface GetDatastoreClusterArgs</a>
+<a class="pdoc-member-name" href="/getDatastoreCluster.ts#L30">interface GetDatastoreClusterArgs</a>
 </h2>
 
 A collection of arguments for invoking getDatastoreCluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatastoreCluster.ts#L37">property datacenterId</a>
+<a class="pdoc-child-name" href="/getDatastoreCluster.ts#L38">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16496,7 +16532,7 @@ For default datacenters, use the id attribute from an empty
 `vsphere_datacenter` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatastoreCluster.ts#L41">property name</a>
+<a class="pdoc-child-name" href="/getDatastoreCluster.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -16507,13 +16543,13 @@ name: string;
 The name or absolute path to the datastore cluster.
 
 <h2 class="pdoc-module-header" id="GetDatastoreClusterResult">
-<a class="pdoc-member-name" href="/getDatastoreCluster.ts#L47">interface GetDatastoreClusterResult</a>
+<a class="pdoc-member-name" href="/getDatastoreCluster.ts#L48">interface GetDatastoreClusterResult</a>
 </h2>
 
 A collection of values returned by getDatastoreCluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatastoreCluster.ts#L51">property id</a>
+<a class="pdoc-child-name" href="/getDatastoreCluster.ts#L52">property id</a>
 </h3>
 
 ```typescript
@@ -16524,13 +16560,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetDatastoreResult">
-<a class="pdoc-member-name" href="/getDatastore.ts#L42">interface GetDatastoreResult</a>
+<a class="pdoc-member-name" href="/getDatastore.ts#L43">interface GetDatastoreResult</a>
 </h2>
 
 A collection of values returned by getDatastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDatastore.ts#L46">property id</a>
+<a class="pdoc-child-name" href="/getDatastore.ts#L47">property id</a>
 </h3>
 
 ```typescript
@@ -16541,13 +16577,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetDistributedVirtualSwitchArgs">
-<a class="pdoc-member-name" href="/getDistributedVirtualSwitch.ts#L28">interface GetDistributedVirtualSwitchArgs</a>
+<a class="pdoc-member-name" href="/getDistributedVirtualSwitch.ts#L29">interface GetDistributedVirtualSwitchArgs</a>
 </h2>
 
 A collection of arguments for invoking getDistributedVirtualSwitch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L36">property datacenterId</a>
+<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L37">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16562,7 +16598,7 @@ datacenters, use the id attribute from an empty `vsphere_datacenter` data
 source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L41">property name</a>
+<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -16574,13 +16610,13 @@ The name of the distributed virtual switch. This can be a
 name or path.
 
 <h2 class="pdoc-module-header" id="GetDistributedVirtualSwitchResult">
-<a class="pdoc-member-name" href="/getDistributedVirtualSwitch.ts#L47">interface GetDistributedVirtualSwitchResult</a>
+<a class="pdoc-member-name" href="/getDistributedVirtualSwitch.ts#L48">interface GetDistributedVirtualSwitchResult</a>
 </h2>
 
 A collection of values returned by getDistributedVirtualSwitch.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L52">property id</a>
+<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L53">property id</a>
 </h3>
 
 ```typescript
@@ -16591,7 +16627,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L48">property uplinks</a>
+<a class="pdoc-child-name" href="/getDistributedVirtualSwitch.ts#L49">property uplinks</a>
 </h3>
 
 ```typescript
@@ -16599,13 +16635,13 @@ uplinks: string[];
 ```
 
 <h2 class="pdoc-module-header" id="GetHostArgs">
-<a class="pdoc-member-name" href="/getHost.ts#L21">interface GetHostArgs</a>
+<a class="pdoc-member-name" href="/getHost.ts#L22">interface GetHostArgs</a>
 </h2>
 
 A collection of arguments for invoking getHost.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getHost.ts#L26">property datacenterId</a>
+<a class="pdoc-child-name" href="/getHost.ts#L27">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16617,7 +16653,7 @@ The [managed object reference
 ID][docs-about-morefs] of a datacenter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getHost.ts#L31">property name</a>
+<a class="pdoc-child-name" href="/getHost.ts#L32">property name</a>
 </h3>
 
 ```typescript
@@ -16629,13 +16665,13 @@ The name of the host. This can be a name or path. Can be
 omitted if there is only one host in your inventory.
 
 <h2 class="pdoc-module-header" id="GetHostResult">
-<a class="pdoc-member-name" href="/getHost.ts#L37">interface GetHostResult</a>
+<a class="pdoc-member-name" href="/getHost.ts#L38">interface GetHostResult</a>
 </h2>
 
 A collection of values returned by getHost.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getHost.ts#L46">property id</a>
+<a class="pdoc-child-name" href="/getHost.ts#L47">property id</a>
 </h3>
 
 ```typescript
@@ -16646,7 +16682,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getHost.ts#L42">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/getHost.ts#L43">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -16658,13 +16694,13 @@ The [managed object ID][docs-about-morefs] of the host's
 root resource pool.
 
 <h2 class="pdoc-module-header" id="GetNetworkArgs">
-<a class="pdoc-member-name" href="/getNetwork.ts#L23">interface GetNetworkArgs</a>
+<a class="pdoc-member-name" href="/getNetwork.ts#L24">interface GetNetworkArgs</a>
 </h2>
 
 A collection of arguments for invoking getNetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getNetwork.ts#L31">property datacenterId</a>
+<a class="pdoc-child-name" href="/getNetwork.ts#L32">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16679,7 +16715,7 @@ datacenters, use the id attribute from an empty `vsphere_datacenter` data
 source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getNetwork.ts#L35">property name</a>
+<a class="pdoc-child-name" href="/getNetwork.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -16690,13 +16726,13 @@ name: string;
 The name of the network. This can be a name or path.
 
 <h2 class="pdoc-module-header" id="GetNetworkResult">
-<a class="pdoc-member-name" href="/getNetwork.ts#L41">interface GetNetworkResult</a>
+<a class="pdoc-member-name" href="/getNetwork.ts#L42">interface GetNetworkResult</a>
 </h2>
 
 A collection of values returned by getNetwork.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getNetwork.ts#L46">property id</a>
+<a class="pdoc-child-name" href="/getNetwork.ts#L47">property id</a>
 </h3>
 
 ```typescript
@@ -16707,7 +16743,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getNetwork.ts#L42">property type</a>
+<a class="pdoc-child-name" href="/getNetwork.ts#L43">property type</a>
 </h3>
 
 ```typescript
@@ -16715,13 +16751,13 @@ type: string;
 ```
 
 <h2 class="pdoc-module-header" id="GetResourcePoolArgs">
-<a class="pdoc-member-name" href="/getResourcePool.ts#L25">interface GetResourcePoolArgs</a>
+<a class="pdoc-member-name" href="/getResourcePool.ts#L26">interface GetResourcePoolArgs</a>
 </h2>
 
 A collection of arguments for invoking getResourcePool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getResourcePool.ts#L33">property datacenterId</a>
+<a class="pdoc-child-name" href="/getResourcePool.ts#L34">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16736,7 +16772,7 @@ For default datacenters, use the id attribute from an empty
 `vsphere_datacenter` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getResourcePool.ts#L38">property name</a>
+<a class="pdoc-child-name" href="/getResourcePool.ts#L39">property name</a>
 </h3>
 
 ```typescript
@@ -16748,13 +16784,13 @@ The name of the resource pool. This can be a name or
 path. This is required when using vCenter.
 
 <h2 class="pdoc-module-header" id="GetResourcePoolResult">
-<a class="pdoc-member-name" href="/getResourcePool.ts#L44">interface GetResourcePoolResult</a>
+<a class="pdoc-member-name" href="/getResourcePool.ts#L45">interface GetResourcePoolResult</a>
 </h2>
 
 A collection of values returned by getResourcePool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getResourcePool.ts#L48">property id</a>
+<a class="pdoc-child-name" href="/getResourcePool.ts#L49">property id</a>
 </h3>
 
 ```typescript
@@ -16765,13 +16801,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetTagArgs">
-<a class="pdoc-member-name" href="/getTag.ts#L28">interface GetTagArgs</a>
+<a class="pdoc-member-name" href="/getTag.ts#L29">interface GetTagArgs</a>
 </h2>
 
 A collection of arguments for invoking getTag.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTag.ts#L32">property categoryId</a>
+<a class="pdoc-child-name" href="/getTag.ts#L33">property categoryId</a>
 </h3>
 
 ```typescript
@@ -16782,7 +16818,7 @@ categoryId: string;
 The ID of the tag category the tag is located in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTag.ts#L36">property name</a>
+<a class="pdoc-child-name" href="/getTag.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -16793,13 +16829,13 @@ name: string;
 The name of the tag.
 
 <h2 class="pdoc-module-header" id="GetTagCategoryArgs">
-<a class="pdoc-member-name" href="/getTagCategory.ts#L27">interface GetTagCategoryArgs</a>
+<a class="pdoc-member-name" href="/getTagCategory.ts#L28">interface GetTagCategoryArgs</a>
 </h2>
 
 A collection of arguments for invoking getTagCategory.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTagCategory.ts#L31">property name</a>
+<a class="pdoc-child-name" href="/getTagCategory.ts#L32">property name</a>
 </h3>
 
 ```typescript
@@ -16810,13 +16846,13 @@ name: string;
 The name of the tag category.
 
 <h2 class="pdoc-module-header" id="GetTagCategoryResult">
-<a class="pdoc-member-name" href="/getTagCategory.ts#L37">interface GetTagCategoryResult</a>
+<a class="pdoc-member-name" href="/getTagCategory.ts#L38">interface GetTagCategoryResult</a>
 </h2>
 
 A collection of values returned by getTagCategory.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTagCategory.ts#L38">property associableTypes</a>
+<a class="pdoc-child-name" href="/getTagCategory.ts#L39">property associableTypes</a>
 </h3>
 
 ```typescript
@@ -16824,7 +16860,7 @@ associableTypes: string[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTagCategory.ts#L39">property cardinality</a>
+<a class="pdoc-child-name" href="/getTagCategory.ts#L40">property cardinality</a>
 </h3>
 
 ```typescript
@@ -16832,7 +16868,7 @@ cardinality: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTagCategory.ts#L40">property description</a>
+<a class="pdoc-child-name" href="/getTagCategory.ts#L41">property description</a>
 </h3>
 
 ```typescript
@@ -16840,7 +16876,7 @@ description: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTagCategory.ts#L44">property id</a>
+<a class="pdoc-child-name" href="/getTagCategory.ts#L45">property id</a>
 </h3>
 
 ```typescript
@@ -16851,13 +16887,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetTagResult">
-<a class="pdoc-member-name" href="/getTag.ts#L42">interface GetTagResult</a>
+<a class="pdoc-member-name" href="/getTag.ts#L43">interface GetTagResult</a>
 </h2>
 
 A collection of values returned by getTag.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTag.ts#L43">property description</a>
+<a class="pdoc-child-name" href="/getTag.ts#L44">property description</a>
 </h3>
 
 ```typescript
@@ -16865,7 +16901,7 @@ description: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getTag.ts#L47">property id</a>
+<a class="pdoc-child-name" href="/getTag.ts#L48">property id</a>
 </h3>
 
 ```typescript
@@ -16876,13 +16912,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetVirtualMachineArgs">
-<a class="pdoc-member-name" href="/getVirtualMachine.ts#L26">interface GetVirtualMachineArgs</a>
+<a class="pdoc-member-name" href="/getVirtualMachine.ts#L27">interface GetVirtualMachineArgs</a>
 </h2>
 
 A collection of arguments for invoking getVirtualMachine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L34">property datacenterId</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L35">property datacenterId</a>
 </h3>
 
 ```typescript
@@ -16897,7 +16933,7 @@ For default datacenters, use the `id` attribute from an empty
 `vsphere_datacenter` data source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L39">property name</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L40">property name</a>
 </h3>
 
 ```typescript
@@ -16909,7 +16945,7 @@ The name of the virtual machine. This can be a name or
 path.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L44">property scsiControllerScanCount</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L45">property scsiControllerScanCount</a>
 </h3>
 
 ```typescript
@@ -16921,13 +16957,13 @@ The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
 
 <h2 class="pdoc-module-header" id="GetVirtualMachineResult">
-<a class="pdoc-member-name" href="/getVirtualMachine.ts#L50">interface GetVirtualMachineResult</a>
+<a class="pdoc-member-name" href="/getVirtualMachine.ts#L51">interface GetVirtualMachineResult</a>
 </h2>
 
 A collection of values returned by getVirtualMachine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L55">property alternateGuestName</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L56">property alternateGuestName</a>
 </h3>
 
 ```typescript
@@ -16939,7 +16975,7 @@ The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L66">property disks</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L67">property disks</a>
 </h3>
 
 ```typescript
@@ -16957,7 +16993,7 @@ Only the first number of controllers defined by `scsi_controller_scan_count`
 are scanned for disks. The sub-attributes are:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L70">property firmware</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L71">property firmware</a>
 </h3>
 
 ```typescript
@@ -16968,7 +17004,7 @@ firmware: string;
 The firmware type for this virtual machine. Can be `bios` or `efi`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L74">property guestId</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L75">property guestId</a>
 </h3>
 
 ```typescript
@@ -16979,7 +17015,7 @@ guestId: string;
 The guest ID of the virtual machine or template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L98">property id</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L99">property id</a>
 </h3>
 
 ```typescript
@@ -16990,7 +17026,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L80">property networkInterfaceTypes</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L81">property networkInterfaceTypes</a>
 </h3>
 
 ```typescript
@@ -17003,7 +17039,7 @@ interface found on the virtual machine, in device bus order. Will be one of
 `e1000`, `e1000e`, `pcnet32`, `sriov`, `vmxnet2`, or `vmxnet3`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L86">property scsiBusSharing</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L87">property scsiBusSharing</a>
 </h3>
 
 ```typescript
@@ -17016,7 +17052,7 @@ physicalSharing, virtualSharing, and noSharing. Only the first number of
 controllers defined by `scsi_controller_scan_count` are scanned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVirtualMachine.ts#L94">property scsiType</a>
+<a class="pdoc-child-name" href="/getVirtualMachine.ts#L95">property scsiType</a>
 </h3>
 
 ```typescript
@@ -17031,13 +17067,13 @@ there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 
 <h2 class="pdoc-module-header" id="GetVmfsDisksArgs">
-<a class="pdoc-member-name" href="/getVmfsDisks.ts#L25">interface GetVmfsDisksArgs</a>
+<a class="pdoc-member-name" href="/getVmfsDisks.ts#L26">interface GetVmfsDisksArgs</a>
 </h2>
 
 A collection of arguments for invoking getVmfsDisks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVmfsDisks.ts#L30">property filter</a>
+<a class="pdoc-child-name" href="/getVmfsDisks.ts#L31">property filter</a>
 </h3>
 
 ```typescript
@@ -17049,7 +17085,7 @@ A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVmfsDisks.ts#L35">property hostSystemId</a>
+<a class="pdoc-child-name" href="/getVmfsDisks.ts#L36">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -17061,7 +17097,7 @@ The [managed object ID][docs-about-morefs] of
 the host to look for disks on.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVmfsDisks.ts#L41">property rescan</a>
+<a class="pdoc-child-name" href="/getVmfsDisks.ts#L42">property rescan</a>
 </h3>
 
 ```typescript
@@ -17074,13 +17110,13 @@ searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
 
 <h2 class="pdoc-module-header" id="GetVmfsDisksResult">
-<a class="pdoc-member-name" href="/getVmfsDisks.ts#L47">interface GetVmfsDisksResult</a>
+<a class="pdoc-member-name" href="/getVmfsDisks.ts#L48">interface GetVmfsDisksResult</a>
 </h2>
 
 A collection of values returned by getVmfsDisks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVmfsDisks.ts#L52">property disks</a>
+<a class="pdoc-child-name" href="/getVmfsDisks.ts#L53">property disks</a>
 </h3>
 
 ```typescript
@@ -17092,7 +17128,7 @@ A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/getVmfsDisks.ts#L56">property id</a>
+<a class="pdoc-child-name" href="/getVmfsDisks.ts#L57">property id</a>
 </h3>
 
 ```typescript
@@ -17103,13 +17139,13 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="HaVmOverrideArgs">
-<a class="pdoc-member-name" href="/haVmOverride.ts#L306">interface HaVmOverrideArgs</a>
+<a class="pdoc-member-name" href="/haVmOverride.ts#L307">interface HaVmOverrideArgs</a>
 </h2>
 
 The set of arguments for constructing a HaVmOverride resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L312">property computeClusterId</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L313">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -17122,7 +17158,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L320">property haDatastoreApdRecoveryAction</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L321">property haDatastoreApdRecoveryAction</a>
 </h3>
 
 ```typescript
@@ -17137,7 +17173,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L328">property haDatastoreApdResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L329">property haDatastoreApdResponse</a>
 </h3>
 
 ```typescript
@@ -17152,7 +17188,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L336">property haDatastoreApdResponseDelay</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L337">property haDatastoreApdResponseDelay</a>
 </h3>
 
 ```typescript
@@ -17167,7 +17203,7 @@ the cluster default. Default: `-1`.
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L344">property haDatastorePdlResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L345">property haDatastorePdlResponse</a>
 </h3>
 
 ```typescript
@@ -17182,7 +17218,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L351">property haHostIsolationResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L352">property haHostIsolationResponse</a>
 </h3>
 
 ```typescript
@@ -17196,7 +17232,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
 `shutdown`. Default: `clusterIsolationResponse`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L357">property haVmFailureInterval</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L358">property haVmFailureInterval</a>
 </h3>
 
 ```typescript
@@ -17209,7 +17245,7 @@ machine is not received within this configured interval, the virtual machine
 is marked as failed. The value is in seconds. Default: `30`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L366">property haVmMaximumFailureWindow</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L367">property haVmMaximumFailureWindow</a>
 </h3>
 
 ```typescript
@@ -17225,7 +17261,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L372">property haVmMaximumResets</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L373">property haVmMaximumResets</a>
 </h3>
 
 ```typescript
@@ -17238,7 +17274,7 @@ perform to this virtual machine when responding to a failure event. Default:
 `3`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L378">property haVmMinimumUptime</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L379">property haVmMinimumUptime</a>
 </h3>
 
 ```typescript
@@ -17251,7 +17287,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L384">property haVmMonitoring</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L385">property haVmMonitoring</a>
 </h3>
 
 ```typescript
@@ -17264,7 +17300,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L391">property haVmMonitoringUseClusterDefaults</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L392">property haVmMonitoringUseClusterDefaults</a>
 </h3>
 
 ```typescript
@@ -17278,7 +17314,7 @@ this resource are used for virtual machine monitoring. The default is `true`
 (use cluster defaults) - set to `false` to have overrides take effect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L398">property haVmRestartPriority</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L399">property haVmRestartPriority</a>
 </h3>
 
 ```typescript
@@ -17292,7 +17328,7 @@ machine when vSphere detects a host failure. Can be one of
 Default: `clusterRestartPriority`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L405">property haVmRestartTimeout</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L406">property haVmRestartTimeout</a>
 </h3>
 
 ```typescript
@@ -17306,7 +17342,7 @@ specify the cluster default.  Default: `-1`.
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L410">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L411">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -17318,13 +17354,13 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="HaVmOverrideState">
-<a class="pdoc-member-name" href="/haVmOverride.ts#L196">interface HaVmOverrideState</a>
+<a class="pdoc-member-name" href="/haVmOverride.ts#L197">interface HaVmOverrideState</a>
 </h2>
 
 Input properties used for looking up and filtering HaVmOverride resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L202">property computeClusterId</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L203">property computeClusterId</a>
 </h3>
 
 ```typescript
@@ -17337,7 +17373,7 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L210">property haDatastoreApdRecoveryAction</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L211">property haDatastoreApdRecoveryAction</a>
 </h3>
 
 ```typescript
@@ -17352,7 +17388,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L218">property haDatastoreApdResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L219">property haDatastoreApdResponse</a>
 </h3>
 
 ```typescript
@@ -17367,7 +17403,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L226">property haDatastoreApdResponseDelay</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L227">property haDatastoreApdResponseDelay</a>
 </h3>
 
 ```typescript
@@ -17382,7 +17418,7 @@ the cluster default. Default: `-1`.
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L234">property haDatastorePdlResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L235">property haDatastorePdlResponse</a>
 </h3>
 
 ```typescript
@@ -17397,7 +17433,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L241">property haHostIsolationResponse</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L242">property haHostIsolationResponse</a>
 </h3>
 
 ```typescript
@@ -17411,7 +17447,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
 `shutdown`. Default: `clusterIsolationResponse`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L247">property haVmFailureInterval</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L248">property haVmFailureInterval</a>
 </h3>
 
 ```typescript
@@ -17424,7 +17460,7 @@ machine is not received within this configured interval, the virtual machine
 is marked as failed. The value is in seconds. Default: `30`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L256">property haVmMaximumFailureWindow</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L257">property haVmMaximumFailureWindow</a>
 </h3>
 
 ```typescript
@@ -17440,7 +17476,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L262">property haVmMaximumResets</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L263">property haVmMaximumResets</a>
 </h3>
 
 ```typescript
@@ -17453,7 +17489,7 @@ perform to this virtual machine when responding to a failure event. Default:
 `3`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L268">property haVmMinimumUptime</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L269">property haVmMinimumUptime</a>
 </h3>
 
 ```typescript
@@ -17466,7 +17502,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L274">property haVmMonitoring</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L275">property haVmMonitoring</a>
 </h3>
 
 ```typescript
@@ -17479,7 +17515,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L281">property haVmMonitoringUseClusterDefaults</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L282">property haVmMonitoringUseClusterDefaults</a>
 </h3>
 
 ```typescript
@@ -17493,7 +17529,7 @@ this resource are used for virtual machine monitoring. The default is `true`
 (use cluster defaults) - set to `false` to have overrides take effect.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L288">property haVmRestartPriority</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L289">property haVmRestartPriority</a>
 </h3>
 
 ```typescript
@@ -17507,7 +17543,7 @@ machine when vSphere detects a host failure. Can be one of
 Default: `clusterRestartPriority`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L295">property haVmRestartTimeout</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L296">property haVmRestartTimeout</a>
 </h3>
 
 ```typescript
@@ -17521,7 +17557,7 @@ specify the cluster default.  Default: `-1`.
 <sup>[\*][tf-vsphere-cluster-resource-version-restrictions]</sup>
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/haVmOverride.ts#L300">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/haVmOverride.ts#L301">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -17533,13 +17569,13 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="HostPortGroupArgs">
-<a class="pdoc-member-name" href="/hostPortGroup.ts#L287">interface HostPortGroupArgs</a>
+<a class="pdoc-member-name" href="/hostPortGroup.ts#L288">interface HostPortGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a HostPortGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L291">property activeNics</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L292">property activeNics</a>
 </h3>
 
 ```typescript
@@ -17550,7 +17586,7 @@ activeNics?: pulumi.Input<pulumi.Input<string>[]>;
 List of active network adapters used for load balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L296">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L297">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -17562,7 +17598,7 @@ Controls whether or not the virtual network adapter is allowed to send network t
 than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L300">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L301">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -17573,7 +17609,7 @@ allowMacChanges?: pulumi.Input<boolean>;
 Controls whether or not the Media Access Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L304">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L305">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -17584,7 +17620,7 @@ allowPromiscuous?: pulumi.Input<boolean>;
 Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L309">property checkBeacon</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L310">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -17596,7 +17632,7 @@ Enable beacon probing. Requires that the vSwitch has been configured to use a be
 used only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L313">property failback</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L314">property failback</a>
 </h3>
 
 ```typescript
@@ -17607,7 +17643,7 @@ failback?: pulumi.Input<boolean>;
 If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L318">property hostSystemId</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L319">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -17619,7 +17655,7 @@ The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L323">property name</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L324">property name</a>
 </h3>
 
 ```typescript
@@ -17631,7 +17667,7 @@ The name of the port group.  Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L327">property notifySwitches</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L328">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -17642,7 +17678,7 @@ notifySwitches?: pulumi.Input<boolean>;
 If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L331">property shapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L332">property shapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -17653,7 +17689,7 @@ shapingAverageBandwidth?: pulumi.Input<number>;
 The average bandwidth in bits per second if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L335">property shapingBurstSize</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L336">property shapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -17664,7 +17700,7 @@ shapingBurstSize?: pulumi.Input<number>;
 The maximum burst size allowed in bytes if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L339">property shapingEnabled</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L340">property shapingEnabled</a>
 </h3>
 
 ```typescript
@@ -17675,7 +17711,7 @@ shapingEnabled?: pulumi.Input<boolean>;
 Enable traffic shaping on this virtual switch or port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L343">property shapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L344">property shapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -17686,7 +17722,7 @@ shapingPeakBandwidth?: pulumi.Input<number>;
 The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L347">property standbyNics</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L348">property standbyNics</a>
 </h3>
 
 ```typescript
@@ -17697,7 +17733,7 @@ standbyNics?: pulumi.Input<pulumi.Input<string>[]>;
 List of standby network adapters used for failover.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L352">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L353">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -17709,7 +17745,7 @@ The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_sr
 failover_explicit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L357">property virtualSwitchName</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L358">property virtualSwitchName</a>
 </h3>
 
 ```typescript
@@ -17721,7 +17757,7 @@ The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L364">property vlanId</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L365">property vlanId</a>
 </h3>
 
 ```typescript
@@ -17735,13 +17771,13 @@ ID of `4095` enables trunk mode, allowing the guest to manage its own
 tagging. Default: `0`.
 
 <h2 class="pdoc-module-header" id="HostPortGroupState">
-<a class="pdoc-member-name" href="/hostPortGroup.ts#L190">interface HostPortGroupState</a>
+<a class="pdoc-member-name" href="/hostPortGroup.ts#L191">interface HostPortGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering HostPortGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L194">property activeNics</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L195">property activeNics</a>
 </h3>
 
 ```typescript
@@ -17752,7 +17788,7 @@ activeNics?: pulumi.Input<pulumi.Input<string>[]>;
 List of active network adapters used for load balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L199">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L200">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -17764,7 +17800,7 @@ Controls whether or not the virtual network adapter is allowed to send network t
 than that of its own.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L203">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L204">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -17775,7 +17811,7 @@ allowMacChanges?: pulumi.Input<boolean>;
 Controls whether or not the Media Access Control (MAC) address can be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L207">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L208">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -17786,7 +17822,7 @@ allowPromiscuous?: pulumi.Input<boolean>;
 Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L212">property checkBeacon</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L213">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -17798,7 +17834,7 @@ Enable beacon probing. Requires that the vSwitch has been configured to use a be
 used only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L218">property computedPolicy</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L219">property computedPolicy</a>
 </h3>
 
 ```typescript
@@ -17811,7 +17847,7 @@ options][host-vswitch-policy-options] computed from defaults and overrides,
 explaining the effective policy for this port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L222">property failback</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L223">property failback</a>
 </h3>
 
 ```typescript
@@ -17822,7 +17858,7 @@ failback?: pulumi.Input<boolean>;
 If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L227">property hostSystemId</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L228">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -17834,7 +17870,7 @@ The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L231">property key</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L232">property key</a>
 </h3>
 
 ```typescript
@@ -17845,7 +17881,7 @@ key?: pulumi.Input<string>;
 The key for this port group as returned from the vSphere API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L236">property name</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L237">property name</a>
 </h3>
 
 ```typescript
@@ -17857,7 +17893,7 @@ The name of the port group.  Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L240">property notifySwitches</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L241">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -17868,7 +17904,7 @@ notifySwitches?: pulumi.Input<boolean>;
 If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L244">property ports</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L245">property ports</a>
 </h3>
 
 ```typescript
@@ -17879,7 +17915,7 @@ ports?: pulumi.Input<{ ... }>;
 A list of ports that currently exist and are used on this port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L248">property shapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L249">property shapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -17890,7 +17926,7 @@ shapingAverageBandwidth?: pulumi.Input<number>;
 The average bandwidth in bits per second if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L252">property shapingBurstSize</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L253">property shapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -17901,7 +17937,7 @@ shapingBurstSize?: pulumi.Input<number>;
 The maximum burst size allowed in bytes if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L256">property shapingEnabled</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L257">property shapingEnabled</a>
 </h3>
 
 ```typescript
@@ -17912,7 +17948,7 @@ shapingEnabled?: pulumi.Input<boolean>;
 Enable traffic shaping on this virtual switch or port group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L260">property shapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L261">property shapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -17923,7 +17959,7 @@ shapingPeakBandwidth?: pulumi.Input<number>;
 The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L264">property standbyNics</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L265">property standbyNics</a>
 </h3>
 
 ```typescript
@@ -17934,7 +17970,7 @@ standbyNics?: pulumi.Input<pulumi.Input<string>[]>;
 List of standby network adapters used for failover.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L269">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L270">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -17946,7 +17982,7 @@ The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_sr
 failover_explicit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L274">property virtualSwitchName</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L275">property virtualSwitchName</a>
 </h3>
 
 ```typescript
@@ -17958,7 +17994,7 @@ The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostPortGroup.ts#L281">property vlanId</a>
+<a class="pdoc-child-name" href="/hostPortGroup.ts#L282">property vlanId</a>
 </h3>
 
 ```typescript
@@ -17972,13 +18008,13 @@ ID of `4095` enables trunk mode, allowing the guest to manage its own
 tagging. Default: `0`.
 
 <h2 class="pdoc-module-header" id="HostVirtualSwitchArgs">
-<a class="pdoc-member-name" href="/hostVirtualSwitch.ts#L338">interface HostVirtualSwitchArgs</a>
+<a class="pdoc-member-name" href="/hostVirtualSwitch.ts#L339">interface HostVirtualSwitchArgs</a>
 </h2>
 
 The set of arguments for constructing a HostVirtualSwitch resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L343">property activeNics</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L344">property activeNics</a>
 </h3>
 
 ```typescript
@@ -17990,7 +18026,7 @@ The list of active network adapters used for load
 balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L349">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L350">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -18003,7 +18039,7 @@ network adapter is allowed to send network traffic with a different MAC
 address than that of its own. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L354">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L355">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -18015,7 +18051,7 @@ Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L360">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L361">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -18028,7 +18064,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L366">property beaconInterval</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L367">property beaconInterval</a>
 </h3>
 
 ```typescript
@@ -18041,7 +18077,7 @@ packet is sent out. This can be used with `check_beacon` to
 offer link failure capability beyond link status only. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L373">property checkBeacon</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L374">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -18055,7 +18091,7 @@ options. If this is set to `false`, only link status is used to check for
 failed NICs.  Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L379">property failback</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L380">property failback</a>
 </h3>
 
 ```typescript
@@ -18068,7 +18104,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L384">property hostSystemId</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L385">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -18080,7 +18116,7 @@ The [managed object ID][docs-about-morefs] of
 the host to set the virtual switch up on. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L389">property linkDiscoveryOperation</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L390">property linkDiscoveryOperation</a>
 </h3>
 
 ```typescript
@@ -18092,7 +18128,7 @@ Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L394">property linkDiscoveryProtocol</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L395">property linkDiscoveryProtocol</a>
 </h3>
 
 ```typescript
@@ -18104,7 +18140,7 @@ The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L399">property mtu</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L400">property mtu</a>
 </h3>
 
 ```typescript
@@ -18116,7 +18152,7 @@ The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L404">property name</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L405">property name</a>
 </h3>
 
 ```typescript
@@ -18128,7 +18164,7 @@ The name of the virtual switch. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L408">property networkAdapters</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L409">property networkAdapters</a>
 </h3>
 
 ```typescript
@@ -18139,7 +18175,7 @@ networkAdapters: pulumi.Input<pulumi.Input<string>[]>;
 The network interfaces to bind to the bridge.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L414">property notifySwitches</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L415">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -18152,7 +18188,7 @@ notify the broadcast network of a NIC failover, triggering cache updates.
 Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L419">property numberOfPorts</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L420">property numberOfPorts</a>
 </h3>
 
 ```typescript
@@ -18164,7 +18200,7 @@ The number of ports to create with this
 virtual switch. Default: `128`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L424">property shapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L425">property shapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -18176,7 +18212,7 @@ The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L429">property shapingBurstSize</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L430">property shapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -18188,7 +18224,7 @@ The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L434">property shapingEnabled</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L435">property shapingEnabled</a>
 </h3>
 
 ```typescript
@@ -18200,7 +18236,7 @@ Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L439">property shapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L440">property shapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -18212,7 +18248,7 @@ The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L444">property standbyNics</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L445">property standbyNics</a>
 </h3>
 
 ```typescript
@@ -18224,7 +18260,7 @@ The list of standby network adapters used for
 failover.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L450">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L451">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -18237,13 +18273,13 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`. Default: `loadbalance_srcid`.
 
 <h2 class="pdoc-module-header" id="HostVirtualSwitchState">
-<a class="pdoc-member-name" href="/hostVirtualSwitch.ts#L220">interface HostVirtualSwitchState</a>
+<a class="pdoc-member-name" href="/hostVirtualSwitch.ts#L221">interface HostVirtualSwitchState</a>
 </h2>
 
 Input properties used for looking up and filtering HostVirtualSwitch resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L225">property activeNics</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L226">property activeNics</a>
 </h3>
 
 ```typescript
@@ -18255,7 +18291,7 @@ The list of active network adapters used for load
 balancing.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L231">property allowForgedTransmits</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L232">property allowForgedTransmits</a>
 </h3>
 
 ```typescript
@@ -18268,7 +18304,7 @@ network adapter is allowed to send network traffic with a different MAC
 address than that of its own. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L236">property allowMacChanges</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L237">property allowMacChanges</a>
 </h3>
 
 ```typescript
@@ -18280,7 +18316,7 @@ Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L242">property allowPromiscuous</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L243">property allowPromiscuous</a>
 </h3>
 
 ```typescript
@@ -18293,7 +18329,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L248">property beaconInterval</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L249">property beaconInterval</a>
 </h3>
 
 ```typescript
@@ -18306,7 +18342,7 @@ packet is sent out. This can be used with `check_beacon` to
 offer link failure capability beyond link status only. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L255">property checkBeacon</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L256">property checkBeacon</a>
 </h3>
 
 ```typescript
@@ -18320,7 +18356,7 @@ options. If this is set to `false`, only link status is used to check for
 failed NICs.  Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L261">property failback</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L262">property failback</a>
 </h3>
 
 ```typescript
@@ -18333,7 +18369,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L266">property hostSystemId</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L267">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -18345,7 +18381,7 @@ The [managed object ID][docs-about-morefs] of
 the host to set the virtual switch up on. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L271">property linkDiscoveryOperation</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L272">property linkDiscoveryOperation</a>
 </h3>
 
 ```typescript
@@ -18357,7 +18393,7 @@ Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L276">property linkDiscoveryProtocol</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L277">property linkDiscoveryProtocol</a>
 </h3>
 
 ```typescript
@@ -18369,7 +18405,7 @@ The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L281">property mtu</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L282">property mtu</a>
 </h3>
 
 ```typescript
@@ -18381,7 +18417,7 @@ The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L286">property name</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L287">property name</a>
 </h3>
 
 ```typescript
@@ -18393,7 +18429,7 @@ The name of the virtual switch. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L290">property networkAdapters</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L291">property networkAdapters</a>
 </h3>
 
 ```typescript
@@ -18404,7 +18440,7 @@ networkAdapters?: pulumi.Input<pulumi.Input<string>[]>;
 The network interfaces to bind to the bridge.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L296">property notifySwitches</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L297">property notifySwitches</a>
 </h3>
 
 ```typescript
@@ -18417,7 +18453,7 @@ notify the broadcast network of a NIC failover, triggering cache updates.
 Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L301">property numberOfPorts</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L302">property numberOfPorts</a>
 </h3>
 
 ```typescript
@@ -18429,7 +18465,7 @@ The number of ports to create with this
 virtual switch. Default: `128`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L306">property shapingAverageBandwidth</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L307">property shapingAverageBandwidth</a>
 </h3>
 
 ```typescript
@@ -18441,7 +18477,7 @@ The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L311">property shapingBurstSize</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L312">property shapingBurstSize</a>
 </h3>
 
 ```typescript
@@ -18453,7 +18489,7 @@ The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L316">property shapingEnabled</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L317">property shapingEnabled</a>
 </h3>
 
 ```typescript
@@ -18465,7 +18501,7 @@ Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L321">property shapingPeakBandwidth</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L322">property shapingPeakBandwidth</a>
 </h3>
 
 ```typescript
@@ -18477,7 +18513,7 @@ The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L326">property standbyNics</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L327">property standbyNics</a>
 </h3>
 
 ```typescript
@@ -18489,7 +18525,7 @@ The list of standby network adapters used for
 failover.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L332">property teamingPolicy</a>
+<a class="pdoc-child-name" href="/hostVirtualSwitch.ts#L333">property teamingPolicy</a>
 </h3>
 
 ```typescript
@@ -18502,13 +18538,13 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 `failover_explicit`. Default: `loadbalance_srcid`.
 
 <h2 class="pdoc-module-header" id="LicenseArgs">
-<a class="pdoc-member-name" href="/license.ts#L114">interface LicenseArgs</a>
+<a class="pdoc-member-name" href="/license.ts#L115">interface LicenseArgs</a>
 </h2>
 
 The set of arguments for constructing a License resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L118">property labels</a>
+<a class="pdoc-child-name" href="/license.ts#L119">property labels</a>
 </h3>
 
 ```typescript
@@ -18519,7 +18555,7 @@ labels?: pulumi.Input<{ ... }>;
 A map of key/value pairs to be attached as labels (tags) to the license key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L122">property licenseKey</a>
+<a class="pdoc-child-name" href="/license.ts#L123">property licenseKey</a>
 </h3>
 
 ```typescript
@@ -18530,13 +18566,13 @@ licenseKey: pulumi.Input<string>;
 The license key to add.
 
 <h2 class="pdoc-module-header" id="LicenseState">
-<a class="pdoc-member-name" href="/license.ts#L84">interface LicenseState</a>
+<a class="pdoc-member-name" href="/license.ts#L85">interface LicenseState</a>
 </h2>
 
 Input properties used for looking up and filtering License resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L88">property editionKey</a>
+<a class="pdoc-child-name" href="/license.ts#L89">property editionKey</a>
 </h3>
 
 ```typescript
@@ -18547,7 +18583,7 @@ editionKey?: pulumi.Input<string>;
 The product edition of the license key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L92">property labels</a>
+<a class="pdoc-child-name" href="/license.ts#L93">property labels</a>
 </h3>
 
 ```typescript
@@ -18558,7 +18594,7 @@ labels?: pulumi.Input<{ ... }>;
 A map of key/value pairs to be attached as labels (tags) to the license key.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L96">property licenseKey</a>
+<a class="pdoc-child-name" href="/license.ts#L97">property licenseKey</a>
 </h3>
 
 ```typescript
@@ -18569,7 +18605,7 @@ licenseKey?: pulumi.Input<string>;
 The license key to add.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L100">property name</a>
+<a class="pdoc-child-name" href="/license.ts#L101">property name</a>
 </h3>
 
 ```typescript
@@ -18580,7 +18616,7 @@ name?: pulumi.Input<string>;
 The display name for the license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L104">property total</a>
+<a class="pdoc-child-name" href="/license.ts#L105">property total</a>
 </h3>
 
 ```typescript
@@ -18591,7 +18627,7 @@ total?: pulumi.Input<number>;
 Total number of units (example: CPUs) contained in the license.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/license.ts#L108">property used</a>
+<a class="pdoc-child-name" href="/license.ts#L109">property used</a>
 </h3>
 
 ```typescript
@@ -18602,13 +18638,13 @@ used?: pulumi.Input<number>;
 The number of units (example: CPUs) assigned to this license.
 
 <h2 class="pdoc-module-header" id="NasDatastoreArgs">
-<a class="pdoc-member-name" href="/nasDatastore.ts#L315">interface NasDatastoreArgs</a>
+<a class="pdoc-member-name" href="/nasDatastore.ts#L316">interface NasDatastoreArgs</a>
 </h2>
 
 The set of arguments for constructing a NasDatastore resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L322">property accessMode</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L323">property accessMode</a>
 </h3>
 
 ```typescript
@@ -18622,7 +18658,7 @@ that the datastore will be read-write depending on the permissions of the
 actual share. Default: `readWrite`. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L329">property customAttributes</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L330">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -18636,7 +18672,7 @@ value strings to set on datasource resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L335">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L336">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -18649,7 +18685,7 @@ ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L345">property folder</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L346">property folder</a>
 </h3>
 
 ```typescript
@@ -18666,7 +18702,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `datastore_cluster_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L350">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L351">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -18678,7 +18714,7 @@ The [managed object IDs][docs-about-morefs] of
 the hosts to mount the datastore on.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L355">property name</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L356">property name</a>
 </h3>
 
 ```typescript
@@ -18690,7 +18726,7 @@ The name of the datastore. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L361">property remoteHosts</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L362">property remoteHosts</a>
 </h3>
 
 ```typescript
@@ -18703,7 +18739,7 @@ server or servers. Only one element should be present for NFS v3 but multiple
 can be present for NFS v4.1. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L366">property remotePath</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L367">property remotePath</a>
 </h3>
 
 ```typescript
@@ -18715,7 +18751,7 @@ The remote path of the mount point. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L372">property securityType</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L373">property securityType</a>
 </h3>
 
 ```typescript
@@ -18728,7 +18764,7 @@ Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
 if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L377">property tags</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L378">property tags</a>
 </h3>
 
 ```typescript
@@ -18740,7 +18776,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L383">property type</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L384">property type</a>
 </h3>
 
 ```typescript
@@ -18753,13 +18789,13 @@ v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
 changed.
 
 <h2 class="pdoc-module-header" id="NasDatastoreState">
-<a class="pdoc-member-name" href="/nasDatastore.ts#L205">interface NasDatastoreState</a>
+<a class="pdoc-member-name" href="/nasDatastore.ts#L206">interface NasDatastoreState</a>
 </h2>
 
 Input properties used for looking up and filtering NasDatastore resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L212">property accessMode</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L213">property accessMode</a>
 </h3>
 
 ```typescript
@@ -18773,7 +18809,7 @@ that the datastore will be read-write depending on the permissions of the
 actual share. Default: `readWrite`. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L217">property accessible</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L218">property accessible</a>
 </h3>
 
 ```typescript
@@ -18785,7 +18821,7 @@ The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L221">property capacity</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L222">property capacity</a>
 </h3>
 
 ```typescript
@@ -18796,7 +18832,7 @@ capacity?: pulumi.Input<number>;
 Maximum capacity of the datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L228">property customAttributes</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L229">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -18810,7 +18846,7 @@ value strings to set on datasource resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L234">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L235">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -18823,7 +18859,7 @@ ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L244">property folder</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L245">property folder</a>
 </h3>
 
 ```typescript
@@ -18840,7 +18876,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `datastore_cluster_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L248">property freeSpace</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L249">property freeSpace</a>
 </h3>
 
 ```typescript
@@ -18851,7 +18887,7 @@ freeSpace?: pulumi.Input<number>;
 Available space of this datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L253">property hostSystemIds</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L254">property hostSystemIds</a>
 </h3>
 
 ```typescript
@@ -18863,7 +18899,7 @@ The [managed object IDs][docs-about-morefs] of
 the hosts to mount the datastore on.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L257">property maintenanceMode</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L258">property maintenanceMode</a>
 </h3>
 
 ```typescript
@@ -18874,7 +18910,7 @@ maintenanceMode?: pulumi.Input<string>;
 The current maintenance mode state of the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L262">property multipleHostAccess</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L263">property multipleHostAccess</a>
 </h3>
 
 ```typescript
@@ -18886,7 +18922,7 @@ If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L267">property name</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L268">property name</a>
 </h3>
 
 ```typescript
@@ -18898,7 +18934,7 @@ The name of the datastore. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L272">property protocolEndpoint</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L273">property protocolEndpoint</a>
 </h3>
 
 ```typescript
@@ -18910,7 +18946,7 @@ Indicates that this NAS volume is a protocol endpoint.
 This field is only populated if the host supports virtual datastores.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L278">property remoteHosts</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L279">property remoteHosts</a>
 </h3>
 
 ```typescript
@@ -18923,7 +18959,7 @@ server or servers. Only one element should be present for NFS v3 but multiple
 can be present for NFS v4.1. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L283">property remotePath</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L284">property remotePath</a>
 </h3>
 
 ```typescript
@@ -18935,7 +18971,7 @@ The remote path of the mount point. Forces a new
 resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L289">property securityType</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L290">property securityType</a>
 </h3>
 
 ```typescript
@@ -18948,7 +18984,7 @@ Can be one of `AUTH_SYS`, `SEC_KRB5`, or `SEC_KRB5I`. Forces a new resource
 if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L294">property tags</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L295">property tags</a>
 </h3>
 
 ```typescript
@@ -18960,7 +18996,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L300">property type</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L301">property type</a>
 </h3>
 
 ```typescript
@@ -18973,7 +19009,7 @@ v3) or `NFS41` (to denote NFS v4.1). Default: `NFS`. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L305">property uncommittedSpace</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L306">property uncommittedSpace</a>
 </h3>
 
 ```typescript
@@ -18985,7 +19021,7 @@ Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/nasDatastore.ts#L309">property url</a>
+<a class="pdoc-child-name" href="/nasDatastore.ts#L310">property url</a>
 </h3>
 
 ```typescript
@@ -18996,13 +19032,13 @@ url?: pulumi.Input<string>;
 The unique locator for the datastore.
 
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="/provider.ts#L46">interface ProviderArgs</a>
+<a class="pdoc-member-name" href="/provider.ts#L47">interface ProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a Provider resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L50">property allowUnverifiedSsl</a>
+<a class="pdoc-child-name" href="/provider.ts#L51">property allowUnverifiedSsl</a>
 </h3>
 
 ```typescript
@@ -19013,7 +19049,7 @@ allowUnverifiedSsl?: pulumi.Input<boolean>;
 If set, VMware vSphere client will permit unverifiable SSL certificates.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L54">property clientDebug</a>
+<a class="pdoc-child-name" href="/provider.ts#L55">property clientDebug</a>
 </h3>
 
 ```typescript
@@ -19024,7 +19060,7 @@ clientDebug?: pulumi.Input<boolean>;
 govmomi debug
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L58">property clientDebugPath</a>
+<a class="pdoc-child-name" href="/provider.ts#L59">property clientDebugPath</a>
 </h3>
 
 ```typescript
@@ -19035,7 +19071,7 @@ clientDebugPath?: pulumi.Input<string>;
 govmomi debug path for debug
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L62">property clientDebugPathRun</a>
+<a class="pdoc-child-name" href="/provider.ts#L63">property clientDebugPathRun</a>
 </h3>
 
 ```typescript
@@ -19046,7 +19082,7 @@ clientDebugPathRun?: pulumi.Input<string>;
 govmomi debug path for a single run
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L66">property password</a>
+<a class="pdoc-child-name" href="/provider.ts#L67">property password</a>
 </h3>
 
 ```typescript
@@ -19057,7 +19093,7 @@ password: pulumi.Input<string>;
 The user password for vSphere API operations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L70">property persistSession</a>
+<a class="pdoc-child-name" href="/provider.ts#L71">property persistSession</a>
 </h3>
 
 ```typescript
@@ -19068,7 +19104,7 @@ persistSession?: pulumi.Input<boolean>;
 Persist vSphere client sessions to disk
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L74">property restSessionPath</a>
+<a class="pdoc-child-name" href="/provider.ts#L75">property restSessionPath</a>
 </h3>
 
 ```typescript
@@ -19079,7 +19115,7 @@ restSessionPath?: pulumi.Input<string>;
 The directory to save vSphere REST API sessions to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L78">property user</a>
+<a class="pdoc-child-name" href="/provider.ts#L79">property user</a>
 </h3>
 
 ```typescript
@@ -19090,7 +19126,7 @@ user: pulumi.Input<string>;
 The user name for vSphere API operations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L79">property vcenterServer</a>
+<a class="pdoc-child-name" href="/provider.ts#L80">property vcenterServer</a>
 </h3>
 
 ```typescript
@@ -19098,7 +19134,7 @@ vcenterServer?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L83">property vimSessionPath</a>
+<a class="pdoc-child-name" href="/provider.ts#L84">property vimSessionPath</a>
 </h3>
 
 ```typescript
@@ -19109,7 +19145,7 @@ vimSessionPath?: pulumi.Input<string>;
 The directory to save vSphere SOAP API sessions to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/provider.ts#L87">property vsphereServer</a>
+<a class="pdoc-child-name" href="/provider.ts#L88">property vsphereServer</a>
 </h3>
 
 ```typescript
@@ -19120,13 +19156,13 @@ vsphereServer?: pulumi.Input<string>;
 The vSphere Server name for vSphere API operations.
 
 <h2 class="pdoc-module-header" id="ResourcePoolArgs">
-<a class="pdoc-member-name" href="/resourcePool.ts#L254">interface ResourcePoolArgs</a>
+<a class="pdoc-member-name" href="/resourcePool.ts#L255">interface ResourcePoolArgs</a>
 </h2>
 
 The set of arguments for constructing a ResourcePool resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L260">property cpuExpandable</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L261">property cpuExpandable</a>
 </h3>
 
 ```typescript
@@ -19139,7 +19175,7 @@ pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L266">property cpuLimit</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L267">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -19152,7 +19188,7 @@ this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L271">property cpuReservation</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L272">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -19164,7 +19200,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L279">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L280">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -19179,7 +19215,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L285">property cpuShares</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L286">property cpuShares</a>
 </h3>
 
 ```typescript
@@ -19192,7 +19228,7 @@ determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L289">property customAttributes</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L290">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -19203,7 +19239,7 @@ customAttributes?: pulumi.Input<{ ... }>;
 A list of custom attributes to set on this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L295">property memoryExpandable</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L296">property memoryExpandable</a>
 </h3>
 
 ```typescript
@@ -19216,7 +19252,7 @@ pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L301">property memoryLimit</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L302">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -19229,7 +19265,7 @@ this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L306">property memoryReservation</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L307">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -19241,7 +19277,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L314">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L315">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -19256,7 +19292,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L320">property memoryShares</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L321">property memoryShares</a>
 </h3>
 
 ```typescript
@@ -19269,7 +19305,7 @@ determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L324">property name</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L325">property name</a>
 </h3>
 
 ```typescript
@@ -19280,7 +19316,7 @@ name?: pulumi.Input<string>;
 The name of the resource pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L332">property parentResourcePoolId</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L333">property parentResourcePoolId</a>
 </h3>
 
 ```typescript
@@ -19295,7 +19331,7 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L337">property tags</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L338">property tags</a>
 </h3>
 
 ```typescript
@@ -19307,13 +19343,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="ResourcePoolState">
-<a class="pdoc-member-name" href="/resourcePool.ts#L165">interface ResourcePoolState</a>
+<a class="pdoc-member-name" href="/resourcePool.ts#L166">interface ResourcePoolState</a>
 </h2>
 
 Input properties used for looking up and filtering ResourcePool resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L171">property cpuExpandable</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L172">property cpuExpandable</a>
 </h3>
 
 ```typescript
@@ -19326,7 +19362,7 @@ pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L177">property cpuLimit</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L178">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -19339,7 +19375,7 @@ this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L182">property cpuReservation</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L183">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -19351,7 +19387,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L190">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L191">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -19366,7 +19402,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L196">property cpuShares</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L197">property cpuShares</a>
 </h3>
 
 ```typescript
@@ -19379,7 +19415,7 @@ determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L200">property customAttributes</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L201">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -19390,7 +19426,7 @@ customAttributes?: pulumi.Input<{ ... }>;
 A list of custom attributes to set on this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L206">property memoryExpandable</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L207">property memoryExpandable</a>
 </h3>
 
 ```typescript
@@ -19403,7 +19439,7 @@ pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L212">property memoryLimit</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L213">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -19416,7 +19452,7 @@ this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L217">property memoryReservation</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L218">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -19428,7 +19464,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L225">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L226">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -19443,7 +19479,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L231">property memoryShares</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L232">property memoryShares</a>
 </h3>
 
 ```typescript
@@ -19456,7 +19492,7 @@ determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L235">property name</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L236">property name</a>
 </h3>
 
 ```typescript
@@ -19467,7 +19503,7 @@ name?: pulumi.Input<string>;
 The name of the resource pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L243">property parentResourcePoolId</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L244">property parentResourcePoolId</a>
 </h3>
 
 ```typescript
@@ -19482,7 +19518,7 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/resourcePool.ts#L248">property tags</a>
+<a class="pdoc-child-name" href="/resourcePool.ts#L249">property tags</a>
 </h3>
 
 ```typescript
@@ -19494,13 +19530,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="StorageDrsVmOverrideArgs">
-<a class="pdoc-member-name" href="/storageDrsVmOverride.ts#L140">interface StorageDrsVmOverrideArgs</a>
+<a class="pdoc-member-name" href="/storageDrsVmOverride.ts#L141">interface StorageDrsVmOverrideArgs</a>
 </h2>
 
 The set of arguments for constructing a StorageDrsVmOverride resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L146">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L147">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -19513,7 +19549,7 @@ ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L153">property sdrsAutomationLevel</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L154">property sdrsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -19527,7 +19563,7 @@ not specified, the datastore cluster's settings are used according to the
 [specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L159">property sdrsEnabled</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L160">property sdrsEnabled</a>
 </h3>
 
 ```typescript
@@ -19540,7 +19576,7 @@ this virtual machine. When not specified, the datastore cluster setting is
 used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L167">property sdrsIntraVmAffinity</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L168">property sdrsIntraVmAffinity</a>
 </h3>
 
 ```typescript
@@ -19555,7 +19591,7 @@ individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L172">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L173">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -19567,13 +19603,13 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="StorageDrsVmOverrideState">
-<a class="pdoc-member-name" href="/storageDrsVmOverride.ts#L102">interface StorageDrsVmOverrideState</a>
+<a class="pdoc-member-name" href="/storageDrsVmOverride.ts#L103">interface StorageDrsVmOverrideState</a>
 </h2>
 
 Input properties used for looking up and filtering StorageDrsVmOverride resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L108">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L109">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -19586,7 +19622,7 @@ ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L115">property sdrsAutomationLevel</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L116">property sdrsAutomationLevel</a>
 </h3>
 
 ```typescript
@@ -19600,7 +19636,7 @@ not specified, the datastore cluster's settings are used according to the
 [specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L121">property sdrsEnabled</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L122">property sdrsEnabled</a>
 </h3>
 
 ```typescript
@@ -19613,7 +19649,7 @@ this virtual machine. When not specified, the datastore cluster setting is
 used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L129">property sdrsIntraVmAffinity</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L130">property sdrsIntraVmAffinity</a>
 </h3>
 
 ```typescript
@@ -19628,7 +19664,7 @@ individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L134">property virtualMachineId</a>
+<a class="pdoc-child-name" href="/storageDrsVmOverride.ts#L135">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -19640,13 +19676,13 @@ The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 
 <h2 class="pdoc-module-header" id="TagArgs">
-<a class="pdoc-member-name" href="/tag.ts#L97">interface TagArgs</a>
+<a class="pdoc-member-name" href="/tag.ts#L98">interface TagArgs</a>
 </h2>
 
 The set of arguments for constructing a Tag resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L102">property categoryId</a>
+<a class="pdoc-child-name" href="/tag.ts#L103">property categoryId</a>
 </h3>
 
 ```typescript
@@ -19658,7 +19694,7 @@ The unique identifier of the parent category in
 which this tag will be created. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L106">property description</a>
+<a class="pdoc-child-name" href="/tag.ts#L107">property description</a>
 </h3>
 
 ```typescript
@@ -19669,7 +19705,7 @@ description?: pulumi.Input<string>;
 A description for the tag.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L111">property name</a>
+<a class="pdoc-child-name" href="/tag.ts#L112">property name</a>
 </h3>
 
 ```typescript
@@ -19681,13 +19717,13 @@ The display name of the tag. The name must be unique
 within its category.
 
 <h2 class="pdoc-module-header" id="TagCategoryArgs">
-<a class="pdoc-member-name" href="/tagCategory.ts#L119">interface TagCategoryArgs</a>
+<a class="pdoc-member-name" href="/tagCategory.ts#L120">interface TagCategoryArgs</a>
 </h2>
 
 The set of arguments for constructing a TagCategory resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L125">property associableTypes</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L126">property associableTypes</a>
 </h3>
 
 ```typescript
@@ -19700,7 +19736,7 @@ valid to be assigned to. For a full list, click
 here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L132">property cardinality</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L133">property cardinality</a>
 </h3>
 
 ```typescript
@@ -19714,7 +19750,7 @@ be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L136">property description</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L137">property description</a>
 </h3>
 
 ```typescript
@@ -19725,7 +19761,7 @@ description?: pulumi.Input<string>;
 A description for the category.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L140">property name</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L141">property name</a>
 </h3>
 
 ```typescript
@@ -19736,13 +19772,13 @@ name?: pulumi.Input<string>;
 The name of the category.
 
 <h2 class="pdoc-module-header" id="TagCategoryState">
-<a class="pdoc-member-name" href="/tagCategory.ts#L92">interface TagCategoryState</a>
+<a class="pdoc-member-name" href="/tagCategory.ts#L93">interface TagCategoryState</a>
 </h2>
 
 Input properties used for looking up and filtering TagCategory resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L98">property associableTypes</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L99">property associableTypes</a>
 </h3>
 
 ```typescript
@@ -19755,7 +19791,7 @@ valid to be assigned to. For a full list, click
 here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L105">property cardinality</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L106">property cardinality</a>
 </h3>
 
 ```typescript
@@ -19769,7 +19805,7 @@ be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L109">property description</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L110">property description</a>
 </h3>
 
 ```typescript
@@ -19780,7 +19816,7 @@ description?: pulumi.Input<string>;
 A description for the category.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tagCategory.ts#L113">property name</a>
+<a class="pdoc-child-name" href="/tagCategory.ts#L114">property name</a>
 </h3>
 
 ```typescript
@@ -19791,13 +19827,13 @@ name?: pulumi.Input<string>;
 The name of the category.
 
 <h2 class="pdoc-module-header" id="TagState">
-<a class="pdoc-member-name" href="/tag.ts#L77">interface TagState</a>
+<a class="pdoc-member-name" href="/tag.ts#L78">interface TagState</a>
 </h2>
 
 Input properties used for looking up and filtering Tag resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L82">property categoryId</a>
+<a class="pdoc-child-name" href="/tag.ts#L83">property categoryId</a>
 </h3>
 
 ```typescript
@@ -19809,7 +19845,7 @@ The unique identifier of the parent category in
 which this tag will be created. Forces a new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L86">property description</a>
+<a class="pdoc-child-name" href="/tag.ts#L87">property description</a>
 </h3>
 
 ```typescript
@@ -19820,7 +19856,7 @@ description?: pulumi.Input<string>;
 A description for the tag.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/tag.ts#L91">property name</a>
+<a class="pdoc-child-name" href="/tag.ts#L92">property name</a>
 </h3>
 
 ```typescript
@@ -19832,13 +19868,13 @@ The display name of the tag. The name must be unique
 within its category.
 
 <h2 class="pdoc-module-header" id="VappContainerArgs">
-<a class="pdoc-member-name" href="/vappContainer.ts#L270">interface VappContainerArgs</a>
+<a class="pdoc-member-name" href="/vappContainer.ts#L271">interface VappContainerArgs</a>
 </h2>
 
 The set of arguments for constructing a VappContainer resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L276">property cpuExpandable</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L277">property cpuExpandable</a>
 </h3>
 
 ```typescript
@@ -19851,7 +19887,7 @@ container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L283">property cpuLimit</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L284">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -19865,7 +19901,7 @@ unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L288">property cpuReservation</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L289">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -19877,7 +19913,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L296">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L297">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -19892,7 +19928,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L302">property cpuShares</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L303">property cpuShares</a>
 </h3>
 
 ```typescript
@@ -19905,7 +19941,7 @@ determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L306">property customAttributes</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L307">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -19916,7 +19952,7 @@ customAttributes?: pulumi.Input<{ ... }>;
 A list of custom attributes to set on this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L312">property memoryExpandable</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L313">property memoryExpandable</a>
 </h3>
 
 ```typescript
@@ -19929,7 +19965,7 @@ container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L319">property memoryLimit</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L320">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -19943,7 +19979,7 @@ unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L324">property memoryReservation</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L325">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -19955,7 +19991,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L332">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L333">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -19970,7 +20006,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L338">property memoryShares</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L339">property memoryShares</a>
 </h3>
 
 ```typescript
@@ -19983,7 +20019,7 @@ determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L342">property name</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L343">property name</a>
 </h3>
 
 ```typescript
@@ -19994,7 +20030,7 @@ name?: pulumi.Input<string>;
 The name of the vApp container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L347">property parentFolderId</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L348">property parentFolderId</a>
 </h3>
 
 ```typescript
@@ -20006,7 +20042,7 @@ The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L355">property parentResourcePoolId</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L356">property parentResourcePoolId</a>
 </h3>
 
 ```typescript
@@ -20021,7 +20057,7 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L360">property tags</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L361">property tags</a>
 </h3>
 
 ```typescript
@@ -20033,13 +20069,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="VappContainerState">
-<a class="pdoc-member-name" href="/vappContainer.ts#L174">interface VappContainerState</a>
+<a class="pdoc-member-name" href="/vappContainer.ts#L175">interface VappContainerState</a>
 </h2>
 
 Input properties used for looking up and filtering VappContainer resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L180">property cpuExpandable</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L181">property cpuExpandable</a>
 </h3>
 
 ```typescript
@@ -20052,7 +20088,7 @@ container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L187">property cpuLimit</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L188">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -20066,7 +20102,7 @@ unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L192">property cpuReservation</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L193">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -20078,7 +20114,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L200">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L201">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -20093,7 +20129,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L206">property cpuShares</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L207">property cpuShares</a>
 </h3>
 
 ```typescript
@@ -20106,7 +20142,7 @@ determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L210">property customAttributes</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L211">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -20117,7 +20153,7 @@ customAttributes?: pulumi.Input<{ ... }>;
 A list of custom attributes to set on this resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L216">property memoryExpandable</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L217">property memoryExpandable</a>
 </h3>
 
 ```typescript
@@ -20130,7 +20166,7 @@ container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L223">property memoryLimit</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L224">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -20144,7 +20180,7 @@ unlimited.
 Default: `-1`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L228">property memoryReservation</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L229">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -20156,7 +20192,7 @@ Amount of CPU (MHz) that is guaranteed
 available to the vApp container. Default: `0`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L236">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L237">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -20171,7 +20207,7 @@ values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 ignored.  Default: `normal`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L242">property memoryShares</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L243">property memoryShares</a>
 </h3>
 
 ```typescript
@@ -20184,7 +20220,7 @@ determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L246">property name</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L247">property name</a>
 </h3>
 
 ```typescript
@@ -20195,7 +20231,7 @@ name?: pulumi.Input<string>;
 The name of the vApp container.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L251">property parentFolderId</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L252">property parentFolderId</a>
 </h3>
 
 ```typescript
@@ -20207,7 +20243,7 @@ The [managed object ID][docs-about-morefs] of
 the vApp container's parent folder.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L259">property parentResourcePoolId</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L260">property parentResourcePoolId</a>
 </h3>
 
 ```typescript
@@ -20222,7 +20258,7 @@ from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vappContainer.ts#L264">property tags</a>
+<a class="pdoc-child-name" href="/vappContainer.ts#L265">property tags</a>
 </h3>
 
 ```typescript
@@ -20234,13 +20270,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="VirtualDiskArgs">
-<a class="pdoc-member-name" href="/virtualDisk.ts#L156">interface VirtualDiskArgs</a>
+<a class="pdoc-member-name" href="/virtualDisk.ts#L157">interface VirtualDiskArgs</a>
 </h2>
 
 The set of arguments for constructing a VirtualDisk resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L161">property adapterType</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L162">property adapterType</a>
 </h3>
 
 ```typescript
@@ -20252,7 +20288,7 @@ The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L167">property createDirectories</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L168">property createDirectories</a>
 </h3>
 
 ```typescript
@@ -20265,7 +20301,7 @@ directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L173">property datacenter</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L174">property datacenter</a>
 </h3>
 
 ```typescript
@@ -20278,7 +20314,7 @@ disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L178">property datastore</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L179">property datastore</a>
 </h3>
 
 ```typescript
@@ -20290,7 +20326,7 @@ The name of the datastore in which to create the
 disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L182">property size</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L183">property size</a>
 </h3>
 
 ```typescript
@@ -20301,7 +20337,7 @@ size: pulumi.Input<number>;
 Size of the disk (in GB).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L189">property type</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L190">property type</a>
 </h3>
 
 ```typescript
@@ -20315,7 +20351,7 @@ information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L194">property vmdkPath</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L195">property vmdkPath</a>
 </h3>
 
 ```typescript
@@ -20327,13 +20363,13 @@ The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
 
 <h2 class="pdoc-module-header" id="VirtualDiskState">
-<a class="pdoc-member-name" href="/virtualDisk.ts#L112">interface VirtualDiskState</a>
+<a class="pdoc-member-name" href="/virtualDisk.ts#L113">interface VirtualDiskState</a>
 </h2>
 
 Input properties used for looking up and filtering VirtualDisk resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L117">property adapterType</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L118">property adapterType</a>
 </h3>
 
 ```typescript
@@ -20345,7 +20381,7 @@ The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L123">property createDirectories</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L124">property createDirectories</a>
 </h3>
 
 ```typescript
@@ -20358,7 +20394,7 @@ directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L129">property datacenter</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L130">property datacenter</a>
 </h3>
 
 ```typescript
@@ -20371,7 +20407,7 @@ disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L134">property datastore</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L135">property datastore</a>
 </h3>
 
 ```typescript
@@ -20383,7 +20419,7 @@ The name of the datastore in which to create the
 disk.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L138">property size</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L139">property size</a>
 </h3>
 
 ```typescript
@@ -20394,7 +20430,7 @@ size?: pulumi.Input<number>;
 Size of the disk (in GB).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L145">property type</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L146">property type</a>
 </h3>
 
 ```typescript
@@ -20408,7 +20444,7 @@ information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualDisk.ts#L150">property vmdkPath</a>
+<a class="pdoc-child-name" href="/virtualDisk.ts#L151">property vmdkPath</a>
 </h3>
 
 ```typescript
@@ -20420,13 +20456,13 @@ The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
 
 <h2 class="pdoc-module-header" id="VirtualMachineArgs">
-<a class="pdoc-member-name" href="/virtualMachine.ts#L989">interface VirtualMachineArgs</a>
+<a class="pdoc-member-name" href="/virtualMachine.ts#L990">interface VirtualMachineArgs</a>
 </h2>
 
 The set of arguments for constructing a VirtualMachine resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L994">property alternateGuestName</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L995">property alternateGuestName</a>
 </h3>
 
 ```typescript
@@ -20438,7 +20474,7 @@ The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L999">property annotation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1000">property annotation</a>
 </h3>
 
 ```typescript
@@ -20450,7 +20486,7 @@ A user-provided description of the virtual machine.
 The default is no annotation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1004">property bootDelay</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1005">property bootDelay</a>
 </h3>
 
 ```typescript
@@ -20462,7 +20498,7 @@ The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1010">property bootRetryDelay</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1011">property bootRetryDelay</a>
 </h3>
 
 ```typescript
@@ -20475,7 +20511,7 @@ retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1016">property bootRetryEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1017">property bootRetryEnabled</a>
 </h3>
 
 ```typescript
@@ -20488,7 +20524,7 @@ fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1021">property cdrom</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1022">property cdrom</a>
 </h3>
 
 ```typescript
@@ -20500,7 +20536,7 @@ A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1028">property clone</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1029">property clone</a>
 </h3>
 
 ```typescript
@@ -20514,7 +20550,7 @@ See creating a virtual machine from a
 template for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1033">property cpuHotAddEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1034">property cpuHotAddEnabled</a>
 </h3>
 
 ```typescript
@@ -20526,7 +20562,7 @@ Allow CPUs to be added to this virtual
 machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1038">property cpuHotRemoveEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1039">property cpuHotRemoveEnabled</a>
 </h3>
 
 ```typescript
@@ -20538,7 +20574,7 @@ Allow CPUs to be removed to this
 virtual machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1044">property cpuLimit</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1045">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -20551,7 +20587,7 @@ machine can consume, regardless of available resources. The default is no
 limit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1049">property cpuPerformanceCountersEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1050">property cpuPerformanceCountersEnabled</a>
 </h3>
 
 ```typescript
@@ -20563,7 +20599,7 @@ Enable CPU performance
 counters on this virtual machine. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1054">property cpuReservation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1055">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -20575,7 +20611,7 @@ The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1059">property cpuShareCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1060">property cpuShareCount</a>
 </h3>
 
 ```typescript
@@ -20587,7 +20623,7 @@ The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1064">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1065">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -20599,7 +20635,7 @@ The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1071">property customAttributes</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1072">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -20613,7 +20649,7 @@ value strings to set for virtual machine. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1079">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1080">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -20628,7 +20664,7 @@ DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1084">property datastoreId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1085">property datastoreId</a>
 </h3>
 
 ```typescript
@@ -20640,7 +20676,7 @@ The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1089">property disks</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1090">property disks</a>
 </h3>
 
 ```typescript
@@ -20652,7 +20688,7 @@ A specification for a virtual disk device on this virtual
 machine. See disk options below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1094">property efiSecureBootEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1095">property efiSecureBootEnabled</a>
 </h3>
 
 ```typescript
@@ -20664,7 +20700,7 @@ When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1099">property enableDiskUuid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1100">property enableDiskUuid</a>
 </h3>
 
 ```typescript
@@ -20676,7 +20712,7 @@ Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1104">property enableLogging</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1105">property enableLogging</a>
 </h3>
 
 ```typescript
@@ -20688,7 +20724,7 @@ Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1110">property eptRviMode</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1111">property eptRviMode</a>
 </h3>
 
 ```typescript
@@ -20701,7 +20737,7 @@ setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1116">property extraConfig</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1117">property extraConfig</a>
 </h3>
 
 ```typescript
@@ -20714,7 +20750,7 @@ machine. Can be used to supply advanced parameters not normally in
 configuration, such as data for cloud-config (under the guestinfo namespace).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1121">property firmware</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1122">property firmware</a>
 </h3>
 
 ```typescript
@@ -20726,7 +20762,7 @@ The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1126">property folder</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1127">property folder</a>
 </h3>
 
 ```typescript
@@ -20738,7 +20774,7 @@ The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1133">property forcePowerOff</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1134">property forcePowerOff</a>
 </h3>
 
 ```typescript
@@ -20752,7 +20788,7 @@ updating or destroying (see
 the virtual machine. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1138">property guestId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1139">property guestId</a>
 </h3>
 
 ```typescript
@@ -20764,7 +20800,7 @@ The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1147">property hostSystemId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1148">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -20780,7 +20816,7 @@ vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1153">property hvMode</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1154">property hvMode</a>
 </h3>
 
 ```typescript
@@ -20793,7 +20829,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1161">property latencySensitivity</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1162">property latencySensitivity</a>
 </h3>
 
 ```typescript
@@ -20808,7 +20844,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1166">property memory</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1167">property memory</a>
 </h3>
 
 ```typescript
@@ -20820,7 +20856,7 @@ The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1171">property memoryHotAddEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1172">property memoryHotAddEnabled</a>
 </h3>
 
 ```typescript
@@ -20832,7 +20868,7 @@ Allow memory to be added to this
 virtual machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1177">property memoryLimit</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1178">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -20845,7 +20881,7 @@ virtual machine can consume, regardless of available resources. The default
 is no limit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1182">property memoryReservation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1183">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -20857,7 +20893,7 @@ The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1187">property memoryShareCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1188">property memoryShareCount</a>
 </h3>
 
 ```typescript
@@ -20869,7 +20905,7 @@ The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1192">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1193">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -20881,7 +20917,7 @@ The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1199">property migrateWaitTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1200">property migrateWaitTimeout</a>
 </h3>
 
 ```typescript
@@ -20895,7 +20931,7 @@ minutes. Also see the section on virtual machine
 migration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1204">property name</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1205">property name</a>
 </h3>
 
 ```typescript
@@ -20907,7 +20943,7 @@ An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1210">property nestedHvEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1211">property nestedHvEnabled</a>
 </h3>
 
 ```typescript
@@ -20920,7 +20956,7 @@ this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1216">property networkInterfaces</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1217">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -20933,7 +20969,7 @@ virtual machine. See network interface options
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1222">property numCoresPerSocket</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1223">property numCoresPerSocket</a>
 </h3>
 
 ```typescript
@@ -20946,7 +20982,7 @@ the CPUs in this virtual machine. If specified, the value supplied to
 `num_cpus` must be evenly divisible by this value. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1227">property numCpus</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1228">property numCpus</a>
 </h3>
 
 ```typescript
@@ -20958,7 +20994,7 @@ The number of virtual processors to assign to this
 virtual machine. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1234">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1235">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -20972,7 +21008,7 @@ See the section on virtual machine migration
 for details on changing this value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1239">property runToolsScriptsAfterPowerOn</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1240">property runToolsScriptsAfterPowerOn</a>
 </h3>
 
 ```typescript
@@ -20984,7 +21020,7 @@ Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1244">property runToolsScriptsAfterResume</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1245">property runToolsScriptsAfterResume</a>
 </h3>
 
 ```typescript
@@ -20996,7 +21032,7 @@ Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1249">property runToolsScriptsBeforeGuestReboot</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1250">property runToolsScriptsBeforeGuestReboot</a>
 </h3>
 
 ```typescript
@@ -21008,7 +21044,7 @@ Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1254">property runToolsScriptsBeforeGuestShutdown</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1255">property runToolsScriptsBeforeGuestShutdown</a>
 </h3>
 
 ```typescript
@@ -21020,7 +21056,7 @@ Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1259">property runToolsScriptsBeforeGuestStandby</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1260">property runToolsScriptsBeforeGuestStandby</a>
 </h3>
 
 ```typescript
@@ -21032,7 +21068,7 @@ Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1264">property scsiBusSharing</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1265">property scsiBusSharing</a>
 </h3>
 
 ```typescript
@@ -21044,7 +21080,7 @@ Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1271">property scsiControllerCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1272">property scsiControllerCount</a>
 </h3>
 
 ```typescript
@@ -21058,7 +21094,7 @@ of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1277">property scsiType</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1278">property scsiType</a>
 </h3>
 
 ```typescript
@@ -21071,7 +21107,7 @@ Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1284">property shutdownWaitTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1285">property shutdownWaitTimeout</a>
 </h3>
 
 ```typescript
@@ -21085,7 +21121,7 @@ machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1290">property swapPlacementPolicy</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1291">property swapPlacementPolicy</a>
 </h3>
 
 ```typescript
@@ -21098,7 +21134,7 @@ virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1295">property syncTimeWithHost</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1296">property syncTimeWithHost</a>
 </h3>
 
 ```typescript
@@ -21110,7 +21146,7 @@ Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1300">property tags</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1301">property tags</a>
 </h3>
 
 ```typescript
@@ -21122,7 +21158,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1308">property vapp</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1309">property vapp</a>
 </h3>
 
 ```typescript
@@ -21137,7 +21173,7 @@ configuration for
 more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1315">property waitForGuestNetRoutable</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1316">property waitForGuestNetRoutable</a>
 </h3>
 
 ```typescript
@@ -21151,7 +21187,7 @@ not wait for a default gateway, nor are IP addresses checked against any
 discovered default gateways as part of its success criteria. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L1321">property waitForGuestNetTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L1322">property waitForGuestNetTimeout</a>
 </h3>
 
 ```typescript
@@ -21164,13 +21200,13 @@ wait for an available IP address on this virtual machine. A value less than 1
 disables the waiter. Default: 5 minutes.
 
 <h2 class="pdoc-module-header" id="VirtualMachineSnapshotArgs">
-<a class="pdoc-member-name" href="/virtualMachineSnapshot.ts#L169">interface VirtualMachineSnapshotArgs</a>
+<a class="pdoc-member-name" href="/virtualMachineSnapshot.ts#L170">interface VirtualMachineSnapshotArgs</a>
 </h2>
 
 The set of arguments for constructing a VirtualMachineSnapshot resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L175">property consolidate</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L176">property consolidate</a>
 </h3>
 
 ```typescript
@@ -21183,7 +21219,7 @@ snapshot will be consolidated into the parent when this resource is
 destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L179">property description</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L180">property description</a>
 </h3>
 
 ```typescript
@@ -21194,7 +21230,7 @@ description: pulumi.Input<string>;
 A description for the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L184">property memory</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L185">property memory</a>
 </h3>
 
 ```typescript
@@ -21206,7 +21242,7 @@ If set to `true`, a dump of the internal state of the
 virtual machine is included in the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L190">property quiesce</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L191">property quiesce</a>
 </h3>
 
 ```typescript
@@ -21219,7 +21255,7 @@ on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L195">property removeChildren</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L196">property removeChildren</a>
 </h3>
 
 ```typescript
@@ -21231,7 +21267,7 @@ If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L199">property snapshotName</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L200">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -21242,7 +21278,7 @@ snapshotName: pulumi.Input<string>;
 The name of the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L203">property virtualMachineUuid</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L204">property virtualMachineUuid</a>
 </h3>
 
 ```typescript
@@ -21253,13 +21289,13 @@ virtualMachineUuid: pulumi.Input<string>;
 The virtual machine UUID.
 
 <h2 class="pdoc-module-header" id="VirtualMachineSnapshotState">
-<a class="pdoc-member-name" href="/virtualMachineSnapshot.ts#L129">interface VirtualMachineSnapshotState</a>
+<a class="pdoc-member-name" href="/virtualMachineSnapshot.ts#L130">interface VirtualMachineSnapshotState</a>
 </h2>
 
 Input properties used for looking up and filtering VirtualMachineSnapshot resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L135">property consolidate</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L136">property consolidate</a>
 </h3>
 
 ```typescript
@@ -21272,7 +21308,7 @@ snapshot will be consolidated into the parent when this resource is
 destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L139">property description</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L140">property description</a>
 </h3>
 
 ```typescript
@@ -21283,7 +21319,7 @@ description?: pulumi.Input<string>;
 A description for the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L144">property memory</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L145">property memory</a>
 </h3>
 
 ```typescript
@@ -21295,7 +21331,7 @@ If set to `true`, a dump of the internal state of the
 virtual machine is included in the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L150">property quiesce</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L151">property quiesce</a>
 </h3>
 
 ```typescript
@@ -21308,7 +21344,7 @@ on when the snapshot is taken, VMware Tools is used to quiesce the file
 system in the virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L155">property removeChildren</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L156">property removeChildren</a>
 </h3>
 
 ```typescript
@@ -21320,7 +21356,7 @@ If set to `true`, the entire snapshot subtree
 is removed when this resource is destroyed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L159">property snapshotName</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L160">property snapshotName</a>
 </h3>
 
 ```typescript
@@ -21331,7 +21367,7 @@ snapshotName?: pulumi.Input<string>;
 The name of the snapshot.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L163">property virtualMachineUuid</a>
+<a class="pdoc-child-name" href="/virtualMachineSnapshot.ts#L164">property virtualMachineUuid</a>
 </h3>
 
 ```typescript
@@ -21342,13 +21378,13 @@ virtualMachineUuid?: pulumi.Input<string>;
 The virtual machine UUID.
 
 <h2 class="pdoc-module-header" id="VirtualMachineState">
-<a class="pdoc-member-name" href="/virtualMachine.ts#L589">interface VirtualMachineState</a>
+<a class="pdoc-member-name" href="/virtualMachine.ts#L590">interface VirtualMachineState</a>
 </h2>
 
 Input properties used for looking up and filtering VirtualMachine resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L594">property alternateGuestName</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L595">property alternateGuestName</a>
 </h3>
 
 ```typescript
@@ -21360,7 +21396,7 @@ The guest name for the operating system
 when `guest_id` is `other` or `other-64`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L599">property annotation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L600">property annotation</a>
 </h3>
 
 ```typescript
@@ -21372,7 +21408,7 @@ A user-provided description of the virtual machine.
 The default is no annotation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L604">property bootDelay</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L605">property bootDelay</a>
 </h3>
 
 ```typescript
@@ -21384,7 +21420,7 @@ The number of milliseconds to wait before starting
 the boot sequence. The default is no delay.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L610">property bootRetryDelay</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L611">property bootRetryDelay</a>
 </h3>
 
 ```typescript
@@ -21397,7 +21433,7 @@ retrying the boot sequence. This only valid if `boot_retry_enabled` is true.
 Default: `10000` (10 seconds).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L616">property bootRetryEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L617">property bootRetryEnabled</a>
 </h3>
 
 ```typescript
@@ -21410,7 +21446,7 @@ fails to boot will try again after the delay defined in `boot_retry_delay`.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L621">property cdrom</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L622">property cdrom</a>
 </h3>
 
 ```typescript
@@ -21422,7 +21458,7 @@ A specification for a CDROM device on this virtual
 machine. See CDROM options below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L627">property changeVersion</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L628">property changeVersion</a>
 </h3>
 
 ```typescript
@@ -21435,7 +21471,7 @@ configuration applied, such the timestamp of the last update to the
 configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L634">property clone</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L635">property clone</a>
 </h3>
 
 ```typescript
@@ -21449,7 +21485,7 @@ See creating a virtual machine from a
 template for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L639">property cpuHotAddEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L640">property cpuHotAddEnabled</a>
 </h3>
 
 ```typescript
@@ -21461,7 +21497,7 @@ Allow CPUs to be added to this virtual
 machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L644">property cpuHotRemoveEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L645">property cpuHotRemoveEnabled</a>
 </h3>
 
 ```typescript
@@ -21473,7 +21509,7 @@ Allow CPUs to be removed to this
 virtual machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L650">property cpuLimit</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L651">property cpuLimit</a>
 </h3>
 
 ```typescript
@@ -21486,7 +21522,7 @@ machine can consume, regardless of available resources. The default is no
 limit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L655">property cpuPerformanceCountersEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L656">property cpuPerformanceCountersEnabled</a>
 </h3>
 
 ```typescript
@@ -21498,7 +21534,7 @@ Enable CPU performance
 counters on this virtual machine. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L660">property cpuReservation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L661">property cpuReservation</a>
 </h3>
 
 ```typescript
@@ -21510,7 +21546,7 @@ The amount of CPU (in MHz) that this virtual
 machine is guaranteed. The default is no reservation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L665">property cpuShareCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L666">property cpuShareCount</a>
 </h3>
 
 ```typescript
@@ -21522,7 +21558,7 @@ The number of CPU shares allocated to the
 virtual machine when the `cpu_share_level` is `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L670">property cpuShareLevel</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L671">property cpuShareLevel</a>
 </h3>
 
 ```typescript
@@ -21534,7 +21570,7 @@ The allocation level for CPU resources. Can be
 one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L677">property customAttributes</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L678">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -21548,7 +21584,7 @@ value strings to set for virtual machine. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L685">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L686">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -21563,7 +21599,7 @@ DRS with this virtual machine. See the section on virtual machine
 migration for details on changing this value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L690">property datastoreId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L691">property datastoreId</a>
 </h3>
 
 ```typescript
@@ -21575,7 +21611,7 @@ The datastore ID that the ISO is located in.
 Requried for using a datastore ISO. Conflicts with `client_device`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L700">property defaultIpAddress</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L701">property defaultIpAddress</a>
 </h3>
 
 ```typescript
@@ -21592,7 +21628,7 @@ VMware tools is not running on the virtual machine, or if the VM is powered
 off, this value will be blank.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L705">property disks</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L706">property disks</a>
 </h3>
 
 ```typescript
@@ -21604,7 +21640,7 @@ A specification for a virtual disk device on this virtual
 machine. See disk options below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L710">property efiSecureBootEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L711">property efiSecureBootEnabled</a>
 </h3>
 
 ```typescript
@@ -21616,7 +21652,7 @@ When the `firmware` type is set to is
 `efi`, this enables EFI secure boot. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L715">property enableDiskUuid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L716">property enableDiskUuid</a>
 </h3>
 
 ```typescript
@@ -21628,7 +21664,7 @@ Expose the UUIDs of attached virtual disks to
 the virtual machine, allowing access to them in the guest. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L720">property enableLogging</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L721">property enableLogging</a>
 </h3>
 
 ```typescript
@@ -21640,7 +21676,7 @@ Enable logging of virtual machine events to a
 log file stored in the virtual machine directory. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L726">property eptRviMode</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L727">property eptRviMode</a>
 </h3>
 
 ```typescript
@@ -21653,7 +21689,7 @@ setting for this virtual machine. Can be one of `automatic`, `on`, or `off`.
 Default: `automatic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L732">property extraConfig</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L733">property extraConfig</a>
 </h3>
 
 ```typescript
@@ -21666,7 +21702,7 @@ machine. Can be used to supply advanced parameters not normally in
 configuration, such as data for cloud-config (under the guestinfo namespace).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L737">property firmware</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L738">property firmware</a>
 </h3>
 
 ```typescript
@@ -21678,7 +21714,7 @@ The firmware interface to use on the virtual machine.
 Can be one of `bios` or `EFI`. Default: `bios`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L742">property folder</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L743">property folder</a>
 </h3>
 
 ```typescript
@@ -21690,7 +21726,7 @@ The path to the folder to put this virtual machine in,
 relative to the datacenter that the resource pool is in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L749">property forcePowerOff</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L750">property forcePowerOff</a>
 </h3>
 
 ```typescript
@@ -21704,7 +21740,7 @@ updating or destroying (see
 the virtual machine. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L754">property guestId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L755">property guestId</a>
 </h3>
 
 ```typescript
@@ -21716,7 +21752,7 @@ The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L762">property guestIpAddresses</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L763">property guestIpAddresses</a>
 </h3>
 
 ```typescript
@@ -21731,7 +21767,7 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L771">property hostSystemId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L772">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -21747,7 +21783,7 @@ vSphere will select a host in the resource pool to place the virtual machine,
 according to any defaults or DRS policies in place.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L777">property hvMode</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L778">property hvMode</a>
 </h3>
 
 ```typescript
@@ -21760,7 +21796,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 `hvAuto`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L784">property imported</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L785">property imported</a>
 </h3>
 
 ```typescript
@@ -21774,7 +21810,7 @@ influences the behavior of the first post-import apply operation. See the
 section on importing below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L792">property latencySensitivity</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L793">property latencySensitivity</a>
 </h3>
 
 ```typescript
@@ -21789,7 +21825,7 @@ require frequent access to mouse or keyboard devices. Can be one of `low`,
 `normal`, `medium`, or `high`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L797">property memory</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L798">property memory</a>
 </h3>
 
 ```typescript
@@ -21801,7 +21837,7 @@ The size of the virtual machine's memory, in MB.
 Default: `1024` (1 GB).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L802">property memoryHotAddEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L803">property memoryHotAddEnabled</a>
 </h3>
 
 ```typescript
@@ -21813,7 +21849,7 @@ Allow memory to be added to this
 virtual machine while it is running.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L808">property memoryLimit</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L809">property memoryLimit</a>
 </h3>
 
 ```typescript
@@ -21826,7 +21862,7 @@ virtual machine can consume, regardless of available resources. The default
 is no limit.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L813">property memoryReservation</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L814">property memoryReservation</a>
 </h3>
 
 ```typescript
@@ -21838,7 +21874,7 @@ The amount of memory (in MB) that this
 virtual machine is guaranteed. The default is no reservation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L818">property memoryShareCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L819">property memoryShareCount</a>
 </h3>
 
 ```typescript
@@ -21850,7 +21886,7 @@ The number of memory shares allocated to
 the virtual machine when the `memory_share_level` is `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L823">property memoryShareLevel</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L824">property memoryShareLevel</a>
 </h3>
 
 ```typescript
@@ -21862,7 +21898,7 @@ The allocation level for memory resources.
 Can be one of `high`, `low`, `normal`, or `custom`. Default: `custom`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L830">property migrateWaitTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L831">property migrateWaitTimeout</a>
 </h3>
 
 ```typescript
@@ -21876,7 +21912,7 @@ minutes. Also see the section on virtual machine
 migration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L834">property moid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L835">property moid</a>
 </h3>
 
 ```typescript
@@ -21887,7 +21923,7 @@ moid?: pulumi.Input<string>;
 The machine object ID from VMWare
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L839">property name</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L840">property name</a>
 </h3>
 
 ```typescript
@@ -21899,7 +21935,7 @@ An alias for both `label` and `path`, the latter when
 using `attach`. Required if not using `label`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L845">property nestedHvEnabled</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L846">property nestedHvEnabled</a>
 </h3>
 
 ```typescript
@@ -21912,7 +21948,7 @@ this virtual machine, facilitating nested virtualization in the guest.
 Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L851">property networkInterfaces</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L852">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -21925,7 +21961,7 @@ virtual machine. See network interface options
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L857">property numCoresPerSocket</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L858">property numCoresPerSocket</a>
 </h3>
 
 ```typescript
@@ -21938,7 +21974,7 @@ the CPUs in this virtual machine. If specified, the value supplied to
 `num_cpus` must be evenly divisible by this value. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L862">property numCpus</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L863">property numCpus</a>
 </h3>
 
 ```typescript
@@ -21950,7 +21986,7 @@ The number of virtual processors to assign to this
 virtual machine. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L868">property rebootRequired</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L869">property rebootRequired</a>
 </h3>
 
 ```typescript
@@ -21963,7 +21999,7 @@ configuration set change requires a reboot. This value is only useful during
 an update process and gets reset on refresh.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L875">property resourcePoolId</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L876">property resourcePoolId</a>
 </h3>
 
 ```typescript
@@ -21977,7 +22013,7 @@ See the section on virtual machine migration
 for details on changing this value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L880">property runToolsScriptsAfterPowerOn</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L881">property runToolsScriptsAfterPowerOn</a>
 </h3>
 
 ```typescript
@@ -21989,7 +22025,7 @@ Enable the execution of
 post-power-on scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L885">property runToolsScriptsAfterResume</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L886">property runToolsScriptsAfterResume</a>
 </h3>
 
 ```typescript
@@ -22001,7 +22037,7 @@ Enable the execution of
 post-resume scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L890">property runToolsScriptsBeforeGuestReboot</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L891">property runToolsScriptsBeforeGuestReboot</a>
 </h3>
 
 ```typescript
@@ -22013,7 +22049,7 @@ Enable the execution of
 pre-reboot scripts when VMware tools is installed. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L895">property runToolsScriptsBeforeGuestShutdown</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L896">property runToolsScriptsBeforeGuestShutdown</a>
 </h3>
 
 ```typescript
@@ -22025,7 +22061,7 @@ Enable the execution
 of pre-shutdown scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L900">property runToolsScriptsBeforeGuestStandby</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L901">property runToolsScriptsBeforeGuestStandby</a>
 </h3>
 
 ```typescript
@@ -22037,7 +22073,7 @@ Enable the execution of
 pre-standby scripts when VMware tools is installed. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L905">property scsiBusSharing</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L906">property scsiBusSharing</a>
 </h3>
 
 ```typescript
@@ -22049,7 +22085,7 @@ Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Default: `noSharing`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L912">property scsiControllerCount</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L913">property scsiControllerCount</a>
 </h3>
 
 ```typescript
@@ -22063,7 +22099,7 @@ of disks you can add to the virtual machine and the maximum disk unit number.
 Note that lowering this value does not remove controllers. Default: `1`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L918">property scsiType</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L919">property scsiType</a>
 </h3>
 
 ```typescript
@@ -22076,7 +22112,7 @@ Can be one of lsilogic (LSI Logic Parallel), lsilogic-sas (LSI Logic SAS) or
 pvscsi (VMware Paravirtual). Defualt: `pvscsi`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L925">property shutdownWaitTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L926">property shutdownWaitTimeout</a>
 </h3>
 
 ```typescript
@@ -22090,7 +22126,7 @@ machine. If `force_power_off` is set to true, the VM will be force powered-off
 after this timeout, otherwise an error is returned. Default: 3 minutes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L931">property swapPlacementPolicy</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L932">property swapPlacementPolicy</a>
 </h3>
 
 ```typescript
@@ -22103,7 +22139,7 @@ virtual machine. Can be one of `inherit`, `hostLocal`, or `vmDirectory`.
 Default: `inherit`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L936">property syncTimeWithHost</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L937">property syncTimeWithHost</a>
 </h3>
 
 ```typescript
@@ -22115,7 +22151,7 @@ Enable guest clock synchronization with
 the host. Requires VMware tools to be installed. Default: `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L941">property tags</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L942">property tags</a>
 </h3>
 
 ```typescript
@@ -22127,7 +22163,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L946">property uuid</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L947">property uuid</a>
 </h3>
 
 ```typescript
@@ -22139,7 +22175,7 @@ The UUID of the virtual disk's VMDK file. This is used to track the
 virtual disk on the virtual machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L954">property vapp</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L955">property vapp</a>
 </h3>
 
 ```typescript
@@ -22154,7 +22190,7 @@ configuration for
 more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L960">property vappTransports</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L961">property vappTransports</a>
 </h3>
 
 ```typescript
@@ -22167,7 +22203,7 @@ machines. A list of vApp transport methods supported by the source virtual
 machine or template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L965">property vmwareToolsStatus</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L966">property vmwareToolsStatus</a>
 </h3>
 
 ```typescript
@@ -22179,7 +22215,7 @@ The state of VMware tools in the guest. This will
 determine the proper course of action for some device operations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L970">property vmxPath</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L971">property vmxPath</a>
 </h3>
 
 ```typescript
@@ -22191,7 +22227,7 @@ The path of the virtual machine's configuration file in the VM's
 datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L977">property waitForGuestNetRoutable</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L978">property waitForGuestNetRoutable</a>
 </h3>
 
 ```typescript
@@ -22205,7 +22241,7 @@ not wait for a default gateway, nor are IP addresses checked against any
 discovered default gateways as part of its success criteria. Default: `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/virtualMachine.ts#L983">property waitForGuestNetTimeout</a>
+<a class="pdoc-child-name" href="/virtualMachine.ts#L984">property waitForGuestNetTimeout</a>
 </h3>
 
 ```typescript
@@ -22218,13 +22254,13 @@ wait for an available IP address on this virtual machine. A value less than 1
 disables the waiter. Default: 5 minutes.
 
 <h2 class="pdoc-module-header" id="VmfsDatastoreArgs">
-<a class="pdoc-member-name" href="/vmfsDatastore.ts#L244">interface VmfsDatastoreArgs</a>
+<a class="pdoc-member-name" href="/vmfsDatastore.ts#L245">interface VmfsDatastoreArgs</a>
 </h2>
 
 The set of arguments for constructing a VmfsDatastore resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L251">property customAttributes</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L252">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -22238,7 +22274,7 @@ value string to set on datastore resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L257">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L258">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -22251,7 +22287,7 @@ ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L261">property disks</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L262">property disks</a>
 </h3>
 
 ```typescript
@@ -22262,7 +22298,7 @@ disks: pulumi.Input<pulumi.Input<string>[]>;
 The disks to use with the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L271">property folder</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L272">property folder</a>
 </h3>
 
 ```typescript
@@ -22279,7 +22315,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `datastore_cluster_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L279">property hostSystemId</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L280">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -22294,7 +22330,7 @@ here for more info. Forces a
 new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L284">property name</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L285">property name</a>
 </h3>
 
 ```typescript
@@ -22306,7 +22342,7 @@ The name of the datastore. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L289">property tags</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L290">property tags</a>
 </h3>
 
 ```typescript
@@ -22318,13 +22354,13 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h2 class="pdoc-module-header" id="VmfsDatastoreState">
-<a class="pdoc-member-name" href="/vmfsDatastore.ts#L162">interface VmfsDatastoreState</a>
+<a class="pdoc-member-name" href="/vmfsDatastore.ts#L163">interface VmfsDatastoreState</a>
 </h2>
 
 Input properties used for looking up and filtering VmfsDatastore resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L167">property accessible</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L168">property accessible</a>
 </h3>
 
 ```typescript
@@ -22336,7 +22372,7 @@ The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L171">property capacity</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L172">property capacity</a>
 </h3>
 
 ```typescript
@@ -22347,7 +22383,7 @@ capacity?: pulumi.Input<number>;
 Maximum capacity of the datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L178">property customAttributes</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L179">property customAttributes</a>
 </h3>
 
 ```typescript
@@ -22361,7 +22397,7 @@ value string to set on datastore resource. See
 for custom attributes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L184">property datastoreClusterId</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L185">property datastoreClusterId</a>
 </h3>
 
 ```typescript
@@ -22374,7 +22410,7 @@ ID][docs-about-morefs] of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L188">property disks</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L189">property disks</a>
 </h3>
 
 ```typescript
@@ -22385,7 +22421,7 @@ disks?: pulumi.Input<pulumi.Input<string>[]>;
 The disks to use with the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L198">property folder</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L199">property folder</a>
 </h3>
 
 ```typescript
@@ -22402,7 +22438,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `datastore_cluster_id`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L202">property freeSpace</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L203">property freeSpace</a>
 </h3>
 
 ```typescript
@@ -22413,7 +22449,7 @@ freeSpace?: pulumi.Input<number>;
 Available space of this datastore, in megabytes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L210">property hostSystemId</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L211">property hostSystemId</a>
 </h3>
 
 ```typescript
@@ -22428,7 +22464,7 @@ here for more info. Forces a
 new resource if changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L214">property maintenanceMode</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L215">property maintenanceMode</a>
 </h3>
 
 ```typescript
@@ -22439,7 +22475,7 @@ maintenanceMode?: pulumi.Input<string>;
 The current maintenance mode state of the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L219">property multipleHostAccess</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L220">property multipleHostAccess</a>
 </h3>
 
 ```typescript
@@ -22451,7 +22487,7 @@ If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L224">property name</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L225">property name</a>
 </h3>
 
 ```typescript
@@ -22463,7 +22499,7 @@ The name of the datastore. Forces a new resource if
 changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L229">property tags</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L230">property tags</a>
 </h3>
 
 ```typescript
@@ -22475,7 +22511,7 @@ The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L234">property uncommittedSpace</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L235">property uncommittedSpace</a>
 </h3>
 
 ```typescript
@@ -22487,7 +22523,7 @@ Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/vmfsDatastore.ts#L238">property url</a>
+<a class="pdoc-child-name" href="/vmfsDatastore.ts#L239">property url</a>
 </h3>
 
 ```typescript

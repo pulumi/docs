@@ -8,23 +8,30 @@ title: Module iot
 
 * <a href="#Certificate">class Certificate</a>
 * <a href="#Policy">class Policy</a>
+* <a href="#PolicyAttachment">class PolicyAttachment</a>
 * <a href="#Thing">class Thing</a>
+* <a href="#ThingPrincipalAttachment">class ThingPrincipalAttachment</a>
 * <a href="#ThingType">class ThingType</a>
 * <a href="#TopicRule">class TopicRule</a>
 * <a href="#getEndpoint">function getEndpoint</a>
 * <a href="#CertificateArgs">interface CertificateArgs</a>
 * <a href="#CertificateState">interface CertificateState</a>
+* <a href="#GetEndpointArgs">interface GetEndpointArgs</a>
 * <a href="#GetEndpointResult">interface GetEndpointResult</a>
 * <a href="#PolicyArgs">interface PolicyArgs</a>
+* <a href="#PolicyAttachmentArgs">interface PolicyAttachmentArgs</a>
+* <a href="#PolicyAttachmentState">interface PolicyAttachmentState</a>
 * <a href="#PolicyState">interface PolicyState</a>
 * <a href="#ThingArgs">interface ThingArgs</a>
+* <a href="#ThingPrincipalAttachmentArgs">interface ThingPrincipalAttachmentArgs</a>
+* <a href="#ThingPrincipalAttachmentState">interface ThingPrincipalAttachmentState</a>
 * <a href="#ThingState">interface ThingState</a>
 * <a href="#ThingTypeArgs">interface ThingTypeArgs</a>
 * <a href="#ThingTypeState">interface ThingTypeState</a>
 * <a href="#TopicRuleArgs">interface TopicRuleArgs</a>
 * <a href="#TopicRuleState">interface TopicRuleState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts">iot/certificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts">iot/getEndpoint.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts">iot/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts">iot/thing.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts">iot/thingType.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts">iot/topicRule.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/certificate.ts">iot/certificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts">iot/getEndpoint.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts">iot/policy.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts">iot/policyAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts">iot/thing.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts">iot/thingPrincipalAttachment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts">iot/thingType.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/topicRule.ts">iot/topicRule.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Certificate">
@@ -260,6 +267,105 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="PolicyAttachment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L13">class PolicyAttachment</a>
+</h2>
+
+Provides an IoT policy attachment.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L33">constructor</a>
+</h3>
+
+```typescript
+new PolicyAttachment(name: string, args: PolicyAttachmentArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a PolicyAttachment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L22">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyAttachmentState): PolicyAttachment
+```
+
+
+Get an existing PolicyAttachment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L29">property policy</a>
+</h3>
+
+```typescript
+public policy: pulumi.Output<string>;
+```
+
+
+The name of the policy to attach.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L33">property target</a>
+</h3>
+
+```typescript
+public target: pulumi.Output<ARN>;
+```
+
+
+The identity to which the policy is attached.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="Thing">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L10">class Thing</a>
 </h2>
@@ -402,6 +508,105 @@ public version: pulumi.Output<number>;
 
 
 The current version of the thing record in the registry.
+
+<h2 class="pdoc-module-header" id="ThingPrincipalAttachment">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L12">class ThingPrincipalAttachment</a>
+</h2>
+
+Attaches Principal to AWS IoT Thing.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L32">constructor</a>
+</h3>
+
+```typescript
+new ThingPrincipalAttachment(name: string, args: ThingPrincipalAttachmentArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ThingPrincipalAttachment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingPrincipalAttachmentState): ThingPrincipalAttachment
+```
+
+
+Get an existing ThingPrincipalAttachment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L28">property principal</a>
+</h3>
+
+```typescript
+public principal: pulumi.Output<ARN>;
+```
+
+
+The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L32">property thing</a>
+</h3>
+
+```typescript
+public thing: pulumi.Output<string>;
+```
+
+
+The name of the thing.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="ThingType">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingType.ts#L10">class ThingType</a>
@@ -754,7 +959,7 @@ deployments.
 </h2>
 
 ```typescript
-getEndpoint(opts?: pulumi.InvokeOptions): Promise<GetEndpointResult>
+getEndpoint(args?: GetEndpointArgs, opts?: pulumi.InvokeOptions): Promise<GetEndpointResult>
 ```
 
 
@@ -831,14 +1036,31 @@ The certificate signing request. Review the
 [IoT API Reference Guide] (http://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
 for more information on creating a certificate from a certificate signing request (CSR).
 
+<h2 class="pdoc-module-header" id="GetEndpointArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L20">interface GetEndpointArgs</a>
+</h2>
+
+A collection of arguments for invoking getEndpoint.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L24">property endpointType</a>
+</h3>
+
+```typescript
+endpointType?: string;
+```
+
+
+Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Job`.
+
 <h2 class="pdoc-module-header" id="GetEndpointResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L18">interface GetEndpointResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L30">interface GetEndpointResult</a>
 </h2>
 
 A collection of values returned by getEndpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L22">property endpointAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L39">property endpointAddress</a>
 </h3>
 
 ```typescript
@@ -846,10 +1068,15 @@ endpointAddress: string;
 ```
 
 
-The endpoint. The format of the endpoint is as follows: `IDENTIFIER.iot.REGION.amazonaws.com`.
+The endpoint based on `endpoint_type`:
+* No `endpoint_type`: Either `iot:Data` or `iot:Data-ATS` [depending on region](https://aws.amazon.com/blogs/iot/aws-iot-core-ats-endpoints/)
+* `iot:CredentialsProvider`: `IDENTIFIER.credentials.iot.REGION.amazonaws.com`
+* `iot:Data`: `IDENTIFIER.iot.REGION.amazonaws.com`
+* `iot:Data-ATS`: `IDENTIFIER-ats.iot.REGION.amazonaws.com`
+* `iot:Job`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L26">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/getEndpoint.ts#L43">property id</a>
 </h3>
 
 ```typescript
@@ -886,6 +1113,62 @@ policy: pulumi.Input<string>;
 
 
 The policy document. This is a JSON formatted string. Use the [IoT Developer Guide](http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html) for more information on IoT Policies. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html).
+
+<h2 class="pdoc-module-header" id="PolicyAttachmentArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L81">interface PolicyAttachmentArgs</a>
+</h2>
+
+The set of arguments for constructing a PolicyAttachment resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L85">property policy</a>
+</h3>
+
+```typescript
+policy: pulumi.Input<string | Policy>;
+```
+
+
+The name of the policy to attach.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L89">property target</a>
+</h3>
+
+```typescript
+target: pulumi.Input<ARN>;
+```
+
+
+The identity to which the policy is attached.
+
+<h2 class="pdoc-module-header" id="PolicyAttachmentState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L67">interface PolicyAttachmentState</a>
+</h2>
+
+Input properties used for looking up and filtering PolicyAttachment resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L71">property policy</a>
+</h3>
+
+```typescript
+policy?: pulumi.Input<string | Policy>;
+```
+
+
+The name of the policy to attach.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policyAttachment.ts#L75">property target</a>
+</h3>
+
+```typescript
+target?: pulumi.Input<ARN>;
+```
+
+
+The identity to which the policy is attached.
 
 <h2 class="pdoc-module-header" id="PolicyState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/policy.ts#L73">interface PolicyState</a>
@@ -975,6 +1258,62 @@ thingTypeName?: pulumi.Input<string>;
 
 
 The thing type name.
+
+<h2 class="pdoc-module-header" id="ThingPrincipalAttachmentArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L80">interface ThingPrincipalAttachmentArgs</a>
+</h2>
+
+The set of arguments for constructing a ThingPrincipalAttachment resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L84">property principal</a>
+</h3>
+
+```typescript
+principal: pulumi.Input<ARN>;
+```
+
+
+The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L88">property thing</a>
+</h3>
+
+```typescript
+thing: pulumi.Input<string>;
+```
+
+
+The name of the thing.
+
+<h2 class="pdoc-module-header" id="ThingPrincipalAttachmentState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L66">interface ThingPrincipalAttachmentState</a>
+</h2>
+
+Input properties used for looking up and filtering ThingPrincipalAttachment resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L70">property principal</a>
+</h3>
+
+```typescript
+principal?: pulumi.Input<ARN>;
+```
+
+
+The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thingPrincipalAttachment.ts#L74">property thing</a>
+</h3>
+
+```typescript
+thing?: pulumi.Input<string>;
+```
+
+
+The name of the thing.
 
 <h2 class="pdoc-module-header" id="ThingState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iot/thing.ts#L82">interface ThingState</a>

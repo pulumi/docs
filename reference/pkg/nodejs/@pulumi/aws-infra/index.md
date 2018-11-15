@@ -37,7 +37,7 @@ A Cluster is a general purpose ECS cluster configured to run in a provided
 Network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L124">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L128">constructor</a>
 </h3>
 
 ```typescript
@@ -69,7 +69,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L120">property autoScalingGroupStack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L124">property autoScalingGroupStack</a>
 </h3>
 
 ```typescript
@@ -81,7 +81,7 @@ The auto-scaling group that ECS Service's should add to their
 `dependsOn`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L111">property ecsClusterARN</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L115">property ecsClusterARN</a>
 </h3>
 
 ```typescript
@@ -92,7 +92,7 @@ public ecsClusterARN: pulumi.Output<string>;
 The ECS Cluster ARN.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L124">property efsMountPath</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L128">property efsMountPath</a>
 </h3>
 
 ```typescript
@@ -103,7 +103,18 @@ public efsMountPath?: undefined | string;
 The EFS host mount path if EFS is enabled on this Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L115">property securityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L111">property network</a>
+</h3>
+
+```typescript
+public network: ClusterNetworkArgs;
+```
+
+
+The network in which to create this cluster.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts#L119">property securityGroupId</a>
 </h3>
 
 ```typescript

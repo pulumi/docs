@@ -653,7 +653,7 @@ Provides a Direct Connect hosted private virtual interface resource. This resour
 A hosted virtual interface is a virtual interface that is owned by another AWS account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L71">constructor</a>
 </h3>
 
 ```typescript
@@ -789,7 +789,29 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L55">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L55">property jumboFrameCapable</a>
+</h3>
+
+```typescript
+public jumboFrameCapable: pulumi.Output<boolean>;
+```
+
+
+Indicates whether jumbo frames (9001 MTU) are supported.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L59">property mtu</a>
+</h3>
+
+```typescript
+public mtu: pulumi.Output<number | undefined>;
+```
+
+
+The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L63">property name</a>
 </h3>
 
 ```typescript
@@ -800,7 +822,7 @@ public name: pulumi.Output<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L59">property ownerAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L67">property ownerAccountId</a>
 </h3>
 
 ```typescript
@@ -823,7 +845,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L63">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L71">property vlan</a>
 </h3>
 
 ```typescript
@@ -1437,7 +1459,7 @@ deployments.
 Provides a Direct Connect private virtual interface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L72">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L81">constructor</a>
 </h3>
 
 ```typescript
@@ -1584,7 +1606,30 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L60">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L60">property jumboFrameCapable</a>
+</h3>
+
+```typescript
+public jumboFrameCapable: pulumi.Output<boolean>;
+```
+
+
+Indicates whether jumbo frames (9001 MTU) are supported.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L65">property mtu</a>
+</h3>
+
+```typescript
+public mtu: pulumi.Output<number | undefined>;
+```
+
+
+The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L69">property name</a>
 </h3>
 
 ```typescript
@@ -1595,7 +1640,7 @@ public name: pulumi.Output<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L64">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L73">property tags</a>
 </h3>
 
 ```typescript
@@ -1618,7 +1663,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L68">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L77">property vlan</a>
 </h3>
 
 ```typescript
@@ -1629,7 +1674,7 @@ public vlan: pulumi.Output<number>;
 The VLAN ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L72">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L81">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -2454,13 +2499,13 @@ vpnGatewayId?: pulumi.Input<string>;
 The ID of the virtual private gateway to which to connect the virtual interface.
 
 <h2 class="pdoc-module-header" id="HostedPrivateVirtualInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L168">interface HostedPrivateVirtualInterfaceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L188">interface HostedPrivateVirtualInterfaceArgs</a>
 </h2>
 
 The set of arguments for constructing a HostedPrivateVirtualInterface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L172">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L192">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -2471,7 +2516,7 @@ addressFamily: pulumi.Input<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L176">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L196">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -2482,7 +2527,7 @@ amazonAddress?: pulumi.Input<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L180">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L200">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -2493,7 +2538,7 @@ bgpAsn: pulumi.Input<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L184">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L204">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -2504,7 +2549,7 @@ bgpAuthKey?: pulumi.Input<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L188">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L208">property connectionId</a>
 </h3>
 
 ```typescript
@@ -2515,7 +2560,7 @@ connectionId: pulumi.Input<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L192">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L212">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -2526,7 +2571,18 @@ customerAddress?: pulumi.Input<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L196">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L216">property mtu</a>
+</h3>
+
+```typescript
+mtu?: pulumi.Input<number>;
+```
+
+
+The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L220">property name</a>
 </h3>
 
 ```typescript
@@ -2537,7 +2593,7 @@ name?: pulumi.Input<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L200">property ownerAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L224">property ownerAccountId</a>
 </h3>
 
 ```typescript
@@ -2548,7 +2604,7 @@ ownerAccountId: pulumi.Input<string>;
 The AWS account that will own the new virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L204">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L228">property vlan</a>
 </h3>
 
 ```typescript
@@ -2559,13 +2615,13 @@ vlan: pulumi.Input<number>;
 The VLAN ID.
 
 <h2 class="pdoc-module-header" id="HostedPrivateVirtualInterfaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L122">interface HostedPrivateVirtualInterfaceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L134">interface HostedPrivateVirtualInterfaceState</a>
 </h2>
 
 Input properties used for looking up and filtering HostedPrivateVirtualInterface resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L126">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L138">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -2576,7 +2632,7 @@ addressFamily?: pulumi.Input<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L130">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L142">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -2587,7 +2643,7 @@ amazonAddress?: pulumi.Input<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L134">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L146">property arn</a>
 </h3>
 
 ```typescript
@@ -2598,7 +2654,7 @@ arn?: pulumi.Input<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L138">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L150">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -2609,7 +2665,7 @@ bgpAsn?: pulumi.Input<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L142">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L154">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -2620,7 +2676,7 @@ bgpAuthKey?: pulumi.Input<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L146">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L158">property connectionId</a>
 </h3>
 
 ```typescript
@@ -2631,7 +2687,7 @@ connectionId?: pulumi.Input<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L150">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L162">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -2642,7 +2698,29 @@ customerAddress?: pulumi.Input<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L154">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L166">property jumboFrameCapable</a>
+</h3>
+
+```typescript
+jumboFrameCapable?: pulumi.Input<boolean>;
+```
+
+
+Indicates whether jumbo frames (9001 MTU) are supported.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L170">property mtu</a>
+</h3>
+
+```typescript
+mtu?: pulumi.Input<number>;
+```
+
+
+The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L174">property name</a>
 </h3>
 
 ```typescript
@@ -2653,7 +2731,7 @@ name?: pulumi.Input<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L158">property ownerAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L178">property ownerAccountId</a>
 </h3>
 
 ```typescript
@@ -2664,7 +2742,7 @@ ownerAccountId?: pulumi.Input<string>;
 The AWS account that will own the new virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L162">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/hostedPrivateVirtualInterface.ts#L182">property vlan</a>
 </h3>
 
 ```typescript
@@ -3140,13 +3218,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="PrivateVirtualInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L186">interface PrivateVirtualInterfaceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L208">interface PrivateVirtualInterfaceArgs</a>
 </h2>
 
 The set of arguments for constructing a PrivateVirtualInterface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L190">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L212">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -3157,7 +3235,7 @@ addressFamily: pulumi.Input<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L194">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L216">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -3168,7 +3246,7 @@ amazonAddress?: pulumi.Input<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L198">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L220">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -3179,7 +3257,7 @@ bgpAsn: pulumi.Input<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L202">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L224">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -3190,7 +3268,7 @@ bgpAuthKey?: pulumi.Input<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L206">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L228">property connectionId</a>
 </h3>
 
 ```typescript
@@ -3201,7 +3279,7 @@ connectionId: pulumi.Input<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L210">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L232">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -3212,7 +3290,7 @@ customerAddress?: pulumi.Input<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L214">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L236">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -3223,7 +3301,19 @@ dxGatewayId?: pulumi.Input<string>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L218">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L241">property mtu</a>
+</h3>
+
+```typescript
+mtu?: pulumi.Input<number>;
+```
+
+
+The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L245">property name</a>
 </h3>
 
 ```typescript
@@ -3234,7 +3324,7 @@ name?: pulumi.Input<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L222">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L249">property tags</a>
 </h3>
 
 ```typescript
@@ -3245,7 +3335,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L226">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L253">property vlan</a>
 </h3>
 
 ```typescript
@@ -3256,7 +3346,7 @@ vlan: pulumi.Input<number>;
 The VLAN ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L230">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L257">property vpnGatewayId</a>
 </h3>
 
 ```typescript
@@ -3267,13 +3357,13 @@ vpnGatewayId?: pulumi.Input<string>;
 The ID of the virtual private gateway to which to connect the virtual interface.
 
 <h2 class="pdoc-module-header" id="PrivateVirtualInterfaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L132">interface PrivateVirtualInterfaceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L145">interface PrivateVirtualInterfaceState</a>
 </h2>
 
 Input properties used for looking up and filtering PrivateVirtualInterface resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L136">property addressFamily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L149">property addressFamily</a>
 </h3>
 
 ```typescript
@@ -3284,7 +3374,7 @@ addressFamily?: pulumi.Input<string>;
 The address family for the BGP peer. `ipv4 ` or `ipv6`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L140">property amazonAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L153">property amazonAddress</a>
 </h3>
 
 ```typescript
@@ -3295,7 +3385,7 @@ amazonAddress?: pulumi.Input<string>;
 The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L144">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L157">property arn</a>
 </h3>
 
 ```typescript
@@ -3306,7 +3396,7 @@ arn?: pulumi.Input<string>;
 The ARN of the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L148">property bgpAsn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L161">property bgpAsn</a>
 </h3>
 
 ```typescript
@@ -3317,7 +3407,7 @@ bgpAsn?: pulumi.Input<number>;
 The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L152">property bgpAuthKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L165">property bgpAuthKey</a>
 </h3>
 
 ```typescript
@@ -3328,7 +3418,7 @@ bgpAuthKey?: pulumi.Input<string>;
 The authentication key for BGP configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L156">property connectionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L169">property connectionId</a>
 </h3>
 
 ```typescript
@@ -3339,7 +3429,7 @@ connectionId?: pulumi.Input<string>;
 The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L160">property customerAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L173">property customerAddress</a>
 </h3>
 
 ```typescript
@@ -3350,7 +3440,7 @@ customerAddress?: pulumi.Input<string>;
 The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L164">property dxGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L177">property dxGatewayId</a>
 </h3>
 
 ```typescript
@@ -3361,7 +3451,30 @@ dxGatewayId?: pulumi.Input<string>;
 The ID of the Direct Connect gateway to which to connect the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L168">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L181">property jumboFrameCapable</a>
+</h3>
+
+```typescript
+jumboFrameCapable?: pulumi.Input<boolean>;
+```
+
+
+Indicates whether jumbo frames (9001 MTU) are supported.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L186">property mtu</a>
+</h3>
+
+```typescript
+mtu?: pulumi.Input<number>;
+```
+
+
+The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L190">property name</a>
 </h3>
 
 ```typescript
@@ -3372,7 +3485,7 @@ name?: pulumi.Input<string>;
 The name for the virtual interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L172">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L194">property tags</a>
 </h3>
 
 ```typescript
@@ -3383,7 +3496,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L176">property vlan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L198">property vlan</a>
 </h3>
 
 ```typescript
@@ -3394,7 +3507,7 @@ vlan?: pulumi.Input<number>;
 The VLAN ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L180">property vpnGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/directconnect/privateVirtualInterface.ts#L202">property vpnGatewayId</a>
 </h3>
 
 ```typescript
