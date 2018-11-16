@@ -1,5 +1,5 @@
 nav_section: "Getting Started"
-toc: 
+toc:
 - title: Getting Started
   path: /quickstart/index
   toplevel: true
@@ -26,8 +26,11 @@ toc:
   path: /quickstart/kubernetes/index
   section:
    - quickstart/kubernetes/setup.md
-   - quickstart/kubernetes/tutorial-stateless-app.md
+   - quickstart/kubernetes/tutorial-exposed-deployment.md
+   - quickstart/kubernetes/tutorial-configmap-rollout.md
+   - quickstart/kubernetes/tutorial-wordpress-chart.md
    - quickstart/kubernetes/tutorial-guestbook.md
+   - quickstart/kubernetes/tutorial-p8s-rollout.md
 - title: Pulumi Cloud Framework
   path: /quickstart/cloudfx/index
   section:

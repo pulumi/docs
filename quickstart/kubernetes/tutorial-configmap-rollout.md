@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Triggering a Rollout by Changing Data in a `ConfigMap`"
+title: "Tutorial: Graceful app rollout"
 ---
 
 In this tutorial, we'll use nginx to reverse-proxy traffic to `pulumi.github.io`. The nginx

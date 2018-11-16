@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Getting your feet wet with Pulumi and Kubernetes"
+title: "Tutorial: Hello, World!"
 ---
 
 In this tutorial, we'll deploy `nginx` to a Kubernetes cluster, and publicly expose it to the

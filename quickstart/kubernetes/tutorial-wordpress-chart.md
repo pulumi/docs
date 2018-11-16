@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Deploying the WordPress chart to Kubernetes using a Helm Chart"
+title: "Tutorial: Deploying the WordPress Helm Chart"
 redirect_from: /quickstart/kubernetes-guestbook.html
 ---
 
