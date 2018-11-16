@@ -25,6 +25,26 @@ give it a name, e.g. "Pulumi Cloud Console", and an icon.
 The next step is where you configure the SAML application's settings. The values to provide will
 depend on the name of your Pulumi organization, e.g. `robot-co` or `acme`.
 
+> [Contact us](https://www.pulumi.com/about/#contact-us) to provision the SAML-backed Pulumi
+> organization for you to associate with Okta.
+
+<style>
+td, th {
+    padding: 8px 8px;
+    border: 1px solid rgba(0,0,0,0.13);
+}
+
+thead tr th {
+    color: #00acf2;  /* $primary2, blue */
+    font-weight: 800;
+}
+
+tbody tr td {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+</style>
+
 | General Setting | Value |
 | --------------- | ----- |
 | Single sign on URL | https://api.pulumi.com/login/robot-co/sso/saml/acs |
@@ -72,12 +92,12 @@ a user's identity.
 
 ![SAML Application Metadata](../../images/reference/service/saml-okta/okta-xml-descriptor.png)
 
-With the large block of XML text in your clipboard, navigate to your SAML organization's page on
-the Pulumi Cloud Console. The exact URL depends on the name of the organization, but it will be
+With the block of XML text in your clipboard, navigate to your SAML organization's page on the
+Pulumi Cloud Console. The exact URL depends on the name of the organization, but it will be
 something like:
 https://app.pulumi.com/robot-co/settings
 
-On the organization setting's page, paste the large IDP metadata descriptor into the bottom card
+On the organization setting's page, paste the IDP metadata descriptor into the bottom card
 titled "SAML SSO Settings". Then click the "SAVE" button at the bottom of the card.
 
 ![Pulumi Organization Settings](../../images/reference/service/saml-okta/pulumi-org-settings.png)
