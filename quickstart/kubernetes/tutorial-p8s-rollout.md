@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Triggering a Rollout by Changing Data in a `ConfigMap`"
+title: "Tutorial: Gating rollout on Prometheus checks"
 ---
 
 In this tutorial, we see how to create a staged rollout (from 3-replica canary -> 10-replica
