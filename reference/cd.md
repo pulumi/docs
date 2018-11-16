@@ -25,6 +25,8 @@ updates on GitHub pull requests. See [Pulumi GitHub App](./cd-github.html) for m
 ### Provider-specific examples
 
 * [AWS Code Services](./cd-aws-code-services.html)
+* [Azure DevOps](./cd-azure-devops.html)
+* [GitLab CI](./cd-gitlab-ci.html)
 * [Travis](./cd-travis.html)
 
 ## Branching strategy for deployments

@@ -103,6 +103,8 @@ toc:
     path: /reference/cd-travis.html
   - title: GitLab CI
     path: /reference/cd-gitlab-ci.html
+  - title: Azure DevOps
+    path: /reference/cd-azure-devops.html
 - title: Pulumi Vs. Others
   path: /reference/vs/index
   section:
