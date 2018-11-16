@@ -88,6 +88,8 @@ toc:
     path: /reference/service/roles-and-access-controls.html
   - title: Collaboration
     path: /reference/service/collaboration.html
+  - title: Creating a 'Deploy with Pulumi' Button
+    path: /reference/service/pulumi-button.html
 - title: Continuous Deployment
   path: /reference/cd
   section:
