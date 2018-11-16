@@ -30,3 +30,11 @@ visiting:
 
 Pulumi requires this scorp in order to verify memberships within the GitHub organization. Pulumi
 will not have access to any of the organizations source repositories.
+
+## SAML 2.0 based Organizations
+
+The Pulumi Enterprise edition provides more options for identity and access, including support for
+any SAML 2.0 based identity provider. For example Azure Active Directory (Azure AD), Active Directory
+Federation Services (AD FS), Okta, and others.
+
+To create a Pulumi organization using SAML SSO, please [contact us](https://www.pulumi.com/about/#contact-us).
