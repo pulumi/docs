@@ -10,6 +10,11 @@ For example, the following button can be clicked to configure and create a new e
 
 This document describes how you can create Pulumi buttons for your own Pulumi templates, examples, and apps.
 
+There are two steps to create a button:
+
+ 1. Include optional template metadata in your `Pulumi.yaml`.
+ 2. Create a button in Markdown or HTML.
+
 ## Templates
 
 The Pulumi button works with template projects hosted in public GitHub repositories or Gists. A template is a Pulumi project that has the required `Pulumi.yaml` file, which describes the project. The template project can be in the root of the GitHub repository or within a subdirectory. Multiple projects can be hosted within subdirectories of a single repository.
@@ -32,7 +37,7 @@ template:
 
 The above snippet includes an `aws:region` config value with a default value of `us-west-2`, as well as a `myAccessToken` config value that is a secret without a default value.
 
-## Testing
+### Testing
 
 You can test your template project with the [Pulumi CLI](https://pulumi.io/quickstart/install.html) or a web browser.
 
@@ -47,6 +52,8 @@ Browser:
 ```
 https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder
 ```
+
+![New Project](../../images/reference/service/new-project.png)
 
 ## Creating a Pulumi Button
 
