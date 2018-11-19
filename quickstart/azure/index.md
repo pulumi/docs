@@ -53,7 +53,7 @@ The Azure provider accepts the following configuration settings.  These can be p
 * `environment`: (Required) The cloud environment to use. It can also be sourced from the ARM_ENVIRONMENT environment variable. Supported values are: `public` (default), `usgovernment`, `german`, `china`.
 * `clientId`: (Optional) The client ID to use. It can also be sourced from the `ARM_CLIENT_ID` environment variable.
 * `clientSecret`: (Optional) The client secret to use. It can also be sourced from the `ARM_CLIENT_SECRET` environment variable.
-* `msiEndpoint`: (Optional) The REST endpoint to retrieve an MSI token from. Terraform will attempt to discover this automatically but it can be specified manually here. It can also be sourced from the `ARM_MSI_ENDPOINT` environment variable.
+* `msiEndpoint`: (Optional) The REST endpoint to retrieve an MSI token from. Pulumi will attempt to discover this automatically but it can be specified manually here. It can also be sourced from the `ARM_MSI_ENDPOINT` environment variable.
 * `skipCredentialsValidation`: (Optional) Prevents the provider from validating the given credentials. When set to true, `skip_provider_registration` is assumed. It can also be sourced from the `ARM_SKIP_CREDENTIALS_VALIDATION` environment variable; defaults to `false`.
 * `skipProviderRegistration`: (Optional) Prevents the provider from registering the ARM provider namespaces, this can be used if you don't wish to give the Active Directory Application permission to register resource providers. It can also be sourced from the `ARM_SKIP_PROVIDER_REGISTRATION` environment variable; defaults to `false`.
 * `subscriptionId`: (Optional) The subscription ID to use. It can also be sourced from the `ARM_SUBSCRIPTION_ID` environment variable.
