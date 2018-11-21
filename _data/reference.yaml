@@ -77,6 +77,8 @@ toc:
     path: /reference/cli/pulumi_refresh.html
   - title: Stack
     path: /reference/cli/pulumi_stack.html
+  - title: State
+    path: /reference/cli/pulumi_state.html
   - title: Update
     path: /reference/cli/pulumi_up.html
 - title: Cloud Console
