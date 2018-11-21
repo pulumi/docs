@@ -5,29 +5,24 @@ title: Continuous Deployment
 Pulumi is great for continuous deployment and supports a range of workflows.  In fact, our team uses Pulumi
 itself to deploy and manage [https://pulumi.com/](https://pulumi.com) and follows many of the practices described below.
 
-## Continuous integration
+## CI / CD
 
 Continuous integration (CI) encompasses the system you use for automatically testing your source code, usually upon
 commits to a particular branch.  This relates to, but is independent from, continuous deployment (CD), which deploys
 a subset of these code changes after specific gates have been passed (certain tests passing, approval, and so on).
 
-Pulumi can be used with any CI provider - including:
-
-- AWS Code Services (CodePipeline, CodeBuild)
-- CircleCI
-- Travis
-- Jenkins
-- etc.
-
-Pulumi can also bridge results from your CI system with GitHub, for example surfacing the results of stack
-updates on GitHub pull requests. See [Pulumi GitHub App](./cd-github.html) for more information.
-
 ### Provider-specific examples
 
 * [AWS Code Services](./cd-aws-code-services.html)
 * [Azure DevOps](./cd-azure-devops.html)
+* [CircleCI](./cd-circleci.html)
+* [GitHub Actions](./cd-github-actions.html)
 * [GitLab CI](./cd-gitlab-ci.html)
 * [Travis](./cd-travis.html)
+
+
+Pulumi can also bridge results from your CI/CD system with GitHub, for example surfacing the results of stack
+updates on GitHub pull requests. See [Pulumi GitHub App](./cd-github.html) for more information.
 
 ## Branching strategy for deployments
 
