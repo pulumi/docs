@@ -102,6 +102,10 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     Update duration: 3m53.44141303s
     ```
 
+> ***Note***: If you see an error message like `no resource plugin 'aws' found in the workspace or on your $PATH`, you
+> can manually install the Pulumi AWS plugin with `pulumi plugin install resource aws v$(npm info @pulumi/aws
+> version)`.
+
 1.  View the endpoint URL and run curl:
 
     ```bash

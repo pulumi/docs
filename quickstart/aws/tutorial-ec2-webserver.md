@@ -65,6 +65,10 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
         + 3 resources to create
     ```
 
+> ***Note***: If you see an error message like `no resource plugin 'aws' found in the workspace or on your $PATH`, you
+> can manually install the Pulumi AWS plugin with `pulumi plugin install resource aws v$(npm info @pulumi/aws
+> version)`.
+
 1.  Now, proceed with the deployment, which takes about 30 seconds to complete. 
 
     ```

@@ -139,6 +139,10 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
     Update duration: 1m48.486679173s
     ```
 
+> ***Note***: If you see an error message like `no resource plugin 'aws' found in the workspace or on your $PATH`, you
+> can manually install the Pulumi AWS plugin with `pulumi plugin install resource aws v$(npm info @pulumi/aws
+> version)`.
+
 ## Test the application
 
 To test the application, we'll upload a video to S3, view the running application logs, then download the thumbnail from S3.

@@ -75,6 +75,10 @@ In this tutorial, we'll show how you can use [@pulumi/aws] to provision raw reso
 
 1.  Run `pulumi update` to preview and deploy AWS resources. This creates a stack component, a Bucket and two S3 Objects (one for each file in the `www` folder).
 
+> ***Note***: If you see an error message like `no resource plugin 'aws' found in the workspace or on your $PATH`, you
+> can manually install the Pulumi AWS plugin with `pulumi plugin install resource aws v$(npm info @pulumi/aws
+> version)`.
+
 1.  To see the name of the bucket that was created, run `pulumi stack output`. Note that an extra 7-digit identifier is appended to the name. All Pulumi resources add this identifier automatically, so that you don't have to manually create unique names.
 
     ```bash

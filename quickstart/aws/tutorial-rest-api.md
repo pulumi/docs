@@ -89,6 +89,10 @@ The stack is ready to deploy, which is done as follows:
 pulumi up
 ```
 
+> ***Note***: If you see an error message like `no resource plugin 'aws' found in the workspace or on your $PATH`, you
+> can manually install the Pulumi AWS plugin with `pulumi plugin install resource aws v$(npm info @pulumi/aws
+> version)`.
+
 This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
 
 ![Stack preview](https://user-images.githubusercontent.com/4564579/46554998-da6c9980-c896-11e8-8530-6ca4c8db8123.png){:width="700px"}
