@@ -75,6 +75,30 @@ If you see an I/O error after "post-step event returned an error", you can safel
 update. If you see "after mutation of snapshot", you have hit a bug in Pulumi. You will possibly
 need to do some [manual intervention to repair your stack](#editing-your-deployment).
 
+### Error during pulumi preview/up - error: could not load plugin for `aws|azure` (etc.) provider
+
+The `pulumi` program that you author for your infrastructure may contain one or more dependencies to `providers`.
+The version information for these providers is stored in the deployment for each of your stacks (since each pulumi program belongs to a stack).
+This error can occur when the deployment state for a stack already contains a newer version of a specific provider, but you are trying
+to run a `pulumi up` (or `preview`) command after downgrading the provider dependency in your pulumi program.
+
+To be more specific, the error occurs because the `pulumi` [plugin cache](https://pulumi.io/reference/cli/pulumi_plugin_ls.html) does not have the required version installed.
+This is especially more likely to occur if you are running `pulumi` in a CI/CD environment, since your plugin cache is likely not saved across builds.
+
+Please note that, it is fine to have multiple versions of a provider installed and have stacks depend on different provider version. It is only a problem when you
+downgrade the version of a particular stack that already has been deployed using a newer version.
+
+Here's an example of the full error:
+```
+error: could not load plugin for aws provider 'urn:pulumi:<stack_name>::pulumi-service::pulumi:providers:aws::default': no resource plugin 'aws-v0.16.2' found in the workspace or on your $PATH, install the plugin using \`pulumi plugin install resource aws v0.16.2\`
+```
+
+#### Quick Summary
+
+You may encounter an error when you downgrade provider versions _after_ your stack is already updated with a newer version. 
+If you must downgrade the version of a provider your `pulumi` program depends on, you will need to [manually edit your deployment](#editing-your-deployment)
+and change the version of the provider your stack depends on and then import that as the latest state of your stack.
+
 ## Recovering from an interrupted update {#interrupted-update-recovery}
 
 If the Pulumi CLI is interrupted when performing a deployment, you may see an error message
