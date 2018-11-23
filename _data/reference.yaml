@@ -95,16 +95,18 @@ toc:
   section:
   - title: Pulumi GitHub App
     path: /reference/cd-github.html
-  - title: Pulumi GitHub Actions
-    path: /reference/cd-github-actions.html
   - title: AWS Code Services
     path: /reference/cd-aws-code-services.html
-  - title: Travis CI
-    path: /reference/cd-travis.html
-  - title: GitLab CI
-    path: /reference/cd-gitlab-ci.html
   - title: Azure DevOps
     path: /reference/cd-azure-devops.html
+  - title: CircleCI
+    path: /reference/cd-circleci.html
+  - title: GitHub Actions
+    path: /reference/cd-github-actions.html
+  - title: GitLab CI
+    path: /reference/cd-gitlab-ci.html
+  - title: Travis CI
+    path: /reference/cd-travis.html
 - title: Pulumi Vs. Others
   path: /reference/vs/index
   section:
