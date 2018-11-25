@@ -3,38 +3,82 @@ layout: default_index
 searchindex: false
 ---
 
-<p style="margin-bottom: 0">
-    <span class="github-stars-widget">
-        <a
-                href="https://github.com/pulumi/pulumi"
-                class="github-button"
-                data-size="large"
-                data-show-count="true"
-                aria-label="Star pulumi/pulumi on GitHub">
-            Star</a>
-    </span>
-</p>
-
-<div class="card-table">
-    <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="350"></a>
+<div class="card-table" style="margin-top: 24px">
+    <a href="https://www.pulumi.com"><img src="/images/logo/logo.svg" alt="Pulumi" width="300"></a>
     <h2 class="get-to-the-cloud no-anchor">
         Cloud Native Infrastructure as Code
     </h2>
+    <h3 class="get-to-the-cloud-sub no-anchor">
+        Build software for any cloud using your favorite language.
+    </h3>
     <p style="text-align: center; margin-bottom: 0">
+        <a href="/quickstart/install.html"><button class="button primary">INSTALL</button></a>
         <a href="/quickstart"><button class="button primary">GET STARTED</button></a>
-        <a href="/tour"><button class="button">TAKE A TOUR</button></a>
-        <a href="https://github.com/pulumi/examples"><button class="button">EXAMPLES</button></a>
-    </p>
-    <p class="what-is-pulumi">
-        <span class="what-is-pulumi-cta">
-            Create, deploy, and manage cloud native applications and infrastructure
-        </span>
-        in your favorite language, using an open source platform that enables sharing, reuse,
-        and safe and predictable changes in a team environment.
+        <a href="https://github.com/pulumi/examples" target="_blank"><button class="button primary">EXAMPLES</button></a>
     </p>
 </div>
 
-<div class="card-table">
+<div class="card-table" style="background: #fafafa; margin: 32px 0 0 0; border-top: 1px solid #eee">
+    <div class="mdl-card mdl-shadow--2dp get-started-card">
+        <a href="/quickstart/aws/index.html"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/azure/index.html"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/gcp/index.html"><img src="/images/quickstart/gcp-purple.png" style="width: 250px"></a>
+        <a href="/quickstart/kubernetes/index.html"><img src="/images/quickstart/k8s-purple.png" style="width: 250px"></a>
+    </div>
+</div>
+
+<div class="card-table" style="border-top: 1px solid #eee">
+    <div class="mdl-card mdl-shadow--2dp get-started-card">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text no-anchor" style="color: #999">Why Pulumi?</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <span class="card-text">
+                <div class="content" style="text-align: left; display: inline-block; margin: auto">
+                    By using general purpose languages for infrastructure as code,
+                    you get all the benefits of real languages -- IDEs, abstractions and
+                    reuse thanks to functions, classes, and packages, debugging, testability,
+                    and more. The result is far less copy and paste and greater productivity,
+                    and it works the same way no matter which cloud you're targeting.
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="mdl-card mdl-shadow--2dp get-started-card">
+        <div class="mdl-card__title">
+           <h2 class="mdl-card__title-text no-anchor" style="color: #999">Alternatives</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <span class="card-text">
+                <div class="content" style="text-align: left; display: inline-block; margin: auto">
+                    Other approaches use YAML, JSON, or bespoke DSLs that you need to
+                    master -- and convince your team to use. These "languages" fall short of
+                    general purpose languages, lacking abstractions and reuse, and reinvent
+                    familiar concepts like package managers. Worse, these solutions are usually
+                    unique to every given cloud that you need to target.
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="mdl-card mdl-shadow--2dp get-started-card">
+        <div class="mdl-card__title">
+           <h2 class="mdl-card__title-text no-anchor" style="color: #999">Community</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <span class="card-text">
+                <div class="content" style="text-align: left; display: inline-block; margin: auto">
+                    Pulumi's SDK is fully open source and extensible, enabling you to
+                    participate in a rich ecosystem of libraries that ease common tasks,
+                    ranging from containers to serverless to infrastructure, and everything
+                    in between. Languages and clouds are supported using an extensible
+                    plugin model, enabling public, private, and even hybrid cloud support.
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="card-table" style="background: #fafafa; border-top: 1px solid #eee; margin-bottom: 64px">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="/quickstart/aws/tutorial-containers-ecs-fargate.html">
           <img src="/images/icon-feature-containers.svg"
@@ -117,43 +161,6 @@ searchindex: false
             <a href="/quickstart/kubernetes/index.html">
                 <button class="button">START NOW</button>
             </a>
-        </div>
-    </div>
-</div>
-
-<div class="card-table" style="margin: 64px 0;">
-    <div class="col-sm-10 col-sm-offset-1">
-        <div class="row cols-are-spaced-md">
-            <div class="col col-md-4">
-                <div class="content" style="text-align: center; display: inline-block; margin: auto">
-                    <ul class="logo-roll text-center-xs text-center-sm" style="margin-left: 15px">
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-js.png" alt="js"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-python.png" alt="python"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-golang.png" alt="golang"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-ts.png" alt="typescript"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col col-md-4">
-                <div class="content" style="text-align: center; display: inline-block; margin: auto">
-                    <ul class="logo-roll text-center-xs text-center-sm" style="margin-left: 15px">
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-aws.png" alt="aws"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-azure.png" alt="azure"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-gd.png" alt="gd"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-kubernetes.png" alt="kubernetes"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col col-md-4">
-                <div class="content" style="text-align: center; display: inline-block; margin: auto">
-                    <ul class="logo-roll text-center-xs text-center-sm" style="margin-left: 15px">
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-github.png" alt="github"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-vs.png" alt="vs"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-npm.png" alt="npm"></li>
-                        <li><img src="https://www.pulumi.com/assets/logos/tech/logo-travisci.png" alt="travisci"></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </div>

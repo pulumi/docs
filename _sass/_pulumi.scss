@@ -170,9 +170,15 @@ svg {
 }
 
 .get-to-the-cloud {
-    color: #4a5960;
+    color: #333;
     font-size: 36px;
-    margin: 48px 0 !important;
+    margin: 48px 0 32px 0 !important;
+}
+
+.get-to-the-cloud-sub {
+    color: #4a5960;
+    font-size: 28px;
+    margin: 32px 0 48px 0 !important;
 }
 
 .what-is-pulumi {
@@ -533,7 +539,6 @@ h4 { font-size: 22px; font-weight: 500; }
         display: table;
         width: 100%;
         border-spacing: 10px;
-        margin-bottom: 24px;
     }
     .mdl-card {
         display: table-cell;
