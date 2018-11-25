@@ -182,6 +182,10 @@ to manually edit the stack's existing state to fix the corruption.
 
 Note that this is an advanced operation and should be an absolute last resort.
 
+If you intend to unprotect or delete a resource, consider using the [`pulumi state`](./cli/pulumi_state.html) command to
+do so instead of editing your state directly. `pulumi state` also makes surgical fixes to your state but without
+requiring you to edit the JSON representation of your stack's current state.
+
 To get a JSON representation of your stack's current state, you can export your current stack
 to a file:
 
