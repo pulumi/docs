@@ -15,12 +15,15 @@ The GCP provider supports several options for providing access to Google Cloud c
 
 ## Getting Started
 
-The easiest way to start with GCP is to follow one of these examples:
+The easiest way to start with Pulumi for GCP is to follow the tutorial:
 
-* [Google Compute Engine](https://github.com/pulumi/examples/tree/master/gcp-js-webserver): Stand up a simple
-    virtual machine-based webserver in GCE
-* [Google Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-ts-functions): Create a serverless
-    function
+* [Virtual Machine](./tutorial-gce-webserver.html): Create a Debian virtual machine web server instance
+
+In addition to the tutorial, several interesting examples are available complete with instructions:
+
+* [Google Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-ts-functions): Create a serverless function
+* [Google Kubernetes Engine](https://github.com/pulumi/examples/tree/master/gcp-ts-gke): Create a GKE cluster and deploy an NGINX pod into it
+* [Ruby on Rails on GKE and Google Cloud SQL](https://github.com/pulumi/examples/tree/master/gcp-ts-k8s-ruby-on-rails-postgresql): Containerized Ruby on Rails app using Google Cloud SQL PostgresSQL, GKE and Docker Hub.
 
 ## Example
 
