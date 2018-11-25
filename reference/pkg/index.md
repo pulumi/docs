@@ -2,11 +2,19 @@
 title: Packages
 ---
 
-Pulumi is used to manage resources in the cloud, no matter the cloud provider.  Each cloud has a dedicated package that
-provides access to its full capabilities, including containers, serverless functions, infrastructure, databases, and
-more.  In addition to the cloud packages, Pulumi offers higher level frameworks to make programming the cloud easier.
+All Pulumi libraries are distributed in your chosen language's package manager, even those packages that define
+cloud resource definitions. That means NPM for Node.js and PyPI for Python, for instance. There is a dedicated
+package for each cloud that includes access to its full capabilities, including containers, serverless functions,
+infrastructure, data services, and more.
 
-Below you will find a list of current packages with links to their full documentation.
+In addition to the cloud packages, Pulumi offers many convenience libraries that make common tasks easier, like
+setting up a network, creating a Kubernetes cluster, and building and publishing containers to private registries.
+
+These packages can be mixed to enable multi-cloud and a spectrum of control to productivity:
+
+![Pulumi Library Architecture](/images/reference/pkg-arch-layers.png)
+
+Below you will find a list of current packages in each language with links to their full documentation.
 
 ## JavaScript/TypeScript
 
@@ -46,7 +54,6 @@ These libraries help with common cloud programming patterns and practices:
 * [AWS EKS Cluster (`@pulumi/eks`)](nodejs/@pulumi/eks): simple creation and management of AWS EKS clusters
 * [Azure Serverless Components (`@pulumi/azure-serverless`)](nodejs/@pulumi/azure-serverless): components for writing
   serverless applications on Azure
-
 
 ## Python
 
