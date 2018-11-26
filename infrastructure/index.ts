@@ -191,11 +191,12 @@ crawlDirectory(
     webContentsRootPath,
     (filePath: string) => {
         const relativeFilePath = filePath.replace(webContentsRootPath + "/", "");
+        const relativeFilePathTrimmed = relativeFilePath.replace("\.html", "")
         const contentFile = new aws.s3.BucketObject(
             relativeFilePath,
             {
                 acl: "public-read",
-                key: relativeFilePath,
+                key: relativeFilePathTrimmed,
                 bucket: contentBucket,
                 source: new pulumi.asset.FileAsset(filePath),
                 contentType: getMimeType(filePath) || undefined,
