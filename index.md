@@ -18,7 +18,7 @@ searchindex: false
     </p>
 </div>
 
-<div class="card-table" style="background: #fafafa; margin: 32px 0 0 0; border-top: 1px solid #eee">
+<div class="card-table" style="background: #fafafa; margin: 64px 0 0 0; border-top: 1px solid #eee">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="/quickstart/aws/index.html"><img src="/images/quickstart/aws-purple.png" style="width: 250px"></a>
         <a href="/quickstart/azure/index.html"><img src="/images/quickstart/azure-purple.png" style="width: 250px"></a>
@@ -27,7 +27,7 @@ searchindex: false
     </div>
 </div>
 
-<div class="card-table" style="border-top: 1px solid #eee">
+<div class="card-table" style="border-top: 1px solid #eee; padding: 24px">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text no-anchor" style="color: #999">Why Pulumi?</h2>
@@ -78,7 +78,7 @@ searchindex: false
     </div>
 </div>
 
-<div class="card-table" style="background: #fafafa; border-top: 1px solid #eee; margin-bottom: 64px">
+<div class="card-table" style="background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 64px">
     <div class="mdl-card mdl-shadow--2dp get-started-card">
         <a href="/quickstart/aws/tutorial-containers-ecs-fargate.html">
           <img src="/images/icon-feature-containers.svg"
