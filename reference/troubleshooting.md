@@ -249,4 +249,23 @@ Depending on the class of error that you are experiencing, you may need to edit 
 as well as potentially change the location of particular resources in the list. Since this is an advanced operation,
 we recommend you check-in with the [Pulumi Community Slack](https://slack.pulumi.io) first before editing your snapshot.
 
+## Provider-specific problems {#provider-problems}
 
+This section includes troubleshooting information specific to Pulumi providers. 
+
+### Kubernetes {#provider-kubernetes}
+
+This section includes detailed troubleshooting information for the [Kubernetes provider](https://github.com/pulumi/pulumi-kubernetes)
+
+#### Ingress Errors {#provider-kubernetes-ingress}
+
+##### Ingress .status.loadBalancer field was not updated with a hostname/IP address {#ingress-status-loadbalancer}
+
+This error is often caused by a misconfigured ingress-controller not updating the `status.loadBalancer`
+field once the Ingress resource is ready to route traffic.
+
+*Traefik*
+
+For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config 
+is [set properly](https://docs.traefik.io/configuration/backends/kubernetes/). This option was
+introduced in Traefik 1.7.0.
