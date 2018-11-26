@@ -13,7 +13,7 @@ banner:
 .PHONY: docker
 docker:
 	docker build . -t docs
-	docker run -it -p 4000:4000 docs
+	docker run -it --rm -v $(PWD):/src -p 4000:4000 docs
 
 .PHONY: configure
 configure:
