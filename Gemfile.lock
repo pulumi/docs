@@ -34,9 +34,9 @@ GEM
       octicons (= 5.3.0)
     jekyll-optional-front-matter (0.3.0)
       jekyll (~> 3.0)
-    jekyll-redirect-from (0.13.0)
+    jekyll-redirect-from (0.14.0)
       jekyll (~> 3.3)
-    jekyll-relative-links (0.4.0)
+    jekyll-relative-links (0.5.3)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -79,10 +79,10 @@ DEPENDENCIES
   jekyll-include-cache (~> 0.1)
   jekyll-octicons
   jekyll-optional-front-matter
-  jekyll-redirect-from
-  jekyll-relative-links
+  jekyll-redirect-from (~> 0.14.0)
+  jekyll-relative-links (~> 0.5.3)
   jekyll-sitemap
   kramdown
 
 BUNDLED WITH
-   1.16.2
+   1.17.1

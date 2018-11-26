@@ -83,3 +83,29 @@ Examples of other sites and their docs as inspiration:
 - http://developer.mailchimp.com/documentation/mailchimp/
 - http://ionicframework.com/docs/
 - https://www.twilio.com/docs/
+
+## Creating shortlinks
+
+Shortlinks can be created as a permanent reference to documentation that may move around in the repo.
+This is particularly useful for troubleshooting links that are produced by CLI tools.
+
+To create a shortlink, create a file under `/shortlinks` in the following format:
+
+```md
+---
+redirect_to: <link-to-current-docs-page>
+permalink: /help/<choose-a-unique-shortlink>
+---
+```
+
+Here is a concrete example:
+
+```md
+---
+redirect_to: /reference/troubleshooting.html#ingress-status-loadbalancer
+permalink: /help/k8s-ingress-lbstatus
+---
+```
+
+With the above file in place, a redirect will be created from `https://pulumi.io/help/k8s-ingress-lbstatus`
+to `https://pulumi.io/reference/troubleshooting.html#ingress-status-loadbalancer`
