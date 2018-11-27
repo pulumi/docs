@@ -21,6 +21,8 @@ toc:
     path: /reference/how.html
   - title: State and Backends
     path: /reference/state.html
+  - title: Organizing Stacks and Projects
+    path: /reference/organizing-stacks-projects.html
   - title: Troubleshooting
     path: /reference/troubleshooting.html
 - title: Packages
