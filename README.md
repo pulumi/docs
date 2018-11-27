@@ -94,16 +94,18 @@ To create a shortlink, create a file under `/shortlinks` in the following format
 ```md
 ---
 redirect_to: <link-to-current-docs-page>
-permalink: /help/<choose-a-unique-shortlink>
+permalink: /help/<choose-a-unique-shortlink>/
 ---
 ```
+
+**Note that the trailing `/` on the permalink is required!**
 
 Here is a concrete example:
 
 ```md
 ---
 redirect_to: /reference/troubleshooting.html#ingress-status-loadbalancer
-permalink: /help/k8s-ingress-lbstatus
+permalink: /help/k8s-ingress-lbstatus/
 ---
 ```
 
