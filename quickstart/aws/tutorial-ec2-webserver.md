@@ -26,7 +26,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver EC2 instance
     const aws = require("@pulumi/aws");
 
     let size = "t2.micro";     // t2.micro is available in the AWS free tier
-    let ami  = "ami-6869aa05"; // AMI for Amazon Linux in us-west-1 (Virginia)
+    let ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virginia)
 
     let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
         ingress: [
