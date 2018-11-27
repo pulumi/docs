@@ -14,6 +14,8 @@ redirect_from: /install/kubernetes.html
 
 The [Pulumi Kubernetes provider] authenticates and connects to a Kubernetes cluster using a local [kubeconfig file]. This logic is implemented using the official [Kubernetes Go client library], so Pulumi's behavior is identical to `kubectl`. If you have already provisioned a Kubernetes cluster and set up `kubectl` to connect to it, the Pulumi CLI should "just work."
 
+**Note:** If you don't already have a Kubernetes cluster, you can [create one with Pulumi](https://github.com/pulumi/examples/tree/master/gcp-ts-gke). This allows you to manage the full stack, from the Kubernetes cluster to the workloads running on it! [GKE](https://cloud.google.com/kubernetes-engine/docs/tutorials/), [EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html) and [AKS](https://docs.microsoft.com/en-us/azure/aks/) are supported. 
+
 ## Pre-requisites
 
 If you're not yet set up, you'll need to do two things:
