@@ -53,7 +53,7 @@ title: Module apps/v1beta2
 
 
 <h2 class="pdoc-module-header" id="isControllerRevision">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3298">function isControllerRevision</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L2974">function isControllerRevision</a>
 </h2>
 
 ```typescript
@@ -61,7 +61,7 @@ isControllerRevision(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isControllerRevisionList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3334">function isControllerRevisionList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3010">function isControllerRevisionList</a>
 </h2>
 
 ```typescript
@@ -69,7 +69,7 @@ isControllerRevisionList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDaemonSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3380">function isDaemonSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3056">function isDaemonSet</a>
 </h2>
 
 ```typescript
@@ -77,7 +77,7 @@ isDaemonSet(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDaemonSetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3449">function isDaemonSetList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3125">function isDaemonSetList</a>
 </h2>
 
 ```typescript
@@ -85,7 +85,7 @@ isDaemonSetList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDeployment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3615">function isDeployment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3291">function isDeployment</a>
 </h2>
 
 ```typescript
@@ -93,7 +93,7 @@ isDeployment(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDeploymentList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3688">function isDeploymentList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3364">function isDeploymentList</a>
 </h2>
 
 ```typescript
@@ -101,7 +101,7 @@ isDeploymentList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isReplicaSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3863">function isReplicaSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3539">function isReplicaSet</a>
 </h2>
 
 ```typescript
@@ -109,7 +109,7 @@ isReplicaSet(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isReplicaSetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3933">function isReplicaSetList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3609">function isReplicaSetList</a>
 </h2>
 
 ```typescript
@@ -117,7 +117,7 @@ isReplicaSetList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isScale">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4119">function isScale</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3794">function isScale</a>
 </h2>
 
 ```typescript
@@ -125,7 +125,7 @@ isScale(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isStatefulSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4205">function isStatefulSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3880">function isStatefulSet</a>
 </h2>
 
 ```typescript
@@ -133,7 +133,7 @@ isStatefulSet(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isStatefulSetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4269">function isStatefulSetList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L3944">function isStatefulSetList</a>
 </h2>
 
 ```typescript
@@ -141,7 +141,7 @@ isStatefulSetList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="ControllerRevision">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3085">interface ControllerRevision</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2773">interface ControllerRevision</a>
 </h2>
 
 DEPRECATED - This group version of ControllerRevision is deprecated by
@@ -156,7 +156,7 @@ in future releases, and clients should not depend on its stability. It is primar
 internal use by controllers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3092">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2780">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -170,7 +170,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3097">property data</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2785">property data</a>
 </h3>
 
 ```typescript
@@ -181,7 +181,7 @@ data: RawExtension;
 Data is the serialized representation of the state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3105">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2793">property kind</a>
 </h3>
 
 ```typescript
@@ -195,7 +195,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3111">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2799">property metadata</a>
 </h3>
 
 ```typescript
@@ -207,7 +207,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3116">property revision</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2804">property revision</a>
 </h3>
 
 ```typescript
@@ -218,13 +218,13 @@ revision: number;
 Revision indicates the revision of the state represented by Data.
 
 <h2 class="pdoc-module-header" id="ControllerRevisionList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3123">interface ControllerRevisionList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2811">interface ControllerRevisionList</a>
 </h2>
 
 ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3130">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2818">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -238,7 +238,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3135">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2823">property items</a>
 </h3>
 
 ```typescript
@@ -249,7 +249,7 @@ items: ControllerRevision[];
 Items is the list of ControllerRevisions
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3143">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2831">property kind</a>
 </h3>
 
 ```typescript
@@ -263,7 +263,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3148">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2836">property metadata</a>
 </h3>
 
 ```typescript
@@ -274,14 +274,14 @@ metadata: ListMeta;
 More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h2 class="pdoc-module-header" id="DaemonSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3156">interface DaemonSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2844">interface DaemonSet</a>
 </h2>
 
 DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet. See the
 release notes for more information. DaemonSet represents the configuration of a daemon set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3163">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2851">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -295,7 +295,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3171">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2859">property kind</a>
 </h3>
 
 ```typescript
@@ -309,7 +309,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3177">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2865">property metadata</a>
 </h3>
 
 ```typescript
@@ -321,7 +321,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3183">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2871">property spec</a>
 </h3>
 
 ```typescript
@@ -333,7 +333,7 @@ The desired behavior of this daemon set. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3190">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2878">property status</a>
 </h3>
 
 ```typescript
@@ -346,13 +346,13 @@ Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 <h2 class="pdoc-module-header" id="DaemonSetCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3197">interface DaemonSetCondition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2885">interface DaemonSetCondition</a>
 </h2>
 
 DaemonSetCondition describes the state of a DaemonSet at a certain point.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3201">property lastTransitionTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2889">property lastTransitionTime</a>
 </h3>
 
 ```typescript
@@ -363,7 +363,7 @@ lastTransitionTime: string;
 Last time the condition transitioned from one status to another.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3206">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2894">property message</a>
 </h3>
 
 ```typescript
@@ -374,7 +374,7 @@ message: string;
 A human readable message indicating details about the transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3211">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2899">property reason</a>
 </h3>
 
 ```typescript
@@ -385,7 +385,7 @@ reason: string;
 The reason for the condition's last transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3216">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2904">property status</a>
 </h3>
 
 ```typescript
@@ -396,7 +396,7 @@ status: string;
 Status of the condition, one of True, False, Unknown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3221">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2909">property type</a>
 </h3>
 
 ```typescript
@@ -407,13 +407,13 @@ type: string;
 Type of DaemonSet condition.
 
 <h2 class="pdoc-module-header" id="DaemonSetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3228">interface DaemonSetList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2916">interface DaemonSetList</a>
 </h2>
 
 DaemonSetList is a collection of daemon sets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3235">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2923">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -427,7 +427,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3240">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2928">property items</a>
 </h3>
 
 ```typescript
@@ -438,7 +438,7 @@ items: DaemonSet[];
 A list of daemon sets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3248">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2936">property kind</a>
 </h3>
 
 ```typescript
@@ -452,7 +452,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3254">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2942">property metadata</a>
 </h3>
 
 ```typescript
@@ -464,13 +464,13 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h2 class="pdoc-module-header" id="DaemonSetSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3261">interface DaemonSetSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2949">interface DaemonSetSpec</a>
 </h2>
 
 DaemonSetSpec is the specification of a daemon set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3267">property minReadySeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2955">property minReadySeconds</a>
 </h3>
 
 ```typescript
@@ -483,7 +483,7 @@ without any of its container crashing, for it to be considered available. Defaul
 (pod will be considered available as soon as it is ready).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3273">property revisionHistoryLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2961">property revisionHistoryLimit</a>
 </h3>
 
 ```typescript
@@ -495,7 +495,7 @@ The number of old history to retain to allow rollback. This is a pointer to dist
 between explicit zero and not specified. Defaults to 10.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3280">property selector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2968">property selector</a>
 </h3>
 
 ```typescript
@@ -508,7 +508,7 @@ controlled. It must match the pod template's labels. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3288">property template</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2976">property template</a>
 </h3>
 
 ```typescript
@@ -522,7 +522,7 @@ node if no node selector is specified). More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3293">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2981">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -533,13 +533,13 @@ updateStrategy: DaemonSetUpdateStrategy;
 An update strategy to replace existing DaemonSet pods with new pods.
 
 <h2 class="pdoc-module-header" id="DaemonSetStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3300">interface DaemonSetStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2988">interface DaemonSetStatus</a>
 </h2>
 
 DaemonSetStatus represents the current status of a daemon set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3306">property collisionCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2994">property collisionCount</a>
 </h3>
 
 ```typescript
@@ -552,7 +552,7 @@ collision avoidance mechanism when it needs to create the name for the newest
 ControllerRevision.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3311">property conditions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L2999">property conditions</a>
 </h3>
 
 ```typescript
@@ -563,7 +563,7 @@ conditions: DaemonSetCondition[];
 Represents the latest available observations of a DaemonSet's current state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3317">property currentNumberScheduled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3005">property currentNumberScheduled</a>
 </h3>
 
 ```typescript
@@ -575,7 +575,7 @@ The number of nodes that are running at least 1 daemon pod and are supposed to r
 daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3324">property desiredNumberScheduled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3012">property desiredNumberScheduled</a>
 </h3>
 
 ```typescript
@@ -588,7 +588,7 @@ running the daemon pod). More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3330">property numberAvailable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3018">property numberAvailable</a>
 </h3>
 
 ```typescript
@@ -600,7 +600,7 @@ The number of nodes that should be running the daemon pod and have one or more o
 daemon pod running and available (ready for at least spec.minReadySeconds)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3336">property numberMisscheduled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3024">property numberMisscheduled</a>
 </h3>
 
 ```typescript
@@ -612,7 +612,7 @@ The number of nodes that are running the daemon pod, but are not supposed to run
 pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3342">property numberReady</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3030">property numberReady</a>
 </h3>
 
 ```typescript
@@ -624,7 +624,7 @@ The number of nodes that should be running the daemon pod and have one or more o
 daemon pod running and ready.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3348">property numberUnavailable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3036">property numberUnavailable</a>
 </h3>
 
 ```typescript
@@ -636,7 +636,7 @@ The number of nodes that should be running the daemon pod and have none of the d
 running and available (ready for at least spec.minReadySeconds)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3353">property observedGeneration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3041">property observedGeneration</a>
 </h3>
 
 ```typescript
@@ -647,7 +647,7 @@ observedGeneration: number;
 The most recent generation observed by the daemon set controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3358">property updatedNumberScheduled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3046">property updatedNumberScheduled</a>
 </h3>
 
 ```typescript
@@ -658,13 +658,13 @@ updatedNumberScheduled: number;
 The total number of nodes that are running updated daemon pod
 
 <h2 class="pdoc-module-header" id="DaemonSetUpdateStrategy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3365">interface DaemonSetUpdateStrategy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3053">interface DaemonSetUpdateStrategy</a>
 </h2>
 
 DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3369">property rollingUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3057">property rollingUpdate</a>
 </h3>
 
 ```typescript
@@ -675,7 +675,7 @@ rollingUpdate: RollingUpdateDaemonSet;
 Rolling update config params. Present only if type = "RollingUpdate".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3374">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3062">property type</a>
 </h3>
 
 ```typescript
@@ -686,7 +686,7 @@ type: string;
 Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
 
 <h2 class="pdoc-module-header" id="Deployment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3383">interface Deployment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3071">interface Deployment</a>
 </h2>
 
 DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deployment. See the
@@ -694,7 +694,7 @@ release notes for more information. Deployment enables declarative updates for P
 ReplicaSets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3390">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3078">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -708,7 +708,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3398">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3086">property kind</a>
 </h3>
 
 ```typescript
@@ -722,7 +722,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3403">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3091">property metadata</a>
 </h3>
 
 ```typescript
@@ -733,7 +733,7 @@ metadata: ObjectMeta;
 Standard object metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3408">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3096">property spec</a>
 </h3>
 
 ```typescript
@@ -744,7 +744,7 @@ spec: DeploymentSpec;
 Specification of the desired behavior of the Deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3413">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3101">property status</a>
 </h3>
 
 ```typescript
@@ -755,13 +755,13 @@ status: DeploymentStatus;
 Most recently observed status of the Deployment.
 
 <h2 class="pdoc-module-header" id="DeploymentCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3420">interface DeploymentCondition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3108">interface DeploymentCondition</a>
 </h2>
 
 DeploymentCondition describes the state of a deployment at a certain point.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3424">property lastTransitionTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3112">property lastTransitionTime</a>
 </h3>
 
 ```typescript
@@ -772,7 +772,7 @@ lastTransitionTime: string;
 Last time the condition transitioned from one status to another.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3429">property lastUpdateTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3117">property lastUpdateTime</a>
 </h3>
 
 ```typescript
@@ -783,7 +783,7 @@ lastUpdateTime: string;
 The last time this condition was updated.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3434">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3122">property message</a>
 </h3>
 
 ```typescript
@@ -794,7 +794,7 @@ message: string;
 A human readable message indicating details about the transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3439">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3127">property reason</a>
 </h3>
 
 ```typescript
@@ -805,7 +805,7 @@ reason: string;
 The reason for the condition's last transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3444">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3132">property status</a>
 </h3>
 
 ```typescript
@@ -816,7 +816,7 @@ status: string;
 Status of the condition, one of True, False, Unknown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3449">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3137">property type</a>
 </h3>
 
 ```typescript
@@ -827,13 +827,13 @@ type: string;
 Type of deployment condition.
 
 <h2 class="pdoc-module-header" id="DeploymentList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3456">interface DeploymentList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3144">interface DeploymentList</a>
 </h2>
 
 DeploymentList is a list of Deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3463">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3151">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -847,7 +847,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3468">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3156">property items</a>
 </h3>
 
 ```typescript
@@ -858,7 +858,7 @@ items: Deployment[];
 Items is the list of Deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3476">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3164">property kind</a>
 </h3>
 
 ```typescript
@@ -872,7 +872,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3481">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3169">property metadata</a>
 </h3>
 
 ```typescript
@@ -883,13 +883,13 @@ metadata: ListMeta;
 Standard list metadata.
 
 <h2 class="pdoc-module-header" id="DeploymentSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3488">interface DeploymentSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3176">interface DeploymentSpec</a>
 </h2>
 
 DeploymentSpec is the specification of the desired behavior of the Deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3494">property minReadySeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3182">property minReadySeconds</a>
 </h3>
 
 ```typescript
@@ -902,7 +902,7 @@ container crashing, for it to be considered available. Defaults to 0 (pod will b
 considered available as soon as it is ready)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3499">property paused</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3187">property paused</a>
 </h3>
 
 ```typescript
@@ -913,7 +913,7 @@ paused: boolean;
 Indicates that the deployment is paused.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3508">property progressDeadlineSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3196">property progressDeadlineSeconds</a>
 </h3>
 
 ```typescript
@@ -928,7 +928,7 @@ Note that progress will not be estimated during the time a deployment is paused.
 to 600s.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3514">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3202">property replicas</a>
 </h3>
 
 ```typescript
@@ -940,7 +940,7 @@ Number of desired pods. This is a pointer to distinguish between explicit zero a
 specified. Defaults to 1.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3520">property revisionHistoryLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3208">property revisionHistoryLimit</a>
 </h3>
 
 ```typescript
@@ -952,7 +952,7 @@ The number of old ReplicaSets to retain to allow rollback. This is a pointer to 
 between explicit zero and not specified. Defaults to 10.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3526">property selector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3214">property selector</a>
 </h3>
 
 ```typescript
@@ -964,7 +964,7 @@ Label selector for pods. Existing ReplicaSets whose pods are selected by this wi
 ones affected by this deployment. It must match the pod template's labels.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3531">property strategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3219">property strategy</a>
 </h3>
 
 ```typescript
@@ -975,7 +975,7 @@ strategy: DeploymentStrategy;
 The deployment strategy to use to replace existing pods with new ones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3536">property template</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3224">property template</a>
 </h3>
 
 ```typescript
@@ -986,13 +986,13 @@ template: PodTemplateSpec;
 Template describes the pods that will be created.
 
 <h2 class="pdoc-module-header" id="DeploymentStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3543">interface DeploymentStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3231">interface DeploymentStatus</a>
 </h2>
 
 DeploymentStatus is the most recently observed status of the Deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3548">property availableReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3236">property availableReplicas</a>
 </h3>
 
 ```typescript
@@ -1004,7 +1004,7 @@ Total number of available pods (ready for at least minReadySeconds) targeted by 
 deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3554">property collisionCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3242">property collisionCount</a>
 </h3>
 
 ```typescript
@@ -1016,7 +1016,7 @@ Count of hash collisions for the Deployment. The Deployment controller uses this
 collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3559">property conditions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3247">property conditions</a>
 </h3>
 
 ```typescript
@@ -1027,7 +1027,7 @@ conditions: DeploymentCondition[];
 Represents the latest available observations of a deployment's current state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3564">property observedGeneration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3252">property observedGeneration</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1038,7 @@ observedGeneration: number;
 The generation observed by the deployment controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3569">property readyReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3257">property readyReplicas</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1049,7 @@ readyReplicas: number;
 Total number of ready pods targeted by this deployment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3575">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3263">property replicas</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1061,7 @@ Total number of non-terminated pods targeted by this deployment (their labels ma
 selector).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3583">property unavailableReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3271">property unavailableReplicas</a>
 </h3>
 
 ```typescript
@@ -1075,7 +1075,7 @@ either be pods that are running but not yet available or pods that still have no
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3589">property updatedReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3277">property updatedReplicas</a>
 </h3>
 
 ```typescript
@@ -1087,13 +1087,13 @@ Total number of non-terminated pods targeted by this deployment that have the de
 template spec.
 
 <h2 class="pdoc-module-header" id="DeploymentStrategy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3596">interface DeploymentStrategy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3284">interface DeploymentStrategy</a>
 </h2>
 
 DeploymentStrategy describes how to replace existing pods with new ones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3600">property rollingUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3288">property rollingUpdate</a>
 </h3>
 
 ```typescript
@@ -1104,7 +1104,7 @@ rollingUpdate: RollingUpdateDeployment;
 Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3605">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3293">property type</a>
 </h3>
 
 ```typescript
@@ -1115,7 +1115,7 @@ type: string;
 Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
 
 <h2 class="pdoc-module-header" id="ReplicaSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3614">interface ReplicaSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3302">interface ReplicaSet</a>
 </h2>
 
 DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1/ReplicaSet. See the
@@ -1123,7 +1123,7 @@ release notes for more information. ReplicaSet ensures that a specified number o
 replicas are running at any given time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3621">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3309">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1137,7 +1137,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3629">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3317">property kind</a>
 </h3>
 
 ```typescript
@@ -1151,7 +1151,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3636">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3324">property metadata</a>
 </h3>
 
 ```typescript
@@ -1164,7 +1164,7 @@ that the ReplicaSet manages. Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3642">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3330">property spec</a>
 </h3>
 
 ```typescript
@@ -1176,7 +1176,7 @@ Spec defines the specification of the desired behavior of the ReplicaSet. More i
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3649">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3337">property status</a>
 </h3>
 
 ```typescript
@@ -1189,13 +1189,13 @@ by some window of time. Populated by the system. Read-only. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 <h2 class="pdoc-module-header" id="ReplicaSetCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3656">interface ReplicaSetCondition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3344">interface ReplicaSetCondition</a>
 </h2>
 
 ReplicaSetCondition describes the state of a replica set at a certain point.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3660">property lastTransitionTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3348">property lastTransitionTime</a>
 </h3>
 
 ```typescript
@@ -1206,7 +1206,7 @@ lastTransitionTime: string;
 The last time the condition transitioned from one status to another.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3665">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3353">property message</a>
 </h3>
 
 ```typescript
@@ -1217,7 +1217,7 @@ message: string;
 A human readable message indicating details about the transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3670">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3358">property reason</a>
 </h3>
 
 ```typescript
@@ -1228,7 +1228,7 @@ reason: string;
 The reason for the condition's last transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3675">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3363">property status</a>
 </h3>
 
 ```typescript
@@ -1239,7 +1239,7 @@ status: string;
 Status of the condition, one of True, False, Unknown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3680">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3368">property type</a>
 </h3>
 
 ```typescript
@@ -1250,13 +1250,13 @@ type: string;
 Type of replica set condition.
 
 <h2 class="pdoc-module-header" id="ReplicaSetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3687">interface ReplicaSetList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3375">interface ReplicaSetList</a>
 </h2>
 
 ReplicaSetList is a collection of ReplicaSets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3694">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3382">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1270,7 +1270,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3700">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3388">property items</a>
 </h3>
 
 ```typescript
@@ -1282,7 +1282,7 @@ List of ReplicaSets. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3708">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3396">property kind</a>
 </h3>
 
 ```typescript
@@ -1296,7 +1296,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3714">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3402">property metadata</a>
 </h3>
 
 ```typescript
@@ -1308,13 +1308,13 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h2 class="pdoc-module-header" id="ReplicaSetSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3721">interface ReplicaSetSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3409">interface ReplicaSetSpec</a>
 </h2>
 
 ReplicaSetSpec is the specification of a ReplicaSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3727">property minReadySeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3415">property minReadySeconds</a>
 </h3>
 
 ```typescript
@@ -1327,7 +1327,7 @@ container crashing, for it to be considered available. Defaults to 0 (pod will b
 considered available as soon as it is ready)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3734">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3422">property replicas</a>
 </h3>
 
 ```typescript
@@ -1340,7 +1340,7 @@ explicit zero and unspecified. Defaults to 1. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3742">property selector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3430">property selector</a>
 </h3>
 
 ```typescript
@@ -1354,7 +1354,7 @@ template's labels. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3749">property template</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3437">property template</a>
 </h3>
 
 ```typescript
@@ -1367,13 +1367,13 @@ are detected. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
 
 <h2 class="pdoc-module-header" id="ReplicaSetStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3756">interface ReplicaSetStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3444">interface ReplicaSetStatus</a>
 </h2>
 
 ReplicaSetStatus represents the current status of a ReplicaSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3760">property availableReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3448">property availableReplicas</a>
 </h3>
 
 ```typescript
@@ -1384,7 +1384,7 @@ availableReplicas: number;
 The number of available replicas (ready for at least minReadySeconds) for this replica set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3765">property conditions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3453">property conditions</a>
 </h3>
 
 ```typescript
@@ -1395,7 +1395,7 @@ conditions: ReplicaSetCondition[];
 Represents the latest available observations of a replica set's current state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3771">property fullyLabeledReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3459">property fullyLabeledReplicas</a>
 </h3>
 
 ```typescript
@@ -1407,7 +1407,7 @@ The number of pods that have labels matching the labels of the pod template of t
 replicaset.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3776">property observedGeneration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3464">property observedGeneration</a>
 </h3>
 
 ```typescript
@@ -1418,7 +1418,7 @@ observedGeneration: number;
 ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3781">property readyReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3469">property readyReplicas</a>
 </h3>
 
 ```typescript
@@ -1429,7 +1429,7 @@ readyReplicas: number;
 The number of ready replicas for this replica set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3787">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3475">property replicas</a>
 </h3>
 
 ```typescript
@@ -1441,13 +1441,13 @@ Replicas is the most recently oberved number of replicas. More info:
 https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
 
 <h2 class="pdoc-module-header" id="RollingUpdateDaemonSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3794">interface RollingUpdateDaemonSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3482">interface RollingUpdateDaemonSet</a>
 </h2>
 
 Spec to control the desired behavior of daemon set rolling update.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3807">property maxUnavailable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3495">property maxUnavailable</a>
 </h3>
 
 ```typescript
@@ -1467,13 +1467,13 @@ DaemonSet pods, thus ensuring that at least 70% of original number of DaemonSet 
 available at all times during the update.
 
 <h2 class="pdoc-module-header" id="RollingUpdateDeployment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3814">interface RollingUpdateDeployment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3502">interface RollingUpdateDeployment</a>
 </h2>
 
 Spec to control the desired behavior of rolling update.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3825">property maxSurge</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3513">property maxSurge</a>
 </h3>
 
 ```typescript
@@ -1484,14 +1484,14 @@ maxSurge: number | string;
 The maximum number of pods that can be scheduled above the desired number of pods. Value
 can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not
 be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up.
-Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up
-immediately when the rolling update starts, such that the total number of old and new pods
-do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be
-scaled up further, ensuring that total number of pods running at any time during the update
-is atmost 130% of desired pods.
+Defaults to 25%. Example: when this is set to 30%, the new RC can be scaled up immediately
+when the rolling update starts, such that the total number of old and new pods do not
+exceed 130% of desired pods. Once old pods have been killed, new RC can be scaled up
+further, ensuring that total number of pods running at any time during the update is atmost
+130% of desired pods.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3837">property maxUnavailable</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3524">property maxUnavailable</a>
 </h3>
 
 ```typescript
@@ -1502,21 +1502,20 @@ maxUnavailable: number | string;
 The maximum number of pods that can be unavailable during the update. Value can be an
 absolute number (ex: 5) or a percentage of desired pods (ex: 10%). Absolute number is
 calculated from percentage by rounding down. This can not be 0 if MaxSurge is 0. Defaults
-to 25%. Example: when this is set to 30%, the old ReplicaSet can be scaled down to 70% of
-desired pods immediately when the rolling update starts. Once new pods are ready, old
-ReplicaSet can be scaled down further, followed by scaling up the new ReplicaSet, ensuring
-that the total number of pods available at all times during the update is at least 70% of
-desired pods.
+to 25%. Example: when this is set to 30%, the old RC can be scaled down to 70% of desired
+pods immediately when the rolling update starts. Once new pods are ready, old RC can be
+scaled down further, followed by scaling up the new RC, ensuring that the total number of
+pods available at all times during the update is at least 70% of desired pods.
 
 <h2 class="pdoc-module-header" id="RollingUpdateStatefulSetStrategy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3845">interface RollingUpdateStatefulSetStrategy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3532">interface RollingUpdateStatefulSetStrategy</a>
 </h2>
 
 RollingUpdateStatefulSetStrategy is used to communicate parameter for
 RollingUpdateStatefulSetStrategyType.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3850">property partition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3537">property partition</a>
 </h3>
 
 ```typescript
@@ -1528,13 +1527,13 @@ Partition indicates the ordinal at which the StatefulSet should be partitioned. 
 value is 0.
 
 <h2 class="pdoc-module-header" id="Scale">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3857">interface Scale</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3544">interface Scale</a>
 </h2>
 
 Scale represents a scaling request for a resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3864">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3551">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1548,7 +1547,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3872">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3559">property kind</a>
 </h3>
 
 ```typescript
@@ -1562,7 +1561,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3878">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3565">property metadata</a>
 </h3>
 
 ```typescript
@@ -1574,7 +1573,7 @@ Standard object metadata; More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3884">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3571">property spec</a>
 </h3>
 
 ```typescript
@@ -1586,7 +1585,7 @@ defines the behavior of the scale. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3891">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3578">property status</a>
 </h3>
 
 ```typescript
@@ -1599,13 +1598,13 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-stat
 Read-only.
 
 <h2 class="pdoc-module-header" id="ScaleSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3898">interface ScaleSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3585">interface ScaleSpec</a>
 </h2>
 
 ScaleSpec describes the attributes of a scale subresource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3902">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3589">property replicas</a>
 </h3>
 
 ```typescript
@@ -1616,13 +1615,13 @@ replicas: number;
 desired number of instances for the scaled object.
 
 <h2 class="pdoc-module-header" id="ScaleStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3909">interface ScaleStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3596">interface ScaleStatus</a>
 </h2>
 
 ScaleStatus represents the current status of a scale subresource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3913">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3600">property replicas</a>
 </h3>
 
 ```typescript
@@ -1633,7 +1632,7 @@ replicas: number;
 actual number of observed instances of the scaled object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3919">property selector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3606">property selector</a>
 </h3>
 
 ```typescript
@@ -1645,7 +1644,7 @@ label query over pods that should match the replicas count. More info:
 http://kubernetes.io/docs/user-guide/labels#label-selectors
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3929">property targetSelector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3616">property targetSelector</a>
 </h3>
 
 ```typescript
@@ -1661,7 +1660,7 @@ selector field are populated. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
 
 <h2 class="pdoc-module-header" id="StatefulSet">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3942">interface StatefulSet</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3629">interface StatefulSet</a>
 </h2>
 
 DEPRECATED - This group version of StatefulSet is deprecated by apps/v1/StatefulSet. See the
@@ -1673,7 +1672,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 identity.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3949">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3636">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1687,7 +1686,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3957">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3644">property kind</a>
 </h3>
 
 ```typescript
@@ -1701,7 +1700,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3960">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3647">property metadata</a>
 </h3>
 
 ```typescript
@@ -1709,7 +1708,7 @@ metadata: ObjectMeta;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3965">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3652">property spec</a>
 </h3>
 
 ```typescript
@@ -1720,7 +1719,7 @@ spec: StatefulSetSpec;
 Spec defines the desired identities of pods in this set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3971">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3658">property status</a>
 </h3>
 
 ```typescript
@@ -1732,13 +1731,13 @@ Status is the current status of Pods in this StatefulSet. This data may be out o
 some window of time.
 
 <h2 class="pdoc-module-header" id="StatefulSetCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3978">interface StatefulSetCondition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3665">interface StatefulSetCondition</a>
 </h2>
 
 StatefulSetCondition describes the state of a statefulset at a certain point.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3982">property lastTransitionTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3669">property lastTransitionTime</a>
 </h3>
 
 ```typescript
@@ -1749,7 +1748,7 @@ lastTransitionTime: string;
 Last time the condition transitioned from one status to another.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3987">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3674">property message</a>
 </h3>
 
 ```typescript
@@ -1760,7 +1759,7 @@ message: string;
 A human readable message indicating details about the transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3992">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3679">property reason</a>
 </h3>
 
 ```typescript
@@ -1771,7 +1770,7 @@ reason: string;
 The reason for the condition's last transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3997">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3684">property status</a>
 </h3>
 
 ```typescript
@@ -1782,7 +1781,7 @@ status: string;
 Status of the condition, one of True, False, Unknown.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4002">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3689">property type</a>
 </h3>
 
 ```typescript
@@ -1793,13 +1792,13 @@ type: string;
 Type of statefulset condition.
 
 <h2 class="pdoc-module-header" id="StatefulSetList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4009">interface StatefulSetList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3696">interface StatefulSetList</a>
 </h2>
 
 StatefulSetList is a collection of StatefulSets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4016">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3703">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1813,7 +1812,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4019">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3706">property items</a>
 </h3>
 
 ```typescript
@@ -1821,7 +1820,7 @@ items: StatefulSet[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4027">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3714">property kind</a>
 </h3>
 
 ```typescript
@@ -1835,7 +1834,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4030">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3717">property metadata</a>
 </h3>
 
 ```typescript
@@ -1843,13 +1842,13 @@ metadata: ListMeta;
 ```
 
 <h2 class="pdoc-module-header" id="StatefulSetSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4037">interface StatefulSetSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3724">interface StatefulSetSpec</a>
 </h2>
 
 A StatefulSetSpec is the specification of a StatefulSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4046">property podManagementPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3733">property podManagementPolicy</a>
 </h3>
 
 ```typescript
@@ -1865,7 +1864,7 @@ opposite order. The alternative policy is `Parallel` which will create pods in p
 match the desired scale without waiting, and on scale down will delete all pods at once.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4053">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3740">property replicas</a>
 </h3>
 
 ```typescript
@@ -1878,7 +1877,7 @@ sense that they are instantiations of the same Template, but individual replicas
 a consistent identity. If unspecified, defaults to 1.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4060">property revisionHistoryLimit</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3747">property revisionHistoryLimit</a>
 </h3>
 
 ```typescript
@@ -1891,7 +1890,7 @@ StatefulSet's revision history. The revision history consists of all revisions n
 represented by a currently applied StatefulSetSpec version. The default value is 10.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4067">property selector</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3754">property selector</a>
 </h3>
 
 ```typescript
@@ -1904,7 +1903,7 @@ pod template's labels. More info:
 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4076">property serviceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3763">property serviceName</a>
 </h3>
 
 ```typescript
@@ -1919,7 +1918,7 @@ pod-specific-string.serviceName.default.svc.cluster.local where "pod-specific-st
 managed by the StatefulSet controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4083">property template</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3770">property template</a>
 </h3>
 
 ```typescript
@@ -1932,7 +1931,7 @@ are detected. Each pod stamped out by the StatefulSet will fulfill this Template
 a unique identity from the rest of the StatefulSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4089">property updateStrategy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3776">property updateStrategy</a>
 </h3>
 
 ```typescript
@@ -1944,7 +1943,7 @@ updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to 
 in the StatefulSet when a revision is made to Template.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4098">property volumeClaimTemplates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3785">property volumeClaimTemplates</a>
 </h3>
 
 ```typescript
@@ -1959,13 +1958,13 @@ matching (by name) volumeMount in one container in the template. A claim in this
 precedence over any volumes in the template, with the same name.
 
 <h2 class="pdoc-module-header" id="StatefulSetStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4105">interface StatefulSetStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3792">interface StatefulSetStatus</a>
 </h2>
 
 StatefulSetStatus represents the current state of a StatefulSet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4111">property collisionCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3798">property collisionCount</a>
 </h3>
 
 ```typescript
@@ -1978,7 +1977,7 @@ controller uses this field as a collision avoidance mechanism when it needs to c
 name for the newest ControllerRevision.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4116">property conditions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3803">property conditions</a>
 </h3>
 
 ```typescript
@@ -1989,7 +1988,7 @@ conditions: StatefulSetCondition[];
 Represents the latest available observations of a statefulset's current state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4122">property currentReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3809">property currentReplicas</a>
 </h3>
 
 ```typescript
@@ -2001,7 +2000,7 @@ currentReplicas is the number of Pods created by the StatefulSet controller from
 StatefulSet version indicated by currentRevision.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4128">property currentRevision</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3815">property currentRevision</a>
 </h3>
 
 ```typescript
@@ -2013,7 +2012,7 @@ currentRevision, if not empty, indicates the version of the StatefulSet used to 
 Pods in the sequence [0,currentReplicas).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4135">property observedGeneration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3822">property observedGeneration</a>
 </h3>
 
 ```typescript
@@ -2026,7 +2025,7 @@ corresponds to the StatefulSet's generation, which is updated on mutation by the
 Server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4141">property readyReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3828">property readyReplicas</a>
 </h3>
 
 ```typescript
@@ -2038,7 +2037,7 @@ readyReplicas is the number of Pods created by the StatefulSet controller that h
 Condition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4146">property replicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3833">property replicas</a>
 </h3>
 
 ```typescript
@@ -2049,7 +2048,7 @@ replicas: number;
 replicas is the number of Pods created by the StatefulSet controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4152">property updateRevision</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3839">property updateRevision</a>
 </h3>
 
 ```typescript
@@ -2061,7 +2060,7 @@ updateRevision, if not empty, indicates the version of the StatefulSet used to g
 Pods in the sequence [replicas-updatedReplicas,replicas)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4158">property updatedReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3845">property updatedReplicas</a>
 </h3>
 
 ```typescript
@@ -2073,7 +2072,7 @@ updatedReplicas is the number of Pods created by the StatefulSet controller from
 StatefulSet version indicated by updateRevision.
 
 <h2 class="pdoc-module-header" id="StatefulSetUpdateStrategy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4167">interface StatefulSetUpdateStrategy</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3854">interface StatefulSetUpdateStrategy</a>
 </h2>
 
 StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to
@@ -2081,7 +2080,7 @@ perform updates. It includes any additional parameters necessary to perform the 
 the indicated strategy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4172">property rollingUpdate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3859">property rollingUpdate</a>
 </h3>
 
 ```typescript
@@ -2093,7 +2092,7 @@ RollingUpdate is used to communicate parameters when Type is
 RollingUpdateStatefulSetStrategyType.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4177">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L3864">property type</a>
 </h3>
 
 ```typescript

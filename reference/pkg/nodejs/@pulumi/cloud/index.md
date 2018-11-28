@@ -554,7 +554,7 @@ neither `image` nor `build` are legal.
 </h3>
 
 ```typescript
-image?: pulumi.Input<string>;
+image?: undefined | string;
 ```
 
 
@@ -1432,7 +1432,7 @@ The properties of the host where this service can run.
 </h3>
 
 ```typescript
-image?: pulumi.Input<string>;
+image?: undefined | string;
 ```
 
 

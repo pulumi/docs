@@ -25,12 +25,12 @@ redirect_from: /install/changelog.html
     <tbody>
 
         <tr>
-            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.6/CHANGELOG.md#0166-released-novemeber-28th-2018">0.16.6</a></th>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.6/CHANGELOG.md#0166-released-november-28th-2018">0.16.6</a></th>
             <td>2018/11/28</td>
             <td>{% include sdk-links.html version='0.16.6' %}</td>
         </tr>
         <tr>
-            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.5/CHANGELOG.md#0165-released-novemeber-16th-2018">0.16.5</a></th>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.5/CHANGELOG.md#0165-released-november-16th-2018">0.16.5</a></th>
             <td>2018/11/16</td>
             <td>{% include sdk-links.html version='0.16.5' %}</td>
         </tr>
@@ -115,7 +115,7 @@ This release includes better support for common Python 3 configurations, the abi
 
 The full changelog is linked below.
 
-- [`pulumi` v0.16.6](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0166-released-novemeber-28th-2018)
+- [`pulumi` v0.16.6](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0166-released-november-28th-2018)
 
 ## v0.16.4 {#v164}
 

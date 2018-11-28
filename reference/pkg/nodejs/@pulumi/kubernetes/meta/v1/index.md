@@ -38,7 +38,7 @@ title: Module meta/v1
 
 
 <h2 class="pdoc-module-header" id="isAPIGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16106">function isAPIGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14450">function isAPIGroup</a>
 </h2>
 
 ```typescript
@@ -46,7 +46,7 @@ isAPIGroup(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isAPIGroupList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16137">function isAPIGroupList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14481">function isAPIGroupList</a>
 </h2>
 
 ```typescript
@@ -54,7 +54,7 @@ isAPIGroupList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isAPIResourceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16232">function isAPIResourceList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14576">function isAPIResourceList</a>
 </h2>
 
 ```typescript
@@ -62,7 +62,7 @@ isAPIResourceList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isAPIVersions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16275">function isAPIVersions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14619">function isAPIVersions</a>
 </h2>
 
 ```typescript
@@ -70,7 +70,7 @@ isAPIVersions(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isDeleteOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16340">function isDeleteOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L14677">function isDeleteOptions</a>
 </h2>
 
 ```typescript
@@ -78,7 +78,7 @@ isDeleteOptions(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isOwnerReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16682">function isOwnerReference</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15018">function isOwnerReference</a>
 </h2>
 
 ```typescript
@@ -86,7 +86,7 @@ isOwnerReference(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16776">function isStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L15112">function isStatus</a>
 </h2>
 
 ```typescript
@@ -94,13 +94,13 @@ isStatus(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="APIGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15243">interface APIGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13648">interface APIGroup</a>
 </h2>
 
 APIGroup contains the name, the supported versions, and the preferred version of a group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15250">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13655">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -114,7 +114,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15258">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13663">property kind</a>
 </h3>
 
 ```typescript
@@ -128,7 +128,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15263">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13668">property name</a>
 </h3>
 
 ```typescript
@@ -139,7 +139,7 @@ name: string;
 name is the name of the group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15269">property preferredVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13674">property preferredVersion</a>
 </h3>
 
 ```typescript
@@ -151,7 +151,7 @@ preferredVersion is the version preferred by the API server, which probably is t
 version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15280">property serverAddressByClientCIDRs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13685">property serverAddressByClientCIDRs</a>
 </h3>
 
 ```typescript
@@ -168,7 +168,7 @@ client reaches the server using an internal IP. Server looks at X-Forwarded-For 
 X-Real-Ip header or request.RemoteAddr (in that order) to get the client IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15285">property versions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13690">property versions</a>
 </h3>
 
 ```typescript
@@ -179,13 +179,13 @@ versions: GroupVersionForDiscovery[];
 versions are the versions supported in this group.
 
 <h2 class="pdoc-module-header" id="APIGroupList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15292">interface APIGroupList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13697">interface APIGroupList</a>
 </h2>
 
 APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15299">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13704">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -199,7 +199,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15304">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13709">property groups</a>
 </h3>
 
 ```typescript
@@ -210,7 +210,7 @@ groups: APIGroup[];
 groups is a list of APIGroup.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15312">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13717">property kind</a>
 </h3>
 
 ```typescript
@@ -224,13 +224,13 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h2 class="pdoc-module-header" id="APIResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15319">interface APIResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13724">interface APIResource</a>
 </h2>
 
 APIResource specifies the name of a resource and whether it is namespaced.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15323">property categories</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13728">property categories</a>
 </h3>
 
 ```typescript
@@ -241,7 +241,7 @@ categories: string[];
 categories is a list of the grouped resources this resource belongs to (e.g. 'all')
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15329">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13734">property group</a>
 </h3>
 
 ```typescript
@@ -253,7 +253,7 @@ group is the preferred group of the resource.  Empty implies the group of the co
 resource list. For subresources, this may have a different value, for example: Scale".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15334">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13739">property kind</a>
 </h3>
 
 ```typescript
@@ -264,7 +264,7 @@ kind: string;
 kind is the kind for the resource (e.g. 'Foo' is the kind for a resource 'foo')
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15339">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13744">property name</a>
 </h3>
 
 ```typescript
@@ -275,7 +275,7 @@ name: string;
 name is the plural name of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15344">property namespaced</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13749">property namespaced</a>
 </h3>
 
 ```typescript
@@ -286,7 +286,7 @@ namespaced: boolean;
 namespaced indicates if a resource is namespaced or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15349">property shortNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13754">property shortNames</a>
 </h3>
 
 ```typescript
@@ -297,7 +297,7 @@ shortNames: string[];
 shortNames is a list of suggested short names of the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15356">property singularName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13761">property singularName</a>
 </h3>
 
 ```typescript
@@ -310,7 +310,7 @@ and singular opaquely. The singularName is more correct for reporting status on 
 item and both singular and plural are allowed from the kubectl CLI interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15362">property verbs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13767">property verbs</a>
 </h3>
 
 ```typescript
@@ -322,7 +322,7 @@ verbs is a list of supported kube verbs (this includes get, list, watch, create,
 patch, delete, deletecollection, and proxy)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15369">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13774">property version</a>
 </h3>
 
 ```typescript
@@ -335,14 +335,14 @@ containing resource list For subresources, this may have a different value, for 
 (while inside a v1beta1 version of the core resource's group)".
 
 <h2 class="pdoc-module-header" id="APIResourceList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15377">interface APIResourceList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13782">interface APIResourceList</a>
 </h2>
 
 APIResourceList is a list of APIResource, it is used to expose the name of the resources
 supported in a specific group and version, and if the resource is namespaced.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15384">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13789">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -356,7 +356,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15389">property groupVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13794">property groupVersion</a>
 </h3>
 
 ```typescript
@@ -367,7 +367,7 @@ groupVersion: string;
 groupVersion is the group and version this APIResourceList is for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15397">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13802">property kind</a>
 </h3>
 
 ```typescript
@@ -381,7 +381,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15402">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13807">property resources</a>
 </h3>
 
 ```typescript
@@ -392,14 +392,14 @@ resources: APIResource[];
 resources contains the name of the resources and if they are namespaced.
 
 <h2 class="pdoc-module-header" id="APIVersions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15410">interface APIVersions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13815">interface APIVersions</a>
 </h2>
 
 APIVersions lists the versions that are available, to allow clients to discover the API at
 /api, which is the root path of the legacy v1 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15417">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13822">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -413,7 +413,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15425">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13830">property kind</a>
 </h3>
 
 ```typescript
@@ -427,7 +427,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15436">property serverAddressByClientCIDRs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13841">property serverAddressByClientCIDRs</a>
 </h3>
 
 ```typescript
@@ -444,7 +444,7 @@ client reaches the server using an internal IP. Server looks at X-Forwarded-For 
 X-Real-Ip header or request.RemoteAddr (in that order) to get the client IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15441">property versions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13846">property versions</a>
 </h3>
 
 ```typescript
@@ -455,13 +455,13 @@ versions: string[];
 versions are the api versions that are available.
 
 <h2 class="pdoc-module-header" id="DeleteOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15448">interface DeleteOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13853">interface DeleteOptions</a>
 </h2>
 
 DeleteOptions may be provided when deleting an API object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15455">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13860">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -475,20 +475,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15462">property dryRun</a>
-</h3>
-
-```typescript
-dryRun: string[];
-```
-
-
-When present, indicates that modifications should not be persisted. An invalid or
-unrecognized dryRun directive will result in an error response and no further processing of
-the request. Valid values are: - All: all dry run stages will be processed
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15470">property gracePeriodSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13868">property gracePeriodSeconds</a>
 </h3>
 
 ```typescript
@@ -502,7 +489,7 @@ grace period for the specified type will be used. Defaults to a per object value
 specified. zero means delete immediately.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15478">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13876">property kind</a>
 </h3>
 
 ```typescript
@@ -516,7 +503,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15486">property orphanDependents</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13884">property orphanDependents</a>
 </h3>
 
 ```typescript
@@ -530,7 +517,7 @@ to/removed from the object's finalizers list. Either this field or PropagationPo
 set, but not both.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15492">property preconditions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13890">property preconditions</a>
 </h3>
 
 ```typescript
@@ -542,7 +529,7 @@ Must be fulfilled before a deletion is carried out. If not possible, a 409 Confl
 will be returned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15502">property propagationPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13900">property propagationPolicy</a>
 </h3>
 
 ```typescript
@@ -558,14 +545,14 @@ dependents in the background; 'Foreground' - a cascading policy that deletes all
 in the foreground.
 
 <h2 class="pdoc-module-header" id="GroupVersionForDiscovery">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15510">interface GroupVersionForDiscovery</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13908">interface GroupVersionForDiscovery</a>
 </h2>
 
 GroupVersion contains the "group/version" and "version" string of a version. It is made a
 struct to keep extensibility.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15514">property groupVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13912">property groupVersion</a>
 </h3>
 
 ```typescript
@@ -576,7 +563,7 @@ groupVersion: string;
 groupVersion specifies the API group and version in the form "group/version"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15520">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13918">property version</a>
 </h3>
 
 ```typescript
@@ -588,13 +575,13 @@ version specifies the version in the form of "version". This is to save the clie
 trouble of splitting the GroupVersion.
 
 <h2 class="pdoc-module-header" id="Initializer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15527">interface Initializer</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13925">interface Initializer</a>
 </h2>
 
 Initializer is information about an initializer that has not yet completed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15531">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13929">property name</a>
 </h3>
 
 ```typescript
@@ -605,13 +592,13 @@ name: string;
 name of the process that is responsible for initializing this object.
 
 <h2 class="pdoc-module-header" id="Initializers">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15538">interface Initializers</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13936">interface Initializers</a>
 </h2>
 
 Initializers tracks the progress of initialization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15545">property pending</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13943">property pending</a>
 </h3>
 
 ```typescript
@@ -625,7 +612,7 @@ initializers struct will be set to nil and the object is considered as initializ
 visible to all clients.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15551">property result</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13949">property result</a>
 </h3>
 
 ```typescript
@@ -637,7 +624,7 @@ If result is set with the Failure field, the object will be persisted to storage
 deleted, ensuring that other clients can observe the deletion.
 
 <h2 class="pdoc-module-header" id="LabelSelector">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15560">interface LabelSelector</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13958">interface LabelSelector</a>
 </h2>
 
 A label selector is a label query over a set of resources. The result of matchLabels and
@@ -645,7 +632,7 @@ matchExpressions are ANDed. An empty label selector matches all objects. A null 
 selector matches no objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15564">property matchExpressions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13962">property matchExpressions</a>
 </h3>
 
 ```typescript
@@ -656,7 +643,7 @@ matchExpressions: LabelSelectorRequirement[];
 matchExpressions is a list of label selector requirements. The requirements are ANDed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15571">property matchLabels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13969">property matchLabels</a>
 </h3>
 
 ```typescript
@@ -669,14 +656,14 @@ equivalent to an element of matchExpressions, whose key field is "key", the oper
 "In", and the values array contains only "value". The requirements are ANDed.
 
 <h2 class="pdoc-module-header" id="LabelSelectorRequirement">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15579">interface LabelSelectorRequirement</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13977">interface LabelSelectorRequirement</a>
 </h2>
 
 A label selector requirement is a selector that contains values, a key, and an operator that
 relates the key and values.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15583">property key</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13981">property key</a>
 </h3>
 
 ```typescript
@@ -687,7 +674,7 @@ key: string;
 key is the label key that the selector applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15589">property operator</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13987">property operator</a>
 </h3>
 
 ```typescript
@@ -699,7 +686,7 @@ operator represents a key's relationship to a set of values. Valid operators are
 Exists and DoesNotExist.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15596">property values</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L13994">property values</a>
 </h3>
 
 ```typescript
@@ -712,14 +699,14 @@ be non-empty. If the operator is Exists or DoesNotExist, the values array must b
 This array is replaced during a strategic merge patch.
 
 <h2 class="pdoc-module-header" id="ListMeta">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15604">interface ListMeta</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14002">interface ListMeta</a>
 </h2>
 
 ListMeta describes metadata that synthetic resources must have, including lists and various
 status objects. A resource may have only one of {ObjectMeta, ListMeta}.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15614">property continue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14011">property continue</a>
 </h3>
 
 ```typescript
@@ -730,13 +717,12 @@ continue: string;
 continue may be set if the user set a limit on the number of items returned, and indicates
 that the server has more data available. The value is opaque and may be used to issue
 another request to the endpoint that served this list to retrieve the next set of available
-objects. Continuing a consistent list may not be possible if the server configuration has
-changed or more than a few minutes have passed. The resourceVersion field returned when
-using this continue value will be identical to the value in the first response, unless you
-have received this token from an error message.
+objects. Continuing a list may not be possible if the server configuration has changed or
+more than a few minutes have passed. The resourceVersion field returned when using this
+continue value will be identical to the value in the first response.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15622">property resourceVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14019">property resourceVersion</a>
 </h3>
 
 ```typescript
@@ -750,7 +736,7 @@ and passed unmodified back to the server. Populated by the system. Read-only. Mo
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15627">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14024">property selfLink</a>
 </h3>
 
 ```typescript
@@ -761,14 +747,14 @@ selfLink: string;
 selfLink is a URL representing this object. Populated by the system. Read-only.
 
 <h2 class="pdoc-module-header" id="ObjectMeta">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15635">interface ObjectMeta</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14032">interface ObjectMeta</a>
 </h2>
 
 ObjectMeta is metadata that all persisted resources must have, which includes all objects
 users must create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15642">property annotations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14039">property annotations</a>
 </h3>
 
 ```typescript
@@ -782,7 +768,7 @@ be preserved when modifying objects. More info:
 http://kubernetes.io/docs/user-guide/annotations
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15649">property clusterName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14046">property clusterName</a>
 </h3>
 
 ```typescript
@@ -795,7 +781,7 @@ with same name and namespace in different clusters. This field is not set anywhe
 now and apiserver is going to ignore it if set in create or update request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15659">property creationTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14056">property creationTimestamp</a>
 </h3>
 
 ```typescript
@@ -811,7 +797,7 @@ Populated by the system. Read-only. Null for lists. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15666">property deletionGracePeriodSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14063">property deletionGracePeriodSeconds</a>
 </h3>
 
 ```typescript
@@ -824,7 +810,7 @@ from the system. Only set when deletionTimestamp is also set. May only be shorte
 Read-only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15687">property deletionTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14084">property deletionTimestamp</a>
 </h3>
 
 ```typescript
@@ -851,7 +837,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15694">property finalizers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14091">property finalizers</a>
 </h3>
 
 ```typescript
@@ -864,7 +850,7 @@ for the responsible component that will remove the entry from the list. If the
 deletionTimestamp of the object is non-nil, entries in this list can only be removed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15711">property generateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14108">property generateName</a>
 </h3>
 
 ```typescript
@@ -887,7 +873,7 @@ Applied only if Name is not specified. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15717">property generation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14114">property generation</a>
 </h3>
 
 ```typescript
@@ -899,7 +885,7 @@ A sequence number representing a specific generation of the desired state. Popul
 system. Read-only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15730">property initializers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14127">property initializers</a>
 </h3>
 
 ```typescript
@@ -918,7 +904,7 @@ initializers. Only privileged users may set or modify this list. Once it is empt
 not be modified further by any user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15737">property labels</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14134">property labels</a>
 </h3>
 
 ```typescript
@@ -931,7 +917,7 @@ select) objects. May match selectors of replication controllers and services. Mo
 http://kubernetes.io/docs/user-guide/labels
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15746">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14143">property name</a>
 </h3>
 
 ```typescript
@@ -946,7 +932,7 @@ definition. Cannot be updated. More info:
 http://kubernetes.io/docs/user-guide/identifiers#names
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15757">property namespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14154">property namespace</a>
 </h3>
 
 ```typescript
@@ -963,7 +949,7 @@ Must be a DNS_LABEL. Cannot be updated. More info:
 http://kubernetes.io/docs/user-guide/namespaces
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15765">property ownerReferences</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14162">property ownerReferences</a>
 </h3>
 
 ```typescript
@@ -977,7 +963,7 @@ in this list will point to this controller, with the controller field set to tru
 cannot be more than one managing controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15778">property resourceVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14175">property resourceVersion</a>
 </h3>
 
 ```typescript
@@ -996,7 +982,7 @@ info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15783">property selfLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14180">property selfLink</a>
 </h3>
 
 ```typescript
@@ -1007,7 +993,7 @@ selfLink: string;
 SelfLink is a URL representing this object. Populated by the system. Read-only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15792">property uid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14189">property uid</a>
 </h3>
 
 ```typescript
@@ -1022,14 +1008,14 @@ Populated by the system. Read-only. More info:
 http://kubernetes.io/docs/user-guide/identifiers#uids
 
 <h2 class="pdoc-module-header" id="OwnerReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15800">interface OwnerReference</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14197">interface OwnerReference</a>
 </h2>
 
 OwnerReference contains enough information to let you identify an owning object. Currently,
 an owning object must be in the same namespace, so there is no namespace field.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15804">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14201">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1040,7 +1026,7 @@ apiVersion: string;
 API version of the referent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15812">property blockOwnerDeletion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14209">property blockOwnerDeletion</a>
 </h3>
 
 ```typescript
@@ -1054,7 +1040,7 @@ this field, a user needs "delete" permission of the owner, otherwise 422 (Unproc
 Entity) will be returned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15817">property controller</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14214">property controller</a>
 </h3>
 
 ```typescript
@@ -1065,7 +1051,7 @@ controller: boolean;
 If true, this reference points to the managing controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15823">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14220">property kind</a>
 </h3>
 
 ```typescript
@@ -1077,7 +1063,7 @@ Kind of the referent. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15828">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14225">property name</a>
 </h3>
 
 ```typescript
@@ -1088,7 +1074,7 @@ name: string;
 Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15833">property uid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14230">property uid</a>
 </h3>
 
 ```typescript
@@ -1099,13 +1085,13 @@ uid: string;
 UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 
 <h2 class="pdoc-module-header" id="Preconditions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15840">interface Preconditions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14237">interface Preconditions</a>
 </h2>
 
 Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15844">property uid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14241">property uid</a>
 </h3>
 
 ```typescript
@@ -1116,14 +1102,14 @@ uid: string;
 Specifies the target UID.
 
 <h2 class="pdoc-module-header" id="ServerAddressByClientCIDR">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15852">interface ServerAddressByClientCIDR</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14249">interface ServerAddressByClientCIDR</a>
 </h2>
 
 ServerAddressByClientCIDR helps the client to determine the server address that they should
 use, depending on the clientCIDR that they match.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15857">property clientCIDR</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14254">property clientCIDR</a>
 </h3>
 
 ```typescript
@@ -1135,7 +1121,7 @@ The CIDR with which clients can match their IP to figure out the server address 
 should use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15863">property serverAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14260">property serverAddress</a>
 </h3>
 
 ```typescript
@@ -1147,13 +1133,13 @@ Address of this server, suitable for a client that matches the above CIDR. This 
 hostname, hostname:port, IP or IP:port.
 
 <h2 class="pdoc-module-header" id="Status">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15870">interface Status</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14267">interface Status</a>
 </h2>
 
 Status is a return value for calls that don't return other objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15877">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14274">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -1167,7 +1153,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15882">property code</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14279">property code</a>
 </h3>
 
 ```typescript
@@ -1178,7 +1164,7 @@ code: number;
 Suggested HTTP return code for this status, 0 if not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15889">property details</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14286">property details</a>
 </h3>
 
 ```typescript
@@ -1191,7 +1177,7 @@ This field is optional and the data returned is not guaranteed to conform to any
 except that defined by the reason type.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15897">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14294">property kind</a>
 </h3>
 
 ```typescript
@@ -1205,7 +1191,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15902">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14299">property message</a>
 </h3>
 
 ```typescript
@@ -1216,7 +1202,7 @@ message: string;
 A human-readable description of the status of this operation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15908">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14305">property metadata</a>
 </h3>
 
 ```typescript
@@ -1228,7 +1214,7 @@ Standard list metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15915">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14312">property reason</a>
 </h3>
 
 ```typescript
@@ -1241,7 +1227,7 @@ value is empty there is no information available. A Reason clarifies an HTTP sta
 but does not override it.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15921">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14318">property status</a>
 </h3>
 
 ```typescript
@@ -1253,14 +1239,14 @@ Status of the operation. One of: "Success" or "Failure". More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
 <h2 class="pdoc-module-header" id="StatusCause">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15929">interface StatusCause</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14326">interface StatusCause</a>
 </h2>
 
 StatusCause provides more information about an api.Status failure, including cases when
 multiple errors are encountered.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15940">property field</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14337">property field</a>
 </h3>
 
 ```typescript
@@ -1278,7 +1264,7 @@ Examples:
   "items[0].name" - the field "name" on the first array entry in "items"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15946">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14343">property message</a>
 </h3>
 
 ```typescript
@@ -1290,7 +1276,7 @@ A human-readable description of the cause of the error.  This field may be prese
 to a reader.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15952">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14349">property reason</a>
 </h3>
 
 ```typescript
@@ -1302,7 +1288,7 @@ A machine-readable description of the cause of the error. If this value is empty
 no information available.
 
 <h2 class="pdoc-module-header" id="StatusDetails">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15962">interface StatusDetails</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14359">interface StatusDetails</a>
 </h2>
 
 StatusDetails is a set of additional properties that MAY be set by the server to provide
@@ -1311,7 +1297,7 @@ attributes will be set. Clients must ignore fields that do not match the defined
 attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15967">property causes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14364">property causes</a>
 </h3>
 
 ```typescript
@@ -1323,7 +1309,7 @@ The Causes array includes more details associated with the StatusReason failure.
 StatusReasons may provide detailed causes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15972">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14369">property group</a>
 </h3>
 
 ```typescript
@@ -1334,7 +1320,7 @@ group: string;
 The group attribute of the resource associated with the status StatusReason.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15979">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14376">property kind</a>
 </h3>
 
 ```typescript
@@ -1347,7 +1333,7 @@ operations may differ from the requested resource Kind. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15985">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14382">property name</a>
 </h3>
 
 ```typescript
@@ -1359,7 +1345,7 @@ The name attribute of the resource associated with the status StatusReason (when
 single name which can be described).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15992">property retryAfterSeconds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14389">property retryAfterSeconds</a>
 </h3>
 
 ```typescript
@@ -1372,7 +1358,7 @@ indicate the client must take an alternate action - for those errors this field 
 indicate how long to wait before taking the alternate action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15998">property uid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14395">property uid</a>
 </h3>
 
 ```typescript
@@ -1384,13 +1370,13 @@ UID of the resource. (when there is a single resource which can be described). M
 http://kubernetes.io/docs/user-guide/identifiers#uids
 
 <h2 class="pdoc-module-header" id="WatchEvent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16005">interface WatchEvent</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14402">interface WatchEvent</a>
 </h2>
 
 Event represents a single event to a watched resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16013">property object</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14410">property object</a>
 </h3>
 
 ```typescript
@@ -1405,7 +1391,7 @@ Object is:
    depending on context.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16016">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14413">property type</a>
 </h3>
 
 ```typescript

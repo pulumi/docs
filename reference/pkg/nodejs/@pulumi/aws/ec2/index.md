@@ -315,9 +315,6 @@ title: Module ec2
 * <a href="#P2Instance16XLarge">let P2Instance16XLarge</a>
 * <a href="#P2Instance8XLarge">let P2Instance8XLarge</a>
 * <a href="#P2InstanceXLarge">let P2InstanceXLarge</a>
-* <a href="#P3Instance16XLarge">let P3Instance16XLarge</a>
-* <a href="#P3Instance2XLarge">let P3Instance2XLarge</a>
-* <a href="#P3Instance8XLarge">let P3Instance8XLarge</a>
 * <a href="#R3Instance2XLarge">let R3Instance2XLarge</a>
 * <a href="#R3Instance4XLarge">let R3Instance4XLarge</a>
 * <a href="#R3Instance8XLarge">let R3Instance8XLarge</a>
@@ -26965,32 +26962,8 @@ let P2Instance8XLarge: InstanceType = "p2.8xlarge";
 let P2InstanceXLarge: InstanceType = "p2.xlarge";
 ```
 
-<h2 class="pdoc-module-header" id="P3Instance16XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L71">let P3Instance16XLarge</a>
-</h2>
-
-```typescript
-let P3Instance16XLarge: InstanceType = "p3.16xlarge";
-```
-
-<h2 class="pdoc-module-header" id="P3Instance2XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L72">let P3Instance2XLarge</a>
-</h2>
-
-```typescript
-let P3Instance2XLarge: InstanceType = "p3.2xlarge";
-```
-
-<h2 class="pdoc-module-header" id="P3Instance8XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L73">let P3Instance8XLarge</a>
-</h2>
-
-```typescript
-let P3Instance8XLarge: InstanceType = "p3.8xlarge";
-```
-
 <h2 class="pdoc-module-header" id="R3Instance2XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L74">let R3Instance2XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L71">let R3Instance2XLarge</a>
 </h2>
 
 ```typescript
@@ -26998,7 +26971,7 @@ let R3Instance2XLarge: InstanceType = "r3.2xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R3Instance4XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L75">let R3Instance4XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L72">let R3Instance4XLarge</a>
 </h2>
 
 ```typescript
@@ -27006,7 +26979,7 @@ let R3Instance4XLarge: InstanceType = "r3.4xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R3Instance8XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L76">let R3Instance8XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L73">let R3Instance8XLarge</a>
 </h2>
 
 ```typescript
@@ -27014,7 +26987,7 @@ let R3Instance8XLarge: InstanceType = "r3.8xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R3InstanceLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L77">let R3InstanceLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L74">let R3InstanceLarge</a>
 </h2>
 
 ```typescript
@@ -27022,7 +26995,7 @@ let R3InstanceLarge: InstanceType = "r3.large";
 ```
 
 <h2 class="pdoc-module-header" id="R3InstanceXLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L78">let R3InstanceXLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L75">let R3InstanceXLarge</a>
 </h2>
 
 ```typescript
@@ -27030,7 +27003,7 @@ let R3InstanceXLarge: InstanceType = "r3.xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R4Instance16XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L79">let R4Instance16XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L76">let R4Instance16XLarge</a>
 </h2>
 
 ```typescript
@@ -27038,7 +27011,7 @@ let R4Instance16XLarge: InstanceType = "r4.16xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R4Instance2XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L80">let R4Instance2XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L77">let R4Instance2XLarge</a>
 </h2>
 
 ```typescript
@@ -27046,7 +27019,7 @@ let R4Instance2XLarge: InstanceType = "r4.2xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R4Instance4XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L81">let R4Instance4XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L78">let R4Instance4XLarge</a>
 </h2>
 
 ```typescript
@@ -27054,7 +27027,7 @@ let R4Instance4XLarge: InstanceType = "r4.4xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R4Instance8XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L82">let R4Instance8XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L79">let R4Instance8XLarge</a>
 </h2>
 
 ```typescript
@@ -27062,7 +27035,7 @@ let R4Instance8XLarge: InstanceType = "r4.8xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="R4InstanceLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L83">let R4InstanceLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L80">let R4InstanceLarge</a>
 </h2>
 
 ```typescript
@@ -27070,7 +27043,7 @@ let R4InstanceLarge: InstanceType = "r4.large";
 ```
 
 <h2 class="pdoc-module-header" id="R4InstanceXLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L84">let R4InstanceXLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L81">let R4InstanceXLarge</a>
 </h2>
 
 ```typescript
@@ -27089,7 +27062,7 @@ let SpreadStrategy: PlacementStrategy = "spread";
  A `spread` placement group places instances on distinct hardware.
 
 <h2 class="pdoc-module-header" id="T2Instance2XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L85">let T2Instance2XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L82">let T2Instance2XLarge</a>
 </h2>
 
 ```typescript
@@ -27097,7 +27070,7 @@ let T2Instance2XLarge: InstanceType = "t2.2xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="T2InstanceLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L86">let T2InstanceLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L83">let T2InstanceLarge</a>
 </h2>
 
 ```typescript
@@ -27105,7 +27078,7 @@ let T2InstanceLarge: InstanceType = "t2.large";
 ```
 
 <h2 class="pdoc-module-header" id="T2InstanceMedium">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L87">let T2InstanceMedium</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L84">let T2InstanceMedium</a>
 </h2>
 
 ```typescript
@@ -27113,7 +27086,7 @@ let T2InstanceMedium: InstanceType = "t2.medium";
 ```
 
 <h2 class="pdoc-module-header" id="T2InstanceMicro">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L88">let T2InstanceMicro</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L85">let T2InstanceMicro</a>
 </h2>
 
 ```typescript
@@ -27121,7 +27094,7 @@ let T2InstanceMicro: InstanceType = "t2.micro";
 ```
 
 <h2 class="pdoc-module-header" id="T2InstanceNano">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L89">let T2InstanceNano</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L86">let T2InstanceNano</a>
 </h2>
 
 ```typescript
@@ -27129,7 +27102,7 @@ let T2InstanceNano: InstanceType = "t2.nano";
 ```
 
 <h2 class="pdoc-module-header" id="T2InstanceSmall">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L90">let T2InstanceSmall</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L87">let T2InstanceSmall</a>
 </h2>
 
 ```typescript
@@ -27137,7 +27110,7 @@ let T2InstanceSmall: InstanceType = "t2.small";
 ```
 
 <h2 class="pdoc-module-header" id="T2InstanceXLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L91">let T2InstanceXLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L88">let T2InstanceXLarge</a>
 </h2>
 
 ```typescript
@@ -27145,7 +27118,7 @@ let T2InstanceXLarge: InstanceType = "t2.xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="X1Instance16XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L92">let X1Instance16XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L89">let X1Instance16XLarge</a>
 </h2>
 
 ```typescript
@@ -27153,7 +27126,7 @@ let X1Instance16XLarge: InstanceType = "x1.16xlarge";
 ```
 
 <h2 class="pdoc-module-header" id="X1Instance32XLarge">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L93">let X1Instance32XLarge</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L90">let X1Instance32XLarge</a>
 </h2>
 
 ```typescript
@@ -27169,11 +27142,11 @@ type InstancePlatform = Linux/UNIX | Red Hat Enterprise Linux | SUSE Linux | Win
 ```
 
 <h2 class="pdoc-module-header" id="InstanceType">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L95">type InstanceType</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L92">type InstanceType</a>
 </h2>
 
 ```typescript
-type InstanceType = c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | d2.2xlarge | d2.4xlarge | d2.8xlarge | d2.xlarge | f1.16xlarge | f1.2xlarge | g2.2xlarge | g2.8xlarge | i3.16xlarge | i3.2xlarge | i3.4xlarge | i3.8xlarge | i3.large | i3.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.16xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.large | m5.xlarge | m5.2xlarge | m5.4xlarge | m5.12xlarge | m5.24xlarge | m5d.large | m5d.xlarge | m5d.2xlarge | m5d.4xlarge | m5d.12xlarge | m5d.24xlarge | p2.16xlarge | p2.8xlarge | p2.xlarge | p3.16xlarge | p3.8xlarge | p3.2xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | t2.2xlarge | t2.large | t2.medium | t2.micro | t2.nano | t2.small | t2.xlarge | x1.16xlarge | x1.32xlarge;
+type InstanceType = c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | d2.2xlarge | d2.4xlarge | d2.8xlarge | d2.xlarge | f1.16xlarge | f1.2xlarge | g2.2xlarge | g2.8xlarge | i3.16xlarge | i3.2xlarge | i3.4xlarge | i3.8xlarge | i3.large | i3.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.16xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.large | m5.xlarge | m5.2xlarge | m5.4xlarge | m5.12xlarge | m5.24xlarge | m5d.large | m5d.xlarge | m5d.2xlarge | m5d.4xlarge | m5d.12xlarge | m5d.24xlarge | p2.16xlarge | p2.8xlarge | p2.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | t2.2xlarge | t2.large | t2.medium | t2.micro | t2.nano | t2.small | t2.xlarge | x1.16xlarge | x1.32xlarge;
 ```
 
 <h2 class="pdoc-module-header" id="PlacementStrategy">

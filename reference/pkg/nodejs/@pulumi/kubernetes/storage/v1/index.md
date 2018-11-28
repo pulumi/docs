@@ -15,7 +15,7 @@ title: Module storage/v1
 
 
 <h2 class="pdoc-module-header" id="isStorageClass">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19446">function isStorageClass</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17308">function isStorageClass</a>
 </h2>
 
 ```typescript
@@ -23,7 +23,7 @@ isStorageClass(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isStorageClassList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19483">function isStorageClassList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L17345">function isStorageClassList</a>
 </h2>
 
 ```typescript
@@ -31,7 +31,7 @@ isStorageClassList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="StorageClass">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18336">interface StorageClass</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16292">interface StorageClass</a>
 </h2>
 
 StorageClass describes the parameters for a class of storage for which PersistentVolumes can
@@ -41,7 +41,7 @@ StorageClasses are non-namespaced; the name of the storage class according to et
 ObjectMeta.Name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18340">property allowVolumeExpansion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16296">property allowVolumeExpansion</a>
 </h3>
 
 ```typescript
@@ -52,21 +52,7 @@ allowVolumeExpansion: boolean;
 AllowVolumeExpansion shows whether the storage class allow volume expand
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18348">property allowedTopologies</a>
-</h3>
-
-```typescript
-allowedTopologies: TopologySelectorTerm[];
-```
-
-
-Restrict the node topologies where volumes can be dynamically provisioned. Each volume
-plugin defines its own supported topology specifications. An empty TopologySelectorTerm
-list means there is no topology restriction. This field is only honored by servers that
-enable the VolumeScheduling feature.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18356">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16304">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -80,7 +66,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18364">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16312">property kind</a>
 </h3>
 
 ```typescript
@@ -94,7 +80,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18370">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16318">property metadata</a>
 </h3>
 
 ```typescript
@@ -106,7 +92,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18377">property mountOptions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16325">property mountOptions</a>
 </h3>
 
 ```typescript
@@ -119,7 +105,7 @@ mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply 
 is invalid.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18383">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16331">property parameters</a>
 </h3>
 
 ```typescript
@@ -131,7 +117,7 @@ Parameters holds the parameters for the provisioner that should create volumes o
 storage class.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18388">property provisioner</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16336">property provisioner</a>
 </h3>
 
 ```typescript
@@ -142,7 +128,7 @@ provisioner: string;
 Provisioner indicates the type of the provisioner.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18394">property reclaimPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16342">property reclaimPolicy</a>
 </h3>
 
 ```typescript
@@ -154,7 +140,7 @@ Dynamically provisioned PersistentVolumes of this storage class are created with
 reclaimPolicy. Defaults to Delete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18401">property volumeBindingMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16349">property volumeBindingMode</a>
 </h3>
 
 ```typescript
@@ -163,17 +149,17 @@ volumeBindingMode: string;
 
 
 VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.
-When unset, VolumeBindingImmediate is used. This field is only honored by servers that
-enable the VolumeScheduling feature.
+When unset, VolumeBindingImmediate is used. This field is alpha-level and is only honored
+by servers that enable the VolumeScheduling feature.
 
 <h2 class="pdoc-module-header" id="StorageClassList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18408">interface StorageClassList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16356">interface StorageClassList</a>
 </h2>
 
 StorageClassList is a collection of storage classes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18415">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16363">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -187,7 +173,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18420">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16368">property items</a>
 </h3>
 
 ```typescript
@@ -198,7 +184,7 @@ items: StorageClass[];
 Items is the list of StorageClasses
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18428">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16376">property kind</a>
 </h3>
 
 ```typescript
@@ -212,7 +198,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18434">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16382">property metadata</a>
 </h3>
 
 ```typescript
