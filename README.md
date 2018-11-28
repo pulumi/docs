@@ -94,8 +94,14 @@ To create a shortlink, create a file under `/shortlinks` in the following format
 ```md
 ---
 redirect_to: <link-to-current-docs-page>
-permalink: /help/<choose-a-unique-shortlink>/
+permalink: <unique-6-character-shortlink>/
 ---
+```
+
+You can use the following command to generate a new shortlink:
+
+```sh
+LC_ALL=C tr -dc 'a-z0-9' </dev/urandom | head -c6 ; echo /
 ```
 
 **Note that the trailing `/` on the permalink is required!**
@@ -105,9 +111,9 @@ Here is a concrete example:
 ```md
 ---
 redirect_to: /reference/troubleshooting.html#ingress-status-loadbalancer
-permalink: /help/k8s-ingress-lbstatus/
+permalink: xdv72s/
 ---
 ```
 
-With the above file in place, a redirect will be created from `https://pulumi.io/help/k8s-ingress-lbstatus`
+With the above file in place, a redirect will be created from `https://pulumi.io/xdv72s`
 to `https://pulumi.io/reference/troubleshooting.html#ingress-status-loadbalancer`
