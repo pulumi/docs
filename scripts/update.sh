@@ -33,6 +33,5 @@ yarn install
 yarn build
 
 # Login, select the stack, and update.
-export PULUMI_STACK_NAME="pulumi/pulumi.io-${ENVIRONMENT}"
-pulumi stack select ${PULUMI_STACK_NAME}
+pulumi stack select "pulumi/pulumi.io-${ENVIRONMENT}"
 pulumi update --yes --skip-preview

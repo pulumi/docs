@@ -11,8 +11,10 @@ before_install:
 - ./scripts/travisqueue.sh start
 # Install required tools.
 # pulumi
-- curl -L https://get.pulumi.com/ | bash -s -- --version 0.16.2-dev-1540331970-gb14d2593
+- curl -L https://get.pulumi.com/ | bash -s -- --version 0.16.6-dev.1543332884
 - export PATH=$PATH:$HOME/.pulumi/bin
+# Remove after pulumi/pulumi/issues/2203 is resolved.
+- export PULUMI_RECORD_ENGINE_EVENTS=1
 # yarn
 - npm i -g yarn
 # Work around a current issue in bundler. See:

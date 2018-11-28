@@ -33,8 +33,5 @@ yarn install
 yarn build
 
 # Login, select the stack, and update.
-export PULUMI_STACK_NAME="pulumi/pulumi.io-${ENVIRONMENT}"
-# Remove once pulumi/pulumi/issues/1715 is fixed.
-export PULUMI_PERSIST_PREVIEWS="1"
-pulumi stack select ${PULUMI_STACK_NAME}
+pulumi stack select "pulumi/pulumi.io-${ENVIRONMENT}"
 pulumi preview
