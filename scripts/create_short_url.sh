@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
+#
+# Create shortened URL targets (shortlinks) for links on the doc site.
+#
+# Shortlink definitions are created as markdown files in the /shortlinks directory.
+# Each of these files contains a reference to the target link, and the desired
+# shortlink that will redirect to the target. In the common case, the shortlink
+# is a randomly generated string, but a specific shortlink can also be specified.
+# Note that the shortlink must include a trailing / for the redirection to work correctly.
 
 set -o errexit -o pipefail
 cd "$(dirname "${BASH_SOURCE}")/.."
 
 if [[ $# -ne 2 && $# -ne 3 ]]; then
     cat << EOF
-Usage: create_short_url.sh <target_link> <filename> [shortlink]
+Usage: $(basename $0) <target_link> <filename> [shortlink]
 
-Example: create_short_url.sh /reference/troubleshooting.html#ingress-status-loadbalancer k8s-ingress-lbstatus
+Example: $(basename $0) /reference/troubleshooting.html#ingress-status-loadbalancer k8s-ingress-lbstatus
 
 /shortlinks/k8s-ingress-lbstatus.md
 ---
@@ -30,7 +38,7 @@ else
 fi
 
 RELATIVEPATH="./shortlinks/${FILENAME}.md"
-FILEPATH=$(echo "$(cd "$(dirname "$RELATIVEPATH")"; pwd -P)/$(basename "$RELATIVEPATH")")
+FILEPATH=$(echo "$(cd "$(dirname "${RELATIVEPATH}")"; pwd -P)/$(basename "${RELATIVEPATH}")")
 
 cat << EOF > "${FILEPATH}"
 ---
