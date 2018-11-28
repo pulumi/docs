@@ -94,20 +94,42 @@ To create a shortlink, create a file under `/shortlinks` in the following format
 ```md
 ---
 redirect_to: <link-to-current-docs-page>
-permalink: /help/<choose-a-unique-shortlink>/
+permalink: <unique-6-character-shortlink>/
 ---
 ```
 
-**Note that the trailing `/` on the permalink is required!**
+
+You can use the scripts/create_short_url.sh script to generate a new random shortlink:
+
+```sh
+./scripts/create_short_url.sh /reference/troubleshooting#ingress-status-loadbalancer ingress-status-loadbalancer
+
+Created shortlink definition at <filepath>/ingress-status-loadbalancer.md
+https://pulumi.io/xdv72s --> https://pulumi.io/reference/troubleshooting#ingress-status-loadbalancer
+```
+
+or you can choose a shortlink:
+
+```sh
+./scripts/create_short_url.sh /reference/troubleshooting#ingress-status-loadbalancer ingress-status-loadbalancer help/ingress-lbstaus
+
+
+Created shortlink definition at <filepath>/ingress-status-loadbalancer.md
+https://pulumi.io/help/ingress-lbstatus --> https://pulumi.io/reference/troubleshooting#ingress-status-loadbalancer
+```
+
 
 Here is a concrete example:
 
 ```md
 ---
 redirect_to: /reference/troubleshooting.html#ingress-status-loadbalancer
-permalink: /help/k8s-ingress-lbstatus/
+permalink: xdv72s/
 ---
 ```
 
-With the above file in place, a redirect will be created from `https://pulumi.io/help/k8s-ingress-lbstatus`
+With the above file in place, a redirect will be created from `https://pulumi.io/xdv72s`
 to `https://pulumi.io/reference/troubleshooting.html#ingress-status-loadbalancer`
+
+**Note that the trailing `/` on the permalink is required!**
+
