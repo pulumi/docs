@@ -98,13 +98,26 @@ permalink: <unique-6-character-shortlink>/
 ---
 ```
 
-You can use the following command to generate a new shortlink:
+
+You can use the scripts/create_short_url.sh script to generate a new random shortlink:
 
 ```sh
-LC_ALL=C tr -dc 'a-z0-9' </dev/urandom | head -c6 ; echo /
+./scripts/create_short_url.sh /reference/troubleshooting#ingress-status-loadbalancer ingress-status-loadbalancer
+
+Created shortlink definition at <filepath>/ingress-status-loadbalancer.md
+https://pulumi.io/xdv72s --> https://pulumi.io/reference/troubleshooting#ingress-status-loadbalancer
 ```
 
-**Note that the trailing `/` on the permalink is required!**
+or you can choose a shortlink:
+
+```sh
+./scripts/create_short_url.sh /reference/troubleshooting#ingress-status-loadbalancer ingress-status-loadbalancer help/ingress-lbstaus
+
+
+Created shortlink definition at <filepath>/ingress-status-loadbalancer.md
+https://pulumi.io/help/ingress-lbstatus --> https://pulumi.io/reference/troubleshooting#ingress-status-loadbalancer
+```
+
 
 Here is a concrete example:
 
@@ -117,3 +130,6 @@ permalink: xdv72s/
 
 With the above file in place, a redirect will be created from `https://pulumi.io/xdv72s`
 to `https://pulumi.io/reference/troubleshooting.html#ingress-status-loadbalancer`
+
+**Note that the trailing `/` on the permalink is required!**
+
