@@ -4,15 +4,20 @@
 set -o nounset -o errexit -o pipefail
 
 TOOLS_REPOS=(
+    "eks"
     "pulumi"
     "pulumi-aws"
+    "pulumi-aws-infra"
+    "pulumi-aws-serverless"
     "pulumi-azure"
     "pulumi-cloud"
-    "pulumi-terraform"
-    "pulumi-kubernetes"
-    "pulumi-aws-serverless"
-    "pulumi-aws-infra"
+    "pulumi-docker"
     "pulumi-gcp"
+    "pulumi-kubernetes"
+    "pulumi-openstack"
+    "pulumi-random"
+    "pulumi-terraform"
+    "pulumi-vsphere"
 )
 
 for repo in "${TOOLS_REPOS[@]}"

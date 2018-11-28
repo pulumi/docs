@@ -9,4 +9,5 @@ title: Module autoscaling
 
 * <a href="v1">autoscaling/v1</a>
 * <a href="v2beta1">autoscaling/v2beta1</a>
+* <a href="v2beta2">autoscaling/v2beta2</a>
 

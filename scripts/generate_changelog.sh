@@ -18,7 +18,7 @@ fi
 # not currently used, will add back when gh-changelog is moved to a locally installed package
 SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-TOOLS_REPOS="pulumi,pulumi-cloud,pulumi-aws,pulumi-terraform,pulumi-azure,pulumi-kubernetes,pulumi-aws-serverless,pulumi-aws-infra,pulumi-gcp,pulumi-azure-serverless,pulumi-docker"
+TOOLS_REPOS="pulumi,pulumi-cloud,pulumi-aws,pulumi-terraform,pulumi-azure,pulumi-kubernetes,pulumi-aws-serverless,pulumi-aws-infra,pulumi-gcp,pulumi-azure-serverless,pulumi-docker,pulumi-vsphere,pulumi-openstack,eks"
 
 gh-changelog \
     --owner pulumi --repos "${TOOLS_REPOS}" \

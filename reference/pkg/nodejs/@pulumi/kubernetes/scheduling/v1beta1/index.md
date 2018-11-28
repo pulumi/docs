@@ -1,8 +1,8 @@
 ---
-title: Module scheduling/v1alpha1
+title: Module scheduling/v1beta1
 ---
 
-<a href="../../index.html">@pulumi/kubernetes</a> &gt; <a href="../index.html">scheduling</a> &gt; v1alpha1
+<a href="../../index.html">@pulumi/kubernetes</a> &gt; <a href="../index.html">scheduling</a> &gt; v1beta1
 
 <h2 class="pdoc-module-header">Index</h2>
 
@@ -15,7 +15,7 @@ title: Module scheduling/v1alpha1
 
 
 <h2 class="pdoc-module-header" id="isPriorityClass">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19122">function isPriorityClass</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19216">function isPriorityClass</a>
 </h2>
 
 ```typescript
@@ -23,7 +23,7 @@ isPriorityClass(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isPriorityClassList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19159">function isPriorityClassList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19253">function isPriorityClassList</a>
 </h2>
 
 ```typescript
@@ -31,14 +31,14 @@ isPriorityClassList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="PriorityClass">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18060">interface PriorityClass</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18146">interface PriorityClass</a>
 </h2>
 
 PriorityClass defines mapping from a priority class name to the priority integer value. The
 value can be any valid integer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18067">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18153">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -52,7 +52,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18073">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18159">property description</a>
 </h3>
 
 ```typescript
@@ -64,7 +64,7 @@ description is an arbitrary string that usually provides guidelines on when this
 class should be used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18082">property globalDefault</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18168">property globalDefault</a>
 </h3>
 
 ```typescript
@@ -79,7 +79,7 @@ as `globalDefault`. However, if more than one PriorityClasses exists with their
 PriorityClasses will be used as the default priority.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18090">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18176">property kind</a>
 </h3>
 
 ```typescript
@@ -93,7 +93,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18096">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18182">property metadata</a>
 </h3>
 
 ```typescript
@@ -105,7 +105,7 @@ Standard object's metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18102">property value</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18188">property value</a>
 </h3>
 
 ```typescript
@@ -117,13 +117,13 @@ The value of this priority class. This is the actual priority that pods receive 
 have the name of this class in their pod spec.
 
 <h2 class="pdoc-module-header" id="PriorityClassList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18109">interface PriorityClassList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18195">interface PriorityClassList</a>
 </h2>
 
 PriorityClassList is a collection of priority classes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18116">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18202">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -137,7 +137,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18121">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18207">property items</a>
 </h3>
 
 ```typescript
@@ -148,7 +148,7 @@ items: PriorityClass[];
 items is the list of PriorityClasses
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18129">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18215">property kind</a>
 </h3>
 
 ```typescript
@@ -162,7 +162,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18135">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18221">property metadata</a>
 </h3>
 
 ```typescript
