@@ -25,6 +25,7 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="#Resource">class Resource</a>
 * <a href="#ResourceError">class ResourceError</a>
 * <a href="#RunError">class RunError</a>
+* <a href="#StackReference">class StackReference</a>
 * <a href="#deploymentOnlyModule">const deploymentOnlyModule</a>
 * <a href="#testingOptions">const testingOptions</a>
 * <a href="#version">const version</a>
@@ -35,12 +36,13 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="#ComponentResourceOptions">interface ComponentResourceOptions</a>
 * <a href="#CustomResourceOptions">interface CustomResourceOptions</a>
 * <a href="#ResourceOptions">interface ResourceOptions</a>
+* <a href="#StackReferenceArgs">interface StackReferenceArgs</a>
 * <a href="#ID">type ID</a>
 * <a href="#Input">type Input</a>
 * <a href="#Inputs">type Inputs</a>
 * <a href="#URN">type URN</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts">config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts">errors.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/metadata.ts">metadata.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts">resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/version.ts">version.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts">config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts">errors.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/metadata.ts">metadata.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts">resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts">stackReference.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/version.ts">version.ts</a> 
 
 <h2 class="pdoc-module-header">Modules</h2>
 
@@ -726,6 +728,107 @@ name: string;
 stack?: undefined | string;
 ```
 
+<h2 class="pdoc-module-header" id="StackReference">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L21">class StackReference</a>
+</h2>
+
+Manages a reference to a Pulumi stack. The referenced stack's outputs are available via the
+`outputs` property or the `output` method.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L30">constructor</a>
+</h3>
+
+```typescript
+new StackReference(name: string, args?: StackReferenceArgs, opts?: CustomResourceOptions)
+```
+
+
+Create a StackReference resource with the given unique name, arguments, and options.
+
+If args is not specified, the name of the referenced stack will be the name of the StackReference resource.
+
+* `name` The _unique_ name of the stack reference.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L55">method getOutput</a>
+</h3>
+
+```typescript
+public getOutput(name: Input<string>): Output<any>
+```
+
+
+Fetches the value of the named stack output.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L55">method getProvider</a>
+</h3>
+
+```typescript
+public getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">method isInstance</a>
+</h3>
+
+```typescript
+public static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">property id</a>
+</h3>
+
+```typescript
+public id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L25">property name</a>
+</h3>
+
+```typescript
+public name: Output<string>;
+```
+
+
+The name of the referenced stack.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L30">property outputs</a>
+</h3>
+
+```typescript
+public outputs: Output<{ ... }>;
+```
+
+
+The outputs of the referenced stack.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L36">property urn</a>
+</h3>
+
+```typescript
+public urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="deploymentOnlyModule">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts#L39">const deploymentOnlyModule</a>
 </h2>
@@ -1042,6 +1145,23 @@ protect?: undefined | false | true;
 
 
 When set to true, protect ensures this resource cannot be deleted.
+
+<h2 class="pdoc-module-header" id="StackReferenceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L63">interface StackReferenceArgs</a>
+</h2>
+
+The set of arguments for constructing a StackReference resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts#L67">property name</a>
+</h3>
+
+```typescript
+name?: Input<string>;
+```
+
+
+The name of the stack to reference.
 
 <h2 class="pdoc-module-header" id="ID">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L19">type ID</a>
