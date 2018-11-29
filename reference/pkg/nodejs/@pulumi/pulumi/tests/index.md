@@ -15,7 +15,7 @@ title: Module tests
 
 
 <h2 class="pdoc-module-header" id="exportedValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/tsClosureCases.ts#L35">const exportedValue</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/tests/runtime/tsClosureCases.ts#L37">const exportedValue</a>
 </h2>
 
 ```typescript
