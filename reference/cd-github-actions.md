@@ -62,7 +62,7 @@ workflow "Update" {
 }
 
 action "Pulumi Deploy (Current Stack)" {
-    uses = "docker://pulumi/actions@v0.16.0"
+    uses = "docker://pulumi/actions"
     args = [ "up" ]
     env = {
         "PULUMI_CI" = "up"
@@ -78,7 +78,7 @@ workflow "Preview" {
 }
 
 action "Pulumi Preview (Merged Stack)" {
-    uses = "docker://pulumi/actions@v0.16.0"
+    uses = "docker://pulumi/actions"
     args = [ "preview" ]
     env = {
         "PULUMI_CI" = "pr"
@@ -90,6 +90,10 @@ action "Pulumi Preview (Merged Stack)" {
 ```
 
 This file is also available [here](https://github.com/pulumi/actions/blob/master/examples/main.workflow).
+
+Also note that this workflow file will automatically download and use the latest version of Pulumi. If you prefer
+to use a specific version of Pulumi, you can replace all occurrences of `uses = "docker://pulumi/actions"` with
+a container image that contains the version as a tag, for instance `uses = "docker://pulumi/actions:v0.16.6"`.
 
 Now you've got a workflow defined, but before you're ready to use it, you'll need to configure your secrets.
 
