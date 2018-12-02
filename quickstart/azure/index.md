@@ -17,7 +17,7 @@ The Azure provider supports several options for providing access to Azure creden
 
 The easiest way to start with Pulumi for Azure is to follow the tutorial:
 
-* [Azure VM Web Server](./tutorial-vm-webserver.html): Create an Ubuntu virtual machine web server instance
+* [Azure Container Instances Web Server](./tutorial-container-webserver.html): Create an NGINX web server Azure Container Instance
 
 In addition to the tutorial, several interesting examples are available complete with instructions:
 
