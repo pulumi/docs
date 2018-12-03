@@ -1,7 +1,8 @@
 ---
 title: "Tutorial: Containers"
-redirect_from: /quickstart/aws-containers.html
-redirect_from: /quickstart/aws/tutorial-containers-ecs-fargate.html
+redirect_from:
+  - /quickstart/aws-containers.html
+  - /quickstart/aws/tutorial-containers-ecs-fargate.html
 ---
 
 In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]() framework.  This example can be deplopyed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either coud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.

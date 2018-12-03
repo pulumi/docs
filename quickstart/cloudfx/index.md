@@ -21,7 +21,7 @@ The easiest way to start with the Cloud Framework is to follow one of the tutori
 
 * [A simple serverless REST API](./tutorial-rest-api.html): Deploy cloud-agnostic managed REST API
 * [A simple containerized app](./tutorial-service.html): Deploy cloud-agnostic containerized services
-* [Serverless + Containers + Infrastructure](./tutorial-thumbnaier.html): Deploy a complete cloud-angostic application using a combination of buckets, serverless functions and containers.
+* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete cloud-angostic application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 
