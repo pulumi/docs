@@ -1,11 +1,16 @@
 ---
-title: "Tutorial: Containers on ECS Fargate"
-redirect_from: /quickstart/aws-containers.html
+title: "Tutorial: Containers"
+redirect_from:
+  - /quickstart/aws-containers.html
+  - /quickstart/aws/tutorial-containers-ecs-fargate.html
 ---
 
-In this tutorial, we'll use JavaScript to build and deploy a simple container to [AWS Fargate](https://aws.amazon.com/fargate/). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
+In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]() framework.  This example can be deplopyed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either coud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
 
-{% include aws-js-prereqs.md %}
+## Prerequisites
+
+1.  [Install Pulumi](../install.html)
+1.  Configure [AWS](../aws/setup.html) and/or [Azure](../azure/setup.html) credentials
 
 ## Serve an HTML file in an NGINX container
 
@@ -14,14 +19,14 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new aws-javascript --dir container-quickstart
+    $ pulumi new javascript --dir container-quickstart
     $ cd container-quickstart
     ```
 
 1.  Replace the contents of `index.js` with the following:
 
     ```js
-    const cloud = require("@pulumi/cloud-aws");
+    const cloud = require("@pulumi/cloud");
 
     let service = new cloud.Service("pulumi-nginx", {
         containers: {
@@ -38,7 +43,7 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
     exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
     ```    
 
-    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning an AWS container service.
+    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
 
 1.  Create a subfolder `app` with the following files:
 
@@ -66,19 +71,26 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
       index.html
     ```
 
-1.  Install the `@pulumi/cloud-aws` NPM package:
+1.  Install the `@pulumi/cloud` NPM package an one or both of the platform-specific implementations depending on which platform you will deploy to:
 
     ```bash
-    $ npm install --save @pulumi/cloud-aws @pulumi/cloud
+    $ npm install --save @pulumi/cloud  @pulumi/cloud-aws @pulumi/cloud-azure
     ```
 
-1.  Configure Pulumi to use AWS Fargate. (Note: Fargate is currently available only in `us-east-1`, `us-east-2`, `us-west-2`, and `eu-west-1`).
+1.  If you are running on AWS, configure the region and whether to use Fargate:
 
     ```bash
+    $ pulumi config set aws:region us-east-1
     $ pulumi config set cloud-aws:useFargate true
     ```
 
-1.  Preview and deploy changes via `pulumi update`. This will take a few minutes. Pulumi automatically builds and provisions an AWS container repository in ECR, builds the Docker container, and places the image in the repository. This all happens automatically and does not require manual configuration on your part.
+    If you are running on Azure, configure the location:
+
+    ```bash
+    $ pulumi config set cloud-azure:location WestUS2
+    ```
+
+1.  Preview and deploy changes via `pulumi update`. This will take a few minutes. Pulumi automatically builds and provisions a container registry (ECR or ACR), builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
 
     ```
     $ pulumi update
@@ -133,6 +145,6 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container to
 
 ## Next steps
 
-For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](../cloudfx/tutorial-thumbnailer.html) tutorial.
+For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](./tutorial-thumbnailer.html) tutorial.
 
 For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.

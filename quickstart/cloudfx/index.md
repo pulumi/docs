@@ -15,6 +15,22 @@ The Cloud framework must be configured with credentials to deploy and update res
 
 See the [full API documentation](/reference/pkg/nodejs/@pulumi/cloud/index.html) for complete details of the available Cloud framework APIs.
 
+## Getting Started
+
+The easiest way to start with the Cloud Framework is to follow one of the tutorials:
+
+* [A simple serverless REST API](./tutorial-rest-api.html): Deploy cloud-agnostic managed REST API
+* [A simple containerized app](./tutorial-service.html): Deploy cloud-agnostic containerized services
+* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete cloud-angostic application using a combination of buckets, serverless functions and containers.
+
+In addition to the tutorials, several interesting examples are available complete with instructions:
+
+* [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
+* [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
+* [Thumbnailer (buckets, containers, functions)](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer)
+* [URL Shortner (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener)
+* [Voting App (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
+
 ## Example
 
 ```javascript
@@ -27,13 +43,6 @@ api.get("/hello", (req, res) => {
 
 exports.url = api.publish().url;
 ```
-
-You can find additional examples of using the Cloud framework in [the Pulumi examples repo](https://github.com/pulumi/examples).
-* [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
-* [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
-* [Thumbnailer (buckets, containers, functions)](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer)
-* [URL Shortner (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener)
-* [Voting App (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
 
 ## Libraries
 

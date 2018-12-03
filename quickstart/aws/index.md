@@ -18,7 +18,6 @@ The AWS provider supports several options for providing access to AWS credential
 The easiest way to start with AWS is to follow one of the tutorials:
 
 * [Serverless REST APIs using Lambda](./tutorial-rest-api.html): Create simple RESTful web server using AWS Lambdas
-* [Containers on ECS "Fargate"](./tutorial-containers-ecs-fargate.html): Deploy containers using Elastic Container Service (ECS)
 * [EC2 Linux WebServer VM](./tutorial-ec2-webserver.html): Create an EC2 Linux Web Server virtual machine
 * [Serve a Static Website from S3](./tutorial-s3-website.html): Serve a static website out of content in an S3 bucket
 

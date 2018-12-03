@@ -15,15 +15,17 @@ The Azure provider supports several options for providing access to Azure creden
 
 ## Getting Started
 
-The easiest way to start with Azure is to follow one of these examples:
+The easiest way to start with Pulumi for Azure is to follow the tutorial:
 
-* [Azure VM Web Server](https://github.com/pulumi/examples/tree/master/azure-js-webserver): Stand up a simple virtual
-    machine-based webserver
+* [Azure Container Instances Web Server](./tutorial-container-webserver.html): Create an NGINX web server Azure Container Instance
+
+In addition to the tutorial, several interesting examples are available complete with instructions:
+
 * [Azure Function Apps](https://github.com/pulumi/examples/tree/master/azure-ts-functions): Create a serverless function
-* [Azure AppService with SQL and AppInsights](https://github.com/pulumi/examples/tree/master/azure-ts-appservice): Build
-    an AppService web application that uses SQL and AppInsights
-* [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm): Create an
-    AKS cluster and deploy a Helm Chart into it
+* [Azure AppService with SQL and AppInsights](https://github.com/pulumi/examples/tree/master/azure-ts-appservice): Build an AppService web application that uses SQL and AppInsights
+* [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm): Create an AKS cluster and deploy a Helm Chart into it
+* [Azure CosmodDB, AKS and Node.js](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean): Stands up an AKS cluster and a MongoDB-flavored instance of CosmosDB used by a Node.js application.
+
 
 ## Example
 
