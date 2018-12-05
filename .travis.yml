@@ -11,7 +11,7 @@ before_install:
 - ./scripts/travisqueue.sh start
 # Install required tools.
 # pulumi
-- curl -L https://get.pulumi.com/ | bash -s -- --version 0.16.6-dev.1543332884
+- curl -L https://get.pulumi.com/ | bash
 - export PATH=$PATH:$HOME/.pulumi/bin
 # Remove after pulumi/pulumi/issues/2203 is resolved.
 - export PULUMI_RECORD_ENGINE_EVENTS=1
