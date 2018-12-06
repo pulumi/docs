@@ -28,7 +28,7 @@ title: Module authorization/v1
 
 
 <h2 class="pdoc-module-header" id="isLocalSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4355">function isLocalSubjectAccessReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5063">function isLocalSubjectAccessReview</a>
 </h2>
 
 ```typescript
@@ -36,7 +36,7 @@ isLocalSubjectAccessReview(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isSelfSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4516">function isSelfSubjectAccessReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5224">function isSelfSubjectAccessReview</a>
 </h2>
 
 ```typescript
@@ -44,7 +44,7 @@ isSelfSubjectAccessReview(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isSelfSubjectRulesReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4580">function isSelfSubjectRulesReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5288">function isSelfSubjectRulesReview</a>
 </h2>
 
 ```typescript
@@ -52,7 +52,7 @@ isSelfSubjectRulesReview(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L4629">function isSubjectAccessReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5337">function isSubjectAccessReview</a>
 </h2>
 
 ```typescript
@@ -60,7 +60,7 @@ isSubjectAccessReview(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="LocalSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4078">interface LocalSubjectAccessReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4757">interface LocalSubjectAccessReview</a>
 </h2>
 
 LocalSubjectAccessReview checks whether or not a user or group can perform an action in a
@@ -68,7 +68,7 @@ given namespace. Having a namespace scoped resource makes it much easier to gran
 scoped policy that includes permissions checking.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4085">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4764">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -82,7 +82,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4093">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4772">property kind</a>
 </h3>
 
 ```typescript
@@ -96,7 +96,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4096">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4775">property metadata</a>
 </h3>
 
 ```typescript
@@ -104,7 +104,7 @@ metadata: ObjectMeta;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4102">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4781">property spec</a>
 </h3>
 
 ```typescript
@@ -116,7 +116,7 @@ Spec holds information about the request being evaluated.  spec.namespace must b
 the namespace you made the request against.  If empty, it is defaulted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4107">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4786">property status</a>
 </h3>
 
 ```typescript
@@ -127,14 +127,14 @@ status: SubjectAccessReviewStatus;
 Status is filled in by the server and indicates whether the request is allowed or not
 
 <h2 class="pdoc-module-header" id="NonResourceAttributes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4115">interface NonResourceAttributes</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4794">interface NonResourceAttributes</a>
 </h2>
 
 NonResourceAttributes includes the authorization attributes available for non-resource
 requests to the Authorizer interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4119">property path</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4798">property path</a>
 </h3>
 
 ```typescript
@@ -145,7 +145,7 @@ path: string;
 Path is the URL path of the request
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4124">property verb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4803">property verb</a>
 </h3>
 
 ```typescript
@@ -156,13 +156,13 @@ verb: string;
 Verb is the standard HTTP verb
 
 <h2 class="pdoc-module-header" id="NonResourceRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4131">interface NonResourceRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4810">interface NonResourceRule</a>
 </h2>
 
 NonResourceRule holds information that describes a rule for the non-resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4136">property nonResourceURLs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4815">property nonResourceURLs</a>
 </h3>
 
 ```typescript
@@ -174,7 +174,7 @@ NonResourceURLs is a set of partial urls that a user should have access to.  *s 
 allowed, but only as the full, final step in the path.  "*" means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4142">property verbs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4821">property verbs</a>
 </h3>
 
 ```typescript
@@ -186,14 +186,14 @@ Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delet
 head, options.  "*" means all.
 
 <h2 class="pdoc-module-header" id="ResourceAttributes">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4150">interface ResourceAttributes</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4829">interface ResourceAttributes</a>
 </h2>
 
 ResourceAttributes includes the authorization attributes available for resource requests to
 the Authorizer interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4154">property group</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4833">property group</a>
 </h3>
 
 ```typescript
@@ -204,7 +204,7 @@ group: string;
 Group is the API Group of the Resource.  "*" means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4160">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4839">property name</a>
 </h3>
 
 ```typescript
@@ -216,7 +216,7 @@ Name is the name of the resource being requested for a "get" or deleted for a "d
 (empty) means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4168">property namespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4847">property namespace</a>
 </h3>
 
 ```typescript
@@ -230,7 +230,7 @@ LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (e
 "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4173">property resource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4852">property resource</a>
 </h3>
 
 ```typescript
@@ -241,7 +241,7 @@ resource: string;
 Resource is one of the existing resource types.  "*" means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4178">property subresource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4857">property subresource</a>
 </h3>
 
 ```typescript
@@ -252,7 +252,7 @@ subresource: string;
 Subresource is one of the existing resource types.  "" means none.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4184">property verb</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4863">property verb</a>
 </h3>
 
 ```typescript
@@ -264,7 +264,7 @@ Verb is a kubernetes resource API verb, like: get, list, watch, create, update, 
 proxy.  "*" means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4189">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4868">property version</a>
 </h3>
 
 ```typescript
@@ -275,14 +275,14 @@ version: string;
 Version is the API Version of the Resource.  "*" means all.
 
 <h2 class="pdoc-module-header" id="ResourceRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4197">interface ResourceRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4876">interface ResourceRule</a>
 </h2>
 
 ResourceRule is the list of actions the subject is allowed to perform on resources. The list
 ordering isn't significant, may contain duplicates, and possibly be incomplete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4203">property apiGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4882">property apiGroups</a>
 </h3>
 
 ```typescript
@@ -295,7 +295,7 @@ are specified, any action requested against one of the enumerated resources in a
 group will be allowed.  "*" means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4209">property resourceNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4888">property resourceNames</a>
 </h3>
 
 ```typescript
@@ -307,7 +307,7 @@ ResourceNames is an optional white list of names that the rule applies to.  An e
 means that everything is allowed.  "*" means all.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4217">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4896">property resources</a>
 </h3>
 
 ```typescript
@@ -321,7 +321,7 @@ apiGroups.
 apiGroups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4223">property verbs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4902">property verbs</a>
 </h3>
 
 ```typescript
@@ -333,7 +333,7 @@ Verb is a list of kubernetes resource API verbs, like: get, list, watch, create,
 delete, proxy.  "*" means all.
 
 <h2 class="pdoc-module-header" id="SelfSubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4232">interface SelfSubjectAccessReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4911">interface SelfSubjectAccessReview</a>
 </h2>
 
 SelfSubjectAccessReview checks whether or the current user can perform an action.  Not
@@ -341,7 +341,7 @@ filling in a spec.namespace means "in all namespaces".  Self is a special case, 
 should always be able to check whether they can perform an action
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4239">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4918">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -355,7 +355,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4247">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4926">property kind</a>
 </h3>
 
 ```typescript
@@ -369,7 +369,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4250">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4929">property metadata</a>
 </h3>
 
 ```typescript
@@ -377,7 +377,7 @@ metadata: ObjectMeta;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4255">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4934">property spec</a>
 </h3>
 
 ```typescript
@@ -388,7 +388,7 @@ spec: SelfSubjectAccessReviewSpec;
 Spec holds information about the request being evaluated.  user and groups must be empty
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4260">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4939">property status</a>
 </h3>
 
 ```typescript
@@ -399,14 +399,14 @@ status: SubjectAccessReviewStatus;
 Status is filled in by the server and indicates whether the request is allowed or not
 
 <h2 class="pdoc-module-header" id="SelfSubjectAccessReviewSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4268">interface SelfSubjectAccessReviewSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4947">interface SelfSubjectAccessReviewSpec</a>
 </h2>
 
 SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one of
 ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4272">property nonResourceAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4951">property nonResourceAttributes</a>
 </h3>
 
 ```typescript
@@ -417,7 +417,7 @@ nonResourceAttributes: NonResourceAttributes;
 NonResourceAttributes describes information for a non-resource access request
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4277">property resourceAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4956">property resourceAttributes</a>
 </h3>
 
 ```typescript
@@ -428,7 +428,7 @@ resourceAttributes: ResourceAttributes;
 ResourceAuthorizationAttributes describes information for a resource access request
 
 <h2 class="pdoc-module-header" id="SelfSubjectRulesReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4291">interface SelfSubjectRulesReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4970">interface SelfSubjectRulesReview</a>
 </h2>
 
 SelfSubjectRulesReview enumerates the set of actions the current user can perform within a
@@ -441,7 +441,7 @@ SubjectAccessReview, and LocalAccessReview are the correct way to defer authoriz
 decisions to the API server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4298">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4977">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -455,7 +455,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4306">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4985">property kind</a>
 </h3>
 
 ```typescript
@@ -469,7 +469,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4309">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4988">property metadata</a>
 </h3>
 
 ```typescript
@@ -477,7 +477,7 @@ metadata: ObjectMeta;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4314">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4993">property spec</a>
 </h3>
 
 ```typescript
@@ -488,7 +488,7 @@ spec: SelfSubjectRulesReviewSpec;
 Spec holds information about the request being evaluated.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4319">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4998">property status</a>
 </h3>
 
 ```typescript
@@ -499,10 +499,10 @@ status: SubjectRulesReviewStatus;
 Status is filled in by the server and indicates the set of actions a user can perform.
 
 <h2 class="pdoc-module-header" id="SelfSubjectRulesReviewSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4324">interface SelfSubjectRulesReviewSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5003">interface SelfSubjectRulesReviewSpec</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4328">property namespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5007">property namespace</a>
 </h3>
 
 ```typescript
@@ -513,13 +513,13 @@ namespace: string;
 Namespace to evaluate rules for. Required.
 
 <h2 class="pdoc-module-header" id="SubjectAccessReview">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4335">interface SubjectAccessReview</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5014">interface SubjectAccessReview</a>
 </h2>
 
 SubjectAccessReview checks whether or not a user or group can perform an action.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4342">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5021">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -533,7 +533,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4350">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5029">property kind</a>
 </h3>
 
 ```typescript
@@ -547,7 +547,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4353">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5032">property metadata</a>
 </h3>
 
 ```typescript
@@ -555,7 +555,7 @@ metadata: ObjectMeta;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4358">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5037">property spec</a>
 </h3>
 
 ```typescript
@@ -566,7 +566,7 @@ spec: SubjectAccessReviewSpec;
 Spec holds information about the request being evaluated
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4363">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5042">property status</a>
 </h3>
 
 ```typescript
@@ -577,14 +577,14 @@ status: SubjectAccessReviewStatus;
 Status is filled in by the server and indicates whether the request is allowed or not
 
 <h2 class="pdoc-module-header" id="SubjectAccessReviewSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4371">interface SubjectAccessReviewSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5050">interface SubjectAccessReviewSpec</a>
 </h2>
 
 SubjectAccessReviewSpec is a description of the access request.  Exactly one of
 ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4376">property extra</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5055">property extra</a>
 </h3>
 
 ```typescript
@@ -596,7 +596,7 @@ Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Si
 input to the authorizer it needs a reflection here.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4381">property groups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5060">property groups</a>
 </h3>
 
 ```typescript
@@ -607,7 +607,7 @@ groups: string[];
 Groups is the groups you're testing for.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4386">property nonResourceAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5065">property nonResourceAttributes</a>
 </h3>
 
 ```typescript
@@ -618,7 +618,7 @@ nonResourceAttributes: NonResourceAttributes;
 NonResourceAttributes describes information for a non-resource access request
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4391">property resourceAttributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5070">property resourceAttributes</a>
 </h3>
 
 ```typescript
@@ -629,7 +629,7 @@ resourceAttributes: ResourceAttributes;
 ResourceAuthorizationAttributes describes information for a resource access request
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4396">property uid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5075">property uid</a>
 </h3>
 
 ```typescript
@@ -640,7 +640,7 @@ uid: string;
 UID information about the requesting user.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4402">property user</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5081">property user</a>
 </h3>
 
 ```typescript
@@ -652,13 +652,13 @@ User is the user you're testing for. If you specify "User" but not "Groups", the
 interpreted as "What if User were not a member of any groups
 
 <h2 class="pdoc-module-header" id="SubjectAccessReviewStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4409">interface SubjectAccessReviewStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5088">interface SubjectAccessReviewStatus</a>
 </h2>
 
 SubjectAccessReviewStatus
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4413">property allowed</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5092">property allowed</a>
 </h3>
 
 ```typescript
@@ -669,7 +669,7 @@ allowed: boolean;
 Allowed is required. True if the action would be allowed, false otherwise.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4420">property denied</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5099">property denied</a>
 </h3>
 
 ```typescript
@@ -682,7 +682,7 @@ false and denied is false, then the authorizer has no opinion on whether to auth
 action. Denied may not be true if Allowed is true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4428">property evaluationError</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5107">property evaluationError</a>
 </h3>
 
 ```typescript
@@ -696,7 +696,7 @@ status in spite of it. For instance, RBAC can be missing a role, but enough role
 present and bound to reason about the request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4433">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5112">property reason</a>
 </h3>
 
 ```typescript
@@ -707,7 +707,7 @@ reason: string;
 Reason is optional.  It indicates why a request was allowed or denied.
 
 <h2 class="pdoc-module-header" id="SubjectRulesReviewStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4443">interface SubjectRulesReviewStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5122">interface SubjectRulesReviewStatus</a>
 </h2>
 
 SubjectRulesReviewStatus contains the result of a rules check. This check can be incomplete
@@ -716,7 +716,7 @@ during evaluation. Because authorization rules are additive, if a rule appears i
 safe to assume the subject has that permission, even if that list is incomplete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4449">property evaluationError</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5128">property evaluationError</a>
 </h3>
 
 ```typescript
@@ -729,7 +729,7 @@ rule evaluation, such as an authorizer that doesn't support rule evaluation, and
 ResourceRules and/or NonResourceRules may be incomplete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4456">property incomplete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5135">property incomplete</a>
 </h3>
 
 ```typescript
@@ -742,7 +742,7 @@ commonly encountered when an authorizer, such as an external authorizer, doesn't
 rules evaluation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4462">property nonResourceRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5141">property nonResourceRules</a>
 </h3>
 
 ```typescript
@@ -754,7 +754,7 @@ NonResourceRules is the list of actions the subject is allowed to perform on non
 The list ordering isn't significant, may contain duplicates, and possibly be incomplete.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L4468">property resourceRules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5147">property resourceRules</a>
 </h3>
 
 ```typescript

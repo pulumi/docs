@@ -8,28 +8,32 @@ title: Module v2
 
 * <a href="#Chart">class Chart</a>
 * <a href="#helmSort">function helmSort</a>
+* <a href="#isChartOpts">function isChartOpts</a>
+* <a href="#isLocalChartOpts">function isLocalChartOpts</a>
+* <a href="#BaseChartOpts">interface BaseChartOpts</a>
 * <a href="#ChartOpts">interface ChartOpts</a>
+* <a href="#LocalChartOpts">interface LocalChartOpts</a>
 
 <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts">helm.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Chart">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L42">class Chart</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L84">class Chart</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L84">constructor</a>
 </h3>
 
 ```typescript
-new Chart(releaseName: string, config: ChartOpts, opts?: pulumi.ComponentResourceOptions)
+new Chart(releaseName: string, config: ChartOpts | LocalChartOpts, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L429">method getCustomResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L2178">method getCustomResource</a>
 </h3>
 
 ```typescript
-public getCustomResource<T>(groupVersionKind: string, namespace: string): T
+public getCustomResource<T>(groupVersionKind: string, namespace: string): pulumi.Output<T>
 ```
 
 
@@ -40,7 +44,7 @@ For example:
 
 
 ```typescript
-public getCustomResource<T>(groupVersionKind: string, namespace: string, name: string): T
+public getCustomResource<T>(groupVersionKind: string, namespace: string, name: string): pulumi.Output<T>
 ```
 
 <h3 class="pdoc-member-header">
@@ -52,11 +56,11 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L95">method getResource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L90">method getResource</a>
 </h3>
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string): InitializerConfiguration
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string): pulumi.Output<InitializerConfiguration>
 ```
 
 
@@ -67,1617 +71,10336 @@ For example:
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, namespace: string, name: string): InitializerConfiguration
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, namespace: string, name: string): pulumi.Output<InitializerConfiguration>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, name: string): InitializerConfigurationList
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, name: string): pulumi.Output<InitializerConfigurationList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, namespace: string, name: string): InitializerConfigurationList
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, namespace: string, name: string): pulumi.Output<InitializerConfigurationList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, name: string): MutatingWebhookConfiguration
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, name: string): pulumi.Output<MutatingWebhookConfiguration>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, namespace: string, name: string): MutatingWebhookConfiguration
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, namespace: string, name: string): pulumi.Output<MutatingWebhookConfiguration>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, name: string): MutatingWebhookConfigurationList
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, name: string): pulumi.Output<MutatingWebhookConfigurationList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, namespace: string, name: string): MutatingWebhookConfigurationList
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, namespace: string, name: string): pulumi.Output<MutatingWebhookConfigurationList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, name: string): ValidatingWebhookConfiguration
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, name: string): pulumi.Output<ValidatingWebhookConfiguration>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, namespace: string, name: string): ValidatingWebhookConfiguration
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, namespace: string, name: string): pulumi.Output<ValidatingWebhookConfiguration>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, name: string): ValidatingWebhookConfigurationList
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, name: string): pulumi.Output<ValidatingWebhookConfigurationList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, namespace: string, name: string): ValidatingWebhookConfigurationList
+public getResource(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, namespace: string, name: string): pulumi.Output<ValidatingWebhookConfigurationList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string): CustomResourceDefinition
+public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string): pulumi.Output<CustomResourceDefinition>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string): CustomResourceDefinition
+public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string): pulumi.Output<CustomResourceDefinition>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, name: string): CustomResourceDefinitionList
+public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, name: string): pulumi.Output<CustomResourceDefinitionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, namespace: string, name: string): CustomResourceDefinitionList
+public getResource(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, namespace: string, name: string): pulumi.Output<CustomResourceDefinitionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiregistration/v1beta1/APIService, name: string): APIService
+public getResource(groupVersionKind: apiregistration.k8s.io/v1/APIService, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string): APIService
+public getResource(groupVersionKind: apiregistration.k8s.io/v1/APIService, namespace: string, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiregistration/v1beta1/APIServiceList, name: string): APIServiceList
+public getResource(groupVersionKind: apiregistration/v1/APIService, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apiregistration/v1beta1/APIServiceList, namespace: string, name: string): APIServiceList
+public getResource(groupVersionKind: apiregistration/v1/APIService, namespace: string, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ControllerRevision, name: string): ControllerRevision
+public getResource(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string): ControllerRevision
+public getResource(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, namespace: string, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ControllerRevisionList, name: string): ControllerRevisionList
+public getResource(groupVersionKind: apiregistration/v1/APIServiceList, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ControllerRevisionList, namespace: string, name: string): ControllerRevisionList
+public getResource(groupVersionKind: apiregistration/v1/APIServiceList, namespace: string, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/DaemonSet, name: string): DaemonSet
+public getResource(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string): DaemonSet
+public getResource(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, namespace: string, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/DaemonSetList, name: string): DaemonSetList
+public getResource(groupVersionKind: apiregistration/v1beta1/APIService, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/DaemonSetList, namespace: string, name: string): DaemonSetList
+public getResource(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string): pulumi.Output<APIService>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/Deployment, name: string): Deployment
+public getResource(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/Deployment, namespace: string, name: string): Deployment
+public getResource(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, namespace: string, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/DeploymentList, name: string): DeploymentList
+public getResource(groupVersionKind: apiregistration/v1beta1/APIServiceList, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/DeploymentList, namespace: string, name: string): DeploymentList
+public getResource(groupVersionKind: apiregistration/v1beta1/APIServiceList, namespace: string, name: string): pulumi.Output<APIServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ReplicaSet, name: string): ReplicaSet
+public getResource(groupVersionKind: apps/v1/ControllerRevision, name: string): pulumi.Output<ControllerRevision>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string): ReplicaSet
+public getResource(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string): pulumi.Output<ControllerRevision>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ReplicaSetList, name: string): ReplicaSetList
+public getResource(groupVersionKind: apps/v1/ControllerRevisionList, name: string): pulumi.Output<ControllerRevisionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/ReplicaSetList, namespace: string, name: string): ReplicaSetList
+public getResource(groupVersionKind: apps/v1/ControllerRevisionList, namespace: string, name: string): pulumi.Output<ControllerRevisionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/StatefulSet, name: string): StatefulSet
+public getResource(groupVersionKind: apps/v1/DaemonSet, name: string): pulumi.Output<DaemonSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string): StatefulSet
+public getResource(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string): pulumi.Output<DaemonSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/StatefulSetList, name: string): StatefulSetList
+public getResource(groupVersionKind: apps/v1/DaemonSetList, name: string): pulumi.Output<DaemonSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1/StatefulSetList, namespace: string, name: string): StatefulSetList
+public getResource(groupVersionKind: apps/v1/DaemonSetList, namespace: string, name: string): pulumi.Output<DaemonSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/ControllerRevision, name: string): ControllerRevision
+public getResource(groupVersionKind: apps/v1/Deployment, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string): ControllerRevision
+public getResource(groupVersionKind: apps/v1/Deployment, namespace: string, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/ControllerRevisionList, name: string): ControllerRevisionList
+public getResource(groupVersionKind: apps/v1/DeploymentList, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/ControllerRevisionList, namespace: string, name: string): ControllerRevisionList
+public getResource(groupVersionKind: apps/v1/DeploymentList, namespace: string, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/Deployment, name: string): Deployment
+public getResource(groupVersionKind: apps/v1/ReplicaSet, name: string): pulumi.Output<ReplicaSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string): Deployment
+public getResource(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string): pulumi.Output<ReplicaSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/DeploymentList, name: string): DeploymentList
+public getResource(groupVersionKind: apps/v1/ReplicaSetList, name: string): pulumi.Output<ReplicaSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/DeploymentList, namespace: string, name: string): DeploymentList
+public getResource(groupVersionKind: apps/v1/ReplicaSetList, namespace: string, name: string): pulumi.Output<ReplicaSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string): DeploymentRollback
+public getResource(groupVersionKind: apps/v1/StatefulSet, name: string): pulumi.Output<StatefulSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string): DeploymentRollback
+public getResource(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string): pulumi.Output<StatefulSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/Scale, name: string): Scale
+public getResource(groupVersionKind: apps/v1/StatefulSetList, name: string): pulumi.Output<StatefulSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string): Scale
+public getResource(groupVersionKind: apps/v1/StatefulSetList, namespace: string, name: string): pulumi.Output<StatefulSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/StatefulSet, name: string): StatefulSet
+public getResource(groupVersionKind: apps/v1beta1/ControllerRevision, name: string): pulumi.Output<ControllerRevision>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string): StatefulSet
+public getResource(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string): pulumi.Output<ControllerRevision>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/StatefulSetList, name: string): StatefulSetList
+public getResource(groupVersionKind: apps/v1beta1/ControllerRevisionList, name: string): pulumi.Output<ControllerRevisionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta1/StatefulSetList, namespace: string, name: string): StatefulSetList
+public getResource(groupVersionKind: apps/v1beta1/ControllerRevisionList, namespace: string, name: string): pulumi.Output<ControllerRevisionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ControllerRevision, name: string): ControllerRevision
+public getResource(groupVersionKind: apps/v1beta1/Deployment, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string): ControllerRevision
+public getResource(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ControllerRevisionList, name: string): ControllerRevisionList
+public getResource(groupVersionKind: apps/v1beta1/DeploymentList, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ControllerRevisionList, namespace: string, name: string): ControllerRevisionList
+public getResource(groupVersionKind: apps/v1beta1/DeploymentList, namespace: string, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/DaemonSet, name: string): DaemonSet
+public getResource(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string): pulumi.Output<DeploymentRollback>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string): DaemonSet
+public getResource(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string): pulumi.Output<DeploymentRollback>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/DaemonSetList, name: string): DaemonSetList
+public getResource(groupVersionKind: apps/v1beta1/Scale, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/DaemonSetList, namespace: string, name: string): DaemonSetList
+public getResource(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/Deployment, name: string): Deployment
+public getResource(groupVersionKind: apps/v1beta1/StatefulSet, name: string): pulumi.Output<StatefulSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string): Deployment
+public getResource(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string): pulumi.Output<StatefulSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/DeploymentList, name: string): DeploymentList
+public getResource(groupVersionKind: apps/v1beta1/StatefulSetList, name: string): pulumi.Output<StatefulSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/DeploymentList, namespace: string, name: string): DeploymentList
+public getResource(groupVersionKind: apps/v1beta1/StatefulSetList, namespace: string, name: string): pulumi.Output<StatefulSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ReplicaSet, name: string): ReplicaSet
+public getResource(groupVersionKind: apps/v1beta2/ControllerRevision, name: string): pulumi.Output<ControllerRevision>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string): ReplicaSet
+public getResource(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string): pulumi.Output<ControllerRevision>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ReplicaSetList, name: string): ReplicaSetList
+public getResource(groupVersionKind: apps/v1beta2/ControllerRevisionList, name: string): pulumi.Output<ControllerRevisionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/ReplicaSetList, namespace: string, name: string): ReplicaSetList
+public getResource(groupVersionKind: apps/v1beta2/ControllerRevisionList, namespace: string, name: string): pulumi.Output<ControllerRevisionList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/Scale, name: string): Scale
+public getResource(groupVersionKind: apps/v1beta2/DaemonSet, name: string): pulumi.Output<DaemonSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string): Scale
+public getResource(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string): pulumi.Output<DaemonSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/StatefulSet, name: string): StatefulSet
+public getResource(groupVersionKind: apps/v1beta2/DaemonSetList, name: string): pulumi.Output<DaemonSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string): StatefulSet
+public getResource(groupVersionKind: apps/v1beta2/DaemonSetList, namespace: string, name: string): pulumi.Output<DaemonSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/StatefulSetList, name: string): StatefulSetList
+public getResource(groupVersionKind: apps/v1beta2/Deployment, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: apps/v1beta2/StatefulSetList, namespace: string, name: string): StatefulSetList
+public getResource(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string): TokenReview
+public getResource(groupVersionKind: apps/v1beta2/DeploymentList, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string): TokenReview
+public getResource(groupVersionKind: apps/v1beta2/DeploymentList, namespace: string, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string): TokenReview
+public getResource(groupVersionKind: apps/v1beta2/ReplicaSet, name: string): pulumi.Output<ReplicaSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string): TokenReview
+public getResource(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string): pulumi.Output<ReplicaSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string): LocalSubjectAccessReview
+public getResource(groupVersionKind: apps/v1beta2/ReplicaSetList, name: string): pulumi.Output<ReplicaSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string): LocalSubjectAccessReview
+public getResource(groupVersionKind: apps/v1beta2/ReplicaSetList, namespace: string, name: string): pulumi.Output<ReplicaSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string): SelfSubjectAccessReview
+public getResource(groupVersionKind: apps/v1beta2/Scale, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string): SelfSubjectAccessReview
+public getResource(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string): SelfSubjectRulesReview
+public getResource(groupVersionKind: apps/v1beta2/StatefulSet, name: string): pulumi.Output<StatefulSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string): SelfSubjectRulesReview
+public getResource(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string): pulumi.Output<StatefulSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string): SubjectAccessReview
+public getResource(groupVersionKind: apps/v1beta2/StatefulSetList, name: string): pulumi.Output<StatefulSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string): SubjectAccessReview
+public getResource(groupVersionKind: apps/v1beta2/StatefulSetList, namespace: string, name: string): pulumi.Output<StatefulSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string): LocalSubjectAccessReview
+public getResource(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, name: string): pulumi.Output<AuditSink>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string): LocalSubjectAccessReview
+public getResource(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, namespace: string, name: string): pulumi.Output<AuditSink>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string): SelfSubjectAccessReview
+public getResource(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, name: string): pulumi.Output<AuditSinkList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string): SelfSubjectAccessReview
+public getResource(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, namespace: string, name: string): pulumi.Output<AuditSinkList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string): SelfSubjectRulesReview
+public getResource(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string): pulumi.Output<TokenReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string): SelfSubjectRulesReview
+public getResource(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string): pulumi.Output<TokenReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string): SubjectAccessReview
+public getResource(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string): pulumi.Output<TokenReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string): SubjectAccessReview
+public getResource(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string): pulumi.Output<TokenReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, name: string): CrossVersionObjectReference
+public getResource(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string): pulumi.Output<LocalSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, namespace: string, name: string): CrossVersionObjectReference
+public getResource(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string): pulumi.Output<LocalSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string): HorizontalPodAutoscaler
+public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string): pulumi.Output<SelfSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string): HorizontalPodAutoscaler
+public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string): pulumi.Output<SelfSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, name: string): HorizontalPodAutoscalerList
+public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string): pulumi.Output<SelfSubjectRulesReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, namespace: string, name: string): HorizontalPodAutoscalerList
+public getResource(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string): pulumi.Output<SelfSubjectRulesReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/Scale, name: string): Scale
+public getResource(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string): pulumi.Output<SubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string): Scale
+public getResource(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string): pulumi.Output<SubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, name: string): CrossVersionObjectReference
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string): pulumi.Output<LocalSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, namespace: string, name: string): CrossVersionObjectReference
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string): pulumi.Output<LocalSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string): HorizontalPodAutoscaler
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string): pulumi.Output<SelfSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string): HorizontalPodAutoscaler
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string): pulumi.Output<SelfSubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, name: string): HorizontalPodAutoscalerList
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string): pulumi.Output<SelfSubjectRulesReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, namespace: string, name: string): HorizontalPodAutoscalerList
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string): pulumi.Output<SelfSubjectRulesReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1/Job, name: string): Job
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string): pulumi.Output<SubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1/Job, namespace: string, name: string): Job
+public getResource(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string): pulumi.Output<SubjectAccessReview>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1/JobList, name: string): JobList
+public getResource(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, name: string): pulumi.Output<CrossVersionObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1/JobList, namespace: string, name: string): JobList
+public getResource(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, namespace: string, name: string): pulumi.Output<CrossVersionObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1beta1/CronJob, name: string): CronJob
+public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string): pulumi.Output<HorizontalPodAutoscaler>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string): CronJob
+public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string): pulumi.Output<HorizontalPodAutoscaler>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1beta1/CronJobList, name: string): CronJobList
+public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, name: string): pulumi.Output<HorizontalPodAutoscalerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v1beta1/CronJobList, namespace: string, name: string): CronJobList
+public getResource(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, namespace: string, name: string): pulumi.Output<HorizontalPodAutoscalerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v2alpha1/CronJob, name: string): CronJob
+public getResource(groupVersionKind: autoscaling/v1/Scale, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string): CronJob
+public getResource(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v2alpha1/CronJobList, name: string): CronJobList
+public getResource(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, name: string): pulumi.Output<CrossVersionObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: batch/v2alpha1/CronJobList, namespace: string, name: string): CronJobList
+public getResource(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, namespace: string, name: string): pulumi.Output<CrossVersionObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string): CertificateSigningRequest
+public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string): pulumi.Output<HorizontalPodAutoscaler>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string): CertificateSigningRequest
+public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string): pulumi.Output<HorizontalPodAutoscaler>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, name: string): CertificateSigningRequestList
+public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, name: string): pulumi.Output<HorizontalPodAutoscalerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, namespace: string, name: string): CertificateSigningRequestList
+public getResource(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, namespace: string, name: string): pulumi.Output<HorizontalPodAutoscalerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Binding, name: string): Binding
+public getResource(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, name: string): pulumi.Output<CrossVersionObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Binding, namespace: string, name: string): Binding
+public getResource(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, namespace: string, name: string): pulumi.Output<CrossVersionObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ComponentStatus, name: string): ComponentStatus
+public getResource(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, name: string): pulumi.Output<HorizontalPodAutoscaler>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ComponentStatus, namespace: string, name: string): ComponentStatus
+public getResource(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, namespace: string, name: string): pulumi.Output<HorizontalPodAutoscaler>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ComponentStatusList, name: string): ComponentStatusList
+public getResource(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, name: string): pulumi.Output<HorizontalPodAutoscalerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ComponentStatusList, namespace: string, name: string): ComponentStatusList
+public getResource(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, namespace: string, name: string): pulumi.Output<HorizontalPodAutoscalerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ConfigMap, name: string): ConfigMap
+public getResource(groupVersionKind: batch/v1/Job, name: string): pulumi.Output<Job>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ConfigMap, namespace: string, name: string): ConfigMap
+public getResource(groupVersionKind: batch/v1/Job, namespace: string, name: string): pulumi.Output<Job>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ConfigMapList, name: string): ConfigMapList
+public getResource(groupVersionKind: batch/v1/JobList, name: string): pulumi.Output<JobList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ConfigMapList, namespace: string, name: string): ConfigMapList
+public getResource(groupVersionKind: batch/v1/JobList, namespace: string, name: string): pulumi.Output<JobList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Endpoints, name: string): Endpoints
+public getResource(groupVersionKind: batch/v1beta1/CronJob, name: string): pulumi.Output<CronJob>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Endpoints, namespace: string, name: string): Endpoints
+public getResource(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string): pulumi.Output<CronJob>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/EndpointsList, name: string): EndpointsList
+public getResource(groupVersionKind: batch/v1beta1/CronJobList, name: string): pulumi.Output<CronJobList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/EndpointsList, namespace: string, name: string): EndpointsList
+public getResource(groupVersionKind: batch/v1beta1/CronJobList, namespace: string, name: string): pulumi.Output<CronJobList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Event, name: string): Event
+public getResource(groupVersionKind: batch/v2alpha1/CronJob, name: string): pulumi.Output<CronJob>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Event, namespace: string, name: string): Event
+public getResource(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string): pulumi.Output<CronJob>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/EventList, name: string): EventList
+public getResource(groupVersionKind: batch/v2alpha1/CronJobList, name: string): pulumi.Output<CronJobList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/EventList, namespace: string, name: string): EventList
+public getResource(groupVersionKind: batch/v2alpha1/CronJobList, namespace: string, name: string): pulumi.Output<CronJobList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/LimitRange, name: string): LimitRange
+public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string): pulumi.Output<CertificateSigningRequest>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/LimitRange, namespace: string, name: string): LimitRange
+public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string): pulumi.Output<CertificateSigningRequest>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/LimitRangeList, name: string): LimitRangeList
+public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, name: string): pulumi.Output<CertificateSigningRequestList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/LimitRangeList, namespace: string, name: string): LimitRangeList
+public getResource(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, namespace: string, name: string): pulumi.Output<CertificateSigningRequestList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Namespace, name: string): Namespace
+public getResource(groupVersionKind: coordination.k8s.io/v1beta1/Lease, name: string): pulumi.Output<Lease>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Namespace, namespace: string, name: string): Namespace
+public getResource(groupVersionKind: coordination.k8s.io/v1beta1/Lease, namespace: string, name: string): pulumi.Output<Lease>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/NamespaceList, name: string): NamespaceList
+public getResource(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, name: string): pulumi.Output<LeaseList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/NamespaceList, namespace: string, name: string): NamespaceList
+public getResource(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, namespace: string, name: string): pulumi.Output<LeaseList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Node, name: string): Node
+public getResource(groupVersionKind: v1/Binding, name: string): pulumi.Output<Binding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Node, namespace: string, name: string): Node
+public getResource(groupVersionKind: v1/Binding, namespace: string, name: string): pulumi.Output<Binding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/NodeConfigSource, name: string): NodeConfigSource
+public getResource(groupVersionKind: v1/ComponentStatus, name: string): pulumi.Output<ComponentStatus>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/NodeConfigSource, namespace: string, name: string): NodeConfigSource
+public getResource(groupVersionKind: v1/ComponentStatus, namespace: string, name: string): pulumi.Output<ComponentStatus>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/NodeList, name: string): NodeList
+public getResource(groupVersionKind: v1/ComponentStatusList, name: string): pulumi.Output<ComponentStatusList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/NodeList, namespace: string, name: string): NodeList
+public getResource(groupVersionKind: v1/ComponentStatusList, namespace: string, name: string): pulumi.Output<ComponentStatusList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: core/v1/ObjectReference, name: string): ObjectReference
+public getResource(groupVersionKind: v1/ConfigMap, name: string): pulumi.Output<ConfigMap>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string): ObjectReference
+public getResource(groupVersionKind: v1/ConfigMap, namespace: string, name: string): pulumi.Output<ConfigMap>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolume, name: string): PersistentVolume
+public getResource(groupVersionKind: v1/ConfigMapList, name: string): pulumi.Output<ConfigMapList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolume, namespace: string, name: string): PersistentVolume
+public getResource(groupVersionKind: v1/ConfigMapList, namespace: string, name: string): pulumi.Output<ConfigMapList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolumeClaim, name: string): PersistentVolumeClaim
+public getResource(groupVersionKind: v1/Endpoints, name: string): pulumi.Output<Endpoints>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string): PersistentVolumeClaim
+public getResource(groupVersionKind: v1/Endpoints, namespace: string, name: string): pulumi.Output<Endpoints>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolumeClaimList, name: string): PersistentVolumeClaimList
+public getResource(groupVersionKind: v1/EndpointsList, name: string): pulumi.Output<EndpointsList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolumeClaimList, namespace: string, name: string): PersistentVolumeClaimList
+public getResource(groupVersionKind: v1/EndpointsList, namespace: string, name: string): pulumi.Output<EndpointsList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolumeList, name: string): PersistentVolumeList
+public getResource(groupVersionKind: v1/Event, name: string): pulumi.Output<Event>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PersistentVolumeList, namespace: string, name: string): PersistentVolumeList
+public getResource(groupVersionKind: v1/Event, namespace: string, name: string): pulumi.Output<Event>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Pod, name: string): Pod
+public getResource(groupVersionKind: v1/EventList, name: string): pulumi.Output<EventList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Pod, namespace: string, name: string): Pod
+public getResource(groupVersionKind: v1/EventList, namespace: string, name: string): pulumi.Output<EventList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PodList, name: string): PodList
+public getResource(groupVersionKind: v1/LimitRange, name: string): pulumi.Output<LimitRange>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PodList, namespace: string, name: string): PodList
+public getResource(groupVersionKind: v1/LimitRange, namespace: string, name: string): pulumi.Output<LimitRange>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PodTemplate, name: string): PodTemplate
+public getResource(groupVersionKind: v1/LimitRangeList, name: string): pulumi.Output<LimitRangeList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PodTemplate, namespace: string, name: string): PodTemplate
+public getResource(groupVersionKind: v1/LimitRangeList, namespace: string, name: string): pulumi.Output<LimitRangeList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PodTemplateList, name: string): PodTemplateList
+public getResource(groupVersionKind: v1/Namespace, name: string): pulumi.Output<Namespace>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/PodTemplateList, namespace: string, name: string): PodTemplateList
+public getResource(groupVersionKind: v1/Namespace, namespace: string, name: string): pulumi.Output<Namespace>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ReplicationController, name: string): ReplicationController
+public getResource(groupVersionKind: v1/NamespaceList, name: string): pulumi.Output<NamespaceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ReplicationController, namespace: string, name: string): ReplicationController
+public getResource(groupVersionKind: v1/NamespaceList, namespace: string, name: string): pulumi.Output<NamespaceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ReplicationControllerList, name: string): ReplicationControllerList
+public getResource(groupVersionKind: v1/Node, name: string): pulumi.Output<Node>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ReplicationControllerList, namespace: string, name: string): ReplicationControllerList
+public getResource(groupVersionKind: v1/Node, namespace: string, name: string): pulumi.Output<Node>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ResourceQuota, name: string): ResourceQuota
+public getResource(groupVersionKind: v1/NodeList, name: string): pulumi.Output<NodeList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ResourceQuota, namespace: string, name: string): ResourceQuota
+public getResource(groupVersionKind: v1/NodeList, namespace: string, name: string): pulumi.Output<NodeList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ResourceQuotaList, name: string): ResourceQuotaList
+public getResource(groupVersionKind: core/v1/ObjectReference, name: string): pulumi.Output<ObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ResourceQuotaList, namespace: string, name: string): ResourceQuotaList
+public getResource(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string): pulumi.Output<ObjectReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Secret, name: string): Secret
+public getResource(groupVersionKind: v1/PersistentVolume, name: string): pulumi.Output<PersistentVolume>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Secret, namespace: string, name: string): Secret
+public getResource(groupVersionKind: v1/PersistentVolume, namespace: string, name: string): pulumi.Output<PersistentVolume>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/SecretList, name: string): SecretList
+public getResource(groupVersionKind: v1/PersistentVolumeClaim, name: string): pulumi.Output<PersistentVolumeClaim>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/SecretList, namespace: string, name: string): SecretList
+public getResource(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string): pulumi.Output<PersistentVolumeClaim>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Service, name: string): Service
+public getResource(groupVersionKind: v1/PersistentVolumeClaimList, name: string): pulumi.Output<PersistentVolumeClaimList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Service, namespace: string, name: string): Service
+public getResource(groupVersionKind: v1/PersistentVolumeClaimList, namespace: string, name: string): pulumi.Output<PersistentVolumeClaimList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ServiceAccount, name: string): ServiceAccount
+public getResource(groupVersionKind: v1/PersistentVolumeList, name: string): pulumi.Output<PersistentVolumeList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ServiceAccount, namespace: string, name: string): ServiceAccount
+public getResource(groupVersionKind: v1/PersistentVolumeList, namespace: string, name: string): pulumi.Output<PersistentVolumeList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ServiceAccountList, name: string): ServiceAccountList
+public getResource(groupVersionKind: v1/Pod, name: string): pulumi.Output<Pod>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ServiceAccountList, namespace: string, name: string): ServiceAccountList
+public getResource(groupVersionKind: v1/Pod, namespace: string, name: string): pulumi.Output<Pod>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ServiceList, name: string): ServiceList
+public getResource(groupVersionKind: v1/PodList, name: string): pulumi.Output<PodList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/ServiceList, namespace: string, name: string): ServiceList
+public getResource(groupVersionKind: v1/PodList, namespace: string, name: string): pulumi.Output<PodList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: events.k8s.io/v1beta1/Event, name: string): Event
+public getResource(groupVersionKind: v1/PodTemplate, name: string): pulumi.Output<PodTemplate>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string): Event
+public getResource(groupVersionKind: v1/PodTemplate, namespace: string, name: string): pulumi.Output<PodTemplate>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: events.k8s.io/v1beta1/EventList, name: string): EventList
+public getResource(groupVersionKind: v1/PodTemplateList, name: string): pulumi.Output<PodTemplateList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: events.k8s.io/v1beta1/EventList, namespace: string, name: string): EventList
+public getResource(groupVersionKind: v1/PodTemplateList, namespace: string, name: string): pulumi.Output<PodTemplateList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DaemonSet, name: string): DaemonSet
+public getResource(groupVersionKind: v1/ReplicationController, name: string): pulumi.Output<ReplicationController>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string): DaemonSet
+public getResource(groupVersionKind: v1/ReplicationController, namespace: string, name: string): pulumi.Output<ReplicationController>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DaemonSetList, name: string): DaemonSetList
+public getResource(groupVersionKind: v1/ReplicationControllerList, name: string): pulumi.Output<ReplicationControllerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DaemonSetList, namespace: string, name: string): DaemonSetList
+public getResource(groupVersionKind: v1/ReplicationControllerList, namespace: string, name: string): pulumi.Output<ReplicationControllerList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/Deployment, name: string): Deployment
+public getResource(groupVersionKind: v1/ResourceQuota, name: string): pulumi.Output<ResourceQuota>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string): Deployment
+public getResource(groupVersionKind: v1/ResourceQuota, namespace: string, name: string): pulumi.Output<ResourceQuota>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DeploymentList, name: string): DeploymentList
+public getResource(groupVersionKind: v1/ResourceQuotaList, name: string): pulumi.Output<ResourceQuotaList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DeploymentList, namespace: string, name: string): DeploymentList
+public getResource(groupVersionKind: v1/ResourceQuotaList, namespace: string, name: string): pulumi.Output<ResourceQuotaList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string): DeploymentRollback
+public getResource(groupVersionKind: v1/Secret, name: string): pulumi.Output<Secret>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string): DeploymentRollback
+public getResource(groupVersionKind: v1/Secret, namespace: string, name: string): pulumi.Output<Secret>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/Ingress, name: string): Ingress
+public getResource(groupVersionKind: v1/SecretList, name: string): pulumi.Output<SecretList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string): Ingress
+public getResource(groupVersionKind: v1/SecretList, namespace: string, name: string): pulumi.Output<SecretList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/IngressList, name: string): IngressList
+public getResource(groupVersionKind: v1/Service, name: string): pulumi.Output<Service>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/IngressList, namespace: string, name: string): IngressList
+public getResource(groupVersionKind: v1/Service, namespace: string, name: string): pulumi.Output<Service>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicy, name: string): NetworkPolicy
+public getResource(groupVersionKind: v1/ServiceAccount, name: string): pulumi.Output<ServiceAccount>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicy, namespace: string, name: string): NetworkPolicy
+public getResource(groupVersionKind: v1/ServiceAccount, namespace: string, name: string): pulumi.Output<ServiceAccount>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicyList, name: string): NetworkPolicyList
+public getResource(groupVersionKind: v1/ServiceAccountList, name: string): pulumi.Output<ServiceAccountList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicyList, namespace: string, name: string): NetworkPolicyList
+public getResource(groupVersionKind: v1/ServiceAccountList, namespace: string, name: string): pulumi.Output<ServiceAccountList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, name: string): PodSecurityPolicy
+public getResource(groupVersionKind: v1/ServiceList, name: string): pulumi.Output<ServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, namespace: string, name: string): PodSecurityPolicy
+public getResource(groupVersionKind: v1/ServiceList, namespace: string, name: string): pulumi.Output<ServiceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, name: string): PodSecurityPolicyList
+public getResource(groupVersionKind: events.k8s.io/v1beta1/Event, name: string): pulumi.Output<Event>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, namespace: string, name: string): PodSecurityPolicyList
+public getResource(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string): pulumi.Output<Event>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string): ReplicaSet
+public getResource(groupVersionKind: events.k8s.io/v1beta1/EventList, name: string): pulumi.Output<EventList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string): ReplicaSet
+public getResource(groupVersionKind: events.k8s.io/v1beta1/EventList, namespace: string, name: string): pulumi.Output<EventList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/ReplicaSetList, name: string): ReplicaSetList
+public getResource(groupVersionKind: extensions/v1beta1/DaemonSet, name: string): pulumi.Output<DaemonSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/ReplicaSetList, namespace: string, name: string): ReplicaSetList
+public getResource(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string): pulumi.Output<DaemonSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/Scale, name: string): Scale
+public getResource(groupVersionKind: extensions/v1beta1/DaemonSetList, name: string): pulumi.Output<DaemonSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string): Scale
+public getResource(groupVersionKind: extensions/v1beta1/DaemonSetList, namespace: string, name: string): pulumi.Output<DaemonSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIGroup, name: string): APIGroup
+public getResource(groupVersionKind: extensions/v1beta1/Deployment, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIGroup, namespace: string, name: string): APIGroup
+public getResource(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string): pulumi.Output<Deployment>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIGroupList, name: string): APIGroupList
+public getResource(groupVersionKind: extensions/v1beta1/DeploymentList, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIGroupList, namespace: string, name: string): APIGroupList
+public getResource(groupVersionKind: extensions/v1beta1/DeploymentList, namespace: string, name: string): pulumi.Output<DeploymentList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIResourceList, name: string): APIResourceList
+public getResource(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string): pulumi.Output<DeploymentRollback>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIResourceList, namespace: string, name: string): APIResourceList
+public getResource(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string): pulumi.Output<DeploymentRollback>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIVersions, name: string): APIVersions
+public getResource(groupVersionKind: extensions/v1beta1/Ingress, name: string): pulumi.Output<Ingress>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/APIVersions, namespace: string, name: string): APIVersions
+public getResource(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string): pulumi.Output<Ingress>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/DeleteOptions, name: string): DeleteOptions
+public getResource(groupVersionKind: extensions/v1beta1/IngressList, name: string): pulumi.Output<IngressList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/DeleteOptions, namespace: string, name: string): DeleteOptions
+public getResource(groupVersionKind: extensions/v1beta1/IngressList, namespace: string, name: string): pulumi.Output<IngressList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: meta/v1/OwnerReference, name: string): OwnerReference
+public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicy, name: string): pulumi.Output<NetworkPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string): OwnerReference
+public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicy, namespace: string, name: string): pulumi.Output<NetworkPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Status, name: string): Status
+public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicyList, name: string): pulumi.Output<NetworkPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: v1/Status, namespace: string, name: string): Status
+public getResource(groupVersionKind: extensions/v1beta1/NetworkPolicyList, namespace: string, name: string): pulumi.Output<NetworkPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, name: string): NetworkPolicy
+public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, name: string): pulumi.Output<PodSecurityPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, namespace: string, name: string): NetworkPolicy
+public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, namespace: string, name: string): pulumi.Output<PodSecurityPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, name: string): NetworkPolicyList
+public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, name: string): pulumi.Output<PodSecurityPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, namespace: string, name: string): NetworkPolicyList
+public getResource(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, namespace: string, name: string): pulumi.Output<PodSecurityPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: policy/v1beta1/Eviction, name: string): Eviction
+public getResource(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string): pulumi.Output<ReplicaSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: policy/v1beta1/Eviction, namespace: string, name: string): Eviction
+public getResource(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string): pulumi.Output<ReplicaSet>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string): PodDisruptionBudget
+public getResource(groupVersionKind: extensions/v1beta1/ReplicaSetList, name: string): pulumi.Output<ReplicaSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string): PodDisruptionBudget
+public getResource(groupVersionKind: extensions/v1beta1/ReplicaSetList, namespace: string, name: string): pulumi.Output<ReplicaSetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, name: string): PodDisruptionBudgetList
+public getResource(groupVersionKind: extensions/v1beta1/Scale, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, namespace: string, name: string): PodDisruptionBudgetList
+public getResource(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string): pulumi.Output<Scale>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string): ClusterRole
+public getResource(groupVersionKind: v1/APIGroup, name: string): pulumi.Output<APIGroup>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string): ClusterRole
+public getResource(groupVersionKind: v1/APIGroup, namespace: string, name: string): pulumi.Output<APIGroup>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string): ClusterRoleBinding
+public getResource(groupVersionKind: v1/APIGroupList, name: string): pulumi.Output<APIGroupList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string): ClusterRoleBinding
+public getResource(groupVersionKind: v1/APIGroupList, namespace: string, name: string): pulumi.Output<APIGroupList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, name: string): ClusterRoleBindingList
+public getResource(groupVersionKind: v1/APIResourceList, name: string): pulumi.Output<APIResourceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, namespace: string, name: string): ClusterRoleBindingList
+public getResource(groupVersionKind: v1/APIResourceList, namespace: string, name: string): pulumi.Output<APIResourceList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, name: string): ClusterRoleList
+public getResource(groupVersionKind: v1/APIVersions, name: string): pulumi.Output<APIVersions>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, namespace: string, name: string): ClusterRoleList
+public getResource(groupVersionKind: v1/APIVersions, namespace: string, name: string): pulumi.Output<APIVersions>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/Role, name: string): Role
+public getResource(groupVersionKind: v1/DeleteOptions, name: string): pulumi.Output<DeleteOptions>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/Role, namespace: string, name: string): Role
+public getResource(groupVersionKind: v1/DeleteOptions, namespace: string, name: string): pulumi.Output<DeleteOptions>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string): RoleBinding
+public getResource(groupVersionKind: meta/v1/OwnerReference, name: string): pulumi.Output<OwnerReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string): RoleBinding
+public getResource(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string): pulumi.Output<OwnerReference>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, name: string): RoleBindingList
+public getResource(groupVersionKind: v1/Status, name: string): pulumi.Output<Status>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, namespace: string, name: string): RoleBindingList
+public getResource(groupVersionKind: v1/Status, namespace: string, name: string): pulumi.Output<Status>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, name: string): RoleList
+public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, name: string): pulumi.Output<NetworkPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, namespace: string, name: string): RoleList
+public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, namespace: string, name: string): pulumi.Output<NetworkPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string): ClusterRole
+public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, name: string): pulumi.Output<NetworkPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string): ClusterRole
+public getResource(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, namespace: string, name: string): pulumi.Output<NetworkPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string): ClusterRoleBinding
+public getResource(groupVersionKind: policy/v1beta1/Eviction, name: string): pulumi.Output<Eviction>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string): ClusterRoleBinding
+public getResource(groupVersionKind: policy/v1beta1/Eviction, namespace: string, name: string): pulumi.Output<Eviction>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, name: string): ClusterRoleBindingList
+public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string): pulumi.Output<PodDisruptionBudget>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, namespace: string, name: string): ClusterRoleBindingList
+public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string): pulumi.Output<PodDisruptionBudget>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, name: string): ClusterRoleList
+public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, name: string): pulumi.Output<PodDisruptionBudgetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, namespace: string, name: string): ClusterRoleList
+public getResource(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, namespace: string, name: string): pulumi.Output<PodDisruptionBudgetList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, name: string): Role
+public getResource(groupVersionKind: policy/v1beta1/PodSecurityPolicy, name: string): pulumi.Output<PodSecurityPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, namespace: string, name: string): Role
+public getResource(groupVersionKind: policy/v1beta1/PodSecurityPolicy, namespace: string, name: string): pulumi.Output<PodSecurityPolicy>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string): RoleBinding
+public getResource(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, name: string): pulumi.Output<PodSecurityPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string): RoleBinding
+public getResource(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, namespace: string, name: string): pulumi.Output<PodSecurityPolicyList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, name: string): RoleBindingList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string): pulumi.Output<ClusterRole>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, namespace: string, name: string): RoleBindingList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string): pulumi.Output<ClusterRole>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, name: string): RoleList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string): pulumi.Output<ClusterRoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, namespace: string, name: string): RoleList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string): pulumi.Output<ClusterRoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac/v1alpha1/Subject, name: string): Subject
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, name: string): pulumi.Output<ClusterRoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac/v1alpha1/Subject, namespace: string, name: string): Subject
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, namespace: string, name: string): pulumi.Output<ClusterRoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string): ClusterRole
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, name: string): pulumi.Output<ClusterRoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string): ClusterRole
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, namespace: string, name: string): pulumi.Output<ClusterRoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string): ClusterRoleBinding
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/Role, name: string): pulumi.Output<Role>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string): ClusterRoleBinding
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/Role, namespace: string, name: string): pulumi.Output<Role>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, name: string): ClusterRoleBindingList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string): pulumi.Output<RoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, namespace: string, name: string): ClusterRoleBindingList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string): pulumi.Output<RoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, name: string): ClusterRoleList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, name: string): pulumi.Output<RoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, namespace: string, name: string): ClusterRoleList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, namespace: string, name: string): pulumi.Output<RoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, name: string): Role
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, name: string): pulumi.Output<RoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, namespace: string, name: string): Role
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, namespace: string, name: string): pulumi.Output<RoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string): RoleBinding
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string): pulumi.Output<ClusterRole>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string): RoleBinding
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string): pulumi.Output<ClusterRole>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, name: string): RoleBindingList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string): pulumi.Output<ClusterRoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, namespace: string, name: string): RoleBindingList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string): pulumi.Output<ClusterRoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, name: string): RoleList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, name: string): pulumi.Output<ClusterRoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, namespace: string, name: string): RoleList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, namespace: string, name: string): pulumi.Output<ClusterRoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string): PriorityClass
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, name: string): pulumi.Output<ClusterRoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string): PriorityClass
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, namespace: string, name: string): pulumi.Output<ClusterRoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, name: string): PriorityClassList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, name: string): pulumi.Output<Role>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, namespace: string, name: string): PriorityClassList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, namespace: string, name: string): pulumi.Output<Role>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, name: string): PodPreset
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string): pulumi.Output<RoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, namespace: string, name: string): PodPreset
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string): pulumi.Output<RoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, name: string): PodPresetList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, name: string): pulumi.Output<RoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, namespace: string, name: string): PodPresetList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, namespace: string, name: string): pulumi.Output<RoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string): StorageClass
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, name: string): pulumi.Output<RoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string): StorageClass
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, namespace: string, name: string): pulumi.Output<RoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1/StorageClassList, name: string): StorageClassList
+public getResource(groupVersionKind: rbac/v1alpha1/Subject, name: string): pulumi.Output<Subject>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1/StorageClassList, namespace: string, name: string): StorageClassList
+public getResource(groupVersionKind: rbac/v1alpha1/Subject, namespace: string, name: string): pulumi.Output<Subject>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string): VolumeAttachment
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string): pulumi.Output<ClusterRole>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string): VolumeAttachment
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string): pulumi.Output<ClusterRole>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, name: string): VolumeAttachmentList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string): pulumi.Output<ClusterRoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, namespace: string, name: string): VolumeAttachmentList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string): pulumi.Output<ClusterRoleBinding>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string): StorageClass
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, name: string): pulumi.Output<ClusterRoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string): StorageClass
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, namespace: string, name: string): pulumi.Output<ClusterRoleBindingList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, name: string): StorageClassList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, name: string): pulumi.Output<ClusterRoleList>
 ```
 
 
 ```typescript
-public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, namespace: string, name: string): StorageClassList
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, namespace: string, name: string): pulumi.Output<ClusterRoleList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, name: string): pulumi.Output<Role>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, namespace: string, name: string): pulumi.Output<Role>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string): pulumi.Output<RoleBinding>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string): pulumi.Output<RoleBinding>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, name: string): pulumi.Output<RoleBindingList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, namespace: string, name: string): pulumi.Output<RoleBindingList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, name: string): pulumi.Output<RoleList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, namespace: string, name: string): pulumi.Output<RoleList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string): pulumi.Output<PriorityClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string): pulumi.Output<PriorityClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, name: string): pulumi.Output<PriorityClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, namespace: string, name: string): pulumi.Output<PriorityClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string): pulumi.Output<PriorityClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string): pulumi.Output<PriorityClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, name: string): pulumi.Output<PriorityClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, namespace: string, name: string): pulumi.Output<PriorityClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, name: string): pulumi.Output<PodPreset>
+```
+
+
+```typescript
+public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, namespace: string, name: string): pulumi.Output<PodPreset>
+```
+
+
+```typescript
+public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, name: string): pulumi.Output<PodPresetList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, namespace: string, name: string): pulumi.Output<PodPresetList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string): pulumi.Output<StorageClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string): pulumi.Output<StorageClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/StorageClassList, name: string): pulumi.Output<StorageClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/StorageClassList, namespace: string, name: string): pulumi.Output<StorageClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, name: string): pulumi.Output<VolumeAttachment>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, namespace: string, name: string): pulumi.Output<VolumeAttachment>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, name: string): pulumi.Output<VolumeAttachmentList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, namespace: string, name: string): pulumi.Output<VolumeAttachmentList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string): pulumi.Output<VolumeAttachment>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string): pulumi.Output<VolumeAttachment>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, name: string): pulumi.Output<VolumeAttachmentList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, namespace: string, name: string): pulumi.Output<VolumeAttachmentList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string): pulumi.Output<StorageClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string): pulumi.Output<StorageClass>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, name: string): pulumi.Output<StorageClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, namespace: string, name: string): pulumi.Output<StorageClassList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, name: string): pulumi.Output<VolumeAttachment>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, namespace: string, name: string): pulumi.Output<VolumeAttachment>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, name: string): pulumi.Output<VolumeAttachmentList>
+```
+
+
+```typescript
+public getResource(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, namespace: string, name: string): pulumi.Output<VolumeAttachmentList>
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L464">method getResourceProperty</a>
+</h3>
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+getResourceProperty returns a single property of a resource defined by a built-in Kubernetes group/version/kind and name.
+
+For example:
+    getResourceProperty("v1/Service", "nginx", "spec")
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string, property: initializers): pulumi.Output<outputApi.admissionregistration.v1alpha1.Initializer[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, namespace: string, name: string, property: initializers): pulumi.Output<outputApi.admissionregistration.v1alpha1.Initializer[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfiguration, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, name: string, property: items): pulumi.Output<outputApi.admissionregistration.v1alpha1.InitializerConfiguration[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, namespace: string, name: string, property: items): pulumi.Output<outputApi.admissionregistration.v1alpha1.InitializerConfiguration[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1alpha1/InitializerConfigurationList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, name: string, property: webhooks): pulumi.Output<outputApi.admissionregistration.v1beta1.Webhook[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration, namespace: string, name: string, property: webhooks): pulumi.Output<outputApi.admissionregistration.v1beta1.Webhook[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, name: string, property: items): pulumi.Output<outputApi.admissionregistration.v1beta1.MutatingWebhookConfiguration[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, namespace: string, name: string, property: items): pulumi.Output<outputApi.admissionregistration.v1beta1.MutatingWebhookConfiguration[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, name: string, property: webhooks): pulumi.Output<outputApi.admissionregistration.v1beta1.Webhook[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration, namespace: string, name: string, property: webhooks): pulumi.Output<outputApi.admissionregistration.v1beta1.Webhook[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, name: string, property: items): pulumi.Output<outputApi.admissionregistration.v1beta1.ValidatingWebhookConfiguration[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, namespace: string, name: string, property: items): pulumi.Output<outputApi.admissionregistration.v1beta1.ValidatingWebhookConfiguration[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string, property: spec): pulumi.Output<outputApi.apiextensions.v1beta1.CustomResourceDefinitionSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apiextensions.v1beta1.CustomResourceDefinitionSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, name: string, property: status): pulumi.Output<outputApi.apiextensions.v1beta1.CustomResourceDefinitionStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinition, namespace: string, name: string, property: status): pulumi.Output<outputApi.apiextensions.v1beta1.CustomResourceDefinitionStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, name: string, property: items): pulumi.Output<outputApi.apiextensions.v1beta1.CustomResourceDefinition[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apiextensions.v1beta1.CustomResourceDefinition[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIService, namespace: string, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIService, namespace: string, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1/APIServiceList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1/APIServiceList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIService, namespace: string, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIService, namespace: string, name: string, property: status): pulumi.Output<outputApi.apiregistration.v1beta1.APIServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1beta1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1beta1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration.k8s.io/v1beta1/APIServiceList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1beta1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apiregistration.v1beta1.APIService[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apiregistration/v1beta1/APIServiceList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, name: string, property: data): pulumi.Output<outputApi.pkg.runtime.RawExtension>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string, property: data): pulumi.Output<outputApi.pkg.runtime.RawExtension>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, name: string, property: revision): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevision, namespace: string, name: string, property: revision): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, name: string, property: items): pulumi.Output<outputApi.apps.v1.ControllerRevision[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1.ControllerRevision[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ControllerRevisionList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1.DaemonSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1.DaemonSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, name: string, property: status): pulumi.Output<outputApi.apps.v1.DaemonSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1.DaemonSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1.DaemonSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1.DaemonSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DaemonSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, name: string, property: spec): pulumi.Output<outputApi.apps.v1.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, name: string, property: status): pulumi.Output<outputApi.apps.v1.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/Deployment, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, name: string, property: items): pulumi.Output<outputApi.apps.v1.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/DeploymentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1.ReplicaSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1.ReplicaSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, name: string, property: status): pulumi.Output<outputApi.apps.v1.ReplicaSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1.ReplicaSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1.ReplicaSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1.ReplicaSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/ReplicaSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1.StatefulSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1.StatefulSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, name: string, property: status): pulumi.Output<outputApi.apps.v1.StatefulSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1.StatefulSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1.StatefulSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1.StatefulSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1/StatefulSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, name: string, property: data): pulumi.Output<outputApi.pkg.runtime.RawExtension>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string, property: data): pulumi.Output<outputApi.pkg.runtime.RawExtension>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, name: string, property: revision): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevision, namespace: string, name: string, property: revision): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta1.ControllerRevision[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta1.ControllerRevision[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/ControllerRevisionList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta1.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta1.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, name: string, property: status): pulumi.Output<outputApi.apps.v1beta1.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Deployment, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta1.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta1.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta1.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string, property: rollback_to): pulumi.Output<outputApi.apps.v1beta1.RollbackConfig>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string, property: rollback_to): pulumi.Output<outputApi.apps.v1beta1.RollbackConfig>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, name: string, property: updated_annotations): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/DeploymentRollback, namespace: string, name: string, property: updated_annotations): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta1.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta1.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, name: string, property: status): pulumi.Output<outputApi.apps.v1beta1.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/Scale, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta1.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta1.StatefulSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta1.StatefulSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, name: string, property: status): pulumi.Output<outputApi.apps.v1beta1.StatefulSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta1.StatefulSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta1.StatefulSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta1.StatefulSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta1/StatefulSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, name: string, property: data): pulumi.Output<outputApi.pkg.runtime.RawExtension>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string, property: data): pulumi.Output<outputApi.pkg.runtime.RawExtension>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, name: string, property: revision): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevision, namespace: string, name: string, property: revision): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.ControllerRevision[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.ControllerRevision[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ControllerRevisionList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.DaemonSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.DaemonSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.DaemonSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.DaemonSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.DaemonSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.DaemonSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DaemonSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Deployment, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/DeploymentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.ReplicaSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.ReplicaSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.ReplicaSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.ReplicaSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.ReplicaSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.ReplicaSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/ReplicaSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/Scale, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.StatefulSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.apps.v1beta2.StatefulSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.StatefulSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.apps.v1beta2.StatefulSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.StatefulSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.apps.v1beta2.StatefulSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: apps/v1beta2/StatefulSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, name: string, property: spec): pulumi.Output<outputApi.auditregistration.v1alpha1.AuditSinkSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSink, namespace: string, name: string, property: spec): pulumi.Output<outputApi.auditregistration.v1alpha1.AuditSinkSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, name: string, property: items): pulumi.Output<outputApi.auditregistration.v1alpha1.AuditSink[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, namespace: string, name: string, property: items): pulumi.Output<outputApi.auditregistration.v1alpha1.AuditSink[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: auditregistration.k8s.io/v1alpha1/AuditSinkList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string, property: spec): pulumi.Output<outputApi.authentication.v1.TokenReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authentication.v1.TokenReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, name: string, property: status): pulumi.Output<outputApi.authentication.v1.TokenReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1/TokenReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authentication.v1.TokenReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string, property: spec): pulumi.Output<outputApi.authentication.v1beta1.TokenReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authentication.v1beta1.TokenReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, name: string, property: status): pulumi.Output<outputApi.authentication.v1beta1.TokenReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authentication.k8s.io/v1beta1/TokenReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authentication.v1beta1.TokenReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/LocalSubjectAccessReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SelfSubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SelfSubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectAccessReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SelfSubjectRulesReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SelfSubjectRulesReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectRulesReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SelfSubjectRulesReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectRulesReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1/SubjectAccessReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/LocalSubjectAccessReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SelfSubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SelfSubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectAccessReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SelfSubjectRulesReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SelfSubjectRulesReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectRulesReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SelfSubjectRulesReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectRulesReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string, property: spec): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: authorization.k8s.io/v1beta1/SubjectAccessReview, namespace: string, name: string, property: status): pulumi.Output<outputApi.authorization.v1beta1.SubjectAccessReviewStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/CrossVersionObjectReference, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v1.HorizontalPodAutoscalerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v1.HorizontalPodAutoscalerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, name: string, property: status): pulumi.Output<outputApi.autoscaling.v1.HorizontalPodAutoscalerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscaler, namespace: string, name: string, property: status): pulumi.Output<outputApi.autoscaling.v1.HorizontalPodAutoscalerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, name: string, property: items): pulumi.Output<outputApi.autoscaling.v1.HorizontalPodAutoscaler[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, namespace: string, name: string, property: items): pulumi.Output<outputApi.autoscaling.v1.HorizontalPodAutoscaler[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/HorizontalPodAutoscalerList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v1.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v1.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, name: string, property: status): pulumi.Output<outputApi.autoscaling.v1.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v1/Scale, namespace: string, name: string, property: status): pulumi.Output<outputApi.autoscaling.v1.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/CrossVersionObjectReference, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v2beta1.HorizontalPodAutoscalerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v2beta1.HorizontalPodAutoscalerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, name: string, property: status): pulumi.Output<outputApi.autoscaling.v2beta1.HorizontalPodAutoscalerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscaler, namespace: string, name: string, property: status): pulumi.Output<outputApi.autoscaling.v2beta1.HorizontalPodAutoscalerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, name: string, property: items): pulumi.Output<outputApi.autoscaling.v2beta1.HorizontalPodAutoscaler[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, namespace: string, name: string, property: items): pulumi.Output<outputApi.autoscaling.v2beta1.HorizontalPodAutoscaler[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta1/HorizontalPodAutoscalerList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/CrossVersionObjectReference, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v2beta2.HorizontalPodAutoscalerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, namespace: string, name: string, property: spec): pulumi.Output<outputApi.autoscaling.v2beta2.HorizontalPodAutoscalerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, name: string, property: status): pulumi.Output<outputApi.autoscaling.v2beta2.HorizontalPodAutoscalerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscaler, namespace: string, name: string, property: status): pulumi.Output<outputApi.autoscaling.v2beta2.HorizontalPodAutoscalerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, name: string, property: items): pulumi.Output<outputApi.autoscaling.v2beta2.HorizontalPodAutoscaler[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, namespace: string, name: string, property: items): pulumi.Output<outputApi.autoscaling.v2beta2.HorizontalPodAutoscaler[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: autoscaling/v2beta2/HorizontalPodAutoscalerList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, name: string, property: spec): pulumi.Output<outputApi.batch.v1.JobSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, namespace: string, name: string, property: spec): pulumi.Output<outputApi.batch.v1.JobSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, name: string, property: status): pulumi.Output<outputApi.batch.v1.JobStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/Job, namespace: string, name: string, property: status): pulumi.Output<outputApi.batch.v1.JobStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, name: string, property: items): pulumi.Output<outputApi.batch.v1.Job[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, namespace: string, name: string, property: items): pulumi.Output<outputApi.batch.v1.Job[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1/JobList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, name: string, property: spec): pulumi.Output<outputApi.batch.v1beta1.CronJobSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string, property: spec): pulumi.Output<outputApi.batch.v1beta1.CronJobSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, name: string, property: status): pulumi.Output<outputApi.batch.v1beta1.CronJobStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJob, namespace: string, name: string, property: status): pulumi.Output<outputApi.batch.v1beta1.CronJobStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, name: string, property: items): pulumi.Output<outputApi.batch.v1beta1.CronJob[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, namespace: string, name: string, property: items): pulumi.Output<outputApi.batch.v1beta1.CronJob[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v1beta1/CronJobList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, name: string, property: spec): pulumi.Output<outputApi.batch.v2alpha1.CronJobSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string, property: spec): pulumi.Output<outputApi.batch.v2alpha1.CronJobSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, name: string, property: status): pulumi.Output<outputApi.batch.v2alpha1.CronJobStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJob, namespace: string, name: string, property: status): pulumi.Output<outputApi.batch.v2alpha1.CronJobStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, name: string, property: items): pulumi.Output<outputApi.batch.v2alpha1.CronJob[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, namespace: string, name: string, property: items): pulumi.Output<outputApi.batch.v2alpha1.CronJob[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: batch/v2alpha1/CronJobList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string, property: spec): pulumi.Output<outputApi.certificates.v1beta1.CertificateSigningRequestSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string, property: spec): pulumi.Output<outputApi.certificates.v1beta1.CertificateSigningRequestSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, name: string, property: status): pulumi.Output<outputApi.certificates.v1beta1.CertificateSigningRequestStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequest, namespace: string, name: string, property: status): pulumi.Output<outputApi.certificates.v1beta1.CertificateSigningRequestStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, name: string, property: items): pulumi.Output<outputApi.certificates.v1beta1.CertificateSigningRequest[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, namespace: string, name: string, property: items): pulumi.Output<outputApi.certificates.v1beta1.CertificateSigningRequest[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: certificates.k8s.io/v1beta1/CertificateSigningRequestList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, name: string, property: spec): pulumi.Output<outputApi.coordination.v1beta1.LeaseSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/Lease, namespace: string, name: string, property: spec): pulumi.Output<outputApi.coordination.v1beta1.LeaseSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, name: string, property: items): pulumi.Output<outputApi.coordination.v1beta1.Lease[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, namespace: string, name: string, property: items): pulumi.Output<outputApi.coordination.v1beta1.Lease[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: coordination.k8s.io/v1beta1/LeaseList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, name: string, property: target): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Binding, namespace: string, name: string, property: target): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, name: string, property: conditions): pulumi.Output<outputApi.core.v1.ComponentCondition[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, namespace: string, name: string, property: conditions): pulumi.Output<outputApi.core.v1.ComponentCondition[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatus, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, name: string, property: items): pulumi.Output<outputApi.core.v1.ComponentStatus[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.ComponentStatus[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ComponentStatusList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, name: string, property: binary_data): pulumi.Output<any>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, namespace: string, name: string, property: binary_data): pulumi.Output<any>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, name: string, property: data): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, namespace: string, name: string, property: data): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMap, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, name: string, property: items): pulumi.Output<outputApi.core.v1.ConfigMap[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.ConfigMap[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ConfigMapList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, name: string, property: subsets): pulumi.Output<outputApi.core.v1.EndpointSubset[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Endpoints, namespace: string, name: string, property: subsets): pulumi.Output<outputApi.core.v1.EndpointSubset[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, name: string, property: items): pulumi.Output<outputApi.core.v1.Endpoints[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Endpoints[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EndpointsList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: action): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: action): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: count): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: count): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: event_time): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: event_time): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: first_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: first_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: involved_object): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: involved_object): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: last_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: last_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: message): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: message): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: reason): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: reason): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: related): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: related): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: reporting_component): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: reporting_component): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: reporting_instance): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: reporting_instance): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: series): pulumi.Output<outputApi.core.v1.EventSeries>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: series): pulumi.Output<outputApi.core.v1.EventSeries>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: source): pulumi.Output<outputApi.core.v1.EventSource>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: source): pulumi.Output<outputApi.core.v1.EventSource>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, name: string, property: type): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Event, namespace: string, name: string, property: type): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, name: string, property: items): pulumi.Output<outputApi.core.v1.Event[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Event[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/EventList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, name: string, property: spec): pulumi.Output<outputApi.core.v1.LimitRangeSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRange, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.LimitRangeSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, name: string, property: items): pulumi.Output<outputApi.core.v1.LimitRange[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.LimitRange[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/LimitRangeList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, name: string, property: spec): pulumi.Output<outputApi.core.v1.NamespaceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.NamespaceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, name: string, property: status): pulumi.Output<outputApi.core.v1.NamespaceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Namespace, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.NamespaceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, name: string, property: items): pulumi.Output<outputApi.core.v1.Namespace[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Namespace[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NamespaceList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, name: string, property: spec): pulumi.Output<outputApi.core.v1.NodeSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.NodeSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, name: string, property: status): pulumi.Output<outputApi.core.v1.NodeStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Node, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.NodeStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, name: string, property: items): pulumi.Output<outputApi.core.v1.Node[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Node[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/NodeList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: field_path): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: field_path): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: namespace): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: namespace): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: resource_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: resource_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, name: string, property: uid): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: core/v1/ObjectReference, namespace: string, name: string, property: uid): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, name: string, property: spec): pulumi.Output<outputApi.core.v1.PersistentVolumeSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.PersistentVolumeSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, name: string, property: status): pulumi.Output<outputApi.core.v1.PersistentVolumeStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolume, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.PersistentVolumeStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, name: string, property: spec): pulumi.Output<outputApi.core.v1.PersistentVolumeClaimSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.PersistentVolumeClaimSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, name: string, property: status): pulumi.Output<outputApi.core.v1.PersistentVolumeClaimStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaim, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.PersistentVolumeClaimStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, name: string, property: items): pulumi.Output<outputApi.core.v1.PersistentVolumeClaim[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.PersistentVolumeClaim[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeClaimList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, name: string, property: items): pulumi.Output<outputApi.core.v1.PersistentVolume[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.PersistentVolume[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PersistentVolumeList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, name: string, property: spec): pulumi.Output<outputApi.core.v1.PodSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.PodSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, name: string, property: status): pulumi.Output<outputApi.core.v1.PodStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Pod, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.PodStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, name: string, property: items): pulumi.Output<outputApi.core.v1.Pod[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Pod[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, name: string, property: template): pulumi.Output<outputApi.core.v1.PodTemplateSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplate, namespace: string, name: string, property: template): pulumi.Output<outputApi.core.v1.PodTemplateSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, name: string, property: items): pulumi.Output<outputApi.core.v1.PodTemplate[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.PodTemplate[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/PodTemplateList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, name: string, property: spec): pulumi.Output<outputApi.core.v1.ReplicationControllerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.ReplicationControllerSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, name: string, property: status): pulumi.Output<outputApi.core.v1.ReplicationControllerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationController, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.ReplicationControllerStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, name: string, property: items): pulumi.Output<outputApi.core.v1.ReplicationController[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.ReplicationController[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ReplicationControllerList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, name: string, property: spec): pulumi.Output<outputApi.core.v1.ResourceQuotaSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.ResourceQuotaSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, name: string, property: status): pulumi.Output<outputApi.core.v1.ResourceQuotaStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuota, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.ResourceQuotaStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, name: string, property: items): pulumi.Output<outputApi.core.v1.ResourceQuota[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.ResourceQuota[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ResourceQuotaList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, name: string, property: data): pulumi.Output<any>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, namespace: string, name: string, property: data): pulumi.Output<any>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, name: string, property: string_data): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, namespace: string, name: string, property: string_data): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, name: string, property: type): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Secret, namespace: string, name: string, property: type): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, name: string, property: items): pulumi.Output<outputApi.core.v1.Secret[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Secret[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/SecretList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, name: string, property: spec): pulumi.Output<outputApi.core.v1.ServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, namespace: string, name: string, property: spec): pulumi.Output<outputApi.core.v1.ServiceSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, name: string, property: status): pulumi.Output<outputApi.core.v1.ServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Service, namespace: string, name: string, property: status): pulumi.Output<outputApi.core.v1.ServiceStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, name: string, property: automount_service_account_token): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, namespace: string, name: string, property: automount_service_account_token): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, name: string, property: image_pull_secrets): pulumi.Output<outputApi.core.v1.LocalObjectReference[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, namespace: string, name: string, property: image_pull_secrets): pulumi.Output<outputApi.core.v1.LocalObjectReference[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, name: string, property: secrets): pulumi.Output<outputApi.core.v1.ObjectReference[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccount, namespace: string, name: string, property: secrets): pulumi.Output<outputApi.core.v1.ObjectReference[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, name: string, property: items): pulumi.Output<outputApi.core.v1.ServiceAccount[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.ServiceAccount[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceAccountList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, name: string, property: items): pulumi.Output<outputApi.core.v1.Service[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, namespace: string, name: string, property: items): pulumi.Output<outputApi.core.v1.Service[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/ServiceList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: action): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: action): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: deprecated_count): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: deprecated_count): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: deprecated_first_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: deprecated_first_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: deprecated_last_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: deprecated_last_timestamp): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: deprecated_source): pulumi.Output<outputApi.core.v1.EventSource>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: deprecated_source): pulumi.Output<outputApi.core.v1.EventSource>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: event_time): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: event_time): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: note): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: note): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: reason): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: reason): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: regarding): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: regarding): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: related): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: related): pulumi.Output<outputApi.core.v1.ObjectReference>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: reporting_controller): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: reporting_controller): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: reporting_instance): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: reporting_instance): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: series): pulumi.Output<outputApi.events.v1beta1.EventSeries>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: series): pulumi.Output<outputApi.events.v1beta1.EventSeries>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, name: string, property: type): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/Event, namespace: string, name: string, property: type): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, name: string, property: items): pulumi.Output<outputApi.events.v1beta1.Event[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, namespace: string, name: string, property: items): pulumi.Output<outputApi.events.v1beta1.Event[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: events.k8s.io/v1beta1/EventList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.DaemonSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.DaemonSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.DaemonSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.DaemonSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.DaemonSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.DaemonSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DaemonSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.DeploymentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Deployment, namespace: string, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.DeploymentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.Deployment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string, property: rollback_to): pulumi.Output<outputApi.extensions.v1beta1.RollbackConfig>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string, property: rollback_to): pulumi.Output<outputApi.extensions.v1beta1.RollbackConfig>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, name: string, property: updated_annotations): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/DeploymentRollback, namespace: string, name: string, property: updated_annotations): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.IngressSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.IngressSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.IngressStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Ingress, namespace: string, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.IngressStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.Ingress[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, namespace: string, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.Ingress[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/IngressList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.NetworkPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicy, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.NetworkPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.NetworkPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, namespace: string, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.NetworkPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/NetworkPolicyList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.PodSecurityPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.PodSecurityPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.PodSecurityPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.PodSecurityPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.ReplicaSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.ReplicaSetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.ReplicaSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSet, namespace: string, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.ReplicaSetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.ReplicaSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.extensions.v1beta1.ReplicaSet[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/ReplicaSetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string, property: spec): pulumi.Output<outputApi.extensions.v1beta1.ScaleSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: extensions/v1beta1/Scale, namespace: string, name: string, property: status): pulumi.Output<outputApi.extensions.v1beta1.ScaleStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, name: string, property: preferred_version): pulumi.Output<outputApi.meta.v1.GroupVersionForDiscovery>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, namespace: string, name: string, property: preferred_version): pulumi.Output<outputApi.meta.v1.GroupVersionForDiscovery>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, name: string, property: server_address_by_client_cid_rs): pulumi.Output<outputApi.meta.v1.ServerAddressByClientCIDR[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, namespace: string, name: string, property: server_address_by_client_cid_rs): pulumi.Output<outputApi.meta.v1.ServerAddressByClientCIDR[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, name: string, property: versions): pulumi.Output<outputApi.meta.v1.GroupVersionForDiscovery[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroup, namespace: string, name: string, property: versions): pulumi.Output<outputApi.meta.v1.GroupVersionForDiscovery[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroupList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroupList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroupList, name: string, property: groups): pulumi.Output<outputApi.meta.v1.APIGroup[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroupList, namespace: string, name: string, property: groups): pulumi.Output<outputApi.meta.v1.APIGroup[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroupList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIGroupList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, name: string, property: group_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, namespace: string, name: string, property: group_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, name: string, property: resources): pulumi.Output<outputApi.meta.v1.APIResource[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIResourceList, namespace: string, name: string, property: resources): pulumi.Output<outputApi.meta.v1.APIResource[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, name: string, property: server_address_by_client_cid_rs): pulumi.Output<outputApi.meta.v1.ServerAddressByClientCIDR[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, namespace: string, name: string, property: server_address_by_client_cid_rs): pulumi.Output<outputApi.meta.v1.ServerAddressByClientCIDR[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, name: string, property: versions): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/APIVersions, namespace: string, name: string, property: versions): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: dry_run): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: dry_run): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: grace_period_seconds): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: grace_period_seconds): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: orphan_dependents): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: orphan_dependents): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: preconditions): pulumi.Output<outputApi.meta.v1.Preconditions>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: preconditions): pulumi.Output<outputApi.meta.v1.Preconditions>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, name: string, property: propagation_policy): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/DeleteOptions, namespace: string, name: string, property: propagation_policy): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, name: string, property: block_owner_deletion): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string, property: block_owner_deletion): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, name: string, property: controller): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string, property: controller): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, name: string, property: uid): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: meta/v1/OwnerReference, namespace: string, name: string, property: uid): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: code): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: code): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: details): pulumi.Output<outputApi.meta.v1.StatusDetails>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: details): pulumi.Output<outputApi.meta.v1.StatusDetails>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: message): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: message): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: reason): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: reason): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, name: string, property: status): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: v1/Status, namespace: string, name: string, property: status): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, name: string, property: spec): pulumi.Output<outputApi.networking.v1.NetworkPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicy, namespace: string, name: string, property: spec): pulumi.Output<outputApi.networking.v1.NetworkPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, name: string, property: items): pulumi.Output<outputApi.networking.v1.NetworkPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, namespace: string, name: string, property: items): pulumi.Output<outputApi.networking.v1.NetworkPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: networking.k8s.io/v1/NetworkPolicyList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, name: string, property: delete_options): pulumi.Output<outputApi.meta.v1.DeleteOptions>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, namespace: string, name: string, property: delete_options): pulumi.Output<outputApi.meta.v1.DeleteOptions>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/Eviction, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string, property: spec): pulumi.Output<outputApi.policy.v1beta1.PodDisruptionBudgetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string, property: spec): pulumi.Output<outputApi.policy.v1beta1.PodDisruptionBudgetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, name: string, property: status): pulumi.Output<outputApi.policy.v1beta1.PodDisruptionBudgetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudget, namespace: string, name: string, property: status): pulumi.Output<outputApi.policy.v1beta1.PodDisruptionBudgetStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, name: string, property: items): pulumi.Output<outputApi.policy.v1beta1.PodDisruptionBudget[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.policy.v1beta1.PodDisruptionBudget[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodDisruptionBudgetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, name: string, property: spec): pulumi.Output<outputApi.policy.v1beta1.PodSecurityPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicy, namespace: string, name: string, property: spec): pulumi.Output<outputApi.policy.v1beta1.PodSecurityPolicySpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, name: string, property: items): pulumi.Output<outputApi.policy.v1beta1.PodSecurityPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: items): pulumi.Output<outputApi.policy.v1beta1.PodSecurityPolicy[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: policy/v1beta1/PodSecurityPolicyList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string, property: aggregation_rule): pulumi.Output<outputApi.rbac.v1.AggregationRule>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string, property: aggregation_rule): pulumi.Output<outputApi.rbac.v1.AggregationRule>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, name: string, property: rules): pulumi.Output<outputApi.rbac.v1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRole, namespace: string, name: string, property: rules): pulumi.Output<outputApi.rbac.v1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBinding, namespace: string, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, name: string, property: items): pulumi.Output<outputApi.rbac.v1.ClusterRoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1.ClusterRoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleBindingList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, name: string, property: items): pulumi.Output<outputApi.rbac.v1.ClusterRole[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1.ClusterRole[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/ClusterRoleList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, name: string, property: rules): pulumi.Output<outputApi.rbac.v1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/Role, namespace: string, name: string, property: rules): pulumi.Output<outputApi.rbac.v1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBinding, namespace: string, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, name: string, property: items): pulumi.Output<outputApi.rbac.v1.RoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1.RoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleBindingList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, name: string, property: items): pulumi.Output<outputApi.rbac.v1.Role[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1.Role[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1/RoleList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string, property: aggregation_rule): pulumi.Output<outputApi.rbac.v1alpha1.AggregationRule>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string, property: aggregation_rule): pulumi.Output<outputApi.rbac.v1alpha1.AggregationRule>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, name: string, property: rules): pulumi.Output<outputApi.rbac.v1alpha1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRole, namespace: string, name: string, property: rules): pulumi.Output<outputApi.rbac.v1alpha1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1alpha1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1alpha1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1alpha1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBinding, namespace: string, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1alpha1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.ClusterRoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.ClusterRoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleBindingList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.ClusterRole[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.ClusterRole[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/ClusterRoleList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, name: string, property: rules): pulumi.Output<outputApi.rbac.v1alpha1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/Role, namespace: string, name: string, property: rules): pulumi.Output<outputApi.rbac.v1alpha1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1alpha1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1alpha1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1alpha1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBinding, namespace: string, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1alpha1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.RoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.RoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleBindingList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.Role[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1alpha1.Role[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1alpha1/RoleList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, namespace: string, name: string, property: name): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, name: string, property: namespace): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac/v1alpha1/Subject, namespace: string, name: string, property: namespace): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string, property: aggregation_rule): pulumi.Output<outputApi.rbac.v1beta1.AggregationRule>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string, property: aggregation_rule): pulumi.Output<outputApi.rbac.v1beta1.AggregationRule>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, name: string, property: rules): pulumi.Output<outputApi.rbac.v1beta1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRole, namespace: string, name: string, property: rules): pulumi.Output<outputApi.rbac.v1beta1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1beta1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1beta1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1beta1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBinding, namespace: string, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1beta1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.ClusterRoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.ClusterRoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleBindingList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.ClusterRole[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.ClusterRole[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/ClusterRoleList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, name: string, property: rules): pulumi.Output<outputApi.rbac.v1beta1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/Role, namespace: string, name: string, property: rules): pulumi.Output<outputApi.rbac.v1beta1.PolicyRule[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1beta1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string, property: role_ref): pulumi.Output<outputApi.rbac.v1beta1.RoleRef>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1beta1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBinding, namespace: string, name: string, property: subjects): pulumi.Output<outputApi.rbac.v1beta1.Subject[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.RoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.RoleBinding[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleBindingList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.Role[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, namespace: string, name: string, property: items): pulumi.Output<outputApi.rbac.v1beta1.Role[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: rbac.authorization.k8s.io/v1beta1/RoleList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string, property: description): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string, property: description): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string, property: global_default): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string, property: global_default): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, name: string, property: value): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClass, namespace: string, name: string, property: value): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, name: string, property: items): pulumi.Output<outputApi.scheduling.v1alpha1.PriorityClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, namespace: string, name: string, property: items): pulumi.Output<outputApi.scheduling.v1alpha1.PriorityClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1alpha1/PriorityClassList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string, property: description): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string, property: description): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string, property: global_default): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string, property: global_default): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, name: string, property: value): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClass, namespace: string, name: string, property: value): pulumi.Output<number>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, name: string, property: items): pulumi.Output<outputApi.scheduling.v1beta1.PriorityClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, namespace: string, name: string, property: items): pulumi.Output<outputApi.scheduling.v1beta1.PriorityClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: scheduling.k8s.io/v1beta1/PriorityClassList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, name: string, property: spec): pulumi.Output<outputApi.settings.v1alpha1.PodPresetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPreset, namespace: string, name: string, property: spec): pulumi.Output<outputApi.settings.v1alpha1.PodPresetSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, name: string, property: items): pulumi.Output<outputApi.settings.v1alpha1.PodPreset[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, namespace: string, name: string, property: items): pulumi.Output<outputApi.settings.v1alpha1.PodPreset[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: settings.k8s.io/v1alpha1/PodPresetList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: allow_volume_expansion): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: allow_volume_expansion): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: allowed_topologies): pulumi.Output<outputApi.core.v1.TopologySelectorTerm[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: allowed_topologies): pulumi.Output<outputApi.core.v1.TopologySelectorTerm[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: mount_options): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: mount_options): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: parameters): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: parameters): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: provisioner): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: provisioner): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: reclaim_policy): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: reclaim_policy): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, name: string, property: volume_binding_mode): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClass, namespace: string, name: string, property: volume_binding_mode): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, name: string, property: items): pulumi.Output<outputApi.storage.v1.StorageClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, namespace: string, name: string, property: items): pulumi.Output<outputApi.storage.v1.StorageClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/StorageClassList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, name: string, property: spec): pulumi.Output<outputApi.storage.v1.VolumeAttachmentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.storage.v1.VolumeAttachmentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, name: string, property: status): pulumi.Output<outputApi.storage.v1.VolumeAttachmentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachment, namespace: string, name: string, property: status): pulumi.Output<outputApi.storage.v1.VolumeAttachmentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, name: string, property: items): pulumi.Output<outputApi.storage.v1.VolumeAttachment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.storage.v1.VolumeAttachment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1/VolumeAttachmentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string, property: spec): pulumi.Output<outputApi.storage.v1alpha1.VolumeAttachmentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.storage.v1alpha1.VolumeAttachmentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, name: string, property: status): pulumi.Output<outputApi.storage.v1alpha1.VolumeAttachmentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachment, namespace: string, name: string, property: status): pulumi.Output<outputApi.storage.v1alpha1.VolumeAttachmentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, name: string, property: items): pulumi.Output<outputApi.storage.v1alpha1.VolumeAttachment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.storage.v1alpha1.VolumeAttachment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1alpha1/VolumeAttachmentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: allow_volume_expansion): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: allow_volume_expansion): pulumi.Output<boolean>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: allowed_topologies): pulumi.Output<outputApi.core.v1.TopologySelectorTerm[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: allowed_topologies): pulumi.Output<outputApi.core.v1.TopologySelectorTerm[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: mount_options): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: mount_options): pulumi.Output<string[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: parameters): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: parameters): pulumi.Output<{ ... }>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: provisioner): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: provisioner): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: reclaim_policy): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: reclaim_policy): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, name: string, property: volume_binding_mode): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClass, namespace: string, name: string, property: volume_binding_mode): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, name: string, property: items): pulumi.Output<outputApi.storage.v1beta1.StorageClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, namespace: string, name: string, property: items): pulumi.Output<outputApi.storage.v1beta1.StorageClass[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/StorageClassList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ObjectMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, name: string, property: spec): pulumi.Output<outputApi.storage.v1beta1.VolumeAttachmentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, namespace: string, name: string, property: spec): pulumi.Output<outputApi.storage.v1beta1.VolumeAttachmentSpec>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, name: string, property: status): pulumi.Output<outputApi.storage.v1beta1.VolumeAttachmentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachment, namespace: string, name: string, property: status): pulumi.Output<outputApi.storage.v1beta1.VolumeAttachmentStatus>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, namespace: string, name: string, property: api_version): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, name: string, property: items): pulumi.Output<outputApi.storage.v1beta1.VolumeAttachment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, namespace: string, name: string, property: items): pulumi.Output<outputApi.storage.v1beta1.VolumeAttachment[]>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, namespace: string, name: string, property: kind): pulumi.Output<string>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
+```
+
+
+```typescript
+public getResourceProperty(groupVersionKind: storage.k8s.io/v1beta1/VolumeAttachmentList, namespace: string, name: string, property: metadata): pulumi.Output<outputApi.meta.v1.ListMeta>
 ```
 
 <h3 class="pdoc-member-header">
@@ -1689,11 +10412,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L86">method parseTemplate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L160">method parseTemplate</a>
 </h3>
 
 ```typescript
-parseTemplate(yamlStream: string, config: ChartOpts): { ... }
+parseTemplate(yamlStream: string, transformations: { ... }[] | undefined, dependsOn: pulumi.Resource[]): pulumi.Output<{ ... }>
 ```
 
 <h3 class="pdoc-member-header">
@@ -1705,11 +10428,11 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L81">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L76">property resources</a>
 </h3>
 
 ```typescript
-resources: { ... };
+resources: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
@@ -1725,69 +10448,194 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="helmSort">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L109">function helmSort</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L191">function helmSort</a>
 </h2>
 
 ```typescript
 helmSort(a: { ... }, b: { ... }): number
 ```
 
-<h2 class="pdoc-module-header" id="ChartOpts">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L13">interface ChartOpts</a>
+<h2 class="pdoc-module-header" id="isChartOpts">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L51">function isChartOpts</a>
+</h2>
+
+```typescript
+isChartOpts(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="isLocalChartOpts">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L62">function isLocalChartOpts</a>
+</h2>
+
+```typescript
+isLocalChartOpts(o: any): boolean
+```
+
+<h2 class="pdoc-module-header" id="BaseChartOpts">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L13">interface BaseChartOpts</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L15">property chart</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L17">property namespace</a>
 </h3>
 
 ```typescript
-chart: string;
+namespace?: pulumi.Input<string>;
 ```
 
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L21">property fetchOpts</a>
-</h3>
 
-```typescript
-fetchOpts?: FetchOpts;
-```
+The optional namespace to install chart resources into.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L18">property namespace</a>
-</h3>
-
-```typescript
-namespace?: undefined | string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L14">property repo</a>
-</h3>
-
-```typescript
-repo: string;
-```
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L20">property transformations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L26">property transformations</a>
 </h3>
 
 ```typescript
 transformations?: { ... }[];
 ```
 
+
+Optional array of transformations to apply to resources that will be created by this chart prior to
+creation. Allows customization of the chart behaviour without directly modifying the chart itself.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L19">property values</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L21">property values</a>
 </h3>
 
 ```typescript
-values?: any;
+values?: pulumi.Inputs;
 ```
 
+
+Overrides for chart values.
+
+<h2 class="pdoc-module-header" id="ChartOpts">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L29">interface ChartOpts</a>
+</h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L16">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L39">property chart</a>
 </h3>
 
 ```typescript
-version: string;
+chart: pulumi.Input<string>;
 ```
+
+
+The chart to deploy.  If [repo] is provided, this chart name is looked up in the given repository.  Else
+this chart name must be a fully qualified chart URL or `repo/chartname`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L48">property fetchOpts</a>
+</h3>
+
+```typescript
+fetchOpts?: pulumi.Input<FetchOpts>;
+```
+
+
+Additional options to customize the fetching of the Helm chart.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L17">property namespace</a>
+</h3>
+
+```typescript
+namespace?: pulumi.Input<string>;
+```
+
+
+The optional namespace to install chart resources into.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L34">property repo</a>
+</h3>
+
+```typescript
+repo?: pulumi.Input<string>;
+```
+
+
+The repository containing the desired chart.  If not provided, [chart] must be a fully qualified chart URL
+or repo/chartname.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L26">property transformations</a>
+</h3>
+
+```typescript
+transformations?: { ... }[];
+```
+
+
+Optional array of transformations to apply to resources that will be created by this chart prior to
+creation. Allows customization of the chart behaviour without directly modifying the chart itself.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L21">property values</a>
+</h3>
+
+```typescript
+values?: pulumi.Inputs;
+```
+
+
+Overrides for chart values.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L43">property version</a>
+</h3>
+
+```typescript
+version?: pulumi.Input<string>;
+```
+
+
+The version of the chart to deploy. If not provided, the latest version will be deployed.
+
+<h2 class="pdoc-module-header" id="LocalChartOpts">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L55">interface LocalChartOpts</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L17">property namespace</a>
+</h3>
+
+```typescript
+namespace?: pulumi.Input<string>;
+```
+
+
+The optional namespace to install chart resources into.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L59">property path</a>
+</h3>
+
+```typescript
+path: string;
+```
+
+
+The path to the chart directory which contains the `Chart.yaml` file.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L26">property transformations</a>
+</h3>
+
+```typescript
+transformations?: { ... }[];
+```
+
+
+Optional array of transformations to apply to resources that will be created by this chart prior to
+creation. Allows customization of the chart behaviour without directly modifying the chart itself.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L21">property values</a>
+</h3>
+
+```typescript
+values?: pulumi.Inputs;
+```
+
+
+Overrides for chart values.
 

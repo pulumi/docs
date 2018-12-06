@@ -12,7 +12,7 @@ title: Module pkg/runtime
 
 
 <h2 class="pdoc-module-header" id="RawExtension">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14694">interface RawExtension</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16735">interface RawExtension</a>
 </h2>
 
 RawExtension is used to hold extensions in external versions.
@@ -53,7 +53,7 @@ In the case where the object is of an unknown type, a runtime.Unknown object wil
 and stored.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L14698">property Raw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16739">property Raw</a>
 </h3>
 
 ```typescript

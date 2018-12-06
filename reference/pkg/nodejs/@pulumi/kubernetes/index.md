@@ -32,11 +32,13 @@ import * as kubernetes from "@pulumi/kubernetes";
 * <a href="apiextensions">apiextensions</a>
 * <a href="apiregistration">apiregistration</a>
 * <a href="apps">apps</a>
+* <a href="auditregistration">auditregistration</a>
 * <a href="authentication">authentication</a>
 * <a href="authorization">authorization</a>
 * <a href="autoscaling">autoscaling</a>
 * <a href="batch">batch</a>
 * <a href="certificates">certificates</a>
+* <a href="coordination">coordination</a>
 * <a href="core">core</a>
 * <a href="events">events</a>
 * <a href="extensions">extensions</a>
@@ -54,13 +56,13 @@ import * as kubernetes from "@pulumi/kubernetes";
 * <a href="yaml">yaml</a>
 
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1431">class Provider</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3368">class Provider</a>
 </h2>
 
 The provider type for the kubernetes package.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1431">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3368">constructor</a>
 </h3>
 
 ```typescript
@@ -119,11 +121,11 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="fetch">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L224">function fetch</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L324">function fetch</a>
 </h2>
 
 ```typescript
-fetch(chart: string, opts?: FetchOpts): void
+fetch(chart: string, opts?: ResolvedFetchOpts): void
 ```
 
 <h2 class="pdoc-module-header" id="quotePath">
@@ -143,136 +145,136 @@ quoteWindowsPath(path: string): string
 ```
 
 <h2 class="pdoc-module-header" id="FetchOpts">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L163">interface FetchOpts</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L245">interface FetchOpts</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L168">property caFile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L250">property caFile</a>
 </h3>
 
 ```typescript
-caFile?: undefined | string;
+caFile?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L171">property certFile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L253">property certFile</a>
 </h3>
 
 ```typescript
-certFile?: undefined | string;
+certFile?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L178">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L260">property destination</a>
 </h3>
 
 ```typescript
-destination?: undefined | string;
+destination?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L201">property devel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L283">property devel</a>
 </h3>
 
 ```typescript
-devel?: undefined | false | true;
+devel?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L197">property home</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L279">property home</a>
 </h3>
 
 ```typescript
-home?: undefined | string;
+home?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L174">property keyFile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L256">property keyFile</a>
 </h3>
 
 ```typescript
-keyFile?: undefined | string;
+keyFile?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L181">property keyring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L263">property keyring</a>
 </h3>
 
 ```typescript
-keyring?: undefined | string;
+keyring?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L184">property password</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L266">property password</a>
 </h3>
 
 ```typescript
-password?: undefined | string;
+password?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L204">property prov</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L286">property prov</a>
 </h3>
 
 ```typescript
-prov?: undefined | false | true;
+prov?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L187">property repo</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L269">property repo</a>
 </h3>
 
 ```typescript
-repo?: undefined | string;
+repo?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L207">property untar</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L289">property untar</a>
 </h3>
 
 ```typescript
-untar?: undefined | false | true;
+untar?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L191">property untardir</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L273">property untardir</a>
 </h3>
 
 ```typescript
-untardir?: undefined | string;
+untardir?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L194">property username</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L276">property username</a>
 </h3>
 
 ```typescript
-username?: undefined | string;
+username?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L210">property verify</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L292">property verify</a>
 </h3>
 
 ```typescript
-verify?: undefined | false | true;
+verify?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L165">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/helm.ts#L247">property version</a>
 </h3>
 
 ```typescript
-version?: undefined | string;
+version?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1453">interface ProviderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3390">interface ProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a Provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1457">property cluster</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3394">property cluster</a>
 </h3>
 
 ```typescript
@@ -283,7 +285,7 @@ cluster?: pulumi.Input<string>;
 If present, the name of the kubeconfig cluster to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1461">property context</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3398">property context</a>
 </h3>
 
 ```typescript
@@ -294,7 +296,7 @@ context?: pulumi.Input<string>;
 If present, the name of the kubeconfig context to use.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1465">property kubeconfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3402">property kubeconfig</a>
 </h3>
 
 ```typescript
@@ -305,7 +307,7 @@ kubeconfig?: pulumi.Input<string>;
 The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L1469">property namespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/provider.ts#L3406">property namespace</a>
 </h3>
 
 ```typescript

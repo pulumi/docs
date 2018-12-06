@@ -45,6 +45,7 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#Tag">class Tag</a>
 * <a href="#TagCategory">class TagCategory</a>
 * <a href="#VappContainer">class VappContainer</a>
+* <a href="#VappEntity">class VappEntity</a>
 * <a href="#VirtualDisk">class VirtualDisk</a>
 * <a href="#VirtualMachine">class VirtualMachine</a>
 * <a href="#VirtualMachineSnapshot">class VirtualMachineSnapshot</a>
@@ -147,6 +148,8 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#TagState">interface TagState</a>
 * <a href="#VappContainerArgs">interface VappContainerArgs</a>
 * <a href="#VappContainerState">interface VappContainerState</a>
+* <a href="#VappEntityArgs">interface VappEntityArgs</a>
+* <a href="#VappEntityState">interface VappEntityState</a>
 * <a href="#VirtualDiskArgs">interface VirtualDiskArgs</a>
 * <a href="#VirtualDiskState">interface VirtualDiskState</a>
 * <a href="#VirtualMachineArgs">interface VirtualMachineArgs</a>
@@ -156,7 +159,7 @@ import * as vsphere from "@pulumi/vsphere";
 * <a href="#VmfsDatastoreArgs">interface VmfsDatastoreArgs</a>
 * <a href="#VmfsDatastoreState">interface VmfsDatastoreState</a>
 
-<a href="/computeCluster.ts">computeCluster.ts</a> <a href="/computeClusterHostGroup.ts">computeClusterHostGroup.ts</a> <a href="/computeClusterVmAffinityRule.ts">computeClusterVmAffinityRule.ts</a> <a href="/computeClusterVmAntiAffinityRule.ts">computeClusterVmAntiAffinityRule.ts</a> <a href="/computeClusterVmDependencyRule.ts">computeClusterVmDependencyRule.ts</a> <a href="/computeClusterVmGroup.ts">computeClusterVmGroup.ts</a> <a href="/computeClusterVmHostRule.ts">computeClusterVmHostRule.ts</a> <a href="/customAttribute.ts">customAttribute.ts</a> <a href="/datacenter.ts">datacenter.ts</a> <a href="/datastoreCluster.ts">datastoreCluster.ts</a> <a href="/datastoreClusterVmAntiAffinityRule.ts">datastoreClusterVmAntiAffinityRule.ts</a> <a href="/distributedPortGroup.ts">distributedPortGroup.ts</a> <a href="/distributedVirtualSwitch.ts">distributedVirtualSwitch.ts</a> <a href="/dpmHostOverride.ts">dpmHostOverride.ts</a> <a href="/drsVmOverride.ts">drsVmOverride.ts</a> <a href="/file.ts">file.ts</a> <a href="/folder.ts">folder.ts</a> <a href="/getComputeCluster.ts">getComputeCluster.ts</a> <a href="/getCustomAttribute.ts">getCustomAttribute.ts</a> <a href="/getDatacenter.ts">getDatacenter.ts</a> <a href="/getDatastore.ts">getDatastore.ts</a> <a href="/getDatastoreCluster.ts">getDatastoreCluster.ts</a> <a href="/getDistributedVirtualSwitch.ts">getDistributedVirtualSwitch.ts</a> <a href="/getHost.ts">getHost.ts</a> <a href="/getNetwork.ts">getNetwork.ts</a> <a href="/getResourcePool.ts">getResourcePool.ts</a> <a href="/getTag.ts">getTag.ts</a> <a href="/getTagCategory.ts">getTagCategory.ts</a> <a href="/getVirtualMachine.ts">getVirtualMachine.ts</a> <a href="/getVmfsDisks.ts">getVmfsDisks.ts</a> <a href="/haVmOverride.ts">haVmOverride.ts</a> <a href="/hostPortGroup.ts">hostPortGroup.ts</a> <a href="/hostVirtualSwitch.ts">hostVirtualSwitch.ts</a> <a href="/license.ts">license.ts</a> <a href="/nasDatastore.ts">nasDatastore.ts</a> <a href="/provider.ts">provider.ts</a> <a href="/resourcePool.ts">resourcePool.ts</a> <a href="/storageDrsVmOverride.ts">storageDrsVmOverride.ts</a> <a href="/tag.ts">tag.ts</a> <a href="/tagCategory.ts">tagCategory.ts</a> <a href="/utilities.ts">utilities.ts</a> <a href="/vappContainer.ts">vappContainer.ts</a> <a href="/virtualDisk.ts">virtualDisk.ts</a> <a href="/virtualMachine.ts">virtualMachine.ts</a> <a href="/virtualMachineSnapshot.ts">virtualMachineSnapshot.ts</a> <a href="/vmfsDatastore.ts">vmfsDatastore.ts</a> 
+<a href="/computeCluster.ts">computeCluster.ts</a> <a href="/computeClusterHostGroup.ts">computeClusterHostGroup.ts</a> <a href="/computeClusterVmAffinityRule.ts">computeClusterVmAffinityRule.ts</a> <a href="/computeClusterVmAntiAffinityRule.ts">computeClusterVmAntiAffinityRule.ts</a> <a href="/computeClusterVmDependencyRule.ts">computeClusterVmDependencyRule.ts</a> <a href="/computeClusterVmGroup.ts">computeClusterVmGroup.ts</a> <a href="/computeClusterVmHostRule.ts">computeClusterVmHostRule.ts</a> <a href="/customAttribute.ts">customAttribute.ts</a> <a href="/datacenter.ts">datacenter.ts</a> <a href="/datastoreCluster.ts">datastoreCluster.ts</a> <a href="/datastoreClusterVmAntiAffinityRule.ts">datastoreClusterVmAntiAffinityRule.ts</a> <a href="/distributedPortGroup.ts">distributedPortGroup.ts</a> <a href="/distributedVirtualSwitch.ts">distributedVirtualSwitch.ts</a> <a href="/dpmHostOverride.ts">dpmHostOverride.ts</a> <a href="/drsVmOverride.ts">drsVmOverride.ts</a> <a href="/file.ts">file.ts</a> <a href="/folder.ts">folder.ts</a> <a href="/getComputeCluster.ts">getComputeCluster.ts</a> <a href="/getCustomAttribute.ts">getCustomAttribute.ts</a> <a href="/getDatacenter.ts">getDatacenter.ts</a> <a href="/getDatastore.ts">getDatastore.ts</a> <a href="/getDatastoreCluster.ts">getDatastoreCluster.ts</a> <a href="/getDistributedVirtualSwitch.ts">getDistributedVirtualSwitch.ts</a> <a href="/getHost.ts">getHost.ts</a> <a href="/getNetwork.ts">getNetwork.ts</a> <a href="/getResourcePool.ts">getResourcePool.ts</a> <a href="/getTag.ts">getTag.ts</a> <a href="/getTagCategory.ts">getTagCategory.ts</a> <a href="/getVirtualMachine.ts">getVirtualMachine.ts</a> <a href="/getVmfsDisks.ts">getVmfsDisks.ts</a> <a href="/haVmOverride.ts">haVmOverride.ts</a> <a href="/hostPortGroup.ts">hostPortGroup.ts</a> <a href="/hostVirtualSwitch.ts">hostVirtualSwitch.ts</a> <a href="/license.ts">license.ts</a> <a href="/nasDatastore.ts">nasDatastore.ts</a> <a href="/provider.ts">provider.ts</a> <a href="/resourcePool.ts">resourcePool.ts</a> <a href="/storageDrsVmOverride.ts">storageDrsVmOverride.ts</a> <a href="/tag.ts">tag.ts</a> <a href="/tagCategory.ts">tagCategory.ts</a> <a href="/utilities.ts">utilities.ts</a> <a href="/vappContainer.ts">vappContainer.ts</a> <a href="/vappEntity.ts">vappEntity.ts</a> <a href="/virtualDisk.ts">virtualDisk.ts</a> <a href="/virtualMachine.ts">virtualMachine.ts</a> <a href="/virtualMachineSnapshot.ts">virtualMachineSnapshot.ts</a> <a href="/vmfsDatastore.ts">vmfsDatastore.ts</a> 
 
 <h2 class="pdoc-module-header">Modules</h2>
 
@@ -214,7 +217,7 @@ Create a ComputeCluster resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterState): ComputeCluster
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterState, opts?: pulumi.CustomResourceOptions): ComputeCluster
 ```
 
 
@@ -1023,7 +1026,7 @@ Create a ComputeClusterHostGroup resource with the given unique name, arguments,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterHostGroupState): ComputeClusterHostGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterHostGroupState, opts?: pulumi.CustomResourceOptions): ComputeClusterHostGroup
 ```
 
 
@@ -1162,7 +1165,7 @@ Create a ComputeClusterVmAffinityRule resource with the given unique name, argum
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmAffinityRuleState): ComputeClusterVmAffinityRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmAffinityRuleState, opts?: pulumi.CustomResourceOptions): ComputeClusterVmAffinityRule
 ```
 
 
@@ -1324,7 +1327,7 @@ Create a ComputeClusterVmAntiAffinityRule resource with the given unique name, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmAntiAffinityRuleState): ComputeClusterVmAntiAffinityRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmAntiAffinityRuleState, opts?: pulumi.CustomResourceOptions): ComputeClusterVmAntiAffinityRule
 ```
 
 
@@ -1477,7 +1480,7 @@ Create a ComputeClusterVmDependencyRule resource with the given unique name, arg
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmDependencyRuleState): ComputeClusterVmDependencyRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmDependencyRuleState, opts?: pulumi.CustomResourceOptions): ComputeClusterVmDependencyRule
 ```
 
 
@@ -1650,7 +1653,7 @@ Create a ComputeClusterVmGroup resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmGroupState): ComputeClusterVmGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmGroupState, opts?: pulumi.CustomResourceOptions): ComputeClusterVmGroup
 ```
 
 
@@ -1786,7 +1789,7 @@ Create a ComputeClusterVmHostRule resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmHostRuleState): ComputeClusterVmHostRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeClusterVmHostRuleState, opts?: pulumi.CustomResourceOptions): ComputeClusterVmHostRule
 ```
 
 
@@ -1959,7 +1962,7 @@ Create a CustomAttribute resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomAttributeState): CustomAttribute
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomAttributeState, opts?: pulumi.CustomResourceOptions): CustomAttribute
 ```
 
 
@@ -2062,7 +2065,7 @@ Create a Datacenter resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatacenterState): Datacenter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatacenterState, opts?: pulumi.CustomResourceOptions): Datacenter
 ```
 
 
@@ -2213,7 +2216,7 @@ Create a DatastoreCluster resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatastoreClusterState): DatastoreCluster
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatastoreClusterState, opts?: pulumi.CustomResourceOptions): DatastoreCluster
 ```
 
 
@@ -2627,7 +2630,7 @@ Create a DatastoreClusterVmAntiAffinityRule resource with the given unique name,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatastoreClusterVmAntiAffinityRuleState): DatastoreClusterVmAntiAffinityRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatastoreClusterVmAntiAffinityRuleState, opts?: pulumi.CustomResourceOptions): DatastoreClusterVmAntiAffinityRule
 ```
 
 
@@ -2781,7 +2784,7 @@ Create a DistributedPortGroup resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DistributedPortGroupState): DistributedPortGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DistributedPortGroupState, opts?: pulumi.CustomResourceOptions): DistributedPortGroup
 ```
 
 
@@ -3433,7 +3436,7 @@ Create a DistributedVirtualSwitch resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DistributedVirtualSwitchState): DistributedVirtualSwitch
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DistributedVirtualSwitchState, opts?: pulumi.CustomResourceOptions): DistributedVirtualSwitch
 ```
 
 
@@ -4574,7 +4577,7 @@ Create a DpmHostOverride resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DpmHostOverrideState): DpmHostOverride
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DpmHostOverrideState, opts?: pulumi.CustomResourceOptions): DpmHostOverride
 ```
 
 
@@ -4713,7 +4716,7 @@ Create a DrsVmOverride resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DrsVmOverrideState): DrsVmOverride
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DrsVmOverrideState, opts?: pulumi.CustomResourceOptions): DrsVmOverride
 ```
 
 
@@ -4851,7 +4854,7 @@ Create a File resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FileState): File
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FileState, opts?: pulumi.CustomResourceOptions): File
 ```
 
 
@@ -5021,7 +5024,7 @@ Create a Folder resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FolderState): Folder
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FolderState, opts?: pulumi.CustomResourceOptions): Folder
 ```
 
 
@@ -5177,7 +5180,7 @@ Create a HaVmOverride resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HaVmOverrideState): HaVmOverride
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HaVmOverrideState, opts?: pulumi.CustomResourceOptions): HaVmOverride
 ```
 
 
@@ -5471,7 +5474,7 @@ Create a HostPortGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostPortGroupState): HostPortGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostPortGroupState, opts?: pulumi.CustomResourceOptions): HostPortGroup
 ```
 
 
@@ -5788,7 +5791,7 @@ Create a HostVirtualSwitch resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostVirtualSwitchState): HostVirtualSwitch
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostVirtualSwitchState, opts?: pulumi.CustomResourceOptions): HostVirtualSwitch
 ```
 
 
@@ -6124,7 +6127,7 @@ Create a License resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LicenseState): License
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LicenseState, opts?: pulumi.CustomResourceOptions): License
 ```
 
 
@@ -6276,7 +6279,7 @@ Create a NasDatastore resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NasDatastoreState): NasDatastore
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NasDatastoreState, opts?: pulumi.CustomResourceOptions): NasDatastore
 ```
 
 
@@ -6661,7 +6664,7 @@ Create a ResourcePool resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourcePoolState): ResourcePool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourcePoolState, opts?: pulumi.CustomResourceOptions): ResourcePool
 ```
 
 
@@ -6928,7 +6931,7 @@ Create a StorageDrsVmOverride resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StorageDrsVmOverrideState): StorageDrsVmOverride
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StorageDrsVmOverrideState, opts?: pulumi.CustomResourceOptions): StorageDrsVmOverride
 ```
 
 
@@ -7081,7 +7084,7 @@ Create a Tag resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TagState): Tag
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TagState, opts?: pulumi.CustomResourceOptions): Tag
 ```
 
 
@@ -7205,7 +7208,7 @@ Create a TagCategory resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TagCategoryState): TagCategory
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TagCategoryState, opts?: pulumi.CustomResourceOptions): TagCategory
 ```
 
 
@@ -7337,7 +7340,7 @@ Create a VappContainer resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VappContainerState): VappContainer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VappContainerState, opts?: pulumi.CustomResourceOptions): VappContainer
 ```
 
 
@@ -7583,6 +7586,210 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="VappEntity">
+<a class="pdoc-member-name" href="/vappEntity.ts#L16">class VappEntity</a>
+</h2>
+
+The `vsphere_vapp_entity` resource can be used to describe the behavior of an
+entity (virtual machine or sub-vApp container) in a vApp container.
+
+For more information on vSphere vApps, see [this
+page][ref-vsphere-vapp].
+
+[ref-vsphere-vapp]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L79">constructor</a>
+</h3>
+
+```typescript
+new VappEntity(name: string, args: VappEntityArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a VappEntity resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L25">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VappEntityState, opts?: pulumi.CustomResourceOptions): VappEntity
+```
+
+
+Get an existing VappEntity resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L33">property containerId</a>
+</h3>
+
+```typescript
+public containerId: pulumi.Output<string>;
+```
+
+
+[Managed object ID|docs-about-morefs] of the vApp
+container the entity is a member of.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L37">property customAttributes</a>
+</h3>
+
+```typescript
+public customAttributes: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A list of custom attributes to set on this resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L43">property startAction</a>
+</h3>
+
+```typescript
+public startAction: pulumi.Output<string | undefined>;
+```
+
+
+How to start the entity. Valid settings are none
+or powerOn. If set to none, then the entity does not participate in auto-start.
+Default: powerOn
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L48">property startDelay</a>
+</h3>
+
+```typescript
+public startDelay: pulumi.Output<number | undefined>;
+```
+
+
+Delay in seconds before continuing with the next
+entity in the order of entities to be started. Default: 120
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L52">property startOrder</a>
+</h3>
+
+```typescript
+public startOrder: pulumi.Output<number | undefined>;
+```
+
+
+Order to start and stop target in vApp. Default: 1
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L58">property stopAction</a>
+</h3>
+
+```typescript
+public stopAction: pulumi.Output<string | undefined>;
+```
+
+
+Defines the stop action for the entity. Can be set
+to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
+does not participate in auto-stop. Default: powerOff
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L64">property stopDelay</a>
+</h3>
+
+```typescript
+public stopDelay: pulumi.Output<number | undefined>;
+```
+
+
+Delay in seconds before continuing with the next
+entity in the order sequence. This is only used if the stopAction is
+guestShutdown. Default: 120
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L68">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of tag IDs to apply to this object.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L73">property targetId</a>
+</h3>
+
+```typescript
+public targetId: pulumi.Output<string>;
+```
+
+
+[Managed object ID|docs-about-morefs] of the entity
+to power on or power off. This can be a virtual machine or a vApp.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L79">property waitForGuest</a>
+</h3>
+
+```typescript
+public waitForGuest: pulumi.Output<boolean | undefined>;
+```
+
+
+Determines if the VM should be marked as being
+started when VMware Tools are ready instead of waiting for `start_delay`. This
+property has no effect for vApps. Default: false
+
 <h2 class="pdoc-module-header" id="VirtualDisk">
 <a class="pdoc-member-name" href="/virtualDisk.ts#L16">class VirtualDisk</a>
 </h2>
@@ -7615,7 +7822,7 @@ Create a VirtualDisk resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualDiskState): VirtualDisk
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualDiskState, opts?: pulumi.CustomResourceOptions): VirtualDisk
 ```
 
 
@@ -7787,7 +7994,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualMachineState): VirtualMachine
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualMachineState, opts?: pulumi.CustomResourceOptions): VirtualMachine
 ```
 
 
@@ -8755,7 +8962,7 @@ Create a VirtualMachineSnapshot resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualMachineSnapshotState): VirtualMachineSnapshot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualMachineSnapshotState, opts?: pulumi.CustomResourceOptions): VirtualMachineSnapshot
 ```
 
 
@@ -8922,7 +9129,7 @@ Create a VmfsDatastore resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VmfsDatastoreState): VmfsDatastore
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VmfsDatastoreState, opts?: pulumi.CustomResourceOptions): VmfsDatastore
 ```
 
 
@@ -20268,6 +20475,260 @@ tags?: pulumi.Input<pulumi.Input<string>[]>;
 
 The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
+
+<h2 class="pdoc-module-header" id="VappEntityArgs">
+<a class="pdoc-member-name" href="/vappEntity.ts#L186">interface VappEntityArgs</a>
+</h2>
+
+The set of arguments for constructing a VappEntity resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L191">property containerId</a>
+</h3>
+
+```typescript
+containerId: pulumi.Input<string>;
+```
+
+
+[Managed object ID|docs-about-morefs] of the vApp
+container the entity is a member of.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L195">property customAttributes</a>
+</h3>
+
+```typescript
+customAttributes?: pulumi.Input<{ ... }>;
+```
+
+
+A list of custom attributes to set on this resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L201">property startAction</a>
+</h3>
+
+```typescript
+startAction?: pulumi.Input<string>;
+```
+
+
+How to start the entity. Valid settings are none
+or powerOn. If set to none, then the entity does not participate in auto-start.
+Default: powerOn
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L206">property startDelay</a>
+</h3>
+
+```typescript
+startDelay?: pulumi.Input<number>;
+```
+
+
+Delay in seconds before continuing with the next
+entity in the order of entities to be started. Default: 120
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L210">property startOrder</a>
+</h3>
+
+```typescript
+startOrder?: pulumi.Input<number>;
+```
+
+
+Order to start and stop target in vApp. Default: 1
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L216">property stopAction</a>
+</h3>
+
+```typescript
+stopAction?: pulumi.Input<string>;
+```
+
+
+Defines the stop action for the entity. Can be set
+to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
+does not participate in auto-stop. Default: powerOff
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L222">property stopDelay</a>
+</h3>
+
+```typescript
+stopDelay?: pulumi.Input<number>;
+```
+
+
+Delay in seconds before continuing with the next
+entity in the order sequence. This is only used if the stopAction is
+guestShutdown. Default: 120
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L226">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of tag IDs to apply to this object.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L231">property targetId</a>
+</h3>
+
+```typescript
+targetId: pulumi.Input<string>;
+```
+
+
+[Managed object ID|docs-about-morefs] of the entity
+to power on or power off. This can be a virtual machine or a vApp.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L237">property waitForGuest</a>
+</h3>
+
+```typescript
+waitForGuest?: pulumi.Input<boolean>;
+```
+
+
+Determines if the VM should be marked as being
+started when VMware Tools are ready instead of waiting for `start_delay`. This
+property has no effect for vApps. Default: false
+
+<h2 class="pdoc-module-header" id="VappEntityState">
+<a class="pdoc-member-name" href="/vappEntity.ts#L129">interface VappEntityState</a>
+</h2>
+
+Input properties used for looking up and filtering VappEntity resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L134">property containerId</a>
+</h3>
+
+```typescript
+containerId?: pulumi.Input<string>;
+```
+
+
+[Managed object ID|docs-about-morefs] of the vApp
+container the entity is a member of.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L138">property customAttributes</a>
+</h3>
+
+```typescript
+customAttributes?: pulumi.Input<{ ... }>;
+```
+
+
+A list of custom attributes to set on this resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L144">property startAction</a>
+</h3>
+
+```typescript
+startAction?: pulumi.Input<string>;
+```
+
+
+How to start the entity. Valid settings are none
+or powerOn. If set to none, then the entity does not participate in auto-start.
+Default: powerOn
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L149">property startDelay</a>
+</h3>
+
+```typescript
+startDelay?: pulumi.Input<number>;
+```
+
+
+Delay in seconds before continuing with the next
+entity in the order of entities to be started. Default: 120
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L153">property startOrder</a>
+</h3>
+
+```typescript
+startOrder?: pulumi.Input<number>;
+```
+
+
+Order to start and stop target in vApp. Default: 1
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L159">property stopAction</a>
+</h3>
+
+```typescript
+stopAction?: pulumi.Input<string>;
+```
+
+
+Defines the stop action for the entity. Can be set
+to none, powerOff, guestShutdown, or suspend. If set to none, then the entity
+does not participate in auto-stop. Default: powerOff
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L165">property stopDelay</a>
+</h3>
+
+```typescript
+stopDelay?: pulumi.Input<number>;
+```
+
+
+Delay in seconds before continuing with the next
+entity in the order sequence. This is only used if the stopAction is
+guestShutdown. Default: 120
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L169">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of tag IDs to apply to this object.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L174">property targetId</a>
+</h3>
+
+```typescript
+targetId?: pulumi.Input<string>;
+```
+
+
+[Managed object ID|docs-about-morefs] of the entity
+to power on or power off. This can be a virtual machine or a vApp.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/vappEntity.ts#L180">property waitForGuest</a>
+</h3>
+
+```typescript
+waitForGuest?: pulumi.Input<boolean>;
+```
+
+
+Determines if the VM should be marked as being
+started when VMware Tools are ready instead of waiting for `start_delay`. This
+property has no effect for vApps. Default: false
 
 <h2 class="pdoc-module-header" id="VirtualDiskArgs">
 <a class="pdoc-member-name" href="/virtualDisk.ts#L157">interface VirtualDiskArgs</a>

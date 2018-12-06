@@ -12,6 +12,7 @@ title: Module keyvault
 * <a href="#KeyVault">class KeyVault</a>
 * <a href="#Secret">class Secret</a>
 * <a href="#getAccessPolicy">function getAccessPolicy</a>
+* <a href="#getKey">function getKey</a>
 * <a href="#getKeyVault">function getKeyVault</a>
 * <a href="#getSecret">function getSecret</a>
 * <a href="#AccessPolicyArgs">interface AccessPolicyArgs</a>
@@ -20,6 +21,8 @@ title: Module keyvault
 * <a href="#CertifiateState">interface CertifiateState</a>
 * <a href="#GetAccessPolicyArgs">interface GetAccessPolicyArgs</a>
 * <a href="#GetAccessPolicyResult">interface GetAccessPolicyResult</a>
+* <a href="#GetKeyArgs">interface GetKeyArgs</a>
+* <a href="#GetKeyResult">interface GetKeyResult</a>
 * <a href="#GetKeyVaultArgs">interface GetKeyVaultArgs</a>
 * <a href="#GetKeyVaultResult">interface GetKeyVaultResult</a>
 * <a href="#GetSecretArgs">interface GetSecretArgs</a>
@@ -31,7 +34,7 @@ title: Module keyvault
 * <a href="#SecretArgs">interface SecretArgs</a>
 * <a href="#SecretState">interface SecretState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts">keyvault/accessPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts">keyvault/certifiate.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getAccessPolicy.ts">keyvault/getAccessPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts">keyvault/getKeyVault.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getSecret.ts">keyvault/getSecret.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/key.ts">keyvault/key.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts">keyvault/keyVault.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/secret.ts">keyvault/secret.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts">keyvault/accessPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/certifiate.ts">keyvault/certifiate.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getAccessPolicy.ts">keyvault/getAccessPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts">keyvault/getKey.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts">keyvault/getKeyVault.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getSecret.ts">keyvault/getSecret.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/key.ts">keyvault/key.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/keyVault.ts">keyvault/keyVault.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/secret.ts">keyvault/secret.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="AccessPolicy">
@@ -935,6 +938,20 @@ getAccessPolicy(args: GetAccessPolicyArgs, opts?: pulumi.InvokeOptions): Promise
 
 Use this data source to access information about the permissions from the Management Key Vault Templates.
 
+<h2 class="pdoc-module-header" id="getKey">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L13">function getKey</a>
+</h2>
+
+```typescript
+getKey(args: GetKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetKeyResult>
+```
+
+
+Use this data source to access information about an existing Key Vault Key.
+
+~> **Note:** All arguments including the secret value will be stored in the raw state as plain-text.
+[Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
+
 <h2 class="pdoc-module-header" id="getKeyVault">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L10">function getKeyVault</a>
 </h2>
@@ -1406,6 +1423,128 @@ secretPermissions: string[];
 
 
 the secret permissions for the access policy
+
+<h2 class="pdoc-module-header" id="GetKeyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L23">interface GetKeyArgs</a>
+</h2>
+
+A collection of arguments for invoking getKey.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L27">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+Specifies the name of the Key Vault Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L31">property vaultUri</a>
+</h3>
+
+```typescript
+vaultUri: string;
+```
+
+
+Specifies the URI used to access the Key Vault instance, available on the `azurerm_key_vault` Data Source / Resource.
+
+<h2 class="pdoc-module-header" id="GetKeyResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L37">interface GetKeyResult</a>
+</h2>
+
+A collection of values returned by getKey.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L41">property e</a>
+</h3>
+
+```typescript
+e: string;
+```
+
+
+The RSA public exponent of this Key Vault Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L69">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L45">property keyOpts</a>
+</h3>
+
+```typescript
+keyOpts: string[];
+```
+
+
+A list of JSON web key operations assigned to this Key Vault Key
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L49">property keySize</a>
+</h3>
+
+```typescript
+keySize: number;
+```
+
+
+Specifies the Size of this Key Vault Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L53">property keyType</a>
+</h3>
+
+```typescript
+keyType: string;
+```
+
+
+Specifies the Key Type of this Key Vault Key
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L57">property n</a>
+</h3>
+
+```typescript
+n: string;
+```
+
+
+The RSA modulus of this Key Vault Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L61">property tags</a>
+</h3>
+
+```typescript
+tags: { ... };
+```
+
+
+A mapping of tags assigned to this Key Vault Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKey.ts#L65">property version</a>
+</h3>
+
+```typescript
+version: string;
+```
+
+
+The current version of the Key Vault Key.
 
 <h2 class="pdoc-module-header" id="GetKeyVaultArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/getKeyVault.ts#L20">interface GetKeyVaultArgs</a>

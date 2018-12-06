@@ -8,15 +8,18 @@ title: Module operationalinsights
 
 * <a href="#AnalyticsSolution">class AnalyticsSolution</a>
 * <a href="#AnalyticsWorkspace">class AnalyticsWorkspace</a>
+* <a href="#AnalyticsWorkspaceLinkedService">class AnalyticsWorkspaceLinkedService</a>
 * <a href="#getAnalyticsWorkspace">function getAnalyticsWorkspace</a>
 * <a href="#AnalyticsSolutionArgs">interface AnalyticsSolutionArgs</a>
 * <a href="#AnalyticsSolutionState">interface AnalyticsSolutionState</a>
 * <a href="#AnalyticsWorkspaceArgs">interface AnalyticsWorkspaceArgs</a>
+* <a href="#AnalyticsWorkspaceLinkedServiceArgs">interface AnalyticsWorkspaceLinkedServiceArgs</a>
+* <a href="#AnalyticsWorkspaceLinkedServiceState">interface AnalyticsWorkspaceLinkedServiceState</a>
 * <a href="#AnalyticsWorkspaceState">interface AnalyticsWorkspaceState</a>
 * <a href="#GetAnalyticsWorkspaceArgs">interface GetAnalyticsWorkspaceArgs</a>
 * <a href="#GetAnalyticsWorkspaceResult">interface GetAnalyticsWorkspaceResult</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts">operationalinsights/analyticsSolution.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts">operationalinsights/analyticsWorkspace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts">operationalinsights/getAnalyticsWorkspace.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts">operationalinsights/analyticsSolution.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts">operationalinsights/analyticsWorkspace.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts">operationalinsights/analyticsWorkspaceLinkedService.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts">operationalinsights/getAnalyticsWorkspace.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="AnalyticsSolution">
@@ -346,6 +349,149 @@ public workspaceId: pulumi.Output<string>;
 
 The Workspace (or Customer) ID for the Log Analytics Workspace.
 
+<h2 class="pdoc-module-header" id="AnalyticsWorkspaceLinkedService">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L10">class AnalyticsWorkspaceLinkedService</a>
+</h2>
+
+Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L46">constructor</a>
+</h3>
+
+```typescript
+new AnalyticsWorkspaceLinkedService(name: string, args: AnalyticsWorkspaceLinkedServiceArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a AnalyticsWorkspaceLinkedService resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsWorkspaceLinkedServiceState): AnalyticsWorkspaceLinkedService
+```
+
+
+Get an existing AnalyticsWorkspaceLinkedService resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L26">property linkedServiceName</a>
+</h3>
+
+```typescript
+public linkedServiceName: pulumi.Output<string | undefined>;
+```
+
+
+Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in `workspace_name`. Currently it defaults to and only supports `automation` as a value. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L30">property linkedServiceProperties</a>
+</h3>
+
+```typescript
+public linkedServiceProperties: pulumi.Output<{ ... }>;
+```
+
+
+A `linked_service_properties` block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L34">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The automatically generated name of the Linked Service. This cannot be specified. The format is always `<workspace_name>/<linked_service_name>` e.g. `workspace1/Automation`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L38">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L42">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L46">property workspaceName</a>
+</h3>
+
+```typescript
+public workspaceName: pulumi.Output<string>;
+```
+
+
+Name of the Log Analytics Workspace that will contain the linkedServices resource. Changing this forces a new resource to be created.
+
 <h2 class="pdoc-module-header" id="getAnalyticsWorkspace">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/getAnalyticsWorkspace.ts#L10">function getAnalyticsWorkspace</a>
 </h2>
@@ -566,6 +712,139 @@ tags?: pulumi.Input<{ ... }>;
 
 
 A mapping of tags to assign to the resource.
+
+<h2 class="pdoc-module-header" id="AnalyticsWorkspaceLinkedServiceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L121">interface AnalyticsWorkspaceLinkedServiceArgs</a>
+</h2>
+
+The set of arguments for constructing a AnalyticsWorkspaceLinkedService resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L125">property linkedServiceName</a>
+</h3>
+
+```typescript
+linkedServiceName?: pulumi.Input<string>;
+```
+
+
+Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in `workspace_name`. Currently it defaults to and only supports `automation` as a value. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L129">property linkedServiceProperties</a>
+</h3>
+
+```typescript
+linkedServiceProperties: pulumi.Input<{ ... }>;
+```
+
+
+A `linked_service_properties` block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L133">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L137">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L141">property workspaceName</a>
+</h3>
+
+```typescript
+workspaceName: pulumi.Input<string>;
+```
+
+
+Name of the Log Analytics Workspace that will contain the linkedServices resource. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="AnalyticsWorkspaceLinkedServiceState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L91">interface AnalyticsWorkspaceLinkedServiceState</a>
+</h2>
+
+Input properties used for looking up and filtering AnalyticsWorkspaceLinkedService resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L95">property linkedServiceName</a>
+</h3>
+
+```typescript
+linkedServiceName?: pulumi.Input<string>;
+```
+
+
+Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in `workspace_name`. Currently it defaults to and only supports `automation` as a value. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L99">property linkedServiceProperties</a>
+</h3>
+
+```typescript
+linkedServiceProperties?: pulumi.Input<{ ... }>;
+```
+
+
+A `linked_service_properties` block as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L103">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The automatically generated name of the Linked Service. This cannot be specified. The format is always `<workspace_name>/<linked_service_name>` e.g. `workspace1/Automation`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L107">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L111">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspaceLinkedService.ts#L115">property workspaceName</a>
+</h3>
+
+```typescript
+workspaceName?: pulumi.Input<string>;
+```
+
+
+Name of the Log Analytics Workspace that will contain the linkedServices resource. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="AnalyticsWorkspaceState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsWorkspace.ts#L115">interface AnalyticsWorkspaceState</a>

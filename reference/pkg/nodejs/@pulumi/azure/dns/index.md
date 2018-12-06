@@ -581,7 +581,7 @@ public ttl: pulumi.Output<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -724,7 +724,7 @@ public ttl: pulumi.Output<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -878,7 +878,7 @@ public ttl: pulumi.Output<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1021,7 +1021,7 @@ public ttl: pulumi.Output<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1164,7 +1164,7 @@ public ttl: pulumi.Output<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1307,7 +1307,7 @@ public ttl: pulumi.Output<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1992,7 +1992,7 @@ ttl: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L148">property zoneName</a>
@@ -2064,7 +2064,7 @@ ttl?: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/caaRecord.ts#L118">property zoneName</a>
@@ -2268,7 +2268,7 @@ ttl: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L148">property zoneName</a>
@@ -2340,7 +2340,7 @@ ttl?: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/mxRecord.ts#L118">property zoneName</a>
@@ -2423,7 +2423,7 @@ ttl: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L159">property zoneName</a>
@@ -2506,7 +2506,7 @@ ttl?: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/nsRecord.ts#L125">property zoneName</a>
@@ -2578,7 +2578,7 @@ ttl: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/ptrRecord.ts#L148">property zoneName</a>
@@ -2650,7 +2650,7 @@ ttl?: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/ptrRecord.ts#L118">property zoneName</a>
@@ -2722,7 +2722,7 @@ ttl: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/srvRecord.ts#L148">property zoneName</a>
@@ -2794,7 +2794,7 @@ ttl?: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/srvRecord.ts#L118">property zoneName</a>
@@ -2866,7 +2866,7 @@ ttl: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/txtRecord.ts#L148">property zoneName</a>
@@ -2938,7 +2938,7 @@ ttl?: pulumi.Input<number>;
 ```
 
 
-The Time To Live (TTL) of the DNS record.
+The Time To Live (TTL) of the DNS record in seconds.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/dns/txtRecord.ts#L118">property zoneName</a>

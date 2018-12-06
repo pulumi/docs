@@ -335,7 +335,7 @@ public workspaceId: pulumi.Output<string>;
 ```
 
 
-The resource ID of the log analytics workspace to save the data in.
+The ID of the Log Analytics Workspace to save the data in.
 
 <h2 class="pdoc-module-header" id="ContactArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/contact.ts#L106">interface ContactArgs</a>
@@ -497,7 +497,7 @@ workspaceId: pulumi.Input<string>;
 ```
 
 
-The resource ID of the log analytics workspace to save the data in.
+The ID of the Log Analytics Workspace to save the data in.
 
 <h2 class="pdoc-module-header" id="WorkspaceState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L68">interface WorkspaceState</a>
@@ -525,5 +525,5 @@ workspaceId?: pulumi.Input<string>;
 ```
 
 
-The resource ID of the log analytics workspace to save the data in.
+The ID of the Log Analytics Workspace to save the data in.
 

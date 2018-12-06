@@ -467,7 +467,7 @@ deployments.
 </h3>
 
 ```typescript
-public new EventRuleEventSubscription(name: string, eventRuleOrSchedule: eventRule.EventRule | string, handler: EventRuleEventHandler, args: EventRuleEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+public new EventRuleEventSubscription(name: string, eventRuleOrSchedule: eventRule.EventRule | string, handler: EventRuleEventHandler, args: EventRuleEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -1122,7 +1122,7 @@ deployments.
 </h3>
 
 ```typescript
-new LogGroupEventSubscription(name: string, logGroup: logGroup.LogGroup, handler: LogGroupEventHandler, args: LogGroupEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+new LogGroupEventSubscription(name: string, logGroup: logGroup.LogGroup, handler: LogGroupEventHandler, args: LogGroupEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -1989,7 +1989,7 @@ Use this data source to get information about an AWS Cloudwatch Log Group
 </h2>
 
 ```typescript
-onSchedule(name: string, schedule: string, handler: eventRule.EventRuleEventHandler, args?: eventRule.EventRuleEventSubscriptionArgs, opts?: pulumi.ResourceOptions): eventRule.EventRuleEventSubscription
+onSchedule(name: string, schedule: string, handler: eventRule.EventRuleEventHandler, args?: eventRule.EventRuleEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions): eventRule.EventRuleEventSubscription
 ```
 
 

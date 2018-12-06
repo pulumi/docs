@@ -1442,7 +1442,7 @@ deployments.
 Manages a Network Interface located in a Virtual Network, usually attached to a Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L83">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L80">constructor</a>
 </h3>
 
 ```typescript
@@ -1556,18 +1556,15 @@ public internalDnsNameLabel: pulumi.Output<string>;
 Relative DNS name for this NIC used for internal communications between VMs in the same VNet
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L46">property internalFqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L43">property internalFqdn</a>
 </h3>
 
 ```typescript
 public internalFqdn: pulumi.Output<string>;
 ```
 
-
-Fully qualified DNS name supporting internal communications between VMs in the same VNet
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L50">property ipConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L47">property ipConfigurations</a>
 </h3>
 
 ```typescript
@@ -1578,7 +1575,7 @@ public ipConfigurations: pulumi.Output<{ ... }[]>;
 One or more `ip_configuration` associated with this NIC as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L54">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L51">property location</a>
 </h3>
 
 ```typescript
@@ -1589,7 +1586,7 @@ public location: pulumi.Output<string>;
 The location/region where the network interface is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L58">property macAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L55">property macAddress</a>
 </h3>
 
 ```typescript
@@ -1600,7 +1597,7 @@ public macAddress: pulumi.Output<string>;
 The media access control (MAC) address of the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L62">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L59">property name</a>
 </h3>
 
 ```typescript
@@ -1611,7 +1608,7 @@ public name: pulumi.Output<string>;
 The name of the network interface. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L66">property networkSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L63">property networkSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -1622,7 +1619,7 @@ public networkSecurityGroupId: pulumi.Output<string | undefined>;
 The ID of the Network Security Group to associate with the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L70">property privateIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L67">property privateIpAddress</a>
 </h3>
 
 ```typescript
@@ -1633,7 +1630,7 @@ public privateIpAddress: pulumi.Output<string>;
 The private ip address of the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L71">property privateIpAddresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L68">property privateIpAddresses</a>
 </h3>
 
 ```typescript
@@ -1641,7 +1638,7 @@ public privateIpAddresses: pulumi.Output<string[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L75">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L72">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1652,7 +1649,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the network interface. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L79">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L76">property tags</a>
 </h3>
 
 ```typescript
@@ -1675,7 +1672,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L83">property virtualMachineId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L80">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -3041,7 +3038,7 @@ The name of the route. Changing this forces a new resource to be created.
 </h3>
 
 ```typescript
-public nextHopInIpAddress: pulumi.Output<string>;
+public nextHopInIpAddress: pulumi.Output<string | undefined>;
 ```
 
 
@@ -3390,7 +3387,7 @@ public serviceEndpoints: pulumi.Output<string[] | undefined>;
 ```
 
 
-The list of Service endpoints to associate with the subnet. Possible values include: `Microsoft.Storage`, `Microsoft.Sql`.
+The list of Service endpoints to associate with the subnet. Possible values include: `Microsoft.AzureActiveDirectory`, `Microsoft.AzureCosmosDB`, `Microsoft.EventHub`, `Microsoft.KeyVault`, `Microsoft.ServiceBus`, `Microsoft.Sql` and `Microsoft.Storage`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -3421,7 +3418,7 @@ The name of the virtual network to which to attach the subnet. Changing this for
 
 Associates a Network Security Group with a Subnet within a Virtual Network.
 
--> **NOTE:** Subnet <-> Network Security Group associations currently need to be configured on both this resource and using the `network_security_group_id` field on the `azurerm_subnet` resource. The next major version of the AzureRM Provider (2.0) will remove the `network_security_group_id` field from the `azurerm_subnet` resource such that this resource is used to link resources in future.
+-> **NOTE:** Subnet `<->` Network Security Group associations currently need to be configured on both this resource and using the `network_security_group_id` field on the `azurerm_subnet` resource. The next major version of the AzureRM Provider (2.0) will remove the `network_security_group_id` field from the `azurerm_subnet` resource such that this resource is used to link resources in future.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetNetworkSecurityGroupAssociation.ts#L32">constructor</a>
@@ -3522,7 +3519,7 @@ deployments.
 
 Associates a Route Table with a Subnet within a Virtual Network.
 
--> **NOTE:** Subnet <-> Route Table associations currently need to be configured on both this resource and using the `route_table_id` field on the `azurerm_subnet` resource. The next major version of the AzureRM Provider (2.0) will remove the `route_table_id` field from the `azurerm_subnet` resource such that this resource is used to link resources in future.
+-> **NOTE:** Subnet `<->` Route Table associations currently need to be configured on both this resource and using the `route_table_id` field on the `azurerm_subnet` resource. The next major version of the AzureRM Provider (2.0) will remove the `route_table_id` field from the `azurerm_subnet` resource such that this resource is used to link resources in future.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnetRouteTableAssociation.ts#L32">constructor</a>
@@ -3791,7 +3788,7 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 -> **Note:** Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L95">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L96">constructor</a>
 </h3>
 
 ```typescript
@@ -3949,7 +3946,7 @@ create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L75">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L76">property sku</a>
 </h3>
 
 ```typescript
@@ -3959,12 +3956,13 @@ public sku: pulumi.Output<string>;
 
 Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`VpnGw1`, `VpnGw2` and `VpnGw3` and depend on the `type` and `vpn_type` arguments.
+`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2` and `VpnGw3`
+and depend on the `type` and `vpn_type` arguments.
 A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
 sku is only supported by an `ExpressRoute` gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L79">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L80">property tags</a>
 </h3>
 
 ```typescript
@@ -3975,7 +3973,7 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L84">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L85">property type</a>
 </h3>
 
 ```typescript
@@ -3999,7 +3997,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L90">property vpnClientConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L91">property vpnClientConfiguration</a>
 </h3>
 
 ```typescript
@@ -4012,7 +4010,7 @@ is documented below. In this block the Virtual Network Gateway can be configured
 to accept IPSec point-to-site connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L95">property vpnType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L96">property vpnType</a>
 </h3>
 
 ```typescript
@@ -5961,7 +5959,7 @@ enableIpForwarding: boolean;
 Indicate if IP forwarding is set on the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L94">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L91">property id</a>
 </h3>
 
 ```typescript
@@ -5983,18 +5981,15 @@ internalDnsNameLabel: string;
 The internal dns name label of the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L58">property internalFqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L55">property internalFqdn</a>
 </h3>
 
 ```typescript
 internalFqdn: string;
 ```
 
-
-The internal FQDN associated to the specified Network Interface.
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L62">property ipConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L59">property ipConfigurations</a>
 </h3>
 
 ```typescript
@@ -6005,7 +6000,7 @@ ipConfigurations: { ... }[];
 One or more `ip_configuration` blocks as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L66">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L63">property location</a>
 </h3>
 
 ```typescript
@@ -6016,7 +6011,7 @@ location: string;
 The location of the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L70">property macAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L67">property macAddress</a>
 </h3>
 
 ```typescript
@@ -6027,7 +6022,7 @@ macAddress: string;
 The MAC address used by the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L74">property networkSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L71">property networkSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -6038,7 +6033,7 @@ networkSecurityGroupId: string;
 The ID of the network security group associated to the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L78">property privateIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L75">property privateIpAddress</a>
 </h3>
 
 ```typescript
@@ -6049,7 +6044,7 @@ privateIpAddress: string;
 The Private IP Address assigned to this Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L82">property privateIpAddresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L79">property privateIpAddresses</a>
 </h3>
 
 ```typescript
@@ -6060,7 +6055,7 @@ privateIpAddresses: string[];
 The list of private ip addresses associates to the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L86">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L83">property tags</a>
 </h3>
 
 ```typescript
@@ -6071,7 +6066,7 @@ tags: { ... };
 List the tags associated to the specified Network Interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L90">property virtualMachineId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/getNetworkInterface.ts#L87">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -7058,13 +7053,13 @@ networkInterfaceId?: pulumi.Input<string>;
 The ID of the Network Interface. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="NetworkInterfaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L215">interface NetworkInterfaceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L209">interface NetworkInterfaceArgs</a>
 </h2>
 
 The set of arguments for constructing a NetworkInterface resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L219">property appliedDnsServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L213">property appliedDnsServers</a>
 </h3>
 
 ```typescript
@@ -7075,7 +7070,7 @@ appliedDnsServers?: pulumi.Input<pulumi.Input<string>[]>;
 If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L223">property dnsServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L217">property dnsServers</a>
 </h3>
 
 ```typescript
@@ -7086,7 +7081,7 @@ dnsServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of DNS servers IP addresses to use for this NIC, overrides the VNet-level server list
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L227">property enableAcceleratedNetworking</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L221">property enableAcceleratedNetworking</a>
 </h3>
 
 ```typescript
@@ -7097,7 +7092,7 @@ enableAcceleratedNetworking?: pulumi.Input<boolean>;
 Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance sizes are supported. Refer to [Create a Virtual Machine with Accelerated Networking](https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli). Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L231">property enableIpForwarding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L225">property enableIpForwarding</a>
 </h3>
 
 ```typescript
@@ -7108,7 +7103,7 @@ enableIpForwarding?: pulumi.Input<boolean>;
 Enables IP Forwarding on the NIC. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L235">property internalDnsNameLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L229">property internalDnsNameLabel</a>
 </h3>
 
 ```typescript
@@ -7119,18 +7114,15 @@ internalDnsNameLabel?: pulumi.Input<string>;
 Relative DNS name for this NIC used for internal communications between VMs in the same VNet
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L239">property internalFqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L230">property internalFqdn</a>
 </h3>
 
 ```typescript
 internalFqdn?: pulumi.Input<string>;
 ```
 
-
-Fully qualified DNS name supporting internal communications between VMs in the same VNet
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L243">property ipConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L234">property ipConfigurations</a>
 </h3>
 
 ```typescript
@@ -7141,7 +7133,7 @@ ipConfigurations: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One or more `ip_configuration` associated with this NIC as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L247">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L238">property location</a>
 </h3>
 
 ```typescript
@@ -7152,7 +7144,7 @@ location: pulumi.Input<string>;
 The location/region where the network interface is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L251">property macAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L242">property macAddress</a>
 </h3>
 
 ```typescript
@@ -7163,7 +7155,7 @@ macAddress?: pulumi.Input<string>;
 The media access control (MAC) address of the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L255">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L246">property name</a>
 </h3>
 
 ```typescript
@@ -7174,7 +7166,7 @@ name?: pulumi.Input<string>;
 The name of the network interface. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L259">property networkSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L250">property networkSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -7185,7 +7177,7 @@ networkSecurityGroupId?: pulumi.Input<string>;
 The ID of the Network Security Group to associate with the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L263">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L254">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -7196,7 +7188,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the network interface. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L267">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L258">property tags</a>
 </h3>
 
 ```typescript
@@ -7207,7 +7199,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L271">property virtualMachineId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L262">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -7374,13 +7366,13 @@ networkInterfaceId?: pulumi.Input<string>;
 The ID of the Network Interface. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="NetworkInterfaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L148">interface NetworkInterfaceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L145">interface NetworkInterfaceState</a>
 </h2>
 
 Input properties used for looking up and filtering NetworkInterface resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L152">property appliedDnsServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L149">property appliedDnsServers</a>
 </h3>
 
 ```typescript
@@ -7391,7 +7383,7 @@ appliedDnsServers?: pulumi.Input<pulumi.Input<string>[]>;
 If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L156">property dnsServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L153">property dnsServers</a>
 </h3>
 
 ```typescript
@@ -7402,7 +7394,7 @@ dnsServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of DNS servers IP addresses to use for this NIC, overrides the VNet-level server list
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L160">property enableAcceleratedNetworking</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L157">property enableAcceleratedNetworking</a>
 </h3>
 
 ```typescript
@@ -7413,7 +7405,7 @@ enableAcceleratedNetworking?: pulumi.Input<boolean>;
 Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance sizes are supported. Refer to [Create a Virtual Machine with Accelerated Networking](https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli). Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L164">property enableIpForwarding</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L161">property enableIpForwarding</a>
 </h3>
 
 ```typescript
@@ -7424,7 +7416,7 @@ enableIpForwarding?: pulumi.Input<boolean>;
 Enables IP Forwarding on the NIC. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L168">property internalDnsNameLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L165">property internalDnsNameLabel</a>
 </h3>
 
 ```typescript
@@ -7435,18 +7427,15 @@ internalDnsNameLabel?: pulumi.Input<string>;
 Relative DNS name for this NIC used for internal communications between VMs in the same VNet
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L172">property internalFqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L166">property internalFqdn</a>
 </h3>
 
 ```typescript
 internalFqdn?: pulumi.Input<string>;
 ```
 
-
-Fully qualified DNS name supporting internal communications between VMs in the same VNet
-
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L176">property ipConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L170">property ipConfigurations</a>
 </h3>
 
 ```typescript
@@ -7457,7 +7446,7 @@ ipConfigurations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One or more `ip_configuration` associated with this NIC as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L180">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L174">property location</a>
 </h3>
 
 ```typescript
@@ -7468,7 +7457,7 @@ location?: pulumi.Input<string>;
 The location/region where the network interface is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L184">property macAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L178">property macAddress</a>
 </h3>
 
 ```typescript
@@ -7479,7 +7468,7 @@ macAddress?: pulumi.Input<string>;
 The media access control (MAC) address of the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L188">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L182">property name</a>
 </h3>
 
 ```typescript
@@ -7490,7 +7479,7 @@ name?: pulumi.Input<string>;
 The name of the network interface. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L192">property networkSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L186">property networkSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -7501,7 +7490,7 @@ networkSecurityGroupId?: pulumi.Input<string>;
 The ID of the Network Security Group to associate with the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L196">property privateIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L190">property privateIpAddress</a>
 </h3>
 
 ```typescript
@@ -7512,7 +7501,7 @@ privateIpAddress?: pulumi.Input<string>;
 The private ip address of the network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L197">property privateIpAddresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L191">property privateIpAddresses</a>
 </h3>
 
 ```typescript
@@ -7520,7 +7509,7 @@ privateIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L201">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L195">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -7531,7 +7520,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the network interface. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L205">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L199">property tags</a>
 </h3>
 
 ```typescript
@@ -7542,7 +7531,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L209">property virtualMachineId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/networkInterface.ts#L203">property virtualMachineId</a>
 </h3>
 
 ```typescript
@@ -9052,7 +9041,7 @@ serviceEndpoints?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-The list of Service endpoints to associate with the subnet. Possible values include: `Microsoft.Storage`, `Microsoft.Sql`.
+The list of Service endpoints to associate with the subnet. Possible values include: `Microsoft.AzureActiveDirectory`, `Microsoft.AzureCosmosDB`, `Microsoft.EventHub`, `Microsoft.KeyVault`, `Microsoft.ServiceBus`, `Microsoft.Sql` and `Microsoft.Storage`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L177">property virtualNetworkName</a>
@@ -9258,7 +9247,7 @@ serviceEndpoints?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-The list of Service endpoints to associate with the subnet. Possible values include: `Microsoft.Storage`, `Microsoft.Sql`.
+The list of Service endpoints to associate with the subnet. Possible values include: `Microsoft.AzureActiveDirectory`, `Microsoft.AzureCosmosDB`, `Microsoft.EventHub`, `Microsoft.KeyVault`, `Microsoft.ServiceBus`, `Microsoft.Sql` and `Microsoft.Storage`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/subnet.ts#L139">property virtualNetworkName</a>
@@ -9361,13 +9350,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L237">interface VirtualNetworkGatewayArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L239">interface VirtualNetworkGatewayArgs</a>
 </h2>
 
 The set of arguments for constructing a VirtualNetworkGateway resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L244">property activeActive</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L246">property activeActive</a>
 </h3>
 
 ```typescript
@@ -9381,7 +9370,7 @@ will be created. An active-active gateway requires a `HighPerformance` or an
 Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L245">property bgpSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L247">property bgpSettings</a>
 </h3>
 
 ```typescript
@@ -9389,7 +9378,7 @@ bgpSettings?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L253">property defaultLocalNetworkGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L255">property defaultLocalNetworkGatewayId</a>
 </h3>
 
 ```typescript
@@ -9404,7 +9393,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 If not specified, forced tunneling is disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L258">property enableBgp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L260">property enableBgp</a>
 </h3>
 
 ```typescript
@@ -9416,7 +9405,7 @@ If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L264">property ipConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L266">property ipConfigurations</a>
 </h3>
 
 ```typescript
@@ -9429,7 +9418,7 @@ An active-standby gateway requires exactly one `ip_configuration` block whereas
 an active-active gateway requires exactly two `ip_configuration` blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L269">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L271">property location</a>
 </h3>
 
 ```typescript
@@ -9441,7 +9430,7 @@ The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L274">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L276">property name</a>
 </h3>
 
 ```typescript
@@ -9453,7 +9442,7 @@ The name of the Virtual Network Gateway. Changing the name
 forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L280">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L282">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -9466,7 +9455,7 @@ create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L288">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L291">property sku</a>
 </h3>
 
 ```typescript
@@ -9476,12 +9465,13 @@ sku: pulumi.Input<string>;
 
 Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`VpnGw1`, `VpnGw2` and `VpnGw3` and depend on the `type` and `vpn_type` arguments.
+`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2` and `VpnGw3`
+and depend on the `type` and `vpn_type` arguments.
 A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
 sku is only supported by an `ExpressRoute` gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L292">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L295">property tags</a>
 </h3>
 
 ```typescript
@@ -9492,7 +9482,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L297">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L300">property type</a>
 </h3>
 
 ```typescript
@@ -9504,7 +9494,7 @@ The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L303">property vpnClientConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L306">property vpnClientConfiguration</a>
 </h3>
 
 ```typescript
@@ -9517,7 +9507,7 @@ is documented below. In this block the Virtual Network Gateway can be configured
 to accept IPSec point-to-site connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L308">property vpnType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L311">property vpnType</a>
 </h3>
 
 ```typescript
@@ -9919,13 +9909,13 @@ in which the connection will be created. Changing the gateway forces a new
 resource to be created.
 
 <h2 class="pdoc-module-header" id="VirtualNetworkGatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L160">interface VirtualNetworkGatewayState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L161">interface VirtualNetworkGatewayState</a>
 </h2>
 
 Input properties used for looking up and filtering VirtualNetworkGateway resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L167">property activeActive</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L168">property activeActive</a>
 </h3>
 
 ```typescript
@@ -9939,7 +9929,7 @@ will be created. An active-active gateway requires a `HighPerformance` or an
 Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L168">property bgpSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L169">property bgpSettings</a>
 </h3>
 
 ```typescript
@@ -9947,7 +9937,7 @@ bgpSettings?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L176">property defaultLocalNetworkGatewayId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L177">property defaultLocalNetworkGatewayId</a>
 </h3>
 
 ```typescript
@@ -9962,7 +9952,7 @@ gateway is created will be routed (*forced tunneling*). Refer to the
 If not specified, forced tunneling is disabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L181">property enableBgp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L182">property enableBgp</a>
 </h3>
 
 ```typescript
@@ -9974,7 +9964,7 @@ If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L187">property ipConfigurations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L188">property ipConfigurations</a>
 </h3>
 
 ```typescript
@@ -9987,7 +9977,7 @@ An active-standby gateway requires exactly one `ip_configuration` block whereas
 an active-active gateway requires exactly two `ip_configuration` blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L192">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L193">property location</a>
 </h3>
 
 ```typescript
@@ -9999,7 +9989,7 @@ The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L197">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L198">property name</a>
 </h3>
 
 ```typescript
@@ -10011,7 +10001,7 @@ The name of the Virtual Network Gateway. Changing the name
 forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L203">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L204">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -10024,7 +10014,7 @@ create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L211">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L213">property sku</a>
 </h3>
 
 ```typescript
@@ -10034,12 +10024,13 @@ sku?: pulumi.Input<string>;
 
 Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`VpnGw1`, `VpnGw2` and `VpnGw3` and depend on the `type` and `vpn_type` arguments.
+`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2` and `VpnGw3`
+and depend on the `type` and `vpn_type` arguments.
 A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
 sku is only supported by an `ExpressRoute` gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L215">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L217">property tags</a>
 </h3>
 
 ```typescript
@@ -10050,7 +10041,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L220">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L222">property type</a>
 </h3>
 
 ```typescript
@@ -10062,7 +10053,7 @@ The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L226">property vpnClientConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L228">property vpnClientConfiguration</a>
 </h3>
 
 ```typescript
@@ -10075,7 +10066,7 @@ is documented below. In this block the Virtual Network Gateway can be configured
 to accept IPSec point-to-site connections.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L231">property vpnType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/network/virtualNetworkGateway.ts#L233">property vpnType</a>
 </h3>
 
 ```typescript

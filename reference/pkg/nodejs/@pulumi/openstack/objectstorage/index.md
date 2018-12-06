@@ -45,7 +45,7 @@ Create a Container resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerState): Container
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerState, opts?: pulumi.CustomResourceOptions): Container
 ```
 
 
@@ -232,7 +232,7 @@ Create a ContainerObject resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerObjectState): ContainerObject
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerObjectState, opts?: pulumi.CustomResourceOptions): ContainerObject
 ```
 
 
@@ -555,7 +555,7 @@ Create a TempUrl resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TempUrlState): TempUrl
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TempUrlState, opts?: pulumi.CustomResourceOptions): TempUrl
 ```
 
 

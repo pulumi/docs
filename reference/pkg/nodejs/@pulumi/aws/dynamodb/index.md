@@ -421,7 +421,7 @@ The number of write units for this index
 </h3>
 
 ```typescript
-new TableEventSubscription(name: string, table: table.Table, handler: TableEventHandler, args: TableEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+new TableEventSubscription(name: string, table: table.Table, handler: TableEventHandler, args: TableEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">

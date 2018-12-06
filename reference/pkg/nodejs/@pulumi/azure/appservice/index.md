@@ -518,7 +518,7 @@ deployments.
 Manages a Function App.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L90">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L94">constructor</a>
 </h3>
 
 ```typescript
@@ -620,7 +620,18 @@ public defaultHostname: pulumi.Output<string>;
 The default hostname associated with the Function App - such as `mysite.azurewebsites.net`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L46">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L46">property enableBuiltinLogging</a>
+</h3>
+
+```typescript
+public enableBuiltinLogging: pulumi.Output<boolean | undefined>;
+```
+
+
+Should the built-in logging of this Function App be enabled? Defaults to `true`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L50">property enabled</a>
 </h3>
 
 ```typescript
@@ -631,7 +642,7 @@ public enabled: pulumi.Output<boolean | undefined>;
 Is the Function App enabled?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L50">property httpsOnly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L54">property httpsOnly</a>
 </h3>
 
 ```typescript
@@ -654,7 +665,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L54">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L58">property identity</a>
 </h3>
 
 ```typescript
@@ -665,7 +676,7 @@ public identity: pulumi.Output<{ ... }>;
 An `identity` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L58">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L62">property location</a>
 </h3>
 
 ```typescript
@@ -676,7 +687,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L62">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L66">property name</a>
 </h3>
 
 ```typescript
@@ -687,7 +698,7 @@ public name: pulumi.Output<string>;
 The name of the Connection String.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L66">property outboundIpAddresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L70">property outboundIpAddresses</a>
 </h3>
 
 ```typescript
@@ -698,7 +709,7 @@ public outboundIpAddresses: pulumi.Output<string>;
 A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L70">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L74">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -709,7 +720,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the Function App.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L74">property siteConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L78">property siteConfig</a>
 </h3>
 
 ```typescript
@@ -720,7 +731,7 @@ public siteConfig: pulumi.Output<{ ... }>;
 A `site_config` object as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L78">property siteCredential</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L82">property siteCredential</a>
 </h3>
 
 ```typescript
@@ -731,7 +742,7 @@ public siteCredential: pulumi.Output<{ ... }>;
 A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L82">property storageConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L86">property storageConnectionString</a>
 </h3>
 
 ```typescript
@@ -742,7 +753,7 @@ public storageConnectionString: pulumi.Output<string>;
 The connection string of the backend storage account which will be used by this Function App (such as the dashboard, logs).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L86">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L90">property tags</a>
 </h3>
 
 ```typescript
@@ -765,7 +776,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L90">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L94">property version</a>
 </h3>
 
 ```typescript
@@ -1673,13 +1684,13 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="FunctionAppArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L234">interface FunctionAppArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L244">interface FunctionAppArgs</a>
 </h2>
 
 The set of arguments for constructing a FunctionApp resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L238">property appServicePlanId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L248">property appServicePlanId</a>
 </h3>
 
 ```typescript
@@ -1690,7 +1701,7 @@ appServicePlanId: pulumi.Input<string>;
 The ID of the App Service Plan within which to create this Function App. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L242">property appSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L252">property appSettings</a>
 </h3>
 
 ```typescript
@@ -1701,7 +1712,7 @@ appSettings?: pulumi.Input<{ ... }>;
 A key-value pair of App Settings.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L246">property clientAffinityEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L256">property clientAffinityEnabled</a>
 </h3>
 
 ```typescript
@@ -1712,7 +1723,7 @@ clientAffinityEnabled?: pulumi.Input<boolean>;
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L250">property connectionStrings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L260">property connectionStrings</a>
 </h3>
 
 ```typescript
@@ -1723,7 +1734,18 @@ connectionStrings?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 An `connection_string` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L254">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L264">property enableBuiltinLogging</a>
+</h3>
+
+```typescript
+enableBuiltinLogging?: pulumi.Input<boolean>;
+```
+
+
+Should the built-in logging of this Function App be enabled? Defaults to `true`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L268">property enabled</a>
 </h3>
 
 ```typescript
@@ -1734,7 +1756,7 @@ enabled?: pulumi.Input<boolean>;
 Is the Function App enabled?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L258">property httpsOnly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L272">property httpsOnly</a>
 </h3>
 
 ```typescript
@@ -1745,7 +1767,7 @@ httpsOnly?: pulumi.Input<boolean>;
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L262">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L276">property identity</a>
 </h3>
 
 ```typescript
@@ -1756,7 +1778,7 @@ identity?: pulumi.Input<{ ... }>;
 An `identity` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L266">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L280">property location</a>
 </h3>
 
 ```typescript
@@ -1767,7 +1789,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L270">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L284">property name</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1800,7 @@ name?: pulumi.Input<string>;
 The name of the Connection String.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L274">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L288">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1789,7 +1811,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the Function App.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L278">property siteConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L292">property siteConfig</a>
 </h3>
 
 ```typescript
@@ -1800,7 +1822,7 @@ siteConfig?: pulumi.Input<{ ... }>;
 A `site_config` object as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L282">property storageConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L296">property storageConnectionString</a>
 </h3>
 
 ```typescript
@@ -1811,7 +1833,7 @@ storageConnectionString: pulumi.Input<string>;
 The connection string of the backend storage account which will be used by this Function App (such as the dashboard, logs).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L286">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L300">property tags</a>
 </h3>
 
 ```typescript
@@ -1822,7 +1844,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L290">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L304">property version</a>
 </h3>
 
 ```typescript
@@ -1833,13 +1855,13 @@ version?: pulumi.Input<string>;
 The runtime version associated with the Function App. Defaults to `~1`.
 
 <h2 class="pdoc-module-header" id="FunctionAppState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L160">interface FunctionAppState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L166">interface FunctionAppState</a>
 </h2>
 
 Input properties used for looking up and filtering FunctionApp resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L164">property appServicePlanId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L170">property appServicePlanId</a>
 </h3>
 
 ```typescript
@@ -1850,7 +1872,7 @@ appServicePlanId?: pulumi.Input<string>;
 The ID of the App Service Plan within which to create this Function App. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L168">property appSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L174">property appSettings</a>
 </h3>
 
 ```typescript
@@ -1861,7 +1883,7 @@ appSettings?: pulumi.Input<{ ... }>;
 A key-value pair of App Settings.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L172">property clientAffinityEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L178">property clientAffinityEnabled</a>
 </h3>
 
 ```typescript
@@ -1872,7 +1894,7 @@ clientAffinityEnabled?: pulumi.Input<boolean>;
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L176">property connectionStrings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L182">property connectionStrings</a>
 </h3>
 
 ```typescript
@@ -1883,7 +1905,7 @@ connectionStrings?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 An `connection_string` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L180">property defaultHostname</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L186">property defaultHostname</a>
 </h3>
 
 ```typescript
@@ -1894,7 +1916,18 @@ defaultHostname?: pulumi.Input<string>;
 The default hostname associated with the Function App - such as `mysite.azurewebsites.net`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L184">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L190">property enableBuiltinLogging</a>
+</h3>
+
+```typescript
+enableBuiltinLogging?: pulumi.Input<boolean>;
+```
+
+
+Should the built-in logging of this Function App be enabled? Defaults to `true`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L194">property enabled</a>
 </h3>
 
 ```typescript
@@ -1905,7 +1938,7 @@ enabled?: pulumi.Input<boolean>;
 Is the Function App enabled?
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L188">property httpsOnly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L198">property httpsOnly</a>
 </h3>
 
 ```typescript
@@ -1916,7 +1949,7 @@ httpsOnly?: pulumi.Input<boolean>;
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L192">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L202">property identity</a>
 </h3>
 
 ```typescript
@@ -1927,7 +1960,7 @@ identity?: pulumi.Input<{ ... }>;
 An `identity` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L196">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L206">property location</a>
 </h3>
 
 ```typescript
@@ -1938,7 +1971,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L200">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L210">property name</a>
 </h3>
 
 ```typescript
@@ -1949,7 +1982,7 @@ name?: pulumi.Input<string>;
 The name of the Connection String.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L204">property outboundIpAddresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L214">property outboundIpAddresses</a>
 </h3>
 
 ```typescript
@@ -1960,7 +1993,7 @@ outboundIpAddresses?: pulumi.Input<string>;
 A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L208">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L218">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1971,7 +2004,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the Function App.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L212">property siteConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L222">property siteConfig</a>
 </h3>
 
 ```typescript
@@ -1982,7 +2015,7 @@ siteConfig?: pulumi.Input<{ ... }>;
 A `site_config` object as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L216">property siteCredential</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L226">property siteCredential</a>
 </h3>
 
 ```typescript
@@ -1993,7 +2026,7 @@ siteCredential?: pulumi.Input<{ ... }>;
 A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L220">property storageConnectionString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L230">property storageConnectionString</a>
 </h3>
 
 ```typescript
@@ -2004,7 +2037,7 @@ storageConnectionString?: pulumi.Input<string>;
 The connection string of the backend storage account which will be used by this Function App (such as the dashboard, logs).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L224">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L234">property tags</a>
 </h3>
 
 ```typescript
@@ -2015,7 +2048,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L228">property version</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/functionApp.ts#L238">property version</a>
 </h3>
 
 ```typescript

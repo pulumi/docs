@@ -109,14 +109,17 @@ import * as aws from "@pulumi/aws";
 * <a href="codepipeline">codepipeline</a>
 * <a href="cognito">cognito</a>
 * <a href="config">config</a>
+* <a href="datasync">datasync</a>
 * <a href="dax">dax</a>
 * <a href="devicefarm">devicefarm</a>
 * <a href="directconnect">directconnect</a>
 * <a href="directoryservice">directoryservice</a>
+* <a href="dlm">dlm</a>
 * <a href="dms">dms</a>
 * <a href="dynamodb">dynamodb</a>
 * <a href="ebs">ebs</a>
 * <a href="ec2">ec2</a>
+* <a href="ec2transitgateway">ec2transitgateway</a>
 * <a href="ecr">ecr</a>
 * <a href="ecs">ecs</a>
 * <a href="efs">efs</a>
@@ -128,8 +131,10 @@ import * as aws from "@pulumi/aws";
 * <a href="elasticsearch">elasticsearch</a>
 * <a href="elastictranscoder">elastictranscoder</a>
 * <a href="emr">emr</a>
+* <a href="gamelift">gamelift</a>
 * <a href="glacier">glacier</a>
 * <a href="glue">glue</a>
+* <a href="guardduty">guardduty</a>
 * <a href="iam">iam</a>
 * <a href="inspector">inspector</a>
 * <a href="iot">iot</a>
@@ -353,7 +358,7 @@ The Canonical User ID data source allows access to the [canonical user ID](http:
 for the effective account in which Terraform is working.
 
 <h2 class="pdoc-module-header" id="getElasticIp">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L13">function getElasticIp</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L10">function getElasticIp</a>
 </h2>
 
 ```typescript
@@ -362,9 +367,6 @@ getElasticIp(args?: GetElasticIpArgs, opts?: pulumi.InvokeOptions): Promise<GetE
 
 
 `aws_eip` provides details about a specific Elastic IP.
-
-This resource can prove useful when a module accepts an allocation ID or
-public IP as an input variable and needs to determine the other.
 
 <h2 class="pdoc-module-header" id="getEnv">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/utilities.ts#L7">function getEnv</a>
@@ -1336,13 +1338,24 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h2 class="pdoc-module-header" id="GetElasticIpArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L24">interface GetElasticIpArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L23">interface GetElasticIpArgs</a>
 </h2>
 
 A collection of arguments for invoking getElasticIp.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L28">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L27">property filters</a>
+</h3>
+
+```typescript
+filters?: { ... }[];
+```
+
+
+One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L31">property id</a>
 </h3>
 
 ```typescript
@@ -1350,10 +1363,10 @@ id?: string;
 ```
 
 
-The allocation id of the specific EIP to retrieve.
+The allocation id of the specific VPC EIP to retrieve. If a classic EIP is required, do NOT set `id`, only set `public_ip`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L32">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L35">property publicIp</a>
 </h3>
 
 ```typescript
@@ -1363,27 +1376,132 @@ publicIp?: string;
 
 The public IP of the specific EIP to retrieve.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L39">property tags</a>
+</h3>
+
+```typescript
+tags?: { ... };
+```
+
+
+A mapping of tags, each pair of which must exactly match a pair on the desired Elastic IP
+
 <h2 class="pdoc-module-header" id="GetElasticIpResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L38">interface GetElasticIpResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L45">interface GetElasticIpResult</a>
 </h2>
 
 A collection of values returned by getElasticIp.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L39">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L49">property associationId</a>
+</h3>
+
+```typescript
+associationId: string;
+```
+
+
+The ID representing the association of the address with an instance in a VPC.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L53">property domain</a>
+</h3>
+
+```typescript
+domain: string;
+```
+
+
+Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L57">property id</a>
 </h3>
 
 ```typescript
 id: string;
 ```
 
+
+If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L40">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L61">property instanceId</a>
+</h3>
+
+```typescript
+instanceId: string;
+```
+
+
+The ID of the instance that the address is associated with (if any).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L65">property networkInterfaceId</a>
+</h3>
+
+```typescript
+networkInterfaceId: string;
+```
+
+
+The ID of the network interface.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L69">property networkInterfaceOwnerId</a>
+</h3>
+
+```typescript
+networkInterfaceOwnerId: string;
+```
+
+
+The ID of the AWS account that owns the network interface.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L73">property privateIp</a>
+</h3>
+
+```typescript
+privateIp: string;
+```
+
+
+The private IP address associated with the Elastic IP address.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L77">property publicIp</a>
 </h3>
 
 ```typescript
 publicIp: string;
 ```
+
+
+Public IP address of Elastic IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L81">property publicIpv4Pool</a>
+</h3>
+
+```typescript
+publicIpv4Pool: string;
+```
+
+
+The ID of an address pool.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getElasticIp.ts#L85">property tags</a>
+</h3>
+
+```typescript
+tags: { ... };
+```
+
+
+Key-value map of tags associated with Elastic IP.
 
 <h2 class="pdoc-module-header" id="GetIpRangesArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L20">interface GetIpRangesArgs</a>

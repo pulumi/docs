@@ -63,7 +63,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ListenerState): Listener
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ListenerState, opts?: pulumi.CustomResourceOptions): Listener
 ```
 
 
@@ -291,7 +291,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerState): LoadBalancer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerState, opts?: pulumi.CustomResourceOptions): LoadBalancer
 ```
 
 
@@ -504,7 +504,7 @@ Create a Member resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberState): Member
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberState, opts?: pulumi.CustomResourceOptions): Member
 ```
 
 
@@ -692,7 +692,7 @@ Create a MemberV1 resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberV1State): MemberV1
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberV1State, opts?: pulumi.CustomResourceOptions): MemberV1
 ```
 
 
@@ -856,7 +856,7 @@ Create a Monitor resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MonitorState): Monitor
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MonitorState, opts?: pulumi.CustomResourceOptions): Monitor
 ```
 
 
@@ -1082,7 +1082,7 @@ Create a MonitorV1 resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MonitorV1State): MonitorV1
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MonitorV1State, opts?: pulumi.CustomResourceOptions): MonitorV1
 ```
 
 
@@ -1143,7 +1143,7 @@ public expectedCodes: pulumi.Output<string | undefined>;
 ```
 
 
-equired for HTTP(S) types. Expected HTTP codes
+Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202". Changing this updates the expected_codes
 of the existing monitor.
@@ -1289,7 +1289,7 @@ Create a Pool resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PoolState): Pool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PoolState, opts?: pulumi.CustomResourceOptions): Pool
 ```
 
 
@@ -1490,7 +1490,7 @@ Create a PoolV1 resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PoolV1State): PoolV1
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PoolV1State, opts?: pulumi.CustomResourceOptions): PoolV1
 ```
 
 
@@ -1667,7 +1667,7 @@ Create a Vip resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VipState): Vip
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VipState, opts?: pulumi.CustomResourceOptions): Vip
 ```
 
 
@@ -3249,7 +3249,7 @@ expectedCodes?: pulumi.Input<string>;
 ```
 
 
-equired for HTTP(S) types. Expected HTTP codes
+Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202". Changing this updates the expected_codes
 of the existing monitor.
@@ -3385,7 +3385,7 @@ expectedCodes?: pulumi.Input<string>;
 ```
 
 
-equired for HTTP(S) types. Expected HTTP codes
+Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
 "200", or a range like "200-202". Changing this updates the expected_codes
 of the existing monitor.

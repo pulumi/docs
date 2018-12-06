@@ -189,7 +189,7 @@ deployments.
 Provides a resource to create an organization.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -247,7 +247,18 @@ public arn: pulumi.Output<string>;
 ARN of the organization
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L30">property featureSet</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L30">property awsServiceAccessPrincipals</a>
+</h3>
+
+```typescript
+public awsServiceAccessPrincipals: pulumi.Output<string[] | undefined>;
+```
+
+
+List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L34">property featureSet</a>
 </h3>
 
 ```typescript
@@ -270,7 +281,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L34">property masterAccountArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L38">property masterAccountArn</a>
 </h3>
 
 ```typescript
@@ -281,7 +292,7 @@ public masterAccountArn: pulumi.Output<string>;
 ARN of the master account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L38">property masterAccountEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L42">property masterAccountEmail</a>
 </h3>
 
 ```typescript
@@ -292,7 +303,7 @@ public masterAccountEmail: pulumi.Output<string>;
 Email address of the master account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L42">property masterAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L46">property masterAccountId</a>
 </h3>
 
 ```typescript
@@ -681,13 +692,24 @@ status?: pulumi.Input<string>;
 ```
 
 <h2 class="pdoc-module-header" id="OrganizationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L102">interface OrganizationArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L112">interface OrganizationArgs</a>
 </h2>
 
 The set of arguments for constructing a Organization resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L106">property featureSet</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L116">property awsServiceAccessPrincipals</a>
+</h3>
+
+```typescript
+awsServiceAccessPrincipals?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L120">property featureSet</a>
 </h3>
 
 ```typescript
@@ -698,13 +720,13 @@ featureSet?: pulumi.Input<string>;
 Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 
 <h2 class="pdoc-module-header" id="OrganizationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L76">interface OrganizationState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L82">interface OrganizationState</a>
 </h2>
 
 Input properties used for looking up and filtering Organization resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L80">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L86">property arn</a>
 </h3>
 
 ```typescript
@@ -715,7 +737,18 @@ arn?: pulumi.Input<string>;
 ARN of the organization
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L84">property featureSet</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L90">property awsServiceAccessPrincipals</a>
+</h3>
+
+```typescript
+awsServiceAccessPrincipals?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L94">property featureSet</a>
 </h3>
 
 ```typescript
@@ -726,7 +759,7 @@ featureSet?: pulumi.Input<string>;
 Specify "ALL" (default) or "CONSOLIDATED_BILLING".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L88">property masterAccountArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L98">property masterAccountArn</a>
 </h3>
 
 ```typescript
@@ -737,7 +770,7 @@ masterAccountArn?: pulumi.Input<string>;
 ARN of the master account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L92">property masterAccountEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L102">property masterAccountEmail</a>
 </h3>
 
 ```typescript
@@ -748,7 +781,7 @@ masterAccountEmail?: pulumi.Input<string>;
 Email address of the master account
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L96">property masterAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/organizations/organization.ts#L106">property masterAccountId</a>
 </h3>
 
 ```typescript

@@ -37,10 +37,14 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="#CustomResourceOptions">interface CustomResourceOptions</a>
 * <a href="#ResourceOptions">interface ResourceOptions</a>
 * <a href="#StackReferenceArgs">interface StackReferenceArgs</a>
+* <a href="#UnwrappedArray">interface UnwrappedArray</a>
 * <a href="#ID">type ID</a>
 * <a href="#Input">type Input</a>
 * <a href="#Inputs">type Inputs</a>
 * <a href="#URN">type URN</a>
+* <a href="#Unwrap">type Unwrap</a>
+* <a href="#UnwrapSimple">type UnwrapSimple</a>
+* <a href="#UnwrappedObject">type UnwrappedObject</a>
 
 <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts">config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts">errors.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/metadata.ts">metadata.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts">resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts">stackReference.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/version.ts">version.ts</a> 
 
@@ -55,7 +59,7 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="tests">tests</a>
 
 <h2 class="pdoc-module-header" id="ComponentResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L250">class ComponentResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">class ComponentResource</a>
 </h2>
 
 ComponentResource is a resource that aggregates one or more other child resources into a higher
@@ -63,7 +67,7 @@ level abstraction. The component resource itself is a resource, but does not req
 operations for provisioning.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L250">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">constructor</a>
 </h3>
 
 ```typescript
@@ -99,7 +103,7 @@ public static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L273">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L281">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -243,7 +247,7 @@ name is the configuration bag's logical name and uniquely identifies it.  The de
 project.
 
 <h2 class="pdoc-module-header" id="CustomResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L182">class CustomResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L190">class CustomResource</a>
 </h2>
 
 CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
@@ -252,7 +256,7 @@ and perform partial updates of them, and these CRUD operations are implemented i
 loaded plugin for the defining package.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L209">constructor</a>
 </h3>
 
 ```typescript
@@ -281,7 +285,7 @@ public getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">method isInstance</a>
 </h3>
 
 ```typescript
@@ -293,7 +297,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">property id</a>
 </h3>
 
 ```typescript
@@ -317,7 +321,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L295">class Output</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L303">class Output</a>
 </h2>
 
 Output helps encode the relationship between Resources in a Pulumi application. Specifically an
@@ -327,7 +331,7 @@ value as well as the Resource the value came from.  This allows for a precise 'R
 dependency graph' to be created, which properly tracks the relationship between resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L385">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L393">constructor</a>
 </h3>
 
 ```typescript
@@ -335,7 +339,7 @@ public new Output(resources: Set<Resource> | Resource[] | Resource, promise: Pro
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L373">method create</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L381">method create</a>
 </h3>
 
 ```typescript
@@ -352,7 +356,7 @@ public static create<T>(val: Input<T> | undefined): Output<Unwrap<T | undefined>
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L383">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L391">method isInstance</a>
 </h3>
 
 ```typescript
@@ -364,7 +368,7 @@ Returns true if the given object is an instance of Output<T>.  This is designed 
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L302">property __pulumiOutput</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L310">property __pulumiOutput</a>
 </h3>
 
 ```typescript
@@ -377,7 +381,7 @@ A private field to help with RTTI that works in SxS scenarios.
 This is internal instead of being truly private, to support mixins and our serialization model.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L354">property apply</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L362">property apply</a>
 </h3>
 
 ```typescript
@@ -411,7 +415,7 @@ available for functions that end up executing in the cloud during runtime.  To g
 of the Output during cloud runtime execution, use `get()`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L365">property get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L373">property get</a>
 </h3>
 
 ```typescript
@@ -428,7 +432,7 @@ would allow Output values to flow into Resources while losing the data that woul
 the dependency graph to be changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L311">property isKnown</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L319">property isKnown</a>
 </h3>
 
 ```typescript
@@ -443,7 +447,7 @@ may not expect an undefined value.  So, instead, we just transition to another O
 value that itself knows it should not perform .apply calls.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L319">property promise</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L327">property promise</a>
 </h3>
 
 ```typescript
@@ -457,7 +461,7 @@ deployment-time set of resources this output depends on.
 Only callable on the outside.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L326">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L334">property resources</a>
 </h3>
 
 ```typescript
@@ -470,14 +474,14 @@ The list of resource that this output value depends on.
 Only callable on the outside.
 
 <h2 class="pdoc-module-header" id="ProviderResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L227">class ProviderResource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L235">class ProviderResource</a>
 </h2>
 
 ProviderResource is a resource that implements CRUD operations for other custom resources. These resources are
 managed similarly to other resources, including the usual diffing and update semantics.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L227">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L235">constructor</a>
 </h3>
 
 ```typescript
@@ -501,7 +505,7 @@ public getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">method isInstance</a>
 </h3>
 
 ```typescript
@@ -513,7 +517,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">property id</a>
 </h3>
 
 ```typescript
@@ -620,7 +624,7 @@ Returns true if the given object is an instance of a ResourceError.  This is des
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L914">property Error</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L914">property Error</a>
 </h3>
 
 ```typescript
@@ -636,7 +640,7 @@ public hideStack?: undefined | false | true;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
 </h3>
 
 ```typescript
@@ -644,7 +648,7 @@ message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
 </h3>
 
 ```typescript
@@ -660,7 +664,7 @@ public resource: Resource | undefined;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
 </h3>
 
 ```typescript
@@ -697,7 +701,7 @@ Returns true if the given object is an instance of a RunError.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L914">property Error</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L914">property Error</a>
 </h3>
 
 ```typescript
@@ -705,7 +709,7 @@ static Error: ErrorConstructor;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
 </h3>
 
 ```typescript
@@ -713,7 +717,7 @@ message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
 </h3>
 
 ```typescript
@@ -721,7 +725,7 @@ name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
 </h3>
 
 ```typescript
@@ -772,7 +776,7 @@ public getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L199">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L207">method isInstance</a>
 </h3>
 
 ```typescript
@@ -784,7 +788,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L193">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L201">property id</a>
 </h3>
 
 ```typescript
@@ -838,10 +842,10 @@ const deploymentOnlyModule: true = true;
 ```
 
 <h2 class="pdoc-module-header" id="testingOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L284">const testingOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L292">const testingOptions</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L285">let isDryRun</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L293">let isDryRun</a>
 </h3>
 
 ```typescript
@@ -857,7 +861,7 @@ const version: ${VERSION} = "${VERSION}";
 ```
 
 <h2 class="pdoc-module-header" id="all">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L538">function all</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L546">function all</a>
 </h2>
 
 ```typescript
@@ -943,7 +947,7 @@ getStack(): string
 getStack returns the current stack name.  It throws an exception if none is registered.
 
 <h2 class="pdoc-module-header" id="output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L481">function output</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L489">function output</a>
 </h2>
 
 ```typescript
@@ -973,13 +977,13 @@ output<T>(val: Input<T> | undefined): Output<Unwrap<T | undefined>>
 ```
 
 <h2 class="pdoc-module-header" id="ComponentResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L169">interface ComponentResourceOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L177">interface ComponentResourceOptions</a>
 </h2>
 
 ComponentResourceOptions is a bag of optional settings that control a component resource's behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property dependsOn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L155">property dependsOn</a>
 </h3>
 
 ```typescript
@@ -990,7 +994,7 @@ dependsOn?: Input<Input<Resource>[]> | Input<Resource>;
 An optional additional explicit dependencies on other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L139">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property id</a>
 </h3>
 
 ```typescript
@@ -1001,7 +1005,7 @@ id?: Input<ID>;
 An optional existing ID to load, rather than create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L143">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property parent</a>
 </h3>
 
 ```typescript
@@ -1012,7 +1016,7 @@ parent?: Resource;
 An optional parent resource to which this resource belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property protect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L159">property protect</a>
 </h3>
 
 ```typescript
@@ -1023,7 +1027,7 @@ protect?: undefined | false | true;
 When set to true, protect ensures this resource cannot be deleted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L173">property providers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L181">property providers</a>
 </h3>
 
 ```typescript
@@ -1034,13 +1038,13 @@ providers?: Record<string, ProviderResource>;
 An optional set of providers to use for child resources. Keyed by package name (e.g. "aws")
 
 <h2 class="pdoc-module-header" id="CustomResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L157">interface CustomResourceOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L165">interface CustomResourceOptions</a>
 </h2>
 
 CustomResourceOptions is a bag of optional settings that control a custom resource's behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property dependsOn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L155">property dependsOn</a>
 </h3>
 
 ```typescript
@@ -1051,7 +1055,7 @@ dependsOn?: Input<Input<Resource>[]> | Input<Resource>;
 An optional additional explicit dependencies on other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L139">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property id</a>
 </h3>
 
 ```typescript
@@ -1062,7 +1066,7 @@ id?: Input<ID>;
 An optional existing ID to load, rather than create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L143">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property parent</a>
 </h3>
 
 ```typescript
@@ -1073,7 +1077,7 @@ parent?: Resource;
 An optional parent resource to which this resource belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property protect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L159">property protect</a>
 </h3>
 
 ```typescript
@@ -1084,7 +1088,7 @@ protect?: undefined | false | true;
 When set to true, protect ensures this resource cannot be deleted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L163">property provider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L171">property provider</a>
 </h3>
 
 ```typescript
@@ -1097,13 +1101,13 @@ provider for the resource's package will be used. The default provider is pulled
 provider bag (see also ComponentResourceOptions.providers).
 
 <h2 class="pdoc-module-header" id="ResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L135">interface ResourceOptions</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L143">interface ResourceOptions</a>
 </h2>
 
 ResourceOptions is a bag of optional settings that control a resource's behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property dependsOn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L155">property dependsOn</a>
 </h3>
 
 ```typescript
@@ -1114,7 +1118,7 @@ dependsOn?: Input<Input<Resource>[]> | Input<Resource>;
 An optional additional explicit dependencies on other resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L139">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L147">property id</a>
 </h3>
 
 ```typescript
@@ -1125,7 +1129,7 @@ id?: Input<ID>;
 An optional existing ID to load, rather than create.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L143">property parent</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property parent</a>
 </h3>
 
 ```typescript
@@ -1136,7 +1140,7 @@ parent?: Resource;
 An optional parent resource to which this resource belongs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L151">property protect</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L159">property protect</a>
 </h3>
 
 ```typescript
@@ -1163,6 +1167,417 @@ name?: Input<string>;
 
 The name of the stack to reference.
 
+<h2 class="pdoc-module-header" id="UnwrappedArray">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">interface UnwrappedArray</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L52">method __@iterator</a>
+</h3>
+
+```typescript
+__@iterator(): IterableIterator<Unwrap<T>>
+```
+
+
+Iterator
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L94">method __@unscopables</a>
+</h3>
+
+```typescript
+__@unscopables(): { ... }
+```
+
+
+Returns an object whose properties have the value 'true'
+when they will be absent when used in a 'with' statement.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1161">method concat</a>
+</h3>
+
+```typescript
+concat(items: ConcatArray<Unwrap<T>>[]): Unwrap<T>[]
+```
+
+
+Combines two or more arrays.
+
+
+```typescript
+concat(items: T | ConcatArray<T>[]): Unwrap<T>[]
+```
+
+
+Combines two or more arrays.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L64">method copyWithin</a>
+</h3>
+
+```typescript
+copyWithin(target: number, start: number, end?: undefined | number): this
+```
+
+
+Returns the this object after copying a section of the array identified by start and end
+to the same array starting at position target
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L57">method entries</a>
+</h3>
+
+```typescript
+entries(): IterableIterator<[, number, Unwrap<T>]>
+```
+
+
+Returns an iterable of key, value pairs for every entry in the array
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1226">method every</a>
+</h3>
+
+```typescript
+every(callbackfn: { ... }, thisArg?: any): boolean
+```
+
+
+Determines whether all the members of an array satisfy the specified test.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L53">method fill</a>
+</h3>
+
+```typescript
+fill(value: Unwrap<T>, start?: undefined | number, end?: undefined | number): this
+```
+
+
+Returns the this object after filling the section identified by start and end with value
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1250">method filter</a>
+</h3>
+
+```typescript
+filter<S>(callbackfn: { ... }, thisArg?: any): S[]
+```
+
+
+Returns the elements of an array that meet the condition specified in a callback function.
+
+
+```typescript
+filter(callbackfn: { ... }, thisArg?: any): Unwrap<T>[]
+```
+
+
+Returns the elements of an array that meet the condition specified in a callback function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L31">method find</a>
+</h3>
+
+```typescript
+find<S>(predicate: { ... }, thisArg?: any): S | undefined
+```
+
+
+Returns the value of the first element in the array where predicate is true, and undefined
+otherwise.
+
+
+```typescript
+find(predicate: { ... }, thisArg?: any): Unwrap<T> | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L43">method findIndex</a>
+</h3>
+
+```typescript
+findIndex(predicate: { ... }, thisArg?: any): number
+```
+
+
+Returns the index of the first element in the array where predicate is true, and -1
+otherwise.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1238">method forEach</a>
+</h3>
+
+```typescript
+forEach(callbackfn: { ... }, thisArg?: any): void
+```
+
+
+Performs the specified action for each element in an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1214">method indexOf</a>
+</h3>
+
+```typescript
+indexOf(searchElement: Unwrap<T>, fromIndex?: undefined | number): number
+```
+
+
+Returns the index of the first occurrence of a value in an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1171">method join</a>
+</h3>
+
+```typescript
+join(separator?: undefined | string): string
+```
+
+
+Adds all the elements of an array separated by the specified separator string.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L62">method keys</a>
+</h3>
+
+```typescript
+keys(): IterableIterator<number>
+```
+
+
+Returns an iterable of keys in the array
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1220">method lastIndexOf</a>
+</h3>
+
+```typescript
+lastIndexOf(searchElement: Unwrap<T>, fromIndex?: undefined | number): number
+```
+
+
+Returns the index of the last occurrence of a specified value in an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1244">method map</a>
+</h3>
+
+```typescript
+map<U>(callbackfn: { ... }, thisArg?: any): U[]
+```
+
+
+Calls a defined callback function on each element of an array, and returns an array that contains the results.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1151">method pop</a>
+</h3>
+
+```typescript
+pop(): Unwrap<T> | undefined
+```
+
+
+Removes the last element from an array and returns it.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1156">method push</a>
+</h3>
+
+```typescript
+push(items: Unwrap<T>[]): number
+```
+
+
+Appends new elements to an array, and returns the new length of the array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1262">method reduce</a>
+</h3>
+
+```typescript
+reduce(callbackfn: { ... }): Unwrap<T>
+```
+
+
+Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+
+
+```typescript
+reduce(callbackfn: { ... }, initialValue: Unwrap<T>): Unwrap<T>
+```
+
+
+```typescript
+reduce<U>(callbackfn: { ... }, initialValue: U): U
+```
+
+
+Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1275">method reduceRight</a>
+</h3>
+
+```typescript
+reduceRight(callbackfn: { ... }): Unwrap<T>
+```
+
+
+Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+
+
+```typescript
+reduceRight(callbackfn: { ... }, initialValue: Unwrap<T>): Unwrap<T>
+```
+
+
+```typescript
+reduceRight<U>(callbackfn: { ... }, initialValue: U): U
+```
+
+
+Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1175">method reverse</a>
+</h3>
+
+```typescript
+reverse(): Unwrap<T>[]
+```
+
+
+Reverses the elements in an Array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1179">method shift</a>
+</h3>
+
+```typescript
+shift(): Unwrap<T> | undefined
+```
+
+
+Removes the first element from an array and returns it.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1185">method slice</a>
+</h3>
+
+```typescript
+slice(start?: undefined | number, end?: undefined | number): Unwrap<T>[]
+```
+
+
+Returns a section of an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1232">method some</a>
+</h3>
+
+```typescript
+some(callbackfn: { ... }, thisArg?: any): boolean
+```
+
+
+Determines whether the specified callback function returns true for any element of an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1190">method sort</a>
+</h3>
+
+```typescript
+sort(compareFn?: undefined | { ... }): this
+```
+
+
+Sorts an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1196">method splice</a>
+</h3>
+
+```typescript
+splice(start: number, deleteCount?: undefined | number): Unwrap<T>[]
+```
+
+
+Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+
+
+```typescript
+splice(start: number, deleteCount: number, items: Unwrap<T>[]): Unwrap<T>[]
+```
+
+
+Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1147">method toLocaleString</a>
+</h3>
+
+```typescript
+toLocaleString(): string
+```
+
+
+Returns a string representation of an array. The elements are converted to string using their toLocalString methods.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1143">method toString</a>
+</h3>
+
+```typescript
+toString(): string
+```
+
+
+Returns a string representation of an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1208">method unshift</a>
+</h3>
+
+```typescript
+unshift(items: Unwrap<T>[]): number
+```
+
+
+Inserts new elements at the start of an array.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L67">method values</a>
+</h3>
+
+```typescript
+values(): IterableIterator<Unwrap<T>>
+```
+
+
+Returns an iterable of values in the array
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1298">property Array</a>
+</h3>
+
+```typescript
+Array: ArrayConstructor;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1139">property length</a>
+</h3>
+
+```typescript
+length: number;
+```
+
+
+Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
+
 <h2 class="pdoc-module-header" id="ID">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L19">type ID</a>
 </h2>
@@ -1172,7 +1587,7 @@ type ID = string;
 ```
 
 <h2 class="pdoc-module-header" id="Input">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L589">type Input</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L597">type Input</a>
 </h2>
 
 ```typescript
@@ -1184,7 +1599,7 @@ Input is a property input for a resource.  It may be a promptly available T, a p
 for one, or the output from a existing Resource.
 
 <h2 class="pdoc-module-header" id="Inputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L595">type Inputs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L603">type Inputs</a>
 </h2>
 
 ```typescript
@@ -1201,5 +1616,56 @@ property value.
 
 ```typescript
 type URN = string;
+```
+
+<h2 class="pdoc-module-header" id="Unwrap">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L629">type Unwrap</a>
+</h2>
+
+```typescript
+type Unwrap = Unwrap<T>;
+```
+
+
+The 'Unwrap' type allows us to express the operation of taking a type, with potentially deeply
+nested Promises and Outputs and to then get that same type with all the Promises and Outputs
+replaced with their wrapped type.  Note that this Unwrapping is 'deep'.  So if you had:
+
+     `type X = { A: Promise<{ B: Output<{ c: Input<boolean> }> }> }`
+
+Then `Unwrap<X>` would be equivalent to:
+
+     `...    = { A: { B: { C: boolean } } }`
+
+Unwrapping sees through Promises, Outputs, Arrays and Objects.
+
+Note: due to TypeScript limitations there are some things that cannot be expressed. Specifically,
+if you had a `Promise<Output<T>>` then the Unwrap type would not be able to undo both of those
+wraps. In practice that should be ok.  Values in an object graph should not wrap Outputs in
+Promises.  Instead, any code that needs to work Outputs and also be async should either create
+the Output with the Promise (which will collapse into just an Output).  Or, it should start with
+an Output and call [apply] on it, passing in an async function.  This will also collapse and just
+produce an Output.
+
+In other words, this should not be used as the shape of an object: `{ a: Promise<Output<...>> }`.
+It should always either be `{ a: Promise<NonOutput> }` or just `{ a: Output<...> }`.
+
+<h2 class="pdoc-module-header" id="UnwrapSimple">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L642">type UnwrapSimple</a>
+</h2>
+
+```typescript
+type UnwrapSimple = UnwrapSimple<T>;
+```
+
+
+Handles encountering basic types when unwrapping.
+
+<h2 class="pdoc-module-header" id="UnwrappedObject">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L659">type UnwrappedObject</a>
+</h2>
+
+```typescript
+type UnwrappedObject = { ... };
 ```
 

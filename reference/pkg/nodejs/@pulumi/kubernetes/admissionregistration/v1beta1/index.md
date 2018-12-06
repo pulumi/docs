@@ -477,7 +477,7 @@ examples of label selectors.
 Default to the empty LabelSelector, which matches everything.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L395">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L399">property rules</a>
 </h3>
 
 ```typescript
@@ -486,16 +486,36 @@ rules: RuleWithOperations[];
 
 
 Rules describes what operations on what resources/subresources the webhook cares about. The
-webhook cares about an operation if it matches _any_ Rule.
+webhook cares about an operation if it matches _any_ Rule. However, in order to prevent
+ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks from putting the cluster in a
+state which cannot be recovered from without completely disabling the plugin,
+ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks are never called on admission
+requests for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L409">property sideEffects</a>
+</h3>
+
+```typescript
+sideEffects: string;
+```
+
+
+SideEffects states whether this webhookk has side effects. Acceptable values are: Unknown,
+None, Some, NoneOnDryRun Webhooks with side effects MUST implement a reconciliation system,
+since a request may be rejected by a future step in the admission change and the side
+effects therefore need to be undone. Requests with the dryRun attribute will be
+auto-rejected if they match a webhook with sideEffects == Unknown or Some. Defaults to
+Unknown.
 
 <h2 class="pdoc-module-header" id="WebhookClientConfig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L402">interface WebhookClientConfig</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L416">interface WebhookClientConfig</a>
 </h2>
 
 WebhookClientConfig contains the information to make a TLS connection with the webhook
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L407">property caBundle</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L421">property caBundle</a>
 </h3>
 
 ```typescript
@@ -504,10 +524,10 @@ caBundle: string;
 
 
 `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook's server
-certificate. Required.
+certificate. If unspecified, system trust roots on the apiserver are used.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L418">property service</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L431">property service</a>
 </h3>
 
 ```typescript
@@ -520,11 +540,10 @@ specified.
 
 If the webhook is running within the cluster, then you should use `service`.
 
-If there is only one port open for the service, that port will be used. If there are
-multiple ports open, port 443 will be used if it is open, otherwise it is an error.
+Port 443 will be used if it is open, otherwise it is an error.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L442">property url</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L455">property url</a>
 </h3>
 
 ```typescript
@@ -532,8 +551,8 @@ url: string;
 ```
 
 
-`url` gives the location of the webhook, in standard URL form
-(`[scheme://]host:port/path`). Exactly one of `url` or `service` must be specified.
+`url` gives the location of the webhook, in standard URL form (`scheme://host:port/path`).
+Exactly one of `url` or `service` must be specified.
 
 The `host` should not refer to a service running in the cluster; use the `service` field
 instead. The host might be resolved via external DNS in some apiservers (e.g.,

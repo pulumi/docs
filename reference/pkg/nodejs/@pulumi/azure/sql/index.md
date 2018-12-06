@@ -456,13 +456,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ElasticPool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L10">class ElasticPool</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L12">class ElasticPool</a>
 </h2>
 
 Allows you to manage an Azure SQL Elastic Pool.
 
+~> **NOTE:** -  This version of the `Elasticpool` resource is being **deprecated** and should no longer be used. Please use the azurerm_mssql_elasticpool version instead.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L66">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L68">constructor</a>
 </h3>
 
 ```typescript
@@ -477,7 +479,7 @@ Create a ElasticPool resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -509,7 +511,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L26">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L28">property creationDate</a>
 </h3>
 
 ```typescript
@@ -520,7 +522,7 @@ public creationDate: pulumi.Output<string>;
 The creation date of the SQL Elastic Pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L30">property dbDtuMax</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L32">property dbDtuMax</a>
 </h3>
 
 ```typescript
@@ -531,7 +533,7 @@ public dbDtuMax: pulumi.Output<number>;
 The maximum DTU which will be guaranteed to all databases in the elastic pool to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L34">property dbDtuMin</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L36">property dbDtuMin</a>
 </h3>
 
 ```typescript
@@ -542,7 +544,7 @@ public dbDtuMin: pulumi.Output<number>;
 The minimum DTU which will be guaranteed to all databases in the elastic pool to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L38">property dtu</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L40">property dtu</a>
 </h3>
 
 ```typescript
@@ -553,7 +555,7 @@ public dtu: pulumi.Output<number>;
 The total shared DTU for the elastic pool. Valid values depend on the `edition` which has been defined. Refer to [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus) for valid combinations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L42">property edition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L44">property edition</a>
 </h3>
 
 ```typescript
@@ -576,7 +578,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L46">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L48">property location</a>
 </h3>
 
 ```typescript
@@ -587,7 +589,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L52">property name</a>
 </h3>
 
 ```typescript
@@ -598,7 +600,7 @@ public name: pulumi.Output<string>;
 The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L54">property poolSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L56">property poolSize</a>
 </h3>
 
 ```typescript
@@ -609,7 +611,7 @@ public poolSize: pulumi.Output<number>;
 The maximum size in MB that all databases in the elastic pool can grow to. The maximum size must be consistent with combination of `edition` and `dtu` and the limits documented in [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus). If not defined when creating an elastic pool, the value is set to the size implied by `edition` and `dtu`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L58">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L60">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -620,7 +622,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L62">property serverName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L64">property serverName</a>
 </h3>
 
 ```typescript
@@ -631,7 +633,7 @@ public serverName: pulumi.Output<string>;
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L66">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L68">property tags</a>
 </h3>
 
 ```typescript
@@ -1627,13 +1629,13 @@ threatDetectionPolicy?: pulumi.Input<{ ... }>;
 Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 
 <h2 class="pdoc-module-header" id="ElasticPoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L177">interface ElasticPoolArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L179">interface ElasticPoolArgs</a>
 </h2>
 
 The set of arguments for constructing a ElasticPool resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L181">property dbDtuMax</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L183">property dbDtuMax</a>
 </h3>
 
 ```typescript
@@ -1644,7 +1646,7 @@ dbDtuMax?: pulumi.Input<number>;
 The maximum DTU which will be guaranteed to all databases in the elastic pool to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L185">property dbDtuMin</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L187">property dbDtuMin</a>
 </h3>
 
 ```typescript
@@ -1655,7 +1657,7 @@ dbDtuMin?: pulumi.Input<number>;
 The minimum DTU which will be guaranteed to all databases in the elastic pool to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L189">property dtu</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L191">property dtu</a>
 </h3>
 
 ```typescript
@@ -1666,7 +1668,7 @@ dtu: pulumi.Input<number>;
 The total shared DTU for the elastic pool. Valid values depend on the `edition` which has been defined. Refer to [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus) for valid combinations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L193">property edition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L195">property edition</a>
 </h3>
 
 ```typescript
@@ -1677,7 +1679,7 @@ edition: pulumi.Input<string>;
 The edition of the elastic pool to be created. Valid values are `Basic`, `Standard`, and `Premium`. Refer to [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus) for details. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L197">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L199">property location</a>
 </h3>
 
 ```typescript
@@ -1688,7 +1690,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L201">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L203">property name</a>
 </h3>
 
 ```typescript
@@ -1699,7 +1701,7 @@ name?: pulumi.Input<string>;
 The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L205">property poolSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L207">property poolSize</a>
 </h3>
 
 ```typescript
@@ -1710,7 +1712,7 @@ poolSize?: pulumi.Input<number>;
 The maximum size in MB that all databases in the elastic pool can grow to. The maximum size must be consistent with combination of `edition` and `dtu` and the limits documented in [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus). If not defined when creating an elastic pool, the value is set to the size implied by `edition` and `dtu`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L209">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L211">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1721,7 +1723,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L213">property serverName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L215">property serverName</a>
 </h3>
 
 ```typescript
@@ -1732,7 +1734,7 @@ serverName: pulumi.Input<string>;
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L217">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L219">property tags</a>
 </h3>
 
 ```typescript
@@ -1743,13 +1745,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="ElasticPoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L127">interface ElasticPoolState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L129">interface ElasticPoolState</a>
 </h2>
 
 Input properties used for looking up and filtering ElasticPool resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L131">property creationDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L133">property creationDate</a>
 </h3>
 
 ```typescript
@@ -1760,7 +1762,7 @@ creationDate?: pulumi.Input<string>;
 The creation date of the SQL Elastic Pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L135">property dbDtuMax</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L137">property dbDtuMax</a>
 </h3>
 
 ```typescript
@@ -1771,7 +1773,7 @@ dbDtuMax?: pulumi.Input<number>;
 The maximum DTU which will be guaranteed to all databases in the elastic pool to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L139">property dbDtuMin</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L141">property dbDtuMin</a>
 </h3>
 
 ```typescript
@@ -1782,7 +1784,7 @@ dbDtuMin?: pulumi.Input<number>;
 The minimum DTU which will be guaranteed to all databases in the elastic pool to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L143">property dtu</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L145">property dtu</a>
 </h3>
 
 ```typescript
@@ -1793,7 +1795,7 @@ dtu?: pulumi.Input<number>;
 The total shared DTU for the elastic pool. Valid values depend on the `edition` which has been defined. Refer to [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus) for valid combinations.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L147">property edition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L149">property edition</a>
 </h3>
 
 ```typescript
@@ -1804,7 +1806,7 @@ edition?: pulumi.Input<string>;
 The edition of the elastic pool to be created. Valid values are `Basic`, `Standard`, and `Premium`. Refer to [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus) for details. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L151">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L153">property location</a>
 </h3>
 
 ```typescript
@@ -1815,7 +1817,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L155">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L157">property name</a>
 </h3>
 
 ```typescript
@@ -1826,7 +1828,7 @@ name?: pulumi.Input<string>;
 The name of the elastic pool. This needs to be globally unique. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L159">property poolSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L161">property poolSize</a>
 </h3>
 
 ```typescript
@@ -1837,7 +1839,7 @@ poolSize?: pulumi.Input<number>;
 The maximum size in MB that all databases in the elastic pool can grow to. The maximum size must be consistent with combination of `edition` and `dtu` and the limits documented in [Azure SQL Database Service Tiers](https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus). If not defined when creating an elastic pool, the value is set to the size implied by `edition` and `dtu`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L163">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L165">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1848,7 +1850,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L167">property serverName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L169">property serverName</a>
 </h3>
 
 ```typescript
@@ -1859,7 +1861,7 @@ serverName?: pulumi.Input<string>;
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L171">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/sql/elasticPool.ts#L173">property tags</a>
 </h3>
 
 ```typescript

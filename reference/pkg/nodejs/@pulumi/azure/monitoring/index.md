@@ -9,8 +9,10 @@ title: Module monitoring
 * <a href="#ActionGroup">class ActionGroup</a>
 * <a href="#ActivityLogAlert">class ActivityLogAlert</a>
 * <a href="#AlertRule">class AlertRule</a>
+* <a href="#DiagnosticSetting">class DiagnosticSetting</a>
 * <a href="#LogProfile">class LogProfile</a>
 * <a href="#MetricAlert">class MetricAlert</a>
+* <a href="#getDiagnosticCategories">function getDiagnosticCategories</a>
 * <a href="#getLogProfile">function getLogProfile</a>
 * <a href="#ActionGroupArgs">interface ActionGroupArgs</a>
 * <a href="#ActionGroupState">interface ActionGroupState</a>
@@ -18,6 +20,10 @@ title: Module monitoring
 * <a href="#ActivityLogAlertState">interface ActivityLogAlertState</a>
 * <a href="#AlertRuleArgs">interface AlertRuleArgs</a>
 * <a href="#AlertRuleState">interface AlertRuleState</a>
+* <a href="#DiagnosticSettingArgs">interface DiagnosticSettingArgs</a>
+* <a href="#DiagnosticSettingState">interface DiagnosticSettingState</a>
+* <a href="#GetDiagnosticCategoriesArgs">interface GetDiagnosticCategoriesArgs</a>
+* <a href="#GetDiagnosticCategoriesResult">interface GetDiagnosticCategoriesResult</a>
 * <a href="#GetLogProfileArgs">interface GetLogProfileArgs</a>
 * <a href="#GetLogProfileResult">interface GetLogProfileResult</a>
 * <a href="#LogProfileArgs">interface LogProfileArgs</a>
@@ -25,7 +31,7 @@ title: Module monitoring
 * <a href="#MetricAlertArgs">interface MetricAlertArgs</a>
 * <a href="#MetricAlertState">interface MetricAlertState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/actionGroup.ts">monitoring/actionGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/activityLogAlert.ts">monitoring/activityLogAlert.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/alertRule.ts">monitoring/alertRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getLogProfile.ts">monitoring/getLogProfile.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts">monitoring/logProfile.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/metricAlert.ts">monitoring/metricAlert.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/actionGroup.ts">monitoring/actionGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/activityLogAlert.ts">monitoring/activityLogAlert.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/alertRule.ts">monitoring/alertRule.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts">monitoring/diagnosticSetting.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts">monitoring/getDiagnosticCategories.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getLogProfile.ts">monitoring/getLogProfile.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts">monitoring/logProfile.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/metricAlert.ts">monitoring/metricAlert.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="ActionGroup">
@@ -562,14 +568,172 @@ public webhookAction: pulumi.Output<{ ... }>;
 
 A `webhook_action` block as defined below.
 
+<h2 class="pdoc-module-header" id="DiagnosticSetting">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L10">class DiagnosticSetting</a>
+</h2>
+
+Manages a Diagnostic Setting for an existing Resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L45">constructor</a>
+</h3>
+
+```typescript
+new DiagnosticSetting(name: string, args: DiagnosticSettingArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a DiagnosticSetting resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DiagnosticSettingState): DiagnosticSetting
+```
+
+
+Get an existing DiagnosticSetting resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L23">property eventhubAuthorizationRuleId</a>
+</h3>
+
+```typescript
+public eventhubAuthorizationRuleId: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L24">property eventhubName</a>
+</h3>
+
+```typescript
+public eventhubName: pulumi.Output<string | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L32">property logAnalyticsWorkspaceId</a>
+</h3>
+
+```typescript
+public logAnalyticsWorkspaceId: pulumi.Output<string | undefined>;
+```
+
+
+Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L28">property logs</a>
+</h3>
+
+```typescript
+public logs: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+One or more `log` blocks as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L36">property metrics</a>
+</h3>
+
+```typescript
+public metrics: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+One or more `metric` blocks as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L40">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L44">property storageAccountId</a>
+</h3>
+
+```typescript
+public storageAccountId: pulumi.Output<string | undefined>;
+```
+
+
+With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L45">property targetResourceId</a>
+</h3>
+
+```typescript
+public targetResourceId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="LogProfile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L10">class LogProfile</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L12">class LogProfile</a>
 </h2>
 
 Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile). A Log Profile configures how Activity Logs are exported.
 
+-> **NOTE:** It's only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with `StatusCode=409` will occur.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L49">constructor</a>
 </h3>
 
 ```typescript
@@ -584,7 +748,7 @@ Create a LogProfile resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L21">method get</a>
 </h3>
 
 ```typescript
@@ -616,7 +780,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L26">property categories</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L28">property categories</a>
 </h3>
 
 ```typescript
@@ -639,7 +803,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L30">property locations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L32">property locations</a>
 </h3>
 
 ```typescript
@@ -650,7 +814,7 @@ public locations: pulumi.Output<string[]>;
 List of regions for which Activity Log events are stored or streamed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L37">property name</a>
 </h3>
 
 ```typescript
@@ -662,7 +826,7 @@ The name of the Log Profile. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L39">property retentionPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L41">property retentionPolicy</a>
 </h3>
 
 ```typescript
@@ -673,7 +837,7 @@ public retentionPolicy: pulumi.Output<{ ... }>;
 A `retention_policy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L43">property servicebusRuleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L45">property servicebusRuleId</a>
 </h3>
 
 ```typescript
@@ -684,7 +848,7 @@ public servicebusRuleId: pulumi.Output<string | undefined>;
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storage_account_id` or `servicebus_rule_id` must be set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L47">property storageAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L49">property storageAccountId</a>
 </h3>
 
 ```typescript
@@ -875,6 +1039,17 @@ deployments.
 ```typescript
 public windowSize: pulumi.Output<string | undefined>;
 ```
+
+<h2 class="pdoc-module-header" id="getDiagnosticCategories">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L10">function getDiagnosticCategories</a>
+</h2>
+
+```typescript
+getDiagnosticCategories(args: GetDiagnosticCategoriesArgs, opts?: pulumi.InvokeOptions): Promise<GetDiagnosticCategoriesResult>
+```
+
+
+Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
 
 <h2 class="pdoc-module-header" id="getLogProfile">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getLogProfile.ts#L10">function getLogProfile</a>
@@ -1535,6 +1710,232 @@ webhookAction?: pulumi.Input<{ ... }>;
 
 A `webhook_action` block as defined below.
 
+<h2 class="pdoc-module-header" id="DiagnosticSettingArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L117">interface DiagnosticSettingArgs</a>
+</h2>
+
+The set of arguments for constructing a DiagnosticSetting resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L118">property eventhubAuthorizationRuleId</a>
+</h3>
+
+```typescript
+eventhubAuthorizationRuleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L119">property eventhubName</a>
+</h3>
+
+```typescript
+eventhubName?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L127">property logAnalyticsWorkspaceId</a>
+</h3>
+
+```typescript
+logAnalyticsWorkspaceId?: pulumi.Input<string>;
+```
+
+
+Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L123">property logs</a>
+</h3>
+
+```typescript
+logs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+One or more `log` blocks as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L131">property metrics</a>
+</h3>
+
+```typescript
+metrics?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+One or more `metric` blocks as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L135">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L139">property storageAccountId</a>
+</h3>
+
+```typescript
+storageAccountId?: pulumi.Input<string>;
+```
+
+
+With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L140">property targetResourceId</a>
+</h3>
+
+```typescript
+targetResourceId: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="DiagnosticSettingState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L88">interface DiagnosticSettingState</a>
+</h2>
+
+Input properties used for looking up and filtering DiagnosticSetting resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L89">property eventhubAuthorizationRuleId</a>
+</h3>
+
+```typescript
+eventhubAuthorizationRuleId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L90">property eventhubName</a>
+</h3>
+
+```typescript
+eventhubName?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L98">property logAnalyticsWorkspaceId</a>
+</h3>
+
+```typescript
+logAnalyticsWorkspaceId?: pulumi.Input<string>;
+```
+
+
+Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L94">property logs</a>
+</h3>
+
+```typescript
+logs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+One or more `log` blocks as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L102">property metrics</a>
+</h3>
+
+```typescript
+metrics?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+One or more `metric` blocks as defined below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L106">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L110">property storageAccountId</a>
+</h3>
+
+```typescript
+storageAccountId?: pulumi.Input<string>;
+```
+
+
+With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/diagnosticSetting.ts#L111">property targetResourceId</a>
+</h3>
+
+```typescript
+targetResourceId?: pulumi.Input<string>;
+```
+
+<h2 class="pdoc-module-header" id="GetDiagnosticCategoriesArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L19">interface GetDiagnosticCategoriesArgs</a>
+</h2>
+
+A collection of arguments for invoking getDiagnosticCategories.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L23">property resourceId</a>
+</h3>
+
+```typescript
+resourceId: string;
+```
+
+
+The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.
+
+<h2 class="pdoc-module-header" id="GetDiagnosticCategoriesResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L29">interface GetDiagnosticCategoriesResult</a>
+</h2>
+
+A collection of values returned by getDiagnosticCategories.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L41">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L33">property logs</a>
+</h3>
+
+```typescript
+logs: string[];
+```
+
+
+A list of the Log Categories supported for this Resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L37">property metrics</a>
+</h3>
+
+```typescript
+metrics: string[];
+```
+
+
+A list of the Metric Categories supported for this Resource.
+
 <h2 class="pdoc-module-header" id="GetLogProfileArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/getLogProfile.ts#L19">interface GetLogProfileArgs</a>
 </h2>
@@ -1622,13 +2023,13 @@ storageAccountId: string;
 The resource id of the storage account in which the Activity Log is stored.
 
 <h2 class="pdoc-module-header" id="LogProfileArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L123">interface LogProfileArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L125">interface LogProfileArgs</a>
 </h2>
 
 The set of arguments for constructing a LogProfile resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L127">property categories</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L129">property categories</a>
 </h3>
 
 ```typescript
@@ -1639,7 +2040,7 @@ categories: pulumi.Input<pulumi.Input<string>[]>;
 List of categories of the logs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L131">property locations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L133">property locations</a>
 </h3>
 
 ```typescript
@@ -1650,7 +2051,7 @@ locations: pulumi.Input<pulumi.Input<string>[]>;
 List of regions for which Activity Log events are stored or streamed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L136">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L138">property name</a>
 </h3>
 
 ```typescript
@@ -1662,7 +2063,7 @@ The name of the Log Profile. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L140">property retentionPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L142">property retentionPolicy</a>
 </h3>
 
 ```typescript
@@ -1673,7 +2074,7 @@ retentionPolicy: pulumi.Input<{ ... }>;
 A `retention_policy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L144">property servicebusRuleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L146">property servicebusRuleId</a>
 </h3>
 
 ```typescript
@@ -1684,7 +2085,7 @@ servicebusRuleId?: pulumi.Input<string>;
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storage_account_id` or `servicebus_rule_id` must be set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L148">property storageAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L150">property storageAccountId</a>
 </h3>
 
 ```typescript
@@ -1695,13 +2096,13 @@ storageAccountId?: pulumi.Input<string>;
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storage_account_id` or `servicebus_rule_id` must be set.
 
 <h2 class="pdoc-module-header" id="LogProfileState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L92">interface LogProfileState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L94">interface LogProfileState</a>
 </h2>
 
 Input properties used for looking up and filtering LogProfile resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L96">property categories</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L98">property categories</a>
 </h3>
 
 ```typescript
@@ -1712,7 +2113,7 @@ categories?: pulumi.Input<pulumi.Input<string>[]>;
 List of categories of the logs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L100">property locations</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L102">property locations</a>
 </h3>
 
 ```typescript
@@ -1723,7 +2124,7 @@ locations?: pulumi.Input<pulumi.Input<string>[]>;
 List of regions for which Activity Log events are stored or streamed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L105">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L107">property name</a>
 </h3>
 
 ```typescript
@@ -1735,7 +2136,7 @@ The name of the Log Profile. Changing this forces a
 new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L109">property retentionPolicy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L111">property retentionPolicy</a>
 </h3>
 
 ```typescript
@@ -1746,7 +2147,7 @@ retentionPolicy?: pulumi.Input<{ ... }>;
 A `retention_policy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L113">property servicebusRuleId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L115">property servicebusRuleId</a>
 </h3>
 
 ```typescript
@@ -1757,7 +2158,7 @@ servicebusRuleId?: pulumi.Input<string>;
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storage_account_id` or `servicebus_rule_id` must be set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L117">property storageAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/monitoring/logProfile.ts#L119">property storageAccountId</a>
 </h3>
 
 ```typescript

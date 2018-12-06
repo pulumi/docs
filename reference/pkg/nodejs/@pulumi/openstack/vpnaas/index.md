@@ -51,7 +51,7 @@ Create a EndpointGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EndpointGroupState): EndpointGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EndpointGroupState, opts?: pulumi.CustomResourceOptions): EndpointGroup
 ```
 
 
@@ -213,7 +213,7 @@ Create a IkePolicy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IkePolicyState): IkePolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IkePolicyState, opts?: pulumi.CustomResourceOptions): IkePolicy
 ```
 
 
@@ -426,7 +426,7 @@ Create a IpSecPolicy resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IpSecPolicyState): IpSecPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IpSecPolicyState, opts?: pulumi.CustomResourceOptions): IpSecPolicy
 ```
 
 
@@ -639,7 +639,7 @@ Create a Service resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState): Service
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState, opts?: pulumi.CustomResourceOptions): Service
 ```
 
 
@@ -844,7 +844,7 @@ Create a SiteConnection resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SiteConnectionState): SiteConnection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SiteConnectionState, opts?: pulumi.CustomResourceOptions): SiteConnection
 ```
 
 

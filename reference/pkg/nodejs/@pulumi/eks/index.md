@@ -33,14 +33,14 @@ import * as eks from "@pulumi/eks";
 
 
 <h2 class="pdoc-module-header" id="Cluster">
-<a class="pdoc-member-name" href="/cluster.ts#L176">class Cluster</a>
+<a class="pdoc-member-name" href="/cluster.ts#L181">class Cluster</a>
 </h2>
 
 Cluster is a component that wraps the AWS and Kubernetes resources necessary to run an EKS cluster, its worker
 nodes, its optional StorageClasses, and an optional deployment of the Kubernetes Dashboard.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L206">constructor</a>
+<a class="pdoc-child-name" href="/cluster.ts#L211">constructor</a>
 </h3>
 
 ```typescript
@@ -80,7 +80,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L196">property clusterSecurityGroup</a>
+<a class="pdoc-child-name" href="/cluster.ts#L201">property clusterSecurityGroup</a>
 </h3>
 
 ```typescript
@@ -91,7 +91,7 @@ public clusterSecurityGroup: aws.ec2.SecurityGroup;
 The security group for the EKS cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L201">property instanceRole</a>
+<a class="pdoc-child-name" href="/cluster.ts#L206">property instanceRole</a>
 </h3>
 
 ```typescript
@@ -102,7 +102,7 @@ public instanceRole: pulumi.Output<aws.iam.Role>;
 The service role used by the EKS cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L181">property kubeconfig</a>
+<a class="pdoc-child-name" href="/cluster.ts#L186">property kubeconfig</a>
 </h3>
 
 ```typescript
@@ -114,7 +114,7 @@ A kubeconfig that can be used to connect to the EKS cluster. This must be serial
 to the Kubernetes provider.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L206">property nodeSecurityGroup</a>
+<a class="pdoc-child-name" href="/cluster.ts#L211">property nodeSecurityGroup</a>
 </h3>
 
 ```typescript
@@ -125,7 +125,7 @@ public nodeSecurityGroup: aws.ec2.SecurityGroup;
 The security group for the cluster's nodes.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L191">property provider</a>
+<a class="pdoc-child-name" href="/cluster.ts#L196">property provider</a>
 </h3>
 
 ```typescript
@@ -292,7 +292,7 @@ createStorageClass(name: string, storageClass: StorageClass, opts: pulumi.Custom
 ClusterOptions describes the configuration options accepted by an EKSCluster component.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L169">property deployDashboard</a>
+<a class="pdoc-child-name" href="/cluster.ts#L174">property deployDashboard</a>
 </h3>
 
 ```typescript
@@ -319,7 +319,7 @@ accessed as follows:
 Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L130">property desiredCapacity</a>
+<a class="pdoc-child-name" href="/cluster.ts#L135">property desiredCapacity</a>
 </h3>
 
 ```typescript
@@ -341,7 +341,7 @@ instanceType?: pulumi.Input<aws.ec2.InstanceType>;
 The instance type to use for the cluster's nodes. Defaults to "t2.medium".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L140">property maxSize</a>
+<a class="pdoc-child-name" href="/cluster.ts#L145">property maxSize</a>
 </h3>
 
 ```typescript
@@ -352,7 +352,7 @@ maxSize?: pulumi.Input<number>;
 The maximum number of worker nodes running in the cluster. Defaults to 2.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L135">property minSize</a>
+<a class="pdoc-child-name" href="/cluster.ts#L140">property minSize</a>
 </h3>
 
 ```typescript
@@ -363,7 +363,7 @@ minSize?: pulumi.Input<number>;
 The minimum number of worker nodes running in the cluster. Defaults to 1.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L113">property nodePublicKey</a>
+<a class="pdoc-child-name" href="/cluster.ts#L118">property nodePublicKey</a>
 </h3>
 
 ```typescript
@@ -376,7 +376,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
 If not provided, no SSH access is enabled on VMs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L118">property nodeRootVolumeSize</a>
+<a class="pdoc-child-name" href="/cluster.ts#L123">property nodeRootVolumeSize</a>
 </h3>
 
 ```typescript
@@ -387,7 +387,18 @@ nodeRootVolumeSize?: pulumi.Input<number>;
 The size in GiB of a cluster node's root volume. Defaults to 20.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L125">property nodeUserData</a>
+<a class="pdoc-child-name" href="/cluster.ts#L111">property nodeSubnetIds</a>
+</h3>
+
+```typescript
+nodeSubnetIds?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+The subnets to use for worker nodes. Defaults to the value of subnetIds.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/cluster.ts#L130">property nodeUserData</a>
 </h3>
 
 ```typescript
@@ -411,7 +422,7 @@ roleMappings?: pulumi.Input<pulumi.Input<RoleMapping>[]>;
 Optional mappings from AWS IAM roles to Kubernetes users and groups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/cluster.ts#L148">property storageClasses</a>
+<a class="pdoc-child-name" href="/cluster.ts#L153">property storageClasses</a>
 </h3>
 
 ```typescript
@@ -458,7 +469,7 @@ vpcCniOptions?: VpcCniOptions;
 ```
 
 
-The configiuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation
+The configuration of the Amazon VPC CNI plugin for this instance. Defaults are described in the documentation
 for the VpcCniOptions type.
 
 <h3 class="pdoc-member-header">

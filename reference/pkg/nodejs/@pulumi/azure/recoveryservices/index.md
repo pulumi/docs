@@ -29,7 +29,7 @@ title: Module recoveryservices
 Manages an Recovery Protected VM.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L39">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L42">constructor</a>
 </h3>
 
 ```typescript
@@ -76,12 +76,15 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L23">property backupPolicyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L26">property backupPolicyId</a>
 </h3>
 
 ```typescript
-public backupPolicyId: pulumi.Output<string | undefined>;
+public backupPolicyId: pulumi.Output<string>;
 ```
+
+
+Specifies the id of the backup policy to use. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -96,7 +99,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L27">property recoveryVaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L30">property recoveryVaultName</a>
 </h3>
 
 ```typescript
@@ -107,7 +110,7 @@ public recoveryVaultName: pulumi.Output<string>;
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L31">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L34">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -118,7 +121,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L35">property sourceVmId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L38">property sourceVmId</a>
 </h3>
 
 ```typescript
@@ -129,7 +132,7 @@ public sourceVmId: pulumi.Output<string>;
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L39">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L42">property tags</a>
 </h3>
 
 ```typescript
@@ -546,21 +549,24 @@ tags: { ... };
 A mapping of tags assigned to the resource.
 
 <h2 class="pdoc-module-header" id="ProtectedVMArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L105">interface ProtectedVMArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L114">interface ProtectedVMArgs</a>
 </h2>
 
 The set of arguments for constructing a ProtectedVM resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L106">property backupPolicyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L118">property backupPolicyId</a>
 </h3>
 
 ```typescript
-backupPolicyId?: pulumi.Input<string>;
+backupPolicyId: pulumi.Input<string>;
 ```
 
+
+Specifies the id of the backup policy to use. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L110">property recoveryVaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L122">property recoveryVaultName</a>
 </h3>
 
 ```typescript
@@ -571,7 +577,7 @@ recoveryVaultName: pulumi.Input<string>;
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L114">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L126">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -582,7 +588,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L118">property sourceVmId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L130">property sourceVmId</a>
 </h3>
 
 ```typescript
@@ -593,7 +599,7 @@ sourceVmId: pulumi.Input<string>;
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L122">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L134">property tags</a>
 </h3>
 
 ```typescript
@@ -604,21 +610,24 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="ProtectedVMState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L82">interface ProtectedVMState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L88">interface ProtectedVMState</a>
 </h2>
 
 Input properties used for looking up and filtering ProtectedVM resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L83">property backupPolicyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L92">property backupPolicyId</a>
 </h3>
 
 ```typescript
 backupPolicyId?: pulumi.Input<string>;
 ```
 
+
+Specifies the id of the backup policy to use. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L87">property recoveryVaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L96">property recoveryVaultName</a>
 </h3>
 
 ```typescript
@@ -629,7 +638,7 @@ recoveryVaultName?: pulumi.Input<string>;
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L91">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L100">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -640,7 +649,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L95">property sourceVmId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L104">property sourceVmId</a>
 </h3>
 
 ```typescript
@@ -651,7 +660,7 @@ sourceVmId?: pulumi.Input<string>;
 Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L99">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectedVM.ts#L108">property tags</a>
 </h3>
 
 ```typescript

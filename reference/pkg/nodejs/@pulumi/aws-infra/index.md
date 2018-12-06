@@ -19,12 +19,19 @@ import * as awsInfra from "@pulumi/aws-infra";
 
 * <a href="#Cluster">class Cluster</a>
 * <a href="#Network">class Network</a>
-* <a href="#getAwsAz">function getAwsAz</a>
+* <a href="#checkCompat">function checkCompat</a>
+* <a href="#combineArrays">function combineArrays</a>
+* <a href="#getAvailabilityZone">function getAvailabilityZone</a>
+* <a href="#getAvailabilityZones">function getAvailabilityZones</a>
+* <a href="#ifUndefined">function ifUndefined</a>
 * <a href="#sha1hash">function sha1hash</a>
 * <a href="#ClusterArgs">interface ClusterArgs</a>
 * <a href="#ClusterNetworkArgs">interface ClusterNetworkArgs</a>
 * <a href="#NetworkArgs">interface NetworkArgs</a>
 * <a href="#NetworkVpcArgs">interface NetworkVpcArgs</a>
+* <a href="#Compatible">type Compatible</a>
+* <a href="#Mutable">type Mutable</a>
+* <a href="#Overwrite">type Overwrite</a>
 
 <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts">aws.ts</a> <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts">network.ts</a> <a href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts">utils.ts</a> 
 
@@ -137,7 +144,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="Network">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L64">class Network</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L92">class Network</a>
 </h2>
 
 Network encapsulates the configuration of an Amazon VPC.  Both [VPC with Public
@@ -146,7 +153,7 @@ Subnets (NAT)](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenar
 supported.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L141">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L161">constructor</a>
 </h3>
 
 ```typescript
@@ -154,7 +161,7 @@ new Network(name: string, args?: NetworkArgs, opts?: pulumi.ResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L126">method fromVpc</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L146">method fromVpc</a>
 </h3>
 
 ```typescript
@@ -165,7 +172,7 @@ public static fromVpc(name: string, vpcArgs: NetworkVpcArgs, opts?: pulumi.Resou
 Creates a new network using the configuration values of an existing VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L100">method getDefault</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L120">method getDefault</a>
 </h3>
 
 ```typescript
@@ -202,29 +209,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L93">property privateRouteTableIds</a>
-</h3>
-
-```typescript
-public privateRouteTableIds: pulumi.Output<string>[];
-```
-
-
-The private subnet route tables for the VPC.  In case [usePrivateSubnets] == false, this will be empty.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L89">property publicRouteTableId</a>
-</h3>
-
-```typescript
-public publicRouteTableId: pulumi.Output<string>;
-```
-
-
-The public subnet route table for the VPC.
-
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L85">property publicSubnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L113">property publicSubnetIds</a>
 </h3>
 
 ```typescript
@@ -235,7 +220,7 @@ public publicSubnetIds: pulumi.Output<string>[];
 The public subnets for the VPC.  In case [usePrivateSubnets] == false, these are the same as [subnets].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L76">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L104">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -246,7 +231,7 @@ public securityGroupIds: pulumi.Output<string>[];
 The security group IDs for the network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L81">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L109">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -270,7 +255,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L72">property usePrivateSubnets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L100">property usePrivateSubnets</a>
 </h3>
 
 ```typescript
@@ -281,7 +266,7 @@ public usePrivateSubnets: boolean;
 Whether the network includes private subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L68">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L96">property vpcId</a>
 </h3>
 
 ```typescript
@@ -291,16 +276,48 @@ public vpcId: pulumi.Output<string>;
 
 The VPC id of the network.
 
-<h2 class="pdoc-module-header" id="getAwsAz">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts#L23">function getAwsAz</a>
+<h2 class="pdoc-module-header" id="checkCompat">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L65">function checkCompat</a>
 </h2>
 
 ```typescript
-getAwsAz(index: number): Promise<string>
+checkCompat<T,U>(): Compatible<T, U>
+```
+
+<h2 class="pdoc-module-header" id="combineArrays">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L42">function combineArrays</a>
+</h2>
+
+```typescript
+combineArrays<T>(e1: pulumi.Input<T[] | undefined>, e2: pulumi.Input<T[] | undefined>): pulumi.Output<T[]>
+```
+
+<h2 class="pdoc-module-header" id="getAvailabilityZone">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts#L23">function getAvailabilityZone</a>
+</h2>
+
+```typescript
+getAvailabilityZone(index: number): Promise<string>
+```
+
+<h2 class="pdoc-module-header" id="getAvailabilityZones">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/aws.ts#L28">function getAvailabilityZones</a>
+</h2>
+
+```typescript
+getAvailabilityZones(): Promise<string[]>
+```
+
+<h2 class="pdoc-module-header" id="ifUndefined">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L56">function ifUndefined</a>
+</h2>
+
+```typescript
+ifUndefined<T>(input: pulumi.Input<T> | undefined, value: pulumi.Input<T>): Output<Unwrap<T>>
 ```
 
 <h2 class="pdoc-module-header" id="sha1hash">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L18">function sha1hash</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L33">function sha1hash</a>
 </h2>
 
 ```typescript
@@ -477,21 +494,69 @@ vpcId: pulumi.Input<string>;
 The VPC id of the network for the cluster
 
 <h2 class="pdoc-module-header" id="NetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L24">interface NetworkArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L28">interface NetworkArgs</a>
 </h2>
 
 Optional arguments that can be provided when creating a network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L25">property numberOfAvailabilityZones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L39">property cidrBlock</a>
+</h3>
+
+```typescript
+cidrBlock?: pulumi.Input<string>;
+```
+
+
+The CIDR block for the VPC.  Defaults to "10.10.0.0/16" if unspecified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L44">property enableDnsHostnames</a>
+</h3>
+
+```typescript
+enableDnsHostnames?: pulumi.Input<boolean>;
+```
+
+
+Whether or not to have DNS hostnames in the VPC. Defaults to 'true' if unspecified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L49">property enableDnsSupport</a>
+</h3>
+
+```typescript
+enableDnsSupport?: pulumi.Input<boolean>;
+```
+
+
+Whether or not to have DNS support in the VPC.  Defaults to 'true' if unspecified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L54">property instanceTenancy</a>
+</h3>
+
+```typescript
+instanceTenancy?: pulumi.Input<default | dedicated>;
+```
+
+
+A tenancy option for instances launched into the VPC.  Defaults to 'default' if unspecified.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L33">property numberOfAvailabilityZones</a>
 </h3>
 
 ```typescript
 numberOfAvailabilityZones?: undefined | number;
 ```
 
+
+The maximum number of availability zones to use in the current region.  Defaults to '2' if
+unspecified.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L26">property usePrivateSubnets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L34">property usePrivateSubnets</a>
 </h3>
 
 ```typescript
@@ -499,13 +564,13 @@ usePrivateSubnets?: undefined | false | true;
 ```
 
 <h2 class="pdoc-module-header" id="NetworkVpcArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L32">interface NetworkVpcArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L60">interface NetworkVpcArgs</a>
 </h2>
 
 Arguments necessary when creating a network using Network.fromVpc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L52">property publicSubnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L80">property publicSubnetIds</a>
 </h3>
 
 ```typescript
@@ -516,7 +581,7 @@ publicSubnetIds: pulumi.Input<string>[];
 The public subnets for the VPC.  In case [usePrivateSubnets] == false, these are the same as [subnets].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L48">property securityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L76">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -527,7 +592,7 @@ securityGroupIds: pulumi.Input<string>[];
 The security group IDs for the network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L40">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L68">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -538,7 +603,7 @@ subnetIds: pulumi.Input<string>[];
 The network subnets for the clusters
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L44">property usePrivateSubnets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L72">property usePrivateSubnets</a>
 </h3>
 
 ```typescript
@@ -549,7 +614,7 @@ usePrivateSubnets: boolean;
 Whether the network includes private subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L36">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/network.ts#L64">property vpcId</a>
 </h3>
 
 ```typescript
@@ -558,4 +623,28 @@ vpcId: pulumi.Input<string>;
 
 
 The VPC id of the network for the cluster
+
+<h2 class="pdoc-module-header" id="Compatible">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L62">type Compatible</a>
+</h2>
+
+```typescript
+type Compatible = Compatible<T, U>;
+```
+
+<h2 class="pdoc-module-header" id="Mutable">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L27">type Mutable</a>
+</h2>
+
+```typescript
+type Mutable = { ... };
+```
+
+<h2 class="pdoc-module-header" id="Overwrite">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs/utils.ts#L24">type Overwrite</a>
+</h2>
+
+```typescript
+type Overwrite = Pick<T, Diff<keyof T, keyof U>> & U;
+```
 

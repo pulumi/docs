@@ -69,7 +69,7 @@ Create a Project resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProjectState): Project
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProjectState, opts?: pulumi.CustomResourceOptions): Project
 ```
 
 
@@ -230,7 +230,7 @@ Create a Role resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RoleState): Role
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RoleState, opts?: pulumi.CustomResourceOptions): Role
 ```
 
 
@@ -345,7 +345,7 @@ Create a RoleAssignment resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RoleAssignmentState): RoleAssignment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RoleAssignmentState, opts?: pulumi.CustomResourceOptions): RoleAssignment
 ```
 
 
@@ -480,7 +480,7 @@ Create a User resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserState): User
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserState, opts?: pulumi.CustomResourceOptions): User
 ```
 
 

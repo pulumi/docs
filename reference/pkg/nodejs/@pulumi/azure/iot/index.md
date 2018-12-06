@@ -6,18 +6,142 @@ title: Module iot
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#ConsumerGroup">class ConsumerGroup</a>
 * <a href="#IoTHub">class IoTHub</a>
+* <a href="#ConsumerGroupArgs">interface ConsumerGroupArgs</a>
+* <a href="#ConsumerGroupState">interface ConsumerGroupState</a>
 * <a href="#IoTHubArgs">interface IoTHubArgs</a>
 * <a href="#IoTHubState">interface IoTHubState</a>
 
-<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts">iot/ioTHub.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts">iot/consumerGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts">iot/ioTHub.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="ConsumerGroup">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L10">class ConsumerGroup</a>
+</h2>
+
+Manages a Consumer Group within an IotHub
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L38">constructor</a>
+</h3>
+
+```typescript
+new ConsumerGroup(name: string, args: ConsumerGroupArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ConsumerGroup resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConsumerGroupState): ConsumerGroup
+```
+
+
+Get an existing ConsumerGroup resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L26">property eventhubEndpointName</a>
+</h3>
+
+```typescript
+public eventhubEndpointName: pulumi.Output<string>;
+```
+
+
+The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L30">property iothubName</a>
+</h3>
+
+```typescript
+public iothubName: pulumi.Output<string>;
+```
+
+
+The name of the IoT Hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L34">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+The name of this Consumer Group. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L38">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group that contains the IoT hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 <h2 class="pdoc-module-header" id="IoTHub">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts#L10">class IoTHub</a>
 </h2>
 
-Manages a IotHub
+Manages an IotHub
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts#L75">constructor</a>
@@ -240,6 +364,106 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
+
+<h2 class="pdoc-module-header" id="ConsumerGroupArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L101">interface ConsumerGroupArgs</a>
+</h2>
+
+The set of arguments for constructing a ConsumerGroup resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L105">property eventhubEndpointName</a>
+</h3>
+
+```typescript
+eventhubEndpointName: pulumi.Input<string>;
+```
+
+
+The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L109">property iothubName</a>
+</h3>
+
+```typescript
+iothubName: pulumi.Input<string>;
+```
+
+
+The name of the IoT Hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L113">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of this Consumer Group. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L117">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+
+The name of the resource group that contains the IoT hub. Changing this forces a new resource to be created.
+
+<h2 class="pdoc-module-header" id="ConsumerGroupState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L79">interface ConsumerGroupState</a>
+</h2>
+
+Input properties used for looking up and filtering ConsumerGroup resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L83">property eventhubEndpointName</a>
+</h3>
+
+```typescript
+eventhubEndpointName?: pulumi.Input<string>;
+```
+
+
+The name of the Event Hub-compatible endpoint in the IoT hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L87">property iothubName</a>
+</h3>
+
+```typescript
+iothubName?: pulumi.Input<string>;
+```
+
+
+The name of the IoT Hub. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L91">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+The name of this Consumer Group. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/consumerGroup.ts#L95">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group that contains the IoT hub. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="IoTHubArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/iot/ioTHub.ts#L195">interface IoTHubArgs</a>

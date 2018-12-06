@@ -375,7 +375,7 @@ public websiteEndpoint: pulumi.Output<string>;
 The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 
 <h2 class="pdoc-module-header" id="BucketEventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L124">class BucketEventSubscription</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L126">class BucketEventSubscription</a>
 </h2>
 
 A component corresponding to a single underlying aws.s3.BucketNotification created for a bucket.
@@ -384,11 +384,11 @@ actual aws.s3.BucketNotification instances will only be created once the pulumi 
 completion and all subscriptions have been heard about.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L125">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L127">constructor</a>
 </h3>
 
 ```typescript
-public new BucketEventSubscription(name: string, bucket: Bucket, handler: BucketEventHandler, args: BucketEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+public new BucketEventSubscription(name: string, bucket: Bucket, handler: BucketEventHandler, args: BucketEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -416,7 +416,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L125">property bucket</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L127">property bucket</a>
 </h3>
 
 ```typescript

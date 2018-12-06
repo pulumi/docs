@@ -7,15 +7,19 @@ title: Module compute
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Flavor">class Flavor</a>
+* <a href="#FlavorAccess">class FlavorAccess</a>
 * <a href="#FloatingIp">class FloatingIp</a>
 * <a href="#FloatingIpAssociate">class FloatingIpAssociate</a>
 * <a href="#Instance">class Instance</a>
+* <a href="#InterfaceAttach">class InterfaceAttach</a>
 * <a href="#Keypair">class Keypair</a>
 * <a href="#SecGroup">class SecGroup</a>
 * <a href="#ServerGroup">class ServerGroup</a>
 * <a href="#VolumeAttach">class VolumeAttach</a>
 * <a href="#getFlavor">function getFlavor</a>
 * <a href="#getKeypair">function getKeypair</a>
+* <a href="#FlavorAccessArgs">interface FlavorAccessArgs</a>
+* <a href="#FlavorAccessState">interface FlavorAccessState</a>
 * <a href="#FlavorArgs">interface FlavorArgs</a>
 * <a href="#FlavorState">interface FlavorState</a>
 * <a href="#FloatingIpArgs">interface FloatingIpArgs</a>
@@ -28,6 +32,8 @@ title: Module compute
 * <a href="#GetKeypairResult">interface GetKeypairResult</a>
 * <a href="#InstanceArgs">interface InstanceArgs</a>
 * <a href="#InstanceState">interface InstanceState</a>
+* <a href="#InterfaceAttachArgs">interface InterfaceAttachArgs</a>
+* <a href="#InterfaceAttachState">interface InterfaceAttachState</a>
 * <a href="#KeypairArgs">interface KeypairArgs</a>
 * <a href="#KeypairState">interface KeypairState</a>
 * <a href="#SecGroupArgs">interface SecGroupArgs</a>
@@ -37,7 +43,7 @@ title: Module compute
 * <a href="#VolumeAttachArgs">interface VolumeAttachArgs</a>
 * <a href="#VolumeAttachState">interface VolumeAttachState</a>
 
-<a href="/compute/flavor.ts">compute/flavor.ts</a> <a href="/compute/floatingIp.ts">compute/floatingIp.ts</a> <a href="/compute/floatingIpAssociate.ts">compute/floatingIpAssociate.ts</a> <a href="/compute/getFlavor.ts">compute/getFlavor.ts</a> <a href="/compute/getKeypair.ts">compute/getKeypair.ts</a> <a href="/compute/instance.ts">compute/instance.ts</a> <a href="/compute/keypair.ts">compute/keypair.ts</a> <a href="/compute/secGroup.ts">compute/secGroup.ts</a> <a href="/compute/serverGroup.ts">compute/serverGroup.ts</a> <a href="/compute/volumeAttach.ts">compute/volumeAttach.ts</a> 
+<a href="/compute/flavor.ts">compute/flavor.ts</a> <a href="/compute/flavorAccess.ts">compute/flavorAccess.ts</a> <a href="/compute/floatingIp.ts">compute/floatingIp.ts</a> <a href="/compute/floatingIpAssociate.ts">compute/floatingIpAssociate.ts</a> <a href="/compute/getFlavor.ts">compute/getFlavor.ts</a> <a href="/compute/getKeypair.ts">compute/getKeypair.ts</a> <a href="/compute/instance.ts">compute/instance.ts</a> <a href="/compute/interfaceAttach.ts">compute/interfaceAttach.ts</a> <a href="/compute/keypair.ts">compute/keypair.ts</a> <a href="/compute/secGroup.ts">compute/secGroup.ts</a> <a href="/compute/serverGroup.ts">compute/serverGroup.ts</a> <a href="/compute/volumeAttach.ts">compute/volumeAttach.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Flavor">
@@ -66,7 +72,7 @@ Create a Flavor resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FlavorState): Flavor
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FlavorState, opts?: pulumi.CustomResourceOptions): Flavor
 ```
 
 
@@ -234,6 +240,124 @@ public vcpus: pulumi.Output<number>;
 The number of virtual CPUs to use. Changing this creates
 a new flavor.
 
+<h2 class="pdoc-module-header" id="FlavorAccess">
+<a class="pdoc-member-name" href="/compute/flavorAccess.ts#L15">class FlavorAccess</a>
+</h2>
+
+Manages a project access for flavor V2 resource within OpenStack.
+
+Note: You _must_ have admin privileges in your OpenStack cloud to use
+this resource.
+
+---
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L42">constructor</a>
+</h3>
+
+```typescript
+new FlavorAccess(name: string, args: FlavorAccessArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a FlavorAccess resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L24">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FlavorAccessState, opts?: pulumi.CustomResourceOptions): FlavorAccess
+```
+
+
+Get an existing FlavorAccess resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L31">property flavorId</a>
+</h3>
+
+```typescript
+public flavorId: pulumi.Output<string>;
+```
+
+
+The UUID of flavor to use. Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L37">property region</a>
+</h3>
+
+```typescript
+public region: pulumi.Output<string>;
+```
+
+
+The region in which to obtain the V2 Compute client.
+If omitted, the `region` argument of the provider is used.
+Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L42">property tenantId</a>
+</h3>
+
+```typescript
+public tenantId: pulumi.Output<string>;
+```
+
+
+The UUID of tenant which is allowed to use the flavor.
+Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="FloatingIp">
 <a class="pdoc-member-name" href="/compute/floatingIp.ts#L16">class FloatingIp</a>
 </h2>
@@ -266,7 +390,7 @@ Create a FloatingIp resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpState): FloatingIp
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpState, opts?: pulumi.CustomResourceOptions): FloatingIp
 ```
 
 
@@ -404,7 +528,7 @@ Create a FloatingIpAssociate resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpAssociateState): FloatingIpAssociate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpAssociateState, opts?: pulumi.CustomResourceOptions): FloatingIpAssociate
 ```
 
 
@@ -542,7 +666,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState): Instance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState, opts?: pulumi.CustomResourceOptions): Instance
 ```
 
 
@@ -896,6 +1020,144 @@ public vendorOptions: pulumi.Output<{ ... } | undefined>;
 Map of additional vendor-specific options.
 Supported options are described below.
 
+<h2 class="pdoc-module-header" id="InterfaceAttach">
+<a class="pdoc-member-name" href="/compute/interfaceAttach.ts#L11">class InterfaceAttach</a>
+</h2>
+
+Attaches a Network Interface (a Port) to an Instance using the OpenStack
+Compute (Nova) v2 API.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L48">constructor</a>
+</h3>
+
+```typescript
+new InterfaceAttach(name: string, args: InterfaceAttachArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a InterfaceAttach resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L20">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InterfaceAttachState, opts?: pulumi.CustomResourceOptions): InterfaceAttach
+```
+
+
+Get an existing InterfaceAttach resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L28">property fixedIp</a>
+</h3>
+
+```typescript
+public fixedIp: pulumi.Output<string | undefined>;
+```
+
+
+An IP address to assosciate with the port.
+_NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L32">property instanceId</a>
+</h3>
+
+```typescript
+public instanceId: pulumi.Output<string>;
+```
+
+
+The ID of the Instance to attach the Port or Network to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L37">property networkId</a>
+</h3>
+
+```typescript
+public networkId: pulumi.Output<string>;
+```
+
+
+The ID of the Network to attach to an Instance. A port will be created automatically.
+_NOTE_: This option and `port_id` are mutually exclusive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L42">property portId</a>
+</h3>
+
+```typescript
+public portId: pulumi.Output<string>;
+```
+
+
+The ID of the Port to attach to an Instance.
+_NOTE_: This option and `network_id` are mutually exclusive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L48">property region</a>
+</h3>
+
+```typescript
+public region: pulumi.Output<string>;
+```
+
+
+The region in which to create the interface attachment.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new attachment.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="Keypair">
 <a class="pdoc-member-name" href="/compute/keypair.ts#L16">class Keypair</a>
 </h2>
@@ -928,7 +1190,7 @@ Create a Keypair resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeypairState): Keypair
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeypairState, opts?: pulumi.CustomResourceOptions): Keypair
 ```
 
 
@@ -1085,7 +1347,7 @@ Create a SecGroup resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecGroupState): SecGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecGroupState, opts?: pulumi.CustomResourceOptions): SecGroup
 ```
 
 
@@ -1214,7 +1476,7 @@ Create a ServerGroup resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServerGroupState): ServerGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServerGroupState, opts?: pulumi.CustomResourceOptions): ServerGroup
 ```
 
 
@@ -1334,7 +1596,7 @@ Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L47">constructor</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L51">constructor</a>
 </h3>
 
 ```typescript
@@ -1353,7 +1615,7 @@ Create a VolumeAttach resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachState): VolumeAttach
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachState, opts?: pulumi.CustomResourceOptions): VolumeAttach
 ```
 
 
@@ -1420,7 +1682,18 @@ public instanceId: pulumi.Output<string>;
 The ID of the Instance to attach the Volume to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L43">property region</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L40">property multiattach</a>
+</h3>
+
+```typescript
+public multiattach: pulumi.Output<boolean | undefined>;
+```
+
+
+Enable attachment of multiattach-capable volumes.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L47">property region</a>
 </h3>
 
 ```typescript
@@ -1446,7 +1719,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L47">property volumeId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L51">property volumeId</a>
 </h3>
 
 ```typescript
@@ -1477,6 +1750,90 @@ getKeypair(args: GetKeypairArgs, opts?: pulumi.InvokeOptions): Promise<GetKeypai
 
 
 Use this data source to get the ID and public key of an OpenStack keypair.
+
+<h2 class="pdoc-module-header" id="FlavorAccessArgs">
+<a class="pdoc-member-name" href="/compute/flavorAccess.ts#L99">interface FlavorAccessArgs</a>
+</h2>
+
+The set of arguments for constructing a FlavorAccess resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L103">property flavorId</a>
+</h3>
+
+```typescript
+flavorId: pulumi.Input<string>;
+```
+
+
+The UUID of flavor to use. Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L109">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to obtain the V2 Compute client.
+If omitted, the `region` argument of the provider is used.
+Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L114">property tenantId</a>
+</h3>
+
+```typescript
+tenantId: pulumi.Input<string>;
+```
+
+
+The UUID of tenant which is allowed to use the flavor.
+Changing this creates a new flavor access.
+
+<h2 class="pdoc-module-header" id="FlavorAccessState">
+<a class="pdoc-member-name" href="/compute/flavorAccess.ts#L78">interface FlavorAccessState</a>
+</h2>
+
+Input properties used for looking up and filtering FlavorAccess resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L82">property flavorId</a>
+</h3>
+
+```typescript
+flavorId?: pulumi.Input<string>;
+```
+
+
+The UUID of flavor to use. Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L88">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to obtain the V2 Compute client.
+If omitted, the `region` argument of the provider is used.
+Changing this creates a new flavor access.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/flavorAccess.ts#L93">property tenantId</a>
+</h3>
+
+```typescript
+tenantId?: pulumi.Input<string>;
+```
+
+
+The UUID of tenant which is allowed to use the flavor.
+Changing this creates a new flavor access.
 
 <h2 class="pdoc-module-header" id="FlavorArgs">
 <a class="pdoc-member-name" href="/compute/flavor.ts#L175">interface FlavorArgs</a>
@@ -2070,7 +2427,18 @@ The amount of VCPUs.
 A collection of values returned by getFlavor.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L80">property id</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L75">property extraSpecs</a>
+</h3>
+
+```typescript
+extraSpecs: { ... };
+```
+
+
+Key/Value pairs of metadata for the flavor.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L84">property id</a>
 </h3>
 
 ```typescript
@@ -2081,7 +2449,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L75">property isPublic</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L79">property isPublic</a>
 </h3>
 
 ```typescript
@@ -2092,7 +2460,7 @@ isPublic: boolean;
 Whether the flavor is public or private.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getFlavor.ts#L76">property region</a>
+<a class="pdoc-child-name" href="/compute/getFlavor.ts#L80">property region</a>
 </h3>
 
 ```typescript
@@ -2135,7 +2503,18 @@ If omitted, the `region` argument of the provider is used.
 A collection of values returned by getKeypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L47">property id</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L39">property fingerprint</a>
+</h3>
+
+```typescript
+fingerprint: string;
+```
+
+
+The fingerprint of the OpenSSH key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L51">property id</a>
 </h3>
 
 ```typescript
@@ -2146,7 +2525,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L39">property publicKey</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L43">property publicKey</a>
 </h3>
 
 ```typescript
@@ -2157,7 +2536,7 @@ publicKey: string;
 The OpenSSH-formatted public key of the keypair.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/getKeypair.ts#L43">property region</a>
+<a class="pdoc-child-name" href="/compute/getKeypair.ts#L47">property region</a>
 </h3>
 
 ```typescript
@@ -2773,6 +3152,138 @@ vendorOptions?: pulumi.Input<{ ... }>;
 Map of additional vendor-specific options.
 Supported options are described below.
 
+<h2 class="pdoc-module-header" id="InterfaceAttachArgs">
+<a class="pdoc-member-name" href="/compute/interfaceAttach.ts#L116">interface InterfaceAttachArgs</a>
+</h2>
+
+The set of arguments for constructing a InterfaceAttach resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L121">property fixedIp</a>
+</h3>
+
+```typescript
+fixedIp?: pulumi.Input<string>;
+```
+
+
+An IP address to assosciate with the port.
+_NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L125">property instanceId</a>
+</h3>
+
+```typescript
+instanceId: pulumi.Input<string>;
+```
+
+
+The ID of the Instance to attach the Port or Network to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L130">property networkId</a>
+</h3>
+
+```typescript
+networkId?: pulumi.Input<string>;
+```
+
+
+The ID of the Network to attach to an Instance. A port will be created automatically.
+_NOTE_: This option and `port_id` are mutually exclusive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L135">property portId</a>
+</h3>
+
+```typescript
+portId?: pulumi.Input<string>;
+```
+
+
+The ID of the Port to attach to an Instance.
+_NOTE_: This option and `network_id` are mutually exclusive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L141">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to create the interface attachment.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new attachment.
+
+<h2 class="pdoc-module-header" id="InterfaceAttachState">
+<a class="pdoc-member-name" href="/compute/interfaceAttach.ts#L85">interface InterfaceAttachState</a>
+</h2>
+
+Input properties used for looking up and filtering InterfaceAttach resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L90">property fixedIp</a>
+</h3>
+
+```typescript
+fixedIp?: pulumi.Input<string>;
+```
+
+
+An IP address to assosciate with the port.
+_NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L94">property instanceId</a>
+</h3>
+
+```typescript
+instanceId?: pulumi.Input<string>;
+```
+
+
+The ID of the Instance to attach the Port or Network to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L99">property networkId</a>
+</h3>
+
+```typescript
+networkId?: pulumi.Input<string>;
+```
+
+
+The ID of the Network to attach to an Instance. A port will be created automatically.
+_NOTE_: This option and `port_id` are mutually exclusive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L104">property portId</a>
+</h3>
+
+```typescript
+portId?: pulumi.Input<string>;
+```
+
+
+The ID of the Port to attach to an Instance.
+_NOTE_: This option and `network_id` are mutually exclusive.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/interfaceAttach.ts#L110">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to create the interface attachment.
+If omitted, the `region` argument of the provider is used. Changing this
+creates a new attachment.
+
 <h2 class="pdoc-module-header" id="KeypairArgs">
 <a class="pdoc-member-name" href="/compute/keypair.ts#L134">interface KeypairArgs</a>
 </h2>
@@ -3151,13 +3662,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="VolumeAttachArgs">
-<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L115">interface VolumeAttachArgs</a>
+<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L125">interface VolumeAttachArgs</a>
 </h2>
 
 The set of arguments for constructing a VolumeAttach resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L124">property device</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L134">property device</a>
 </h3>
 
 ```typescript
@@ -3173,7 +3684,7 @@ to update the device upon subsequent applying which will cause the volume
 to be detached and reattached indefinitely. Please use with caution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L128">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L138">property instanceId</a>
 </h3>
 
 ```typescript
@@ -3184,7 +3695,18 @@ instanceId: pulumi.Input<string>;
 The ID of the Instance to attach the Volume to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L135">property region</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L142">property multiattach</a>
+</h3>
+
+```typescript
+multiattach?: pulumi.Input<boolean>;
+```
+
+
+Enable attachment of multiattach-capable volumes.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L149">property region</a>
 </h3>
 
 ```typescript
@@ -3198,7 +3720,7 @@ A Compute client is needed to create a volume attachment. If omitted, the
 new volume attachment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L139">property volumeId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L153">property volumeId</a>
 </h3>
 
 ```typescript
@@ -3209,13 +3731,13 @@ volumeId: pulumi.Input<string>;
 The ID of the Volume to attach to an Instance.
 
 <h2 class="pdoc-module-header" id="VolumeAttachState">
-<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L85">interface VolumeAttachState</a>
+<a class="pdoc-member-name" href="/compute/volumeAttach.ts#L91">interface VolumeAttachState</a>
 </h2>
 
 Input properties used for looking up and filtering VolumeAttach resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L94">property device</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L100">property device</a>
 </h3>
 
 ```typescript
@@ -3231,7 +3753,7 @@ to update the device upon subsequent applying which will cause the volume
 to be detached and reattached indefinitely. Please use with caution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L98">property instanceId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L104">property instanceId</a>
 </h3>
 
 ```typescript
@@ -3242,7 +3764,18 @@ instanceId?: pulumi.Input<string>;
 The ID of the Instance to attach the Volume to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L105">property region</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L108">property multiattach</a>
+</h3>
+
+```typescript
+multiattach?: pulumi.Input<boolean>;
+```
+
+
+Enable attachment of multiattach-capable volumes.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L115">property region</a>
 </h3>
 
 ```typescript
@@ -3256,7 +3789,7 @@ A Compute client is needed to create a volume attachment. If omitted, the
 new volume attachment.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L109">property volumeId</a>
+<a class="pdoc-child-name" href="/compute/volumeAttach.ts#L119">property volumeId</a>
 </h3>
 
 ```typescript
