@@ -272,7 +272,7 @@ The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The
 </h3>
 
 ```typescript
-public new QueueEventSubscription(name: string, queue: queue.Queue, handler: QueueEventHandler, args: QueueEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+public new QueueEventSubscription(name: string, queue: queue.Queue, handler: QueueEventHandler, args: QueueEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">

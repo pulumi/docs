@@ -32,7 +32,7 @@ title: Module blockstorage
 Manages a V3 volume resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L93">constructor</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L97">constructor</a>
 </h3>
 
 ```typescript
@@ -51,7 +51,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeState): Volume
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeState, opts?: pulumi.CustomResourceOptions): Volume
 ```
 
 
@@ -177,7 +177,18 @@ Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L64">property name</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L63">property multiattach</a>
+</h3>
+
+```typescript
+public multiattach: pulumi.Output<boolean | undefined>;
+```
+
+
+Allow the volume to be attached to more than one Compute instance.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L68">property name</a>
 </h3>
 
 ```typescript
@@ -189,7 +200,7 @@ A unique name for the volume. Changing this updates the
 volume's name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L70">property region</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L74">property region</a>
 </h3>
 
 ```typescript
@@ -202,7 +213,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L74">property size</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L78">property size</a>
 </h3>
 
 ```typescript
@@ -213,7 +224,7 @@ public size: pulumi.Output<number>;
 The size of the volume to create (in gigabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L79">property snapshotId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L83">property snapshotId</a>
 </h3>
 
 ```typescript
@@ -225,7 +236,7 @@ The snapshot ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L83">property sourceReplica</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L87">property sourceReplica</a>
 </h3>
 
 ```typescript
@@ -236,7 +247,7 @@ public sourceReplica: pulumi.Output<string | undefined>;
 The volume ID to replicate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L88">property sourceVolId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L92">property sourceVolId</a>
 </h3>
 
 ```typescript
@@ -260,7 +271,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L93">property volumeType</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L97">property volumeType</a>
 </h3>
 
 ```typescript
@@ -309,7 +320,7 @@ Create a VolumeAttach resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachState): VolumeAttach
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachState, opts?: pulumi.CustomResourceOptions): VolumeAttach
 ```
 
 
@@ -573,7 +584,7 @@ Create a VolumeAttachV2 resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachV2State): VolumeAttachV2
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachV2State, opts?: pulumi.CustomResourceOptions): VolumeAttachV2
 ```
 
 
@@ -825,7 +836,7 @@ Create a VolumeV1 resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeV1State): VolumeV1
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeV1State, opts?: pulumi.CustomResourceOptions): VolumeV1
 ```
 
 
@@ -1036,7 +1047,7 @@ Create a VolumeV2 resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeV2State): VolumeV2
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeV2State, opts?: pulumi.CustomResourceOptions): VolumeV2
 ```
 
 
@@ -1245,13 +1256,13 @@ The type of volume to create.
 Changing this creates a new volume.
 
 <h2 class="pdoc-module-header" id="VolumeArgs">
-<a class="pdoc-member-name" href="/blockstorage/volume.ts#L225">interface VolumeArgs</a>
+<a class="pdoc-member-name" href="/blockstorage/volume.ts#L235">interface VolumeArgs</a>
 </h2>
 
 The set of arguments for constructing a Volume resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L230">property availabilityZone</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L240">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -1263,7 +1274,7 @@ The availability zone for the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L235">property consistencyGroupId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L245">property consistencyGroupId</a>
 </h3>
 
 ```typescript
@@ -1275,7 +1286,7 @@ The consistency group to place the volume
 in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L240">property description</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L250">property description</a>
 </h3>
 
 ```typescript
@@ -1287,7 +1298,7 @@ A description of the volume. Changing this updates
 the volume's description.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L246">property enableOnlineResize</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L256">property enableOnlineResize</a>
 </h3>
 
 ```typescript
@@ -1300,7 +1311,7 @@ attached volumes. Note: updating size of an attached volume requires Cinder
 support for version 3.42 and a compatible storage driver.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L251">property imageId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L261">property imageId</a>
 </h3>
 
 ```typescript
@@ -1312,7 +1323,7 @@ The image ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L256">property metadata</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L266">property metadata</a>
 </h3>
 
 ```typescript
@@ -1324,7 +1335,18 @@ Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L261">property name</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L270">property multiattach</a>
+</h3>
+
+```typescript
+multiattach?: pulumi.Input<boolean>;
+```
+
+
+Allow the volume to be attached to more than one Compute instance.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L275">property name</a>
 </h3>
 
 ```typescript
@@ -1336,7 +1358,7 @@ A unique name for the volume. Changing this updates the
 volume's name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L267">property region</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L281">property region</a>
 </h3>
 
 ```typescript
@@ -1349,7 +1371,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L271">property size</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L285">property size</a>
 </h3>
 
 ```typescript
@@ -1360,7 +1382,7 @@ size: pulumi.Input<number>;
 The size of the volume to create (in gigabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L276">property snapshotId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L290">property snapshotId</a>
 </h3>
 
 ```typescript
@@ -1372,7 +1394,7 @@ The snapshot ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L280">property sourceReplica</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L294">property sourceReplica</a>
 </h3>
 
 ```typescript
@@ -1383,7 +1405,7 @@ sourceReplica?: pulumi.Input<string>;
 The volume ID to replicate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L285">property sourceVolId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L299">property sourceVolId</a>
 </h3>
 
 ```typescript
@@ -1395,7 +1417,7 @@ The volume ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L290">property volumeType</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L304">property volumeType</a>
 </h3>
 
 ```typescript
@@ -2061,13 +2083,13 @@ An array of wwpn strings. Used for Fibre Channel
 connections.
 
 <h2 class="pdoc-module-header" id="VolumeState">
-<a class="pdoc-member-name" href="/blockstorage/volume.ts#L148">interface VolumeState</a>
+<a class="pdoc-member-name" href="/blockstorage/volume.ts#L154">interface VolumeState</a>
 </h2>
 
 Input properties used for looking up and filtering Volume resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L154">property attachments</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L160">property attachments</a>
 </h3>
 
 ```typescript
@@ -2080,7 +2102,7 @@ display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L159">property availabilityZone</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L165">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -2092,7 +2114,7 @@ The availability zone for the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L164">property consistencyGroupId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L170">property consistencyGroupId</a>
 </h3>
 
 ```typescript
@@ -2104,7 +2126,7 @@ The consistency group to place the volume
 in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L169">property description</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L175">property description</a>
 </h3>
 
 ```typescript
@@ -2116,7 +2138,7 @@ A description of the volume. Changing this updates
 the volume's description.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L175">property enableOnlineResize</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L181">property enableOnlineResize</a>
 </h3>
 
 ```typescript
@@ -2129,7 +2151,7 @@ attached volumes. Note: updating size of an attached volume requires Cinder
 support for version 3.42 and a compatible storage driver.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L180">property imageId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L186">property imageId</a>
 </h3>
 
 ```typescript
@@ -2141,7 +2163,7 @@ The image ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L185">property metadata</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L191">property metadata</a>
 </h3>
 
 ```typescript
@@ -2153,7 +2175,18 @@ Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L190">property name</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L195">property multiattach</a>
+</h3>
+
+```typescript
+multiattach?: pulumi.Input<boolean>;
+```
+
+
+Allow the volume to be attached to more than one Compute instance.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L200">property name</a>
 </h3>
 
 ```typescript
@@ -2165,7 +2198,7 @@ A unique name for the volume. Changing this updates the
 volume's name.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L196">property region</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L206">property region</a>
 </h3>
 
 ```typescript
@@ -2178,7 +2211,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L200">property size</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L210">property size</a>
 </h3>
 
 ```typescript
@@ -2189,7 +2222,7 @@ size?: pulumi.Input<number>;
 The size of the volume to create (in gigabytes).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L205">property snapshotId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L215">property snapshotId</a>
 </h3>
 
 ```typescript
@@ -2201,7 +2234,7 @@ The snapshot ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L209">property sourceReplica</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L219">property sourceReplica</a>
 </h3>
 
 ```typescript
@@ -2212,7 +2245,7 @@ sourceReplica?: pulumi.Input<string>;
 The volume ID to replicate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L214">property sourceVolId</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L224">property sourceVolId</a>
 </h3>
 
 ```typescript
@@ -2224,7 +2257,7 @@ The volume ID from which to create the volume.
 Changing this creates a new volume.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/blockstorage/volume.ts#L219">property volumeType</a>
+<a class="pdoc-child-name" href="/blockstorage/volume.ts#L229">property volumeType</a>
 </h3>
 
 ```typescript

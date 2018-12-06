@@ -20,7 +20,7 @@ title: Module policy
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/assignment.ts#L10">class Assignment</a>
 </h2>
 
-Configured the specified Policy Definition at the specified Scope.
+Configures the specified Policy Definition at the specified Scope.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/assignment.ts#L43">constructor</a>
@@ -160,7 +160,7 @@ deployments.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/definition.ts#L10">class Definition</a>
 </h2>
 
-Manages a policy for all of the resource groups under the subscription.
+Manages a policy rule definition. Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/definition.ts#L64">constructor</a>
@@ -253,8 +253,8 @@ public metadata: pulumi.Output<string | undefined>;
 
 
 The metadata for the policy definition. This
-is a json object representing the rule that contains an if and
-a then block.
+is a json object representing additional metadata that should be stored
+with the policy definition.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/definition.ts#L43">property mode</a>
@@ -507,8 +507,8 @@ metadata?: pulumi.Input<string>;
 
 
 The metadata for the policy definition. This
-is a json object representing the rule that contains an if and
-a then block.
+is a json object representing additional metadata that should be stored
+with the policy definition.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/definition.ts#L182">property mode</a>
@@ -611,8 +611,8 @@ metadata?: pulumi.Input<string>;
 
 
 The metadata for the policy definition. This
-is a json object representing the rule that contains an if and
-a then block.
+is a json object representing additional metadata that should be stored
+with the policy definition.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/policy/definition.ts#L134">property mode</a>

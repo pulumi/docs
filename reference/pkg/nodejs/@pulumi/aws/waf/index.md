@@ -761,7 +761,7 @@ public metricName: pulumi.Output<string>;
 ```
 
 
-The name or description for the Amazon CloudWatch metric of this rule.
+The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/waf/rule.ts#L30">property name</a>
@@ -1759,7 +1759,7 @@ metricName: pulumi.Input<string>;
 ```
 
 
-The name or description for the Amazon CloudWatch metric of this rule.
+The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/waf/rule.ts#L93">property name</a>
@@ -1876,7 +1876,7 @@ metricName?: pulumi.Input<string>;
 ```
 
 
-The name or description for the Amazon CloudWatch metric of this rule.
+The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/waf/rule.ts#L75">property name</a>

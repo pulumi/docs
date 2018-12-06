@@ -38,7 +38,7 @@ title: Module automation
 Manages a Automation Account.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L42">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L54">constructor</a>
 </h3>
 
 ```typescript
@@ -85,6 +85,39 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L26">property dscPrimaryAccessKey</a>
+</h3>
+
+```typescript
+public dscPrimaryAccessKey: pulumi.Output<string>;
+```
+
+
+The Primary Access Key for the DSC Endpoint associated with this Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L30">property dscSecondaryAccessKey</a>
+</h3>
+
+```typescript
+public dscSecondaryAccessKey: pulumi.Output<string>;
+```
+
+
+The Secondary Access Key for the DSC Endpoint associated with this Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L34">property dscServerEndpoint</a>
+</h3>
+
+```typescript
+public dscServerEndpoint: pulumi.Output<string>;
+```
+
+
+The DSC Server Endpoint associated with this Automation Account.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
@@ -97,7 +130,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L26">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L38">property location</a>
 </h3>
 
 ```typescript
@@ -108,7 +141,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L30">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -119,7 +152,7 @@ public name: pulumi.Output<string>;
 The SKU name of the account - only `Basic` is supported at this time. Defaults to `Basic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L34">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L46">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -130,7 +163,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L38">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L50">property sku</a>
 </h3>
 
 ```typescript
@@ -141,7 +174,7 @@ public sku: pulumi.Output<{ ... }>;
 A `sku` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L42">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L54">property tags</a>
 </h3>
 
 ```typescript
@@ -1131,13 +1164,13 @@ public weekDays: pulumi.Output<string[] | undefined>;
 List of days of the week that the job should execute on. Only valid when frequency is `Week`.
 
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L111">interface AccountArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L141">interface AccountArgs</a>
 </h2>
 
 The set of arguments for constructing a Account resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L115">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L145">property location</a>
 </h3>
 
 ```typescript
@@ -1148,7 +1181,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L119">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L149">property name</a>
 </h3>
 
 ```typescript
@@ -1159,7 +1192,7 @@ name?: pulumi.Input<string>;
 The SKU name of the account - only `Basic` is supported at this time. Defaults to `Basic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L123">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L153">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1170,7 +1203,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L127">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L157">property sku</a>
 </h3>
 
 ```typescript
@@ -1181,7 +1214,7 @@ sku: pulumi.Input<{ ... }>;
 A `sku` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L131">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L161">property tags</a>
 </h3>
 
 ```typescript
@@ -1192,13 +1225,46 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L85">interface AccountState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L103">interface AccountState</a>
 </h2>
 
 Input properties used for looking up and filtering Account resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L89">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L107">property dscPrimaryAccessKey</a>
+</h3>
+
+```typescript
+dscPrimaryAccessKey?: pulumi.Input<string>;
+```
+
+
+The Primary Access Key for the DSC Endpoint associated with this Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L111">property dscSecondaryAccessKey</a>
+</h3>
+
+```typescript
+dscSecondaryAccessKey?: pulumi.Input<string>;
+```
+
+
+The Secondary Access Key for the DSC Endpoint associated with this Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L115">property dscServerEndpoint</a>
+</h3>
+
+```typescript
+dscServerEndpoint?: pulumi.Input<string>;
+```
+
+
+The DSC Server Endpoint associated with this Automation Account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L119">property location</a>
 </h3>
 
 ```typescript
@@ -1209,7 +1275,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L93">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L123">property name</a>
 </h3>
 
 ```typescript
@@ -1220,7 +1286,7 @@ name?: pulumi.Input<string>;
 The SKU name of the account - only `Basic` is supported at this time. Defaults to `Basic`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L97">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L127">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1231,7 +1297,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which the Automation Account is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L101">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L131">property sku</a>
 </h3>
 
 ```typescript
@@ -1242,7 +1308,7 @@ sku?: pulumi.Input<{ ... }>;
 A `sku` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L105">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/account.ts#L135">property tags</a>
 </h3>
 
 ```typescript

@@ -18,6 +18,7 @@ title: Module networking
 * <a href="#Subnet">class Subnet</a>
 * <a href="#SubnetPool">class SubnetPool</a>
 * <a href="#SubnetRoute">class SubnetRoute</a>
+* <a href="#Trunk">class Trunk</a>
 * <a href="#getFloatingIp">function getFloatingIp</a>
 * <a href="#getNetwork">function getNetwork</a>
 * <a href="#getRouter">function getRouter</a>
@@ -60,8 +61,10 @@ title: Module networking
 * <a href="#SubnetRouteArgs">interface SubnetRouteArgs</a>
 * <a href="#SubnetRouteState">interface SubnetRouteState</a>
 * <a href="#SubnetState">interface SubnetState</a>
+* <a href="#TrunkArgs">interface TrunkArgs</a>
+* <a href="#TrunkState">interface TrunkState</a>
 
-<a href="/networking/floatingIp.ts">networking/floatingIp.ts</a> <a href="/networking/floatingIpAssociate.ts">networking/floatingIpAssociate.ts</a> <a href="/networking/getFloatingIp.ts">networking/getFloatingIp.ts</a> <a href="/networking/getNetwork.ts">networking/getNetwork.ts</a> <a href="/networking/getRouter.ts">networking/getRouter.ts</a> <a href="/networking/getSecGroup.ts">networking/getSecGroup.ts</a> <a href="/networking/getSubnet.ts">networking/getSubnet.ts</a> <a href="/networking/getSubnetPool.ts">networking/getSubnetPool.ts</a> <a href="/networking/network.ts">networking/network.ts</a> <a href="/networking/port.ts">networking/port.ts</a> <a href="/networking/router.ts">networking/router.ts</a> <a href="/networking/routerInterface.ts">networking/routerInterface.ts</a> <a href="/networking/routerRoute.ts">networking/routerRoute.ts</a> <a href="/networking/secGroup.ts">networking/secGroup.ts</a> <a href="/networking/secGroupRule.ts">networking/secGroupRule.ts</a> <a href="/networking/subnet.ts">networking/subnet.ts</a> <a href="/networking/subnetPool.ts">networking/subnetPool.ts</a> <a href="/networking/subnetRoute.ts">networking/subnetRoute.ts</a> 
+<a href="/networking/floatingIp.ts">networking/floatingIp.ts</a> <a href="/networking/floatingIpAssociate.ts">networking/floatingIpAssociate.ts</a> <a href="/networking/getFloatingIp.ts">networking/getFloatingIp.ts</a> <a href="/networking/getNetwork.ts">networking/getNetwork.ts</a> <a href="/networking/getRouter.ts">networking/getRouter.ts</a> <a href="/networking/getSecGroup.ts">networking/getSecGroup.ts</a> <a href="/networking/getSubnet.ts">networking/getSubnet.ts</a> <a href="/networking/getSubnetPool.ts">networking/getSubnetPool.ts</a> <a href="/networking/network.ts">networking/network.ts</a> <a href="/networking/port.ts">networking/port.ts</a> <a href="/networking/router.ts">networking/router.ts</a> <a href="/networking/routerInterface.ts">networking/routerInterface.ts</a> <a href="/networking/routerRoute.ts">networking/routerRoute.ts</a> <a href="/networking/secGroup.ts">networking/secGroup.ts</a> <a href="/networking/secGroupRule.ts">networking/secGroupRule.ts</a> <a href="/networking/subnet.ts">networking/subnet.ts</a> <a href="/networking/subnetPool.ts">networking/subnetPool.ts</a> <a href="/networking/subnetRoute.ts">networking/subnetRoute.ts</a> <a href="/networking/trunk.ts">networking/trunk.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="FloatingIp">
@@ -74,7 +77,7 @@ These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L71">constructor</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L75">constructor</a>
 </h3>
 
 ```typescript
@@ -93,7 +96,7 @@ Create a FloatingIp resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpState): FloatingIp
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpState, opts?: pulumi.CustomResourceOptions): FloatingIp
 ```
 
 
@@ -210,7 +213,18 @@ The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L67">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L64">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A set of string tags for the floating IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L71">property tenantId</a>
 </h3>
 
 ```typescript
@@ -236,7 +250,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L71">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L75">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -274,7 +288,7 @@ Create a FloatingIpAssociate resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpAssociateState): FloatingIpAssociate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FloatingIpAssociateState, opts?: pulumi.CustomResourceOptions): FloatingIpAssociate
 ```
 
 
@@ -370,7 +384,7 @@ deployments.
 Manages a V2 Neutron network resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L72">constructor</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L76">constructor</a>
 </h3>
 
 ```typescript
@@ -389,7 +403,7 @@ Create a Network resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkState): Network
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkState, opts?: pulumi.CustomResourceOptions): Network
 ```
 
 
@@ -519,7 +533,18 @@ by any tenant or not. Changing this updates the sharing capabalities of the
 existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L68">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L67">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A set of string tags for the network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/network.ts#L72">property tenantId</a>
 </h3>
 
 ```typescript
@@ -543,7 +568,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L72">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L76">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -560,7 +585,7 @@ Map of additional options.
 Manages a V2 port resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L111">constructor</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L121">constructor</a>
 </h3>
 
 ```typescript
@@ -579,7 +604,7 @@ Create a Port resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PortState): Port
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PortState, opts?: pulumi.CustomResourceOptions): Port
 ```
 
 
@@ -681,7 +706,20 @@ The device owner of the Port. Changing this creates
 a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L59">property fixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L60">property extraDhcpOptions</a>
+</h3>
+
+```typescript
+public extraDhcpOptions: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+An extra DHCP option that needs to be configured
+on the port. The structure is described below. Can be specified multiple
+times.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L65">property fixedIps</a>
 </h3>
 
 ```typescript
@@ -705,7 +743,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L64">property macAddress</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L70">property macAddress</a>
 </h3>
 
 ```typescript
@@ -717,7 +755,7 @@ Specify a specific MAC address for the port. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L69">property name</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L75">property name</a>
 </h3>
 
 ```typescript
@@ -729,7 +767,7 @@ A unique name for the port. Changing this
 updates the `name` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L74">property networkId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L80">property networkId</a>
 </h3>
 
 ```typescript
@@ -741,7 +779,7 @@ The ID of the network to attach the port to. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L80">property noFixedIp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L86">property noFixedIp</a>
 </h3>
 
 ```typescript
@@ -754,7 +792,7 @@ IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L88">property noSecurityGroups</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L94">property noSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -769,7 +807,7 @@ behavior of the Networking service, which is to usually apply the "default"
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L95">property region</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L101">property region</a>
 </h3>
 
 ```typescript
@@ -783,7 +821,7 @@ A networking client is needed to create a port. If omitted, the
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L102">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L108">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -797,7 +835,18 @@ specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L107">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L112">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+See Argument Reference above.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L117">property tenantId</a>
 </h3>
 
 ```typescript
@@ -821,7 +870,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L111">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L121">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -838,7 +887,7 @@ Map of additional options.
 Manages a V2 router resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L94">constructor</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L98">constructor</a>
 </h3>
 
 ```typescript
@@ -857,7 +906,7 @@ Create a Router resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouterState): Router
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouterState, opts?: pulumi.CustomResourceOptions): Router
 ```
 
 
@@ -1018,7 +1067,18 @@ A networking client is needed to create a router. If omitted, the
 router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L85">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L84">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A set of string tags for the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/router.ts#L89">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1042,7 +1102,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L89">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L93">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1053,7 +1113,7 @@ public valueSpecs: pulumi.Output<{ ... } | undefined>;
 Map of additional driver-specific options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L94">property vendorOptions</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L98">property vendorOptions</a>
 </h3>
 
 ```typescript
@@ -1090,7 +1150,7 @@ Create a RouterInterface resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouterInterfaceState): RouterInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouterInterfaceState, opts?: pulumi.CustomResourceOptions): RouterInterface
 ```
 
 
@@ -1217,7 +1277,7 @@ Create a RouterRoute resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouterRouteState): RouterRoute
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouterRouteState, opts?: pulumi.CustomResourceOptions): RouterRoute
 ```
 
 
@@ -1327,7 +1387,7 @@ Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L51">constructor</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L55">constructor</a>
 </h3>
 
 ```typescript
@@ -1346,7 +1406,7 @@ Create a SecGroup resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecGroupState): SecGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecGroupState, opts?: pulumi.CustomResourceOptions): SecGroup
 ```
 
 
@@ -1435,7 +1495,18 @@ A networking client is needed to create a port. If omitted, the
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L51">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L49">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A set of string tags for the security group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L55">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1487,7 +1558,7 @@ Create a SecGroupRule resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecGroupRuleState): SecGroupRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecGroupRuleState, opts?: pulumi.CustomResourceOptions): SecGroupRule
 ```
 
 
@@ -1703,7 +1774,7 @@ deployments.
 Manages a V2 Neutron subnet resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L110">constructor</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L114">constructor</a>
 </h3>
 
 ```typescript
@@ -1722,7 +1793,7 @@ Create a Subnet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetState): Subnet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetState, opts?: pulumi.CustomResourceOptions): Subnet
 ```
 
 
@@ -1939,7 +2010,18 @@ public subnetpoolId: pulumi.Output<string | undefined>;
 The ID of the subnetpool associated with the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L106">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L105">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A set of string tags for the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/subnet.ts#L110">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1963,7 +2045,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L110">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L114">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -1980,7 +2062,7 @@ Map of additional options.
 Manages a V2 Neutron subnetpool resource within OpenStack.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L116">constructor</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L120">constructor</a>
 </h3>
 
 ```typescript
@@ -1999,7 +2081,7 @@ Create a SubnetPool resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetPoolState): SubnetPool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetPoolState, opts?: pulumi.CustomResourceOptions): SubnetPool
 ```
 
 
@@ -2230,7 +2312,18 @@ all projects. Changing this updates the shared status of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L112">property updatedAt</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L112">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+
+A set of string tags for the subnetpool.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L116">property updatedAt</a>
 </h3>
 
 ```typescript
@@ -2253,7 +2346,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L116">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L120">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2289,7 +2382,7 @@ Create a SubnetRoute resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetRouteState): SubnetRoute
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetRouteState, opts?: pulumi.CustomResourceOptions): SubnetRoute
 ```
 
 
@@ -2390,6 +2483,167 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="Trunk">
+<a class="pdoc-member-name" href="/networking/trunk.ts#L10">class Trunk</a>
+</h2>
+
+Manages a networking V2 trunk resource within OpenStack.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L57">constructor</a>
+</h3>
+
+```typescript
+new Trunk(name: string, args: TrunkArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a Trunk resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L19">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TrunkState, opts?: pulumi.CustomResourceOptions): Trunk
+```
+
+
+Get an existing Trunk resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L28">property adminStateUp</a>
+</h3>
+
+```typescript
+public adminStateUp: pulumi.Output<boolean | undefined>;
+```
+
+
+Administrative up/down status for the trunk
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L33">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+A unique name for the port. Changing this
+updates the `name` of an existing port.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L39">property portId</a>
+</h3>
+
+```typescript
+public portId: pulumi.Output<string>;
+```
+
+
+The ID of the port to be used as the parent port of the
+trunk. This is the port that should be used as the compute instance network
+port. Changing this creates a new trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L46">property region</a>
+</h3>
+
+```typescript
+public region: pulumi.Output<string>;
+```
+
+
+The region in which to obtain the V2 networking client.
+A networking client is needed to create a trunk. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L51">property subPorts</a>
+</h3>
+
+```typescript
+public subPorts: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+The set of ports that will be made subports of the trunk.
+The structure of each subport is described below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L52">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<string[] | undefined>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L57">property tenantId</a>
+</h3>
+
+```typescript
+public tenantId: pulumi.Output<string>;
+```
+
+
+The owner of the Trunk. Required if admin wants
+to create a trunk on behalf of another tenant. Changing this creates a new trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="getFloatingIp">
 <a class="pdoc-member-name" href="/networking/getFloatingIp.ts#L10">function getFloatingIp</a>
 </h2>
@@ -2457,13 +2711,13 @@ getSubnetPool(args?: GetSubnetPoolArgs, opts?: pulumi.InvokeOptions): Promise<Ge
 Use this data source to get the ID of an available OpenStack subnetpool.
 
 <h2 class="pdoc-module-header" id="FloatingIpArgs">
-<a class="pdoc-member-name" href="/networking/floatingIp.ts#L166">interface FloatingIpArgs</a>
+<a class="pdoc-member-name" href="/networking/floatingIp.ts#L176">interface FloatingIpArgs</a>
 </h2>
 
 The set of arguments for constructing a FloatingIp resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L173">property address</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L183">property address</a>
 </h3>
 
 ```typescript
@@ -2477,7 +2731,7 @@ an admin user or have had a custom policy or role applied to your OpenStack
 user or project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L178">property fixedIp</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L188">property fixedIp</a>
 </h3>
 
 ```typescript
@@ -2489,7 +2743,7 @@ Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L183">property pool</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L193">property pool</a>
 </h3>
 
 ```typescript
@@ -2501,7 +2755,7 @@ The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L188">property portId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L198">property portId</a>
 </h3>
 
 ```typescript
@@ -2513,7 +2767,7 @@ ID of an existing port with at least one IP address to
 associate with this floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L196">property region</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L206">property region</a>
 </h3>
 
 ```typescript
@@ -2528,7 +2782,7 @@ another networking resource, such as a load balancer. If omitted, the
 floating IP (which may or may not have a different address).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L201">property subnetId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L211">property subnetId</a>
 </h3>
 
 ```typescript
@@ -2540,7 +2794,18 @@ The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L208">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L215">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the floating IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L222">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2554,7 +2819,7 @@ belongs to the same tenant. Changing this creates a new floating IP (which
 may or may not have a different address)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L212">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L226">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -2653,13 +2918,13 @@ another networking resource, such as a load balancer. If omitted, the
 floating IP (which may or may not have a different address).
 
 <h2 class="pdoc-module-header" id="FloatingIpState">
-<a class="pdoc-member-name" href="/networking/floatingIp.ts#L114">interface FloatingIpState</a>
+<a class="pdoc-member-name" href="/networking/floatingIp.ts#L120">interface FloatingIpState</a>
 </h2>
 
 Input properties used for looking up and filtering FloatingIp resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L121">property address</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L127">property address</a>
 </h3>
 
 ```typescript
@@ -2673,7 +2938,7 @@ an admin user or have had a custom policy or role applied to your OpenStack
 user or project.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L126">property fixedIp</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L132">property fixedIp</a>
 </h3>
 
 ```typescript
@@ -2685,7 +2950,7 @@ Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L131">property pool</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L137">property pool</a>
 </h3>
 
 ```typescript
@@ -2697,7 +2962,7 @@ The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L136">property portId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L142">property portId</a>
 </h3>
 
 ```typescript
@@ -2709,7 +2974,7 @@ ID of an existing port with at least one IP address to
 associate with this floating IP.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L144">property region</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L150">property region</a>
 </h3>
 
 ```typescript
@@ -2724,7 +2989,7 @@ another networking resource, such as a load balancer. If omitted, the
 floating IP (which may or may not have a different address).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L149">property subnetId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L155">property subnetId</a>
 </h3>
 
 ```typescript
@@ -2736,7 +3001,18 @@ The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L156">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L159">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the floating IP.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L166">property tenantId</a>
 </h3>
 
 ```typescript
@@ -2750,7 +3026,7 @@ belongs to the same tenant. Changing this creates a new floating IP (which
 may or may not have a different address)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/floatingIp.ts#L160">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/floatingIp.ts#L170">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -3888,13 +4164,13 @@ tenantId: string;
 ```
 
 <h2 class="pdoc-module-header" id="NetworkArgs">
-<a class="pdoc-member-name" href="/networking/network.ts#L170">interface NetworkArgs</a>
+<a class="pdoc-member-name" href="/networking/network.ts#L180">interface NetworkArgs</a>
 </h2>
 
 The set of arguments for constructing a Network resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L176">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L186">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -3907,7 +4183,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L183">property availabilityZoneHints</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L193">property availabilityZoneHints</a>
 </h3>
 
 ```typescript
@@ -3921,7 +4197,7 @@ so that they are scheduled on different availability zones. Changing this
 creates a new network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L189">property external</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L199">property external</a>
 </h3>
 
 ```typescript
@@ -3934,7 +4210,7 @@ external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L194">property name</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L204">property name</a>
 </h3>
 
 ```typescript
@@ -3946,7 +4222,7 @@ The name of the network. Changing this updates the name of
 the existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L201">property region</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L211">property region</a>
 </h3>
 
 ```typescript
@@ -3960,7 +4236,7 @@ A Networking client is needed to create a Neutron network. If omitted, the
 network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L205">property segments</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L215">property segments</a>
 </h3>
 
 ```typescript
@@ -3971,7 +4247,7 @@ segments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 An array of one or more provider segment objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L211">property shared</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L221">property shared</a>
 </h3>
 
 ```typescript
@@ -3984,7 +4260,18 @@ by any tenant or not. Changing this updates the sharing capabalities of the
 existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L216">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L225">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/network.ts#L230">property tenantId</a>
 </h3>
 
 ```typescript
@@ -3996,7 +4283,7 @@ The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L220">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L234">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4007,13 +4294,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="NetworkState">
-<a class="pdoc-member-name" href="/networking/network.ts#L114">interface NetworkState</a>
+<a class="pdoc-member-name" href="/networking/network.ts#L120">interface NetworkState</a>
 </h2>
 
 Input properties used for looking up and filtering Network resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L120">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L126">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4026,7 +4313,7 @@ Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L127">property availabilityZoneHints</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L133">property availabilityZoneHints</a>
 </h3>
 
 ```typescript
@@ -4040,7 +4327,7 @@ so that they are scheduled on different availability zones. Changing this
 creates a new network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L133">property external</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L139">property external</a>
 </h3>
 
 ```typescript
@@ -4053,7 +4340,7 @@ external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L138">property name</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L144">property name</a>
 </h3>
 
 ```typescript
@@ -4065,7 +4352,7 @@ The name of the network. Changing this updates the name of
 the existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L145">property region</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L151">property region</a>
 </h3>
 
 ```typescript
@@ -4079,7 +4366,7 @@ A Networking client is needed to create a Neutron network. If omitted, the
 network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L149">property segments</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L155">property segments</a>
 </h3>
 
 ```typescript
@@ -4090,7 +4377,7 @@ segments?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 An array of one or more provider segment objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L155">property shared</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L161">property shared</a>
 </h3>
 
 ```typescript
@@ -4103,7 +4390,18 @@ by any tenant or not. Changing this updates the sharing capabalities of the
 existing network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L160">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L165">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the network.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/network.ts#L170">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4115,7 +4413,7 @@ The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/network.ts#L164">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/network.ts#L174">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4126,13 +4424,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="PortArgs">
-<a class="pdoc-member-name" href="/networking/port.ts#L265">interface PortArgs</a>
+<a class="pdoc-member-name" href="/networking/port.ts#L289">interface PortArgs</a>
 </h2>
 
 The set of arguments for constructing a Port resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L271">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L295">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4145,7 +4443,7 @@ Administrative up/down status for the port
 `admin_state_up` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L277">property allowedAddressPairs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L301">property allowedAddressPairs</a>
 </h3>
 
 ```typescript
@@ -4158,7 +4456,7 @@ addresses that can be active on this port. The structure is described
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L282">property deviceId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L306">property deviceId</a>
 </h3>
 
 ```typescript
@@ -4170,7 +4468,7 @@ The ID of the device attached to the port. Changing this
 creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L287">property deviceOwner</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L311">property deviceOwner</a>
 </h3>
 
 ```typescript
@@ -4182,7 +4480,20 @@ The device owner of the Port. Changing this creates
 a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L292">property fixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L317">property extraDhcpOptions</a>
+</h3>
+
+```typescript
+extraDhcpOptions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+An extra DHCP option that needs to be configured
+on the port. The structure is described below. Can be specified multiple
+times.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L322">property fixedIps</a>
 </h3>
 
 ```typescript
@@ -4194,7 +4505,7 @@ An array of desired IPs for
 this port. The structure is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L297">property macAddress</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L327">property macAddress</a>
 </h3>
 
 ```typescript
@@ -4206,7 +4517,7 @@ Specify a specific MAC address for the port. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L302">property name</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L332">property name</a>
 </h3>
 
 ```typescript
@@ -4218,7 +4529,7 @@ A unique name for the port. Changing this
 updates the `name` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L307">property networkId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L337">property networkId</a>
 </h3>
 
 ```typescript
@@ -4230,7 +4541,7 @@ The ID of the network to attach the port to. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L313">property noFixedIp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L343">property noFixedIp</a>
 </h3>
 
 ```typescript
@@ -4243,7 +4554,7 @@ IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L321">property noSecurityGroups</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L351">property noSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -4258,7 +4569,7 @@ behavior of the Networking service, which is to usually apply the "default"
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L328">property region</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L358">property region</a>
 </h3>
 
 ```typescript
@@ -4272,7 +4583,7 @@ A networking client is needed to create a port. If omitted, the
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L335">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L365">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4286,7 +4597,18 @@ specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L340">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L369">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+See Argument Reference above.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L374">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4298,7 +4620,7 @@ The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L344">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L378">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4309,13 +4631,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="PortState">
-<a class="pdoc-member-name" href="/networking/port.ts#L170">interface PortState</a>
+<a class="pdoc-member-name" href="/networking/port.ts#L184">interface PortState</a>
 </h2>
 
 Input properties used for looking up and filtering Port resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L176">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L190">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4328,7 +4650,7 @@ Administrative up/down status for the port
 `admin_state_up` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L181">property allFixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L195">property allFixedIps</a>
 </h3>
 
 ```typescript
@@ -4340,7 +4662,7 @@ The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L186">property allSecurityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L200">property allSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4352,7 +4674,7 @@ The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L192">property allowedAddressPairs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L206">property allowedAddressPairs</a>
 </h3>
 
 ```typescript
@@ -4365,7 +4687,7 @@ addresses that can be active on this port. The structure is described
 below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L197">property deviceId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L211">property deviceId</a>
 </h3>
 
 ```typescript
@@ -4377,7 +4699,7 @@ The ID of the device attached to the port. Changing this
 creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L202">property deviceOwner</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L216">property deviceOwner</a>
 </h3>
 
 ```typescript
@@ -4389,7 +4711,20 @@ The device owner of the Port. Changing this creates
 a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L207">property fixedIps</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L222">property extraDhcpOptions</a>
+</h3>
+
+```typescript
+extraDhcpOptions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+An extra DHCP option that needs to be configured
+on the port. The structure is described below. Can be specified multiple
+times.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L227">property fixedIps</a>
 </h3>
 
 ```typescript
@@ -4401,7 +4736,7 @@ An array of desired IPs for
 this port. The structure is described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L212">property macAddress</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L232">property macAddress</a>
 </h3>
 
 ```typescript
@@ -4413,7 +4748,7 @@ Specify a specific MAC address for the port. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L217">property name</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L237">property name</a>
 </h3>
 
 ```typescript
@@ -4425,7 +4760,7 @@ A unique name for the port. Changing this
 updates the `name` of an existing port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L222">property networkId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L242">property networkId</a>
 </h3>
 
 ```typescript
@@ -4437,7 +4772,7 @@ The ID of the network to attach the port to. Changing
 this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L228">property noFixedIp</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L248">property noFixedIp</a>
 </h3>
 
 ```typescript
@@ -4450,7 +4785,7 @@ IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L236">property noSecurityGroups</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L256">property noSecurityGroups</a>
 </h3>
 
 ```typescript
@@ -4465,7 +4800,7 @@ behavior of the Networking service, which is to usually apply the "default"
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L243">property region</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L263">property region</a>
 </h3>
 
 ```typescript
@@ -4479,7 +4814,7 @@ A networking client is needed to create a port. If omitted, the
 port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L250">property securityGroupIds</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L270">property securityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4493,7 +4828,18 @@ specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L255">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L274">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+See Argument Reference above.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/port.ts#L279">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4505,7 +4851,7 @@ The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/port.ts#L259">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/port.ts#L283">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4516,13 +4862,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="RouterArgs">
-<a class="pdoc-member-name" href="/networking/router.ts#L220">interface RouterArgs</a>
+<a class="pdoc-member-name" href="/networking/router.ts#L230">interface RouterArgs</a>
 </h2>
 
 The set of arguments for constructing a Router resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L226">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L236">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4535,7 +4881,7 @@ Administrative up/down status for the router
 `admin_state_up` of an existing router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L232">property availabilityZoneHints</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L242">property availabilityZoneHints</a>
 </h3>
 
 ```typescript
@@ -4548,7 +4894,7 @@ network resources highly available. Used for resources with high availability so
 this creates a new router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L238">property distributed</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L248">property distributed</a>
 </h3>
 
 ```typescript
@@ -4561,7 +4907,7 @@ distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L244">property enableSnat</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L254">property enableSnat</a>
 </h3>
 
 ```typescript
@@ -4574,7 +4920,7 @@ Enable Source NAT for the router. Valid values are
 set this property. Changing this updates the `enable_snat` of the router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L251">property externalFixedIps</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L261">property externalFixedIps</a>
 </h3>
 
 ```typescript
@@ -4588,7 +4934,7 @@ has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L259">property externalGateway</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L269">property externalGateway</a>
 </h3>
 
 ```typescript
@@ -4603,7 +4949,7 @@ will be using floating IPs. Changing this updates the external gateway
 of an existing router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L266">property externalNetworkId</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L276">property externalNetworkId</a>
 </h3>
 
 ```typescript
@@ -4617,7 +4963,7 @@ compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L271">property name</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L281">property name</a>
 </h3>
 
 ```typescript
@@ -4629,7 +4975,7 @@ A unique name for the router. Changing this
 updates the `name` of an existing router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L278">property region</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L288">property region</a>
 </h3>
 
 ```typescript
@@ -4643,7 +4989,18 @@ A networking client is needed to create a router. If omitted, the
 router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L283">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L292">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/router.ts#L297">property tenantId</a>
 </h3>
 
 ```typescript
@@ -4655,7 +5012,7 @@ The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L287">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L301">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -4666,7 +5023,7 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional driver-specific options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L292">property vendorOptions</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L306">property vendorOptions</a>
 </h3>
 
 ```typescript
@@ -4902,13 +5259,13 @@ ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
 
 <h2 class="pdoc-module-header" id="RouterState">
-<a class="pdoc-member-name" href="/networking/router.ts#L142">interface RouterState</a>
+<a class="pdoc-member-name" href="/networking/router.ts#L148">interface RouterState</a>
 </h2>
 
 Input properties used for looking up and filtering Router resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L148">property adminStateUp</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L154">property adminStateUp</a>
 </h3>
 
 ```typescript
@@ -4921,7 +5278,7 @@ Administrative up/down status for the router
 `admin_state_up` of an existing router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L154">property availabilityZoneHints</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L160">property availabilityZoneHints</a>
 </h3>
 
 ```typescript
@@ -4934,7 +5291,7 @@ network resources highly available. Used for resources with high availability so
 this creates a new router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L160">property distributed</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L166">property distributed</a>
 </h3>
 
 ```typescript
@@ -4947,7 +5304,7 @@ distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L166">property enableSnat</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L172">property enableSnat</a>
 </h3>
 
 ```typescript
@@ -4960,7 +5317,7 @@ Enable Source NAT for the router. Valid values are
 set this property. Changing this updates the `enable_snat` of the router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L173">property externalFixedIps</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L179">property externalFixedIps</a>
 </h3>
 
 ```typescript
@@ -4974,7 +5331,7 @@ has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L181">property externalGateway</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L187">property externalGateway</a>
 </h3>
 
 ```typescript
@@ -4989,7 +5346,7 @@ will be using floating IPs. Changing this updates the external gateway
 of an existing router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L188">property externalNetworkId</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L194">property externalNetworkId</a>
 </h3>
 
 ```typescript
@@ -5003,7 +5360,7 @@ compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L193">property name</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L199">property name</a>
 </h3>
 
 ```typescript
@@ -5015,7 +5372,7 @@ A unique name for the router. Changing this
 updates the `name` of an existing router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L200">property region</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L206">property region</a>
 </h3>
 
 ```typescript
@@ -5029,7 +5386,18 @@ A networking client is needed to create a router. If omitted, the
 router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L205">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L210">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the router.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/router.ts#L215">property tenantId</a>
 </h3>
 
 ```typescript
@@ -5041,7 +5409,7 @@ The owner of the floating IP. Required if admin wants
 to create a router for another tenant. Changing this creates a new router.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L209">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L219">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -5052,7 +5420,7 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional driver-specific options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/router.ts#L214">property vendorOptions</a>
+<a class="pdoc-child-name" href="/networking/router.ts#L224">property vendorOptions</a>
 </h3>
 
 ```typescript
@@ -5064,13 +5432,13 @@ Map of additional vendor-specific options.
 Supported options are described below.
 
 <h2 class="pdoc-module-header" id="SecGroupArgs">
-<a class="pdoc-member-name" href="/networking/secGroup.ts#L118">interface SecGroupArgs</a>
+<a class="pdoc-member-name" href="/networking/secGroup.ts#L128">interface SecGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a SecGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L124">property deleteDefaultRules</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L134">property deleteDefaultRules</a>
 </h3>
 
 ```typescript
@@ -5083,7 +5451,7 @@ egress security rules. This is `false` by default. See the below note
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L128">property description</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L138">property description</a>
 </h3>
 
 ```typescript
@@ -5094,7 +5462,7 @@ description?: pulumi.Input<string>;
 A unique name for the security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L132">property name</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L142">property name</a>
 </h3>
 
 ```typescript
@@ -5105,7 +5473,7 @@ name?: pulumi.Input<string>;
 A unique name for the security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L139">property region</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L149">property region</a>
 </h3>
 
 ```typescript
@@ -5119,7 +5487,18 @@ A networking client is needed to create a port. If omitted, the
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L145">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L153">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the security group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L159">property tenantId</a>
 </h3>
 
 ```typescript
@@ -5460,13 +5839,13 @@ wants to create a port for another tenant. Changing this creates a new
 security group rule.
 
 <h2 class="pdoc-module-header" id="SecGroupState">
-<a class="pdoc-member-name" href="/networking/secGroup.ts#L85">interface SecGroupState</a>
+<a class="pdoc-member-name" href="/networking/secGroup.ts#L91">interface SecGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering SecGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L91">property deleteDefaultRules</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L97">property deleteDefaultRules</a>
 </h3>
 
 ```typescript
@@ -5479,7 +5858,7 @@ egress security rules. This is `false` by default. See the below note
 for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L95">property description</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L101">property description</a>
 </h3>
 
 ```typescript
@@ -5490,7 +5869,7 @@ description?: pulumi.Input<string>;
 A unique name for the security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L99">property name</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L105">property name</a>
 </h3>
 
 ```typescript
@@ -5501,7 +5880,7 @@ name?: pulumi.Input<string>;
 A unique name for the security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L106">property region</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L112">property region</a>
 </h3>
 
 ```typescript
@@ -5515,7 +5894,18 @@ A networking client is needed to create a port. If omitted, the
 security group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/secGroup.ts#L112">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L116">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the security group.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/secGroup.ts#L122">property tenantId</a>
 </h3>
 
 ```typescript
@@ -5528,13 +5918,13 @@ wants to create a port for another tenant. Changing this creates a new
 security group.
 
 <h2 class="pdoc-module-header" id="SubnetArgs">
-<a class="pdoc-member-name" href="/networking/subnet.ts#L263">interface SubnetArgs</a>
+<a class="pdoc-member-name" href="/networking/subnet.ts#L273">interface SubnetArgs</a>
 </h2>
 
 The set of arguments for constructing a Subnet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L269">property allocationPools</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L279">property allocationPools</a>
 </h3>
 
 ```typescript
@@ -5547,7 +5937,7 @@ dynamic allocation to ports. The allocation_pool object structure is
 documented below. Changing this creates a new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L275">property cidr</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L285">property cidr</a>
 </h3>
 
 ```typescript
@@ -5560,7 +5950,7 @@ version. You can omit this option if you are creating a subnet from a
 subnet pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L281">property dnsNameservers</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L291">property dnsNameservers</a>
 </h3>
 
 ```typescript
@@ -5573,7 +5963,7 @@ in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L287">property enableDhcp</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L297">property enableDhcp</a>
 </h3>
 
 ```typescript
@@ -5586,7 +5976,7 @@ Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L294">property gatewayIp</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L304">property gatewayIp</a>
 </h3>
 
 ```typescript
@@ -5600,7 +5990,7 @@ gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L301">property hostRoutes</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L311">property hostRoutes</a>
 </h3>
 
 ```typescript
@@ -5614,7 +6004,7 @@ object structure is documented below. Changing this updates the host routes
 for the existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L306">property ipVersion</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L316">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -5626,7 +6016,7 @@ IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L311">property ipv6AddressMode</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L321">property ipv6AddressMode</a>
 </h3>
 
 ```typescript
@@ -5638,7 +6028,7 @@ The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L316">property ipv6RaMode</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L326">property ipv6RaMode</a>
 </h3>
 
 ```typescript
@@ -5650,7 +6040,7 @@ The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L321">property name</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L331">property name</a>
 </h3>
 
 ```typescript
@@ -5662,7 +6052,7 @@ The name of the subnet. Changing this updates the name of
 the existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L326">property networkId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L336">property networkId</a>
 </h3>
 
 ```typescript
@@ -5674,7 +6064,7 @@ The UUID of the parent network. Changing this
 creates a new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L331">property noGateway</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L341">property noGateway</a>
 </h3>
 
 ```typescript
@@ -5686,7 +6076,7 @@ Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L338">property region</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L348">property region</a>
 </h3>
 
 ```typescript
@@ -5700,7 +6090,7 @@ A Networking client is needed to create a Neutron subnet. If omitted, the
 subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L342">property subnetpoolId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L352">property subnetpoolId</a>
 </h3>
 
 ```typescript
@@ -5711,7 +6101,18 @@ subnetpoolId?: pulumi.Input<string>;
 The ID of the subnetpool associated with the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L347">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L356">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/subnet.ts#L361">property tenantId</a>
 </h3>
 
 ```typescript
@@ -5723,7 +6124,7 @@ The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L351">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L365">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -5734,13 +6135,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="SubnetPoolArgs">
-<a class="pdoc-member-name" href="/networking/subnetPool.ts#L277">interface SubnetPoolArgs</a>
+<a class="pdoc-member-name" href="/networking/subnetPool.ts#L287">interface SubnetPoolArgs</a>
 </h2>
 
 The set of arguments for constructing a SubnetPool resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L283">property addressScopeId</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L293">property addressScopeId</a>
 </h3>
 
 ```typescript
@@ -5753,7 +6154,7 @@ subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L290">property defaultPrefixlen</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L300">property defaultPrefixlen</a>
 </h3>
 
 ```typescript
@@ -5767,7 +6168,7 @@ MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L296">property defaultQuota</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L306">property defaultQuota</a>
 </h3>
 
 ```typescript
@@ -5780,7 +6181,7 @@ allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L301">property description</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L311">property description</a>
 </h3>
 
 ```typescript
@@ -5792,7 +6193,7 @@ The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L305">property ipVersion</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L315">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -5803,7 +6204,7 @@ ipVersion?: pulumi.Input<number>;
 The IP protocol version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L311">property isDefault</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L321">property isDefault</a>
 </h3>
 
 ```typescript
@@ -5816,7 +6217,7 @@ subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L318">property maxPrefixlen</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L328">property maxPrefixlen</a>
 </h3>
 
 ```typescript
@@ -5830,7 +6231,7 @@ default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L324">property minPrefixlen</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L334">property minPrefixlen</a>
 </h3>
 
 ```typescript
@@ -5843,7 +6244,7 @@ subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L329">property name</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L339">property name</a>
 </h3>
 
 ```typescript
@@ -5855,7 +6256,7 @@ The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L337">property prefixes</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L347">property prefixes</a>
 </h3>
 
 ```typescript
@@ -5870,7 +6271,7 @@ are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L342">property projectId</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L352">property projectId</a>
 </h3>
 
 ```typescript
@@ -5882,7 +6283,7 @@ The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L349">property region</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L359">property region</a>
 </h3>
 
 ```typescript
@@ -5896,7 +6297,7 @@ A Networking client is needed to create a Neutron subnetpool. If omitted, the
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L355">property shared</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L365">property shared</a>
 </h3>
 
 ```typescript
@@ -5909,7 +6310,18 @@ all projects. Changing this updates the shared status of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L359">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L369">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the subnetpool.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L373">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -5920,13 +6332,13 @@ valueSpecs?: pulumi.Input<{ ... }>;
 Map of additional options.
 
 <h2 class="pdoc-module-header" id="SubnetPoolState">
-<a class="pdoc-member-name" href="/networking/subnetPool.ts#L177">interface SubnetPoolState</a>
+<a class="pdoc-member-name" href="/networking/subnetPool.ts#L183">interface SubnetPoolState</a>
 </h2>
 
 Input properties used for looking up and filtering SubnetPool resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L183">property addressScopeId</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L189">property addressScopeId</a>
 </h3>
 
 ```typescript
@@ -5939,7 +6351,7 @@ subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L187">property createdAt</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L193">property createdAt</a>
 </h3>
 
 ```typescript
@@ -5950,7 +6362,7 @@ createdAt?: pulumi.Input<string>;
 The time at which subnetpool was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L194">property defaultPrefixlen</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L200">property defaultPrefixlen</a>
 </h3>
 
 ```typescript
@@ -5964,7 +6376,7 @@ MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L200">property defaultQuota</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L206">property defaultQuota</a>
 </h3>
 
 ```typescript
@@ -5977,7 +6389,7 @@ allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L205">property description</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L211">property description</a>
 </h3>
 
 ```typescript
@@ -5989,7 +6401,7 @@ The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L209">property ipVersion</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L215">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -6000,7 +6412,7 @@ ipVersion?: pulumi.Input<number>;
 The IP protocol version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L215">property isDefault</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L221">property isDefault</a>
 </h3>
 
 ```typescript
@@ -6013,7 +6425,7 @@ subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L222">property maxPrefixlen</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L228">property maxPrefixlen</a>
 </h3>
 
 ```typescript
@@ -6027,7 +6439,7 @@ default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L228">property minPrefixlen</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L234">property minPrefixlen</a>
 </h3>
 
 ```typescript
@@ -6040,7 +6452,7 @@ subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L233">property name</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L239">property name</a>
 </h3>
 
 ```typescript
@@ -6052,7 +6464,7 @@ The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L241">property prefixes</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L247">property prefixes</a>
 </h3>
 
 ```typescript
@@ -6067,7 +6479,7 @@ are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L246">property projectId</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L252">property projectId</a>
 </h3>
 
 ```typescript
@@ -6079,7 +6491,7 @@ The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L253">property region</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L259">property region</a>
 </h3>
 
 ```typescript
@@ -6093,7 +6505,7 @@ A Networking client is needed to create a Neutron subnetpool. If omitted, the
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L257">property revisionNumber</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L263">property revisionNumber</a>
 </h3>
 
 ```typescript
@@ -6104,7 +6516,7 @@ revisionNumber?: pulumi.Input<number>;
 The revision number of the subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L263">property shared</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L269">property shared</a>
 </h3>
 
 ```typescript
@@ -6117,7 +6529,18 @@ all projects. Changing this updates the shared status of the existing
 subnetpool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L267">property updatedAt</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L273">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the subnetpool.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L277">property updatedAt</a>
 </h3>
 
 ```typescript
@@ -6128,7 +6551,7 @@ updatedAt?: pulumi.Input<string>;
 The time at which subnetpool was created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnetPool.ts#L271">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/subnetPool.ts#L281">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -6251,13 +6674,13 @@ ID of the subnet this routing entry belongs to. Changing
 this creates a new routing entry.
 
 <h2 class="pdoc-module-header" id="SubnetState">
-<a class="pdoc-member-name" href="/networking/subnet.ts#L169">interface SubnetState</a>
+<a class="pdoc-member-name" href="/networking/subnet.ts#L175">interface SubnetState</a>
 </h2>
 
 Input properties used for looking up and filtering Subnet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L175">property allocationPools</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L181">property allocationPools</a>
 </h3>
 
 ```typescript
@@ -6270,7 +6693,7 @@ dynamic allocation to ports. The allocation_pool object structure is
 documented below. Changing this creates a new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L181">property cidr</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L187">property cidr</a>
 </h3>
 
 ```typescript
@@ -6283,7 +6706,7 @@ version. You can omit this option if you are creating a subnet from a
 subnet pool.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L187">property dnsNameservers</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L193">property dnsNameservers</a>
 </h3>
 
 ```typescript
@@ -6296,7 +6719,7 @@ in this subnet. Changing this updates the DNS name servers for the existing
 subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L193">property enableDhcp</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L199">property enableDhcp</a>
 </h3>
 
 ```typescript
@@ -6309,7 +6732,7 @@ Acceptable values are "true" and "false". Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L200">property gatewayIp</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L206">property gatewayIp</a>
 </h3>
 
 ```typescript
@@ -6323,7 +6746,7 @@ gateway of `.1` to be used. Changing this updates the gateway IP of the
 existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L207">property hostRoutes</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L213">property hostRoutes</a>
 </h3>
 
 ```typescript
@@ -6337,7 +6760,7 @@ object structure is documented below. Changing this updates the host routes
 for the existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L212">property ipVersion</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L218">property ipVersion</a>
 </h3>
 
 ```typescript
@@ -6349,7 +6772,7 @@ IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L217">property ipv6AddressMode</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L223">property ipv6AddressMode</a>
 </h3>
 
 ```typescript
@@ -6361,7 +6784,7 @@ The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L222">property ipv6RaMode</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L228">property ipv6RaMode</a>
 </h3>
 
 ```typescript
@@ -6373,7 +6796,7 @@ The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L227">property name</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L233">property name</a>
 </h3>
 
 ```typescript
@@ -6385,7 +6808,7 @@ The name of the subnet. Changing this updates the name of
 the existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L232">property networkId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L238">property networkId</a>
 </h3>
 
 ```typescript
@@ -6397,7 +6820,7 @@ The UUID of the parent network. Changing this
 creates a new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L237">property noGateway</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L243">property noGateway</a>
 </h3>
 
 ```typescript
@@ -6409,7 +6832,7 @@ Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L244">property region</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L250">property region</a>
 </h3>
 
 ```typescript
@@ -6423,7 +6846,7 @@ A Networking client is needed to create a Neutron subnet. If omitted, the
 subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L248">property subnetpoolId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L254">property subnetpoolId</a>
 </h3>
 
 ```typescript
@@ -6434,7 +6857,18 @@ subnetpoolId?: pulumi.Input<string>;
 The ID of the subnetpool associated with the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L253">property tenantId</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L258">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A set of string tags for the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/subnet.ts#L263">property tenantId</a>
 </h3>
 
 ```typescript
@@ -6446,7 +6880,7 @@ The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="/networking/subnet.ts#L257">property valueSpecs</a>
+<a class="pdoc-child-name" href="/networking/subnet.ts#L267">property valueSpecs</a>
 </h3>
 
 ```typescript
@@ -6455,4 +6889,184 @@ valueSpecs?: pulumi.Input<{ ... }>;
 
 
 Map of additional options.
+
+<h2 class="pdoc-module-header" id="TrunkArgs">
+<a class="pdoc-member-name" href="/networking/trunk.ts#L139">interface TrunkArgs</a>
+</h2>
+
+The set of arguments for constructing a Trunk resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L145">property adminStateUp</a>
+</h3>
+
+```typescript
+adminStateUp?: pulumi.Input<boolean>;
+```
+
+
+Administrative up/down status for the trunk
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L150">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+A unique name for the port. Changing this
+updates the `name` of an existing port.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L156">property portId</a>
+</h3>
+
+```typescript
+portId: pulumi.Input<string>;
+```
+
+
+The ID of the port to be used as the parent port of the
+trunk. This is the port that should be used as the compute instance network
+port. Changing this creates a new trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L163">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to obtain the V2 networking client.
+A networking client is needed to create a trunk. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L168">property subPorts</a>
+</h3>
+
+```typescript
+subPorts?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+The set of ports that will be made subports of the trunk.
+The structure of each subport is described below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L169">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L174">property tenantId</a>
+</h3>
+
+```typescript
+tenantId?: pulumi.Input<string>;
+```
+
+
+The owner of the Trunk. Required if admin wants
+to create a trunk on behalf of another tenant. Changing this creates a new trunk.
+
+<h2 class="pdoc-module-header" id="TrunkState">
+<a class="pdoc-member-name" href="/networking/trunk.ts#L98">interface TrunkState</a>
+</h2>
+
+Input properties used for looking up and filtering Trunk resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L104">property adminStateUp</a>
+</h3>
+
+```typescript
+adminStateUp?: pulumi.Input<boolean>;
+```
+
+
+Administrative up/down status for the trunk
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L109">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+A unique name for the port. Changing this
+updates the `name` of an existing port.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L115">property portId</a>
+</h3>
+
+```typescript
+portId?: pulumi.Input<string>;
+```
+
+
+The ID of the port to be used as the parent port of the
+trunk. This is the port that should be used as the compute instance network
+port. Changing this creates a new trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L122">property region</a>
+</h3>
+
+```typescript
+region?: pulumi.Input<string>;
+```
+
+
+The region in which to obtain the V2 networking client.
+A networking client is needed to create a trunk. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+trunk.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L127">property subPorts</a>
+</h3>
+
+```typescript
+subPorts?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+The set of ports that will be made subports of the trunk.
+The structure of each subport is described below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L128">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="/networking/trunk.ts#L133">property tenantId</a>
+</h3>
+
+```typescript
+tenantId?: pulumi.Input<string>;
+```
+
+
+The owner of the Trunk. Required if admin wants
+to create a trunk on behalf of another tenant. Changing this creates a new trunk.
 

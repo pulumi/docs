@@ -10,6 +10,8 @@ title: Module autoscaling/v2beta1
 * <a href="#isHorizontalPodAutoscaler">function isHorizontalPodAutoscaler</a>
 * <a href="#isHorizontalPodAutoscalerList">function isHorizontalPodAutoscalerList</a>
 * <a href="#CrossVersionObjectReference">interface CrossVersionObjectReference</a>
+* <a href="#ExternalMetricSource">interface ExternalMetricSource</a>
+* <a href="#ExternalMetricStatus">interface ExternalMetricStatus</a>
 * <a href="#HorizontalPodAutoscaler">interface HorizontalPodAutoscaler</a>
 * <a href="#HorizontalPodAutoscalerCondition">interface HorizontalPodAutoscalerCondition</a>
 * <a href="#HorizontalPodAutoscalerList">interface HorizontalPodAutoscalerList</a>
@@ -28,7 +30,7 @@ title: Module autoscaling/v2beta1
 
 
 <h2 class="pdoc-module-header" id="isCrossVersionObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5447">function isCrossVersionObjectReference</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6155">function isCrossVersionObjectReference</a>
 </h2>
 
 ```typescript
@@ -36,7 +38,7 @@ isCrossVersionObjectReference(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isHorizontalPodAutoscaler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5492">function isHorizontalPodAutoscaler</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6259">function isHorizontalPodAutoscaler</a>
 </h2>
 
 ```typescript
@@ -44,7 +46,7 @@ isHorizontalPodAutoscaler(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isHorizontalPodAutoscalerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L5561">function isHorizontalPodAutoscalerList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L6328">function isHorizontalPodAutoscalerList</a>
 </h2>
 
 ```typescript
@@ -52,14 +54,14 @@ isHorizontalPodAutoscalerList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="CrossVersionObjectReference">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5114">interface CrossVersionObjectReference</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5793">interface CrossVersionObjectReference</a>
 </h2>
 
 CrossVersionObjectReference contains enough information to let you identify the referred
 resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5118">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5797">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -70,7 +72,7 @@ apiVersion: string;
 API version of the referent
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5124">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5803">property kind</a>
 </h3>
 
 ```typescript
@@ -82,7 +84,7 @@ Kind of the referent; More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5129">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5808">property name</a>
 </h3>
 
 ```typescript
@@ -92,8 +94,113 @@ name: string;
 
 Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
 
+<h2 class="pdoc-module-header" id="ExternalMetricSource">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5817">interface ExternalMetricSource</a>
+</h2>
+
+ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes
+object (for example length of queue in cloud messaging service, or QPS from loadbalancer
+running outside of cluster). Exactly one "target" type should be set.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5821">property metricName</a>
+</h3>
+
+```typescript
+metricName: string;
+```
+
+
+metricName is the name of the metric in question.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5826">property metricSelector</a>
+</h3>
+
+```typescript
+metricSelector: LabelSelector;
+```
+
+
+metricSelector is used to identify a specific time series within a given metric.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5832">property targetAverageValue</a>
+</h3>
+
+```typescript
+targetAverageValue: string;
+```
+
+
+targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually
+exclusive with TargetValue.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5838">property targetValue</a>
+</h3>
+
+```typescript
+targetValue: string;
+```
+
+
+targetValue is the target value of the metric (as a quantity). Mutually exclusive with
+TargetAverageValue.
+
+<h2 class="pdoc-module-header" id="ExternalMetricStatus">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5846">interface ExternalMetricStatus</a>
+</h2>
+
+ExternalMetricStatus indicates the current value of a global metric not associated with any
+Kubernetes object.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5850">property currentAverageValue</a>
+</h3>
+
+```typescript
+currentAverageValue: string;
+```
+
+
+currentAverageValue is the current value of metric averaged over autoscaled pods.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5855">property currentValue</a>
+</h3>
+
+```typescript
+currentValue: string;
+```
+
+
+currentValue is the current value of the metric (as a quantity)
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5860">property metricName</a>
+</h3>
+
+```typescript
+metricName: string;
+```
+
+
+metricName is the name of a metric used for autoscaling in metric system.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5865">property metricSelector</a>
+</h3>
+
+```typescript
+metricSelector: LabelSelector;
+```
+
+
+metricSelector is used to identify a specific time series within a given metric.
+
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscaler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5138">interface HorizontalPodAutoscaler</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5874">interface HorizontalPodAutoscaler</a>
 </h2>
 
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which
@@ -101,7 +208,7 @@ automatically manages the replica count of any resource implementing the scale s
 based on the metrics specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5145">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5881">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -115,7 +222,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5153">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5889">property kind</a>
 </h3>
 
 ```typescript
@@ -129,7 +236,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5159">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5895">property metadata</a>
 </h3>
 
 ```typescript
@@ -141,7 +248,7 @@ metadata is the standard object metadata. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5165">property spec</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5901">property spec</a>
 </h3>
 
 ```typescript
@@ -153,7 +260,7 @@ spec is the specification for the behaviour of the autoscaler. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5170">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5906">property status</a>
 </h3>
 
 ```typescript
@@ -164,14 +271,14 @@ status: HorizontalPodAutoscalerStatus;
 status is the current information about the autoscaler.
 
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerCondition">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5178">interface HorizontalPodAutoscalerCondition</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5914">interface HorizontalPodAutoscalerCondition</a>
 </h2>
 
 HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscaler at a
 certain point.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5182">property lastTransitionTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5918">property lastTransitionTime</a>
 </h3>
 
 ```typescript
@@ -182,7 +289,7 @@ lastTransitionTime: string;
 lastTransitionTime is the last time the condition transitioned from one status to another
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5187">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5923">property message</a>
 </h3>
 
 ```typescript
@@ -193,7 +300,7 @@ message: string;
 message is a human-readable explanation containing details about the transition
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5192">property reason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5928">property reason</a>
 </h3>
 
 ```typescript
@@ -204,7 +311,7 @@ reason: string;
 reason is the reason for the condition's last transition.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5197">property status</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5933">property status</a>
 </h3>
 
 ```typescript
@@ -215,7 +322,7 @@ status: string;
 status is the status of the condition (True, False, Unknown)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5202">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5938">property type</a>
 </h3>
 
 ```typescript
@@ -226,13 +333,13 @@ type: string;
 type describes the current condition
 
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5209">interface HorizontalPodAutoscalerList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5945">interface HorizontalPodAutoscalerList</a>
 </h2>
 
 HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5216">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5952">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -246,7 +353,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5221">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5957">property items</a>
 </h3>
 
 ```typescript
@@ -257,7 +364,7 @@ items: HorizontalPodAutoscaler[];
 items is the list of horizontal pod autoscaler objects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5229">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5965">property kind</a>
 </h3>
 
 ```typescript
@@ -271,7 +378,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5234">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5970">property metadata</a>
 </h3>
 
 ```typescript
@@ -282,14 +389,14 @@ metadata: ListMeta;
 metadata is the standard list metadata.
 
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5242">interface HorizontalPodAutoscalerSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5978">interface HorizontalPodAutoscalerSpec</a>
 </h2>
 
 HorizontalPodAutoscalerSpec describes the desired functionality of the
 HorizontalPodAutoscaler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5247">property maxReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5983">property maxReplicas</a>
 </h3>
 
 ```typescript
@@ -301,7 +408,7 @@ maxReplicas is the upper limit for the number of replicas to which the autoscale
 up. It cannot be less that minReplicas.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5257">property metrics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5993">property metrics</a>
 </h3>
 
 ```typescript
@@ -317,7 +424,7 @@ and vice-versa.  See the individual metric source types for more information abo
 type of metric must respond.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5263">property minReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5999">property minReplicas</a>
 </h3>
 
 ```typescript
@@ -329,7 +436,7 @@ minReplicas is the lower limit for the number of replicas to which the autoscale
 down. It defaults to 1 pod.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5269">property scaleTargetRef</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6005">property scaleTargetRef</a>
 </h3>
 
 ```typescript
@@ -341,13 +448,13 @@ scaleTargetRef points to the target resource to scale, and is used to the pods f
 metrics should be collected, as well as to actually change the replica count.
 
 <h2 class="pdoc-module-header" id="HorizontalPodAutoscalerStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5276">interface HorizontalPodAutoscalerStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6012">interface HorizontalPodAutoscalerStatus</a>
 </h2>
 
 HorizontalPodAutoscalerStatus describes the current status of a horizontal pod autoscaler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5281">property conditions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6017">property conditions</a>
 </h3>
 
 ```typescript
@@ -359,7 +466,7 @@ conditions is the set of conditions required for this autoscaler to scale its ta
 indicates whether or not those conditions are met.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5286">property currentMetrics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6022">property currentMetrics</a>
 </h3>
 
 ```typescript
@@ -370,7 +477,7 @@ currentMetrics: MetricStatus[];
 currentMetrics is the last read state of the metrics used by this autoscaler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5292">property currentReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6028">property currentReplicas</a>
 </h3>
 
 ```typescript
@@ -382,7 +489,7 @@ currentReplicas is current number of replicas of pods managed by this autoscaler
 seen by the autoscaler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5298">property desiredReplicas</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6034">property desiredReplicas</a>
 </h3>
 
 ```typescript
@@ -394,7 +501,7 @@ desiredReplicas is the desired number of replicas of pods managed by this autosc
 last calculated by the autoscaler.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5304">property lastScaleTime</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6040">property lastScaleTime</a>
 </h3>
 
 ```typescript
@@ -406,7 +513,7 @@ lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of 
 by the autoscaler to control how often the number of pods is changed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5309">property observedGeneration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6045">property observedGeneration</a>
 </h3>
 
 ```typescript
@@ -417,14 +524,28 @@ observedGeneration: number;
 observedGeneration is the most recent generation observed by this autoscaler.
 
 <h2 class="pdoc-module-header" id="MetricSpec">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5317">interface MetricSpec</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6053">interface MetricSpec</a>
 </h2>
 
 MetricSpec specifies how to scale based on a single metric (only `type` and one other
 matching field should be set at once).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5322">property object</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6060">property external</a>
+</h3>
+
+```typescript
+external: ExternalMetricSource;
+```
+
+
+external refers to a global metric that is not associated with any Kubernetes object. It
+allows autoscaling based on information coming from components running outside of cluster
+(for example length of queue in cloud messaging service, or QPS from loadbalancer running
+outside of cluster).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6066">property object</a>
 </h3>
 
 ```typescript
@@ -436,7 +557,7 @@ object refers to a metric describing a single kubernetes object (for example,
 hits-per-second on an Ingress object).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5329">property pods</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6073">property pods</a>
 </h3>
 
 ```typescript
@@ -449,7 +570,7 @@ transactions-processed-per-second).  The values will be averaged together before
 compared to the target value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5337">property resource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6081">property resource</a>
 </h3>
 
 ```typescript
@@ -463,7 +584,7 @@ metrics are built in to Kubernetes, and have special scaling options on top of t
 available to normal per-pod metrics using the "pods" source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5342">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6087">property type</a>
 </h3>
 
 ```typescript
@@ -471,16 +592,31 @@ type: string;
 ```
 
 
-type is the type of metric source.  It should match one of the fields below.
+type is the type of metric source.  It should be one of "Object", "Pods" or "Resource",
+each mapping to a matching field in the object.
 
 <h2 class="pdoc-module-header" id="MetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5349">interface MetricStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6094">interface MetricStatus</a>
 </h2>
 
 MetricStatus describes the last-read state of a single metric.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5354">property object</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6101">property external</a>
+</h3>
+
+```typescript
+external: ExternalMetricStatus;
+```
+
+
+external refers to a global metric that is not associated with any Kubernetes object. It
+allows autoscaling based on information coming from components running outside of cluster
+(for example length of queue in cloud messaging service, or QPS from loadbalancer running
+outside of cluster).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6107">property object</a>
 </h3>
 
 ```typescript
@@ -492,7 +628,7 @@ object refers to a metric describing a single kubernetes object (for example,
 hits-per-second on an Ingress object).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5361">property pods</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6114">property pods</a>
 </h3>
 
 ```typescript
@@ -505,7 +641,7 @@ transactions-processed-per-second).  The values will be averaged together before
 compared to the target value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5369">property resource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6122">property resource</a>
 </h3>
 
 ```typescript
@@ -519,7 +655,7 @@ metrics are built in to Kubernetes, and have special scaling options on top of t
 available to normal per-pod metrics using the "pods" source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5374">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6128">property type</a>
 </h3>
 
 ```typescript
@@ -527,17 +663,30 @@ type: string;
 ```
 
 
-type is the type of metric source.  It will match one of the fields below.
+type is the type of metric source.  It will be one of "Object", "Pods" or "Resource", each
+corresponds to a matching field in the object.
 
 <h2 class="pdoc-module-header" id="ObjectMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5382">interface ObjectMetricSource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6136">interface ObjectMetricSource</a>
 </h2>
 
 ObjectMetricSource indicates how to scale on a metric describing a kubernetes object (for
 example, hits-per-second on an Ingress object).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5386">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6141">property averageValue</a>
+</h3>
+
+```typescript
+averageValue: string;
+```
+
+
+averageValue is the target value of the average of the metric across all relevant pods (as
+a quantity)
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6146">property metricName</a>
 </h3>
 
 ```typescript
@@ -548,7 +697,20 @@ metricName: string;
 metricName is the name of the metric in question.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5391">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6153">property selector</a>
+</h3>
+
+```typescript
+selector: LabelSelector;
+```
+
+
+selector is the string-encoded form of a standard kubernetes label selector for the given
+metric When set, it is passed as an additional parameter to the metrics server for more
+specific metrics scoping When unset, just the metricName will be used to gather metrics.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6158">property target</a>
 </h3>
 
 ```typescript
@@ -559,7 +721,7 @@ target: CrossVersionObjectReference;
 target is the described Kubernetes object.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5396">property targetValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6163">property targetValue</a>
 </h3>
 
 ```typescript
@@ -570,14 +732,26 @@ targetValue: string;
 targetValue is the target value of the metric (as a quantity).
 
 <h2 class="pdoc-module-header" id="ObjectMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5404">interface ObjectMetricStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6171">interface ObjectMetricStatus</a>
 </h2>
 
 ObjectMetricStatus indicates the current value of a metric describing a kubernetes object
 (for example, hits-per-second on an Ingress object).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5408">property currentValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6176">property averageValue</a>
+</h3>
+
+```typescript
+averageValue: string;
+```
+
+
+averageValue is the current value of the average of the metric across all relevant pods (as
+a quantity)
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6181">property currentValue</a>
 </h3>
 
 ```typescript
@@ -588,7 +762,7 @@ currentValue: string;
 currentValue is the current value of the metric (as a quantity).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5413">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6186">property metricName</a>
 </h3>
 
 ```typescript
@@ -599,7 +773,21 @@ metricName: string;
 metricName is the name of the metric in question.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5418">property target</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6194">property selector</a>
+</h3>
+
+```typescript
+selector: LabelSelector;
+```
+
+
+selector is the string-encoded form of a standard kubernetes label selector for the given
+metric When set in the ObjectMetricSource, it is passed as an additional parameter to the
+metrics server for more specific metrics scoping. When unset, just the metricName will be
+used to gather metrics.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6199">property target</a>
 </h3>
 
 ```typescript
@@ -610,7 +798,7 @@ target: CrossVersionObjectReference;
 target is the described Kubernetes object.
 
 <h2 class="pdoc-module-header" id="PodsMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5427">interface PodsMetricSource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6208">interface PodsMetricSource</a>
 </h2>
 
 PodsMetricSource indicates how to scale on a metric describing each pod in the current scale
@@ -618,7 +806,7 @@ target (for example, transactions-processed-per-second). The values will be aver
 before being compared to the target value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5431">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6212">property metricName</a>
 </h3>
 
 ```typescript
@@ -629,7 +817,20 @@ metricName: string;
 metricName is the name of the metric in question
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5437">property targetAverageValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6219">property selector</a>
+</h3>
+
+```typescript
+selector: LabelSelector;
+```
+
+
+selector is the string-encoded form of a standard kubernetes label selector for the given
+metric When set, it is passed as an additional parameter to the metrics server for more
+specific metrics scoping When unset, just the metricName will be used to gather metrics.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6225">property targetAverageValue</a>
 </h3>
 
 ```typescript
@@ -641,14 +842,14 @@ targetAverageValue is the target value of the average of the metric across all r
 pods (as a quantity)
 
 <h2 class="pdoc-module-header" id="PodsMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5445">interface PodsMetricStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6233">interface PodsMetricStatus</a>
 </h2>
 
 PodsMetricStatus indicates the current value of a metric describing each pod in the current
 scale target (for example, transactions-processed-per-second).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5450">property currentAverageValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6238">property currentAverageValue</a>
 </h3>
 
 ```typescript
@@ -660,7 +861,7 @@ currentAverageValue is the current value of the average of the metric across all
 pods (as a quantity)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5455">property metricName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6243">property metricName</a>
 </h3>
 
 ```typescript
@@ -670,8 +871,22 @@ metricName: string;
 
 metricName is the name of the metric in question
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6251">property selector</a>
+</h3>
+
+```typescript
+selector: LabelSelector;
+```
+
+
+selector is the string-encoded form of a standard kubernetes label selector for the given
+metric When set in the PodsMetricSource, it is passed as an additional parameter to the
+metrics server for more specific metrics scoping. When unset, just the metricName will be
+used to gather metrics.
+
 <h2 class="pdoc-module-header" id="ResourceMetricSource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5467">interface ResourceMetricSource</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6263">interface ResourceMetricSource</a>
 </h2>
 
 ResourceMetricSource indicates how to scale on a resource metric known to Kubernetes, as
@@ -682,7 +897,7 @@ available to normal per-pod metrics using the "pods" source.  Only one "target" 
 be set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5471">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6267">property name</a>
 </h3>
 
 ```typescript
@@ -693,7 +908,7 @@ name: string;
 name is the name of the resource in question.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5478">property targetAverageUtilization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6274">property targetAverageUtilization</a>
 </h3>
 
 ```typescript
@@ -706,7 +921,7 @@ all relevant pods, represented as a percentage of the requested value of the res
 the pods.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5485">property targetAverageValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6281">property targetAverageValue</a>
 </h3>
 
 ```typescript
@@ -719,7 +934,7 @@ relevant pods, as a raw value (instead of as a percentage of the request), simil
 "pods" metric source type.
 
 <h2 class="pdoc-module-header" id="ResourceMetricStatus">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5495">interface ResourceMetricStatus</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6291">interface ResourceMetricStatus</a>
 </h2>
 
 ResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as
@@ -728,7 +943,7 @@ or memory).  Such metrics are built in to Kubernetes, and have special scaling o
 of those available to normal per-pod metrics using the "pods" source.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5502">property currentAverageUtilization</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6298">property currentAverageUtilization</a>
 </h3>
 
 ```typescript
@@ -742,7 +957,7 @@ the pods.  It will only be present if `targetAverageValue` was set in the corres
 metric specification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5510">property currentAverageValue</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6306">property currentAverageValue</a>
 </h3>
 
 ```typescript
@@ -756,7 +971,7 @@ relevant pods, as a raw value (instead of as a percentage of the request), simil
 specification.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L5515">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L6311">property name</a>
 </h3>
 
 ```typescript

@@ -88,7 +88,7 @@ popd
 # pulumi-docker
 echo -e "\033[0;95mrunning typedoc on pulumi-docker\033[0m"
 pushd .
-cd ../pulumi-docker/docker
+cd ../pulumi-docker/sdk/nodejs
 $TYPEDOC --json $PULUMI_DOCS/pulumi-docker.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
 popd
 

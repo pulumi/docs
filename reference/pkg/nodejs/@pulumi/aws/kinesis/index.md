@@ -6,10 +6,13 @@ title: Module kinesis
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#AnalyticsApplication">class AnalyticsApplication</a>
 * <a href="#FirehoseDeliveryStream">class FirehoseDeliveryStream</a>
 * <a href="#Stream">class Stream</a>
 * <a href="#StreamEventSubscription">class StreamEventSubscription</a>
 * <a href="#getStream">function getStream</a>
+* <a href="#AnalyticsApplicationArgs">interface AnalyticsApplicationArgs</a>
+* <a href="#AnalyticsApplicationState">interface AnalyticsApplicationState</a>
 * <a href="#FirehoseDeliveryStreamArgs">interface FirehoseDeliveryStreamArgs</a>
 * <a href="#FirehoseDeliveryStreamState">interface FirehoseDeliveryStreamState</a>
 * <a href="#GetStreamArgs">interface GetStreamArgs</a>
@@ -21,8 +24,222 @@ title: Module kinesis
 * <a href="#StreamState">interface StreamState</a>
 * <a href="#StreamEventHandler">type StreamEventHandler</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts">kinesis/firehoseDeliveryStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts">kinesis/getStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts">kinesis/kinesisMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts">kinesis/stream.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts">kinesis/analyticsApplication.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts">kinesis/firehoseDeliveryStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/getStream.ts">kinesis/getStream.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts">kinesis/kinesisMixins.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts">kinesis/stream.ts</a> 
 
+
+<h2 class="pdoc-module-header" id="AnalyticsApplication">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L15">class AnalyticsApplication</a>
+</h2>
+
+Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
+allows processing and analyzing streaming data using standard SQL.
+
+For more details, see the [Amazon Kinesis Analytics Documentation][1].
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L77">constructor</a>
+</h3>
+
+```typescript
+new AnalyticsApplication(name: string, args?: AnalyticsApplicationArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a AnalyticsApplication resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L24">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsApplicationState): AnalyticsApplication
+```
+
+
+Get an existing AnalyticsApplication resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L31">property arn</a>
+</h3>
+
+```typescript
+public arn: pulumi.Output<ARN>;
+```
+
+
+The ARN of the Kinesis Analytics Appliation.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L36">property cloudwatchLoggingOptions</a>
+</h3>
+
+```typescript
+public cloudwatchLoggingOptions: pulumi.Output<{ ... } | undefined>;
+```
+
+
+The CloudWatch log stream options to monitor application errors.
+See CloudWatch Logging Options below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L40">property code</a>
+</h3>
+
+```typescript
+public code: pulumi.Output<string | undefined>;
+```
+
+
+SQL Code to transform input data, and generate output.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L44">property createTimestamp</a>
+</h3>
+
+```typescript
+public createTimestamp: pulumi.Output<string>;
+```
+
+
+The Timestamp when the application version was created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L48">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+Description of the application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L52">property inputs</a>
+</h3>
+
+```typescript
+public inputs: pulumi.Output<{ ... } | undefined>;
+```
+
+
+Input configuration of the application. See Inputs below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L56">property lastUpdateTimestamp</a>
+</h3>
+
+```typescript
+public lastUpdateTimestamp: pulumi.Output<string>;
+```
+
+
+The Timestamp when the application was last updated.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L60">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+
+Name of the Kinesis Analytics Application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L64">property outputs</a>
+</h3>
+
+```typescript
+public outputs: pulumi.Output<{ ... }[] | undefined>;
+```
+
+
+Output destination configuration of the application. See Outputs below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L69">property referenceDataSources</a>
+</h3>
+
+```typescript
+public referenceDataSources: pulumi.Output<{ ... } | undefined>;
+```
+
+
+An S3 Reference Data Source for the application.
+See Reference Data Sources below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L73">property status</a>
+</h3>
+
+```typescript
+public status: pulumi.Output<string>;
+```
+
+
+The Status of the application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L77">property version</a>
+</h3>
+
+```typescript
+public version: pulumi.Output<number>;
+```
+
+
+The Version of the application.
 
 <h2 class="pdoc-module-header" id="FirehoseDeliveryStream">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L12">class FirehoseDeliveryStream</a>
@@ -33,7 +250,7 @@ Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is
 For more details, see the [Amazon Kinesis Firehose Documentation][1].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L67">constructor</a>
 </h3>
 
 ```typescript
@@ -197,6 +414,17 @@ public splunkConfiguration: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L63">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
@@ -209,7 +437,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L63">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L67">property versionId</a>
 </h3>
 
 ```typescript
@@ -391,14 +619,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="StreamEventSubscription">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L65">class StreamEventSubscription</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L66">class StreamEventSubscription</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L67">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L68">constructor</a>
 </h3>
 
 ```typescript
-new StreamEventSubscription(name: string, stream: stream.Stream, handler: StreamEventHandler, args: StreamEventSubscriptionArgs, opts?: pulumi.ResourceOptions)
+new StreamEventSubscription(name: string, stream: stream.Stream, handler: StreamEventHandler, args: StreamEventSubscriptionArgs, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -426,7 +654,7 @@ protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | u
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L67">property eventSourceMapping</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L68">property eventSourceMapping</a>
 </h3>
 
 ```typescript
@@ -450,7 +678,7 @@ public permission: permission.Permission;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L66">property stream</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L67">property stream</a>
 </h3>
 
 ```typescript
@@ -483,14 +711,239 @@ resources.
 
 For more details, see the [Amazon Kinesis Documentation][1].
 
+<h2 class="pdoc-module-header" id="AnalyticsApplicationArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L181">interface AnalyticsApplicationArgs</a>
+</h2>
+
+The set of arguments for constructing a AnalyticsApplication resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L186">property cloudwatchLoggingOptions</a>
+</h3>
+
+```typescript
+cloudwatchLoggingOptions?: pulumi.Input<{ ... }>;
+```
+
+
+The CloudWatch log stream options to monitor application errors.
+See CloudWatch Logging Options below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L190">property code</a>
+</h3>
+
+```typescript
+code?: pulumi.Input<string>;
+```
+
+
+SQL Code to transform input data, and generate output.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L194">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+Description of the application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L198">property inputs</a>
+</h3>
+
+```typescript
+inputs?: pulumi.Input<{ ... }>;
+```
+
+
+Input configuration of the application. See Inputs below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L202">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Name of the Kinesis Analytics Application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L206">property outputs</a>
+</h3>
+
+```typescript
+outputs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+Output destination configuration of the application. See Outputs below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L211">property referenceDataSources</a>
+</h3>
+
+```typescript
+referenceDataSources?: pulumi.Input<{ ... }>;
+```
+
+
+An S3 Reference Data Source for the application.
+See Reference Data Sources below for more details.
+
+<h2 class="pdoc-module-header" id="AnalyticsApplicationState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L125">interface AnalyticsApplicationState</a>
+</h2>
+
+Input properties used for looking up and filtering AnalyticsApplication resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L129">property arn</a>
+</h3>
+
+```typescript
+arn?: pulumi.Input<ARN>;
+```
+
+
+The ARN of the Kinesis Analytics Appliation.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L134">property cloudwatchLoggingOptions</a>
+</h3>
+
+```typescript
+cloudwatchLoggingOptions?: pulumi.Input<{ ... }>;
+```
+
+
+The CloudWatch log stream options to monitor application errors.
+See CloudWatch Logging Options below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L138">property code</a>
+</h3>
+
+```typescript
+code?: pulumi.Input<string>;
+```
+
+
+SQL Code to transform input data, and generate output.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L142">property createTimestamp</a>
+</h3>
+
+```typescript
+createTimestamp?: pulumi.Input<string>;
+```
+
+
+The Timestamp when the application version was created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L146">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+Description of the application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L150">property inputs</a>
+</h3>
+
+```typescript
+inputs?: pulumi.Input<{ ... }>;
+```
+
+
+Input configuration of the application. See Inputs below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L154">property lastUpdateTimestamp</a>
+</h3>
+
+```typescript
+lastUpdateTimestamp?: pulumi.Input<string>;
+```
+
+
+The Timestamp when the application was last updated.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L158">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+
+Name of the Kinesis Analytics Application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L162">property outputs</a>
+</h3>
+
+```typescript
+outputs?: pulumi.Input<pulumi.Input<{ ... }>[]>;
+```
+
+
+Output destination configuration of the application. See Outputs below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L167">property referenceDataSources</a>
+</h3>
+
+```typescript
+referenceDataSources?: pulumi.Input<{ ... }>;
+```
+
+
+An S3 Reference Data Source for the application.
+See Reference Data Sources below for more details.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L171">property status</a>
+</h3>
+
+```typescript
+status?: pulumi.Input<string>;
+```
+
+
+The Status of the application.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/analyticsApplication.ts#L175">property version</a>
+</h3>
+
+```typescript
+version?: pulumi.Input<number>;
+```
+
+
+The Version of the application.
+
 <h2 class="pdoc-module-header" id="FirehoseDeliveryStreamArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L157">interface FirehoseDeliveryStreamArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L167">interface FirehoseDeliveryStreamArgs</a>
 </h2>
 
 The set of arguments for constructing a FirehoseDeliveryStream resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L161">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L171">property arn</a>
 </h3>
 
 ```typescript
@@ -501,7 +954,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L165">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L175">property destination</a>
 </h3>
 
 ```typescript
@@ -512,7 +965,7 @@ destination: pulumi.Input<string>;
 This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L166">property destinationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L176">property destinationId</a>
 </h3>
 
 ```typescript
@@ -520,7 +973,7 @@ destinationId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L167">property elasticsearchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L177">property elasticsearchConfiguration</a>
 </h3>
 
 ```typescript
@@ -528,7 +981,7 @@ elasticsearchConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L171">property extendedS3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L181">property extendedS3Configuration</a>
 </h3>
 
 ```typescript
@@ -539,7 +992,7 @@ extendedS3Configuration?: pulumi.Input<{ ... }>;
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L175">property kinesisSourceConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L185">property kinesisSourceConfiguration</a>
 </h3>
 
 ```typescript
@@ -550,7 +1003,7 @@ kinesisSourceConfiguration?: pulumi.Input<{ ... }>;
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L180">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L190">property name</a>
 </h3>
 
 ```typescript
@@ -562,7 +1015,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L186">property redshiftConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L196">property redshiftConfiguration</a>
 </h3>
 
 ```typescript
@@ -575,7 +1028,7 @@ Using `redshift_configuration` requires the user to also specify a
 `s3_configuration` block. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L191">property s3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L201">property s3Configuration</a>
 </h3>
 
 ```typescript
@@ -587,7 +1040,7 @@ Configuration options for the s3 destination (or the intermediate bucket if the 
 is redshift). More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L192">property splunkConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L202">property splunkConfiguration</a>
 </h3>
 
 ```typescript
@@ -595,7 +1048,18 @@ splunkConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L196">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L206">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L210">property versionId</a>
 </h3>
 
 ```typescript
@@ -606,13 +1070,13 @@ versionId?: pulumi.Input<string>;
 Specifies the table version for the output data schema. Defaults to `LATEST`.
 
 <h2 class="pdoc-module-header" id="FirehoseDeliveryStreamState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L112">interface FirehoseDeliveryStreamState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L118">interface FirehoseDeliveryStreamState</a>
 </h2>
 
 Input properties used for looking up and filtering FirehoseDeliveryStream resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L116">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L122">property arn</a>
 </h3>
 
 ```typescript
@@ -623,7 +1087,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) specifying the Stream
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L120">property destination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L126">property destination</a>
 </h3>
 
 ```typescript
@@ -634,7 +1098,7 @@ destination?: pulumi.Input<string>;
 This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L121">property destinationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L127">property destinationId</a>
 </h3>
 
 ```typescript
@@ -642,7 +1106,7 @@ destinationId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L122">property elasticsearchConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L128">property elasticsearchConfiguration</a>
 </h3>
 
 ```typescript
@@ -650,7 +1114,7 @@ elasticsearchConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L126">property extendedS3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L132">property extendedS3Configuration</a>
 </h3>
 
 ```typescript
@@ -661,7 +1125,7 @@ extendedS3Configuration?: pulumi.Input<{ ... }>;
 Enhanced configuration options for the s3 destination. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L130">property kinesisSourceConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L136">property kinesisSourceConfiguration</a>
 </h3>
 
 ```typescript
@@ -672,7 +1136,7 @@ kinesisSourceConfiguration?: pulumi.Input<{ ... }>;
 Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L135">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L141">property name</a>
 </h3>
 
 ```typescript
@@ -684,7 +1148,7 @@ A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L141">property redshiftConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L147">property redshiftConfiguration</a>
 </h3>
 
 ```typescript
@@ -697,7 +1161,7 @@ Using `redshift_configuration` requires the user to also specify a
 `s3_configuration` block. More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L146">property s3Configuration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L152">property s3Configuration</a>
 </h3>
 
 ```typescript
@@ -709,7 +1173,7 @@ Configuration options for the s3 destination (or the intermediate bucket if the 
 is redshift). More details are given below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L147">property splunkConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L153">property splunkConfiguration</a>
 </h3>
 
 ```typescript
@@ -717,7 +1181,18 @@ splunkConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L151">property versionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L157">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+
+A mapping of tags to assign to the resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/firehoseDeliveryStream.ts#L161">property versionId</a>
 </h3>
 
 ```typescript
@@ -947,10 +1422,10 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="StreamEvent">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L43">interface StreamEvent</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L44">interface StreamEvent</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L44">property Records</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L45">property Records</a>
 </h3>
 
 ```typescript
@@ -958,10 +1433,10 @@ Records: StreamEventRecord[];
 ```
 
 <h2 class="pdoc-module-header" id="StreamEventRecord">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L47">interface StreamEventRecord</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L48">interface StreamEventRecord</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L60">property awsRegion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L61">property awsRegion</a>
 </h3>
 
 ```typescript
@@ -969,7 +1444,7 @@ awsRegion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L55">property eventID</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L56">property eventID</a>
 </h3>
 
 ```typescript
@@ -977,7 +1452,7 @@ eventID: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L58">property eventName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L59">property eventName</a>
 </h3>
 
 ```typescript
@@ -985,7 +1460,7 @@ eventName: aws:kinesis:record;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L54">property eventSource</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L55">property eventSource</a>
 </h3>
 
 ```typescript
@@ -993,7 +1468,7 @@ eventSource: aws:kinesis;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L59">property eventSourceARN</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L60">property eventSourceARN</a>
 </h3>
 
 ```typescript
@@ -1001,7 +1476,7 @@ eventSourceARN: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L57">property eventVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L58">property eventVersion</a>
 </h3>
 
 ```typescript
@@ -1009,7 +1484,7 @@ eventVersion: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L56">property invokeIdentityArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L57">property invokeIdentityArn</a>
 </h3>
 
 ```typescript
@@ -1017,7 +1492,7 @@ invokeIdentityArn: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L48">property kinesis</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L49">property kinesis</a>
 </h3>
 
 ```typescript
@@ -1053,18 +1528,19 @@ The position in the stream where AWS Lambda should start reading. Must be one of
 [startingPositionTimestamp] must be provided as well.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L40">property startingPositionTimestamp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L41">property startingPositionTimestamp</a>
 </h3>
 
 ```typescript
-startingPositionTimestamp?: number;
+startingPositionTimestamp?: string;
 ```
 
 
-The timestamp of the data record from which to start reading. Used with shard iterator type
-AT_TIMESTAMP. If a record with this exact timestamp does not exist, the iterator returned is
-for the next (later) record. If the timestamp is older than the current trim horizon, the
-iterator returned is for the oldest untrimmed data record (TRIM_HORIZON).
+A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the
+data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`.
+If a record with this exact timestamp does not exist, the next later record is chosen.
+If the timestamp is older than the current trim horizon, the oldest available record is
+chosen.
 
 <h2 class="pdoc-module-header" id="StreamState">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/stream.ts#L105">interface StreamState</a>
@@ -1164,7 +1640,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="StreamEventHandler">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L63">type StreamEventHandler</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/kinesis/kinesisMixins.ts#L64">type StreamEventHandler</a>
 </h2>
 
 ```typescript

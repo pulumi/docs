@@ -377,7 +377,7 @@ and run automated tasks.
 -> **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L79">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L82">constructor</a>
 </h3>
 
 ```typescript
@@ -521,15 +521,18 @@ The settings passed to the extension, these are
 specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L64">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L67">property tags</a>
 </h3>
 
 ```typescript
 public tags: pulumi.Output<{ ... }>;
 ```
 
+
+A mapping of tags to assign to the resource.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L69">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L72">property type</a>
 </h3>
 
 ```typescript
@@ -541,7 +544,7 @@ The type of extension, available types for a publisher can
 be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L74">property typeHandlerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L77">property typeHandlerVersion</a>
 </h3>
 
 ```typescript
@@ -565,7 +568,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L79">property virtualMachineName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L82">property virtualMachineName</a>
 </h3>
 
 ```typescript
@@ -923,7 +926,7 @@ public storageAccountType: pulumi.Output<string>;
 
 
 The type of storage to use for the managed disk.
-Allowable values are `Standard_LRS` or `Premium_LRS`.
+Allowable values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts#L76">property tags</a>
@@ -969,7 +972,7 @@ Manage a virtual machine scale set.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L115">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L130">constructor</a>
 </h3>
 
 ```typescript
@@ -1016,7 +1019,18 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L29">property bootDiagnostics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L29">property automaticOsUpgrade</a>
+</h3>
+
+```typescript
+public automaticOsUpgrade: pulumi.Output<boolean | undefined>;
+```
+
+
+Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L33">property bootDiagnostics</a>
 </h3>
 
 ```typescript
@@ -1027,7 +1041,18 @@ public bootDiagnostics: pulumi.Output<{ ... } | undefined>;
 A boot diagnostics profile block as referenced below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L33">property extensions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L37">property evictionPolicy</a>
+</h3>
+
+```typescript
+public evictionPolicy: pulumi.Output<string | undefined>;
+```
+
+
+Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L41">property extensions</a>
 </h3>
 
 ```typescript
@@ -1036,6 +1061,17 @@ public extensions: pulumi.Output<{ ... }[] | undefined>;
 
 
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L45">property healthProbeId</a>
+</h3>
+
+```typescript
+public healthProbeId: pulumi.Output<string | undefined>;
+```
+
+
+Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -1050,7 +1086,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L34">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L46">property identity</a>
 </h3>
 
 ```typescript
@@ -1058,7 +1094,7 @@ public identity: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L38">property licenseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L50">property licenseType</a>
 </h3>
 
 ```typescript
@@ -1069,7 +1105,7 @@ public licenseType: pulumi.Output<string>;
 Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L42">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L54">property location</a>
 </h3>
 
 ```typescript
@@ -1080,7 +1116,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L46">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L58">property name</a>
 </h3>
 
 ```typescript
@@ -1091,7 +1127,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the image from the marketplace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L50">property networkProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L62">property networkProfiles</a>
 </h3>
 
 ```typescript
@@ -1102,7 +1138,7 @@ public networkProfiles: pulumi.Output<{ ... }[]>;
 A collection of network profile block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L54">property osProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L66">property osProfile</a>
 </h3>
 
 ```typescript
@@ -1113,7 +1149,7 @@ public osProfile: pulumi.Output<{ ... }>;
 A Virtual Machine OS Profile block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L58">property osProfileLinuxConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L70">property osProfileLinuxConfig</a>
 </h3>
 
 ```typescript
@@ -1124,7 +1160,7 @@ public osProfileLinuxConfig: pulumi.Output<{ ... }>;
 A Linux config block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L62">property osProfileSecrets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L74">property osProfileSecrets</a>
 </h3>
 
 ```typescript
@@ -1135,7 +1171,7 @@ public osProfileSecrets: pulumi.Output<{ ... }[] | undefined>;
 A collection of Secret blocks as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L66">property osProfileWindowsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L78">property osProfileWindowsConfig</a>
 </h3>
 
 ```typescript
@@ -1146,7 +1182,7 @@ public osProfileWindowsConfig: pulumi.Output<{ ... } | undefined>;
 A Windows config block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L70">property overprovision</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L82">property overprovision</a>
 </h3>
 
 ```typescript
@@ -1154,10 +1190,10 @@ public overprovision: pulumi.Output<boolean | undefined>;
 ```
 
 
-Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
+Specifies whether the virtual machine scale set should be overprovisioned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L74">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L86">property plan</a>
 </h3>
 
 ```typescript
@@ -1168,7 +1204,7 @@ public plan: pulumi.Output<{ ... } | undefined>;
 A plan block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L78">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L90">property priority</a>
 </h3>
 
 ```typescript
@@ -1176,10 +1212,10 @@ public priority: pulumi.Output<string | undefined>;
 ```
 
 
-Specifies the priority for the virtual machines in the scale set, defaults to `Regular`. Possible values are `Low` and `Regular`.
+Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L82">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L94">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1190,7 +1226,18 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L87">property singlePlacementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L98">property rollingUpgradePolicy</a>
+</h3>
+
+```typescript
+public rollingUpgradePolicy: pulumi.Output<{ ... } | undefined>;
+```
+
+
+A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L102">property singlePlacementGroup</a>
 </h3>
 
 ```typescript
@@ -1198,11 +1245,10 @@ public singlePlacementGroup: pulumi.Output<boolean | undefined>;
 ```
 
 
-Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Defaults to `true`. Changing this forces a
-new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
+Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L91">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L106">property sku</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1259,7 @@ public sku: pulumi.Output<{ ... }>;
 Specifies the SKU of the image used to create the virtual machines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L95">property storageProfileDataDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L110">property storageProfileDataDisks</a>
 </h3>
 
 ```typescript
@@ -1224,7 +1270,7 @@ public storageProfileDataDisks: pulumi.Output<{ ... }[] | undefined>;
 A storage profile data disk block as documented below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L99">property storageProfileImageReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L114">property storageProfileImageReference</a>
 </h3>
 
 ```typescript
@@ -1235,7 +1281,7 @@ public storageProfileImageReference: pulumi.Output<{ ... }>;
 A storage profile image reference block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L103">property storageProfileOsDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L118">property storageProfileOsDisk</a>
 </h3>
 
 ```typescript
@@ -1246,7 +1292,7 @@ public storageProfileOsDisk: pulumi.Output<{ ... }>;
 A storage profile os disk block as documented below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L107">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L122">property tags</a>
 </h3>
 
 ```typescript
@@ -1257,7 +1303,7 @@ public tags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L111">property upgradePolicyMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L126">property upgradePolicyMode</a>
 </h3>
 
 ```typescript
@@ -1265,7 +1311,7 @@ public upgradePolicyMode: pulumi.Output<string>;
 ```
 
 
-Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Manual` or `Automatic`.
+Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -1280,7 +1326,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L115">property zones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L130">property zones</a>
 </h3>
 
 ```typescript
@@ -2703,13 +2749,13 @@ writeAcceleratorEnabled?: pulumi.Input<boolean>;
 Specifies if Write Accelerator is enabled on the disk. This can only be enabled on `Premium_LRS` managed disks with no caching and [M-Series VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator). Defaults to `false`.
 
 <h2 class="pdoc-module-header" id="ExtensionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L201">interface ExtensionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L207">interface ExtensionArgs</a>
 </h2>
 
 The set of arguments for constructing a Extension resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L206">property autoUpgradeMinorVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L212">property autoUpgradeMinorVersion</a>
 </h3>
 
 ```typescript
@@ -2721,7 +2767,7 @@ Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L211">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L217">property location</a>
 </h3>
 
 ```typescript
@@ -2733,7 +2779,7 @@ The location where the extension is created. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L216">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L222">property name</a>
 </h3>
 
 ```typescript
@@ -2745,7 +2791,7 @@ The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L221">property protectedSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L227">property protectedSettings</a>
 </h3>
 
 ```typescript
@@ -2757,7 +2803,7 @@ The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L226">property publisher</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L232">property publisher</a>
 </h3>
 
 ```typescript
@@ -2769,7 +2815,7 @@ The publisher of the extension, available publishers
 can be found by using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L232">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L238">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2782,7 +2828,7 @@ create the virtual network. Changing this forces a new resource to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L237">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L243">property settings</a>
 </h3>
 
 ```typescript
@@ -2794,15 +2840,18 @@ The settings passed to the extension, these are
 specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L238">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L247">property tags</a>
 </h3>
 
 ```typescript
 tags?: pulumi.Input<{ ... }>;
 ```
 
+
+A mapping of tags to assign to the resource.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L243">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L252">property type</a>
 </h3>
 
 ```typescript
@@ -2814,7 +2863,7 @@ The type of extension, available types for a publisher can
 be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L248">property typeHandlerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L257">property typeHandlerVersion</a>
 </h3>
 
 ```typescript
@@ -2826,7 +2875,7 @@ Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L253">property virtualMachineName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L262">property virtualMachineName</a>
 </h3>
 
 ```typescript
@@ -2838,13 +2887,13 @@ The name of the virtual machine. Changing
 this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="ExtensionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L143">interface ExtensionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L146">interface ExtensionState</a>
 </h2>
 
 Input properties used for looking up and filtering Extension resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L148">property autoUpgradeMinorVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L151">property autoUpgradeMinorVersion</a>
 </h3>
 
 ```typescript
@@ -2856,7 +2905,7 @@ Specifies if the platform deploys
 the latest minor version update to the `type_handler_version` specified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L153">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L156">property location</a>
 </h3>
 
 ```typescript
@@ -2868,7 +2917,7 @@ The location where the extension is created. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L158">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L161">property name</a>
 </h3>
 
 ```typescript
@@ -2880,7 +2929,7 @@ The name of the virtual machine extension peering. Changing
 this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L163">property protectedSettings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L166">property protectedSettings</a>
 </h3>
 
 ```typescript
@@ -2892,7 +2941,7 @@ The protected_settings passed to the
 extension, like settings, these are specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L168">property publisher</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L171">property publisher</a>
 </h3>
 
 ```typescript
@@ -2904,7 +2953,7 @@ The publisher of the extension, available publishers
 can be found by using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L174">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L177">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2917,7 +2966,7 @@ create the virtual network. Changing this forces a new resource to be
 created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L179">property settings</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L182">property settings</a>
 </h3>
 
 ```typescript
@@ -2929,15 +2978,18 @@ The settings passed to the extension, these are
 specified as a JSON object in a string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L180">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L186">property tags</a>
 </h3>
 
 ```typescript
 tags?: pulumi.Input<{ ... }>;
 ```
 
+
+A mapping of tags to assign to the resource.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L185">property type</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L191">property type</a>
 </h3>
 
 ```typescript
@@ -2949,7 +3001,7 @@ The type of extension, available types for a publisher can
 be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L190">property typeHandlerVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L196">property typeHandlerVersion</a>
 </h3>
 
 ```typescript
@@ -2961,7 +3013,7 @@ Specifies the version of the extension to
 use, available versions can be found using the Azure CLI.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L195">property virtualMachineName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/extension.ts#L201">property virtualMachineName</a>
 </h3>
 
 ```typescript
@@ -3219,7 +3271,7 @@ zones: string[];
 ```
 
 
-(Optional) A collection containing the availability zone the managed disk is allocated in.
+A collection containing the availability zone the managed disk is allocated in.
 
 <h2 class="pdoc-module-header" id="GetPlatformImageArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/getPlatformImage.ts#L22">interface GetPlatformImageArgs</a>
@@ -4072,7 +4124,7 @@ storageAccountType: pulumi.Input<string>;
 
 
 The type of storage to use for the managed disk.
-Allowable values are `Standard_LRS` or `Premium_LRS`.
+Allowable values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts#L260">property tags</a>
@@ -4227,7 +4279,7 @@ storageAccountType?: pulumi.Input<string>;
 
 
 The type of storage to use for the managed disk.
-Allowable values are `Standard_LRS` or `Premium_LRS`.
+Allowable values are `Standard_LRS`, `Premium_LRS`, `StandardSSD_LRS` or `UltraSSD_LRS`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/managedDisk.ts#L196">property tags</a>
@@ -4252,13 +4304,24 @@ zones?: pulumi.Input<string>;
 A collection containing the availability zone to allocate the Managed Disk in.
 
 <h2 class="pdoc-module-header" id="ScaleSetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L302">interface ScaleSetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L340">interface ScaleSetArgs</a>
 </h2>
 
 The set of arguments for constructing a ScaleSet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L306">property bootDiagnostics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L344">property automaticOsUpgrade</a>
+</h3>
+
+```typescript
+automaticOsUpgrade?: pulumi.Input<boolean>;
+```
+
+
+Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L348">property bootDiagnostics</a>
 </h3>
 
 ```typescript
@@ -4269,7 +4332,18 @@ bootDiagnostics?: pulumi.Input<{ ... }>;
 A boot diagnostics profile block as referenced below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L310">property extensions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L352">property evictionPolicy</a>
+</h3>
+
+```typescript
+evictionPolicy?: pulumi.Input<string>;
+```
+
+
+Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L356">property extensions</a>
 </h3>
 
 ```typescript
@@ -4280,7 +4354,18 @@ extensions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L311">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L360">property healthProbeId</a>
+</h3>
+
+```typescript
+healthProbeId?: pulumi.Input<string>;
+```
+
+
+Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L361">property identity</a>
 </h3>
 
 ```typescript
@@ -4288,7 +4373,7 @@ identity?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L315">property licenseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L365">property licenseType</a>
 </h3>
 
 ```typescript
@@ -4299,7 +4384,7 @@ licenseType?: pulumi.Input<string>;
 Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L319">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L369">property location</a>
 </h3>
 
 ```typescript
@@ -4310,7 +4395,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L323">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L373">property name</a>
 </h3>
 
 ```typescript
@@ -4321,7 +4406,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the image from the marketplace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L327">property networkProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L377">property networkProfiles</a>
 </h3>
 
 ```typescript
@@ -4332,7 +4417,7 @@ networkProfiles: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A collection of network profile block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L331">property osProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L381">property osProfile</a>
 </h3>
 
 ```typescript
@@ -4343,7 +4428,7 @@ osProfile: pulumi.Input<{ ... }>;
 A Virtual Machine OS Profile block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L335">property osProfileLinuxConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L385">property osProfileLinuxConfig</a>
 </h3>
 
 ```typescript
@@ -4354,7 +4439,7 @@ osProfileLinuxConfig?: pulumi.Input<{ ... }>;
 A Linux config block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L339">property osProfileSecrets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L389">property osProfileSecrets</a>
 </h3>
 
 ```typescript
@@ -4365,7 +4450,7 @@ osProfileSecrets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A collection of Secret blocks as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L343">property osProfileWindowsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L393">property osProfileWindowsConfig</a>
 </h3>
 
 ```typescript
@@ -4376,7 +4461,7 @@ osProfileWindowsConfig?: pulumi.Input<{ ... }>;
 A Windows config block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L347">property overprovision</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L397">property overprovision</a>
 </h3>
 
 ```typescript
@@ -4384,10 +4469,10 @@ overprovision?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
+Specifies whether the virtual machine scale set should be overprovisioned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L351">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L401">property plan</a>
 </h3>
 
 ```typescript
@@ -4398,7 +4483,7 @@ plan?: pulumi.Input<{ ... }>;
 A plan block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L355">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L405">property priority</a>
 </h3>
 
 ```typescript
@@ -4406,10 +4491,10 @@ priority?: pulumi.Input<string>;
 ```
 
 
-Specifies the priority for the virtual machines in the scale set, defaults to `Regular`. Possible values are `Low` and `Regular`.
+Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L359">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L409">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -4420,7 +4505,18 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L364">property singlePlacementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L413">property rollingUpgradePolicy</a>
+</h3>
+
+```typescript
+rollingUpgradePolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L417">property singlePlacementGroup</a>
 </h3>
 
 ```typescript
@@ -4428,11 +4524,10 @@ singlePlacementGroup?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Defaults to `true`. Changing this forces a
-new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
+Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L368">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L421">property sku</a>
 </h3>
 
 ```typescript
@@ -4443,7 +4538,7 @@ sku: pulumi.Input<{ ... }>;
 Specifies the SKU of the image used to create the virtual machines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L372">property storageProfileDataDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L425">property storageProfileDataDisks</a>
 </h3>
 
 ```typescript
@@ -4454,7 +4549,7 @@ storageProfileDataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A storage profile data disk block as documented below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L376">property storageProfileImageReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L429">property storageProfileImageReference</a>
 </h3>
 
 ```typescript
@@ -4465,7 +4560,7 @@ storageProfileImageReference?: pulumi.Input<{ ... }>;
 A storage profile image reference block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L380">property storageProfileOsDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L433">property storageProfileOsDisk</a>
 </h3>
 
 ```typescript
@@ -4476,7 +4571,7 @@ storageProfileOsDisk: pulumi.Input<{ ... }>;
 A storage profile os disk block as documented below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L384">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L437">property tags</a>
 </h3>
 
 ```typescript
@@ -4487,7 +4582,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L388">property upgradePolicyMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L441">property upgradePolicyMode</a>
 </h3>
 
 ```typescript
@@ -4495,10 +4590,10 @@ upgradePolicyMode: pulumi.Input<string>;
 ```
 
 
-Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Manual` or `Automatic`.
+Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L392">property zones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L445">property zones</a>
 </h3>
 
 ```typescript
@@ -4509,13 +4604,24 @@ zones?: pulumi.Input<pulumi.Input<string>[]>;
 A collection of availability zones to spread the Virtual Machines over.
 
 <h2 class="pdoc-module-header" id="ScaleSetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L206">interface ScaleSetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L229">interface ScaleSetState</a>
 </h2>
 
 Input properties used for looking up and filtering ScaleSet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L210">property bootDiagnostics</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L233">property automaticOsUpgrade</a>
+</h3>
+
+```typescript
+automaticOsUpgrade?: pulumi.Input<boolean>;
+```
+
+
+Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L237">property bootDiagnostics</a>
 </h3>
 
 ```typescript
@@ -4526,7 +4632,18 @@ bootDiagnostics?: pulumi.Input<{ ... }>;
 A boot diagnostics profile block as referenced below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L214">property extensions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L241">property evictionPolicy</a>
+</h3>
+
+```typescript
+evictionPolicy?: pulumi.Input<string>;
+```
+
+
+Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L245">property extensions</a>
 </h3>
 
 ```typescript
@@ -4537,7 +4654,18 @@ extensions?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L215">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L249">property healthProbeId</a>
+</h3>
+
+```typescript
+healthProbeId?: pulumi.Input<string>;
+```
+
+
+Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L250">property identity</a>
 </h3>
 
 ```typescript
@@ -4545,7 +4673,7 @@ identity?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L219">property licenseType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L254">property licenseType</a>
 </h3>
 
 ```typescript
@@ -4556,7 +4684,7 @@ licenseType?: pulumi.Input<string>;
 Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L223">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L258">property location</a>
 </h3>
 
 ```typescript
@@ -4567,7 +4695,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L227">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L262">property name</a>
 </h3>
 
 ```typescript
@@ -4578,7 +4706,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the image from the marketplace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L231">property networkProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L266">property networkProfiles</a>
 </h3>
 
 ```typescript
@@ -4589,7 +4717,7 @@ networkProfiles?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A collection of network profile block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L235">property osProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L270">property osProfile</a>
 </h3>
 
 ```typescript
@@ -4600,7 +4728,7 @@ osProfile?: pulumi.Input<{ ... }>;
 A Virtual Machine OS Profile block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L239">property osProfileLinuxConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L274">property osProfileLinuxConfig</a>
 </h3>
 
 ```typescript
@@ -4611,7 +4739,7 @@ osProfileLinuxConfig?: pulumi.Input<{ ... }>;
 A Linux config block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L243">property osProfileSecrets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L278">property osProfileSecrets</a>
 </h3>
 
 ```typescript
@@ -4622,7 +4750,7 @@ osProfileSecrets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A collection of Secret blocks as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L247">property osProfileWindowsConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L282">property osProfileWindowsConfig</a>
 </h3>
 
 ```typescript
@@ -4633,7 +4761,7 @@ osProfileWindowsConfig?: pulumi.Input<{ ... }>;
 A Windows config block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L251">property overprovision</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L286">property overprovision</a>
 </h3>
 
 ```typescript
@@ -4641,10 +4769,10 @@ overprovision?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
+Specifies whether the virtual machine scale set should be overprovisioned.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L255">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L290">property plan</a>
 </h3>
 
 ```typescript
@@ -4655,7 +4783,7 @@ plan?: pulumi.Input<{ ... }>;
 A plan block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L259">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L294">property priority</a>
 </h3>
 
 ```typescript
@@ -4663,10 +4791,10 @@ priority?: pulumi.Input<string>;
 ```
 
 
-Specifies the priority for the virtual machines in the scale set, defaults to `Regular`. Possible values are `Low` and `Regular`.
+Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L263">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L298">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -4677,7 +4805,18 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L268">property singlePlacementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L302">property rollingUpgradePolicy</a>
+</h3>
+
+```typescript
+rollingUpgradePolicy?: pulumi.Input<{ ... }>;
+```
+
+
+A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L306">property singlePlacementGroup</a>
 </h3>
 
 ```typescript
@@ -4685,11 +4824,10 @@ singlePlacementGroup?: pulumi.Input<boolean>;
 ```
 
 
-Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Defaults to `true`. Changing this forces a
-new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
+Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L272">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L310">property sku</a>
 </h3>
 
 ```typescript
@@ -4700,7 +4838,7 @@ sku?: pulumi.Input<{ ... }>;
 Specifies the SKU of the image used to create the virtual machines.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L276">property storageProfileDataDisks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L314">property storageProfileDataDisks</a>
 </h3>
 
 ```typescript
@@ -4711,7 +4849,7 @@ storageProfileDataDisks?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A storage profile data disk block as documented below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L280">property storageProfileImageReference</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L318">property storageProfileImageReference</a>
 </h3>
 
 ```typescript
@@ -4722,7 +4860,7 @@ storageProfileImageReference?: pulumi.Input<{ ... }>;
 A storage profile image reference block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L284">property storageProfileOsDisk</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L322">property storageProfileOsDisk</a>
 </h3>
 
 ```typescript
@@ -4733,7 +4871,7 @@ storageProfileOsDisk?: pulumi.Input<{ ... }>;
 A storage profile os disk block as documented below
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L288">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L326">property tags</a>
 </h3>
 
 ```typescript
@@ -4744,7 +4882,7 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L292">property upgradePolicyMode</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L330">property upgradePolicyMode</a>
 </h3>
 
 ```typescript
@@ -4752,10 +4890,10 @@ upgradePolicyMode?: pulumi.Input<string>;
 ```
 
 
-Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Manual` or `Automatic`.
+Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L296">property zones</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/compute/scaleSet.ts#L334">property zones</a>
 </h3>
 
 ```typescript

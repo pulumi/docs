@@ -31,7 +31,7 @@ title: Module rbac/v1beta1
 
 
 <h2 class="pdoc-module-header" id="isClusterRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16662">function isClusterRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19171">function isClusterRole</a>
 </h2>
 
 ```typescript
@@ -39,7 +39,7 @@ isClusterRole(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isClusterRoleBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16705">function isClusterRoleBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19214">function isClusterRoleBinding</a>
 </h2>
 
 ```typescript
@@ -47,7 +47,7 @@ isClusterRoleBinding(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isClusterRoleBindingList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16741">function isClusterRoleBindingList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19250">function isClusterRoleBindingList</a>
 </h2>
 
 ```typescript
@@ -55,7 +55,7 @@ isClusterRoleBindingList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isClusterRoleList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16777">function isClusterRoleList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19286">function isClusterRoleList</a>
 </h2>
 
 ```typescript
@@ -63,7 +63,7 @@ isClusterRoleList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16857">function isRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19366">function isRole</a>
 </h2>
 
 ```typescript
@@ -71,7 +71,7 @@ isRole(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isRoleBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16902">function isRoleBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19411">function isRoleBinding</a>
 </h2>
 
 ```typescript
@@ -79,7 +79,7 @@ isRoleBinding(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isRoleBindingList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16938">function isRoleBindingList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19447">function isRoleBindingList</a>
 </h2>
 
 ```typescript
@@ -87,7 +87,7 @@ isRoleBindingList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="isRoleList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L16974">function isRoleList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/input.ts#L19483">function isRoleList</a>
 </h2>
 
 ```typescript
@@ -95,13 +95,13 @@ isRoleList(o: any): boolean
 ```
 
 <h2 class="pdoc-module-header" id="AggregationRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15709">interface AggregationRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18120">interface AggregationRule</a>
 </h2>
 
 AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15715">property clusterRoleSelectors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18126">property clusterRoleSelectors</a>
 </h3>
 
 ```typescript
@@ -114,14 +114,14 @@ create the rules. If any of the selectors match, then the ClusterRole's permissi
 added
 
 <h2 class="pdoc-module-header" id="ClusterRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15723">interface ClusterRole</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18134">interface ClusterRole</a>
 </h2>
 
 ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a
 unit by a RoleBinding or ClusterRoleBinding.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15729">property aggregationRule</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18140">property aggregationRule</a>
 </h3>
 
 ```typescript
@@ -134,7 +134,7 @@ ClusterRole. If AggregationRule is set, then the Rules are controller managed an
 changes to Rules will be stomped by the controller.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15737">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18148">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -148,7 +148,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15745">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18156">property kind</a>
 </h3>
 
 ```typescript
@@ -162,7 +162,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15750">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18161">property metadata</a>
 </h3>
 
 ```typescript
@@ -173,7 +173,7 @@ metadata: ObjectMeta;
 Standard object's metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15755">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18166">property rules</a>
 </h3>
 
 ```typescript
@@ -184,14 +184,14 @@ rules: PolicyRule[];
 Rules holds all the PolicyRules for this ClusterRole
 
 <h2 class="pdoc-module-header" id="ClusterRoleBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15763">interface ClusterRoleBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18174">interface ClusterRoleBinding</a>
 </h2>
 
 ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a
 ClusterRole in the global namespace, and adds who information via Subject.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15770">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18181">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -205,7 +205,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15778">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18189">property kind</a>
 </h3>
 
 ```typescript
@@ -219,7 +219,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15783">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18194">property metadata</a>
 </h3>
 
 ```typescript
@@ -230,7 +230,7 @@ metadata: ObjectMeta;
 Standard object's metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15789">property roleRef</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18200">property roleRef</a>
 </h3>
 
 ```typescript
@@ -242,7 +242,7 @@ RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef
 resolved, the Authorizer must return an error.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15794">property subjects</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18205">property subjects</a>
 </h3>
 
 ```typescript
@@ -253,13 +253,13 @@ subjects: Subject[];
 Subjects holds references to the objects the role applies to.
 
 <h2 class="pdoc-module-header" id="ClusterRoleBindingList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15801">interface ClusterRoleBindingList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18212">interface ClusterRoleBindingList</a>
 </h2>
 
 ClusterRoleBindingList is a collection of ClusterRoleBindings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15808">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18219">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -273,7 +273,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15813">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18224">property items</a>
 </h3>
 
 ```typescript
@@ -284,7 +284,7 @@ items: ClusterRoleBinding[];
 Items is a list of ClusterRoleBindings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15821">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18232">property kind</a>
 </h3>
 
 ```typescript
@@ -298,7 +298,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15826">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18237">property metadata</a>
 </h3>
 
 ```typescript
@@ -309,13 +309,13 @@ metadata: ListMeta;
 Standard object's metadata.
 
 <h2 class="pdoc-module-header" id="ClusterRoleList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15833">interface ClusterRoleList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18244">interface ClusterRoleList</a>
 </h2>
 
 ClusterRoleList is a collection of ClusterRoles
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15840">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18251">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -329,7 +329,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15845">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18256">property items</a>
 </h3>
 
 ```typescript
@@ -340,7 +340,7 @@ items: ClusterRole[];
 Items is a list of ClusterRoles
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15853">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18264">property kind</a>
 </h3>
 
 ```typescript
@@ -354,7 +354,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15858">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18269">property metadata</a>
 </h3>
 
 ```typescript
@@ -365,14 +365,14 @@ metadata: ListMeta;
 Standard object's metadata.
 
 <h2 class="pdoc-module-header" id="PolicyRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15866">interface PolicyRule</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18277">interface PolicyRule</a>
 </h2>
 
 PolicyRule holds information that describes a policy rule, but does not contain information
 about who the rule applies to or which namespace the rule applies to.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15872">property apiGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18283">property apiGroups</a>
 </h3>
 
 ```typescript
@@ -385,7 +385,7 @@ are specified, any action requested against one of the enumerated resources in a
 group will be allowed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15881">property nonResourceURLs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18292">property nonResourceURLs</a>
 </h3>
 
 ```typescript
@@ -400,7 +400,7 @@ ClusterRoleBinding. Rules can either apply to API resources (such as "pods" or "
 or non-resource URL paths (such as "/api"),  but not both.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15887">property resourceNames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18298">property resourceNames</a>
 </h3>
 
 ```typescript
@@ -412,7 +412,7 @@ ResourceNames is an optional white list of names that the rule applies to.  An e
 means that everything is allowed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15894">property resources</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18305">property resources</a>
 </h3>
 
 ```typescript
@@ -425,7 +425,7 @@ specified apiGroups. '*&#8205;/foo' represents the subresource 'foo' for all res
 the specified apiGroups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15900">property verbs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18311">property verbs</a>
 </h3>
 
 ```typescript
@@ -437,14 +437,14 @@ Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestri
 contained in this rule.  VerbAll represents all kinds.
 
 <h2 class="pdoc-module-header" id="Role">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15908">interface Role</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18319">interface Role</a>
 </h2>
 
 Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a
 RoleBinding.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15915">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18326">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -458,7 +458,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15923">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18334">property kind</a>
 </h3>
 
 ```typescript
@@ -472,7 +472,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15928">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18339">property metadata</a>
 </h3>
 
 ```typescript
@@ -483,7 +483,7 @@ metadata: ObjectMeta;
 Standard object's metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15933">property rules</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18344">property rules</a>
 </h3>
 
 ```typescript
@@ -494,7 +494,7 @@ rules: PolicyRule[];
 Rules holds all the PolicyRules for this Role
 
 <h2 class="pdoc-module-header" id="RoleBinding">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15943">interface RoleBinding</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18354">interface RoleBinding</a>
 </h2>
 
 RoleBinding references a role, but does not contain it.  It can reference a Role in the same
@@ -503,7 +503,7 @@ namespace information by which namespace it exists in.  RoleBindings in a given 
 only have effect in that namespace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15950">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18361">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -517,7 +517,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15958">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18369">property kind</a>
 </h3>
 
 ```typescript
@@ -531,7 +531,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15963">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18374">property metadata</a>
 </h3>
 
 ```typescript
@@ -542,7 +542,7 @@ metadata: ObjectMeta;
 Standard object's metadata.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15969">property roleRef</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18380">property roleRef</a>
 </h3>
 
 ```typescript
@@ -554,7 +554,7 @@ RoleRef can reference a Role in the current namespace or a ClusterRole in the gl
 namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15974">property subjects</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18385">property subjects</a>
 </h3>
 
 ```typescript
@@ -565,13 +565,13 @@ subjects: Subject[];
 Subjects holds references to the objects the role applies to.
 
 <h2 class="pdoc-module-header" id="RoleBindingList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15981">interface RoleBindingList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18392">interface RoleBindingList</a>
 </h2>
 
 RoleBindingList is a collection of RoleBindings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15988">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18399">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -585,7 +585,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L15993">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18404">property items</a>
 </h3>
 
 ```typescript
@@ -596,7 +596,7 @@ items: RoleBinding[];
 Items is a list of RoleBindings
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16001">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18412">property kind</a>
 </h3>
 
 ```typescript
@@ -610,7 +610,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16006">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18417">property metadata</a>
 </h3>
 
 ```typescript
@@ -621,13 +621,13 @@ metadata: ListMeta;
 Standard object's metadata.
 
 <h2 class="pdoc-module-header" id="RoleList">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16013">interface RoleList</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18424">interface RoleList</a>
 </h2>
 
 RoleList is a collection of Roles
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16020">property apiVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18431">property apiVersion</a>
 </h3>
 
 ```typescript
@@ -641,7 +641,7 @@ values. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#resources
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16025">property items</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18436">property items</a>
 </h3>
 
 ```typescript
@@ -652,7 +652,7 @@ items: Role[];
 Items is a list of Roles
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16033">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18444">property kind</a>
 </h3>
 
 ```typescript
@@ -666,7 +666,7 @@ CamelCase. More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16038">property metadata</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18449">property metadata</a>
 </h3>
 
 ```typescript
@@ -677,13 +677,13 @@ metadata: ListMeta;
 Standard object's metadata.
 
 <h2 class="pdoc-module-header" id="RoleRef">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16045">interface RoleRef</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18456">interface RoleRef</a>
 </h2>
 
 RoleRef contains information that points to the role being used
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16049">property apiGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18460">property apiGroup</a>
 </h3>
 
 ```typescript
@@ -694,7 +694,7 @@ apiGroup: string;
 APIGroup is the group for the resource being referenced
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16054">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18465">property kind</a>
 </h3>
 
 ```typescript
@@ -705,7 +705,7 @@ kind: string;
 Kind is the type of resource being referenced
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16059">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18470">property name</a>
 </h3>
 
 ```typescript
@@ -716,7 +716,7 @@ name: string;
 Name is the name of resource being referenced
 
 <h2 class="pdoc-module-header" id="Subject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16068">interface Subject</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18479">interface Subject</a>
 </h2>
 
 Subject contains a reference to the object or user identities a role binding applies to.
@@ -724,7 +724,7 @@ This can either hold a direct API object reference, or a value for non-objects s
 and group names.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16073">property apiGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18484">property apiGroup</a>
 </h3>
 
 ```typescript
@@ -736,7 +736,7 @@ APIGroup holds the API group of the referenced subject. Defaults to "" for Servi
 subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16080">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18491">property kind</a>
 </h3>
 
 ```typescript
@@ -749,7 +749,7 @@ Kind of object being referenced. Values defined by this API group are "User", "G
 should report an error.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16085">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18496">property name</a>
 </h3>
 
 ```typescript
@@ -760,7 +760,7 @@ name: string;
 Name of the object being referenced.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L16091">property namespace</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs/types/output.ts#L18502">property namespace</a>
 </h3>
 
 ```typescript

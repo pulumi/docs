@@ -29,6 +29,7 @@ title: Module apigateway
 * <a href="#UsagePlan">class UsagePlan</a>
 * <a href="#UsagePlanKey">class UsagePlanKey</a>
 * <a href="#VpcLink">class VpcLink</a>
+* <a href="#getKey">function getKey</a>
 * <a href="#getResource">function getResource</a>
 * <a href="#getRestApi">function getRestApi</a>
 * <a href="#AccountArgs">interface AccountArgs</a>
@@ -49,6 +50,8 @@ title: Module apigateway
 * <a href="#DocumentationVersionState">interface DocumentationVersionState</a>
 * <a href="#DomainNameArgs">interface DomainNameArgs</a>
 * <a href="#DomainNameState">interface DomainNameState</a>
+* <a href="#GetKeyArgs">interface GetKeyArgs</a>
+* <a href="#GetKeyResult">interface GetKeyResult</a>
 * <a href="#GetResourceArgs">interface GetResourceArgs</a>
 * <a href="#GetResourceResult">interface GetResourceResult</a>
 * <a href="#GetRestApiArgs">interface GetRestApiArgs</a>
@@ -82,7 +85,7 @@ title: Module apigateway
 * <a href="#VpcLinkArgs">interface VpcLinkArgs</a>
 * <a href="#VpcLinkState">interface VpcLinkState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts">apigateway/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts">apigateway/apiKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts">apigateway/authorizer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts">apigateway/basePathMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts">apigateway/clientCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts">apigateway/deployment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts">apigateway/documentationPart.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts">apigateway/documentationVersion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts">apigateway/domainName.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts">apigateway/getResource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts">apigateway/getRestApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts">apigateway/integration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts">apigateway/integrationResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts">apigateway/method.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts">apigateway/methodResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts">apigateway/methodSettings.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts">apigateway/model.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts">apigateway/requestValidator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts">apigateway/resource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts">apigateway/response.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts">apigateway/restApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts">apigateway/stage.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts">apigateway/usagePlan.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts">apigateway/usagePlanKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts">apigateway/vpcLink.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts">apigateway/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts">apigateway/apiKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts">apigateway/authorizer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts">apigateway/basePathMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts">apigateway/clientCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts">apigateway/deployment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts">apigateway/documentationPart.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts">apigateway/documentationVersion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts">apigateway/domainName.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts">apigateway/getKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts">apigateway/getResource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts">apigateway/getRestApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts">apigateway/integration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts">apigateway/integrationResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts">apigateway/method.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts">apigateway/methodResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts">apigateway/methodSettings.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts">apigateway/model.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts">apigateway/requestValidator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts">apigateway/resource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts">apigateway/response.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts">apigateway/restApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts">apigateway/stage.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts">apigateway/usagePlan.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts">apigateway/usagePlanKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts">apigateway/vpcLink.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Account">
@@ -2031,8 +2034,8 @@ A map of request query string parameters and headers that should be passed to th
 For example:
 ```hcl
 request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
+"method.request.header.X-Some-Header"         = true
+"method.request.querystring.some-query-param" = true
 }
 ```
 would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
@@ -3696,6 +3699,18 @@ urn: Output<URN>;
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h2 class="pdoc-module-header" id="getKey">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L11">function getKey</a>
+</h2>
+
+```typescript
+getKey(args: GetKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetKeyResult>
+```
+
+
+Use this data source to get the name and value of a pre-existing API Key, for
+example to supply credentials for a dependency microservice.
+
 <h2 class="pdoc-module-header" id="getResource">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L11">function getResource</a>
 </h2>
@@ -4919,6 +4934,51 @@ regionalZoneId?: pulumi.Input<string>;
 
 The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
 
+<h2 class="pdoc-module-header" id="GetKeyArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L20">interface GetKeyArgs</a>
+</h2>
+
+A collection of arguments for invoking getKey.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L24">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+The ID of the API Key to look up.
+
+<h2 class="pdoc-module-header" id="GetKeyResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L30">interface GetKeyResult</a>
+</h2>
+
+A collection of values returned by getKey.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L34">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+Set to the name of the API Key.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts#L38">property value</a>
+</h3>
+
+```typescript
+value: string;
+```
+
+
+Set to the value of the API Key.
+
 <h2 class="pdoc-module-header" id="GetResourceArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts#L21">interface GetResourceArgs</a>
 </h2>
@@ -5739,8 +5799,8 @@ A map of request query string parameters and headers that should be passed to th
 For example:
 ```hcl
 request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
+"method.request.header.X-Some-Header"         = true
+"method.request.querystring.some-query-param" = true
 }
 ```
 would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or
@@ -6146,8 +6206,8 @@ A map of request query string parameters and headers that should be passed to th
 For example:
 ```hcl
 request_parameters = {
-"method.request.header.X-Some-Header" = true,
-"method.request.querystring.some-query-param"  = true,
+"method.request.header.X-Some-Header"         = true
+"method.request.querystring.some-query-param" = true
 }
 ```
 would define that the header `X-Some-Header` and the query string `some-query-param` must be provided on the request, or

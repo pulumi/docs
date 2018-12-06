@@ -211,7 +211,7 @@ details on this process.
 </h3>
 
 ```typescript
-public new CallbackFunction(name: string, args: CallbackFunctionArgs<E, R>, opts?: pulumi.ResourceOptions)
+public new CallbackFunction(name: string, args: CallbackFunctionArgs<E, R>, opts?: pulumi.CustomResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -572,7 +572,7 @@ For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L69">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L73">constructor</a>
 </h3>
 
 ```typescript
@@ -716,10 +716,21 @@ public startingPosition: pulumi.Output<string | undefined>;
 ```
 
 
-The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST` if getting events from Kinesis or DynamoDB.  Must not be provided if getting events from SQS.
+The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L61">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L61">property startingPositionTimestamp</a>
+</h3>
+
+```typescript
+public startingPositionTimestamp: pulumi.Output<string | undefined>;
+```
+
+
+A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L65">property state</a>
 </h3>
 
 ```typescript
@@ -730,7 +741,7 @@ public state: pulumi.Output<string>;
 The state of the event source mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L65">property stateTransitionReason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L69">property stateTransitionReason</a>
 </h3>
 
 ```typescript
@@ -753,7 +764,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L69">property uuid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L73">property uuid</a>
 </h3>
 
 ```typescript
@@ -775,7 +786,7 @@ AWS resource an an AWS lambda that will be triggered when something happens to t
 </h3>
 
 ```typescript
-public new EventSubscription(type: string, name: string, props: Record<string, any>, opts?: pulumi.ResourceOptions)
+public new EventSubscription(type: string, name: string, props: Record<string, any>, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -1739,13 +1750,13 @@ Memory limit, in MB, you configured for the Lambda function. You set the memory 
 time you create a Lambda function and you can change it later.
 
 <h2 class="pdoc-module-header" id="EventSourceMappingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L171">interface EventSourceMappingArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L181">interface EventSourceMappingArgs</a>
 </h2>
 
 The set of arguments for constructing a EventSourceMapping resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L175">property batchSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L185">property batchSize</a>
 </h3>
 
 ```typescript
@@ -1756,7 +1767,7 @@ batchSize?: pulumi.Input<number>;
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L179">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L189">property enabled</a>
 </h3>
 
 ```typescript
@@ -1767,7 +1778,7 @@ enabled?: pulumi.Input<boolean>;
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L183">property eventSourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L193">property eventSourceArn</a>
 </h3>
 
 ```typescript
@@ -1778,7 +1789,7 @@ eventSourceArn: pulumi.Input<string>;
 The event source ARN - can either be a Kinesis or DynamoDB stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L187">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L197">property functionName</a>
 </h3>
 
 ```typescript
@@ -1789,7 +1800,7 @@ functionName: pulumi.Input<string>;
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L191">property startingPosition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L201">property startingPosition</a>
 </h3>
 
 ```typescript
@@ -1797,16 +1808,27 @@ startingPosition?: pulumi.Input<string>;
 ```
 
 
-The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST` if getting events from Kinesis or DynamoDB.  Must not be provided if getting events from SQS.
+The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L205">property startingPositionTimestamp</a>
+</h3>
+
+```typescript
+startingPositionTimestamp?: pulumi.Input<string>;
+```
+
+
+A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
 
 <h2 class="pdoc-module-header" id="EventSourceMappingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L121">interface EventSourceMappingState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L127">interface EventSourceMappingState</a>
 </h2>
 
 Input properties used for looking up and filtering EventSourceMapping resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L125">property batchSize</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L131">property batchSize</a>
 </h3>
 
 ```typescript
@@ -1817,7 +1839,7 @@ batchSize?: pulumi.Input<number>;
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L129">property enabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L135">property enabled</a>
 </h3>
 
 ```typescript
@@ -1828,7 +1850,7 @@ enabled?: pulumi.Input<boolean>;
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L133">property eventSourceArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L139">property eventSourceArn</a>
 </h3>
 
 ```typescript
@@ -1839,7 +1861,7 @@ eventSourceArn?: pulumi.Input<string>;
 The event source ARN - can either be a Kinesis or DynamoDB stream.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L137">property functionArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L143">property functionArn</a>
 </h3>
 
 ```typescript
@@ -1850,7 +1872,7 @@ functionArn?: pulumi.Input<string>;
 The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `function_name` above.)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L141">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L147">property functionName</a>
 </h3>
 
 ```typescript
@@ -1861,7 +1883,7 @@ functionName?: pulumi.Input<string>;
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L145">property lastModified</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L151">property lastModified</a>
 </h3>
 
 ```typescript
@@ -1872,7 +1894,7 @@ lastModified?: pulumi.Input<string>;
 The date this resource was last modified.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L149">property lastProcessingResult</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L155">property lastProcessingResult</a>
 </h3>
 
 ```typescript
@@ -1883,7 +1905,7 @@ lastProcessingResult?: pulumi.Input<string>;
 The result of the last AWS Lambda invocation of your Lambda function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L153">property startingPosition</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L159">property startingPosition</a>
 </h3>
 
 ```typescript
@@ -1891,10 +1913,21 @@ startingPosition?: pulumi.Input<string>;
 ```
 
 
-The position in the stream where AWS Lambda should start reading. Must be one of either `TRIM_HORIZON` or `LATEST` if getting events from Kinesis or DynamoDB.  Must not be provided if getting events from SQS.
+The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L157">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L163">property startingPositionTimestamp</a>
+</h3>
+
+```typescript
+startingPositionTimestamp?: pulumi.Input<string>;
+```
+
+
+A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L167">property state</a>
 </h3>
 
 ```typescript
@@ -1905,7 +1938,7 @@ state?: pulumi.Input<string>;
 The state of the event source mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L161">property stateTransitionReason</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L171">property stateTransitionReason</a>
 </h3>
 
 ```typescript
@@ -1916,7 +1949,7 @@ stateTransitionReason?: pulumi.Input<string>;
 The reason the event source mapping is in its current state.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L165">property uuid</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/eventSourceMapping.ts#L175">property uuid</a>
 </h3>
 
 ```typescript

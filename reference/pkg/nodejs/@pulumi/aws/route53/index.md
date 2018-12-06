@@ -12,9 +12,12 @@ title: Module route53
 * <a href="#Record">class Record</a>
 * <a href="#Zone">class Zone</a>
 * <a href="#ZoneAssociation">class ZoneAssociation</a>
+* <a href="#getDelegationSet">function getDelegationSet</a>
 * <a href="#getZone">function getZone</a>
 * <a href="#DelegationSetArgs">interface DelegationSetArgs</a>
 * <a href="#DelegationSetState">interface DelegationSetState</a>
+* <a href="#GetDelegationSetArgs">interface GetDelegationSetArgs</a>
+* <a href="#GetDelegationSetResult">interface GetDelegationSetResult</a>
 * <a href="#GetZoneArgs">interface GetZoneArgs</a>
 * <a href="#GetZoneResult">interface GetZoneResult</a>
 * <a href="#HealthCheckArgs">interface HealthCheckArgs</a>
@@ -28,7 +31,7 @@ title: Module route53
 * <a href="#ZoneAssociationState">interface ZoneAssociationState</a>
 * <a href="#ZoneState">interface ZoneState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts">route53/delegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts">route53/getZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts">route53/healthCheck.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts">route53/queryLog.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts">route53/record.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts">route53/zone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts">route53/zoneAssociation.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/delegationSet.ts">route53/delegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts">route53/getDelegationSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts">route53/getZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts">route53/healthCheck.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/queryLog.ts">route53/queryLog.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/record.ts">route53/record.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zone.ts">route53/zone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/zoneAssociation.ts">route53/zoneAssociation.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="DelegationSet">
@@ -383,7 +386,7 @@ public searchString: pulumi.Output<string | undefined>;
 ```
 
 
-String searched in the first 5120 bytes of the response body for check to be considered healthy.
+String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L97">property tags</a>
@@ -1069,6 +1072,19 @@ public zoneId: pulumi.Output<string>;
 
 The private hosted zone to associate.
 
+<h2 class="pdoc-module-header" id="getDelegationSet">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts#L12">function getDelegationSet</a>
+</h2>
+
+```typescript
+getDelegationSet(args: GetDelegationSetArgs, opts?: pulumi.InvokeOptions): Promise<GetDelegationSetResult>
+```
+
+
+`aws_route53_delegation_set` provides details about a specific Route 53 Delegation Set.
+
+This data source allows to find a list of name servers associated with a specific delegation set.
+
 <h2 class="pdoc-module-header" id="getZone">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L12">function getZone</a>
 </h2>
@@ -1129,6 +1145,45 @@ referenceName?: pulumi.Input<string>;
 
 This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)
+
+<h2 class="pdoc-module-header" id="GetDelegationSetArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts#L21">interface GetDelegationSetArgs</a>
+</h2>
+
+A collection of arguments for invoking getDelegationSet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts#L25">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+The Hosted Zone id of the desired delegation set.
+
+<h2 class="pdoc-module-header" id="GetDelegationSetResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts#L31">interface GetDelegationSetResult</a>
+</h2>
+
+A collection of values returned by getDelegationSet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts#L32">property callerReference</a>
+</h3>
+
+```typescript
+callerReference: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getDelegationSet.ts#L33">property nameServers</a>
+</h3>
+
+```typescript
+nameServers: string[];
+```
 
 <h2 class="pdoc-module-header" id="GetZoneArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/getZone.ts#L29">interface GetZoneArgs</a>
@@ -1501,7 +1556,7 @@ searchString?: pulumi.Input<string>;
 ```
 
 
-String searched in the first 5120 bytes of the response body for check to be considered healthy.
+String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L322">property tags</a>
@@ -1717,7 +1772,7 @@ searchString?: pulumi.Input<string>;
 ```
 
 
-String searched in the first 5120 bytes of the response body for check to be considered healthy.
+String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/route53/healthCheck.ts#L239">property tags</a>

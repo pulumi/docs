@@ -23,7 +23,7 @@ configure:
 .PHONY: ensure
 ensure:
 	bundle install --path=./vendor
-	npm install broken-link-checker typedoc
+	yarn install
 
 .PHONY: serve
 serve: 

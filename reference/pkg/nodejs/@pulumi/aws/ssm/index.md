@@ -16,6 +16,7 @@ title: Module ssm
 * <a href="#PatchBaseline">class PatchBaseline</a>
 * <a href="#PatchGroup">class PatchGroup</a>
 * <a href="#ResourceDataSync">class ResourceDataSync</a>
+* <a href="#getDocument">function getDocument</a>
 * <a href="#getParameter">function getParameter</a>
 * <a href="#ActivationArgs">interface ActivationArgs</a>
 * <a href="#ActivationState">interface ActivationState</a>
@@ -23,6 +24,8 @@ title: Module ssm
 * <a href="#AssociationState">interface AssociationState</a>
 * <a href="#DocumentArgs">interface DocumentArgs</a>
 * <a href="#DocumentState">interface DocumentState</a>
+* <a href="#GetDocumentArgs">interface GetDocumentArgs</a>
+* <a href="#GetDocumentResult">interface GetDocumentResult</a>
 * <a href="#GetParameterArgs">interface GetParameterArgs</a>
 * <a href="#GetParameterResult">interface GetParameterResult</a>
 * <a href="#MaintenanceWindowArgs">interface MaintenanceWindowArgs</a>
@@ -40,7 +43,7 @@ title: Module ssm
 * <a href="#ResourceDataSyncArgs">interface ResourceDataSyncArgs</a>
 * <a href="#ResourceDataSyncState">interface ResourceDataSyncState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/activation.ts">ssm/activation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/association.ts">ssm/association.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts">ssm/document.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts">ssm/getParameter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindow.ts">ssm/maintenanceWindow.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTarget.ts">ssm/maintenanceWindowTarget.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts">ssm/maintenanceWindowTask.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts">ssm/parameter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchBaseline.ts">ssm/patchBaseline.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchGroup.ts">ssm/patchGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/resourceDataSync.ts">ssm/resourceDataSync.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/activation.ts">ssm/activation.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/association.ts">ssm/association.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/document.ts">ssm/document.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts">ssm/getDocument.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts">ssm/getParameter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindow.ts">ssm/maintenanceWindow.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTarget.ts">ssm/maintenanceWindowTarget.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts">ssm/maintenanceWindowTask.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/parameter.ts">ssm/parameter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchBaseline.ts">ssm/patchBaseline.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/patchGroup.ts">ssm/patchGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/resourceDataSync.ts">ssm/resourceDataSync.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Activation">
@@ -925,7 +928,7 @@ The Id of the maintenance window to register the target with.
 Provides an SSM Maintenance Window Task resource
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L62">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L67">constructor</a>
 </h3>
 
 ```typescript
@@ -972,6 +975,17 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L26">property description</a>
+</h3>
+
+```typescript
+public description: pulumi.Output<string | undefined>;
+```
+
+
+The description of the maintenance window task.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
@@ -984,7 +998,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L26">property loggingInfo</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L30">property loggingInfo</a>
 </h3>
 
 ```typescript
@@ -995,7 +1009,7 @@ public loggingInfo: pulumi.Output<{ ... } | undefined>;
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L30">property maxConcurrency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L34">property maxConcurrency</a>
 </h3>
 
 ```typescript
@@ -1006,7 +1020,7 @@ public maxConcurrency: pulumi.Output<string>;
 The maximum number of targets this task can be run for in parallel.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L34">property maxErrors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L38">property maxErrors</a>
 </h3>
 
 ```typescript
@@ -1017,7 +1031,15 @@ public maxErrors: pulumi.Output<string>;
 The maximum number of errors allowed before this task stops being scheduled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L38">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L39">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L43">property priority</a>
 </h3>
 
 ```typescript
@@ -1028,7 +1050,7 @@ public priority: pulumi.Output<number | undefined>;
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L42">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L47">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -1039,7 +1061,7 @@ public serviceRoleArn: pulumi.Output<string>;
 The role that should be assumed when executing the task.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L46">property targets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L51">property targets</a>
 </h3>
 
 ```typescript
@@ -1050,7 +1072,7 @@ public targets: pulumi.Output<{ ... }[]>;
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L50">property taskArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L55">property taskArn</a>
 </h3>
 
 ```typescript
@@ -1061,7 +1083,7 @@ public taskArn: pulumi.Output<string>;
 The ARN of the task to execute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L54">property taskParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L59">property taskParameters</a>
 </h3>
 
 ```typescript
@@ -1072,7 +1094,7 @@ public taskParameters: pulumi.Output<{ ... }[] | undefined>;
 A structure containing information about parameters required by the particular `task_arn`. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L58">property taskType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L63">property taskType</a>
 </h3>
 
 ```typescript
@@ -1095,7 +1117,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L62">property windowId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L67">property windowId</a>
 </h3>
 
 ```typescript
@@ -1647,6 +1669,17 @@ urn: Output<URN>;
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
+
+<h2 class="pdoc-module-header" id="getDocument">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L10">function getDocument</a>
+</h2>
+
+```typescript
+getDocument(args: GetDocumentArgs, opts?: pulumi.InvokeOptions): Promise<GetDocumentResult>
+```
+
+
+Gets the contents of the specified Systems Manager document.
 
 <h2 class="pdoc-module-header" id="getParameter">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts#L10">function getParameter</a>
@@ -2283,6 +2316,95 @@ tags?: pulumi.Input<Tags>;
 
 A mapping of tags to assign to the object.
 
+<h2 class="pdoc-module-header" id="GetDocumentArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L21">interface GetDocumentArgs</a>
+</h2>
+
+A collection of arguments for invoking getDocument.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L25">property documentFormat</a>
+</h3>
+
+```typescript
+documentFormat?: string;
+```
+
+
+Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L29">property documentVersion</a>
+</h3>
+
+```typescript
+documentVersion?: string;
+```
+
+
+The document version for which you want information.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L33">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+The name of the Systems Manager document.
+
+<h2 class="pdoc-module-header" id="GetDocumentResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L39">interface GetDocumentResult</a>
+</h2>
+
+A collection of values returned by getDocument.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L43">property arn</a>
+</h3>
+
+```typescript
+arn: string;
+```
+
+
+The ARN of the document.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L47">property content</a>
+</h3>
+
+```typescript
+content: string;
+```
+
+
+The contents of the document.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L51">property documentType</a>
+</h3>
+
+```typescript
+documentType: string;
+```
+
+
+The type of the document.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getDocument.ts#L55">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.
+
 <h2 class="pdoc-module-header" id="GetParameterArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/getParameter.ts#L20">interface GetParameterArgs</a>
 </h2>
@@ -2591,13 +2713,24 @@ windowId?: pulumi.Input<string>;
 The Id of the maintenance window to register the target with.
 
 <h2 class="pdoc-module-header" id="MaintenanceWindowTaskArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L173">interface MaintenanceWindowTaskArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L187">interface MaintenanceWindowTaskArgs</a>
 </h2>
 
 The set of arguments for constructing a MaintenanceWindowTask resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L177">property loggingInfo</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L191">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+The description of the maintenance window task.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L195">property loggingInfo</a>
 </h3>
 
 ```typescript
@@ -2608,7 +2741,7 @@ loggingInfo?: pulumi.Input<{ ... }>;
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L181">property maxConcurrency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L199">property maxConcurrency</a>
 </h3>
 
 ```typescript
@@ -2619,7 +2752,7 @@ maxConcurrency: pulumi.Input<string>;
 The maximum number of targets this task can be run for in parallel.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L185">property maxErrors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L203">property maxErrors</a>
 </h3>
 
 ```typescript
@@ -2630,7 +2763,15 @@ maxErrors: pulumi.Input<string>;
 The maximum number of errors allowed before this task stops being scheduled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L189">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L204">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L208">property priority</a>
 </h3>
 
 ```typescript
@@ -2641,7 +2782,7 @@ priority?: pulumi.Input<number>;
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L193">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L212">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -2652,7 +2793,7 @@ serviceRoleArn: pulumi.Input<string>;
 The role that should be assumed when executing the task.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L197">property targets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L216">property targets</a>
 </h3>
 
 ```typescript
@@ -2663,7 +2804,7 @@ targets: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L201">property taskArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L220">property taskArn</a>
 </h3>
 
 ```typescript
@@ -2674,7 +2815,7 @@ taskArn: pulumi.Input<string>;
 The ARN of the task to execute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L205">property taskParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L224">property taskParameters</a>
 </h3>
 
 ```typescript
@@ -2685,7 +2826,7 @@ taskParameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A structure containing information about parameters required by the particular `task_arn`. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L209">property taskType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L228">property taskType</a>
 </h3>
 
 ```typescript
@@ -2696,7 +2837,7 @@ taskType: pulumi.Input<string>;
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L213">property windowId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L232">property windowId</a>
 </h3>
 
 ```typescript
@@ -2707,13 +2848,24 @@ windowId: pulumi.Input<string>;
 The Id of the maintenance window to register the task with.
 
 <h2 class="pdoc-module-header" id="MaintenanceWindowTaskState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L127">interface MaintenanceWindowTaskState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L136">interface MaintenanceWindowTaskState</a>
 </h2>
 
 Input properties used for looking up and filtering MaintenanceWindowTask resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L131">property loggingInfo</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L140">property description</a>
+</h3>
+
+```typescript
+description?: pulumi.Input<string>;
+```
+
+
+The description of the maintenance window task.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L144">property loggingInfo</a>
 </h3>
 
 ```typescript
@@ -2724,7 +2876,7 @@ loggingInfo?: pulumi.Input<{ ... }>;
 A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L135">property maxConcurrency</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L148">property maxConcurrency</a>
 </h3>
 
 ```typescript
@@ -2735,7 +2887,7 @@ maxConcurrency?: pulumi.Input<string>;
 The maximum number of targets this task can be run for in parallel.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L139">property maxErrors</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L152">property maxErrors</a>
 </h3>
 
 ```typescript
@@ -2746,7 +2898,15 @@ maxErrors?: pulumi.Input<string>;
 The maximum number of errors allowed before this task stops being scheduled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L143">property priority</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L153">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L157">property priority</a>
 </h3>
 
 ```typescript
@@ -2757,7 +2917,7 @@ priority?: pulumi.Input<number>;
 The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L147">property serviceRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L161">property serviceRoleArn</a>
 </h3>
 
 ```typescript
@@ -2768,7 +2928,7 @@ serviceRoleArn?: pulumi.Input<string>;
 The role that should be assumed when executing the task.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L151">property targets</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L165">property targets</a>
 </h3>
 
 ```typescript
@@ -2779,7 +2939,7 @@ targets?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L155">property taskArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L169">property taskArn</a>
 </h3>
 
 ```typescript
@@ -2790,7 +2950,7 @@ taskArn?: pulumi.Input<string>;
 The ARN of the task to execute.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L159">property taskParameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L173">property taskParameters</a>
 </h3>
 
 ```typescript
@@ -2801,7 +2961,7 @@ taskParameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A structure containing information about parameters required by the particular `task_arn`. Documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L163">property taskType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L177">property taskType</a>
 </h3>
 
 ```typescript
@@ -2812,7 +2972,7 @@ taskType?: pulumi.Input<string>;
 The type of task being registered. The only allowed value is `RUN_COMMAND`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L167">property windowId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ssm/maintenanceWindowTask.ts#L181">property windowId</a>
 </h3>
 
 ```typescript

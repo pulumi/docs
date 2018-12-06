@@ -23,7 +23,7 @@ title: Module apimanagement
 Manages an API Management Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L94">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L98">constructor</a>
 </h3>
 
 ```typescript
@@ -203,7 +203,18 @@ public portalUrl: pulumi.Output<string>;
 The URL for the Publisher Portal associated with this API Management service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L70">property publisherEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L70">property publicIpAddresses</a>
+</h3>
+
+```typescript
+public publicIpAddresses: pulumi.Output<string[]>;
+```
+
+
+Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L74">property publisherEmail</a>
 </h3>
 
 ```typescript
@@ -214,7 +225,7 @@ public publisherEmail: pulumi.Output<string>;
 The email of publisher/company.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L74">property publisherName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L78">property publisherName</a>
 </h3>
 
 ```typescript
@@ -225,7 +236,7 @@ public publisherName: pulumi.Output<string>;
 The name of publisher/company.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L78">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L82">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -236,7 +247,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L82">property scmUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L86">property scmUrl</a>
 </h3>
 
 ```typescript
@@ -247,7 +258,7 @@ public scmUrl: pulumi.Output<string>;
 The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L86">property security</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L90">property security</a>
 </h3>
 
 ```typescript
@@ -258,7 +269,7 @@ public security: pulumi.Output<{ ... }>;
 A `security` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L90">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L94">property sku</a>
 </h3>
 
 ```typescript
@@ -269,7 +280,7 @@ public sku: pulumi.Output<{ ... }>;
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L94">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L98">property tags</a>
 </h3>
 
 ```typescript
@@ -303,13 +314,13 @@ getAPI(args: GetAPIArgs, opts?: pulumi.InvokeOptions): Promise<GetAPIResult>
 Use this data source to access information about an existing API Management Service.
 
 <h2 class="pdoc-module-header" id="APIArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L247">interface APIArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L257">interface APIArgs</a>
 </h2>
 
 The set of arguments for constructing a API resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L251">property additionalLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L261">property additionalLocation</a>
 </h3>
 
 ```typescript
@@ -320,7 +331,7 @@ additionalLocation?: pulumi.Input<{ ... }>;
 One or more `additional_location` blocks as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L255">property certificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L265">property certificates</a>
 </h3>
 
 ```typescript
@@ -331,7 +342,7 @@ certificates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One or more (up to 10) `certificate` blocks as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L259">property hostnameConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L269">property hostnameConfiguration</a>
 </h3>
 
 ```typescript
@@ -342,7 +353,7 @@ hostnameConfiguration?: pulumi.Input<{ ... }>;
 A `hostname_configuration` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L263">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L273">property identity</a>
 </h3>
 
 ```typescript
@@ -353,7 +364,7 @@ identity?: pulumi.Input<{ ... }>;
 An `identity` block is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L267">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L277">property location</a>
 </h3>
 
 ```typescript
@@ -364,7 +375,7 @@ location: pulumi.Input<string>;
 The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L271">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L281">property name</a>
 </h3>
 
 ```typescript
@@ -375,7 +386,7 @@ name?: pulumi.Input<string>;
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L275">property notificationSenderEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L285">property notificationSenderEmail</a>
 </h3>
 
 ```typescript
@@ -386,7 +397,7 @@ notificationSenderEmail?: pulumi.Input<string>;
 Email address from which the notification will be sent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L279">property publisherEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L289">property publisherEmail</a>
 </h3>
 
 ```typescript
@@ -397,7 +408,7 @@ publisherEmail: pulumi.Input<string>;
 The email of publisher/company.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L283">property publisherName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L293">property publisherName</a>
 </h3>
 
 ```typescript
@@ -408,7 +419,7 @@ publisherName: pulumi.Input<string>;
 The name of publisher/company.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L287">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L297">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -419,7 +430,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L291">property security</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L301">property security</a>
 </h3>
 
 ```typescript
@@ -430,7 +441,7 @@ security?: pulumi.Input<{ ... }>;
 A `security` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L295">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L305">property sku</a>
 </h3>
 
 ```typescript
@@ -441,7 +452,7 @@ sku: pulumi.Input<{ ... }>;
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L299">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L309">property tags</a>
 </h3>
 
 ```typescript
@@ -452,13 +463,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags assigned to the resource.
 
 <h2 class="pdoc-module-header" id="APIState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L169">interface APIState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L175">interface APIState</a>
 </h2>
 
 Input properties used for looking up and filtering API resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L173">property additionalLocation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L179">property additionalLocation</a>
 </h3>
 
 ```typescript
@@ -469,7 +480,7 @@ additionalLocation?: pulumi.Input<{ ... }>;
 One or more `additional_location` blocks as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L177">property certificates</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L183">property certificates</a>
 </h3>
 
 ```typescript
@@ -480,7 +491,7 @@ certificates?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 One or more (up to 10) `certificate` blocks as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L181">property gatewayRegionalUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L187">property gatewayRegionalUrl</a>
 </h3>
 
 ```typescript
@@ -491,7 +502,7 @@ gatewayRegionalUrl?: pulumi.Input<string>;
 The URL of the Regional Gateway for the API Management Service in the specified region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L185">property gatewayUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L191">property gatewayUrl</a>
 </h3>
 
 ```typescript
@@ -502,7 +513,7 @@ gatewayUrl?: pulumi.Input<string>;
 The URL of the Gateway for the API Management Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L189">property hostnameConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L195">property hostnameConfiguration</a>
 </h3>
 
 ```typescript
@@ -513,7 +524,7 @@ hostnameConfiguration?: pulumi.Input<{ ... }>;
 A `hostname_configuration` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L193">property identity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L199">property identity</a>
 </h3>
 
 ```typescript
@@ -524,7 +535,7 @@ identity?: pulumi.Input<{ ... }>;
 An `identity` block is documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L197">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L203">property location</a>
 </h3>
 
 ```typescript
@@ -535,7 +546,7 @@ location?: pulumi.Input<string>;
 The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L201">property managementApiUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L207">property managementApiUrl</a>
 </h3>
 
 ```typescript
@@ -546,7 +557,7 @@ managementApiUrl?: pulumi.Input<string>;
 The URL for the Management API associated with this API Management service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L205">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L211">property name</a>
 </h3>
 
 ```typescript
@@ -557,7 +568,7 @@ name?: pulumi.Input<string>;
 The name of the API Management Service. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L209">property notificationSenderEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L215">property notificationSenderEmail</a>
 </h3>
 
 ```typescript
@@ -568,7 +579,7 @@ notificationSenderEmail?: pulumi.Input<string>;
 Email address from which the notification will be sent.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L213">property portalUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L219">property portalUrl</a>
 </h3>
 
 ```typescript
@@ -579,7 +590,18 @@ portalUrl?: pulumi.Input<string>;
 The URL for the Publisher Portal associated with this API Management service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L217">property publisherEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L223">property publicIpAddresses</a>
+</h3>
+
+```typescript
+publicIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L227">property publisherEmail</a>
 </h3>
 
 ```typescript
@@ -590,7 +612,7 @@ publisherEmail?: pulumi.Input<string>;
 The email of publisher/company.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L221">property publisherName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L231">property publisherName</a>
 </h3>
 
 ```typescript
@@ -601,7 +623,7 @@ publisherName?: pulumi.Input<string>;
 The name of publisher/company.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L225">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L235">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -612,7 +634,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L229">property scmUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L239">property scmUrl</a>
 </h3>
 
 ```typescript
@@ -623,7 +645,7 @@ scmUrl?: pulumi.Input<string>;
 The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L233">property security</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L243">property security</a>
 </h3>
 
 ```typescript
@@ -634,7 +656,7 @@ security?: pulumi.Input<{ ... }>;
 A `security` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L237">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L247">property sku</a>
 </h3>
 
 ```typescript
@@ -645,7 +667,7 @@ sku?: pulumi.Input<{ ... }>;
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L241">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/aPI.ts#L251">property tags</a>
 </h3>
 
 ```typescript
@@ -734,7 +756,7 @@ hostnameConfigurations: { ... }[];
 A `hostname_configuration` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L90">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L94">property id</a>
 </h3>
 
 ```typescript
@@ -789,7 +811,18 @@ portalUrl: string;
 The URL of the Publisher Portal.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L70">property publisherEmail</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L70">property publicIpAddresses</a>
+</h3>
+
+```typescript
+publicIpAddresses: string[];
+```
+
+
+Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L74">property publisherEmail</a>
 </h3>
 
 ```typescript
@@ -800,7 +833,7 @@ publisherEmail: string;
 The email of Publisher/Company of the API Management Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L74">property publisherName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L78">property publisherName</a>
 </h3>
 
 ```typescript
@@ -811,7 +844,7 @@ publisherName: string;
 The name of the Publisher/Company of the API Management Service.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L78">property scmUrl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L82">property scmUrl</a>
 </h3>
 
 ```typescript
@@ -822,7 +855,7 @@ scmUrl: string;
 The SCM (Source Code Management) endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L82">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L86">property sku</a>
 </h3>
 
 ```typescript
@@ -833,7 +866,7 @@ sku: { ... };
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L86">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/apimanagement/getAPI.ts#L90">property tags</a>
 </h3>
 
 ```typescript

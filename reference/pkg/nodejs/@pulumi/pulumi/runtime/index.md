@@ -976,7 +976,7 @@ info?: PropertyInfo;
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">interface PropertyMap</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L113">method __@iterator</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L113">method __@iterator</a>
 </h3>
 
 ```typescript
@@ -987,7 +987,7 @@ __@iterator(): IterableIterator<[, Entry, PropertyInfoAndValue]>
 Returns an iterable of entries in the map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L22">method clear</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L22">method clear</a>
 </h3>
 
 ```typescript
@@ -995,7 +995,7 @@ clear(): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L23">method delete</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L23">method delete</a>
 </h3>
 
 ```typescript
@@ -1003,7 +1003,7 @@ delete(key: Entry): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L118">method entries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L118">method entries</a>
 </h3>
 
 ```typescript
@@ -1014,7 +1014,7 @@ entries(): IterableIterator<[, Entry, PropertyInfoAndValue]>
 Returns an iterable of key, value pairs for every entry in the map.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L24">method forEach</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L24">method forEach</a>
 </h3>
 
 ```typescript
@@ -1022,7 +1022,7 @@ forEach(callbackfn: { ... }, thisArg?: any): void
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L25">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L25">method get</a>
 </h3>
 
 ```typescript
@@ -1030,7 +1030,7 @@ get(key: Entry): PropertyInfoAndValue | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L26">method has</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L26">method has</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1038,7 @@ has(key: Entry): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L123">method keys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L123">method keys</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1049,7 @@ keys(): IterableIterator<Entry>
 Returns an iterable of keys in the map
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L27">method set</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L27">method set</a>
 </h3>
 
 ```typescript
@@ -1057,7 +1057,7 @@ set(key: Entry, value: PropertyInfoAndValue): this
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L128">method values</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L128">method values</a>
 </h3>
 
 ```typescript
@@ -1068,7 +1068,7 @@ values(): IterableIterator<PropertyInfoAndValue>
 Returns an iterable of values in the map
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L35">property Map</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L35">property Map</a>
 </h3>
 
 ```typescript
@@ -1076,7 +1076,7 @@ Map: MapConstructor;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L130">property __@toStringTag</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L130">property __@toStringTag</a>
 </h3>
 
 ```typescript
@@ -1084,7 +1084,7 @@ __@toStringTag: Map;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//Users/pgavlin/dev/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L28">property size</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.collection.d.ts#L28">property size</a>
 </h3>
 
 ```typescript
