@@ -84,6 +84,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         compress: true,
 
         viewerProtocolPolicy: "redirect-to-https",
+
         allowedMethods: ["GET", "HEAD", "OPTIONS"],
         cachedMethods: ["GET", "HEAD", "OPTIONS"],
 
@@ -125,6 +126,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     viewerCertificate: {
         acmCertificateArn: config.certificateArn,
         sslSupportMethod: "sni-only",
+        minimumProtocolVersion: "TLSv1.2_2018",
     },
 
     loggingConfig: {
