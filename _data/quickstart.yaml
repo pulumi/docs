@@ -31,6 +31,14 @@ toc:
    - quickstart/kubernetes/tutorial-wordpress-chart.md
    - quickstart/kubernetes/tutorial-guestbook.md
    - quickstart/kubernetes/tutorial-p8s-rollout.md
+- title: Kubernetes the Prod Way
+  path: /quickstart/k8s-the-prod-way/index
+  section:
+   - quickstart/k8s-the-prod-way/prerequisites.md
+   - quickstart/k8s-the-prod-way/architecture.md
+   - quickstart/k8s-the-prod-way/identity.md
+   - quickstart/k8s-the-prod-way/infrastructure.md
+   - quickstart/k8s-the-prod-way/app.md
 - title: Pulumi Cloud Framework
   path: /quickstart/cloudfx/index
   section:

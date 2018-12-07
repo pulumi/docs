@@ -47,6 +47,12 @@ The easiest way to start with Kubernetes is to follow one of the tutorials:
 * [Run a Stateless App Deployment](./tutorial-stateless-app.html): Deploy a simple stateless Nginx web server backed
     by a Docker container
 
+## Kubernetes the Prod Way
+
+[Kubernetes the Prod Way](/quickstart/k8s-the-prod-way/index.html) is a tutorial aimed at users
+looking for guidance on how to set up a Kubernetes cluster for production workloads, including
+identity, managed infrastructure (_e.g._, databases, Kubernetes clusters).
+
 ## Example
 
 ```typescript
