@@ -1,6 +1,6 @@
-Using Monkey-Patching for Simple Serverless Programming
+# Using Monkey-Patching for Simple Serverless Programming
 
-One of Pulumi's goals from the very beginning was to be able to deliver a way to create cloud infrastructure with the real programming languages that you are already doing today. We believe that the existing constructs already present in these langauges, like flow control inheritance, composition, and so on, provide the right abstractions to effectively build up infrastructure in a simple and familiar way.
+One of Pulumi's goals from the very beginning was to be able to deliver a way to create cloud infrastructure with the real programming languages that you are already using today. We believe that the existing constructs already present in these langauges, like flow control inheritance, composition, and so on, provide the right abstractions to effectively build up infrastructure in a simple and familiar way.
 
 Our early TypeScript SDKs enabled this by projecting things like the AWS api surface area into classes corresponding to resources you could create.  Using the earliest version of the "@pulumi/aws" api, you could then create those resources using normal program flow logic like so:
 
