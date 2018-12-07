@@ -21,8 +21,8 @@ const bucket = new aws.s3.Bucket("testbucket", {
 // https://blog.pulumi.com/lambdas-as-lambdas-the-magic-of-simple-serverless-functions
 const lambda = new aws.lambda.CallbackFunction("postToSlack", { 
     callback: async (e) => {
-      let client = new slack.WebClient(...);
-      for (let rec of e.Records) {
+      const client = new slack.WebClient(...);
+      for (const rec of e.Records) {
         await client.chat.postMessage({ ... });
       }
     },
@@ -57,9 +57,10 @@ const bucket = new aws.s3.Bucket("testbucket", {
     forceDestroy: true,
 });
 
+// Create a lambda that will post a message to slack when the bucket changes.
 bucket.onObjectCreated("postToSlack", async (e) => {
-  let client = new slack.WebClient(...);
-  for (let rec of e.Records) {
+  const client = new slack.WebClient(...);
+  for (const rec of e.Records) {
     await client.chat.postMessage({ ... });
   }
 });
