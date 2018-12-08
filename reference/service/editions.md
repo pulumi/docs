@@ -28,7 +28,7 @@ first grant the _Pulumi Cloud_ OAuth app the `read:org` scope. This can be done 
 visiting:
 [https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f)
 
-Pulumi requires this scorp in order to verify memberships within the GitHub organization. Pulumi
+Pulumi requires this scope in order to verify memberships within the GitHub organization. Pulumi
 will not have access to any of the organizations source repositories.
 
 ## SAML 2.0 based Organizations
