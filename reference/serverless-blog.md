@@ -45,7 +45,7 @@ const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
 })
 ```
 
-Phew... that's a lot of code :-/   But it accurately conveys all the real AWS resources that need to be created in order to get this all working.  While this was feasible for people to do (and is what you often have to do when manually creating infrastructure yourself), we thought this was both too much for someone to have to do all the time.  It just didn't feel very idiomatic or appropriate for how people would expect things to work in their programming language of choice.  So, to help address this problem, we turned to [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) to dynamically add intuitive functionality to these Resource classes to make them easier to use.  Before discussing how that was done, let's first see what the result of that patching now allows you to write instead:
+Phew... that's a lot of code :-/   But it accurately conveys all the real AWS resources that need to be created in order to get this all working.  While this was feasible for people to do (and is what you often have to do when manually creating infrastructure yourself), we thought this was too much for someone to have to do all the time.  It just didn't feel very idiomatic or appropriate for how people would expect things to work in their programming language of choice.  So, to help address this problem, we turned to [Monkey Patching](https://en.wikipedia.org/wiki/Monkey_patch) to dynamically add intuitive functionality to these Resource classes to make them easier to use.  Before discussing how that was done, let's first see what the result of that patching now allows you to write instead:
 
 ```ts
 import * as aws from "@pulumi/aws";
