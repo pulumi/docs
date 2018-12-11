@@ -38,7 +38,7 @@ const permission = new aws.lambda.Permission("invokelambda", {
 const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
     bucket: bucket.id,
     lambdaFunctions: [{
-        events: ["s3:ObjectCreated:*],
+        events: ["s3:ObjectCreated:*"],
         lambdaFunctionArn: lambda.arn,
     }],
 })
