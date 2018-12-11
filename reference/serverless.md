@@ -67,9 +67,9 @@ bucket.onObjectCreated("postToSlack", async (e) => {
 });
 ```
 
-This now feels far more like how one might expect to express this concept with a normal application.  A simple conceptual idea now maps to a simple code pattern.  Instead of manually creating objects to represent the connection between the Bucket and the Lambda, we simply directly ask the Bucket to call the Lambda when the `ObjectCreated` event fires. Because this is all 'code', we can take care of all the boring cruft (like creating permissions) on your behalf.  Of course, if you need to tweak this, that's still possible.  We like to make things easy on your behalf.  But we believe you should always be in control of what's going on. The actual low level details of how that is done are interesting as well, but a folloup post will explain how we did it (and how you can do it too!).  If you want to create your own composable modules for making cloud deployments easier then definitely look for that post!
+This now feels far more like how one might expect to express this concept with a normal application.  A simple conceptual idea now maps to a simple code pattern.  Instead of manually creating objects to represent the connection between the Bucket and the Lambda, we simply directly ask the Bucket to call the Lambda when the `ObjectCreated` event fires. Because this is all 'code', we can take care of all the boring cruft (like creating permissions) on your behalf.  Of course, if you need to tweak this, that's still possible.  We believe you should always be in control of what's going on. The actual low level details of how that is done are interesting as well, but a followup post will explain how we did it (and how you can do it too!).  If you want to create your own composable modules for making cloud deployments easier then definitely look for that post!
 
-Now, while it's how the above examples worked, it's also worth noting that the use of a JavaScript function for the Lambda is not required.  You can hook up a serverless event to call an AWS Lambda you create just by using [new aws.lambda.Function](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14).  Or, you can get a reference to an existing AWS Lambda created outside of Pulumi and have that be the receiver of your serverless event.  Here's how that would look:
+Now, while it's how the above examples worked, it's also worth noting that the use of a JavaScript function for the AWS Lambda is not required.  You can hook up a serverless event to call an AWS Lambda you create just by using [new aws.lambda.Function](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14).  Or, you can get a reference to an existing AWS Lambda created outside of Pulumi and have that be the receiver of your serverless event.  Here's how that would look:
 
 ```ts
 import * as aws from "@pulumi/aws";
@@ -98,7 +98,6 @@ import * as aws from "@pulumi/aws";
 
 // ...
 
-// Create a lambda that will post a message to slack when the bucket changes.
 bucket.onObjectCreated("postToSlack", async (e) => {
   // direct access to the aws-sdk through `aws.sdk`.
   const sqs = new aws.sdk.SQS();
