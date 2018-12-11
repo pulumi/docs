@@ -8,11 +8,13 @@ In a [previous post](https://blog.pulumi.com/lambdas-as-lambdas-the-magic-of-sim
 // simplified for brevity
 import * as aws from "@pulumi/aws";
 import * as slack from "@slack/client";
+
 // Create a simple bucket.
 const bucket = new aws.s3.Bucket("testbucket", {
     serverSideEncryptionConfiguration: ...,
     forceDestroy: true,
 });
+
 // Create a lambda that will post a message to slack when the bucket changes.
 // Note that we can pass a simple JavaScript/TypeScript lambda here thanks to the magic of Lambdas as Lambdas:
 // https://blog.pulumi.com/lambdas-as-lambdas-the-magic-of-simple-serverless-functions
@@ -25,11 +27,13 @@ const lambda = new aws.lambda.CallbackFunction("postToSlack", {
     },
     ...
 });
+
 // Give the bucket permission to invoke the lambda.
 const permission = new aws.lambda.Permission("invokelambda", {
     function: lambda, action: "lambda:InvokeFunction", principal: "s3.amazonaws.com",
     sourceArn: bucket.id.apply(bucketName => `arn:aws:s3:::${bucketName}`),
 }));
+
 // now hookup a notification that will trigger the lambda when any object is created in the bucket.
 const notification = new aws.s3.BucketNotification("onAnyObjectCreated", {
     bucket: bucket.id,
@@ -61,7 +65,7 @@ bucket.onObjectCreated("postToSlack", async (e) => {
 });
 ```
 
-This now feels far more like how one might expect to express this concept with a normal application.  A simple conceptual idea now maps to a simple code pattern.  An object (the bucket) was created, and a callback was registered for a relevant event.  The actual low level details of how that is done are of less interest; though a following post will explain how we did it (and how you can do it too!).  It's also worth noting that the use of a JavaScript function for the Lambda is not required.  You can hook up a serverless event to call an AWS Lambda you create just by using [new aws.lambda.Function](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14).  Or, you can get a reference to an existing AWS Lambda created outside of Pulumi and have that be the receiver of your serverless event.  Here's how that would look:
+This now feels far more like how one might expect to express this concept with a normal application.  A simple conceptual idea now maps to a simple code pattern.  An object (the bucket) was created, and a callback was registered for a relevant event.  The actual low level details of how that is done are of less interest; though a following post will explain how we did it (and how you can do it too!).  Because this is all 'code', we can take care of all the boring cruft (like creating permissions) on your behalf.  Of course, if you need to tweak this, that's still possible.  We like to make things easy on your behalf.  But we believe you should always be in control of what's going on.  It's also worth noting that the use of a JavaScript function for the Lambda is not required.  You can hook up a serverless event to call an AWS Lambda you create just by using [new aws.lambda.Function](https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/function.ts#L14).  Or, you can get a reference to an existing AWS Lambda created outside of Pulumi and have that be the receiver of your serverless event.  Here's how that would look:
 
 
 ```ts
