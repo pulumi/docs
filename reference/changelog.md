@@ -24,6 +24,11 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.8/CHANGELOG.md#0168-released-december-14th-2018">0.16.8</a></th>
+            <td>2018/12/14</td>
+            <td>{% include sdk-links.html version='0.16.8' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.7/CHANGELOG.md#0167-released-december-5th-2018">0.16.7</a></th>
             <td>2018/12/5</td>
             <td>{% include sdk-links.html version='0.16.7' %}</td>
