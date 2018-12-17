@@ -5,18 +5,65 @@ title: Bootstrapping Identity
 Begin by cloning the [Kubernetes the Prod Way repository][ktpw]. The `identity` stack is implemented
 for each of [AWS][aws], [Azure][azure], and [GCP][gcp].
 
-This stack is the root from which we will bootstrap the rest of our infrastructure. In this
-tutorial, we will:
+This stack is the root from which we will bootstrap the rest of our infrastructure. This tutorial
+defines the following:
 
-* Provision service accounts for CI/CD
-* Provision roles for users and teams
+* A service accounts for managed infrastructure CI/CD.
+* A service accounts for Kubernetes application CI/CD
+
+In the rest of the tutorial we will look at the code example that defines the identity
+infrastructure, and then we will use Pulumi to provision it.
+
+## Modeling Identity Infrastructure with Code
+
+Infrastructure-as-code tools such as Pulumi allow you to model your infrastructure with _code_ that
+describes a _desired state_ for your infrastructure. An engine of some kind will _execute_ this code
+to bring this desired state to reality.
+
+Pulumi projects the API of cloud providers (_e.g._, AWS) into TypeScript classes. Pulumi also has a
+pluggable language layer, and currently supports Python 3 and Go as well.
+
+If we look inside [`gcp/identity/index.ts`][identity], we can see what it looks like to model the
+identity stack. Consider the service account that drives CI/CD for the `infrastructure` stack.
+Defining this essentially involves four things:
+
+1. Defining a GCP service account using `new gcp.serviceAccount.Account`.
+1. Granting GKE and Cloud SQL admin permissions to that service account by defining a
+   `gcp.projects.IAMBinding` that binds those permissions (currently this happens via a utility
+   function, `util.bindToRole`).
+1. Creating and exporting a client secret that we can use to set up CI/CD. (More on this later.)
+
+Currently, the code looks like this:
+
+```typescript
+const infraCi = new gcp.serviceAccount.Account(infraCiId, {
+    project: config.project,
+    accountId: "infra-ci",
+    displayName: "Infrastructure CI account"
+});
+
+const infraCiClusterAdminRole = util.bindToRole(`${infraCiId}ClusterAdmin`, infraCi, {
+    project: config.project,
+    role: "roles/container.clusterAdmin"
+});
+
+const infraCiCloudSqlAdminRole = util.bindToRole(`${infraCiId}CloudSqlAdmin`, infraCi, {
+    project: config.project,
+    role: "roles/cloudsql.admin"
+});
+
+const infraCiKey = util.createCiKey(`${infraCiId}Key`, infraCi);
+
+// Export client secret so that CI/CD systems can authenticate as this service account.
+export const infraCiClientSecret = util.clientSecret(infraCiKey);
+```
 
 ## Prerequisites: Bootstrapping Identity
 
-In order to provision identities:
+Once defined, we can use Pulumi to provision the identity layer. In order to do this, we must:
 
-1. Someone must create an admin account in the relevant cloud provider (AWS, Azure, or GCP)
-1. That admin account must provision the initial set of identities, so that CI/CD and teams can
+1. Create an admin account in the relevant cloud provider (AWS, Azure, or GCP)
+1. Use that admin account to provision the initial set of identities, so that CI/CD and teams can
    provision and manage infrastructure.
 
 Before you begin, you'll need to do this and then log in through the CLI:
@@ -24,6 +71,7 @@ Before you begin, you'll need to do this and then log in through the CLI:
 * For AWS, run `aws configure` (see [docs][aws-cli])
 * For Azure, run `az login` (see [docs][az-cli])
 * For GCP, run `gcloud auth` (see [docs][gcp-cli])
+
 
 ## Provisioning
 
@@ -75,3 +123,5 @@ In the next lab, we will see how to consume these stack outputs to provision app
 [aws-cli]: https://pulumi.io/quickstart/aws/setup.html
 [az-cli]: https://pulumi.io/quickstart/azure/setup.html
 [gcp-cli]: https://pulumi.io/quickstart/gcp/setup.html
+
+[identity]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/gcp/identity/index.ts

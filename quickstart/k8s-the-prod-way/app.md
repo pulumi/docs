@@ -15,6 +15,36 @@ In this tutorial, we will use this identity to:
 Inside the [Kubernetes the Prod Way repository][ktpw], the `services` directory contains the
 Wordpress application and a collection of utility scripts for interacting with it.
 
+## Modeling Kubernetes Applications with code
+
+In the previous examples, we've used Pulumi's TypeScript SDK to define GCP resources for identity
+and shared, managed infrastructure.
+
+This example does the same thing, but defines a Kubernetes application. Typically this application
+would be managed through CI/CD, using a GCP service account running with permissions defined in the
+identity stack, and the kubeconfig file defined in the infrastructure stack -- we'll hook that up
+later.
+
+The Pulumi Kubernetes SDK is much like the GCP SDK, in that it is a direct projection of the
+Kubernetes API, as defined by the official OpenAPI specification. Also like GCP, users create and
+manage Kubernetes resources using classes. But, because the Pulumi SDK is written in a Turing
+Complete language, we can also define higher-level libraries for constructs like Helm Charts.
+
+Looking inside [services/wordpress/index.ts][app], we can see code like the following, which is
+using the Helm library to define Kubernetes resources.
+
+```typescript
+const wordpress = new k8s.helm.v2.Chart(
+    "wpdev",
+    {
+        repo: "stable",
+        version: "2.1.3",
+        chart: "wordpress"
+    },
+    { providers: { kubernetes: config.k8sProvider } }
+);
+```
+
 ## Prerequisites: Logging into cloud provider with CLI
 
 In the first lab, we need to set up credentials using the CLI, so that Pulumi can authenticate
@@ -41,7 +71,8 @@ you've created. This was the argument you passed to `pulumi stack init`.
 ./scripts/login-to-ci-service-account.sh <identity-stack-name>
 ```
 
-As it did in lab 2, this script obtains the client secret for that service account from the identity stack, and uses `gcloud` to authenticate with it.
+As it did in lab 2, this script obtains the client secret for that service account from the identity
+stack, and uses `gcloud` to authenticate with it.
 
 ```sh
 pulumi stack output k8sAppDevCiClientSecret -s "$1" > k8s-app-dev-ci-client-secret.json
@@ -85,3 +116,4 @@ If you paste this IP address into a browser, it should take you to the Wordpress
 In the next lab, we will see how to use the identities defined in lab 1 to set up CI for all of
 these stacks.
 
+[app]: https://github.com/pulumi/kubernetes-the-prod-way/blob/master/services/wordpress/index.ts

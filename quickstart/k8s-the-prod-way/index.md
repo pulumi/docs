@@ -16,7 +16,8 @@ deploys a service, we expect all of these components to work seamlessly together
 and **use** these technologies together in a way that maintains high release velocity, without
 sacrificing security, governance, or stability.
 
-Examples are provided for each of: **AWS, GCP, and Azure.**
+Examples are provided for each of: **AWS, GCP, and Azure.** In the future, we will also provide
+examples for common on-prem technology, such as VMWare vSphere.
 
 ## Target Audience
 
@@ -37,7 +38,7 @@ Kubernetes the Prod Way is organized as a series of labs. These labs cover every
 bootstrapping IAM roles, to provisioning compute, storage, and networking, to deploying applications
 on top of Kubernetes.
 
-* [Prereqiusites](./prerequisites.html)
+* [Prerequisites](./prerequisites.html)
 * [A Production Architecture for _Teams_](./architecture.html)
 * [Lab 1: Bootstrapping Identity](./identity.html)
 * [Lab 2: Provisioning Environments](./infrastructure.html)
