@@ -1,5 +1,5 @@
 ---
-title: A Prod-First Architecture for Kubernetes _Teams_
+title: A Prod-First Architecture for Teams
 ---
 
 Infrastructure mis-configuration probably accounts for the most significant subset of serious
@@ -10,8 +10,28 @@ Many of these failure modes are trivially preventable. The primary objective of 
 architecture is to create sensible defaults that make many of these issues either impossible, or
 dramatically less likely.
 
-Our most effective tools in accomplishing this is to **separate resources into loosely-coupled,
-independently-managable sets, based on _risk_ and _functionality_.**
+**Infrastructure-as-code tools, such as Pulumi, are our most effective means of accomplishing
+this.**
+
+These tools allow engineering teams to share an unambiguous specification for what their
+infrastructure _should_ look like. These specifications can be _executed_, allowing teams to
+reliably provision and manage infastructure. Changes to infrastructure can be audited as part of
+code review. They allow teams to detect drift.
+
+But something is missing. Even the most powerful tools don't solve problems -- teams do. And doing
+so requires the organizational discipline to use such tools effectively.
+
+This architecture is meant to show how infrastructure-as-code tools can be used in a _team_ setting.
+It is meant to answer questions like:
+
+* [Security] Who has access to what, and how is this ensured?
+* [Governance] How do we ensure the blast radius of changes is as small as possible?
+* [Engineering] How do we How do we hook these things up to CI?
+
+## Production-Infrastructure-As-Code
+
+At the heart of this architecture is a simple idea: that we should **separate resources into
+loosely-coupled, independently-managable sets, based on _risk_ and _functionality_.**
 
 There are many benefits to this approach:
 
