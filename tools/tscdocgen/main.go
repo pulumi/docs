@@ -118,7 +118,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	// Add some labels.
 	node.Label = createLabel(node, parent)
 	node.DetailedLabel = createDetailedLabel(node)
-	node.RepoURL = getRepoURL(e.repoURL, node)
+	node.RepoURL = getRepoURL(e.repoURL, node, parent)
 
 	// Augment everything deeply.
 	for _, child := range node.Children {
@@ -223,13 +223,14 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	var members []*typeDocNode
 	for _, member := range mod.Exports {
 		for _, source := range member.Sources {
-			if source.FileName != "" {
+			if isLocalSource(source) {
 				if !filesAdded[source.FileName] {
 					files = append(files, source.FileName)
 					filesAdded[source.FileName] = true
 				}
 			}
 		}
+
 		members = append(members, member)
 	}
 	sort.Strings(files)
@@ -458,10 +459,27 @@ func simplifyModuleName(modnode *typeDocNode) string {
 	return rootModule
 }
 
-func getRepoURL(baseURL string, node *typeDocNode) string {
-	if len(node.Sources) > 0 && node.Sources[0].FileName != "" {
-		return fmt.Sprintf("%s/%s#L%d", baseURL, node.Sources[0].FileName, node.Sources[0].Line)
+// isLocalSource returns true if this source is local to this repo. This filters out references to types or
+// members that might be defined elsewhere, to avoid generating bogus links.
+func isLocalSource(source typeDocSource) bool {
+	return source.FileName != "" && source.FileName[0] != '/'
+}
+
+// getRepoURL returns a hyperlink to a given type node that is relative to a given repo.
+func getRepoURL(baseURL string, node *typeDocNode, parent *typeDocNode) string {
+	for _, source := range node.Sources {
+		if isLocalSource(source) {
+			return fmt.Sprintf("%s/%s#L%d", baseURL, source.FileName, source.Line)
+		}
 	}
+
+	// If not relative, try returning a link to the parent, if any. This can happen if TypeDoc binds to,
+	// say, something in the standard ES library due to naming overloads (like anything named `name`).
+	if parent != nil {
+		return getRepoURL(baseURL, parent, nil)
+	}
+
+	// If no parent, simply return a link to the repo itself.
 	return baseURL
 }
 
