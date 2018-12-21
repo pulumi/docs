@@ -15,126 +15,26 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/cbroglie/mustache"
+	"github.com/gobuffalo/packr"
 )
 
-var indexTemplate, _ = mustache.ParseString(`---
-title: {{Title}}
----
+var indexTemplate = parseNodeJSTemplate()
 
-{{#Breadcrumbs}}{{{.}}}{{/Breadcrumbs}}
-{{#Package}}
-Node.js:
+func parseNodeJSTemplate() *mustache.Template {
+	templates := packr.NewBox("./templates")
 
-` + "```" + `javascript
-var {{PackageVar}} = require("{{Package}}");
-` + "```" + `
+	tstr, err := templates.FindString("nodejs.tmpl")
+	if err != nil {
+		panic(fmt.Sprintf("missing templates/nodejs.tmpl template: %v", err))
+	}
 
-ES6 modules:
+	t, err := mustache.ParseString(tstr)
+	if err != nil {
+		panic(fmt.Sprintf("error parsing templates/nodejs.tmpl template: %v", err))
+	}
 
-` + "```" + `typescript
-import * as {{PackageVar}} from "{{Package}}";
-` + "```" + `
-{{/Package}}
-
-{{#HasMembers}}
-<h2 class="pdoc-module-header">Index</h2>
-
-{{#Members}}
-* <a href="#{{Name}}">{{Label}}</a>
-{{/Members}}
-
-{{#Files}}<a href="{{RepoURL}}/{{.}}">{{.}}</a> {{/Files}}
-{{/HasMembers}}
-
-{{#HasModules}}
-<h2 class="pdoc-module-header">Modules</h2>
-
-{{#Modules}}
-* <a href="{{Link}}">{{Name}}</a>
-{{/Modules}}
-{{/HasModules}}
-
-{{#Members}}
-<h2 class="pdoc-module-header" id="{{Name}}">
-<a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}}</a>
-</h2>
-{{#DetailedLabel}}
-
-` + "```typescript" + `
-{{{DetailedLabel}}}
-` + "```" + `
-
-{{/DetailedLabel}}
-{{#Comment.ShortText}}
-
-{{{Comment.ShortText}}}
-
-{{#Comment.Text}}
-{{{Comment.Text}}}
-{{/Comment.Text}}
-{{/Comment.ShortText}}
-{{#Children}}
-<h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="{{RepoURL}}">{{{Label}}}</a>
-</h3>
-{{#DetailedLabel}}
-
-` + "```typescript" + `
-{{{DetailedLabel}}}
-` + "```" + `
-
-{{/DetailedLabel}}
-{{#Signatures}}
-
-` + "```typescript" + `
-{{{Label}}}
-` + "```" + `
-
-{{#Comment.ShortText}}
-
-{{{Comment.ShortText}}}
-
-{{#Comment.Text}}
-{{{Comment.Text}}}
-{{/Comment.Text}}
-{{/Comment.ShortText}}
-{{#Parameters}}
-{{#Comment.ShortText}}
-* ` + "`{{Name}}`" + ` {{Comment.ShortText}}
-{{/Comment.ShortText}}
-{{/Parameters}}
-{{/Signatures}}
-{{^Signatures}}
-{{#Comment.ShortText}}
-
-{{{Comment.ShortText}}}
-
-{{#Comment.Text}}
-{{{Comment.Text}}}
-{{/Comment.Text}}
-{{/Comment.ShortText}}
-{{/Signatures}}
-{{/Children}}
-{{#Signatures}}
-
-` + "```typescript" + `
-{{{Label}}}
-` + "```" + `
-
-{{#Comment.ShortText}}
-
-{{{Comment.ShortText}}}
-
-{{#Comment.Text}}
-{{{Comment.Text}}}
-{{/Comment.Text}}
-{{/Comment.ShortText}}
-{{#Parameters}}
-{{#Comment.ShortText}}
-* ` + "`{{Name}}`" + ` {{Comment.ShortText}}
-{{/Comment.ShortText}}
-{{/Parameters}}
-{{/Signatures}}
-{{/Members}}
-`)
+	return t
+}

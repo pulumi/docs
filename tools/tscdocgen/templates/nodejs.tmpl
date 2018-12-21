@@ -1,0 +1,120 @@
+---
+title: {{Title}}
+---
+
+{{#Breadcrumbs}}{{{.}}}{{/Breadcrumbs}}
+{{#Package}}
+Node.js:
+
+```javascript
+var {{PackageVar}} = require("{{Package}}");
+```
+
+ES6 modules:
+
+```typescript
+import * as {{PackageVar}} from "{{Package}}";
+```
+
+{{/Package}}
+
+{{#HasMembers}}
+<h2 class="pdoc-module-header">Index</h2>
+
+{{#Members}}
+* <a href="#{{Name}}">{{Label}}</a>
+{{/Members}}
+
+{{#Files}}<a href="{{RepoURL}}/{{.}}">{{.}}</a> {{/Files}}
+{{/HasMembers}}
+
+{{#HasModules}}
+<h2 class="pdoc-module-header">Modules</h2>
+
+{{#Modules}}
+* <a href="{{Link}}">{{Name}}</a>
+{{/Modules}}
+{{/HasModules}}
+
+{{#Members}}
+<h2 class="pdoc-module-header" id="{{Name}}">
+<a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}}</a>
+</h2>
+{{#DetailedLabel}}
+
+```typescript
+{{{DetailedLabel}}}
+```
+
+{{/DetailedLabel}}
+{{#Comment.ShortText}}
+
+{{{Comment.ShortText}}}
+
+{{#Comment.Text}}
+{{{Comment.Text}}}
+{{/Comment.Text}}
+{{/Comment.ShortText}}
+{{#Children}}
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="{{RepoURL}}">{{{Label}}}</a>
+</h3>
+{{#DetailedLabel}}
+
+```typescript
+{{{DetailedLabel}}}
+```
+
+{{/DetailedLabel}}
+{{#Signatures}}
+
+```typescript
+{{{Label}}}
+```
+
+{{#Comment.ShortText}}
+
+{{{Comment.ShortText}}}
+
+{{#Comment.Text}}
+{{{Comment.Text}}}
+{{/Comment.Text}}
+{{/Comment.ShortText}}
+{{#Parameters}}
+{{#Comment.ShortText}}
+* `{{Name}}` {{Comment.ShortText}}
+{{/Comment.ShortText}}
+{{/Parameters}}
+{{/Signatures}}
+{{^Signatures}}
+{{#Comment.ShortText}}
+
+{{{Comment.ShortText}}}
+
+{{#Comment.Text}}
+{{{Comment.Text}}}
+{{/Comment.Text}}
+{{/Comment.ShortText}}
+{{/Signatures}}
+{{/Children}}
+{{#Signatures}}
+
+```typescript
+{{{Label}}}
+```
+
+{{#Comment.ShortText}}
+
+{{{Comment.ShortText}}}
+
+{{#Comment.Text}}
+{{{Comment.Text}}}
+{{/Comment.Text}}
+{{/Comment.ShortText}}
+{{#Parameters}}
+{{#Comment.ShortText}}
+* `{{Name}}` {{Comment.ShortText}}
+{{/Comment.ShortText}}
+{{/Parameters}}
+{{/Signatures}}
+{{/Members}}
