@@ -105,7 +105,7 @@ The Pulumi programming model offers a way to do this with its `StackReference` r
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 const env = pulumi.getStack().substring(pulumi.getStack().lastIndexOf("-"));
-const infra = pulumi.StackReference(`acmecorp-infra-${env}`);
+const infra = new pulumi.StackReference(`acmecorp-infra-${env}`);
 const provider = new k8s.Provider("k8s", { kubeConfig: infra.getOutput("kubeConfig") });
 const service = new k8s.v1.core.Service(..., { provider: provider });
 ```
