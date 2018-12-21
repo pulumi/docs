@@ -76,7 +76,7 @@ This package also provides the following helpers:
 A resource is created via `new Resource(name, args)` in JavaScript. All resources must have a name, which must be unique in the Pulumi program.
 
 All resource constructors also accept a third argument which can provide the following additional properties. 
-- `dependencies` - a list of explicit resource dependencies
+- `dependsOn` - a list of explicit resource dependencies
 - `protect` - whether to mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.
 - `parent` - optional parent for the resource. See [Components](#components).
 - `provider` - optional provider for the resource. See [Providers](#providers).
@@ -87,7 +87,7 @@ Outputs are a key part of how Pulumi tracks dependencies between resources.  Bec
 1. An eventually available value of the output
 2. The depdency on the source(s) of the output value
 
-The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`](pulumi.Input), which accepts either a raw value or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updatred until all their dependencies are availabe and up to date.  
+The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updatred until all their dependencies are availabe and up to date.  
 
 To transform an output into a new value, use the [`apply` method](pkg/nodejs/@pulumi/pulumi/#property-apply). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine: 
 
@@ -566,6 +566,8 @@ Some Pulumi packages have a dependency on a [Resource Provider plugin](/referenc
 
 You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, a JavaScript callback could be used as the implementation of an AWS Lambda function. 
 
+{% include langchoose.html %}
+
 ```javascript
 let bucket = new aws.s3.Bucket("mybucket");
 bucket.onObjectCreated("onObject", async (ev) => {
@@ -573,7 +575,6 @@ bucket.onObjectCreated("onObject", async (ev) => {
     console.log(JSON.stringify(ev));
 });
 ```
-
 
 ```typescript
 let bucket = new aws.s3.Bucket("mybucket");
