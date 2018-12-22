@@ -556,7 +556,7 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 	case typeDocClassNode:
 		return "class"
 	case typeDocConstructorNode:
-		return "constructor"
+		return "" // blank, the name itself is "constructor"
 	case typeDocEnumNode:
 		return "enum"
 	case typeDocFunctionNode:
