@@ -83,11 +83,15 @@ All resource constructors also accept a third argument which can provide the fol
 
 ## Resource outputs {#outputs}
 
-Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using a special [Output] type which internally represents two things:
+Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
 1. An eventually available value of the output
 2. The depdency on the source(s) of the output value
 
-The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updatred until all their dependencies are availabe and up to date.  
+In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
+
+The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updatred until all their dependencies are availabe and up to date.  
+
+### Apply {#apply}
 
 To transform an output into a new value, use the [`apply` method](pkg/nodejs/@pulumi/pulumi/#property-apply). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine: 
 
@@ -117,6 +121,8 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 > Note: The `Output` itself cannot be used directly in string concatenation or other operations, as it is not itself the value of the output.  To transform the value of the output (when it becomes available), the `apply` method should be used instead.
 
+### All {#all}
+
 To combine multiple `Output`s into a transformed value, use [pulumi.all].  This allows a new value to be constructed from several inputs, such as concatenating outputs from two different resources together, or constructing a policy document using information from several other resources.
 
 {% include langchoose.html %}
@@ -133,11 +139,17 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 
 ```python
 # `all` is not yet available in Python
+#
+# See https://github.com/pulumi/pulumi/issues/2284.
 ```
 
 ```go
-// `all` is not yet available in Go
+// `all` is not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
+
+### Convert Input to Output {#frominput}
 
 To turn an `Input` into an `Output`, use [pulumi.output].  This can be useful when you want to transform an input value that could either be a raw value or an `Output`:
 
@@ -165,7 +177,9 @@ def split(input):
 ```
 
 ```go
-// Helpers for converting Inputs to Outputs are not yet available in Go
+// Helpers for converting Inputs to Outputs are not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ## Stack output {#stack-outputs}
@@ -295,11 +309,15 @@ console.log(`Active: ${data.active}`);
 ```
 
 ```python
-# JSON parsing helpers for config are not built-in for Python currently
+# JSON parsing helpers for config are not built-in for Python currently.
+#
+# See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// JSON parsing helpers for config are not built-in for Go currently
+// JSON parsing helpers for config are not built-in for Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ## Components {#components}
@@ -335,7 +353,9 @@ class MyResource(ComponentResource):
 ```
 
 ```go
-// ComponentResources are not directly supported in Go currently
+// ComponentResources are not directly supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 The call to `super` registers the component instance with the Pulumi engine. This records the resource in the checkpoint and tracks it across program deployments. Since all resources must have a name, a component constructor should accept a name and pass it to `super`.
@@ -386,7 +406,9 @@ self.register_outputs({
 ```
 
 ```go
-// ComponentResources are not directly supported in Go currently
+// ComponentResources are not directly supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 In addition to the usual resource options, components accept a set of [providers](#providers) to use for their child resources. If a component is itself a child of another component, its set of providers is inherited from its parent by default.
@@ -402,11 +424,15 @@ let component = new MyResource("component", { providers: { aws: useast1, kuberne
 ```
 
 ```python
-# Providers are not supported in Python currently
+# Providers are not supported in Python currently.
+#
+# See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// ComponentResources are not directly supported in Go currently
+// ComponentResources are not directly supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 For more information about components, see the [Pulumi Components](component-tutorial.html) tutorial.
@@ -436,11 +462,15 @@ let instance = new aws.ec2.Instance("myInstance", {
 ```
 
 ```python
-# Providers are not supported in Python currently
+# Providers are not supported in Python currently.
+#
+# See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// Providers are not supported in Go currently
+// Providers are not supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 
@@ -507,11 +537,15 @@ let listener = new aws.elasticloadbalancingv2.Listener("listener", {
 ```
 
 ```python
-# Providers are not supported in Python currently
+# Providers are not supported in Python currently.
+#
+# See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// Providers are not supported in Go currently
+// Providers are not supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ```bash
@@ -549,11 +583,15 @@ let myResource = new MyResource("myResource", { providers: { aws: useast1, kuber
 ```
 
 ```python
-# Providers are not supported in Python currently
+# Providers are not supported in Python currently.
+#
+# See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// Providers are not supported in Go currently
+// Providers are not supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 ## Packages {#packages}
@@ -585,11 +623,15 @@ bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
 ```
 
 ```python
-# Runtime code provided via callbacks are not supported in Python currently
+# Runtime code provided via callbacks are not supported in Python currently.
+#
+# See https://github.com/pulumi/pulumi/issues/1535.
 ```
 
 ```go
-// Runtime code provided via callbacks are not supported in Go currently
+// Runtime code provided via callbacks are not supported in Go currently.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
 Libraries which use JavaScript callbacks as inputs to be provided as source text to resource construction (like the Lambda that is created by the `onObjectCreated` function in the example above) are built on top of the [pulumi.runtime.serializeFunction] API, which takes as input a JavaScript `Function` object, and returns a `Promise` that contains the serialized form of that function. 
