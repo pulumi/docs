@@ -60,7 +60,7 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/HasModules}}
 
 {{#Members}}
-<h2 class="pdoc-module-header" id="{{Name}}">
+<h2 class="pdoc-module-header" id="{{AnchorName}}">
 <a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
@@ -76,7 +76,7 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Comment.Text}}
 {{/Comment.ShortText}}
 {{#Children}}
-<h3 class="pdoc-member-header">
+<h3 class="pdoc-member-header" id="{{AnchorName}}">
 <a class="pdoc-child-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
