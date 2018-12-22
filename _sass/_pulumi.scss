@@ -682,6 +682,12 @@ h4 { font-size: 22px; font-weight: 500; }
     font-weight: normal;
 }
 
+.toggleButton { cursor: pointer; }
+.toggle > .collapsed { display: block; }
+.toggle > .expanded { display: none; }
+.toggleVisible > .collapsed { display: none; }
+.toggleVisible > .expanded { display: block; }
+
 //  Widget showing the downloads for Pulumi.
 .downloads-container {
     display: flex;

@@ -1,8 +1,33 @@
+function bindToggle(el) {
+    $(".toggleButton", el).click(function() {
+        if ($(this).closest(".toggle, .toggleVisible")[0] != el) {
+            // Only trigger the closest toggle header.
+            return;
+        }
+
+        if ($(el).is(".toggle")) {
+            $(el).addClass("toggleVisible").removeClass("toggle");
+        } else {
+            $(el).addClass("toggle").removeClass("toggleVisible");
+        }
+    });
+}
+
+function bindToggles(selector) {
+    $(selector).each(function(i, el) {
+        bindToggle(el);
+    });
+}
+
 (function ($) {
     //----------------------------------------
     // Essentials
     //----------------------------------------
     var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Set up toggle functionality.
+    bindToggles(".toggle");
+    bindToggles(".toggleVisible");
 
     // breakpoints
     var $screen_xxs = 320;
@@ -20,7 +45,6 @@
         //navigator.msMaxTouchPoints for microsoft IE backwards compatibility
     }
 
-
     // Add slideDown animation to Bootstrap dropdown when expanding.
     $('.dropdown:not(.main-nav-wrapper-wrapper)').on('show.bs.dropdown', function () {
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -31,29 +55,23 @@
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
     });
 
-    //mobile dropdown
+    // mobile dropdown
     $('.main-header .dropdown').on('show.bs.dropdown', function () {
         var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         if (windowWidth < $screen_md) {
             $('body').addClass('no-scroll');
         }
-
     }).on('hide.bs.dropdown', function () {
         $('body').removeClass('no-scroll');
-
     });
 
     var originalWindowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
     $(window).resize(function () {
-
         var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         //prevent functions from recalculating on scroll on mobile. when scrolling on iphone, the bottom appears/disappears and the browser thinks this is resizing
         //execute these functions on width resize only
         if (windowWidth != originalWindowWidth) { //if width resized
-
         }
-
     });
 }(jQuery));

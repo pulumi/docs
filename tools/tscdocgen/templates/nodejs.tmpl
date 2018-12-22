@@ -19,21 +19,34 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Package}}
 
 {{#HasMembers}}
-<h2 class="pdoc-module-header">Index</h2>
+<div class="toggleVisible" markdown="1">
+<div class="collapsed" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Index">Index ▹</h2>
+</div>
+<div class="expanded" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 
 {{#Members}}
 * <a href="#{{Name}}">{{Label}}</a>
 {{/Members}}
 
 {{#Files}}<a href="{{RepoURL}}/{{.}}">{{.}}</a> {{/Files}}
+</div>
+</div>
 {{/HasMembers}}
 
 {{#HasModules}}
-<h2 class="pdoc-module-header">Modules</h2>
+<div class="toggleVisible" markdown="1">
+<div class="collapsed" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to show Modules">Modules ▹</h2>
+</div>
+<div class="expanded" markdown="1">
+<h2 class="pdoc-module-header toggleButton" title="Click to hide Modules">Modules ▾</h2>
 
 {{#Modules}}
 * <a href="{{Link}}">{{Name}}</a>
 {{/Modules}}
+</div>
 {{/HasModules}}
 
 {{#Members}}
