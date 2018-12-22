@@ -71,15 +71,21 @@ func loadAndParseDoc(filename string) (*typeDocNode, error) {
 // gitHubBaseURLs is a *hackhackhack* hard-coded list of URLs for our packages.
 // TODO(joe): base this off the package.json file.
 var gitHubBaseURLs = map[string]string{
-	"@pulumi/pulumi":         "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
-	"@pulumi/aws":            "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
-	"@pulumi/aws-infra":      "https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs",
-	"@pulumi/aws-serverless": "https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs",
-	"@pulumi/azure":          "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
-	"@pulumi/kubernetes":     "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
-	"@pulumi/gcp":            "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
-	"@pulumi/cloud":          "https://github.com/pulumi/pulumi-cloud/blob/master/api",
-	"@pulumi/cloud-aws":      "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
+	"@pulumi/pulumi":           "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
+	"@pulumi/aws":              "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
+	"@pulumi/aws-infra":        "https://github.com/pulumi/pulumi-aws-infra/blob/master/nodejs",
+	"@pulumi/aws-serverless":   "https://github.com/pulumi/pulumi-aws-serverless/blob/master/nodejs",
+	"@pulumi/azure":            "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
+	"@pulumi/azure-serverless": "https://github.com/pulumi/pulumi-azure-serverless/blob/master/nodejs",
+	"@pulumi/cloud":            "https://github.com/pulumi/pulumi-cloud/blob/master/api",
+	"@pulumi/cloud-aws":        "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
+	"@pulumi/cloud-azure":      "https://github.com/pulumi/pulumi-cloud/blob/master/azure",
+	"@pulumi/docker":           "https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs",
+	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/master/nodejs",
+	"@pulumi/kubernetes":       "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
+	"@pulumi/gcp":              "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
+	"@pulumi/openstack":        "https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs",
+	"@pulumi/vsphere":          "https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs",
 }
 
 // emitMarkdownDocs takes as input a full Typedoc AST, transforms it into Markdown suitable for our documentation
@@ -596,14 +602,14 @@ func createLabel(node *typeDocNode, parent *typeDocNode) string {
 
 		// If there are generic type arguments, add them now.
 		if len(node.TypeParameter) > 0 {
-			label += "<"
+			label += "&lt;"
 			for i, typaram := range node.TypeParameter {
 				if i > 0 {
 					label += ","
 				}
 				label += typaram.Name
 			}
-			label += ">"
+			label += "&gt;"
 		}
 
 		// Add the parameters.
@@ -642,7 +648,7 @@ func createCodeDetails(node *typeDocNode) string {
 	switch node.Kind {
 	case typeDocTypeAliasNode:
 		// For type aliases, we won't have signatures, so we will create a detailed label.
-		return fmt.Sprintf("type %s = %s;", node.Name, createTypeLabel(node.Type))
+		return fmt.Sprintf("<span class='kd'>type</span> %s = %s;", node.Name, createTypeLabel(node.Type))
 	case typeDocPropertyNode:
 		label := createVisibilityLabel(node.Flags)
 		label += node.Name
@@ -659,16 +665,16 @@ func createCodeDetails(node *typeDocNode) string {
 	case typeDocVariableNode:
 		var label string
 		if node.Flags.IsConst {
-			label += "const "
+			label += "<span class='kd'>const</span> "
 		} else {
-			label += "let "
+			label += "<span class='kd'>let</span> "
 		}
 		label += node.Name
 		if vartyp := createTypeLabel(node.Type); vartyp != "" {
 			label += ": " + vartyp
 		}
 		if node.DefaultValue != nil {
-			label += " = " + *node.DefaultValue
+			label += " = <span class='s2'>" + *node.DefaultValue + "</span>"
 		}
 		return label + ";"
 	default:
@@ -676,29 +682,101 @@ func createCodeDetails(node *typeDocNode) string {
 	}
 }
 
+// typeHyperlink returns the hyperlink for help text associated with a given type, if available.
+func typeHyperlink(t typeDocType) string {
+	// Add a hyperlink for the type if possible.
+	if t.Type == typeDocIntrinsicType {
+		// If an intrinsic type, hyperlink to the standard JavaScript docs.
+		switch t.Name {
+		// Standard JavaScript types.
+		case "boolean":
+			return "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
+		case "number":
+			return "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+		case "object":
+			return "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+		case "string":
+			return "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+		case "undefined":
+			return "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"
+
+		// TypeScript-specific types.
+		case "any":
+			return "https://www.typescriptlang.org/docs/handbook/basic-types.html#any"
+		case "never":
+			return "https://www.typescriptlang.org/docs/handbook/basic-types.html#never"
+		case "void":
+			return "https://www.typescriptlang.org/docs/handbook/basic-types.html#void"
+		}
+	} else if t.Type == typeDocReferenceType {
+		if t.ID != 0 {
+			// If this is a reference type in this package, link to it.
+			// TODO: inter-module linking.
+			return fmt.Sprintf("#%s", t.Name)
+		} else {
+			// For certain well-known types, we'll hard-code links to them.
+			// TODO: it's unfortunate we need to do this, but TypeDoc doesn't encode inter-package references.
+			switch t.Name {
+			case "Array", "Error", "Map", "Promise", "Set":
+				return fmt.Sprintf(
+					"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/%s", t.Name)
+			case "Archive", "Asset", "AssetMap", "AssetArchive",
+				"ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
+				"FileArchive", "FileAsset", "ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs",
+				"RemoteArchive", "RemoteAsset", "Resource", "ResourceOptions", "StringAsset", "URN":
+				return fmt.Sprintf(
+					"https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#%s", t.Name)
+			}
+
+			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
+			elements := strings.Split(t.Name, ".")
+			if len(elements) > 1 && elements[0] == "pulumi" {
+				link := "https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/"
+				for i := 1; i < len(elements)-1; i++ {
+					link += fmt.Sprintf("%s/", elements[i])
+				}
+				return link + fmt.Sprintf("#%s", elements[len(elements)-1])
+			}
+		}
+	}
+
+	return ""
+}
+
 func createTypeLabel(t typeDocType) string {
-	// TODO: hyperlink the types.
 	switch t.Type {
 	case typeDocArrayType:
 		return fmt.Sprintf("%s[]", createTypeLabel(*t.ElementType))
 	case typeDocIntrinsicType, typeDocParameterType, typeDocReferenceType, typeDocUnknownType:
-		label := t.Name
+		// Add a hyperlink for the type if possible.
+		var label string
+		if hyperlink := typeHyperlink(t); hyperlink != "" {
+			label += fmt.Sprintf("<a href='%s'>%s</a>", hyperlink, t.Name)
+		} else {
+			label += t.Name
+		}
+
+		if t.Type == typeDocIntrinsicType {
+			label = fmt.Sprintf("<span class='kd'>%s</span>", label)
+		}
+
+		// If there are type args, add them now.
 		if len(t.TypeArguments) > 0 {
-			label += "<"
+			label += "&lt;"
 			for i, tyarg := range t.TypeArguments {
 				if i > 0 {
 					label += ", "
 				}
 				label += createTypeLabel(tyarg)
 			}
-			label += ">"
+			label += "&gt;"
 		}
 		return label
 	case typeDocReflectionType:
 		// TODO: expand out type literals.
 		return "{ ... }"
 	case typeDocStringLiteralType:
-		return t.Value
+		return fmt.Sprintf(`<span class='s2'>"%s"</span>`, t.Value)
 	case typeDocTupleType:
 		label := "["
 		for i, elem := range t.Elements {
@@ -721,7 +799,7 @@ func createTypeLabel(t typeDocType) string {
 		var label string
 		for i, inner := range t.Types {
 			if i > 0 {
-				label += " & "
+				label += " &amp; "
 			}
 			label += createTypeLabel(inner)
 		}
@@ -761,6 +839,8 @@ type typeDocFlags struct {
 }
 
 type typeDocType struct {
+	// Id is a reference identifier for intra-package type references.
+	ID int `json:"id,omitempty"`
 	// Type is the type of the type.
 	Type typeDocTypeType `json:"type,omitempty"`
 	// Name is the name of the type.
