@@ -27,7 +27,7 @@ import * as {{PackageVar}} from "{{Package}}";
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 
 {{#Members}}
-* <a href="#{{Name}}">{{Label}}</a>
+* <a href="#{{{Name}}}">{{{Label}}} {{{Name}}}</a>
 {{/Members}}
 
 {{#Files}}<a href="{{RepoURL}}/{{.}}">{{.}}</a> {{/Files}}
@@ -51,15 +51,15 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#Members}}
 <h2 class="pdoc-module-header" id="{{Name}}">
-<a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}}</a>
+<a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
 </h2>
-{{#DetailedLabel}}
+{{#CodeDetails}}
 
 ```typescript
-{{{DetailedLabel}}}
+{{{CodeDetails}}}
 ```
 
-{{/DetailedLabel}}
+{{/CodeDetails}}
 {{#Comment.ShortText}}
 
 {{{Comment.ShortText}}}
@@ -70,15 +70,15 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Comment.ShortText}}
 {{#Children}}
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="{{RepoURL}}">{{{Label}}}</a>
+<a class="pdoc-child-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
 </h3>
-{{#DetailedLabel}}
+{{#CodeDetails}}
 
 ```typescript
-{{{DetailedLabel}}}
+{{{CodeDetails}}}
 ```
 
-{{/DetailedLabel}}
+{{/CodeDetails}}
 {{#Signatures}}
 
 ```typescript

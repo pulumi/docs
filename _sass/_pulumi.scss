@@ -677,9 +677,13 @@ h4 { font-size: 22px; font-weight: 500; }
 
 .pdoc-module-header {
     background-color: #f5e0f5;
-    font-size: 20px;
+    font-size: 22px;
     padding: 8px;
     font-weight: normal;
+}
+
+.pdoc-member-header {
+    font-size: 20px;
 }
 
 .toggleButton { cursor: pointer; }
