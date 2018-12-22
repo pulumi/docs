@@ -4,17 +4,21 @@ title: {{Title}}
 
 {{#Breadcrumbs}}{{{.}}}{{/Breadcrumbs}}
 {{#Package}}
-Node.js:
+{% include langchoose.html %}
 
 ```javascript
 var {{PackageVar}} = require("{{Package}}");
 ```
 
-ES6 modules:
-
 ```typescript
 import * as {{PackageVar}} from "{{Package}}";
 ```
+
+<div class="language-prologue-python"></div>
+> Python API documentation is [coming soon](https://github.com/pulumi/docs/issues/630).
+
+<div class="language-prologue-go"></div>
+> Go API documentation is [coming soon](https://github.com/pulumi/docs/issues/722).
 
 {{/Package}}
 
@@ -55,7 +59,7 @@ import * as {{PackageVar}} from "{{Package}}";
 </h2>
 {{#CodeDetails}}
 
-```typescript
+```
 {{{CodeDetails}}}
 ```
 
@@ -74,14 +78,14 @@ import * as {{PackageVar}} from "{{Package}}";
 </h3>
 {{#CodeDetails}}
 
-```typescript
+```
 {{{CodeDetails}}}
 ```
 
 {{/CodeDetails}}
 {{#Signatures}}
 
-```typescript
+```
 {{{Label}}}
 ```
 
@@ -112,7 +116,7 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Children}}
 {{#Signatures}}
 
-```typescript
+```
 {{{Label}}}
 ```
 

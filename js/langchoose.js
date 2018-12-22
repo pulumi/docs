@@ -72,7 +72,7 @@ $(function() {
         for (var i = 0; i < classes.length; i++) {
             if (classes[i] === "langtab") {
                 var lang = e.innerText.toLowerCase();
-                e.addEventListener('click', function() {
+                e.addEventListener("click", function() {
                     selectLanguage(lang);
                 });
                 break;
