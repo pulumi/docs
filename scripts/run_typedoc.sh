@@ -22,19 +22,33 @@ PULUMI_DOC_BASE=./reference/pkg/nodejs/@pulumi
 #     * $1 - the simple name of the package
 #     * $2 - the package root directory (to run `make ensure` for dependency updates)
 #     * $3 - the package source directory, relative to the root, optionally empty if the same
+# If the PKGS envvar is set, only packages in that list (space delimited) are regenerated.
 generate_docs() {
-    echo -e "\033[0;95m$1\033[0m"
-    echo -e "\033[0;93mGenerating typedocs\033[0m"
-    pushd ../$2
-    make ensure && make build && make install
-    if [ ! -z "$3" ]; then
-        cd $3
+    GENPKG=""
+    if [ -z "$PKGS" ]; then
+        GENPKG=$1
+    else
+        for PKG in $PKGS; do
+            if [ "$PKG" == "$1" ]; then
+                GENPKG=$1
+            fi
+        done
     fi
-    $TOOL_TYPEDOC --json $PULUMI_DOC_TMP/$1.docs.json \
-        --mode modules --includeDeclarations --excludeExternals --excludePrivate
-    popd
-    echo -e "\033[0;93mGenerating pulumi.io API docs\033[0m"
-    $TOOL_APIDOCGEN $PULUMI_DOC_TMP/$1.docs.json $PULUMI_DOC_BASE/$1
+
+    if [ ! -z "$GENPKG" ]; then
+        echo -e "\033[0;95m$1\033[0m"
+        echo -e "\033[0;93mGenerating typedocs\033[0m"
+        pushd ../$2
+        make ensure && make build && make install
+        if [ ! -z "$3" ]; then
+            cd $3
+        fi
+        $TOOL_TYPEDOC --json $PULUMI_DOC_TMP/$1.docs.json \
+            --mode modules --includeDeclarations --excludeExternals --excludePrivate
+        popd
+        echo -e "\033[0;93mGenerating pulumi.io API docs\033[0m"
+        $TOOL_APIDOCGEN $PULUMI_DOC_TMP/$1.docs.json $PULUMI_DOC_BASE/$1
+    fi
 }
 
 generate_docs "pulumi" "pulumi/sdk/nodejs"
