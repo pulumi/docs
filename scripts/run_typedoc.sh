@@ -39,7 +39,9 @@ generate_docs() {
         echo -e "\033[0;95m$1\033[0m"
         echo -e "\033[0;93mGenerating typedocs\033[0m"
         pushd ../$2
-        make ensure && make build && make install
+        if [ -z "$NOBUILD" ]; then
+            make ensure && make build && make install
+        fi
         if [ ! -z "$3" ]; then
             cd $3
         fi
