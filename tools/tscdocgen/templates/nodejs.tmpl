@@ -64,6 +64,12 @@ import * as {{PackageVar}} from "{{Package}}";
 <a class="pdoc-member-name" href="{{RepoURL}}">{{{Label}}} <b>{{{Name}}}</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+{{#Extends}}
+<pre class="highlight">{{{Extends}}}</pre>
+{{/Extends}}
+{{#Implements}}
+<pre class="highlight">{{{Implements}}}</pre>
+{{/Implements}}
 {{#CodeDetails}}
 <pre class="highlight">{{{CodeDetails}}}</pre>
 {{/CodeDetails}}

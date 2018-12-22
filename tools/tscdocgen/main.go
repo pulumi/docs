@@ -123,12 +123,32 @@ func newEmitter(pkg, repoURL, outdir string) *emitter {
 func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 	// Add some labels.
 	node.AnchorName = node.Name
-	if parent != nil {
+	if parent != nil && (parent.Kind == typeDocClassNode || parent.Kind == typeDocInterfaceNode) {
 		node.AnchorName = fmt.Sprintf("%s-%s", parent.Name, node.AnchorName)
 	}
 	node.Label = createLabel(node, parent)
 	node.CodeDetails = createCodeDetails(node)
 	node.RepoURL = getRepoURL(e.repoURL, node, parent)
+
+	// If this extends or implements other types, render them.
+	if len(node.ExtendedTypes) > 0 {
+		node.Extends = "<span class='kd'>extends</span> "
+		for i, ext := range node.ExtendedTypes {
+			if i > 0 {
+				node.Extends += ", "
+			}
+			node.Extends += createTypeLabel(*ext, 0)
+		}
+	}
+	if len(node.ImplementedTypes) > 0 {
+		node.Implements = "<span class='kd'>implements</span> "
+		for i, impl := range node.ImplementedTypes {
+			if i > 0 {
+				node.Implements += ", "
+			}
+			node.Implements += createTypeLabel(*impl, 0)
+		}
+	}
 
 	// Augment everything deeply.
 	for _, child := range node.Children {
@@ -245,7 +265,10 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	}
 	sort.Strings(files)
 	sort.Slice(members, func(i, j int) bool {
-		return members[i].Label < members[j].Label
+		if members[i].Label != members[j].Label {
+			return members[i].Label < members[j].Label
+		}
+		return members[i].Name < members[j].Name
 	})
 
 	// Get any submodules, make relative links, and ensure they are sorted in a deterministic order.
@@ -525,7 +548,9 @@ type typeDocNode struct {
 	// ExtendedBy is a cross-reference to all the other artifacts that extend this one.
 	ExtendedBy []*typeDocType `json:"extendedBy,omitempty"`
 	// ExtendedTypes is a list of other types extended by this one.
-	ExtendedTypes []*typeDocType `json:"extendedBy,omitempty"`
+	ExtendedTypes []*typeDocType `json:"extendedTypes,omitempty"`
+	// ImplementedTypes is a list of other types implemented by this one.
+	ImplementedTypes []*typeDocType `json:"implementedTypes,omitempty"`
 	// Sources represents the source files from which this node came.
 	Sources []typeDocSource `json:"sources,omitempty"`
 
@@ -539,6 +564,10 @@ type typeDocNode struct {
 	CodeDetails string
 	// RepoURL is a link to this member in the relevant Git repo.  It's augmented information.
 	RepoURL string
+	// Extends is a rendered type this type inherits from (or empty if none).
+	Extends string
+	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
+	Implements string
 }
 
 type typeDocNodeKind string
@@ -618,7 +647,11 @@ func createSignature(node *typeDocNode, parent *typeDocNode, arrow bool) string 
 			label += createVisibilityLabel(parent.Flags)
 		}
 
-		label += node.Name
+		if strings.Index(node.Name, "new ") == 0 {
+			label += fmt.Sprintf("<span class='kd'>new</span> %s", node.Name[4:])
+		} else {
+			label += node.Name
+		}
 
 		// If there are generic type arguments, add them now.
 		if len(node.TypeParameter) > 0 {
@@ -868,7 +901,7 @@ func createVisibilityLabel(flags typeDocFlags) string {
 	if flags.IsStatic {
 		label += "static "
 	}
-	return label
+	return fmt.Sprintf("<span class='kd'>%s</span>", label)
 }
 
 type typeDocFlags struct {
