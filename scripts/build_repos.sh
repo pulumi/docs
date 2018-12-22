@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: update_repos 
+# Usage: update_repos
 
 set -o nounset -o errexit -o pipefail
 
@@ -9,7 +9,6 @@ TOOLS_REPOS=(
     "pulumi-aws-infra"
     "pulumi-aws-serverless"
     "pulumi-azure"
-    "pulumi-azure-serverless"
     "pulumi-cloud"
     "pulumi-docker"
     "pulumi-eks"
