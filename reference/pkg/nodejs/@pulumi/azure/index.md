@@ -15,6 +15,7 @@ ES6 modules:
 import * as azure from "@pulumi/azure";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Provider">class Provider</a>
@@ -53,6 +54,7 @@ import * as azure from "@pulumi/azure";
 * <a href="logicapps">logicapps</a>
 * <a href="managementgroups">managementgroups</a>
 * <a href="managementresource">managementresource</a>
+* <a href="mariadb">mariadb</a>
 * <a href="monitoring">monitoring</a>
 * <a href="msi">msi</a>
 * <a href="mssql">mssql</a>
@@ -70,6 +72,7 @@ import * as azure from "@pulumi/azure";
 * <a href="search">search</a>
 * <a href="securitycenter">securitycenter</a>
 * <a href="servicefabric">servicefabric</a>
+* <a href="signalr">signalr</a>
 * <a href="sql">sql</a>
 * <a href="storage">storage</a>
 * <a href="trafficmanager">trafficmanager</a>
@@ -172,13 +175,29 @@ requireWithDefault<T>(req: { ... }, def: T | undefined): T
 ```
 
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L39">interface ProviderArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L41">interface ProviderArgs</a>
 </h2>
 
 The set of arguments for constructing a Provider resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L40">property clientId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L42">property clientCertificatePassword</a>
+</h3>
+
+```typescript
+clientCertificatePassword?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L43">property clientCertificatePath</a>
+</h3>
+
+```typescript
+clientCertificatePath?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L44">property clientId</a>
 </h3>
 
 ```typescript
@@ -186,7 +205,7 @@ clientId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L41">property clientSecret</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L45">property clientSecret</a>
 </h3>
 
 ```typescript
@@ -194,7 +213,7 @@ clientSecret?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L42">property environment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L46">property environment</a>
 </h3>
 
 ```typescript
@@ -202,7 +221,7 @@ environment?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L43">property msiEndpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L47">property msiEndpoint</a>
 </h3>
 
 ```typescript
@@ -210,7 +229,7 @@ msiEndpoint?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L44">property skipCredentialsValidation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L48">property skipCredentialsValidation</a>
 </h3>
 
 ```typescript
@@ -218,7 +237,7 @@ skipCredentialsValidation?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L45">property skipProviderRegistration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L49">property skipProviderRegistration</a>
 </h3>
 
 ```typescript
@@ -226,7 +245,7 @@ skipProviderRegistration?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L46">property subscriptionId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L50">property subscriptionId</a>
 </h3>
 
 ```typescript
@@ -234,7 +253,7 @@ subscriptionId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L47">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L51">property tenantId</a>
 </h3>
 
 ```typescript
@@ -242,7 +261,7 @@ tenantId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L48">property useMsi</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/provider.ts#L52">property useMsi</a>
 </h3>
 
 ```typescript

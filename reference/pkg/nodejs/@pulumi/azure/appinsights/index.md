@@ -39,7 +39,7 @@ Create a Insights resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InsightsState): Insights
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InsightsState, opts?: pulumi.CustomResourceOptions): Insights
 ```
 
 

@@ -42,7 +42,7 @@ Create a Database resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatabaseState): Database
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatabaseState, opts?: pulumi.CustomResourceOptions): Database
 ```
 
 
@@ -163,7 +163,7 @@ Create a NamedQuery resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamedQueryState): NamedQuery
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamedQueryState, opts?: pulumi.CustomResourceOptions): NamedQuery
 ```
 
 

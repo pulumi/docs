@@ -44,7 +44,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PipelineState): Pipeline
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PipelineState, opts?: pulumi.CustomResourceOptions): Pipeline
 ```
 
 
@@ -174,7 +174,7 @@ Create a Webhook resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WebhookState): Webhook
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WebhookState, opts?: pulumi.CustomResourceOptions): Webhook
 ```
 
 

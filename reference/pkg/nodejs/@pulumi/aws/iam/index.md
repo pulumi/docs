@@ -452,7 +452,7 @@ Create a AccessKey resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccessKeyState): AccessKey
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccessKeyState, opts?: pulumi.CustomResourceOptions): AccessKey
 ```
 
 
@@ -617,7 +617,7 @@ Create a AccountAlias resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountAliasState): AccountAlias
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountAliasState, opts?: pulumi.CustomResourceOptions): AccountAlias
 ```
 
 
@@ -709,7 +709,7 @@ Create a AccountPasswordPolicy resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountPasswordPolicyState): AccountPasswordPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountPasswordPolicyState, opts?: pulumi.CustomResourceOptions): AccountPasswordPolicy
 ```
 
 
@@ -899,7 +899,7 @@ Create a Group resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupState): Group
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupState, opts?: pulumi.CustomResourceOptions): Group
 ```
 
 
@@ -1027,7 +1027,7 @@ Create a GroupMembership resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupMembershipState): GroupMembership
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupMembershipState, opts?: pulumi.CustomResourceOptions): GroupMembership
 ```
 
 
@@ -1137,7 +1137,7 @@ Create a GroupPolicy resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupPolicyState): GroupPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupPolicyState, opts?: pulumi.CustomResourceOptions): GroupPolicy
 ```
 
 
@@ -1262,7 +1262,7 @@ Create a GroupPolicyAttachment resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupPolicyAttachmentState): GroupPolicyAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupPolicyAttachmentState, opts?: pulumi.CustomResourceOptions): GroupPolicyAttachment
 ```
 
 
@@ -1363,7 +1363,7 @@ Create a InstanceProfile resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceProfileState): InstanceProfile
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceProfileState, opts?: pulumi.CustomResourceOptions): InstanceProfile
 ```
 
 
@@ -1529,7 +1529,7 @@ Create a OpenIdConnectProvider resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OpenIdConnectProviderState): OpenIdConnectProvider
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OpenIdConnectProviderState, opts?: pulumi.CustomResourceOptions): OpenIdConnectProvider
 ```
 
 
@@ -1650,7 +1650,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyState): Policy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyState, opts?: pulumi.CustomResourceOptions): Policy
 ```
 
 
@@ -1798,7 +1798,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyAttachmentState): PolicyAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyAttachmentState, opts?: pulumi.CustomResourceOptions): PolicyAttachment
 ```
 
 
@@ -1930,7 +1930,7 @@ Create a Role resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RoleState): Role
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RoleState, opts?: pulumi.CustomResourceOptions): Role
 ```
 
 
@@ -2140,7 +2140,7 @@ Create a RolePolicy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RolePolicyState): RolePolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RolePolicyState, opts?: pulumi.CustomResourceOptions): RolePolicy
 ```
 
 
@@ -2265,7 +2265,7 @@ Create a RolePolicyAttachment resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RolePolicyAttachmentState): RolePolicyAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RolePolicyAttachmentState, opts?: pulumi.CustomResourceOptions): RolePolicyAttachment
 ```
 
 
@@ -2364,7 +2364,7 @@ Create a SamlProvider resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SamlProviderState): SamlProvider
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SamlProviderState, opts?: pulumi.CustomResourceOptions): SamlProvider
 ```
 
 
@@ -2497,7 +2497,7 @@ Create a ServerCertificate resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServerCertificateState): ServerCertificate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServerCertificateState, opts?: pulumi.CustomResourceOptions): ServerCertificate
 ```
 
 
@@ -2659,7 +2659,7 @@ Create a ServiceLinkedRole resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceLinkedRoleState): ServiceLinkedRole
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceLinkedRoleState, opts?: pulumi.CustomResourceOptions): ServiceLinkedRole
 ```
 
 
@@ -2824,7 +2824,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SshKeyState): SshKey
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SshKeyState, opts?: pulumi.CustomResourceOptions): SshKey
 ```
 
 
@@ -2967,7 +2967,7 @@ Create a User resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserState): User
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserState, opts?: pulumi.CustomResourceOptions): User
 ```
 
 
@@ -3128,7 +3128,7 @@ Create a UserGroupMembership resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserGroupMembershipState): UserGroupMembership
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserGroupMembershipState, opts?: pulumi.CustomResourceOptions): UserGroupMembership
 ```
 
 
@@ -3229,7 +3229,7 @@ Create a UserLoginProfile resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserLoginProfileState): UserLoginProfile
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserLoginProfileState, opts?: pulumi.CustomResourceOptions): UserLoginProfile
 ```
 
 
@@ -3376,7 +3376,7 @@ Create a UserPolicy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPolicyState): UserPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPolicyState, opts?: pulumi.CustomResourceOptions): UserPolicy
 ```
 
 
@@ -3499,7 +3499,7 @@ Create a UserPolicyAttachment resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPolicyAttachmentState): UserPolicyAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPolicyAttachmentState, opts?: pulumi.CustomResourceOptions): UserPolicyAttachment
 ```
 
 
@@ -7240,13 +7240,13 @@ arn: string;
 ARN of the IAM policy.
 
 <h2 class="pdoc-module-header" id="GetPolicyDocumentArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L88">interface GetPolicyDocumentArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L89">interface GetPolicyDocumentArgs</a>
 </h2>
 
 A collection of arguments for invoking getPolicyDocument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L95">property overrideJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L96">property overrideJson</a>
 </h3>
 
 ```typescript
@@ -7260,7 +7260,7 @@ document will overwrite statements with the same `sid` in the current document.
 Statements without an `sid` cannot be overwritten.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L99">property policyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L100">property policyId</a>
 </h3>
 
 ```typescript
@@ -7271,7 +7271,7 @@ policyId?: string;
 An ID for the policy document.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L106">property sourceJson</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L107">property sourceJson</a>
 </h3>
 
 ```typescript
@@ -7285,7 +7285,7 @@ policy document will overwrite statements with the same `sid` in the source
 json.  Statements without an `sid` cannot be overwritten.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L111">property statements</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L112">property statements</a>
 </h3>
 
 ```typescript
@@ -7296,14 +7296,25 @@ statements?: { ... }[];
 A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L116">property version</a>
+</h3>
+
+```typescript
+version?: string;
+```
+
+
+IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
+
 <h2 class="pdoc-module-header" id="GetPolicyDocumentResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L117">interface GetPolicyDocumentResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L122">interface GetPolicyDocumentResult</a>
 </h2>
 
 A collection of values returned by getPolicyDocument.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L125">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L130">property id</a>
 </h3>
 
 ```typescript
@@ -7314,7 +7325,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L121">property json</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/getPolicyDocument.ts#L126">property json</a>
 </h3>
 
 ```typescript

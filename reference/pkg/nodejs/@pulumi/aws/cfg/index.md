@@ -54,7 +54,7 @@ Create a AggregateAuthorization resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AggregateAuthorizationState): AggregateAuthorization
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AggregateAuthorizationState, opts?: pulumi.CustomResourceOptions): AggregateAuthorization
 ```
 
 
@@ -164,7 +164,7 @@ Create a ConfigurationAggregator resource with the given unique name, arguments,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfigurationAggregatorState): ConfigurationAggregator
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfigurationAggregatorState, opts?: pulumi.CustomResourceOptions): ConfigurationAggregator
 ```
 
 
@@ -287,7 +287,7 @@ Create a DeliveryChannel resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DeliveryChannelState): DeliveryChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DeliveryChannelState, opts?: pulumi.CustomResourceOptions): DeliveryChannel
 ```
 
 
@@ -421,7 +421,7 @@ Create a Recorder resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RecorderState): Recorder
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RecorderState, opts?: pulumi.CustomResourceOptions): Recorder
 ```
 
 
@@ -535,7 +535,7 @@ Create a RecorderStatus resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RecorderStatusState): RecorderStatus
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RecorderStatusState, opts?: pulumi.CustomResourceOptions): RecorderStatus
 ```
 
 
@@ -636,7 +636,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleState): Rule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleState, opts?: pulumi.CustomResourceOptions): Rule
 ```
 
 

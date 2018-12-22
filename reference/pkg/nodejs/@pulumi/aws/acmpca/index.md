@@ -44,7 +44,7 @@ Create a CertificateAuthority resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertificateAuthorityState): CertificateAuthority
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertificateAuthorityState, opts?: pulumi.CustomResourceOptions): CertificateAuthority
 ```
 
 

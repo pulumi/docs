@@ -63,7 +63,7 @@ Create a IdentityPool resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityPoolState): IdentityPool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityPoolState, opts?: pulumi.CustomResourceOptions): IdentityPool
 ```
 
 
@@ -229,7 +229,7 @@ Create a IdentityPoolRoleAttachment resource with the given unique name, argumen
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityPoolRoleAttachmentState): IdentityPoolRoleAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityPoolRoleAttachmentState, opts?: pulumi.CustomResourceOptions): IdentityPoolRoleAttachment
 ```
 
 
@@ -339,7 +339,7 @@ Create a IdentityProvider resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityProviderState): IdentityProvider
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityProviderState, opts?: pulumi.CustomResourceOptions): IdentityProvider
 ```
 
 
@@ -482,7 +482,7 @@ Create a ResourceServer resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceServerState): ResourceServer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceServerState, opts?: pulumi.CustomResourceOptions): ResourceServer
 ```
 
 
@@ -611,7 +611,7 @@ Create a UserGroup resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserGroupState): UserGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserGroupState, opts?: pulumi.CustomResourceOptions): UserGroup
 ```
 
 
@@ -743,7 +743,7 @@ Create a UserPool resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPoolState): UserPool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPoolState, opts?: pulumi.CustomResourceOptions): UserPool
 ```
 
 
@@ -1062,7 +1062,7 @@ Create a UserPoolClient resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPoolClientState): UserPoolClient
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPoolClientState, opts?: pulumi.CustomResourceOptions): UserPoolClient
 ```
 
 
@@ -1304,7 +1304,7 @@ Create a UserPoolDomain resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPoolDomainState): UserPoolDomain
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserPoolDomainState, opts?: pulumi.CustomResourceOptions): UserPoolDomain
 ```
 
 

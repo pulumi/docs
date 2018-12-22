@@ -42,7 +42,7 @@ Create a ManagementGroup resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ManagementGroupState): ManagementGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ManagementGroupState, opts?: pulumi.CustomResourceOptions): ManagementGroup
 ```
 
 

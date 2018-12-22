@@ -48,7 +48,7 @@ Create a ProtectedVM resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProtectedVMState): ProtectedVM
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProtectedVMState, opts?: pulumi.CustomResourceOptions): ProtectedVM
 ```
 
 
@@ -161,7 +161,7 @@ deployments.
 Manages an Recovery Services VM Protection Policy.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L55">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L59">constructor</a>
 </h3>
 
 ```typescript
@@ -180,7 +180,7 @@ Create a ProtectionPolicyVM resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProtectionPolicyVMState): ProtectionPolicyVM
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProtectionPolicyVMState, opts?: pulumi.CustomResourceOptions): ProtectionPolicyVM
 ```
 
 
@@ -316,6 +316,17 @@ public tags: pulumi.Output<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L59">property timezone</a>
+</h3>
+
+```typescript
+public timezone: pulumi.Output<string | undefined>;
+```
+
+
+Specifies the timezone. Defaults to `UTC`
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
@@ -353,7 +364,7 @@ Create a Vault resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VaultState): Vault
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VaultState, opts?: pulumi.CustomResourceOptions): Vault
 ```
 
 
@@ -671,13 +682,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="ProtectionPolicyVMArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L145">interface ProtectionPolicyVMArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L155">interface ProtectionPolicyVMArgs</a>
 </h2>
 
 The set of arguments for constructing a ProtectionPolicyVM resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L149">property backup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L159">property backup</a>
 </h3>
 
 ```typescript
@@ -688,7 +699,7 @@ backup: pulumi.Input<{ ... }>;
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L153">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L163">property name</a>
 </h3>
 
 ```typescript
@@ -699,7 +710,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L157">property recoveryVaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L167">property recoveryVaultName</a>
 </h3>
 
 ```typescript
@@ -710,7 +721,7 @@ recoveryVaultName: pulumi.Input<string>;
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L161">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L171">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -721,7 +732,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L165">property retentionDaily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L175">property retentionDaily</a>
 </h3>
 
 ```typescript
@@ -732,7 +743,7 @@ retentionDaily?: pulumi.Input<{ ... }>;
 Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L169">property retentionMonthly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L179">property retentionMonthly</a>
 </h3>
 
 ```typescript
@@ -743,7 +754,7 @@ retentionMonthly?: pulumi.Input<{ ... }>;
 Configures the policy monthly retention as documented in the `retention_monthly` block below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L173">property retentionWeekly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L183">property retentionWeekly</a>
 </h3>
 
 ```typescript
@@ -754,7 +765,7 @@ retentionWeekly?: pulumi.Input<{ ... }>;
 Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L177">property retentionYearly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L187">property retentionYearly</a>
 </h3>
 
 ```typescript
@@ -765,21 +776,32 @@ retentionYearly?: pulumi.Input<{ ... }>;
 Configures the policy yearly retention as documented in the `retention_yearly` block below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L178">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L188">property tags</a>
 </h3>
 
 ```typescript
 tags?: pulumi.Input<{ ... }>;
 ```
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L192">property timezone</a>
+</h3>
+
+```typescript
+timezone?: pulumi.Input<string>;
+```
+
+
+Specifies the timezone. Defaults to `UTC`
+
 <h2 class="pdoc-module-header" id="ProtectionPolicyVMState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L106">interface ProtectionPolicyVMState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L112">interface ProtectionPolicyVMState</a>
 </h2>
 
 Input properties used for looking up and filtering ProtectionPolicyVM resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L110">property backup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L116">property backup</a>
 </h3>
 
 ```typescript
@@ -790,7 +812,7 @@ backup?: pulumi.Input<{ ... }>;
 Configures the Policy backup frequecent, times & days as documented in the `backup` block below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L114">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L120">property name</a>
 </h3>
 
 ```typescript
@@ -801,7 +823,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L118">property recoveryVaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L124">property recoveryVaultName</a>
 </h3>
 
 ```typescript
@@ -812,7 +834,7 @@ recoveryVaultName?: pulumi.Input<string>;
 Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L122">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L128">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -823,7 +845,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L126">property retentionDaily</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L132">property retentionDaily</a>
 </h3>
 
 ```typescript
@@ -834,7 +856,7 @@ retentionDaily?: pulumi.Input<{ ... }>;
 Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L130">property retentionMonthly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L136">property retentionMonthly</a>
 </h3>
 
 ```typescript
@@ -845,7 +867,7 @@ retentionMonthly?: pulumi.Input<{ ... }>;
 Configures the policy monthly retention as documented in the `retention_monthly` block below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L134">property retentionWeekly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L140">property retentionWeekly</a>
 </h3>
 
 ```typescript
@@ -856,7 +878,7 @@ retentionWeekly?: pulumi.Input<{ ... }>;
 Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L138">property retentionYearly</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L144">property retentionYearly</a>
 </h3>
 
 ```typescript
@@ -867,12 +889,23 @@ retentionYearly?: pulumi.Input<{ ... }>;
 Configures the policy yearly retention as documented in the `retention_yearly` block below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L139">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L145">property tags</a>
 </h3>
 
 ```typescript
 tags?: pulumi.Input<{ ... }>;
 ```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/protectionPolicyVM.ts#L149">property timezone</a>
+</h3>
+
+```typescript
+timezone?: pulumi.Input<string>;
+```
+
+
+Specifies the timezone. Defaults to `UTC`
 
 <h2 class="pdoc-module-header" id="VaultArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/recoveryservices/vault.ts#L111">interface VaultArgs</a>

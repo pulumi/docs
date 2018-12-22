@@ -90,7 +90,7 @@ Create a AvailabilitySet resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AvailabilitySetState): AvailabilitySet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AvailabilitySetState, opts?: pulumi.CustomResourceOptions): AvailabilitySet
 ```
 
 
@@ -248,7 +248,7 @@ Create a DataDiskAttachment resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DataDiskAttachmentState): DataDiskAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DataDiskAttachmentState, opts?: pulumi.CustomResourceOptions): DataDiskAttachment
 ```
 
 
@@ -396,7 +396,7 @@ Create a Extension resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExtensionState): Extension
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExtensionState, opts?: pulumi.CustomResourceOptions): Extension
 ```
 
 
@@ -605,7 +605,7 @@ Create a Image resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ImageState): Image
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ImageState, opts?: pulumi.CustomResourceOptions): Image
 ```
 
 
@@ -762,7 +762,7 @@ Create a ManagedDisk resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ManagedDiskState): ManagedDisk
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ManagedDiskState, opts?: pulumi.CustomResourceOptions): ManagedDisk
 ```
 
 
@@ -991,7 +991,7 @@ Create a ScaleSet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ScaleSetState): ScaleSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ScaleSetState, opts?: pulumi.CustomResourceOptions): ScaleSet
 ```
 
 
@@ -1364,7 +1364,7 @@ Create a SharedImage resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageState): SharedImage
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageState, opts?: pulumi.CustomResourceOptions): SharedImage
 ```
 
 
@@ -1561,7 +1561,7 @@ Create a SharedImageGallery resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageGalleryState): SharedImageGallery
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageGalleryState, opts?: pulumi.CustomResourceOptions): SharedImageGallery
 ```
 
 
@@ -1703,7 +1703,7 @@ Create a SharedImageVersion resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageVersionState): SharedImageVersion
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SharedImageVersionState, opts?: pulumi.CustomResourceOptions): SharedImageVersion
 ```
 
 
@@ -1879,7 +1879,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotState): Snapshot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotState, opts?: pulumi.CustomResourceOptions): Snapshot
 ```
 
 
@@ -2062,7 +2062,7 @@ Create a VirtualMachine resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualMachineState): VirtualMachine
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualMachineState, opts?: pulumi.CustomResourceOptions): VirtualMachine
 ```
 
 

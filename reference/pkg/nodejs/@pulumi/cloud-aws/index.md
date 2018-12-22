@@ -15,6 +15,7 @@ ES6 modules:
 import * as cloudAws from "@pulumi/cloud-aws";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#API">class API</a>
@@ -172,7 +173,7 @@ new Function(name: string, handler: aws.serverless.Handler | aws.serverless.Hand
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -180,7 +181,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -188,7 +189,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -212,7 +213,7 @@ public lambda: aws.lambda.Function;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -278,7 +279,7 @@ new HttpDeployment(name: string, staticRoutes: StaticRoute[], proxyRoutes: Proxy
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -286,7 +287,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -294,7 +295,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -350,7 +351,7 @@ public url: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -373,7 +374,7 @@ new Service(name: string, args: ServiceArguments, opts?: pulumi.ResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -389,7 +390,7 @@ public static getTaskRole(): aws.iam.Role
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -397,7 +398,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -469,7 +470,7 @@ public replicas: number;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -500,7 +501,7 @@ getHostPath(): string
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -516,7 +517,7 @@ getVolumeName(): string
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -524,7 +525,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -548,7 +549,7 @@ public name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -571,7 +572,7 @@ new Table(name: string, primaryKey?: pulumi.Input<string>, primaryKeyType?: pulu
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -579,7 +580,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -587,7 +588,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -659,7 +660,7 @@ public update: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -685,7 +686,7 @@ new Task(name: string, container: cloud.Container, opts?: pulumi.ResourceOptions
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -701,7 +702,7 @@ public static getTaskRole(): aws.iam.Role
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -709,7 +710,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -741,7 +742,7 @@ public taskDefinition: aws.ecs.TaskDefinition;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript
@@ -764,7 +765,7 @@ new Topic(name: string, opts?: pulumi.ResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
 </h3>
 
 ```typescript
@@ -772,7 +773,7 @@ getProvider(moduleMember: string): ProviderResource | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method isInstance</a>
 </h3>
 
 ```typescript
@@ -780,7 +781,7 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
 </h3>
 
 ```typescript
@@ -820,7 +821,7 @@ public topic: aws.sns.Topic;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
 </h3>
 
 ```typescript

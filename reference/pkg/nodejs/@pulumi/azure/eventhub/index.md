@@ -83,7 +83,7 @@ Create a EventGridTopic resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventGridTopicState): EventGridTopic
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventGridTopicState, opts?: pulumi.CustomResourceOptions): EventGridTopic
 ```
 
 
@@ -237,7 +237,7 @@ Create a EventHub resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubState): EventHub
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubState, opts?: pulumi.CustomResourceOptions): EventHub
 ```
 
 
@@ -337,7 +337,7 @@ public partitionCount: pulumi.Output<number>;
 ```
 
 
-Specifies the current number of shards on the Event Hub.
+Specifies the current number of shards on the Event Hub. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts#L47">property partitionIds</a>
@@ -399,7 +399,7 @@ Create a EventHubAuthorizationRule resource with the given unique name, argument
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubAuthorizationRuleState): EventHubAuthorizationRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubAuthorizationRuleState, opts?: pulumi.CustomResourceOptions): EventHubAuthorizationRule
 ```
 
 
@@ -605,7 +605,7 @@ Create a EventHubConsumerGroup resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubConsumerGroupState): EventHubConsumerGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubConsumerGroupState, opts?: pulumi.CustomResourceOptions): EventHubConsumerGroup
 ```
 
 
@@ -745,7 +745,7 @@ Create a EventHubNamespace resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubNamespaceState): EventHubNamespace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubNamespaceState, opts?: pulumi.CustomResourceOptions): EventHubNamespace
 ```
 
 
@@ -956,7 +956,7 @@ Create a EventHubNamespaceAuthorizationRule resource with the given unique name,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubNamespaceAuthorizationRuleState): EventHubNamespaceAuthorizationRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventHubNamespaceAuthorizationRuleState, opts?: pulumi.CustomResourceOptions): EventHubNamespaceAuthorizationRule
 ```
 
 
@@ -1151,7 +1151,7 @@ Create a Namespace resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceState): Namespace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceState, opts?: pulumi.CustomResourceOptions): Namespace
 ```
 
 
@@ -1342,7 +1342,7 @@ Create a NamespaceAuthorizationRule resource with the given unique name, argumen
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceAuthorizationRuleState): NamespaceAuthorizationRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceAuthorizationRuleState, opts?: pulumi.CustomResourceOptions): NamespaceAuthorizationRule
 ```
 
 
@@ -1529,7 +1529,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueState): Queue
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueState, opts?: pulumi.CustomResourceOptions): Queue
 ```
 
 
@@ -1807,7 +1807,7 @@ Create a QueueAuthorizationRule resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueAuthorizationRuleState): QueueAuthorizationRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueAuthorizationRuleState, opts?: pulumi.CustomResourceOptions): QueueAuthorizationRule
 ```
 
 
@@ -2005,7 +2005,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubscriptionState): Subscription
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubscriptionState, opts?: pulumi.CustomResourceOptions): Subscription
 ```
 
 
@@ -2249,7 +2249,7 @@ Create a SubscriptionRule resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubscriptionRuleState): SubscriptionRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubscriptionRuleState, opts?: pulumi.CustomResourceOptions): SubscriptionRule
 ```
 
 
@@ -2427,7 +2427,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicState): Topic
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicState, opts?: pulumi.CustomResourceOptions): Topic
 ```
 
 
@@ -2683,7 +2683,7 @@ Create a TopicAuthorizationRule resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicAuthorizationRuleState): TopicAuthorizationRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicAuthorizationRuleState, opts?: pulumi.CustomResourceOptions): TopicAuthorizationRule
 ```
 
 
@@ -3066,7 +3066,7 @@ partitionCount: pulumi.Input<number>;
 ```
 
 
-Specifies the current number of shards on the Event Hub.
+Specifies the current number of shards on the Event Hub. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts#L163">property resourceGroupName</a>
@@ -3948,7 +3948,7 @@ partitionCount?: pulumi.Input<number>;
 ```
 
 
-Specifies the current number of shards on the Event Hub.
+Specifies the current number of shards on the Event Hub. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/eventhub/eventHub.ts#L128">property partitionIds</a>

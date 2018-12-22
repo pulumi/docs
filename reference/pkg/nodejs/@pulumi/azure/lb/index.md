@@ -56,7 +56,7 @@ Create a BackendAddressPool resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BackendAddressPoolState): BackendAddressPool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BackendAddressPoolState, opts?: pulumi.CustomResourceOptions): BackendAddressPool
 ```
 
 
@@ -190,7 +190,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerState): LoadBalancer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerState, opts?: pulumi.CustomResourceOptions): LoadBalancer
 ```
 
 
@@ -357,7 +357,7 @@ Create a NatPool resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NatPoolState): NatPool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NatPoolState, opts?: pulumi.CustomResourceOptions): NatPool
 ```
 
 
@@ -540,7 +540,7 @@ Create a NatRule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NatRuleState): NatRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NatRuleState, opts?: pulumi.CustomResourceOptions): NatRule
 ```
 
 
@@ -731,7 +731,7 @@ Create a Probe resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProbeState): Probe
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProbeState, opts?: pulumi.CustomResourceOptions): Probe
 ```
 
 
@@ -914,7 +914,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleState): Rule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleState, opts?: pulumi.CustomResourceOptions): Rule
 ```
 
 

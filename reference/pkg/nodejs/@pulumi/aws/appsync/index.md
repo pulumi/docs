@@ -45,7 +45,7 @@ Create a ApiKey resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApiKeyState): ApiKey
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApiKeyState, opts?: pulumi.CustomResourceOptions): ApiKey
 ```
 
 
@@ -166,7 +166,7 @@ Create a DataSource resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DataSourceState): DataSource
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DataSourceState, opts?: pulumi.CustomResourceOptions): DataSource
 ```
 
 
@@ -353,7 +353,7 @@ Create a GraphQLApi resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GraphQLApiState): GraphQLApi
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GraphQLApiState, opts?: pulumi.CustomResourceOptions): GraphQLApi
 ```
 
 

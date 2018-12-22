@@ -51,7 +51,7 @@ Create a AuthorizationRule resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AuthorizationRuleState): AuthorizationRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AuthorizationRuleState, opts?: pulumi.CustomResourceOptions): AuthorizationRule
 ```
 
 
@@ -227,7 +227,7 @@ Create a Hub resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HubState): Hub
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HubState, opts?: pulumi.CustomResourceOptions): Hub
 ```
 
 
@@ -370,7 +370,7 @@ Create a Namespace resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceState): Namespace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NamespaceState, opts?: pulumi.CustomResourceOptions): Namespace
 ```
 
 

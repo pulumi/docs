@@ -65,7 +65,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterState): Cluster
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterState, opts?: pulumi.CustomResourceOptions): Cluster
 ```
 
 
@@ -454,7 +454,7 @@ Create a ClusterInstance resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterInstanceState): ClusterInstance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterInstanceState, opts?: pulumi.CustomResourceOptions): ClusterInstance
 ```
 
 
@@ -797,7 +797,7 @@ Create a ClusterParameterGroup resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterParameterGroupState): ClusterParameterGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterParameterGroupState, opts?: pulumi.CustomResourceOptions): ClusterParameterGroup
 ```
 
 
@@ -951,7 +951,7 @@ Create a ClusterSnapshot resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterSnapshotState): ClusterSnapshot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterSnapshotState, opts?: pulumi.CustomResourceOptions): ClusterSnapshot
 ```
 
 
@@ -1184,7 +1184,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSubscriptionState): EventSubscription
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSubscriptionState, opts?: pulumi.CustomResourceOptions): EventSubscription
 ```
 
 
@@ -1365,7 +1365,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterGroupState): ParameterGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterGroupState, opts?: pulumi.CustomResourceOptions): ParameterGroup
 ```
 
 
@@ -1508,7 +1508,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetGroupState): SubnetGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetGroupState, opts?: pulumi.CustomResourceOptions): SubnetGroup
 ```
 
 

@@ -84,7 +84,7 @@ Create a Application resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationState): Application
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationState, opts?: pulumi.CustomResourceOptions): Application
 ```
 
 
@@ -348,7 +348,7 @@ Create a CustomLayer resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomLayerState): CustomLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomLayerState, opts?: pulumi.CustomResourceOptions): CustomLayer
 ```
 
 
@@ -641,7 +641,7 @@ Create a GangliaLayer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GangliaLayerState): GangliaLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GangliaLayerState, opts?: pulumi.CustomResourceOptions): GangliaLayer
 ```
 
 
@@ -956,7 +956,7 @@ Create a HaproxyLayer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HaproxyLayerState): HaproxyLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HaproxyLayerState, opts?: pulumi.CustomResourceOptions): HaproxyLayer
 ```
 
 
@@ -1304,7 +1304,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState): Instance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState, opts?: pulumi.CustomResourceOptions): Instance
 ```
 
 
@@ -1830,7 +1830,7 @@ Create a JavaAppLayer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JavaAppLayerState): JavaAppLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JavaAppLayerState, opts?: pulumi.CustomResourceOptions): JavaAppLayer
 ```
 
 
@@ -2167,7 +2167,7 @@ Create a MemcachedLayer resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemcachedLayerState): MemcachedLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemcachedLayerState, opts?: pulumi.CustomResourceOptions): MemcachedLayer
 ```
 
 
@@ -2463,7 +2463,7 @@ Create a MysqlLayer resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MysqlLayerState): MysqlLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MysqlLayerState, opts?: pulumi.CustomResourceOptions): MysqlLayer
 ```
 
 
@@ -2767,7 +2767,7 @@ Create a NodejsAppLayer resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NodejsAppLayerState): NodejsAppLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NodejsAppLayerState, opts?: pulumi.CustomResourceOptions): NodejsAppLayer
 ```
 
 
@@ -3060,7 +3060,7 @@ Create a Permission resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PermissionState): Permission
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PermissionState, opts?: pulumi.CustomResourceOptions): Permission
 ```
 
 
@@ -3192,7 +3192,7 @@ Create a PhpAppLayer resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PhpAppLayerState): PhpAppLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PhpAppLayerState, opts?: pulumi.CustomResourceOptions): PhpAppLayer
 ```
 
 
@@ -3474,7 +3474,7 @@ Create a RailsAppLayer resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RailsAppLayerState): RailsAppLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RailsAppLayerState, opts?: pulumi.CustomResourceOptions): RailsAppLayer
 ```
 
 
@@ -3825,7 +3825,7 @@ Create a RdsDbInstance resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RdsDbInstanceState): RdsDbInstance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RdsDbInstanceState, opts?: pulumi.CustomResourceOptions): RdsDbInstance
 ```
 
 
@@ -3946,7 +3946,7 @@ Create a Stack resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StackState): Stack
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StackState, opts?: pulumi.CustomResourceOptions): Stack
 ```
 
 
@@ -4288,7 +4288,7 @@ Create a StaticWebLayer resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StaticWebLayerState): StaticWebLayer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StaticWebLayerState, opts?: pulumi.CustomResourceOptions): StaticWebLayer
 ```
 
 
@@ -4567,7 +4567,7 @@ Create a UserProfile resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserProfileState): UserProfile
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserProfileState, opts?: pulumi.CustomResourceOptions): UserProfile
 ```
 
 

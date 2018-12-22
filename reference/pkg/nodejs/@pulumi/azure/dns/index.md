@@ -69,7 +69,7 @@ Create a ARecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ARecordState): ARecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ARecordState, opts?: pulumi.CustomResourceOptions): ARecord
 ```
 
 
@@ -209,7 +209,7 @@ Create a AaaaRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AaaaRecordState): AaaaRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AaaaRecordState, opts?: pulumi.CustomResourceOptions): AaaaRecord
 ```
 
 
@@ -349,7 +349,7 @@ Create a CNameRecord resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CNameRecordState): CNameRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CNameRecordState, opts?: pulumi.CustomResourceOptions): CNameRecord
 ```
 
 
@@ -489,7 +489,7 @@ Create a CaaRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CaaRecordState): CaaRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CaaRecordState, opts?: pulumi.CustomResourceOptions): CaaRecord
 ```
 
 
@@ -632,7 +632,7 @@ Create a MxRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MxRecordState): MxRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MxRecordState, opts?: pulumi.CustomResourceOptions): MxRecord
 ```
 
 
@@ -775,7 +775,7 @@ Create a NsRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NsRecordState): NsRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NsRecordState, opts?: pulumi.CustomResourceOptions): NsRecord
 ```
 
 
@@ -929,7 +929,7 @@ Create a PtrRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PtrRecordState): PtrRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PtrRecordState, opts?: pulumi.CustomResourceOptions): PtrRecord
 ```
 
 
@@ -1072,7 +1072,7 @@ Create a SrvRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SrvRecordState): SrvRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SrvRecordState, opts?: pulumi.CustomResourceOptions): SrvRecord
 ```
 
 
@@ -1215,7 +1215,7 @@ Create a TxtRecord resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TxtRecordState): TxtRecord
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TxtRecordState, opts?: pulumi.CustomResourceOptions): TxtRecord
 ```
 
 
@@ -1358,7 +1358,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZoneState): Zone
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZoneState, opts?: pulumi.CustomResourceOptions): Zone
 ```
 
 

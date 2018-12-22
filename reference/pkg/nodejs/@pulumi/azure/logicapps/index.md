@@ -57,7 +57,7 @@ Create a ActionCustom resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActionCustomState): ActionCustom
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActionCustomState, opts?: pulumi.CustomResourceOptions): ActionCustom
 ```
 
 
@@ -167,7 +167,7 @@ Create a ActionHttp resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActionHttpState): ActionHttp
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActionHttpState, opts?: pulumi.CustomResourceOptions): ActionHttp
 ```
 
 
@@ -310,7 +310,7 @@ Create a TriggerCustom resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TriggerCustomState): TriggerCustom
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TriggerCustomState, opts?: pulumi.CustomResourceOptions): TriggerCustom
 ```
 
 
@@ -420,7 +420,7 @@ Create a TriggerHttpRequest resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TriggerHttpRequestState): TriggerHttpRequest
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TriggerHttpRequestState, opts?: pulumi.CustomResourceOptions): TriggerHttpRequest
 ```
 
 
@@ -552,7 +552,7 @@ Create a TriggerRecurrence resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TriggerRecurrenceState): TriggerRecurrence
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TriggerRecurrenceState, opts?: pulumi.CustomResourceOptions): TriggerRecurrence
 ```
 
 
@@ -673,7 +673,7 @@ Create a Workflow resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkflowState): Workflow
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkflowState, opts?: pulumi.CustomResourceOptions): Workflow
 ```
 
 

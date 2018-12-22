@@ -138,7 +138,7 @@ Create a ApplicationGateway resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationGatewayState): ApplicationGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationGatewayState, opts?: pulumi.CustomResourceOptions): ApplicationGateway
 ```
 
 
@@ -359,7 +359,7 @@ Create a ApplicationSecurityGroup resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationSecurityGroupState): ApplicationSecurityGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationSecurityGroupState, opts?: pulumi.CustomResourceOptions): ApplicationSecurityGroup
 ```
 
 
@@ -480,7 +480,7 @@ Create a ExpressRouteCircuit resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExpressRouteCircuitState): ExpressRouteCircuit
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExpressRouteCircuitState, opts?: pulumi.CustomResourceOptions): ExpressRouteCircuit
 ```
 
 
@@ -678,7 +678,7 @@ Create a ExpressRouteCircuitAuthorization resource with the given unique name, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExpressRouteCircuitAuthorizationState): ExpressRouteCircuitAuthorization
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExpressRouteCircuitAuthorizationState, opts?: pulumi.CustomResourceOptions): ExpressRouteCircuitAuthorization
 ```
 
 
@@ -812,7 +812,7 @@ Create a ExpressRouteCircuitPeering resource with the given unique name, argumen
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExpressRouteCircuitPeeringState): ExpressRouteCircuitPeering
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ExpressRouteCircuitPeeringState, opts?: pulumi.CustomResourceOptions): ExpressRouteCircuitPeering
 ```
 
 
@@ -1024,7 +1024,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirewallState): Firewall
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirewallState, opts?: pulumi.CustomResourceOptions): Firewall
 ```
 
 
@@ -1158,7 +1158,7 @@ Create a FirewallNetworkRuleCollection resource with the given unique name, argu
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirewallNetworkRuleCollectionState): FirewallNetworkRuleCollection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirewallNetworkRuleCollectionState, opts?: pulumi.CustomResourceOptions): FirewallNetworkRuleCollection
 ```
 
 
@@ -1301,7 +1301,7 @@ Create a LocalNetworkGateway resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LocalNetworkGatewayState): LocalNetworkGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LocalNetworkGatewayState, opts?: pulumi.CustomResourceOptions): LocalNetworkGateway
 ```
 
 
@@ -1461,7 +1461,7 @@ Create a NetworkInterface resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceState): NetworkInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceState, opts?: pulumi.CustomResourceOptions): NetworkInterface
 ```
 
 
@@ -1708,7 +1708,7 @@ Create a NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resourc
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState): NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState, opts?: pulumi.CustomResourceOptions): NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation
 ```
 
 
@@ -1818,7 +1818,7 @@ Create a NetworkInterfaceBackendAddressPoolAssociation resource with the given u
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceBackendAddressPoolAssociationState): NetworkInterfaceBackendAddressPoolAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceBackendAddressPoolAssociationState, opts?: pulumi.CustomResourceOptions): NetworkInterfaceBackendAddressPoolAssociation
 ```
 
 
@@ -1928,7 +1928,7 @@ Create a NetworkInterfaceNatRuleAssociation resource with the given unique name,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceNatRuleAssociationState): NetworkInterfaceNatRuleAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceNatRuleAssociationState, opts?: pulumi.CustomResourceOptions): NetworkInterfaceNatRuleAssociation
 ```
 
 
@@ -2042,7 +2042,7 @@ Create a NetworkSecurityGroup resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkSecurityGroupState): NetworkSecurityGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkSecurityGroupState, opts?: pulumi.CustomResourceOptions): NetworkSecurityGroup
 ```
 
 
@@ -2178,7 +2178,7 @@ Create a NetworkSecurityRule resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkSecurityRuleState): NetworkSecurityRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkSecurityRuleState, opts?: pulumi.CustomResourceOptions): NetworkSecurityRule
 ```
 
 
@@ -2453,7 +2453,7 @@ Create a NetworkWatcher resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkWatcherState): NetworkWatcher
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkWatcherState, opts?: pulumi.CustomResourceOptions): NetworkWatcher
 ```
 
 
@@ -2574,7 +2574,7 @@ Create a PacketCapture resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PacketCaptureState): PacketCapture
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PacketCaptureState, opts?: pulumi.CustomResourceOptions): PacketCapture
 ```
 
 
@@ -2750,7 +2750,7 @@ Create a PublicIp resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicIpState): PublicIp
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicIpState, opts?: pulumi.CustomResourceOptions): PublicIp
 ```
 
 
@@ -2972,7 +2972,7 @@ Create a Route resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteState): Route
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteState, opts?: pulumi.CustomResourceOptions): Route
 ```
 
 
@@ -3115,7 +3115,7 @@ Create a RouteTable resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableState): RouteTable
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableState, opts?: pulumi.CustomResourceOptions): RouteTable
 ```
 
 
@@ -3273,7 +3273,7 @@ Create a Subnet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetState): Subnet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetState, opts?: pulumi.CustomResourceOptions): Subnet
 ```
 
 
@@ -3440,7 +3440,7 @@ Create a SubnetNetworkSecurityGroupAssociation resource with the given unique na
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetNetworkSecurityGroupAssociationState): SubnetNetworkSecurityGroupAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetNetworkSecurityGroupAssociationState, opts?: pulumi.CustomResourceOptions): SubnetNetworkSecurityGroupAssociation
 ```
 
 
@@ -3541,7 +3541,7 @@ Create a SubnetRouteTableAssociation resource with the given unique name, argume
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetRouteTableAssociationState): SubnetRouteTableAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetRouteTableAssociationState, opts?: pulumi.CustomResourceOptions): SubnetRouteTableAssociation
 ```
 
 
@@ -3645,7 +3645,7 @@ Create a VirtualNetwork resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkState): VirtualNetwork
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkState, opts?: pulumi.CustomResourceOptions): VirtualNetwork
 ```
 
 
@@ -3807,7 +3807,7 @@ Create a VirtualNetworkGateway resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkGatewayState): VirtualNetworkGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkGatewayState, opts?: pulumi.CustomResourceOptions): VirtualNetworkGateway
 ```
 
 
@@ -4047,7 +4047,7 @@ Create a VirtualNetworkGatewayConnection resource with the given unique name, ar
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkGatewayConnectionState): VirtualNetworkGatewayConnection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkGatewayConnectionState, opts?: pulumi.CustomResourceOptions): VirtualNetworkGatewayConnection
 ```
 
 
@@ -4314,7 +4314,7 @@ Create a VirtualNetworkPeering resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkPeeringState): VirtualNetworkPeering
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkPeeringState, opts?: pulumi.CustomResourceOptions): VirtualNetworkPeering
 ```
 
 

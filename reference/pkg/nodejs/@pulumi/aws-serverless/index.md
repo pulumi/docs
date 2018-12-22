@@ -15,6 +15,7 @@ ES6 modules:
 import * as awsServerless from "@pulumi/aws-serverless";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#BucketEventSubscription">class BucketEventSubscription</a>

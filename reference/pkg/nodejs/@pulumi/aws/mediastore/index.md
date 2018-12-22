@@ -42,7 +42,7 @@ Create a Container resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerState): Container
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerState, opts?: pulumi.CustomResourceOptions): Container
 ```
 
 
@@ -152,7 +152,7 @@ Create a ContainerPolicy resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerPolicyState): ContainerPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerPolicyState, opts?: pulumi.CustomResourceOptions): ContainerPolicy
 ```
 
 

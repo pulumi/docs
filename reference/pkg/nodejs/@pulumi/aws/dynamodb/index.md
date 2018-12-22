@@ -55,7 +55,7 @@ Create a GlobalTable resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GlobalTableState): GlobalTable
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GlobalTableState, opts?: pulumi.CustomResourceOptions): GlobalTable
 ```
 
 
@@ -148,7 +148,7 @@ Provides a DynamoDB table resource
 ~> **Note:** It is recommended to use `lifecycle` [`ignore_changes`](https://www.terraform.io/docs/configuration/resources.html#ignore_changes) for `read_capacity` and/or `write_capacity` if there's [autoscaling policy](https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html) attached to the table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L100">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L104">constructor</a>
 </h3>
 
 ```typescript
@@ -167,7 +167,7 @@ Create a Table resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TableState): Table
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TableState, opts?: pulumi.CustomResourceOptions): Table
 ```
 
 
@@ -217,7 +217,18 @@ public attributes: pulumi.Output<{ ... }[]>;
 List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L38">property globalSecondaryIndexes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L36">property billingMode</a>
+</h3>
+
+```typescript
+public billingMode: pulumi.Output<string | undefined>;
+```
+
+
+Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L42">property globalSecondaryIndexes</a>
 </h3>
 
 ```typescript
@@ -230,7 +241,7 @@ subject to the normal limits on the number of GSIs, projected
 attributes, etc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L43">property hashKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L47">property hashKey</a>
 </h3>
 
 ```typescript
@@ -254,7 +265,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L49">property localSecondaryIndexes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L53">property localSecondaryIndexes</a>
 </h3>
 
 ```typescript
@@ -267,7 +278,7 @@ these can only be allocated *at creation* so you cannot change this
 definition after you have created the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L53">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L57">property name</a>
 </h3>
 
 ```typescript
@@ -278,7 +289,7 @@ public name: pulumi.Output<string>;
 The name of the index
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L57">property pointInTimeRecovery</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L61">property pointInTimeRecovery</a>
 </h3>
 
 ```typescript
@@ -289,7 +300,7 @@ public pointInTimeRecovery: pulumi.Output<{ ... }>;
 Point-in-time recovery options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L61">property rangeKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L65">property rangeKey</a>
 </h3>
 
 ```typescript
@@ -300,18 +311,18 @@ public rangeKey: pulumi.Output<string | undefined>;
 The name of the range key; must be defined
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L65">property readCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L69">property readCapacity</a>
 </h3>
 
 ```typescript
-public readCapacity: pulumi.Output<number>;
+public readCapacity: pulumi.Output<number | undefined>;
 ```
 
 
-The number of read units for this index
+The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L69">property serverSideEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L73">property serverSideEncryption</a>
 </h3>
 
 ```typescript
@@ -322,7 +333,7 @@ public serverSideEncryption: pulumi.Output<{ ... }>;
 Encrypt at rest options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L73">property streamArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L77">property streamArn</a>
 </h3>
 
 ```typescript
@@ -333,7 +344,7 @@ public streamArn: pulumi.Output<string>;
 The ARN of the Table Stream. Only available when `stream_enabled = true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L77">property streamEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L81">property streamEnabled</a>
 </h3>
 
 ```typescript
@@ -344,7 +355,7 @@ public streamEnabled: pulumi.Output<boolean | undefined>;
 Indicates whether Streams are to be enabled (true) or disabled (false).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L84">property streamLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L88">property streamLabel</a>
 </h3>
 
 ```typescript
@@ -358,7 +369,7 @@ table name and this field is guaranteed to be unique.
 It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L88">property streamViewType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L92">property streamViewType</a>
 </h3>
 
 ```typescript
@@ -369,7 +380,7 @@ public streamViewType: pulumi.Output<string>;
 When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L92">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L96">property tags</a>
 </h3>
 
 ```typescript
@@ -380,7 +391,7 @@ public tags: pulumi.Output<{ ... } | undefined>;
 A map of tags to populate on the created table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L96">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L100">property ttl</a>
 </h3>
 
 ```typescript
@@ -403,15 +414,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L100">property writeCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L104">property writeCapacity</a>
 </h3>
 
 ```typescript
-public writeCapacity: pulumi.Output<number>;
+public writeCapacity: pulumi.Output<number | undefined>;
 ```
 
 
-The number of write units for this index
+The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 
 <h2 class="pdoc-module-header" id="TableEventSubscription">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L62">class TableEventSubscription</a>
@@ -441,11 +452,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -521,7 +532,7 @@ Create a TableItem resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TableItemState): TableItem
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TableItemState, opts?: pulumi.CustomResourceOptions): TableItem
 ```
 
 
@@ -866,13 +877,13 @@ replicas?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 
 <h2 class="pdoc-module-header" id="TableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L252">interface TableArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L256">interface TableArgs</a>
 </h2>
 
 The set of arguments for constructing a Table resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L256">property attributes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L260">property attributes</a>
 </h3>
 
 ```typescript
@@ -883,7 +894,18 @@ attributes: pulumi.Input<pulumi.Input<{ ... }>[]>;
 List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L262">property globalSecondaryIndexes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L264">property billingMode</a>
+</h3>
+
+```typescript
+billingMode?: pulumi.Input<string>;
+```
+
+
+Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L270">property globalSecondaryIndexes</a>
 </h3>
 
 ```typescript
@@ -896,7 +918,7 @@ subject to the normal limits on the number of GSIs, projected
 attributes, etc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L267">property hashKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L275">property hashKey</a>
 </h3>
 
 ```typescript
@@ -908,7 +930,7 @@ The name of the hash key in the index; must be
 defined as an attribute in the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L273">property localSecondaryIndexes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L281">property localSecondaryIndexes</a>
 </h3>
 
 ```typescript
@@ -921,7 +943,7 @@ these can only be allocated *at creation* so you cannot change this
 definition after you have created the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L277">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L285">property name</a>
 </h3>
 
 ```typescript
@@ -932,7 +954,7 @@ name?: pulumi.Input<string>;
 The name of the index
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L281">property pointInTimeRecovery</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L289">property pointInTimeRecovery</a>
 </h3>
 
 ```typescript
@@ -943,7 +965,7 @@ pointInTimeRecovery?: pulumi.Input<{ ... }>;
 Point-in-time recovery options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L285">property rangeKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L293">property rangeKey</a>
 </h3>
 
 ```typescript
@@ -954,18 +976,18 @@ rangeKey?: pulumi.Input<string>;
 The name of the range key; must be defined
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L289">property readCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L297">property readCapacity</a>
 </h3>
 
 ```typescript
-readCapacity: pulumi.Input<number>;
+readCapacity?: pulumi.Input<number>;
 ```
 
 
-The number of read units for this index
+The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L293">property serverSideEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L301">property serverSideEncryption</a>
 </h3>
 
 ```typescript
@@ -976,7 +998,7 @@ serverSideEncryption?: pulumi.Input<{ ... }>;
 Encrypt at rest options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L297">property streamEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L305">property streamEnabled</a>
 </h3>
 
 ```typescript
@@ -987,7 +1009,7 @@ streamEnabled?: pulumi.Input<boolean>;
 Indicates whether Streams are to be enabled (true) or disabled (false).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L301">property streamViewType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L309">property streamViewType</a>
 </h3>
 
 ```typescript
@@ -998,7 +1020,7 @@ streamViewType?: pulumi.Input<string>;
 When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L305">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L313">property tags</a>
 </h3>
 
 ```typescript
@@ -1009,7 +1031,7 @@ tags?: pulumi.Input<{ ... }>;
 A map of tags to populate on the created table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L309">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L317">property ttl</a>
 </h3>
 
 ```typescript
@@ -1020,15 +1042,15 @@ ttl?: pulumi.Input<{ ... }>;
 Defines ttl, has two properties, and can only be specified once:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L313">property writeCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L321">property writeCapacity</a>
 </h3>
 
 ```typescript
-writeCapacity: pulumi.Input<number>;
+writeCapacity?: pulumi.Input<number>;
 ```
 
 
-The number of write units for this index
+The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 
 <h2 class="pdoc-module-header" id="TableEvent">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L35">interface TableEvent</a>
@@ -1260,7 +1282,18 @@ attributes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L184">property globalSecondaryIndexes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L182">property billingMode</a>
+</h3>
+
+```typescript
+billingMode?: pulumi.Input<string>;
+```
+
+
+Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L188">property globalSecondaryIndexes</a>
 </h3>
 
 ```typescript
@@ -1273,7 +1306,7 @@ subject to the normal limits on the number of GSIs, projected
 attributes, etc.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L189">property hashKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L193">property hashKey</a>
 </h3>
 
 ```typescript
@@ -1285,7 +1318,7 @@ The name of the hash key in the index; must be
 defined as an attribute in the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L195">property localSecondaryIndexes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L199">property localSecondaryIndexes</a>
 </h3>
 
 ```typescript
@@ -1298,7 +1331,7 @@ these can only be allocated *at creation* so you cannot change this
 definition after you have created the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L199">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L203">property name</a>
 </h3>
 
 ```typescript
@@ -1309,7 +1342,7 @@ name?: pulumi.Input<string>;
 The name of the index
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L203">property pointInTimeRecovery</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L207">property pointInTimeRecovery</a>
 </h3>
 
 ```typescript
@@ -1320,7 +1353,7 @@ pointInTimeRecovery?: pulumi.Input<{ ... }>;
 Point-in-time recovery options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L207">property rangeKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L211">property rangeKey</a>
 </h3>
 
 ```typescript
@@ -1331,7 +1364,7 @@ rangeKey?: pulumi.Input<string>;
 The name of the range key; must be defined
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L211">property readCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L215">property readCapacity</a>
 </h3>
 
 ```typescript
@@ -1339,10 +1372,10 @@ readCapacity?: pulumi.Input<number>;
 ```
 
 
-The number of read units for this index
+The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L215">property serverSideEncryption</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L219">property serverSideEncryption</a>
 </h3>
 
 ```typescript
@@ -1353,7 +1386,7 @@ serverSideEncryption?: pulumi.Input<{ ... }>;
 Encrypt at rest options.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L219">property streamArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L223">property streamArn</a>
 </h3>
 
 ```typescript
@@ -1364,7 +1397,7 @@ streamArn?: pulumi.Input<string>;
 The ARN of the Table Stream. Only available when `stream_enabled = true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L223">property streamEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L227">property streamEnabled</a>
 </h3>
 
 ```typescript
@@ -1375,7 +1408,7 @@ streamEnabled?: pulumi.Input<boolean>;
 Indicates whether Streams are to be enabled (true) or disabled (false).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L230">property streamLabel</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L234">property streamLabel</a>
 </h3>
 
 ```typescript
@@ -1389,7 +1422,7 @@ table name and this field is guaranteed to be unique.
 It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L234">property streamViewType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L238">property streamViewType</a>
 </h3>
 
 ```typescript
@@ -1400,7 +1433,7 @@ streamViewType?: pulumi.Input<string>;
 When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L238">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L242">property tags</a>
 </h3>
 
 ```typescript
@@ -1411,7 +1444,7 @@ tags?: pulumi.Input<{ ... }>;
 A map of tags to populate on the created table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L242">property ttl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L246">property ttl</a>
 </h3>
 
 ```typescript
@@ -1422,7 +1455,7 @@ ttl?: pulumi.Input<{ ... }>;
 Defines ttl, has two properties, and can only be specified once:
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L246">property writeCapacity</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/table.ts#L250">property writeCapacity</a>
 </h3>
 
 ```typescript
@@ -1430,7 +1463,7 @@ writeCapacity?: pulumi.Input<number>;
 ```
 
 
-The number of write units for this index
+The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 
 <h2 class="pdoc-module-header" id="TableEventHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/dynamodb/dynamodbMixins.ts#L60">type TableEventHandler</a>

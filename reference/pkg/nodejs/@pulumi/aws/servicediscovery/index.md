@@ -45,7 +45,7 @@ Create a PrivateDnsNamespace resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PrivateDnsNamespaceState): PrivateDnsNamespace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PrivateDnsNamespaceState, opts?: pulumi.CustomResourceOptions): PrivateDnsNamespace
 ```
 
 
@@ -177,7 +177,7 @@ Create a PublicDnsNamespace resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicDnsNamespaceState): PublicDnsNamespace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicDnsNamespaceState, opts?: pulumi.CustomResourceOptions): PublicDnsNamespace
 ```
 
 
@@ -298,7 +298,7 @@ Create a Service resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState): Service
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState, opts?: pulumi.CustomResourceOptions): Service
 ```
 
 

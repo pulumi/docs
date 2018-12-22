@@ -69,7 +69,7 @@ Create a AppCookieStickinessPolicy resource with the given unique name, argument
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AppCookieStickinessPolicyState): AppCookieStickinessPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AppCookieStickinessPolicyState, opts?: pulumi.CustomResourceOptions): AppCookieStickinessPolicy
 ```
 
 
@@ -200,7 +200,7 @@ Create a Attachment resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AttachmentState): Attachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AttachmentState, opts?: pulumi.CustomResourceOptions): Attachment
 ```
 
 
@@ -299,7 +299,7 @@ Create a ListenerPolicy resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ListenerPolicyState): ListenerPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ListenerPolicyState, opts?: pulumi.CustomResourceOptions): ListenerPolicy
 ```
 
 
@@ -418,7 +418,7 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerState): LoadBalancer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerState, opts?: pulumi.CustomResourceOptions): LoadBalancer
 ```
 
 
@@ -721,7 +721,7 @@ Create a LoadBalancerBackendServerPolicy resource with the given unique name, ar
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerBackendServerPolicyState): LoadBalancerBackendServerPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerBackendServerPolicyState, opts?: pulumi.CustomResourceOptions): LoadBalancerBackendServerPolicy
 ```
 
 
@@ -831,7 +831,7 @@ Create a LoadBalancerCookieStickinessPolicy resource with the given unique name,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerCookieStickinessPolicyState): LoadBalancerCookieStickinessPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerCookieStickinessPolicyState, opts?: pulumi.CustomResourceOptions): LoadBalancerCookieStickinessPolicy
 ```
 
 
@@ -956,7 +956,7 @@ Create a LoadBalancerPolicy resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerPolicyState): LoadBalancerPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LoadBalancerPolicyState, opts?: pulumi.CustomResourceOptions): LoadBalancerPolicy
 ```
 
 
@@ -1077,7 +1077,7 @@ Create a SslNegotiationPolicy resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SslNegotiationPolicyState): SslNegotiationPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SslNegotiationPolicyState, opts?: pulumi.CustomResourceOptions): SslNegotiationPolicy
 ```
 
 

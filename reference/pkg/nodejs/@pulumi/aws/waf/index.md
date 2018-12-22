@@ -72,7 +72,7 @@ Create a ByteMatchSet resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ByteMatchSetState): ByteMatchSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ByteMatchSetState, opts?: pulumi.CustomResourceOptions): ByteMatchSet
 ```
 
 
@@ -173,7 +173,7 @@ Create a GeoMatchSet resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GeoMatchSetState): GeoMatchSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GeoMatchSetState, opts?: pulumi.CustomResourceOptions): GeoMatchSet
 ```
 
 
@@ -272,7 +272,7 @@ Create a IpSet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IpSetState): IpSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IpSetState, opts?: pulumi.CustomResourceOptions): IpSet
 ```
 
 
@@ -382,7 +382,7 @@ Create a RateBasedRule resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RateBasedRuleState): RateBasedRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RateBasedRuleState, opts?: pulumi.CustomResourceOptions): RateBasedRule
 ```
 
 
@@ -514,7 +514,7 @@ Create a RegexMatchSet resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RegexMatchSetState): RegexMatchSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RegexMatchSetState, opts?: pulumi.CustomResourceOptions): RegexMatchSet
 ```
 
 
@@ -614,7 +614,7 @@ Create a RegexPatternSet resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RegexPatternSetState): RegexPatternSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RegexPatternSetState, opts?: pulumi.CustomResourceOptions): RegexPatternSet
 ```
 
 
@@ -713,7 +713,7 @@ Create a Rule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleState): Rule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleState, opts?: pulumi.CustomResourceOptions): Rule
 ```
 
 
@@ -823,7 +823,7 @@ Create a RuleGroup resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleGroupState): RuleGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RuleGroupState, opts?: pulumi.CustomResourceOptions): RuleGroup
 ```
 
 
@@ -933,7 +933,7 @@ Create a SizeConstraintSet resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SizeConstraintSetState): SizeConstraintSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SizeConstraintSetState, opts?: pulumi.CustomResourceOptions): SizeConstraintSet
 ```
 
 
@@ -1032,7 +1032,7 @@ Create a SqlInjectionMatchSet resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SqlInjectionMatchSetState): SqlInjectionMatchSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SqlInjectionMatchSetState, opts?: pulumi.CustomResourceOptions): SqlInjectionMatchSet
 ```
 
 
@@ -1131,7 +1131,7 @@ Create a WebAcl resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WebAclState): WebAcl
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WebAclState, opts?: pulumi.CustomResourceOptions): WebAcl
 ```
 
 
@@ -1252,7 +1252,7 @@ Create a XssMatchSet resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: XssMatchSetState): XssMatchSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: XssMatchSetState, opts?: pulumi.CustomResourceOptions): XssMatchSet
 ```
 
 

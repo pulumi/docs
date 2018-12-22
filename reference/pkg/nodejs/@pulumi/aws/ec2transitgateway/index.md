@@ -63,7 +63,7 @@ Create a Route resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteState): Route
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteState, opts?: pulumi.CustomResourceOptions): Route
 ```
 
 
@@ -173,7 +173,7 @@ Create a RouteTable resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableState): RouteTable
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableState, opts?: pulumi.CustomResourceOptions): RouteTable
 ```
 
 
@@ -294,7 +294,7 @@ Create a RouteTableAssociation resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableAssociationState): RouteTableAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableAssociationState, opts?: pulumi.CustomResourceOptions): RouteTableAssociation
 ```
 
 
@@ -415,7 +415,7 @@ Create a RouteTablePropagation resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTablePropagationState): RouteTablePropagation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTablePropagationState, opts?: pulumi.CustomResourceOptions): RouteTablePropagation
 ```
 
 
@@ -536,7 +536,7 @@ Create a TransitGateway resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TransitGatewayState): TransitGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TransitGatewayState, opts?: pulumi.CustomResourceOptions): TransitGateway
 ```
 
 
@@ -745,7 +745,7 @@ Create a VpcAttachment resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcAttachmentState): VpcAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcAttachmentState, opts?: pulumi.CustomResourceOptions): VpcAttachment
 ```
 
 

@@ -15,6 +15,7 @@ ES6 modules:
 import * as kubernetes from "@pulumi/kubernetes";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Provider">class Provider</a>

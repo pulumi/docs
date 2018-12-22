@@ -15,6 +15,7 @@ ES6 modules:
 import * as cloud from "@pulumi/cloud";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#cron">function cron</a>

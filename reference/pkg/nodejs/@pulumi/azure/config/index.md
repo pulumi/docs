@@ -6,6 +6,8 @@ title: Module config
 
 <h2 class="pdoc-module-header">Index</h2>
 
+* <a href="#clientCertificatePassword">let clientCertificatePassword</a>
+* <a href="#clientCertificatePath">let clientCertificatePath</a>
 * <a href="#clientId">let clientId</a>
 * <a href="#clientSecret">let clientSecret</a>
 * <a href="#environment">let environment</a>
@@ -19,8 +21,24 @@ title: Module config
 <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 
 
+<h2 class="pdoc-module-header" id="clientCertificatePassword">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L9">let clientCertificatePassword</a>
+</h2>
+
+```typescript
+let clientCertificatePassword: string | undefined =  __config.get("clientCertificatePassword");
+```
+
+<h2 class="pdoc-module-header" id="clientCertificatePath">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L10">let clientCertificatePath</a>
+</h2>
+
+```typescript
+let clientCertificatePath: string | undefined =  __config.get("clientCertificatePath");
+```
+
 <h2 class="pdoc-module-header" id="clientId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L9">let clientId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L11">let clientId</a>
 </h2>
 
 ```typescript
@@ -28,7 +46,7 @@ let clientId: string | undefined =  __config.get("clientId") || (utilities.getEn
 ```
 
 <h2 class="pdoc-module-header" id="clientSecret">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L10">let clientSecret</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L12">let clientSecret</a>
 </h2>
 
 ```typescript
@@ -36,7 +54,7 @@ let clientSecret: string | undefined =  __config.get("clientSecret") || (utiliti
 ```
 
 <h2 class="pdoc-module-header" id="environment">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L11">let environment</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L13">let environment</a>
 </h2>
 
 ```typescript
@@ -44,7 +62,7 @@ let environment: string =  utilities.requireWithDefault(() => __config.require("
 ```
 
 <h2 class="pdoc-module-header" id="msiEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L12">let msiEndpoint</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L14">let msiEndpoint</a>
 </h2>
 
 ```typescript
@@ -52,7 +70,7 @@ let msiEndpoint: string | undefined =  __config.get("msiEndpoint") || (utilities
 ```
 
 <h2 class="pdoc-module-header" id="skipCredentialsValidation">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L13">let skipCredentialsValidation</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L15">let skipCredentialsValidation</a>
 </h2>
 
 ```typescript
@@ -60,7 +78,7 @@ let skipCredentialsValidation: boolean | undefined =  __config.getObject<boolean
 ```
 
 <h2 class="pdoc-module-header" id="skipProviderRegistration">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L14">let skipProviderRegistration</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L16">let skipProviderRegistration</a>
 </h2>
 
 ```typescript
@@ -68,7 +86,7 @@ let skipProviderRegistration: boolean | undefined =  __config.getObject<boolean>
 ```
 
 <h2 class="pdoc-module-header" id="subscriptionId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L15">let subscriptionId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L17">let subscriptionId</a>
 </h2>
 
 ```typescript
@@ -76,7 +94,7 @@ let subscriptionId: string | undefined =  __config.get("subscriptionId") || (uti
 ```
 
 <h2 class="pdoc-module-header" id="tenantId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L16">let tenantId</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L18">let tenantId</a>
 </h2>
 
 ```typescript
@@ -84,7 +102,7 @@ let tenantId: string | undefined =  __config.get("tenantId") || (utilities.getEn
 ```
 
 <h2 class="pdoc-module-header" id="useMsi">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L17">let useMsi</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/config/vars.ts#L19">let useMsi</a>
 </h2>
 
 ```typescript

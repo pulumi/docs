@@ -56,7 +56,7 @@ Create a AnalyticsApplication resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsApplicationState): AnalyticsApplication
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsApplicationState, opts?: pulumi.CustomResourceOptions): AnalyticsApplication
 ```
 
 
@@ -269,7 +269,7 @@ Create a FirehoseDeliveryStream resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirehoseDeliveryStreamState): FirehoseDeliveryStream
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirehoseDeliveryStreamState, opts?: pulumi.CustomResourceOptions): FirehoseDeliveryStream
 ```
 
 
@@ -476,7 +476,7 @@ Create a Stream resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StreamState): Stream
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StreamState, opts?: pulumi.CustomResourceOptions): Stream
 ```
 
 
@@ -646,11 +646,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">

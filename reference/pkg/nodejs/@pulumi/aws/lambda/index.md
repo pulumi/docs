@@ -60,7 +60,7 @@ For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L49">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L53">constructor</a>
 </h3>
 
 ```typescript
@@ -79,7 +79,7 @@ Create a Alias resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AliasState): Alias
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AliasState, opts?: pulumi.CustomResourceOptions): Alias
 ```
 
 
@@ -163,7 +163,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L45">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L45">property invokeArn</a>
+</h3>
+
+```typescript
+public invokeArn: pulumi.Output<string>;
+```
+
+
+The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws_api_gateway_integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L49">property name</a>
 </h3>
 
 ```typescript
@@ -174,7 +185,7 @@ public name: pulumi.Output<string>;
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L49">property routingConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L53">property routingConfig</a>
 </h3>
 
 ```typescript
@@ -219,7 +230,7 @@ public new CallbackFunction(name: string, args: CallbackFunctionArgs<E, R>, opts
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionState): Function
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionState, opts?: pulumi.CustomResourceOptions): Function
 ```
 
 
@@ -591,7 +602,7 @@ Create a EventSourceMapping resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSourceMappingState): EventSourceMapping
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSourceMappingState, opts?: pulumi.CustomResourceOptions): EventSourceMapping
 ```
 
 
@@ -786,7 +797,7 @@ AWS resource an an AWS lambda that will be triggered when something happens to t
 </h3>
 
 ```typescript
-public new EventSubscription(type: string, name: string, props: Record<string, any>, opts?: pulumi.ComponentResourceOptions)
+public new EventSubscription(type: string, name: string, opts?: pulumi.ComponentResourceOptions)
 ```
 
 <h3 class="pdoc-member-header">
@@ -806,11 +817,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -869,7 +880,7 @@ Create a Function resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionState): Function
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionState, opts?: pulumi.CustomResourceOptions): Function
 ```
 
 
@@ -1231,7 +1242,7 @@ Create a Permission resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PermissionState): Permission
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PermissionState, opts?: pulumi.CustomResourceOptions): Permission
 ```
 
 
@@ -1423,13 +1434,13 @@ The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.co
 invocation type.
 
 <h2 class="pdoc-module-header" id="AliasArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L121">interface AliasArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L131">interface AliasArgs</a>
 </h2>
 
 The set of arguments for constructing a Alias resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L125">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L135">property description</a>
 </h3>
 
 ```typescript
@@ -1440,7 +1451,7 @@ description?: pulumi.Input<string>;
 Description of the alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L129">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L139">property functionName</a>
 </h3>
 
 ```typescript
@@ -1451,7 +1462,7 @@ functionName: pulumi.Input<string>;
 The function ARN of the Lambda function for which you want to create an alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L133">property functionVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L143">property functionVersion</a>
 </h3>
 
 ```typescript
@@ -1462,7 +1473,7 @@ functionVersion: pulumi.Input<string>;
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L137">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L147">property name</a>
 </h3>
 
 ```typescript
@@ -1473,7 +1484,7 @@ name?: pulumi.Input<string>;
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L141">property routingConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L151">property routingConfig</a>
 </h3>
 
 ```typescript
@@ -1484,13 +1495,13 @@ routingConfig?: pulumi.Input<{ ... }>;
 The Lambda alias' route configuration settings. Fields documented below
 
 <h2 class="pdoc-module-header" id="AliasState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L91">interface AliasState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L97">interface AliasState</a>
 </h2>
 
 Input properties used for looking up and filtering Alias resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L95">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L101">property arn</a>
 </h3>
 
 ```typescript
@@ -1501,7 +1512,7 @@ arn?: pulumi.Input<string>;
 The Amazon Resource Name (ARN) identifying your Lambda function alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L99">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L105">property description</a>
 </h3>
 
 ```typescript
@@ -1512,7 +1523,7 @@ description?: pulumi.Input<string>;
 Description of the alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L103">property functionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L109">property functionName</a>
 </h3>
 
 ```typescript
@@ -1523,7 +1534,7 @@ functionName?: pulumi.Input<string>;
 The function ARN of the Lambda function for which you want to create an alias.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L107">property functionVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L113">property functionVersion</a>
 </h3>
 
 ```typescript
@@ -1534,7 +1545,18 @@ functionVersion?: pulumi.Input<string>;
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L111">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L117">property invokeArn</a>
+</h3>
+
+```typescript
+invokeArn?: pulumi.Input<string>;
+```
+
+
+The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws_api_gateway_integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L121">property name</a>
 </h3>
 
 ```typescript
@@ -1545,7 +1567,7 @@ name?: pulumi.Input<string>;
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L115">property routingConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/alias.ts#L125">property routingConfig</a>
 </h3>
 
 ```typescript

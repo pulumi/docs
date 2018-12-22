@@ -42,7 +42,7 @@ Create a ConsumerGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConsumerGroupState): ConsumerGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConsumerGroupState, opts?: pulumi.CustomResourceOptions): ConsumerGroup
 ```
 
 
@@ -163,7 +163,7 @@ Create a IoTHub resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IoTHubState): IoTHub
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IoTHubState, opts?: pulumi.CustomResourceOptions): IoTHub
 ```
 
 

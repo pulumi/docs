@@ -54,7 +54,7 @@ Create a Lab resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LabState): Lab
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LabState, opts?: pulumi.CustomResourceOptions): Lab
 ```
 
 
@@ -252,7 +252,7 @@ Create a LinuxVirtualMachine resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LinuxVirtualMachineState): LinuxVirtualMachine
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LinuxVirtualMachineState, opts?: pulumi.CustomResourceOptions): LinuxVirtualMachine
 ```
 
 
@@ -538,7 +538,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyState): Policy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyState, opts?: pulumi.CustomResourceOptions): Policy
 ```
 
 
@@ -714,7 +714,7 @@ Create a VirtualNetwork resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkState): VirtualNetwork
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkState, opts?: pulumi.CustomResourceOptions): VirtualNetwork
 ```
 
 
@@ -868,7 +868,7 @@ Create a WindowsVirtualMachine resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WindowsVirtualMachineState): WindowsVirtualMachine
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WindowsVirtualMachineState, opts?: pulumi.CustomResourceOptions): WindowsVirtualMachine
 ```
 
 

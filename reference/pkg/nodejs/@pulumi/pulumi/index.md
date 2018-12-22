@@ -15,6 +15,7 @@ ES6 modules:
 import * as pulumi from "@pulumi/pulumi";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#ComponentResource">class ComponentResource</a>
@@ -624,7 +625,7 @@ Returns true if the given object is an instance of a ResourceError.  This is des
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L914">property Error</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property Error</a>
 </h3>
 
 ```typescript
@@ -640,7 +641,7 @@ public hideStack?: undefined | false | true;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property message</a>
 </h3>
 
 ```typescript
@@ -648,7 +649,7 @@ message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property name</a>
 </h3>
 
 ```typescript
@@ -664,7 +665,7 @@ public resource: Resource | undefined;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property stack</a>
 </h3>
 
 ```typescript
@@ -701,7 +702,7 @@ Returns true if the given object is an instance of a RunError.  This is designed
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L914">property Error</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property Error</a>
 </h3>
 
 ```typescript
@@ -709,7 +710,7 @@ static Error: ErrorConstructor;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L904">property message</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property message</a>
 </h3>
 
 ```typescript
@@ -717,7 +718,7 @@ message: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L903">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property name</a>
 </h3>
 
 ```typescript
@@ -725,7 +726,7 @@ name: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L905">property stack</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property stack</a>
 </h3>
 
 ```typescript
@@ -1171,7 +1172,7 @@ The name of the stack to reference.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">interface UnwrappedArray</a>
 </h2>
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L52">method __@iterator</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method __@iterator</a>
 </h3>
 
 ```typescript
@@ -1182,7 +1183,7 @@ __@iterator(): IterableIterator<Unwrap<T>>
 Iterator
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts#L94">method __@unscopables</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method __@unscopables</a>
 </h3>
 
 ```typescript
@@ -1194,7 +1195,7 @@ Returns an object whose properties have the value 'true'
 when they will be absent when used in a 'with' statement.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1161">method concat</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method concat</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1214,7 @@ concat(items: T | ConcatArray<T>[]): Unwrap<T>[]
 Combines two or more arrays.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L64">method copyWithin</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method copyWithin</a>
 </h3>
 
 ```typescript
@@ -1225,7 +1226,7 @@ Returns the this object after copying a section of the array identified by start
 to the same array starting at position target
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L57">method entries</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method entries</a>
 </h3>
 
 ```typescript
@@ -1236,7 +1237,7 @@ entries(): IterableIterator<[, number, Unwrap<T>]>
 Returns an iterable of key, value pairs for every entry in the array
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1226">method every</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method every</a>
 </h3>
 
 ```typescript
@@ -1247,7 +1248,7 @@ every(callbackfn: { ... }, thisArg?: any): boolean
 Determines whether all the members of an array satisfy the specified test.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L53">method fill</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method fill</a>
 </h3>
 
 ```typescript
@@ -1258,7 +1259,7 @@ fill(value: Unwrap<T>, start?: undefined | number, end?: undefined | number): th
 Returns the this object after filling the section identified by start and end with value
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1250">method filter</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method filter</a>
 </h3>
 
 ```typescript
@@ -1277,7 +1278,7 @@ filter(callbackfn: { ... }, thisArg?: any): Unwrap<T>[]
 Returns the elements of an array that meet the condition specified in a callback function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L31">method find</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method find</a>
 </h3>
 
 ```typescript
@@ -1294,7 +1295,7 @@ find(predicate: { ... }, thisArg?: any): Unwrap<T> | undefined
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts#L43">method findIndex</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method findIndex</a>
 </h3>
 
 ```typescript
@@ -1306,7 +1307,7 @@ Returns the index of the first element in the array where predicate is true, and
 otherwise.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1238">method forEach</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method forEach</a>
 </h3>
 
 ```typescript
@@ -1317,7 +1318,7 @@ forEach(callbackfn: { ... }, thisArg?: any): void
 Performs the specified action for each element in an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1214">method indexOf</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method indexOf</a>
 </h3>
 
 ```typescript
@@ -1328,7 +1329,7 @@ indexOf(searchElement: Unwrap<T>, fromIndex?: undefined | number): number
 Returns the index of the first occurrence of a value in an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1171">method join</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method join</a>
 </h3>
 
 ```typescript
@@ -1339,7 +1340,7 @@ join(separator?: undefined | string): string
 Adds all the elements of an array separated by the specified separator string.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L62">method keys</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method keys</a>
 </h3>
 
 ```typescript
@@ -1350,7 +1351,7 @@ keys(): IterableIterator<number>
 Returns an iterable of keys in the array
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1220">method lastIndexOf</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method lastIndexOf</a>
 </h3>
 
 ```typescript
@@ -1361,7 +1362,7 @@ lastIndexOf(searchElement: Unwrap<T>, fromIndex?: undefined | number): number
 Returns the index of the last occurrence of a specified value in an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1244">method map</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method map</a>
 </h3>
 
 ```typescript
@@ -1372,7 +1373,7 @@ map<U>(callbackfn: { ... }, thisArg?: any): U[]
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1151">method pop</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method pop</a>
 </h3>
 
 ```typescript
@@ -1383,7 +1384,7 @@ pop(): Unwrap<T> | undefined
 Removes the last element from an array and returns it.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1156">method push</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method push</a>
 </h3>
 
 ```typescript
@@ -1394,7 +1395,7 @@ push(items: Unwrap<T>[]): number
 Appends new elements to an array, and returns the new length of the array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1262">method reduce</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method reduce</a>
 </h3>
 
 ```typescript
@@ -1418,7 +1419,7 @@ reduce<U>(callbackfn: { ... }, initialValue: U): U
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1275">method reduceRight</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method reduceRight</a>
 </h3>
 
 ```typescript
@@ -1442,7 +1443,7 @@ reduceRight<U>(callbackfn: { ... }, initialValue: U): U
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1175">method reverse</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method reverse</a>
 </h3>
 
 ```typescript
@@ -1453,7 +1454,7 @@ reverse(): Unwrap<T>[]
 Reverses the elements in an Array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1179">method shift</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method shift</a>
 </h3>
 
 ```typescript
@@ -1464,7 +1465,7 @@ shift(): Unwrap<T> | undefined
 Removes the first element from an array and returns it.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1185">method slice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method slice</a>
 </h3>
 
 ```typescript
@@ -1475,7 +1476,7 @@ slice(start?: undefined | number, end?: undefined | number): Unwrap<T>[]
 Returns a section of an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1232">method some</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method some</a>
 </h3>
 
 ```typescript
@@ -1486,7 +1487,7 @@ some(callbackfn: { ... }, thisArg?: any): boolean
 Determines whether the specified callback function returns true for any element of an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1190">method sort</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method sort</a>
 </h3>
 
 ```typescript
@@ -1497,7 +1498,7 @@ sort(compareFn?: undefined | { ... }): this
 Sorts an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1196">method splice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method splice</a>
 </h3>
 
 ```typescript
@@ -1516,7 +1517,7 @@ splice(start: number, deleteCount: number, items: Unwrap<T>[]): Unwrap<T>[]
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1147">method toLocaleString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method toLocaleString</a>
 </h3>
 
 ```typescript
@@ -1527,7 +1528,7 @@ toLocaleString(): string
 Returns a string representation of an array. The elements are converted to string using their toLocalString methods.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1143">method toString</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method toString</a>
 </h3>
 
 ```typescript
@@ -1538,7 +1539,7 @@ toString(): string
 Returns a string representation of an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1208">method unshift</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method unshift</a>
 </h3>
 
 ```typescript
@@ -1549,7 +1550,7 @@ unshift(items: Unwrap<T>[]): number
 Inserts new elements at the start of an array.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es2015.iterable.d.ts#L67">method values</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">method values</a>
 </h3>
 
 ```typescript
@@ -1560,7 +1561,7 @@ values(): IterableIterator<Unwrap<T>>
 Returns an iterable of values in the array
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1298">property Array</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">property Array</a>
 </h3>
 
 ```typescript
@@ -1568,7 +1569,7 @@ Array: ArrayConstructor;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs//home/matell/go/src/github.com/pulumi/docs/node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts#L1139">property length</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L657">property length</a>
 </h3>
 
 ```typescript

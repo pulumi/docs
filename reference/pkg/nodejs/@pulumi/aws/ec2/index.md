@@ -380,7 +380,7 @@ Create a Ami resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiState): Ami
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiState, opts?: pulumi.CustomResourceOptions): Ami
 ```
 
 
@@ -634,7 +634,7 @@ Create a AmiCopy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiCopyState): AmiCopy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiCopyState, opts?: pulumi.CustomResourceOptions): AmiCopy
 ```
 
 
@@ -937,7 +937,7 @@ Create a AmiFromInstance resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiFromInstanceState): AmiFromInstance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiFromInstanceState, opts?: pulumi.CustomResourceOptions): AmiFromInstance
 ```
 
 
@@ -1203,7 +1203,7 @@ Create a AmiLaunchPermission resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiLaunchPermissionState): AmiLaunchPermission
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AmiLaunchPermissionState, opts?: pulumi.CustomResourceOptions): AmiLaunchPermission
 ```
 
 
@@ -1302,7 +1302,7 @@ Create a CapacityReservation resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CapacityReservationState): CapacityReservation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CapacityReservationState, opts?: pulumi.CustomResourceOptions): CapacityReservation
 ```
 
 
@@ -1500,7 +1500,7 @@ Create a CustomerGateway resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomerGatewayState): CustomerGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomerGatewayState, opts?: pulumi.CustomResourceOptions): CustomerGateway
 ```
 
 
@@ -1626,7 +1626,7 @@ For more information about Network ACLs, see the AWS Documentation on
 [Network ACLs][aws-network-acls].
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L73">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L77">constructor</a>
 </h3>
 
 ```typescript
@@ -1645,7 +1645,7 @@ Create a DefaultNetworkAcl resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultNetworkAclState): DefaultNetworkAcl
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultNetworkAclState, opts?: pulumi.CustomResourceOptions): DefaultNetworkAcl
 ```
 
 
@@ -1719,7 +1719,18 @@ public ingress: pulumi.Output<{ ... }[] | undefined>;
 Specifies an ingress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L65">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L64">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the Default Network ACL
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L69">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -1731,7 +1742,7 @@ A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L69">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L73">property tags</a>
 </h3>
 
 ```typescript
@@ -1754,7 +1765,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L73">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L77">property vpcId</a>
 </h3>
 
 ```typescript
@@ -1801,7 +1812,7 @@ a conflict of rule settings and will overwrite routes.
 
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L71">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L75">constructor</a>
 </h3>
 
 ```typescript
@@ -1820,7 +1831,7 @@ Create a DefaultRouteTable resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultRouteTableState): DefaultRouteTable
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultRouteTableState, opts?: pulumi.CustomResourceOptions): DefaultRouteTable
 ```
 
 
@@ -1871,7 +1882,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L62">property propagatingVgws</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L62">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the route table
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L66">property propagatingVgws</a>
 </h3>
 
 ```typescript
@@ -1882,7 +1904,7 @@ public propagatingVgws: pulumi.Output<string[] | undefined>;
 A list of virtual gateways for propagation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L66">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L70">property routes</a>
 </h3>
 
 ```typescript
@@ -1893,7 +1915,7 @@ public routes: pulumi.Output<{ ... }[]>;
 A list of route objects. Their keys are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L70">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L74">property tags</a>
 </h3>
 
 ```typescript
@@ -1916,7 +1938,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L71">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L75">property vpcId</a>
 </h3>
 
 ```typescript
@@ -1973,7 +1995,7 @@ Create a DefaultSecurityGroup resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultSecurityGroupState): DefaultSecurityGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultSecurityGroupState, opts?: pulumi.CustomResourceOptions): DefaultSecurityGroup
 ```
 
 
@@ -2122,7 +2144,7 @@ Terraform does not _create_ this resource, but instead "adopts" it
 into management.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L55">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -2141,7 +2163,7 @@ Create a DefaultSubnet resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultSubnetState): DefaultSubnet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultSubnetState, opts?: pulumi.CustomResourceOptions): DefaultSubnet
 ```
 
 
@@ -2193,7 +2215,15 @@ public availabilityZone: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L36">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L33">property availabilityZoneId</a>
+</h3>
+
+```typescript
+public availabilityZoneId: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L37">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -2216,7 +2246,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L40">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L41">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -2227,7 +2257,7 @@ public ipv6CidrBlock: pulumi.Output<string>;
 The IPv6 CIDR block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L41">property ipv6CidrBlockAssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L42">property ipv6CidrBlockAssociationId</a>
 </h3>
 
 ```typescript
@@ -2235,7 +2265,7 @@ public ipv6CidrBlockAssociationId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L47">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L48">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -2248,7 +2278,18 @@ that instances launched into the subnet should be assigned
 a public IP address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L51">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L52">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L56">property tags</a>
 </h3>
 
 ```typescript
@@ -2271,7 +2312,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L55">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L60">property vpcId</a>
 </h3>
 
 ```typescript
@@ -2297,7 +2338,7 @@ Terraform does not _create_ this resource, but instead "adopts" it
 into management.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L96">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L100">constructor</a>
 </h3>
 
 ```typescript
@@ -2316,7 +2357,7 @@ Create a DefaultVpc resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultVpcState): DefaultVpc
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultVpcState, opts?: pulumi.CustomResourceOptions): DefaultVpc
 ```
 
 
@@ -2520,7 +2561,18 @@ this VPC. Note that you can change a VPC's main route table by using an
 [`aws_main_route_table_association`](https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L96">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L96">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the VPC.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L100">property tags</a>
 </h3>
 
 ```typescript
@@ -2558,7 +2610,7 @@ Terraform does not _create_ this resource, but instead "adopts" it
 into management.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L48">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L52">constructor</a>
 </h3>
 
 ```typescript
@@ -2577,7 +2629,7 @@ Create a DefaultVpcDhcpOptions resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultVpcDhcpOptionsState): DefaultVpcDhcpOptions
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DefaultVpcDhcpOptionsState, opts?: pulumi.CustomResourceOptions): DefaultVpcDhcpOptions
 ```
 
 
@@ -2663,7 +2715,18 @@ public ntpServers: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L48">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L48">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the DHCP options set.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L52">property tags</a>
 </h3>
 
 ```typescript
@@ -2714,7 +2777,7 @@ Create a EgressOnlyInternetGateway resource with the given unique name, argument
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EgressOnlyInternetGatewayState): EgressOnlyInternetGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EgressOnlyInternetGatewayState, opts?: pulumi.CustomResourceOptions): EgressOnlyInternetGateway
 ```
 
 
@@ -2806,7 +2869,7 @@ Create a Eip resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EipState): Eip
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EipState, opts?: pulumi.CustomResourceOptions): Eip
 ```
 
 
@@ -3003,7 +3066,7 @@ Create a EipAssociation resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EipAssociationState): EipAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EipAssociationState, opts?: pulumi.CustomResourceOptions): EipAssociation
 ```
 
 
@@ -3155,7 +3218,7 @@ Create a Fleet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FleetState): Fleet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FleetState, opts?: pulumi.CustomResourceOptions): Fleet
 ```
 
 
@@ -3343,7 +3406,7 @@ Create a FlowLog resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FlowLogState): FlowLog
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FlowLogState, opts?: pulumi.CustomResourceOptions): FlowLog
 ```
 
 
@@ -3490,7 +3553,7 @@ Provides an EC2 instance resource. This allows instances to be created, updated,
 and deleted. Instances also support [provisioning](https://www.terraform.io/docs/provisioners/index.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L201">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L205">constructor</a>
 </h3>
 
 ```typescript
@@ -3509,7 +3572,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState): Instance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState, opts?: pulumi.CustomResourceOptions): Instance
 ```
 
 
@@ -3678,7 +3741,18 @@ public getPasswordData: pulumi.Output<boolean | undefined>;
 If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L90">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L88">property hostId</a>
+</h3>
+
+```typescript
+public hostId: pulumi.Output<string>;
+```
+
+
+The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L94">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -3703,7 +3777,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L97">property instanceInitiatedShutdownBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L101">property instanceInitiatedShutdownBehavior</a>
 </h3>
 
 ```typescript
@@ -3717,7 +3791,7 @@ instance. Amazon defaults this to `stop` for EBS-backed instances and
 instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L98">property instanceState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L102">property instanceState</a>
 </h3>
 
 ```typescript
@@ -3725,7 +3799,7 @@ public instanceState: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L102">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L106">property instanceType</a>
 </h3>
 
 ```typescript
@@ -3736,7 +3810,7 @@ public instanceType: pulumi.Output<InstanceType>;
 The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L103">property ipv6AddressCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L107">property ipv6AddressCount</a>
 </h3>
 
 ```typescript
@@ -3744,7 +3818,7 @@ public ipv6AddressCount: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L107">property ipv6Addresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L111">property ipv6Addresses</a>
 </h3>
 
 ```typescript
@@ -3755,7 +3829,7 @@ public ipv6Addresses: pulumi.Output<string[]>;
 Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L111">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L115">property keyName</a>
 </h3>
 
 ```typescript
@@ -3766,7 +3840,7 @@ public keyName: pulumi.Output<string>;
 The key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L115">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L119">property monitoring</a>
 </h3>
 
 ```typescript
@@ -3777,7 +3851,7 @@ public monitoring: pulumi.Output<boolean | undefined>;
 If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L123">property networkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L127">property networkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -3788,7 +3862,7 @@ public networkInterfaceId: pulumi.Output<string>;
 The ID of the network interface that was created with the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L119">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L123">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -3799,7 +3873,7 @@ public networkInterfaces: pulumi.Output<{ ... }[]>;
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L131">property passwordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L135">property passwordData</a>
 </h3>
 
 ```typescript
@@ -3814,7 +3888,7 @@ Note that this encrypted value will be stored in the state file, as with all exp
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L135">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L139">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -3825,7 +3899,7 @@ public placementGroup: pulumi.Output<string>;
 The Placement Group to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L139">property primaryNetworkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L143">property primaryNetworkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -3836,7 +3910,7 @@ public primaryNetworkInterfaceId: pulumi.Output<string>;
 The ID of the instance's primary network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L145">property privateDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L149">property privateDns</a>
 </h3>
 
 ```typescript
@@ -3849,7 +3923,7 @@ used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L150">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L154">property privateIp</a>
 </h3>
 
 ```typescript
@@ -3861,7 +3935,7 @@ Private IP address to associate with the
 instance in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L155">property publicDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L159">property publicDns</a>
 </h3>
 
 ```typescript
@@ -3873,7 +3947,7 @@ The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L159">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L163">property publicIp</a>
 </h3>
 
 ```typescript
@@ -3884,7 +3958,7 @@ public publicIp: pulumi.Output<string>;
 The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws_eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L164">property rootBlockDevice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L168">property rootBlockDevice</a>
 </h3>
 
 ```typescript
@@ -3896,7 +3970,7 @@ Customize details about the root block
 device of the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L168">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L172">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -3907,7 +3981,7 @@ public securityGroups: pulumi.Output<string[]>;
 A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L173">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L177">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -3919,7 +3993,7 @@ Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L177">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L181">property subnetId</a>
 </h3>
 
 ```typescript
@@ -3930,7 +4004,7 @@ public subnetId: pulumi.Output<string>;
 The VPC Subnet ID to launch in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L181">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L185">property tags</a>
 </h3>
 
 ```typescript
@@ -3941,7 +4015,7 @@ public tags: pulumi.Output<Tags | undefined>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L185">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L189">property tenancy</a>
 </h3>
 
 ```typescript
@@ -3964,7 +4038,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L189">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L193">property userData</a>
 </h3>
 
 ```typescript
@@ -3975,7 +4049,7 @@ public userData: pulumi.Output<string | undefined>;
 The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L193">property userDataBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L197">property userDataBase64</a>
 </h3>
 
 ```typescript
@@ -3986,7 +4060,7 @@ public userDataBase64: pulumi.Output<string | undefined>;
 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L197">property volumeTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L201">property volumeTags</a>
 </h3>
 
 ```typescript
@@ -3997,7 +4071,7 @@ public volumeTags: pulumi.Output<{ ... }>;
 A mapping of tags to assign to the devices created by the instance at launch time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L201">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L205">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -4014,7 +4088,7 @@ A list of security group IDs to associate with.
 Provides a resource to create a VPC Internet Gateway.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L32">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L36">constructor</a>
 </h3>
 
 ```typescript
@@ -4033,7 +4107,7 @@ Create a InternetGateway resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InternetGatewayState): InternetGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InternetGatewayState, opts?: pulumi.CustomResourceOptions): InternetGateway
 ```
 
 
@@ -4073,7 +4147,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L28">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L28">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the internet gateway.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L32">property tags</a>
 </h3>
 
 ```typescript
@@ -4096,7 +4181,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L32">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L36">property vpcId</a>
 </h3>
 
 ```typescript
@@ -4140,7 +4225,7 @@ Create a KeyPair resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyPairState): KeyPair
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyPairState, opts?: pulumi.CustomResourceOptions): KeyPair
 ```
 
 
@@ -4261,7 +4346,7 @@ Create a LaunchConfiguration resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LaunchConfigurationState): LaunchConfiguration
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LaunchConfigurationState, opts?: pulumi.CustomResourceOptions): LaunchConfiguration
 ```
 
 
@@ -4555,7 +4640,7 @@ Create a LaunchTemplate resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LaunchTemplateState): LaunchTemplate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LaunchTemplateState, opts?: pulumi.CustomResourceOptions): LaunchTemplate
 ```
 
 
@@ -4949,7 +5034,7 @@ Create a MainRouteTableAssociation resource with the given unique name, argument
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MainRouteTableAssociationState): MainRouteTableAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MainRouteTableAssociationState, opts?: pulumi.CustomResourceOptions): MainRouteTableAssociation
 ```
 
 
@@ -5060,7 +5145,7 @@ Create a NatGateway resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NatGatewayState): NatGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NatGatewayState, opts?: pulumi.CustomResourceOptions): NatGateway
 ```
 
 
@@ -5191,7 +5276,7 @@ in conjunction with any Network ACL Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L56">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L60">constructor</a>
 </h3>
 
 ```typescript
@@ -5210,7 +5295,7 @@ Create a NetworkAcl resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkAclState): NetworkAcl
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkAclState, opts?: pulumi.CustomResourceOptions): NetworkAcl
 ```
 
 
@@ -5272,7 +5357,18 @@ public ingress: pulumi.Output<{ ... }[]>;
 Specifies an ingress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L44">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L43">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the network ACL.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L48">property subnetId</a>
 </h3>
 
 ```typescript
@@ -5284,7 +5380,7 @@ The ID of the associated Subnet. This
 attribute is deprecated, please use the `subnet_ids` attribute instead
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L48">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L52">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -5295,7 +5391,7 @@ public subnetIds: pulumi.Output<string[]>;
 A list of Subnet IDs to apply the ACL to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L52">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L56">property tags</a>
 </h3>
 
 ```typescript
@@ -5318,7 +5414,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L56">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L60">property vpcId</a>
 </h3>
 
 ```typescript
@@ -5360,7 +5456,7 @@ Create a NetworkAclRule resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkAclRuleState): NetworkAclRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkAclRuleState, opts?: pulumi.CustomResourceOptions): NetworkAclRule
 ```
 
 
@@ -5558,7 +5654,7 @@ Create a NetworkInterface resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceState): NetworkInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceState, opts?: pulumi.CustomResourceOptions): NetworkInterface
 ```
 
 
@@ -5739,7 +5835,7 @@ Create a NetworkInterfaceAttachment resource with the given unique name, argumen
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceAttachmentState): NetworkInterfaceAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceAttachmentState, opts?: pulumi.CustomResourceOptions): NetworkInterfaceAttachment
 ```
 
 
@@ -5883,7 +5979,7 @@ Create a NetworkInterfaceSecurityGroupAttachment resource with the given unique 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceSecurityGroupAttachmentState): NetworkInterfaceSecurityGroupAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NetworkInterfaceSecurityGroupAttachmentState, opts?: pulumi.CustomResourceOptions): NetworkInterfaceSecurityGroupAttachment
 ```
 
 
@@ -6047,7 +6143,7 @@ resource "aws_vpc_peering_connection" "peer" {
   peer_owner_id = "${data.aws_caller_identity.peer.account_id}"
   auto_accept   = false
 
-  tags {
+  tags = {
     Side = "Requester"
   }
 }
@@ -6059,7 +6155,7 @@ resource "aws_vpc_peering_connection_accepter" "peer" {
   vpc_peering_connection_id = "${aws_vpc_peering_connection.peer.id}"
   auto_accept               = true
 
-  tags {
+  tags = {
     Side = "Accepter"
   }
 }
@@ -6107,7 +6203,7 @@ Create a PeeringConnectionOptions resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PeeringConnectionOptionsState): PeeringConnectionOptions
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PeeringConnectionOptionsState, opts?: pulumi.CustomResourceOptions): PeeringConnectionOptions
 ```
 
 
@@ -6222,7 +6318,7 @@ Create a PlacementGroup resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PlacementGroupState): PlacementGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PlacementGroupState, opts?: pulumi.CustomResourceOptions): PlacementGroup
 ```
 
 
@@ -6321,7 +6417,7 @@ Create a ProxyProtocolPolicy resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProxyProtocolPolicyState): ProxyProtocolPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ProxyProtocolPolicyState, opts?: pulumi.CustomResourceOptions): ProxyProtocolPolicy
 ```
 
 
@@ -6428,7 +6524,7 @@ Create a Route resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteState): Route
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteState, opts?: pulumi.CustomResourceOptions): Route
 ```
 
 
@@ -6647,7 +6743,7 @@ this resource will delete any propagating gateways not explicitly listed in
 the separate resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L59">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L63">constructor</a>
 </h3>
 
 ```typescript
@@ -6666,7 +6762,7 @@ Create a RouteTable resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableState): RouteTable
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableState, opts?: pulumi.CustomResourceOptions): RouteTable
 ```
 
 
@@ -6706,7 +6802,18 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L47">property propagatingVgws</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L47">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the route table
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L51">property propagatingVgws</a>
 </h3>
 
 ```typescript
@@ -6717,7 +6824,7 @@ public propagatingVgws: pulumi.Output<string[]>;
 A list of virtual gateways for propagation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L51">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L55">property routes</a>
 </h3>
 
 ```typescript
@@ -6728,7 +6835,7 @@ public routes: pulumi.Output<{ ... }[]>;
 A list of route objects. Their keys are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L55">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L59">property tags</a>
 </h3>
 
 ```typescript
@@ -6751,7 +6858,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L59">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L63">property vpcId</a>
 </h3>
 
 ```typescript
@@ -6787,7 +6894,7 @@ Create a RouteTableAssociation resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableAssociationState): RouteTableAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RouteTableAssociationState, opts?: pulumi.CustomResourceOptions): RouteTableAssociation
 ```
 
 
@@ -6895,7 +7002,7 @@ Create a SecurityGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupState): SecurityGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupState, opts?: pulumi.CustomResourceOptions): SecurityGroup
 ```
 
 
@@ -7107,7 +7214,7 @@ Create a SecurityGroupRule resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupRuleState): SecurityGroupRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupRuleState, opts?: pulumi.CustomResourceOptions): SecurityGroupRule
 ```
 
 
@@ -7309,7 +7416,7 @@ Create a SnapshotCreateVolumePermission resource with the given unique name, arg
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotCreateVolumePermissionState): SnapshotCreateVolumePermission
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotCreateVolumePermissionState, opts?: pulumi.CustomResourceOptions): SnapshotCreateVolumePermission
 ```
 
 
@@ -7411,7 +7518,7 @@ Create a SpotDatafeedSubscription resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SpotDatafeedSubscriptionState): SpotDatafeedSubscription
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SpotDatafeedSubscriptionState, opts?: pulumi.CustomResourceOptions): SpotDatafeedSubscription
 ```
 
 
@@ -7511,7 +7618,7 @@ Create a SpotFleetRequest resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SpotFleetRequestState): SpotFleetRequest
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SpotFleetRequestState, opts?: pulumi.CustomResourceOptions): SpotFleetRequest
 ```
 
 
@@ -7807,7 +7914,7 @@ for more information.
 
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L257">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L261">constructor</a>
 </h3>
 
 ```typescript
@@ -7826,7 +7933,7 @@ Create a SpotInstanceRequest resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SpotInstanceRequestState): SpotInstanceRequest
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SpotInstanceRequestState, opts?: pulumi.CustomResourceOptions): SpotInstanceRequest
 ```
 
 
@@ -8005,7 +8112,18 @@ public getPasswordData: pulumi.Output<boolean | undefined>;
 If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L112">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L110">property hostId</a>
+</h3>
+
+```typescript
+public hostId: pulumi.Output<string>;
+```
+
+
+The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L116">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -8030,7 +8148,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L119">property instanceInitiatedShutdownBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L123">property instanceInitiatedShutdownBehavior</a>
 </h3>
 
 ```typescript
@@ -8044,7 +8162,7 @@ instance. Amazon defaults this to `stop` for EBS-backed instances and
 instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L123">property instanceInterruptionBehaviour</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L127">property instanceInterruptionBehaviour</a>
 </h3>
 
 ```typescript
@@ -8055,7 +8173,7 @@ public instanceInterruptionBehaviour: pulumi.Output<string | undefined>;
 Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L124">property instanceState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L128">property instanceState</a>
 </h3>
 
 ```typescript
@@ -8063,7 +8181,7 @@ public instanceState: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L128">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L132">property instanceType</a>
 </h3>
 
 ```typescript
@@ -8074,7 +8192,7 @@ public instanceType: pulumi.Output<string>;
 The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L129">property ipv6AddressCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L133">property ipv6AddressCount</a>
 </h3>
 
 ```typescript
@@ -8082,7 +8200,7 @@ public ipv6AddressCount: pulumi.Output<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L133">property ipv6Addresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L137">property ipv6Addresses</a>
 </h3>
 
 ```typescript
@@ -8093,7 +8211,7 @@ public ipv6Addresses: pulumi.Output<string[]>;
 Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L137">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L141">property keyName</a>
 </h3>
 
 ```typescript
@@ -8104,7 +8222,7 @@ public keyName: pulumi.Output<string>;
 The key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L142">property launchGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L146">property launchGroup</a>
 </h3>
 
 ```typescript
@@ -8116,7 +8234,7 @@ A launch group is a group of spot instances that launch together and terminate t
 If left empty instances are launched and terminated individually.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L146">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L150">property monitoring</a>
 </h3>
 
 ```typescript
@@ -8127,7 +8245,7 @@ public monitoring: pulumi.Output<boolean | undefined>;
 If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L151">property networkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L155">property networkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -8135,7 +8253,7 @@ public networkInterfaceId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L150">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L154">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -8146,7 +8264,7 @@ public networkInterfaces: pulumi.Output<{ ... }[]>;
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L152">property passwordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L156">property passwordData</a>
 </h3>
 
 ```typescript
@@ -8154,7 +8272,7 @@ public passwordData: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L156">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L160">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -8165,7 +8283,7 @@ public placementGroup: pulumi.Output<string>;
 The Placement Group to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L157">property primaryNetworkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L161">property primaryNetworkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -8173,7 +8291,7 @@ public primaryNetworkInterfaceId: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L163">property privateDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L167">property privateDns</a>
 </h3>
 
 ```typescript
@@ -8186,7 +8304,7 @@ used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L168">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L172">property privateIp</a>
 </h3>
 
 ```typescript
@@ -8198,7 +8316,7 @@ Private IP address to associate with the
 instance in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L173">property publicDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L177">property publicDns</a>
 </h3>
 
 ```typescript
@@ -8210,7 +8328,7 @@ The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L177">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L181">property publicIp</a>
 </h3>
 
 ```typescript
@@ -8221,7 +8339,7 @@ public publicIp: pulumi.Output<string>;
 The public IP address assigned to the instance, if applicable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L182">property rootBlockDevice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L186">property rootBlockDevice</a>
 </h3>
 
 ```typescript
@@ -8233,7 +8351,7 @@ Customize details about the root block
 device of the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L186">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L190">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -8244,7 +8362,7 @@ public securityGroups: pulumi.Output<string[]>;
 A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L191">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L195">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -8256,7 +8374,7 @@ Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L200">property spotBidStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L204">property spotBidStatus</a>
 </h3>
 
 ```typescript
@@ -8272,7 +8390,7 @@ state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#cr
 of the Spot Instance Request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L205">property spotInstanceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L209">property spotInstanceId</a>
 </h3>
 
 ```typescript
@@ -8284,7 +8402,7 @@ The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L209">property spotPrice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L213">property spotPrice</a>
 </h3>
 
 ```typescript
@@ -8295,7 +8413,7 @@ public spotPrice: pulumi.Output<string | undefined>;
 The maximum price to request on the spot market.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L210">property spotRequestState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L214">property spotRequestState</a>
 </h3>
 
 ```typescript
@@ -8303,7 +8421,7 @@ public spotRequestState: pulumi.Output<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L215">property spotType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L219">property spotType</a>
 </h3>
 
 ```typescript
@@ -8315,7 +8433,7 @@ If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L219">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L223">property subnetId</a>
 </h3>
 
 ```typescript
@@ -8326,7 +8444,7 @@ public subnetId: pulumi.Output<string>;
 The VPC Subnet ID to launch in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L223">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L227">property tags</a>
 </h3>
 
 ```typescript
@@ -8337,7 +8455,7 @@ public tags: pulumi.Output<Tags | undefined>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L227">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L231">property tenancy</a>
 </h3>
 
 ```typescript
@@ -8360,7 +8478,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L231">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L235">property userData</a>
 </h3>
 
 ```typescript
@@ -8371,7 +8489,7 @@ public userData: pulumi.Output<string | undefined>;
 The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L235">property userDataBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L239">property userDataBase64</a>
 </h3>
 
 ```typescript
@@ -8382,7 +8500,7 @@ public userDataBase64: pulumi.Output<string | undefined>;
 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L239">property validFrom</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L243">property validFrom</a>
 </h3>
 
 ```typescript
@@ -8393,7 +8511,7 @@ public validFrom: pulumi.Output<string>;
 The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L243">property validUntil</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L247">property validUntil</a>
 </h3>
 
 ```typescript
@@ -8404,7 +8522,7 @@ public validUntil: pulumi.Output<string>;
 The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L247">property volumeTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L251">property volumeTags</a>
 </h3>
 
 ```typescript
@@ -8415,7 +8533,7 @@ public volumeTags: pulumi.Output<{ ... } | undefined>;
 A mapping of tags to assign to the devices created by the instance at launch time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L251">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L255">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -8426,7 +8544,7 @@ public vpcSecurityGroupIds: pulumi.Output<string[]>;
 A list of security group IDs to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L257">property waitForFulfillment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L261">property waitForFulfillment</a>
 </h3>
 
 ```typescript
@@ -8445,7 +8563,7 @@ timeout of 10m is reached.
 Provides an VPC subnet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L73">constructor</a>
 </h3>
 
 ```typescript
@@ -8464,7 +8582,7 @@ Create a Subnet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetState): Subnet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetState, opts?: pulumi.CustomResourceOptions): Subnet
 ```
 
 
@@ -8492,7 +8610,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L29">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L28">property arn</a>
 </h3>
 
 ```typescript
@@ -8501,10 +8619,9 @@ public arn: pulumi.Output<string>;
 
 
 The ARN of the subnet.
-* `availability_zone`- The AZ for the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L35">property assignIpv6AddressOnCreation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L34">property assignIpv6AddressOnCreation</a>
 </h3>
 
 ```typescript
@@ -8517,15 +8634,29 @@ that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L36">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L38">property availabilityZone</a>
 </h3>
 
 ```typescript
 public availabilityZone: pulumi.Output<string>;
 ```
 
+
+The AZ for the subnet.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L40">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L42">property availabilityZoneId</a>
+</h3>
+
+```typescript
+public availabilityZoneId: pulumi.Output<string>;
+```
+
+
+The AZ ID of the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L46">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -8548,7 +8679,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L45">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L51">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -8560,7 +8691,7 @@ The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L49">property ipv6CidrBlockAssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L55">property ipv6CidrBlockAssociationId</a>
 </h3>
 
 ```typescript
@@ -8571,7 +8702,7 @@ public ipv6CidrBlockAssociationId: pulumi.Output<string>;
 The association ID for the IPv6 CIDR block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L55">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L61">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -8584,7 +8715,18 @@ that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L59">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L65">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L69">property tags</a>
 </h3>
 
 ```typescript
@@ -8607,7 +8749,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L63">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L73">property vpcId</a>
 </h3>
 
 ```typescript
@@ -8646,7 +8788,7 @@ Create a VolumeAttachment resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachmentState): VolumeAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VolumeAttachmentState, opts?: pulumi.CustomResourceOptions): VolumeAttachment
 ```
 
 
@@ -8767,7 +8909,7 @@ ID of the Volume to be attached
 Provides an VPC resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L92">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L96">constructor</a>
 </h3>
 
 ```typescript
@@ -8786,7 +8928,7 @@ Create a Vpc resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcState): Vpc
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcState, opts?: pulumi.CustomResourceOptions): Vpc
 ```
 
 
@@ -8995,7 +9137,18 @@ this VPC. Note that you can change a VPC's main route table by using an
 [`aws_main_route_table_association`](https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L92">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L92">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the VPC.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L96">property tags</a>
 </h3>
 
 ```typescript
@@ -9028,7 +9181,7 @@ Provides a VPC DHCP Options resource.
 * In most cases unless you're configuring your own DNS you'll want to set `domain_name_servers` to `AmazonProvidedDNS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L52">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L56">constructor</a>
 </h3>
 
 ```typescript
@@ -9047,7 +9200,7 @@ Create a VpcDhcpOptions resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcDhcpOptionsState): VpcDhcpOptions
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcDhcpOptionsState, opts?: pulumi.CustomResourceOptions): VpcDhcpOptions
 ```
 
 
@@ -9142,7 +9295,18 @@ public ntpServers: pulumi.Output<string[] | undefined>;
 List of NTP servers to configure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L52">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L52">property ownerId</a>
+</h3>
+
+```typescript
+public ownerId: pulumi.Output<string>;
+```
+
+
+The ID of the AWS account that owns the DHCP options set.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L56">property tags</a>
 </h3>
 
 ```typescript
@@ -9191,7 +9355,7 @@ Create a VpcDhcpOptionsAssociation resource with the given unique name, argument
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcDhcpOptionsAssociationState): VpcDhcpOptionsAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcDhcpOptionsAssociationState, opts?: pulumi.CustomResourceOptions): VpcDhcpOptionsAssociation
 ```
 
 
@@ -9297,7 +9461,7 @@ Create a VpcEndpoint resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointState): VpcEndpoint
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointState, opts?: pulumi.CustomResourceOptions): VpcEndpoint
 ```
 
 
@@ -9530,7 +9694,7 @@ Create a VpcEndpointConnectionNotification resource with the given unique name, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointConnectionNotificationState): VpcEndpointConnectionNotification
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointConnectionNotificationState, opts?: pulumi.CustomResourceOptions): VpcEndpointConnectionNotification
 ```
 
 
@@ -9673,7 +9837,7 @@ Create a VpcEndpointRouteTableAssociation resource with the given unique name, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointRouteTableAssociationState): VpcEndpointRouteTableAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointRouteTableAssociationState, opts?: pulumi.CustomResourceOptions): VpcEndpointRouteTableAssociation
 ```
 
 
@@ -9779,7 +9943,7 @@ Create a VpcEndpointService resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointServiceState): VpcEndpointService
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointServiceState, opts?: pulumi.CustomResourceOptions): VpcEndpointService
 ```
 
 
@@ -9961,7 +10125,7 @@ Create a VpcEndpointServiceAllowedPrinciple resource with the given unique name,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointServiceAllowedPrincipleState): VpcEndpointServiceAllowedPrinciple
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointServiceAllowedPrincipleState, opts?: pulumi.CustomResourceOptions): VpcEndpointServiceAllowedPrinciple
 ```
 
 
@@ -10066,7 +10230,7 @@ Create a VpcEndpointSubnetAssociation resource with the given unique name, argum
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointSubnetAssociationState): VpcEndpointSubnetAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcEndpointSubnetAssociationState, opts?: pulumi.CustomResourceOptions): VpcEndpointSubnetAssociation
 ```
 
 
@@ -10168,7 +10332,7 @@ Create a VpcIpv4CidrBlockAssociation resource with the given unique name, argume
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcIpv4CidrBlockAssociationState): VpcIpv4CidrBlockAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcIpv4CidrBlockAssociationState, opts?: pulumi.CustomResourceOptions): VpcIpv4CidrBlockAssociation
 ```
 
 
@@ -10279,7 +10443,7 @@ Create a VpcPeeringConnection resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcPeeringConnectionState): VpcPeeringConnection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcPeeringConnectionState, opts?: pulumi.CustomResourceOptions): VpcPeeringConnection
 ```
 
 
@@ -10468,7 +10632,7 @@ Create a VpcPeeringConnectionAccepter resource with the given unique name, argum
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcPeeringConnectionAccepterState): VpcPeeringConnectionAccepter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcPeeringConnectionAccepterState, opts?: pulumi.CustomResourceOptions): VpcPeeringConnectionAccepter
 ```
 
 
@@ -10663,7 +10827,7 @@ Create a VpnConnection resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnConnectionState): VpnConnection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnConnectionState, opts?: pulumi.CustomResourceOptions): VpnConnection
 ```
 
 
@@ -10987,7 +11151,7 @@ Create a VpnConnectionRoute resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnConnectionRouteState): VpnConnectionRoute
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnConnectionRouteState, opts?: pulumi.CustomResourceOptions): VpnConnectionRoute
 ```
 
 
@@ -11086,7 +11250,7 @@ Create a VpnGateway resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnGatewayState): VpnGateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnGatewayState, opts?: pulumi.CustomResourceOptions): VpnGateway
 ```
 
 
@@ -11212,7 +11376,7 @@ Create a VpnGatewayAttachment resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnGatewayAttachmentState): VpnGatewayAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnGatewayAttachmentState, opts?: pulumi.CustomResourceOptions): VpnGatewayAttachment
 ```
 
 
@@ -11315,7 +11479,7 @@ Create a VpnGatewayRoutePropagation resource with the given unique name, argumen
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnGatewayRoutePropagationState): VpnGatewayRoutePropagation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpnGatewayRoutePropagationState, opts?: pulumi.CustomResourceOptions): VpnGatewayRoutePropagation
 ```
 
 
@@ -13098,13 +13262,13 @@ The type of customer gateway. The only type AWS
 supports at this time is "ipsec.1".
 
 <h2 class="pdoc-module-header" id="DefaultNetworkAclArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L144">interface DefaultNetworkAclArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L154">interface DefaultNetworkAclArgs</a>
 </h2>
 
 The set of arguments for constructing a DefaultNetworkAcl resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L149">property defaultNetworkAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L159">property defaultNetworkAclId</a>
 </h3>
 
 ```typescript
@@ -13116,7 +13280,7 @@ The Network ACL ID to manage. This
 attribute is exported from `aws_vpc`, or manually found via the AWS Console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L153">property egress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L163">property egress</a>
 </h3>
 
 ```typescript
@@ -13127,7 +13291,7 @@ egress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an egress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L157">property ingress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L167">property ingress</a>
 </h3>
 
 ```typescript
@@ -13138,7 +13302,7 @@ ingress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an ingress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L162">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L172">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -13150,7 +13314,7 @@ A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L166">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L176">property tags</a>
 </h3>
 
 ```typescript
@@ -13161,13 +13325,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DefaultNetworkAclState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L112">interface DefaultNetworkAclState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L118">interface DefaultNetworkAclState</a>
 </h2>
 
 Input properties used for looking up and filtering DefaultNetworkAcl resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L117">property defaultNetworkAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L123">property defaultNetworkAclId</a>
 </h3>
 
 ```typescript
@@ -13179,7 +13343,7 @@ The Network ACL ID to manage. This
 attribute is exported from `aws_vpc`, or manually found via the AWS Console.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L121">property egress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L127">property egress</a>
 </h3>
 
 ```typescript
@@ -13190,7 +13354,7 @@ egress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an egress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L125">property ingress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L131">property ingress</a>
 </h3>
 
 ```typescript
@@ -13201,7 +13365,18 @@ ingress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an ingress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L130">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L135">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the Default Network ACL
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L140">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -13213,7 +13388,7 @@ A list of Subnet IDs to apply the ACL to. See the
 notes below on managing Subnets in the Default Network ACL
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L134">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L144">property tags</a>
 </h3>
 
 ```typescript
@@ -13224,7 +13399,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L138">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultNetworkAcl.ts#L148">property vpcId</a>
 </h3>
 
 ```typescript
@@ -13235,13 +13410,13 @@ vpcId?: pulumi.Input<string>;
 The ID of the associated VPC
 
 <h2 class="pdoc-module-header" id="DefaultRouteTableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L131">interface DefaultRouteTableArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L141">interface DefaultRouteTableArgs</a>
 </h2>
 
 The set of arguments for constructing a DefaultRouteTable resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L135">property defaultRouteTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L145">property defaultRouteTableId</a>
 </h3>
 
 ```typescript
@@ -13252,7 +13427,7 @@ defaultRouteTableId: pulumi.Input<string>;
 The ID of the Default Routing Table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L139">property propagatingVgws</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L149">property propagatingVgws</a>
 </h3>
 
 ```typescript
@@ -13263,7 +13438,7 @@ propagatingVgws?: pulumi.Input<pulumi.Input<string>[]>;
 A list of virtual gateways for propagation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L143">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L153">property routes</a>
 </h3>
 
 ```typescript
@@ -13274,7 +13449,7 @@ routes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of route objects. Their keys are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L147">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L157">property tags</a>
 </h3>
 
 ```typescript
@@ -13285,13 +13460,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DefaultRouteTableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L108">interface DefaultRouteTableState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L114">interface DefaultRouteTableState</a>
 </h2>
 
 Input properties used for looking up and filtering DefaultRouteTable resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L112">property defaultRouteTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L118">property defaultRouteTableId</a>
 </h3>
 
 ```typescript
@@ -13302,7 +13477,18 @@ defaultRouteTableId?: pulumi.Input<string>;
 The ID of the Default Routing Table.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L116">property propagatingVgws</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L122">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the route table
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L126">property propagatingVgws</a>
 </h3>
 
 ```typescript
@@ -13313,7 +13499,7 @@ propagatingVgws?: pulumi.Input<pulumi.Input<string>[]>;
 A list of virtual gateways for propagation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L120">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L130">property routes</a>
 </h3>
 
 ```typescript
@@ -13324,7 +13510,7 @@ routes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of route objects. Their keys are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L124">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L134">property tags</a>
 </h3>
 
 ```typescript
@@ -13335,7 +13521,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L125">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultRouteTable.ts#L135">property vpcId</a>
 </h3>
 
 ```typescript
@@ -13497,13 +13683,13 @@ the `vpc_id` will _not_ restore any default security group rules that were
 modified, added, or removed.** It will be left in its current state
 
 <h2 class="pdoc-module-header" id="DefaultSubnetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L132">interface DefaultSubnetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L146">interface DefaultSubnetArgs</a>
 </h2>
 
 The set of arguments for constructing a DefaultSubnet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L133">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L147">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -13511,7 +13697,7 @@ availabilityZone: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L139">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L153">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -13524,7 +13710,7 @@ that instances launched into the subnet should be assigned
 a public IP address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L143">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L157">property tags</a>
 </h3>
 
 ```typescript
@@ -13535,13 +13721,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DefaultSubnetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L100">interface DefaultSubnetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L109">interface DefaultSubnetState</a>
 </h2>
 
 Input properties used for looking up and filtering DefaultSubnet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L101">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L110">property arn</a>
 </h3>
 
 ```typescript
@@ -13549,7 +13735,7 @@ arn?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L102">property assignIpv6AddressOnCreation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L111">property assignIpv6AddressOnCreation</a>
 </h3>
 
 ```typescript
@@ -13557,7 +13743,7 @@ assignIpv6AddressOnCreation?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L103">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L112">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -13565,7 +13751,15 @@ availabilityZone?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L107">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L113">property availabilityZoneId</a>
+</h3>
+
+```typescript
+availabilityZoneId?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L117">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -13576,7 +13770,7 @@ cidrBlock?: pulumi.Input<string>;
 The CIDR block for the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L111">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L121">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -13587,7 +13781,7 @@ ipv6CidrBlock?: pulumi.Input<string>;
 The IPv6 CIDR block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L112">property ipv6CidrBlockAssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L122">property ipv6CidrBlockAssociationId</a>
 </h3>
 
 ```typescript
@@ -13595,7 +13789,7 @@ ipv6CidrBlockAssociationId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L118">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L128">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -13608,7 +13802,18 @@ that instances launched into the subnet should be assigned
 a public IP address.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L122">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L132">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L136">property tags</a>
 </h3>
 
 ```typescript
@@ -13619,7 +13824,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L126">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultSubnet.ts#L140">property vpcId</a>
 </h3>
 
 ```typescript
@@ -13630,13 +13835,13 @@ vpcId?: pulumi.Input<string>;
 The VPC ID.
 
 <h2 class="pdoc-module-header" id="DefaultVpcArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L221">interface DefaultVpcArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L231">interface DefaultVpcArgs</a>
 </h2>
 
 The set of arguments for constructing a DefaultVpc resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L227">property enableClassiclink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L237">property enableClassiclink</a>
 </h3>
 
 ```typescript
@@ -13649,7 +13854,7 @@ for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the [ClassicLink documentation][1] for more information. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L228">property enableClassiclinkDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L238">property enableClassiclinkDnsSupport</a>
 </h3>
 
 ```typescript
@@ -13657,7 +13862,7 @@ enableClassiclinkDnsSupport?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L232">property enableDnsHostnames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L242">property enableDnsHostnames</a>
 </h3>
 
 ```typescript
@@ -13668,7 +13873,7 @@ enableDnsHostnames?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L236">property enableDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L246">property enableDnsSupport</a>
 </h3>
 
 ```typescript
@@ -13679,7 +13884,7 @@ enableDnsSupport?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L240">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L250">property tags</a>
 </h3>
 
 ```typescript
@@ -13690,13 +13895,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DefaultVpcDhcpOptionsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L105">interface DefaultVpcDhcpOptionsArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L115">interface DefaultVpcDhcpOptionsArgs</a>
 </h2>
 
 The set of arguments for constructing a DefaultVpcDhcpOptions resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L109">property netbiosNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L119">property netbiosNameServers</a>
 </h3>
 
 ```typescript
@@ -13707,7 +13912,7 @@ netbiosNameServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of NETBIOS name servers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L113">property netbiosNodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L123">property netbiosNodeType</a>
 </h3>
 
 ```typescript
@@ -13718,7 +13923,7 @@ netbiosNodeType?: pulumi.Input<string>;
 The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L117">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L127">property tags</a>
 </h3>
 
 ```typescript
@@ -13729,13 +13934,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DefaultVpcDhcpOptionsState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L84">interface DefaultVpcDhcpOptionsState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L90">interface DefaultVpcDhcpOptionsState</a>
 </h2>
 
 Input properties used for looking up and filtering DefaultVpcDhcpOptions resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L85">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L91">property domainName</a>
 </h3>
 
 ```typescript
@@ -13743,7 +13948,7 @@ domainName?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L86">property domainNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L92">property domainNameServers</a>
 </h3>
 
 ```typescript
@@ -13751,7 +13956,7 @@ domainNameServers?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L90">property netbiosNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L96">property netbiosNameServers</a>
 </h3>
 
 ```typescript
@@ -13762,7 +13967,7 @@ netbiosNameServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of NETBIOS name servers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L94">property netbiosNodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L100">property netbiosNodeType</a>
 </h3>
 
 ```typescript
@@ -13773,7 +13978,7 @@ netbiosNodeType?: pulumi.Input<string>;
 The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L95">property ntpServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L101">property ntpServers</a>
 </h3>
 
 ```typescript
@@ -13781,7 +13986,18 @@ ntpServers?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L99">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L105">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the DHCP options set.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpcDhcpOptions.ts#L109">property tags</a>
 </h3>
 
 ```typescript
@@ -13792,13 +14008,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="DefaultVpcState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L152">interface DefaultVpcState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L158">interface DefaultVpcState</a>
 </h2>
 
 Input properties used for looking up and filtering DefaultVpc resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L156">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L162">property arn</a>
 </h3>
 
 ```typescript
@@ -13809,7 +14025,7 @@ arn?: pulumi.Input<string>;
 Amazon Resource Name (ARN) of VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L161">property assignGeneratedIpv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L167">property assignGeneratedIpv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -13821,7 +14037,7 @@ Whether or not an Amazon-provided IPv6 CIDR
 block with a /56 prefix length for the VPC was assigned
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L165">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L171">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -13832,7 +14048,7 @@ cidrBlock?: pulumi.Input<string>;
 The CIDR block of the VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L169">property defaultNetworkAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L175">property defaultNetworkAclId</a>
 </h3>
 
 ```typescript
@@ -13843,7 +14059,7 @@ defaultNetworkAclId?: pulumi.Input<string>;
 The ID of the network ACL created by default on VPC creation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L173">property defaultRouteTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L179">property defaultRouteTableId</a>
 </h3>
 
 ```typescript
@@ -13854,7 +14070,7 @@ defaultRouteTableId?: pulumi.Input<string>;
 The ID of the route table created by default on VPC creation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L177">property defaultSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L183">property defaultSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -13865,7 +14081,7 @@ defaultSecurityGroupId?: pulumi.Input<string>;
 The ID of the security group created by default on VPC creation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L178">property dhcpOptionsId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L184">property dhcpOptionsId</a>
 </h3>
 
 ```typescript
@@ -13873,7 +14089,7 @@ dhcpOptionsId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L184">property enableClassiclink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L190">property enableClassiclink</a>
 </h3>
 
 ```typescript
@@ -13886,7 +14102,7 @@ for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the [ClassicLink documentation][1] for more information. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L185">property enableClassiclinkDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L191">property enableClassiclinkDnsSupport</a>
 </h3>
 
 ```typescript
@@ -13894,7 +14110,7 @@ enableClassiclinkDnsSupport?: pulumi.Input<boolean>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L189">property enableDnsHostnames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L195">property enableDnsHostnames</a>
 </h3>
 
 ```typescript
@@ -13905,7 +14121,7 @@ enableDnsHostnames?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L193">property enableDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L199">property enableDnsSupport</a>
 </h3>
 
 ```typescript
@@ -13916,7 +14132,7 @@ enableDnsSupport?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L197">property instanceTenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L203">property instanceTenancy</a>
 </h3>
 
 ```typescript
@@ -13927,7 +14143,7 @@ instanceTenancy?: pulumi.Input<string>;
 Tenancy of instances spin up within VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L201">property ipv6AssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L207">property ipv6AssociationId</a>
 </h3>
 
 ```typescript
@@ -13938,7 +14154,7 @@ ipv6AssociationId?: pulumi.Input<string>;
 The association ID for the IPv6 CIDR block of the VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L205">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L211">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -13949,7 +14165,7 @@ ipv6CidrBlock?: pulumi.Input<string>;
 The IPv6 CIDR block of the VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L211">property mainRouteTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L217">property mainRouteTableId</a>
 </h3>
 
 ```typescript
@@ -13962,7 +14178,18 @@ this VPC. Note that you can change a VPC's main route table by using an
 [`aws_main_route_table_association`](https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L215">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L221">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the VPC.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/defaultVpc.ts#L225">property tags</a>
 </h3>
 
 ```typescript
@@ -14946,7 +15173,18 @@ ephemeralBlockDevices: { ... }[];
 The ephemeral block device mappings of the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L88">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L88">property hostId</a>
+</h3>
+
+```typescript
+hostId: string;
+```
+
+
+The Id of the dedicated host the instance will be assigned to.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L92">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -14957,7 +15195,7 @@ iamInstanceProfile: string;
 The name of the instance profile associated with the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L172">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L176">property id</a>
 </h3>
 
 ```typescript
@@ -14968,7 +15206,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L89">property instanceState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L93">property instanceState</a>
 </h3>
 
 ```typescript
@@ -14976,7 +15214,7 @@ instanceState: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L90">property instanceTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L94">property instanceTags</a>
 </h3>
 
 ```typescript
@@ -14984,7 +15222,7 @@ instanceTags: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L94">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L98">property instanceType</a>
 </h3>
 
 ```typescript
@@ -14995,7 +15233,7 @@ instanceType: string;
 The type of the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L98">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L102">property keyName</a>
 </h3>
 
 ```typescript
@@ -15006,7 +15244,7 @@ keyName: string;
 The key name of the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L102">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L106">property monitoring</a>
 </h3>
 
 ```typescript
@@ -15017,7 +15255,7 @@ monitoring: boolean;
 Whether detailed monitoring is enabled or disabled for the Instance (Boolean).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L106">property networkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L110">property networkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -15028,7 +15266,7 @@ networkInterfaceId: string;
 The ID of the network interface that was created with the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L113">property passwordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L117">property passwordData</a>
 </h3>
 
 ```typescript
@@ -15042,7 +15280,7 @@ This attribute is only exported if `get_password_data` is true.
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L117">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L121">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -15053,7 +15291,7 @@ placementGroup: string;
 The placement group of the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L123">property privateDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L127">property privateDns</a>
 </h3>
 
 ```typescript
@@ -15066,7 +15304,7 @@ used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L127">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L131">property privateIp</a>
 </h3>
 
 ```typescript
@@ -15077,7 +15315,7 @@ privateIp: string;
 The private IP address assigned to the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L132">property publicDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L136">property publicDns</a>
 </h3>
 
 ```typescript
@@ -15089,7 +15327,7 @@ The public DNS name assigned to the Instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L136">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L140">property publicIp</a>
 </h3>
 
 ```typescript
@@ -15100,7 +15338,7 @@ publicIp: string;
 The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an [`aws_eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L140">property rootBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L144">property rootBlockDevices</a>
 </h3>
 
 ```typescript
@@ -15111,7 +15349,7 @@ rootBlockDevices: { ... }[];
 The root block device mappings of the Instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L144">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L148">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -15122,7 +15360,7 @@ securityGroups: string[];
 The associated security groups.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L148">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L152">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -15133,7 +15371,7 @@ sourceDestCheck: boolean;
 Whether the network interface performs source/destination checking (Boolean).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L152">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L156">property subnetId</a>
 </h3>
 
 ```typescript
@@ -15144,7 +15382,7 @@ subnetId: string;
 The VPC subnet ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L156">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L160">property tags</a>
 </h3>
 
 ```typescript
@@ -15155,7 +15393,7 @@ tags: { ... };
 A mapping of tags assigned to the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L160">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L164">property tenancy</a>
 </h3>
 
 ```typescript
@@ -15166,7 +15404,7 @@ tenancy: string;
 The tenancy of the instance: `dedicated`, `default`, `host`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L164">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L168">property userData</a>
 </h3>
 
 ```typescript
@@ -15177,7 +15415,7 @@ userData: string;
 The User Data supplied to the Instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L168">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L172">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -15342,7 +15580,7 @@ attachments: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInternetGateway.ts#L48">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInternetGateway.ts#L52">property id</a>
 </h3>
 
 ```typescript
@@ -15361,7 +15599,18 @@ internetGatewayId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInternetGateway.ts#L44">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInternetGateway.ts#L47">property ownerId</a>
+</h3>
+
+```typescript
+ownerId: string;
+```
+
+
+The ID of the AWS account that owns the internet gateway.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInternetGateway.ts#L48">property tags</a>
 </h3>
 
 ```typescript
@@ -16712,7 +16961,7 @@ associations: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L71">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L75">property id</a>
 </h3>
 
 ```typescript
@@ -16723,7 +16972,18 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L60">property routeTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L60">property ownerId</a>
+</h3>
+
+```typescript
+ownerId: string;
+```
+
+
+The ID of the AWS account that owns the route table
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L64">property routeTableId</a>
 </h3>
 
 ```typescript
@@ -16734,7 +16994,7 @@ routeTableId: string;
 The Route Table ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L61">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L65">property routes</a>
 </h3>
 
 ```typescript
@@ -16742,7 +17002,7 @@ routes: { ... }[];
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L65">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L69">property subnetId</a>
 </h3>
 
 ```typescript
@@ -16753,7 +17013,7 @@ subnetId: string;
 The Subnet ID.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L66">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L70">property tags</a>
 </h3>
 
 ```typescript
@@ -16761,7 +17021,7 @@ tags: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L67">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getRouteTable.ts#L71">property vpcId</a>
 </h3>
 
 ```typescript
@@ -17047,13 +17307,13 @@ The VPC IDs of the matched security groups. The data source's tag or filter *wil
 unless the `vpc-id` filter is also used.
 
 <h2 class="pdoc-module-header" id="GetSubnetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L32">interface GetSubnetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L33">interface GetSubnetArgs</a>
 </h2>
 
 A collection of arguments for invoking getSubnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L37">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L38">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -17065,7 +17325,18 @@ The availability zone where the
 subnet must reside.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L41">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L42">property availabilityZoneId</a>
+</h3>
+
+```typescript
+availabilityZoneId?: string;
+```
+
+
+The ID of the Availability Zone for the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L46">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -17076,7 +17347,7 @@ cidrBlock?: string;
 The cidr block of the desired subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L46">property defaultForAz</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L51">property defaultForAz</a>
 </h3>
 
 ```typescript
@@ -17088,7 +17359,7 @@ Boolean constraint for whether the desired
 subnet must be the default subnet for its associated availability zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L50">property filters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L55">property filters</a>
 </h3>
 
 ```typescript
@@ -17099,7 +17370,7 @@ filters?: { ... }[];
 Custom filter block as described below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L54">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L59">property id</a>
 </h3>
 
 ```typescript
@@ -17110,7 +17381,7 @@ id?: string;
 The id of the specific subnet to retrieve.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L58">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L63">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -17121,7 +17392,7 @@ ipv6CidrBlock?: string;
 The Ipv6 cidr block of the desired subnet
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L62">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L67">property state</a>
 </h3>
 
 ```typescript
@@ -17132,7 +17403,7 @@ state?: string;
 The state that the desired subnet must have.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L67">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L72">property tags</a>
 </h3>
 
 ```typescript
@@ -17144,7 +17415,7 @@ A mapping of tags, each pair of which must exactly match
 a pair on the desired subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L71">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L76">property vpcId</a>
 </h3>
 
 ```typescript
@@ -17228,13 +17499,13 @@ tags: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="GetSubnetResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L77">interface GetSubnetResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L82">interface GetSubnetResult</a>
 </h2>
 
 A collection of values returned by getSubnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L81">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L86">property arn</a>
 </h3>
 
 ```typescript
@@ -17245,7 +17516,7 @@ arn: string;
 The ARN of the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L82">property assignIpv6AddressOnCreation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L87">property assignIpv6AddressOnCreation</a>
 </h3>
 
 ```typescript
@@ -17253,7 +17524,7 @@ assignIpv6AddressOnCreation: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L83">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L88">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -17261,7 +17532,15 @@ availabilityZone: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L84">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L89">property availabilityZoneId</a>
+</h3>
+
+```typescript
+availabilityZoneId: string;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L90">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -17269,7 +17548,7 @@ cidrBlock: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L85">property defaultForAz</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L91">property defaultForAz</a>
 </h3>
 
 ```typescript
@@ -17277,7 +17556,7 @@ defaultForAz: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L86">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L92">property id</a>
 </h3>
 
 ```typescript
@@ -17285,7 +17564,7 @@ id: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L87">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L93">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -17293,7 +17572,7 @@ ipv6CidrBlock: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L88">property ipv6CidrBlockAssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L94">property ipv6CidrBlockAssociationId</a>
 </h3>
 
 ```typescript
@@ -17301,7 +17580,7 @@ ipv6CidrBlockAssociationId: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L89">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L95">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -17309,7 +17588,18 @@ mapPublicIpOnLaunch: boolean;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L90">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L99">property ownerId</a>
+</h3>
+
+```typescript
+ownerId: string;
+```
+
+
+The ID of the AWS account that owns the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L100">property state</a>
 </h3>
 
 ```typescript
@@ -17317,7 +17607,7 @@ state: string;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L91">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L101">property tags</a>
 </h3>
 
 ```typescript
@@ -17325,7 +17615,7 @@ tags: { ... };
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L92">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getSubnet.ts#L102">property vpcId</a>
 </h3>
 
 ```typescript
@@ -17494,7 +17784,7 @@ domainNameServers: string[];
 List of name servers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L69">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L73">property id</a>
 </h3>
 
 ```typescript
@@ -17538,7 +17828,18 @@ ntpServers: string[];
 List of NTP servers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L65">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L65">property ownerId</a>
+</h3>
+
+```typescript
+ownerId: string;
+```
+
+
+The ID of the AWS account that owns the DHCP options set.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpcDhcpOptions.ts#L69">property tags</a>
 </h3>
 
 ```typescript
@@ -18261,7 +18562,18 @@ mainRouteTableId: string;
 The ID of the main route table associated with this VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpc.ts#L108">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpc.ts#L108">property ownerId</a>
+</h3>
+
+```typescript
+ownerId: string;
+```
+
+
+The ID of the AWS account that owns the VPC.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpc.ts#L112">property state</a>
 </h3>
 
 ```typescript
@@ -18272,7 +18584,7 @@ state: string;
 The State of the association.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpc.ts#L109">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getVpc.ts#L113">property tags</a>
 </h3>
 
 ```typescript
@@ -18483,13 +18795,13 @@ tags: { ... };
 ```
 
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L489">interface InstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L499">interface InstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a Instance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L493">property ami</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L503">property ami</a>
 </h3>
 
 ```typescript
@@ -18500,7 +18812,7 @@ ami: pulumi.Input<string>;
 The AMI to use for the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L497">property associatePublicIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L507">property associatePublicIpAddress</a>
 </h3>
 
 ```typescript
@@ -18511,7 +18823,7 @@ associatePublicIpAddress?: pulumi.Input<boolean>;
 Associate a public ip address with an instance in a VPC.  Boolean value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L501">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L511">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -18522,7 +18834,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L507">property cpuCoreCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L517">property cpuCoreCount</a>
 </h3>
 
 ```typescript
@@ -18535,7 +18847,7 @@ only supported on creation of instance type that support CPU Options
 [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L511">property cpuThreadsPerCore</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L521">property cpuThreadsPerCore</a>
 </h3>
 
 ```typescript
@@ -18546,7 +18858,7 @@ cpuThreadsPerCore?: pulumi.Input<number>;
 If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L515">property creditSpecification</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L525">property creditSpecification</a>
 </h3>
 
 ```typescript
@@ -18557,7 +18869,7 @@ creditSpecification?: pulumi.Input<{ ... }>;
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L520">property disableApiTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L530">property disableApiTermination</a>
 </h3>
 
 ```typescript
@@ -18569,7 +18881,7 @@ If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L525">property ebsBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L535">property ebsBlockDevices</a>
 </h3>
 
 ```typescript
@@ -18581,7 +18893,7 @@ Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L533">property ebsOptimized</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L543">property ebsOptimized</a>
 </h3>
 
 ```typescript
@@ -18596,7 +18908,7 @@ there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L538">property ephemeralBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L548">property ephemeralBlockDevices</a>
 </h3>
 
 ```typescript
@@ -18608,7 +18920,7 @@ Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L542">property getPasswordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L552">property getPasswordData</a>
 </h3>
 
 ```typescript
@@ -18619,7 +18931,18 @@ getPasswordData?: pulumi.Input<boolean>;
 If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L548">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L556">property hostId</a>
+</h3>
+
+```typescript
+hostId?: pulumi.Input<string>;
+```
+
+
+The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L562">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -18632,7 +18955,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
 * `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L555">property instanceInitiatedShutdownBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L569">property instanceInitiatedShutdownBehavior</a>
 </h3>
 
 ```typescript
@@ -18646,7 +18969,7 @@ instance. Amazon defaults this to `stop` for EBS-backed instances and
 instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L559">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L573">property instanceType</a>
 </h3>
 
 ```typescript
@@ -18657,7 +18980,7 @@ instanceType: pulumi.Input<InstanceType>;
 The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L560">property ipv6AddressCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L574">property ipv6AddressCount</a>
 </h3>
 
 ```typescript
@@ -18665,7 +18988,7 @@ ipv6AddressCount?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L564">property ipv6Addresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L578">property ipv6Addresses</a>
 </h3>
 
 ```typescript
@@ -18676,7 +18999,7 @@ ipv6Addresses?: pulumi.Input<pulumi.Input<string>[]>;
 Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L568">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L582">property keyName</a>
 </h3>
 
 ```typescript
@@ -18687,7 +19010,7 @@ keyName?: pulumi.Input<string>;
 The key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L572">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L586">property monitoring</a>
 </h3>
 
 ```typescript
@@ -18698,7 +19021,7 @@ monitoring?: pulumi.Input<boolean>;
 If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L576">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L590">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -18709,7 +19032,7 @@ networkInterfaces?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L580">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L594">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -18720,7 +19043,7 @@ placementGroup?: pulumi.Input<string>;
 The Placement Group to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L585">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L599">property privateIp</a>
 </h3>
 
 ```typescript
@@ -18732,7 +19055,7 @@ Private IP address to associate with the
 instance in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L590">property rootBlockDevice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L604">property rootBlockDevice</a>
 </h3>
 
 ```typescript
@@ -18744,7 +19067,7 @@ Customize details about the root block
 device of the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L594">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L608">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -18755,7 +19078,7 @@ securityGroups?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L599">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L613">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -18767,7 +19090,7 @@ Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L603">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L617">property subnetId</a>
 </h3>
 
 ```typescript
@@ -18778,7 +19101,7 @@ subnetId?: pulumi.Input<string>;
 The VPC Subnet ID to launch in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L607">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L621">property tags</a>
 </h3>
 
 ```typescript
@@ -18789,7 +19112,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L611">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L625">property tenancy</a>
 </h3>
 
 ```typescript
@@ -18800,7 +19123,7 @@ tenancy?: pulumi.Input<string>;
 The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L615">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L629">property userData</a>
 </h3>
 
 ```typescript
@@ -18811,7 +19134,7 @@ userData?: pulumi.Input<string>;
 The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L619">property userDataBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L633">property userDataBase64</a>
 </h3>
 
 ```typescript
@@ -18822,7 +19145,7 @@ userDataBase64?: pulumi.Input<string>;
 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L623">property volumeTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L637">property volumeTags</a>
 </h3>
 
 ```typescript
@@ -18833,7 +19156,7 @@ volumeTags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the devices created by the instance at launch time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L627">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L641">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -18844,13 +19167,13 @@ vpcSecurityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group IDs to associate with.
 
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L309">interface InstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L315">interface InstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering Instance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L313">property ami</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L319">property ami</a>
 </h3>
 
 ```typescript
@@ -18861,7 +19184,7 @@ ami?: pulumi.Input<string>;
 The AMI to use for the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L317">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L323">property arn</a>
 </h3>
 
 ```typescript
@@ -18872,7 +19195,7 @@ arn?: pulumi.Input<string>;
 The ARN of the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L321">property associatePublicIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L327">property associatePublicIpAddress</a>
 </h3>
 
 ```typescript
@@ -18883,7 +19206,7 @@ associatePublicIpAddress?: pulumi.Input<boolean>;
 Associate a public ip address with an instance in a VPC.  Boolean value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L325">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L331">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -18894,7 +19217,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L331">property cpuCoreCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L337">property cpuCoreCount</a>
 </h3>
 
 ```typescript
@@ -18907,7 +19230,7 @@ only supported on creation of instance type that support CPU Options
 [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L335">property cpuThreadsPerCore</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L341">property cpuThreadsPerCore</a>
 </h3>
 
 ```typescript
@@ -18918,7 +19241,7 @@ cpuThreadsPerCore?: pulumi.Input<number>;
 If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L339">property creditSpecification</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L345">property creditSpecification</a>
 </h3>
 
 ```typescript
@@ -18929,7 +19252,7 @@ creditSpecification?: pulumi.Input<{ ... }>;
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L344">property disableApiTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L350">property disableApiTermination</a>
 </h3>
 
 ```typescript
@@ -18941,7 +19264,7 @@ If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L349">property ebsBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L355">property ebsBlockDevices</a>
 </h3>
 
 ```typescript
@@ -18953,7 +19276,7 @@ Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L357">property ebsOptimized</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L363">property ebsOptimized</a>
 </h3>
 
 ```typescript
@@ -18968,7 +19291,7 @@ there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L362">property ephemeralBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L368">property ephemeralBlockDevices</a>
 </h3>
 
 ```typescript
@@ -18980,7 +19303,7 @@ Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L366">property getPasswordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L372">property getPasswordData</a>
 </h3>
 
 ```typescript
@@ -18991,7 +19314,18 @@ getPasswordData?: pulumi.Input<boolean>;
 If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L372">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L376">property hostId</a>
+</h3>
+
+```typescript
+hostId?: pulumi.Input<string>;
+```
+
+
+The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L382">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -19004,7 +19338,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
 * `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L379">property instanceInitiatedShutdownBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L389">property instanceInitiatedShutdownBehavior</a>
 </h3>
 
 ```typescript
@@ -19018,7 +19352,7 @@ instance. Amazon defaults this to `stop` for EBS-backed instances and
 instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L380">property instanceState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L390">property instanceState</a>
 </h3>
 
 ```typescript
@@ -19026,7 +19360,7 @@ instanceState?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L384">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L394">property instanceType</a>
 </h3>
 
 ```typescript
@@ -19037,7 +19371,7 @@ instanceType?: pulumi.Input<InstanceType>;
 The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L385">property ipv6AddressCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L395">property ipv6AddressCount</a>
 </h3>
 
 ```typescript
@@ -19045,7 +19379,7 @@ ipv6AddressCount?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L389">property ipv6Addresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L399">property ipv6Addresses</a>
 </h3>
 
 ```typescript
@@ -19056,7 +19390,7 @@ ipv6Addresses?: pulumi.Input<pulumi.Input<string>[]>;
 Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L393">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L403">property keyName</a>
 </h3>
 
 ```typescript
@@ -19067,7 +19401,7 @@ keyName?: pulumi.Input<string>;
 The key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L397">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L407">property monitoring</a>
 </h3>
 
 ```typescript
@@ -19078,7 +19412,7 @@ monitoring?: pulumi.Input<boolean>;
 If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L405">property networkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L415">property networkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -19089,7 +19423,7 @@ networkInterfaceId?: pulumi.Input<string>;
 The ID of the network interface that was created with the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L401">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L411">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -19100,7 +19434,7 @@ networkInterfaces?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L413">property passwordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L423">property passwordData</a>
 </h3>
 
 ```typescript
@@ -19115,7 +19449,7 @@ Note that this encrypted value will be stored in the state file, as with all exp
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L417">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L427">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -19126,7 +19460,7 @@ placementGroup?: pulumi.Input<string>;
 The Placement Group to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L421">property primaryNetworkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L431">property primaryNetworkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -19137,7 +19471,7 @@ primaryNetworkInterfaceId?: pulumi.Input<string>;
 The ID of the instance's primary network interface.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L427">property privateDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L437">property privateDns</a>
 </h3>
 
 ```typescript
@@ -19150,7 +19484,7 @@ used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L432">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L442">property privateIp</a>
 </h3>
 
 ```typescript
@@ -19162,7 +19496,7 @@ Private IP address to associate with the
 instance in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L437">property publicDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L447">property publicDns</a>
 </h3>
 
 ```typescript
@@ -19174,7 +19508,7 @@ The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L441">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L451">property publicIp</a>
 </h3>
 
 ```typescript
@@ -19185,7 +19519,7 @@ publicIp?: pulumi.Input<string>;
 The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws_eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L446">property rootBlockDevice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L456">property rootBlockDevice</a>
 </h3>
 
 ```typescript
@@ -19197,7 +19531,7 @@ Customize details about the root block
 device of the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L450">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L460">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -19208,7 +19542,7 @@ securityGroups?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L455">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L465">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -19220,7 +19554,7 @@ Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L459">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L469">property subnetId</a>
 </h3>
 
 ```typescript
@@ -19231,7 +19565,7 @@ subnetId?: pulumi.Input<string>;
 The VPC Subnet ID to launch in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L463">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L473">property tags</a>
 </h3>
 
 ```typescript
@@ -19242,7 +19576,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L467">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L477">property tenancy</a>
 </h3>
 
 ```typescript
@@ -19253,7 +19587,7 @@ tenancy?: pulumi.Input<string>;
 The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L471">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L481">property userData</a>
 </h3>
 
 ```typescript
@@ -19264,7 +19598,7 @@ userData?: pulumi.Input<string>;
 The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L475">property userDataBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L485">property userDataBase64</a>
 </h3>
 
 ```typescript
@@ -19275,7 +19609,7 @@ userDataBase64?: pulumi.Input<string>;
 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L479">property volumeTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L489">property volumeTags</a>
 </h3>
 
 ```typescript
@@ -19286,7 +19620,7 @@ volumeTags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the devices created by the instance at launch time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L483">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instance.ts#L493">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -19297,13 +19631,13 @@ vpcSecurityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group IDs to associate with.
 
 <h2 class="pdoc-module-header" id="InternetGatewayArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L74">interface InternetGatewayArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L84">interface InternetGatewayArgs</a>
 </h2>
 
 The set of arguments for constructing a InternetGateway resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L78">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L88">property tags</a>
 </h3>
 
 ```typescript
@@ -19314,7 +19648,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L82">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L92">property vpcId</a>
 </h3>
 
 ```typescript
@@ -19325,13 +19659,24 @@ vpcId?: pulumi.Input<string>;
 The VPC ID to create in.
 
 <h2 class="pdoc-module-header" id="InternetGatewayState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L60">interface InternetGatewayState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L66">interface InternetGatewayState</a>
 </h2>
 
 Input properties used for looking up and filtering InternetGateway resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L64">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L70">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the internet gateway.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L74">property tags</a>
 </h3>
 
 ```typescript
@@ -19342,7 +19687,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L68">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/internetGateway.ts#L78">property vpcId</a>
 </h3>
 
 ```typescript
@@ -20681,13 +21026,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="NetworkAclArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L126">interface NetworkAclArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L136">interface NetworkAclArgs</a>
 </h2>
 
 The set of arguments for constructing a NetworkAcl resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L130">property egress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L140">property egress</a>
 </h3>
 
 ```typescript
@@ -20698,7 +21043,7 @@ egress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an egress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L134">property ingress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L144">property ingress</a>
 </h3>
 
 ```typescript
@@ -20709,7 +21054,7 @@ ingress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an ingress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L139">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L149">property subnetId</a>
 </h3>
 
 ```typescript
@@ -20721,7 +21066,7 @@ The ID of the associated Subnet. This
 attribute is deprecated, please use the `subnet_ids` attribute instead
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L143">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L153">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -20732,7 +21077,7 @@ subnetIds?: pulumi.Input<pulumi.Input<string>[]>;
 A list of Subnet IDs to apply the ACL to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L147">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L157">property tags</a>
 </h3>
 
 ```typescript
@@ -20743,7 +21088,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L151">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L161">property vpcId</a>
 </h3>
 
 ```typescript
@@ -21008,13 +21353,13 @@ toPort?: pulumi.Input<number>;
 The to port to match.
 
 <h2 class="pdoc-module-header" id="NetworkAclState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L95">interface NetworkAclState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L101">interface NetworkAclState</a>
 </h2>
 
 Input properties used for looking up and filtering NetworkAcl resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L99">property egress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L105">property egress</a>
 </h3>
 
 ```typescript
@@ -21025,7 +21370,7 @@ egress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an egress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L103">property ingress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L109">property ingress</a>
 </h3>
 
 ```typescript
@@ -21036,7 +21381,18 @@ ingress?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Specifies an ingress rule. Parameters defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L108">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L113">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the network ACL.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L118">property subnetId</a>
 </h3>
 
 ```typescript
@@ -21048,7 +21404,7 @@ The ID of the associated Subnet. This
 attribute is deprecated, please use the `subnet_ids` attribute instead
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L112">property subnetIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L122">property subnetIds</a>
 </h3>
 
 ```typescript
@@ -21059,7 +21415,7 @@ subnetIds?: pulumi.Input<pulumi.Input<string>[]>;
 A list of Subnet IDs to apply the ACL to
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L116">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L126">property tags</a>
 </h3>
 
 ```typescript
@@ -21070,7 +21426,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L120">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/networkAcl.ts#L130">property vpcId</a>
 </h3>
 
 ```typescript
@@ -21915,13 +22271,13 @@ vpcPeeringConnectionId?: pulumi.Input<string>;
 Identifier of a VPC peering connection.
 
 <h2 class="pdoc-module-header" id="RouteTableArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L116">interface RouteTableArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L126">interface RouteTableArgs</a>
 </h2>
 
 The set of arguments for constructing a RouteTable resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L120">property propagatingVgws</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L130">property propagatingVgws</a>
 </h3>
 
 ```typescript
@@ -21932,7 +22288,7 @@ propagatingVgws?: pulumi.Input<pulumi.Input<string>[]>;
 A list of virtual gateways for propagation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L124">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L134">property routes</a>
 </h3>
 
 ```typescript
@@ -21943,7 +22299,7 @@ routes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of route objects. Their keys are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L128">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L138">property tags</a>
 </h3>
 
 ```typescript
@@ -21954,7 +22310,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L132">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L142">property vpcId</a>
 </h3>
 
 ```typescript
@@ -22021,13 +22377,24 @@ subnetId?: pulumi.Input<string>;
 The subnet ID to create an association.
 
 <h2 class="pdoc-module-header" id="RouteTableState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L94">interface RouteTableState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L100">interface RouteTableState</a>
 </h2>
 
 Input properties used for looking up and filtering RouteTable resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L98">property propagatingVgws</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L104">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the route table
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L108">property propagatingVgws</a>
 </h3>
 
 ```typescript
@@ -22038,7 +22405,7 @@ propagatingVgws?: pulumi.Input<pulumi.Input<string>[]>;
 A list of virtual gateways for propagation.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L102">property routes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L112">property routes</a>
 </h3>
 
 ```typescript
@@ -22049,7 +22416,7 @@ routes?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of route objects. Their keys are documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L106">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L116">property tags</a>
 </h3>
 
 ```typescript
@@ -22060,7 +22427,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L110">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/routeTable.ts#L120">property vpcId</a>
 </h3>
 
 ```typescript
@@ -23106,13 +23473,13 @@ wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
 
 <h2 class="pdoc-module-header" id="SpotInstanceRequestArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L604">interface SpotInstanceRequestArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L614">interface SpotInstanceRequestArgs</a>
 </h2>
 
 The set of arguments for constructing a SpotInstanceRequest resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L608">property ami</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L618">property ami</a>
 </h3>
 
 ```typescript
@@ -23123,7 +23490,7 @@ ami: pulumi.Input<string>;
 The AMI to use for the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L612">property associatePublicIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L622">property associatePublicIpAddress</a>
 </h3>
 
 ```typescript
@@ -23134,7 +23501,7 @@ associatePublicIpAddress?: pulumi.Input<boolean>;
 Associate a public ip address with an instance in a VPC.  Boolean value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L616">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L626">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -23145,7 +23512,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L622">property blockDurationMinutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L632">property blockDurationMinutes</a>
 </h3>
 
 ```typescript
@@ -23158,7 +23525,7 @@ The duration period starts as soon as your Spot instance receives its instance I
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L628">property cpuCoreCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L638">property cpuCoreCount</a>
 </h3>
 
 ```typescript
@@ -23171,7 +23538,7 @@ only supported on creation of instance type that support CPU Options
 [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L632">property cpuThreadsPerCore</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L642">property cpuThreadsPerCore</a>
 </h3>
 
 ```typescript
@@ -23182,7 +23549,7 @@ cpuThreadsPerCore?: pulumi.Input<number>;
 If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L636">property creditSpecification</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L646">property creditSpecification</a>
 </h3>
 
 ```typescript
@@ -23193,7 +23560,7 @@ creditSpecification?: pulumi.Input<{ ... }>;
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L641">property disableApiTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L651">property disableApiTermination</a>
 </h3>
 
 ```typescript
@@ -23205,7 +23572,7 @@ If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L646">property ebsBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L656">property ebsBlockDevices</a>
 </h3>
 
 ```typescript
@@ -23217,7 +23584,7 @@ Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L654">property ebsOptimized</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L664">property ebsOptimized</a>
 </h3>
 
 ```typescript
@@ -23232,7 +23599,7 @@ there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L659">property ephemeralBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L669">property ephemeralBlockDevices</a>
 </h3>
 
 ```typescript
@@ -23244,7 +23611,7 @@ Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L663">property getPasswordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L673">property getPasswordData</a>
 </h3>
 
 ```typescript
@@ -23255,7 +23622,18 @@ getPasswordData?: pulumi.Input<boolean>;
 If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L669">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L677">property hostId</a>
+</h3>
+
+```typescript
+hostId?: pulumi.Input<string>;
+```
+
+
+The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L683">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -23268,7 +23646,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
 * `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L676">property instanceInitiatedShutdownBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L690">property instanceInitiatedShutdownBehavior</a>
 </h3>
 
 ```typescript
@@ -23282,7 +23660,7 @@ instance. Amazon defaults this to `stop` for EBS-backed instances and
 instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L680">property instanceInterruptionBehaviour</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L694">property instanceInterruptionBehaviour</a>
 </h3>
 
 ```typescript
@@ -23293,7 +23671,7 @@ instanceInterruptionBehaviour?: pulumi.Input<string>;
 Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L684">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L698">property instanceType</a>
 </h3>
 
 ```typescript
@@ -23304,7 +23682,7 @@ instanceType: pulumi.Input<string>;
 The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L685">property ipv6AddressCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L699">property ipv6AddressCount</a>
 </h3>
 
 ```typescript
@@ -23312,7 +23690,7 @@ ipv6AddressCount?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L689">property ipv6Addresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L703">property ipv6Addresses</a>
 </h3>
 
 ```typescript
@@ -23323,7 +23701,7 @@ ipv6Addresses?: pulumi.Input<pulumi.Input<string>[]>;
 Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L693">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L707">property keyName</a>
 </h3>
 
 ```typescript
@@ -23334,7 +23712,7 @@ keyName?: pulumi.Input<string>;
 The key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L698">property launchGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L712">property launchGroup</a>
 </h3>
 
 ```typescript
@@ -23346,7 +23724,7 @@ A launch group is a group of spot instances that launch together and terminate t
 If left empty instances are launched and terminated individually.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L702">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L716">property monitoring</a>
 </h3>
 
 ```typescript
@@ -23357,7 +23735,7 @@ monitoring?: pulumi.Input<boolean>;
 If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L706">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L720">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -23368,7 +23746,7 @@ networkInterfaces?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L710">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L724">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -23379,7 +23757,7 @@ placementGroup?: pulumi.Input<string>;
 The Placement Group to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L715">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L729">property privateIp</a>
 </h3>
 
 ```typescript
@@ -23391,7 +23769,7 @@ Private IP address to associate with the
 instance in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L720">property rootBlockDevice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L734">property rootBlockDevice</a>
 </h3>
 
 ```typescript
@@ -23403,7 +23781,7 @@ Customize details about the root block
 device of the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L724">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L738">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -23414,7 +23792,7 @@ securityGroups?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L729">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L743">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -23426,7 +23804,7 @@ Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L733">property spotPrice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L747">property spotPrice</a>
 </h3>
 
 ```typescript
@@ -23437,7 +23815,7 @@ spotPrice?: pulumi.Input<string>;
 The maximum price to request on the spot market.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L738">property spotType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L752">property spotType</a>
 </h3>
 
 ```typescript
@@ -23449,7 +23827,7 @@ If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L742">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L756">property subnetId</a>
 </h3>
 
 ```typescript
@@ -23460,7 +23838,7 @@ subnetId?: pulumi.Input<string>;
 The VPC Subnet ID to launch in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L746">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L760">property tags</a>
 </h3>
 
 ```typescript
@@ -23471,7 +23849,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L750">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L764">property tenancy</a>
 </h3>
 
 ```typescript
@@ -23482,7 +23860,7 @@ tenancy?: pulumi.Input<string>;
 The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L754">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L768">property userData</a>
 </h3>
 
 ```typescript
@@ -23493,7 +23871,7 @@ userData?: pulumi.Input<string>;
 The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L758">property userDataBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L772">property userDataBase64</a>
 </h3>
 
 ```typescript
@@ -23504,7 +23882,7 @@ userDataBase64?: pulumi.Input<string>;
 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L762">property validFrom</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L776">property validFrom</a>
 </h3>
 
 ```typescript
@@ -23515,7 +23893,7 @@ validFrom?: pulumi.Input<string>;
 The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L766">property validUntil</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L780">property validUntil</a>
 </h3>
 
 ```typescript
@@ -23526,7 +23904,7 @@ validUntil?: pulumi.Input<string>;
 The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L770">property volumeTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L784">property volumeTags</a>
 </h3>
 
 ```typescript
@@ -23537,7 +23915,7 @@ volumeTags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the devices created by the instance at launch time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L774">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L788">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -23548,7 +23926,7 @@ vpcSecurityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group IDs to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L780">property waitForFulfillment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L794">property waitForFulfillment</a>
 </h3>
 
 ```typescript
@@ -23561,13 +23939,13 @@ wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
 
 <h2 class="pdoc-module-header" id="SpotInstanceRequestState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L387">interface SpotInstanceRequestState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L393">interface SpotInstanceRequestState</a>
 </h2>
 
 Input properties used for looking up and filtering SpotInstanceRequest resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L391">property ami</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L397">property ami</a>
 </h3>
 
 ```typescript
@@ -23578,7 +23956,7 @@ ami?: pulumi.Input<string>;
 The AMI to use for the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L392">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L398">property arn</a>
 </h3>
 
 ```typescript
@@ -23586,7 +23964,7 @@ arn?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L396">property associatePublicIpAddress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L402">property associatePublicIpAddress</a>
 </h3>
 
 ```typescript
@@ -23597,7 +23975,7 @@ associatePublicIpAddress?: pulumi.Input<boolean>;
 Associate a public ip address with an instance in a VPC.  Boolean value.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L400">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L406">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -23608,7 +23986,7 @@ availabilityZone?: pulumi.Input<string>;
 The AZ to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L406">property blockDurationMinutes</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L412">property blockDurationMinutes</a>
 </h3>
 
 ```typescript
@@ -23621,7 +23999,7 @@ The duration period starts as soon as your Spot instance receives its instance I
 Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L412">property cpuCoreCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L418">property cpuCoreCount</a>
 </h3>
 
 ```typescript
@@ -23634,7 +24012,7 @@ only supported on creation of instance type that support CPU Options
 [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L416">property cpuThreadsPerCore</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L422">property cpuThreadsPerCore</a>
 </h3>
 
 ```typescript
@@ -23645,7 +24023,7 @@ cpuThreadsPerCore?: pulumi.Input<number>;
 If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L420">property creditSpecification</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L426">property creditSpecification</a>
 </h3>
 
 ```typescript
@@ -23656,7 +24034,7 @@ creditSpecification?: pulumi.Input<{ ... }>;
 Customize the credit specification of the instance. See Credit Specification below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L425">property disableApiTermination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L431">property disableApiTermination</a>
 </h3>
 
 ```typescript
@@ -23668,7 +24046,7 @@ If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L430">property ebsBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L436">property ebsBlockDevices</a>
 </h3>
 
 ```typescript
@@ -23680,7 +24058,7 @@ Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L438">property ebsOptimized</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L444">property ebsOptimized</a>
 </h3>
 
 ```typescript
@@ -23695,7 +24073,7 @@ there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L443">property ephemeralBlockDevices</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L449">property ephemeralBlockDevices</a>
 </h3>
 
 ```typescript
@@ -23707,7 +24085,7 @@ Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L447">property getPasswordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L453">property getPasswordData</a>
 </h3>
 
 ```typescript
@@ -23718,7 +24096,18 @@ getPasswordData?: pulumi.Input<boolean>;
 If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L453">property iamInstanceProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L457">property hostId</a>
+</h3>
+
+```typescript
+hostId?: pulumi.Input<string>;
+```
+
+
+The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L463">property iamInstanceProfile</a>
 </h3>
 
 ```typescript
@@ -23731,7 +24120,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
 * `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L460">property instanceInitiatedShutdownBehavior</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L470">property instanceInitiatedShutdownBehavior</a>
 </h3>
 
 ```typescript
@@ -23745,7 +24134,7 @@ instance. Amazon defaults this to `stop` for EBS-backed instances and
 instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L464">property instanceInterruptionBehaviour</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L474">property instanceInterruptionBehaviour</a>
 </h3>
 
 ```typescript
@@ -23756,7 +24145,7 @@ instanceInterruptionBehaviour?: pulumi.Input<string>;
 Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L465">property instanceState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L475">property instanceState</a>
 </h3>
 
 ```typescript
@@ -23764,7 +24153,7 @@ instanceState?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L469">property instanceType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L479">property instanceType</a>
 </h3>
 
 ```typescript
@@ -23775,7 +24164,7 @@ instanceType?: pulumi.Input<string>;
 The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L470">property ipv6AddressCount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L480">property ipv6AddressCount</a>
 </h3>
 
 ```typescript
@@ -23783,7 +24172,7 @@ ipv6AddressCount?: pulumi.Input<number>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L474">property ipv6Addresses</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L484">property ipv6Addresses</a>
 </h3>
 
 ```typescript
@@ -23794,7 +24183,7 @@ ipv6Addresses?: pulumi.Input<pulumi.Input<string>[]>;
 Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L478">property keyName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L488">property keyName</a>
 </h3>
 
 ```typescript
@@ -23805,7 +24194,7 @@ keyName?: pulumi.Input<string>;
 The key name of the Key Pair to use for the instance; which can be managed using the `aws_key_pair` resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L483">property launchGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L493">property launchGroup</a>
 </h3>
 
 ```typescript
@@ -23817,7 +24206,7 @@ A launch group is a group of spot instances that launch together and terminate t
 If left empty instances are launched and terminated individually.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L487">property monitoring</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L497">property monitoring</a>
 </h3>
 
 ```typescript
@@ -23828,7 +24217,7 @@ monitoring?: pulumi.Input<boolean>;
 If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L492">property networkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L502">property networkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -23836,7 +24225,7 @@ networkInterfaceId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L491">property networkInterfaces</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L501">property networkInterfaces</a>
 </h3>
 
 ```typescript
@@ -23847,7 +24236,7 @@ networkInterfaces?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L493">property passwordData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L503">property passwordData</a>
 </h3>
 
 ```typescript
@@ -23855,7 +24244,7 @@ passwordData?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L497">property placementGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L507">property placementGroup</a>
 </h3>
 
 ```typescript
@@ -23866,7 +24255,7 @@ placementGroup?: pulumi.Input<string>;
 The Placement Group to start the instance in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L498">property primaryNetworkInterfaceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L508">property primaryNetworkInterfaceId</a>
 </h3>
 
 ```typescript
@@ -23874,7 +24263,7 @@ primaryNetworkInterfaceId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L504">property privateDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L514">property privateDns</a>
 </h3>
 
 ```typescript
@@ -23887,7 +24276,7 @@ used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L509">property privateIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L519">property privateIp</a>
 </h3>
 
 ```typescript
@@ -23899,7 +24288,7 @@ Private IP address to associate with the
 instance in a VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L514">property publicDns</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L524">property publicDns</a>
 </h3>
 
 ```typescript
@@ -23911,7 +24300,7 @@ The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L518">property publicIp</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L528">property publicIp</a>
 </h3>
 
 ```typescript
@@ -23922,7 +24311,7 @@ publicIp?: pulumi.Input<string>;
 The public IP address assigned to the instance, if applicable.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L523">property rootBlockDevice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L533">property rootBlockDevice</a>
 </h3>
 
 ```typescript
@@ -23934,7 +24323,7 @@ Customize details about the root block
 device of the instance. See Block Devices below for details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L527">property securityGroups</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L537">property securityGroups</a>
 </h3>
 
 ```typescript
@@ -23945,7 +24334,7 @@ securityGroups?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L532">property sourceDestCheck</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L542">property sourceDestCheck</a>
 </h3>
 
 ```typescript
@@ -23957,7 +24346,7 @@ Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L541">property spotBidStatus</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L551">property spotBidStatus</a>
 </h3>
 
 ```typescript
@@ -23973,7 +24362,7 @@ state](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#cr
 of the Spot Instance Request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L546">property spotInstanceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L556">property spotInstanceId</a>
 </h3>
 
 ```typescript
@@ -23985,7 +24374,7 @@ The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L550">property spotPrice</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L560">property spotPrice</a>
 </h3>
 
 ```typescript
@@ -23996,7 +24385,7 @@ spotPrice?: pulumi.Input<string>;
 The maximum price to request on the spot market.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L551">property spotRequestState</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L561">property spotRequestState</a>
 </h3>
 
 ```typescript
@@ -24004,7 +24393,7 @@ spotRequestState?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L556">property spotType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L566">property spotType</a>
 </h3>
 
 ```typescript
@@ -24016,7 +24405,7 @@ If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L560">property subnetId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L570">property subnetId</a>
 </h3>
 
 ```typescript
@@ -24027,7 +24416,7 @@ subnetId?: pulumi.Input<string>;
 The VPC Subnet ID to launch in.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L564">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L574">property tags</a>
 </h3>
 
 ```typescript
@@ -24038,7 +24427,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L568">property tenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L578">property tenancy</a>
 </h3>
 
 ```typescript
@@ -24049,7 +24438,7 @@ tenancy?: pulumi.Input<string>;
 The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L572">property userData</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L582">property userData</a>
 </h3>
 
 ```typescript
@@ -24060,7 +24449,7 @@ userData?: pulumi.Input<string>;
 The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L576">property userDataBase64</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L586">property userDataBase64</a>
 </h3>
 
 ```typescript
@@ -24071,7 +24460,7 @@ userDataBase64?: pulumi.Input<string>;
 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L580">property validFrom</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L590">property validFrom</a>
 </h3>
 
 ```typescript
@@ -24082,7 +24471,7 @@ validFrom?: pulumi.Input<string>;
 The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L584">property validUntil</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L594">property validUntil</a>
 </h3>
 
 ```typescript
@@ -24093,7 +24482,7 @@ validUntil?: pulumi.Input<string>;
 The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L588">property volumeTags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L598">property volumeTags</a>
 </h3>
 
 ```typescript
@@ -24104,7 +24493,7 @@ volumeTags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the devices created by the instance at launch time.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L592">property vpcSecurityGroupIds</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L602">property vpcSecurityGroupIds</a>
 </h3>
 
 ```typescript
@@ -24115,7 +24504,7 @@ vpcSecurityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 A list of security group IDs to associate with.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L598">property waitForFulfillment</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/spotInstanceRequest.ts#L608">property waitForFulfillment</a>
 </h3>
 
 ```typescript
@@ -24128,13 +24517,13 @@ wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
 
 <h2 class="pdoc-module-header" id="SubnetArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L156">interface SubnetArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L180">interface SubnetArgs</a>
 </h2>
 
 The set of arguments for constructing a Subnet resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L162">property assignIpv6AddressOnCreation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L186">property assignIpv6AddressOnCreation</a>
 </h3>
 
 ```typescript
@@ -24147,15 +24536,29 @@ that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L163">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L190">property availabilityZone</a>
 </h3>
 
 ```typescript
 availabilityZone?: pulumi.Input<string>;
 ```
 
+
+The AZ for the subnet.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L167">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L194">property availabilityZoneId</a>
+</h3>
+
+```typescript
+availabilityZoneId?: pulumi.Input<string>;
+```
+
+
+The AZ ID of the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L198">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -24166,7 +24569,7 @@ cidrBlock: pulumi.Input<string>;
 The CIDR block for the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L172">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L203">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -24178,7 +24581,7 @@ The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L178">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L209">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -24191,7 +24594,7 @@ that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L182">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L213">property tags</a>
 </h3>
 
 ```typescript
@@ -24202,7 +24605,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L186">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L217">property vpcId</a>
 </h3>
 
 ```typescript
@@ -24213,13 +24616,13 @@ vpcId: pulumi.Input<string>;
 The VPC ID.
 
 <h2 class="pdoc-module-header" id="SubnetState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L111">interface SubnetState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L125">interface SubnetState</a>
 </h2>
 
 Input properties used for looking up and filtering Subnet resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L116">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L129">property arn</a>
 </h3>
 
 ```typescript
@@ -24228,10 +24631,9 @@ arn?: pulumi.Input<string>;
 
 
 The ARN of the subnet.
-* `availability_zone`- The AZ for the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L122">property assignIpv6AddressOnCreation</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L135">property assignIpv6AddressOnCreation</a>
 </h3>
 
 ```typescript
@@ -24244,15 +24646,29 @@ that network interfaces created in the specified subnet should be
 assigned an IPv6 address. Default is `false`
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L123">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L139">property availabilityZone</a>
 </h3>
 
 ```typescript
 availabilityZone?: pulumi.Input<string>;
 ```
 
+
+The AZ for the subnet.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L127">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L143">property availabilityZoneId</a>
+</h3>
+
+```typescript
+availabilityZoneId?: pulumi.Input<string>;
+```
+
+
+The AZ ID of the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L147">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -24263,7 +24679,7 @@ cidrBlock?: pulumi.Input<string>;
 The CIDR block for the subnet.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L132">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L152">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -24275,7 +24691,7 @@ The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L136">property ipv6CidrBlockAssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L156">property ipv6CidrBlockAssociationId</a>
 </h3>
 
 ```typescript
@@ -24286,7 +24702,7 @@ ipv6CidrBlockAssociationId?: pulumi.Input<string>;
 The association ID for the IPv6 CIDR block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L142">property mapPublicIpOnLaunch</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L162">property mapPublicIpOnLaunch</a>
 </h3>
 
 ```typescript
@@ -24299,7 +24715,18 @@ that instances launched into the subnet should be assigned
 a public IP address. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L146">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L166">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the subnet.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L170">property tags</a>
 </h3>
 
 ```typescript
@@ -24310,7 +24737,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L150">property vpcId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/subnet.ts#L174">property vpcId</a>
 </h3>
 
 ```typescript
@@ -24459,13 +24886,13 @@ volumeId?: pulumi.Input<string>;
 ID of the Volume to be attached
 
 <h2 class="pdoc-module-header" id="VpcArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L225">interface VpcArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L235">interface VpcArgs</a>
 </h2>
 
 The set of arguments for constructing a Vpc resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L231">property assignGeneratedIpv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L241">property assignGeneratedIpv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -24478,7 +24905,7 @@ block with a /56 prefix length for the VPC. You cannot specify the range of IP a
 the size of the CIDR block. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L235">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L245">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -24489,7 +24916,7 @@ cidrBlock: pulumi.Input<string>;
 The CIDR block for the VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L241">property enableClassiclink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L251">property enableClassiclink</a>
 </h3>
 
 ```typescript
@@ -24502,7 +24929,7 @@ for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the [ClassicLink documentation][1] for more information. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L246">property enableClassiclinkDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L256">property enableClassiclinkDnsSupport</a>
 </h3>
 
 ```typescript
@@ -24514,7 +24941,7 @@ A boolean flag to enable/disable ClassicLink DNS Support for the VPC.
 Only valid in regions and accounts that support EC2 Classic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L250">property enableDnsHostnames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L260">property enableDnsHostnames</a>
 </h3>
 
 ```typescript
@@ -24525,7 +24952,7 @@ enableDnsHostnames?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L254">property enableDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L264">property enableDnsSupport</a>
 </h3>
 
 ```typescript
@@ -24536,7 +24963,7 @@ enableDnsSupport?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L258">property instanceTenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L268">property instanceTenancy</a>
 </h3>
 
 ```typescript
@@ -24547,7 +24974,7 @@ instanceTenancy?: pulumi.Input<string>;
 A tenancy option for instances launched into the VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L262">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L272">property tags</a>
 </h3>
 
 ```typescript
@@ -24558,13 +24985,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="VpcDhcpOptionsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L118">interface VpcDhcpOptionsArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L128">interface VpcDhcpOptionsArgs</a>
 </h2>
 
 The set of arguments for constructing a VpcDhcpOptions resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L122">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L132">property domainName</a>
 </h3>
 
 ```typescript
@@ -24575,7 +25002,7 @@ domainName?: pulumi.Input<string>;
 the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L126">property domainNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L136">property domainNameServers</a>
 </h3>
 
 ```typescript
@@ -24586,7 +25013,7 @@ domainNameServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L130">property netbiosNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L140">property netbiosNameServers</a>
 </h3>
 
 ```typescript
@@ -24597,7 +25024,7 @@ netbiosNameServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of NETBIOS name servers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L134">property netbiosNodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L144">property netbiosNodeType</a>
 </h3>
 
 ```typescript
@@ -24608,7 +25035,7 @@ netbiosNodeType?: pulumi.Input<string>;
 The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L138">property ntpServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L148">property ntpServers</a>
 </h3>
 
 ```typescript
@@ -24619,7 +25046,7 @@ ntpServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of NTP servers to configure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L142">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L152">property tags</a>
 </h3>
 
 ```typescript
@@ -24686,13 +25113,13 @@ vpcId?: pulumi.Input<string>;
 The ID of the VPC to which we would like to associate a DHCP Options Set.
 
 <h2 class="pdoc-module-header" id="VpcDhcpOptionsState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L88">interface VpcDhcpOptionsState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L94">interface VpcDhcpOptionsState</a>
 </h2>
 
 Input properties used for looking up and filtering VpcDhcpOptions resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L92">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L98">property domainName</a>
 </h3>
 
 ```typescript
@@ -24703,7 +25130,7 @@ domainName?: pulumi.Input<string>;
 the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L96">property domainNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L102">property domainNameServers</a>
 </h3>
 
 ```typescript
@@ -24714,7 +25141,7 @@ domainNameServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L100">property netbiosNameServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L106">property netbiosNameServers</a>
 </h3>
 
 ```typescript
@@ -24725,7 +25152,7 @@ netbiosNameServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of NETBIOS name servers.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L104">property netbiosNodeType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L110">property netbiosNodeType</a>
 </h3>
 
 ```typescript
@@ -24736,7 +25163,7 @@ netbiosNodeType?: pulumi.Input<string>;
 The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L108">property ntpServers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L114">property ntpServers</a>
 </h3>
 
 ```typescript
@@ -24747,7 +25174,18 @@ ntpServers?: pulumi.Input<pulumi.Input<string>[]>;
 List of NTP servers to configure.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L112">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L118">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the DHCP options set.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpcDhcpOptions.ts#L122">property tags</a>
 </h3>
 
 ```typescript
@@ -25907,13 +26345,13 @@ vpcId?: pulumi.Input<string>;
 The ID of the requester VPC.
 
 <h2 class="pdoc-module-header" id="VpcState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L151">interface VpcState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L157">interface VpcState</a>
 </h2>
 
 Input properties used for looking up and filtering Vpc resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L155">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L161">property arn</a>
 </h3>
 
 ```typescript
@@ -25924,7 +26362,7 @@ arn?: pulumi.Input<string>;
 Amazon Resource Name (ARN) of VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L161">property assignGeneratedIpv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L167">property assignGeneratedIpv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -25937,7 +26375,7 @@ block with a /56 prefix length for the VPC. You cannot specify the range of IP a
 the size of the CIDR block. Default is `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L165">property cidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L171">property cidrBlock</a>
 </h3>
 
 ```typescript
@@ -25948,7 +26386,7 @@ cidrBlock?: pulumi.Input<string>;
 The CIDR block for the VPC.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L169">property defaultNetworkAclId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L175">property defaultNetworkAclId</a>
 </h3>
 
 ```typescript
@@ -25959,7 +26397,7 @@ defaultNetworkAclId?: pulumi.Input<string>;
 The ID of the network ACL created by default on VPC creation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L173">property defaultRouteTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L179">property defaultRouteTableId</a>
 </h3>
 
 ```typescript
@@ -25970,7 +26408,7 @@ defaultRouteTableId?: pulumi.Input<string>;
 The ID of the route table created by default on VPC creation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L177">property defaultSecurityGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L183">property defaultSecurityGroupId</a>
 </h3>
 
 ```typescript
@@ -25981,7 +26419,7 @@ defaultSecurityGroupId?: pulumi.Input<string>;
 The ID of the security group created by default on VPC creation
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L178">property dhcpOptionsId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L184">property dhcpOptionsId</a>
 </h3>
 
 ```typescript
@@ -25989,7 +26427,7 @@ dhcpOptionsId?: pulumi.Input<string>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L184">property enableClassiclink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L190">property enableClassiclink</a>
 </h3>
 
 ```typescript
@@ -26002,7 +26440,7 @@ for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the [ClassicLink documentation][1] for more information. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L189">property enableClassiclinkDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L195">property enableClassiclinkDnsSupport</a>
 </h3>
 
 ```typescript
@@ -26014,7 +26452,7 @@ A boolean flag to enable/disable ClassicLink DNS Support for the VPC.
 Only valid in regions and accounts that support EC2 Classic.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L193">property enableDnsHostnames</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L199">property enableDnsHostnames</a>
 </h3>
 
 ```typescript
@@ -26025,7 +26463,7 @@ enableDnsHostnames?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L197">property enableDnsSupport</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L203">property enableDnsSupport</a>
 </h3>
 
 ```typescript
@@ -26036,7 +26474,7 @@ enableDnsSupport?: pulumi.Input<boolean>;
 A boolean flag to enable/disable DNS support in the VPC. Defaults true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L201">property instanceTenancy</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L207">property instanceTenancy</a>
 </h3>
 
 ```typescript
@@ -26047,7 +26485,7 @@ instanceTenancy?: pulumi.Input<string>;
 A tenancy option for instances launched into the VPC
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L205">property ipv6AssociationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L211">property ipv6AssociationId</a>
 </h3>
 
 ```typescript
@@ -26058,7 +26496,7 @@ ipv6AssociationId?: pulumi.Input<string>;
 The association ID for the IPv6 CIDR block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L209">property ipv6CidrBlock</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L215">property ipv6CidrBlock</a>
 </h3>
 
 ```typescript
@@ -26069,7 +26507,7 @@ ipv6CidrBlock?: pulumi.Input<string>;
 The IPv6 CIDR block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L215">property mainRouteTableId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L221">property mainRouteTableId</a>
 </h3>
 
 ```typescript
@@ -26082,7 +26520,18 @@ this VPC. Note that you can change a VPC's main route table by using an
 [`aws_main_route_table_association`](https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L219">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L225">property ownerId</a>
+</h3>
+
+```typescript
+ownerId?: pulumi.Input<string>;
+```
+
+
+The ID of the AWS account that owns the VPC.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/vpc.ts#L229">property tags</a>
 </h3>
 
 ```typescript

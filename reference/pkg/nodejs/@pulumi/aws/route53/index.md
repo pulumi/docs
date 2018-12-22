@@ -60,7 +60,7 @@ Create a DelegationSet resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DelegationSetState): DelegationSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DelegationSetState, opts?: pulumi.CustomResourceOptions): DelegationSet
 ```
 
 
@@ -161,7 +161,7 @@ Create a HealthCheck resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HealthCheckState): HealthCheck
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HealthCheckState, opts?: pulumi.CustomResourceOptions): HealthCheck
 ```
 
 
@@ -454,7 +454,7 @@ Create a QueryLog resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueryLogState): QueryLog
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueryLogState, opts?: pulumi.CustomResourceOptions): QueryLog
 ```
 
 
@@ -553,7 +553,7 @@ Create a Record resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RecordState): Record
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RecordState, opts?: pulumi.CustomResourceOptions): Record
 ```
 
 
@@ -796,7 +796,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZoneState): Zone
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZoneState, opts?: pulumi.CustomResourceOptions): Zone
 ```
 
 
@@ -988,7 +988,7 @@ Create a ZoneAssociation resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZoneAssociationState): ZoneAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZoneAssociationState, opts?: pulumi.CustomResourceOptions): ZoneAssociation
 ```
 
 

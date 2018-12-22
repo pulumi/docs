@@ -39,7 +39,7 @@ Create a Controller resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ControllerState): Controller
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ControllerState, opts?: pulumi.CustomResourceOptions): Controller
 ```
 
 

@@ -53,7 +53,7 @@ Create a Agent resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AgentState): Agent
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AgentState, opts?: pulumi.CustomResourceOptions): Agent
 ```
 
 
@@ -187,7 +187,7 @@ Create a EfsLocation resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EfsLocationState): EfsLocation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EfsLocationState, opts?: pulumi.CustomResourceOptions): EfsLocation
 ```
 
 
@@ -329,7 +329,7 @@ Create a NfsLocation resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NfsLocationState): NfsLocation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NfsLocationState, opts?: pulumi.CustomResourceOptions): NfsLocation
 ```
 
 
@@ -469,7 +469,7 @@ Create a S3Location resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: S3LocationState): S3Location
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: S3LocationState, opts?: pulumi.CustomResourceOptions): S3Location
 ```
 
 
@@ -609,7 +609,7 @@ Create a Task resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TaskState): Task
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TaskState, opts?: pulumi.CustomResourceOptions): Task
 ```
 
 

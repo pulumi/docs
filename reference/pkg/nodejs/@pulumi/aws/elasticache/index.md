@@ -66,7 +66,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterState): Cluster
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterState, opts?: pulumi.CustomResourceOptions): Cluster
 ```
 
 
@@ -432,13 +432,15 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="ParameterGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L10">class ParameterGroup</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L12">class ParameterGroup</a>
 </h2>
 
 Provides an ElastiCache parameter group resource.
 
+~> **NOTE:** Attempting to remove the `reserved-memory` parameter when `family` is set to `redis2.6` or `redis2.8` may show a perpetual difference in Terraform due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L38">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L40">constructor</a>
 </h3>
 
 ```typescript
@@ -453,11 +455,11 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L19">method get</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L21">method get</a>
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterGroupState): ParameterGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterGroupState, opts?: pulumi.CustomResourceOptions): ParameterGroup
 ```
 
 
@@ -485,7 +487,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L26">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L28">property description</a>
 </h3>
 
 ```typescript
@@ -496,7 +498,7 @@ public description: pulumi.Output<string>;
 The description of the ElastiCache parameter group. Defaults to "Managed by Terraform".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L30">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L32">property family</a>
 </h3>
 
 ```typescript
@@ -519,7 +521,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L34">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -530,7 +532,7 @@ public name: pulumi.Output<string>;
 The name of the ElastiCache parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L38">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L40">property parameters</a>
 </h3>
 
 ```typescript
@@ -580,7 +582,7 @@ Create a ReplicationGroup resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationGroupState): ReplicationGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationGroupState, opts?: pulumi.CustomResourceOptions): ReplicationGroup
 ```
 
 
@@ -992,7 +994,7 @@ Create a SecurityGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupState): SecurityGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupState, opts?: pulumi.CustomResourceOptions): SecurityGroup
 ```
 
 
@@ -1107,7 +1109,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetGroupState): SubnetGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetGroupState, opts?: pulumi.CustomResourceOptions): SubnetGroup
 ```
 
 
@@ -2240,13 +2242,13 @@ snapshotWindow: string;
 The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
 
 <h2 class="pdoc-module-header" id="ParameterGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L95">interface ParameterGroupArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L97">interface ParameterGroupArgs</a>
 </h2>
 
 The set of arguments for constructing a ParameterGroup resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L99">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L101">property description</a>
 </h3>
 
 ```typescript
@@ -2257,7 +2259,7 @@ description?: pulumi.Input<string>;
 The description of the ElastiCache parameter group. Defaults to "Managed by Terraform".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L103">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L105">property family</a>
 </h3>
 
 ```typescript
@@ -2268,7 +2270,7 @@ family: pulumi.Input<string>;
 The family of the ElastiCache parameter group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L107">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L109">property name</a>
 </h3>
 
 ```typescript
@@ -2279,7 +2281,7 @@ name?: pulumi.Input<string>;
 The name of the ElastiCache parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L111">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L113">property parameters</a>
 </h3>
 
 ```typescript
@@ -2290,13 +2292,13 @@ parameters?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 A list of ElastiCache parameters to apply.
 
 <h2 class="pdoc-module-header" id="ParameterGroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L73">interface ParameterGroupState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L75">interface ParameterGroupState</a>
 </h2>
 
 Input properties used for looking up and filtering ParameterGroup resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L77">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L79">property description</a>
 </h3>
 
 ```typescript
@@ -2307,7 +2309,7 @@ description?: pulumi.Input<string>;
 The description of the ElastiCache parameter group. Defaults to "Managed by Terraform".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L81">property family</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L83">property family</a>
 </h3>
 
 ```typescript
@@ -2318,7 +2320,7 @@ family?: pulumi.Input<string>;
 The family of the ElastiCache parameter group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L85">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L87">property name</a>
 </h3>
 
 ```typescript
@@ -2329,7 +2331,7 @@ name?: pulumi.Input<string>;
 The name of the ElastiCache parameter.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L89">property parameters</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/elasticache/parameterGroup.ts#L91">property parameters</a>
 </h3>
 
 ```typescript

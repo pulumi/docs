@@ -7,6 +7,7 @@ title: Module rds
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Cluster">class Cluster</a>
+* <a href="#ClusterEndpoint">class ClusterEndpoint</a>
 * <a href="#ClusterInstance">class ClusterInstance</a>
 * <a href="#ClusterParameterGroup">class ClusterParameterGroup</a>
 * <a href="#ClusterSnapshot">class ClusterSnapshot</a>
@@ -23,6 +24,8 @@ title: Module rds
 * <a href="#getInstance">function getInstance</a>
 * <a href="#getSnapshot">function getSnapshot</a>
 * <a href="#ClusterArgs">interface ClusterArgs</a>
+* <a href="#ClusterEndpointArgs">interface ClusterEndpointArgs</a>
+* <a href="#ClusterEndpointState">interface ClusterEndpointState</a>
 * <a href="#ClusterInstanceArgs">interface ClusterInstanceArgs</a>
 * <a href="#ClusterInstanceState">interface ClusterInstanceState</a>
 * <a href="#ClusterParameterGroupArgs">interface ClusterParameterGroupArgs</a>
@@ -55,7 +58,7 @@ title: Module rds
 * <a href="#SubnetGroupArgs">interface SubnetGroupArgs</a>
 * <a href="#SubnetGroupState">interface SubnetGroupState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts">rds/cluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts">rds/clusterInstance.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterParameterGroup.ts">rds/clusterParameterGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterSnapshot.ts">rds/clusterSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/eventSubscription.ts">rds/eventSubscription.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getCluster.ts">rds/getCluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getClusterSnapshot.ts">rds/getClusterSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getEventCategories.ts">rds/getEventCategories.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getInstance.ts">rds/getInstance.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getSnapshot.ts">rds/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts">rds/instance.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/optionGroup.ts">rds/optionGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/parameterGroup.ts">rds/parameterGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/securityGroup.ts">rds/securityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/snapshot.ts">rds/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/subnetGroup.ts">rds/subnetGroup.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/cluster.ts">rds/cluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts">rds/clusterEndpoint.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts">rds/clusterInstance.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterParameterGroup.ts">rds/clusterParameterGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterSnapshot.ts">rds/clusterSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/eventSubscription.ts">rds/eventSubscription.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getCluster.ts">rds/getCluster.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getClusterSnapshot.ts">rds/getClusterSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getEventCategories.ts">rds/getEventCategories.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getInstance.ts">rds/getInstance.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/getSnapshot.ts">rds/getSnapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts">rds/instance.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/optionGroup.ts">rds/optionGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/parameterGroup.ts">rds/parameterGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/securityGroup.ts">rds/securityGroup.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/snapshot.ts">rds/snapshot.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/subnetGroup.ts">rds/subnetGroup.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Cluster">
@@ -102,7 +105,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterState): Cluster
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterState, opts?: pulumi.CustomResourceOptions): Cluster
 ```
 
 
@@ -578,6 +581,161 @@ public vpcSecurityGroupIds: pulumi.Output<string[]>;
 List of VPC security groups to associate
 with the Cluster
 
+<h2 class="pdoc-module-header" id="ClusterEndpoint">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L12">class ClusterEndpoint</a>
+</h2>
+
+Manages a RDS Aurora Cluster Endpoint.
+You can refer to the [User Guide][1].
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L52">constructor</a>
+</h3>
+
+```typescript
+new ClusterEndpoint(name: string, args: ClusterEndpointArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a ClusterEndpoint resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L21">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterEndpointState, opts?: pulumi.CustomResourceOptions): ClusterEndpoint
+```
+
+
+Get an existing ClusterEndpoint resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L28">property arn</a>
+</h3>
+
+```typescript
+public arn: pulumi.Output<string>;
+```
+
+
+Amazon Resource Name (ARN) of cluster
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L32">property clusterEndpointIdentifier</a>
+</h3>
+
+```typescript
+public clusterEndpointIdentifier: pulumi.Output<string>;
+```
+
+
+The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L36">property clusterIdentifier</a>
+</h3>
+
+```typescript
+public clusterIdentifier: pulumi.Output<string>;
+```
+
+
+The cluster identifier.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L40">property customEndpointType</a>
+</h3>
+
+```typescript
+public customEndpointType: pulumi.Output<string>;
+```
+
+
+The type of the endpoint. One of: READER , ANY .
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L44">property endpoint</a>
+</h3>
+
+```typescript
+public endpoint: pulumi.Output<string>;
+```
+
+
+A custom endpoint for the Aurora cluster
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L48">property excludedMembers</a>
+</h3>
+
+```typescript
+public excludedMembers: pulumi.Output<string[] | undefined>;
+```
+
+
+List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L52">property staticMembers</a>
+</h3>
+
+```typescript
+public staticMembers: pulumi.Output<string[] | undefined>;
+```
+
+
+List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
 <h2 class="pdoc-module-header" id="ClusterInstance">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L25">class ClusterInstance</a>
 </h2>
@@ -598,7 +756,7 @@ For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amaz
 ~> **NOTE:** Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [`prevent_destroy` lifecycle behavior](https://www.terraform.io/docs/configuration/resources.html#prevent_destroy) to your Terraform resource configuration if you desire protection from accidental deletion.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L170">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L174">constructor</a>
 </h3>
 
 ```typescript
@@ -617,7 +775,7 @@ Create a ClusterInstance resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterInstanceState): ClusterInstance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterInstanceState, opts?: pulumi.CustomResourceOptions): ClusterInstance
 ```
 
 
@@ -701,7 +859,18 @@ public clusterIdentifier: pulumi.Output<string>;
 The identifier of the [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L62">property dbParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L62">property copyTagsToSnapshot</a>
+</h3>
+
+```typescript
+public copyTagsToSnapshot: pulumi.Output<boolean | undefined>;
+```
+
+
+Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L66">property dbParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -712,7 +881,7 @@ public dbParameterGroupName: pulumi.Output<string>;
 The name of the DB parameter group to associate with this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L66">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L70">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -723,7 +892,7 @@ public dbSubnetGroupName: pulumi.Output<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L70">property dbiResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L74">property dbiResourceId</a>
 </h3>
 
 ```typescript
@@ -734,7 +903,7 @@ public dbiResourceId: pulumi.Output<string>;
 The region-unique, immutable identifier for the DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L74">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L78">property endpoint</a>
 </h3>
 
 ```typescript
@@ -745,7 +914,7 @@ public endpoint: pulumi.Output<string>;
 The DNS address for this instance. May not be writable
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L81">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L85">property engine</a>
 </h3>
 
 ```typescript
@@ -759,7 +928,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L85">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L89">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -782,7 +951,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L89">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L93">property identifier</a>
 </h3>
 
 ```typescript
@@ -793,7 +962,7 @@ public identifier: pulumi.Output<string>;
 The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L93">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L97">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -804,7 +973,7 @@ public identifierPrefix: pulumi.Output<string>;
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L112">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L116">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -830,7 +999,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 - db.r4.16xlarge
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L116">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L120">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -841,7 +1010,7 @@ public kmsKeyId: pulumi.Output<string>;
 The ARN for the KMS encryption key if one is set to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L120">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L124">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -852,7 +1021,7 @@ public monitoringInterval: pulumi.Output<number | undefined>;
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L126">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L130">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -865,7 +1034,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L130">property performanceInsightsEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L134">property performanceInsightsEnabled</a>
 </h3>
 
 ```typescript
@@ -876,7 +1045,7 @@ public performanceInsightsEnabled: pulumi.Output<boolean>;
 Specifies whether Performance Insights is enabled or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L134">property performanceInsightsKmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L138">property performanceInsightsKmsKeyId</a>
 </h3>
 
 ```typescript
@@ -887,7 +1056,7 @@ public performanceInsightsKmsKeyId: pulumi.Output<string>;
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L138">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L142">property port</a>
 </h3>
 
 ```typescript
@@ -898,7 +1067,7 @@ public port: pulumi.Output<number>;
 The database port
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L143">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L147">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -910,7 +1079,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L148">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L152">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -922,7 +1091,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L152">property promotionTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L156">property promotionTier</a>
 </h3>
 
 ```typescript
@@ -933,7 +1102,7 @@ public promotionTier: pulumi.Output<number | undefined>;
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L158">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L162">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -946,7 +1115,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L162">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L166">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -957,7 +1126,7 @@ public storageEncrypted: pulumi.Output<boolean>;
 Specifies whether the DB cluster is encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L166">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L170">property tags</a>
 </h3>
 
 ```typescript
@@ -980,7 +1149,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L170">property writer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L174">property writer</a>
 </h3>
 
 ```typescript
@@ -1018,7 +1187,7 @@ Create a ClusterParameterGroup resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterParameterGroupState): ClusterParameterGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterParameterGroupState, opts?: pulumi.CustomResourceOptions): ClusterParameterGroup
 ```
 
 
@@ -1172,7 +1341,7 @@ Create a ClusterSnapshot resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterSnapshotState): ClusterSnapshot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClusterSnapshotState, opts?: pulumi.CustomResourceOptions): ClusterSnapshot
 ```
 
 
@@ -1408,7 +1577,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSubscriptionState): EventSubscription
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventSubscriptionState, opts?: pulumi.CustomResourceOptions): EventSubscription
 ```
 
 
@@ -1608,7 +1777,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState): Instance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState, opts?: pulumi.CustomResourceOptions): Instance
 ```
 
 
@@ -1845,7 +2014,7 @@ public enabledCloudwatchLogsExports: pulumi.Output<string[] | undefined>;
 ```
 
 
-List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`.
+List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L140">property endpoint</a>
@@ -2353,7 +2522,7 @@ Create a OptionGroup resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OptionGroupState): OptionGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OptionGroupState, opts?: pulumi.CustomResourceOptions): OptionGroup
 ```
 
 
@@ -2523,7 +2692,7 @@ Create a ParameterGroup resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterGroupState): ParameterGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterGroupState, opts?: pulumi.CustomResourceOptions): ParameterGroup
 ```
 
 
@@ -2680,7 +2849,7 @@ Create a SecurityGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupState): SecurityGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecurityGroupState, opts?: pulumi.CustomResourceOptions): SecurityGroup
 ```
 
 
@@ -2812,7 +2981,7 @@ Create a Snapshot resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotState): Snapshot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SnapshotState, opts?: pulumi.CustomResourceOptions): Snapshot
 ```
 
 
@@ -3092,7 +3261,7 @@ Create a SubnetGroup resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetGroupState): SubnetGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubnetGroupState, opts?: pulumi.CustomResourceOptions): SubnetGroup
 ```
 
 
@@ -3642,14 +3811,158 @@ vpcSecurityGroupIds?: pulumi.Input<pulumi.Input<string>[]>;
 List of VPC security groups to associate
 with the Cluster
 
+<h2 class="pdoc-module-header" id="ClusterEndpointArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L133">interface ClusterEndpointArgs</a>
+</h2>
+
+The set of arguments for constructing a ClusterEndpoint resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L137">property clusterEndpointIdentifier</a>
+</h3>
+
+```typescript
+clusterEndpointIdentifier: pulumi.Input<string>;
+```
+
+
+The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L141">property clusterIdentifier</a>
+</h3>
+
+```typescript
+clusterIdentifier: pulumi.Input<string>;
+```
+
+
+The cluster identifier.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L145">property customEndpointType</a>
+</h3>
+
+```typescript
+customEndpointType: pulumi.Input<string>;
+```
+
+
+The type of the endpoint. One of: READER , ANY .
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L149">property excludedMembers</a>
+</h3>
+
+```typescript
+excludedMembers?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L153">property staticMembers</a>
+</h3>
+
+```typescript
+staticMembers?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
+
+<h2 class="pdoc-module-header" id="ClusterEndpointState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L99">interface ClusterEndpointState</a>
+</h2>
+
+Input properties used for looking up and filtering ClusterEndpoint resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L103">property arn</a>
+</h3>
+
+```typescript
+arn?: pulumi.Input<string>;
+```
+
+
+Amazon Resource Name (ARN) of cluster
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L107">property clusterEndpointIdentifier</a>
+</h3>
+
+```typescript
+clusterEndpointIdentifier?: pulumi.Input<string>;
+```
+
+
+The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L111">property clusterIdentifier</a>
+</h3>
+
+```typescript
+clusterIdentifier?: pulumi.Input<string>;
+```
+
+
+The cluster identifier.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L115">property customEndpointType</a>
+</h3>
+
+```typescript
+customEndpointType?: pulumi.Input<string>;
+```
+
+
+The type of the endpoint. One of: READER , ANY .
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L119">property endpoint</a>
+</h3>
+
+```typescript
+endpoint?: pulumi.Input<string>;
+```
+
+
+A custom endpoint for the Aurora cluster
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L123">property excludedMembers</a>
+</h3>
+
+```typescript
+excludedMembers?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterEndpoint.ts#L127">property staticMembers</a>
+</h3>
+
+```typescript
+staticMembers?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
+
 <h2 class="pdoc-module-header" id="ClusterInstanceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L393">interface ClusterInstanceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L403">interface ClusterInstanceArgs</a>
 </h2>
 
 The set of arguments for constructing a ClusterInstance resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L398">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L408">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -3661,7 +3974,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L402">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L412">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -3672,7 +3985,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L406">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L416">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -3683,7 +3996,7 @@ availabilityZone?: pulumi.Input<string>;
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L410">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L420">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -3694,7 +4007,18 @@ clusterIdentifier: pulumi.Input<string>;
 The identifier of the [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L414">property dbParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L424">property copyTagsToSnapshot</a>
+</h3>
+
+```typescript
+copyTagsToSnapshot?: pulumi.Input<boolean>;
+```
+
+
+Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L428">property dbParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -3705,7 +4029,7 @@ dbParameterGroupName?: pulumi.Input<string>;
 The name of the DB parameter group to associate with this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L418">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L432">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -3716,7 +4040,7 @@ dbSubnetGroupName?: pulumi.Input<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L425">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L439">property engine</a>
 </h3>
 
 ```typescript
@@ -3730,7 +4054,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L429">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L443">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -3741,7 +4065,7 @@ engineVersion?: pulumi.Input<string>;
 The database engine version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L433">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L447">property identifier</a>
 </h3>
 
 ```typescript
@@ -3752,7 +4076,7 @@ identifier?: pulumi.Input<string>;
 The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L437">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L451">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -3763,7 +4087,7 @@ identifierPrefix?: pulumi.Input<string>;
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L456">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L470">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -3789,7 +4113,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 - db.r4.16xlarge
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L460">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L474">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -3800,7 +4124,7 @@ monitoringInterval?: pulumi.Input<number>;
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L466">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L480">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -3813,7 +4137,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L470">property performanceInsightsEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L484">property performanceInsightsEnabled</a>
 </h3>
 
 ```typescript
@@ -3824,7 +4148,7 @@ performanceInsightsEnabled?: pulumi.Input<boolean>;
 Specifies whether Performance Insights is enabled or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L474">property performanceInsightsKmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L488">property performanceInsightsKmsKeyId</a>
 </h3>
 
 ```typescript
@@ -3835,7 +4159,7 @@ performanceInsightsKmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L479">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L493">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -3847,7 +4171,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L484">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L498">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -3859,7 +4183,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L488">property promotionTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L502">property promotionTier</a>
 </h3>
 
 ```typescript
@@ -3870,7 +4194,7 @@ promotionTier?: pulumi.Input<number>;
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L494">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L508">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -3883,7 +4207,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L498">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L512">property tags</a>
 </h3>
 
 ```typescript
@@ -3894,13 +4218,13 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the instance.
 
 <h2 class="pdoc-module-header" id="ClusterInstanceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L254">interface ClusterInstanceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L260">interface ClusterInstanceState</a>
 </h2>
 
 Input properties used for looking up and filtering ClusterInstance resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L259">property applyImmediately</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L265">property applyImmediately</a>
 </h3>
 
 ```typescript
@@ -3912,7 +4236,7 @@ Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is`false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L263">property arn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L269">property arn</a>
 </h3>
 
 ```typescript
@@ -3923,7 +4247,7 @@ arn?: pulumi.Input<string>;
 Amazon Resource Name (ARN) of cluster instance
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L267">property autoMinorVersionUpgrade</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L273">property autoMinorVersionUpgrade</a>
 </h3>
 
 ```typescript
@@ -3934,7 +4258,7 @@ autoMinorVersionUpgrade?: pulumi.Input<boolean>;
 Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L271">property availabilityZone</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L277">property availabilityZone</a>
 </h3>
 
 ```typescript
@@ -3945,7 +4269,7 @@ availabilityZone?: pulumi.Input<string>;
 The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L275">property clusterIdentifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L281">property clusterIdentifier</a>
 </h3>
 
 ```typescript
@@ -3956,7 +4280,18 @@ clusterIdentifier?: pulumi.Input<string>;
 The identifier of the [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html) in which to launch this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L279">property dbParameterGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L285">property copyTagsToSnapshot</a>
+</h3>
+
+```typescript
+copyTagsToSnapshot?: pulumi.Input<boolean>;
+```
+
+
+Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L289">property dbParameterGroupName</a>
 </h3>
 
 ```typescript
@@ -3967,7 +4302,7 @@ dbParameterGroupName?: pulumi.Input<string>;
 The name of the DB parameter group to associate with this instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L283">property dbSubnetGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L293">property dbSubnetGroupName</a>
 </h3>
 
 ```typescript
@@ -3978,7 +4313,7 @@ dbSubnetGroupName?: pulumi.Input<string>;
 A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached [`aws_rds_cluster`](https://www.terraform.io/docs/providers/aws/r/rds_cluster.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L287">property dbiResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L297">property dbiResourceId</a>
 </h3>
 
 ```typescript
@@ -3989,7 +4324,7 @@ dbiResourceId?: pulumi.Input<string>;
 The region-unique, immutable identifier for the DB instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L291">property endpoint</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L301">property endpoint</a>
 </h3>
 
 ```typescript
@@ -4000,7 +4335,7 @@ endpoint?: pulumi.Input<string>;
 The DNS address for this instance. May not be writable
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L298">property engine</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L308">property engine</a>
 </h3>
 
 ```typescript
@@ -4014,7 +4349,7 @@ see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](https://docs.aws.amaz
 in the Amazon RDS User Guide.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L302">property engineVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L312">property engineVersion</a>
 </h3>
 
 ```typescript
@@ -4025,7 +4360,7 @@ engineVersion?: pulumi.Input<string>;
 The database engine version.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L306">property identifier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L316">property identifier</a>
 </h3>
 
 ```typescript
@@ -4036,7 +4371,7 @@ identifier?: pulumi.Input<string>;
 The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L310">property identifierPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L320">property identifierPrefix</a>
 </h3>
 
 ```typescript
@@ -4047,7 +4382,7 @@ identifierPrefix?: pulumi.Input<string>;
 Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L329">property instanceClass</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L339">property instanceClass</a>
 </h3>
 
 ```typescript
@@ -4073,7 +4408,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 - db.r4.16xlarge
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L333">property kmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L343">property kmsKeyId</a>
 </h3>
 
 ```typescript
@@ -4084,7 +4419,7 @@ kmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS encryption key if one is set to the cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L337">property monitoringInterval</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L347">property monitoringInterval</a>
 </h3>
 
 ```typescript
@@ -4095,7 +4430,7 @@ monitoringInterval?: pulumi.Input<number>;
 The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L343">property monitoringRoleArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L353">property monitoringRoleArn</a>
 </h3>
 
 ```typescript
@@ -4108,7 +4443,7 @@ enhanced monitoring metrics to CloudWatch Logs. You can find more information on
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L347">property performanceInsightsEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L357">property performanceInsightsEnabled</a>
 </h3>
 
 ```typescript
@@ -4119,7 +4454,7 @@ performanceInsightsEnabled?: pulumi.Input<boolean>;
 Specifies whether Performance Insights is enabled or not.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L351">property performanceInsightsKmsKeyId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L361">property performanceInsightsKmsKeyId</a>
 </h3>
 
 ```typescript
@@ -4130,7 +4465,7 @@ performanceInsightsKmsKeyId?: pulumi.Input<string>;
 The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L355">property port</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L365">property port</a>
 </h3>
 
 ```typescript
@@ -4141,7 +4476,7 @@ port?: pulumi.Input<number>;
 The database port
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L360">property preferredBackupWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L370">property preferredBackupWindow</a>
 </h3>
 
 ```typescript
@@ -4153,7 +4488,7 @@ The daily time range during which automated backups are created if automated bac
 Eg: "04:00-09:00"
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L365">property preferredMaintenanceWindow</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L375">property preferredMaintenanceWindow</a>
 </h3>
 
 ```typescript
@@ -4165,7 +4500,7 @@ The window to perform maintenance in.
 Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L369">property promotionTier</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L379">property promotionTier</a>
 </h3>
 
 ```typescript
@@ -4176,7 +4511,7 @@ promotionTier?: pulumi.Input<number>;
 Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L375">property publiclyAccessible</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L385">property publiclyAccessible</a>
 </h3>
 
 ```typescript
@@ -4189,7 +4524,7 @@ Default `false`. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L379">property storageEncrypted</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L389">property storageEncrypted</a>
 </h3>
 
 ```typescript
@@ -4200,7 +4535,7 @@ storageEncrypted?: pulumi.Input<boolean>;
 Specifies whether the DB cluster is encrypted.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L383">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L393">property tags</a>
 </h3>
 
 ```typescript
@@ -4211,7 +4546,7 @@ tags?: pulumi.Input<Tags>;
 A mapping of tags to assign to the instance.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L387">property writer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/clusterInstance.ts#L397">property writer</a>
 </h3>
 
 ```typescript
@@ -6616,7 +6951,7 @@ enabledCloudwatchLogsExports?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`.
+List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L857">property engine</a>
@@ -7233,7 +7568,7 @@ enabledCloudwatchLogsExports?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
-List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`.
+List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`): `alert`, `audit`, `error`, `general`, `listener`, `slowquery`, `trace`, `postgresql` (PostgreSQL), `upgrade` (PostgreSQL).
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/rds/instance.ts#L566">property endpoint</a>

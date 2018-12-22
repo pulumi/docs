@@ -1,0 +1,285 @@
+---
+title: Module signalr
+---
+
+<a href="../index.html">@pulumi/azure</a> &gt; signalr
+
+<h2 class="pdoc-module-header">Index</h2>
+
+* <a href="#Service">class Service</a>
+* <a href="#ServiceArgs">interface ServiceArgs</a>
+* <a href="#ServiceState">interface ServiceState</a>
+
+<a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts">signalr/service.ts</a> 
+
+
+<h2 class="pdoc-module-header" id="Service">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L7">class Service</a>
+</h2>
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L28">constructor</a>
+</h3>
+
+```typescript
+new Service(name: string, args: ServiceArgs, opts?: pulumi.CustomResourceOptions)
+```
+
+
+Create a Service resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L16">method get</a>
+</h3>
+
+```typescript
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState, opts?: pulumi.CustomResourceOptions): Service
+```
+
+
+Get an existing Service resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method getProvider</a>
+</h3>
+
+```typescript
+getProvider(moduleMember: string): ProviderResource | undefined
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method isInstance</a>
+</h3>
+
+```typescript
+static isInstance(obj: any): boolean
+```
+
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L20">property hostname</a>
+</h3>
+
+```typescript
+public hostname: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
+</h3>
+
+```typescript
+id: Output<ID>;
+```
+
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L21">property ipAddress</a>
+</h3>
+
+```typescript
+public ipAddress: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L22">property location</a>
+</h3>
+
+```typescript
+public location: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L23">property name</a>
+</h3>
+
+```typescript
+public name: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L24">property publicPort</a>
+</h3>
+
+```typescript
+public publicPort: pulumi.Output<number>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L25">property resourceGroupName</a>
+</h3>
+
+```typescript
+public resourceGroupName: pulumi.Output<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L26">property serverPort</a>
+</h3>
+
+```typescript
+public serverPort: pulumi.Output<number>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L27">property sku</a>
+</h3>
+
+```typescript
+public sku: pulumi.Output<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L28">property tags</a>
+</h3>
+
+```typescript
+public tags: pulumi.Output<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
+</h3>
+
+```typescript
+urn: Output<URN>;
+```
+
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h2 class="pdoc-module-header" id="ServiceArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L94">interface ServiceArgs</a>
+</h2>
+
+The set of arguments for constructing a Service resource.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L95">property location</a>
+</h3>
+
+```typescript
+location: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L96">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L97">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L98">property sku</a>
+</h3>
+
+```typescript
+sku: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L99">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+
+<h2 class="pdoc-module-header" id="ServiceState">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L79">interface ServiceState</a>
+</h2>
+
+Input properties used for looking up and filtering Service resources.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L80">property hostname</a>
+</h3>
+
+```typescript
+hostname?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L81">property ipAddress</a>
+</h3>
+
+```typescript
+ipAddress?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L82">property location</a>
+</h3>
+
+```typescript
+location?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L83">property name</a>
+</h3>
+
+```typescript
+name?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L84">property publicPort</a>
+</h3>
+
+```typescript
+publicPort?: pulumi.Input<number>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L85">property resourceGroupName</a>
+</h3>
+
+```typescript
+resourceGroupName?: pulumi.Input<string>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L86">property serverPort</a>
+</h3>
+
+```typescript
+serverPort?: pulumi.Input<number>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L87">property sku</a>
+</h3>
+
+```typescript
+sku?: pulumi.Input<{ ... }>;
+```
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/signalr/service.ts#L88">property tags</a>
+</h3>
+
+```typescript
+tags?: pulumi.Input<{ ... }>;
+```
+

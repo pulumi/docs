@@ -54,7 +54,7 @@ Create a Group resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupState): Group
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GroupState, opts?: pulumi.CustomResourceOptions): Group
 ```
 
 
@@ -243,7 +243,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 ~> **Note:** All arguments including the client secret will be stored in the raw state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L88">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L96">constructor</a>
 </h3>
 
 ```typescript
@@ -262,7 +262,7 @@ Create a KubernetesCluster resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KubernetesClusterState): KubernetesCluster
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KubernetesClusterState, opts?: pulumi.CustomResourceOptions): KubernetesCluster
 ```
 
 
@@ -346,7 +346,29 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L44">property kubeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L44">property kubeAdminConfig</a>
+</h3>
+
+```typescript
+public kubeAdminConfig: pulumi.Output<{ ... }>;
+```
+
+
+A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L48">property kubeAdminConfigRaw</a>
+</h3>
+
+```typescript
+public kubeAdminConfigRaw: pulumi.Output<string>;
+```
+
+
+Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L52">property kubeConfig</a>
 </h3>
 
 ```typescript
@@ -357,7 +379,7 @@ public kubeConfig: pulumi.Output<{ ... }>;
 A `kube_config` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L48">property kubeConfigRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L56">property kubeConfigRaw</a>
 </h3>
 
 ```typescript
@@ -368,7 +390,7 @@ public kubeConfigRaw: pulumi.Output<string>;
 Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L52">property kubernetesVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L60">property kubernetesVersion</a>
 </h3>
 
 ```typescript
@@ -379,7 +401,7 @@ public kubernetesVersion: pulumi.Output<string>;
 Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L56">property linuxProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L64">property linuxProfile</a>
 </h3>
 
 ```typescript
@@ -390,7 +412,7 @@ public linuxProfile: pulumi.Output<{ ... } | undefined>;
 A `linux_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L60">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L68">property location</a>
 </h3>
 
 ```typescript
@@ -401,7 +423,7 @@ public location: pulumi.Output<string>;
 The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L64">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L72">property name</a>
 </h3>
 
 ```typescript
@@ -412,7 +434,7 @@ public name: pulumi.Output<string>;
 The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L68">property networkProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L76">property networkProfile</a>
 </h3>
 
 ```typescript
@@ -423,7 +445,7 @@ public networkProfile: pulumi.Output<{ ... }>;
 A `network_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L72">property nodeResourceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L80">property nodeResourceGroup</a>
 </h3>
 
 ```typescript
@@ -434,7 +456,7 @@ public nodeResourceGroup: pulumi.Output<string>;
 The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L76">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L84">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -445,18 +467,18 @@ public resourceGroupName: pulumi.Output<string>;
 Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L80">property roleBasedAccessControl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L88">property roleBasedAccessControl</a>
 </h3>
 
 ```typescript
-public roleBasedAccessControl: pulumi.Output<{ ... } | undefined>;
+public roleBasedAccessControl: pulumi.Output<{ ... }>;
 ```
 
 
 A `role_based_access_control` block. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L84">property servicePrincipal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L92">property servicePrincipal</a>
 </h3>
 
 ```typescript
@@ -467,7 +489,7 @@ public servicePrincipal: pulumi.Output<{ ... }>;
 A `service_principal` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L88">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L96">property tags</a>
 </h3>
 
 ```typescript
@@ -499,7 +521,7 @@ Manages an Azure Container Registry.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L66">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L70">constructor</a>
 </h3>
 
 ```typescript
@@ -518,7 +540,7 @@ Create a Registry resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RegistryState): Registry
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RegistryState, opts?: pulumi.CustomResourceOptions): Registry
 ```
 
 
@@ -579,6 +601,17 @@ public adminUsername: pulumi.Output<string>;
 The Username associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L41">property georeplicationLocations</a>
+</h3>
+
+```typescript
+public georeplicationLocations: pulumi.Output<string[] | undefined>;
+```
+
+
+A list of Azure locations where the container registry should be geo-replicated.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
@@ -591,7 +624,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L41">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L45">property location</a>
 </h3>
 
 ```typescript
@@ -602,7 +635,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L45">property loginServer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L49">property loginServer</a>
 </h3>
 
 ```typescript
@@ -613,7 +646,7 @@ public loginServer: pulumi.Output<string>;
 The URL that can be used to log into the container registry.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L49">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L53">property name</a>
 </h3>
 
 ```typescript
@@ -624,7 +657,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the Container Registry. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L53">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L57">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -635,7 +668,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L57">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L61">property sku</a>
 </h3>
 
 ```typescript
@@ -646,7 +679,7 @@ public sku: pulumi.Output<string | undefined>;
 The SKU name of the the container registry. Possible values are `Classic` (which was previously `Basic`), `Basic`, `Standard` and `Premium`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L58">property storageAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L62">property storageAccount</a>
 </h3>
 
 ```typescript
@@ -654,7 +687,7 @@ public storageAccount: pulumi.Output<{ ... } | undefined>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L62">property storageAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L66">property storageAccountId</a>
 </h3>
 
 ```typescript
@@ -665,7 +698,7 @@ public storageAccountId: pulumi.Output<string | undefined>;
 The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L66">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L70">property tags</a>
 </h3>
 
 ```typescript
@@ -696,7 +729,7 @@ Manages an Azure Container Service Instance
 ~> **NOTE:** All arguments including the client secret will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-~> **NOTE:** You may wish to consider using Azure Kubernetes Service (AKS) for new deployments.
+~> **DEPRECATED:** [Azure Container Service (ACS) has been deprecated by Azure in favour of Azure (Managed) Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/). Support for ACS will be removed in the next major version of the AzureRM Provider (2.0) - and we **strongly recommend** you consider using Azure Kubernetes Service (AKS) for new deployments.
 
 ## Example Usage (DCOS)
 
@@ -762,7 +795,7 @@ Create a Service resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState): Service
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServiceState, opts?: pulumi.CustomResourceOptions): Service
 ```
 
 
@@ -798,7 +831,7 @@ public agentPoolProfile: pulumi.Output<{ ... }>;
 ```
 
 
-One or more Agent Pool Profile's block as documented below.
+A Agent Pool Profile's block as documented below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/service.ts#L79">property diagnosticsProfile</a>
@@ -1027,7 +1060,7 @@ fqdn: string;
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L97">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L105">property id</a>
 </h3>
 
 ```typescript
@@ -1038,7 +1071,29 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L61">property kubeConfigRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L61">property kubeAdminConfigRaw</a>
+</h3>
+
+```typescript
+kubeAdminConfigRaw: string;
+```
+
+
+Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L57">property kubeAdminConfigs</a>
+</h3>
+
+```typescript
+kubeAdminConfigs: { ... }[];
+```
+
+
+A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L69">property kubeConfigRaw</a>
 </h3>
 
 ```typescript
@@ -1049,7 +1104,7 @@ kubeConfigRaw: string;
 Base64 encoded Kubernetes configuration.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L57">property kubeConfigs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L65">property kubeConfigs</a>
 </h3>
 
 ```typescript
@@ -1060,7 +1115,7 @@ kubeConfigs: { ... }[];
 A `kube_config` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L65">property kubernetesVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L73">property kubernetesVersion</a>
 </h3>
 
 ```typescript
@@ -1071,7 +1126,7 @@ kubernetesVersion: string;
 The version of Kubernetes used on the managed Kubernetes Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L69">property linuxProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L77">property linuxProfiles</a>
 </h3>
 
 ```typescript
@@ -1082,7 +1137,7 @@ linuxProfiles: { ... }[];
 A `linux_profile` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L73">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L81">property location</a>
 </h3>
 
 ```typescript
@@ -1093,7 +1148,7 @@ location: string;
 The Azure Region in which the managed Kubernetes Cluster exists.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L77">property networkProfiles</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L85">property networkProfiles</a>
 </h3>
 
 ```typescript
@@ -1104,7 +1159,7 @@ networkProfiles: { ... }[];
 A `network_profile` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L81">property nodeResourceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L89">property nodeResourceGroup</a>
 </h3>
 
 ```typescript
@@ -1115,7 +1170,7 @@ nodeResourceGroup: string;
 Auto-generated Resource Group containing AKS Cluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L85">property roleBasedAccessControls</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L93">property roleBasedAccessControls</a>
 </h3>
 
 ```typescript
@@ -1126,7 +1181,7 @@ roleBasedAccessControls: { ... }[];
 A `role_based_access_control` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L89">property servicePrincipals</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L97">property servicePrincipals</a>
 </h3>
 
 ```typescript
@@ -1137,7 +1192,7 @@ servicePrincipals: { ... }[];
 A `service_principal` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L93">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/getKubernetesCluster.ts#L101">property tags</a>
 </h3>
 
 ```typescript
@@ -1518,13 +1573,13 @@ tags?: pulumi.Input<{ ... }>;
 ```
 
 <h2 class="pdoc-module-header" id="KubernetesClusterArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L229">interface KubernetesClusterArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L249">interface KubernetesClusterArgs</a>
 </h2>
 
 The set of arguments for constructing a KubernetesCluster resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L233">property addonProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L253">property addonProfile</a>
 </h3>
 
 ```typescript
@@ -1535,7 +1590,7 @@ addonProfile?: pulumi.Input<{ ... }>;
 A `addon_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L237">property agentPoolProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L257">property agentPoolProfile</a>
 </h3>
 
 ```typescript
@@ -1546,7 +1601,7 @@ agentPoolProfile: pulumi.Input<{ ... }>;
 One or more `agent_pool_profile` blocks as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L241">property dnsPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L261">property dnsPrefix</a>
 </h3>
 
 ```typescript
@@ -1557,7 +1612,7 @@ dnsPrefix: pulumi.Input<string>;
 DNS prefix specified when creating the managed cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L245">property kubernetesVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L265">property kubernetesVersion</a>
 </h3>
 
 ```typescript
@@ -1568,7 +1623,7 @@ kubernetesVersion?: pulumi.Input<string>;
 Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L249">property linuxProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L269">property linuxProfile</a>
 </h3>
 
 ```typescript
@@ -1579,7 +1634,7 @@ linuxProfile?: pulumi.Input<{ ... }>;
 A `linux_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L253">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L273">property location</a>
 </h3>
 
 ```typescript
@@ -1590,7 +1645,7 @@ location: pulumi.Input<string>;
 The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L257">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L277">property name</a>
 </h3>
 
 ```typescript
@@ -1601,7 +1656,7 @@ name?: pulumi.Input<string>;
 The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L261">property networkProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L281">property networkProfile</a>
 </h3>
 
 ```typescript
@@ -1612,7 +1667,7 @@ networkProfile?: pulumi.Input<{ ... }>;
 A `network_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L265">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L285">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1623,7 +1678,7 @@ resourceGroupName: pulumi.Input<string>;
 Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L269">property roleBasedAccessControl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L289">property roleBasedAccessControl</a>
 </h3>
 
 ```typescript
@@ -1634,7 +1689,7 @@ roleBasedAccessControl?: pulumi.Input<{ ... }>;
 A `role_based_access_control` block. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L273">property servicePrincipal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L293">property servicePrincipal</a>
 </h3>
 
 ```typescript
@@ -1645,7 +1700,7 @@ servicePrincipal: pulumi.Input<{ ... }>;
 A `service_principal` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L277">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L297">property tags</a>
 </h3>
 
 ```typescript
@@ -1656,13 +1711,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="KubernetesClusterState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L159">interface KubernetesClusterState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L171">interface KubernetesClusterState</a>
 </h2>
 
 Input properties used for looking up and filtering KubernetesCluster resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L163">property addonProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L175">property addonProfile</a>
 </h3>
 
 ```typescript
@@ -1673,7 +1728,7 @@ addonProfile?: pulumi.Input<{ ... }>;
 A `addon_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L167">property agentPoolProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L179">property agentPoolProfile</a>
 </h3>
 
 ```typescript
@@ -1684,7 +1739,7 @@ agentPoolProfile?: pulumi.Input<{ ... }>;
 One or more `agent_pool_profile` blocks as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L171">property dnsPrefix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L183">property dnsPrefix</a>
 </h3>
 
 ```typescript
@@ -1695,7 +1750,7 @@ dnsPrefix?: pulumi.Input<string>;
 DNS prefix specified when creating the managed cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L175">property fqdn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L187">property fqdn</a>
 </h3>
 
 ```typescript
@@ -1706,7 +1761,29 @@ fqdn?: pulumi.Input<string>;
 The FQDN of the Azure Kubernetes Managed Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L179">property kubeConfig</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L191">property kubeAdminConfig</a>
+</h3>
+
+```typescript
+kubeAdminConfig?: pulumi.Input<{ ... }>;
+```
+
+
+A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L195">property kubeAdminConfigRaw</a>
+</h3>
+
+```typescript
+kubeAdminConfigRaw?: pulumi.Input<string>;
+```
+
+
+Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L199">property kubeConfig</a>
 </h3>
 
 ```typescript
@@ -1717,7 +1794,7 @@ kubeConfig?: pulumi.Input<{ ... }>;
 A `kube_config` block as defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L183">property kubeConfigRaw</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L203">property kubeConfigRaw</a>
 </h3>
 
 ```typescript
@@ -1728,7 +1805,7 @@ kubeConfigRaw?: pulumi.Input<string>;
 Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L187">property kubernetesVersion</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L207">property kubernetesVersion</a>
 </h3>
 
 ```typescript
@@ -1739,7 +1816,7 @@ kubernetesVersion?: pulumi.Input<string>;
 Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won't auto-upgrade).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L191">property linuxProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L211">property linuxProfile</a>
 </h3>
 
 ```typescript
@@ -1750,7 +1827,7 @@ linuxProfile?: pulumi.Input<{ ... }>;
 A `linux_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L195">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L215">property location</a>
 </h3>
 
 ```typescript
@@ -1761,7 +1838,7 @@ location?: pulumi.Input<string>;
 The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L199">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L219">property name</a>
 </h3>
 
 ```typescript
@@ -1772,7 +1849,7 @@ name?: pulumi.Input<string>;
 The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L203">property networkProfile</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L223">property networkProfile</a>
 </h3>
 
 ```typescript
@@ -1783,7 +1860,7 @@ networkProfile?: pulumi.Input<{ ... }>;
 A `network_profile` block.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L207">property nodeResourceGroup</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L227">property nodeResourceGroup</a>
 </h3>
 
 ```typescript
@@ -1794,7 +1871,7 @@ nodeResourceGroup?: pulumi.Input<string>;
 The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L211">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L231">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1805,7 +1882,7 @@ resourceGroupName?: pulumi.Input<string>;
 Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L215">property roleBasedAccessControl</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L235">property roleBasedAccessControl</a>
 </h3>
 
 ```typescript
@@ -1816,7 +1893,7 @@ roleBasedAccessControl?: pulumi.Input<{ ... }>;
 A `role_based_access_control` block. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L219">property servicePrincipal</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L239">property servicePrincipal</a>
 </h3>
 
 ```typescript
@@ -1827,7 +1904,7 @@ servicePrincipal?: pulumi.Input<{ ... }>;
 A `service_principal` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L223">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/kubernetesCluster.ts#L243">property tags</a>
 </h3>
 
 ```typescript
@@ -1838,13 +1915,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="RegistryArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L165">interface RegistryArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L175">interface RegistryArgs</a>
 </h2>
 
 The set of arguments for constructing a Registry resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L169">property adminEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L179">property adminEnabled</a>
 </h3>
 
 ```typescript
@@ -1855,7 +1932,18 @@ adminEnabled?: pulumi.Input<boolean>;
 Specifies whether the admin user is enabled. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L173">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L183">property georeplicationLocations</a>
+</h3>
+
+```typescript
+georeplicationLocations?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of Azure locations where the container registry should be geo-replicated.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L187">property location</a>
 </h3>
 
 ```typescript
@@ -1866,7 +1954,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L177">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L191">property name</a>
 </h3>
 
 ```typescript
@@ -1877,7 +1965,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Container Registry. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L181">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L195">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1888,7 +1976,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L185">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L199">property sku</a>
 </h3>
 
 ```typescript
@@ -1899,7 +1987,7 @@ sku?: pulumi.Input<string>;
 The SKU name of the the container registry. Possible values are `Classic` (which was previously `Basic`), `Basic`, `Standard` and `Premium`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L186">property storageAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L200">property storageAccount</a>
 </h3>
 
 ```typescript
@@ -1907,7 +1995,7 @@ storageAccount?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L190">property storageAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L204">property storageAccountId</a>
 </h3>
 
 ```typescript
@@ -1918,7 +2006,7 @@ storageAccountId?: pulumi.Input<string>;
 The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L194">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L208">property tags</a>
 </h3>
 
 ```typescript
@@ -1929,13 +2017,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="RegistryState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L118">interface RegistryState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L124">interface RegistryState</a>
 </h2>
 
 Input properties used for looking up and filtering Registry resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L122">property adminEnabled</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L128">property adminEnabled</a>
 </h3>
 
 ```typescript
@@ -1946,7 +2034,7 @@ adminEnabled?: pulumi.Input<boolean>;
 Specifies whether the admin user is enabled. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L126">property adminPassword</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L132">property adminPassword</a>
 </h3>
 
 ```typescript
@@ -1957,7 +2045,7 @@ adminPassword?: pulumi.Input<string>;
 The Password associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L130">property adminUsername</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L136">property adminUsername</a>
 </h3>
 
 ```typescript
@@ -1968,7 +2056,18 @@ adminUsername?: pulumi.Input<string>;
 The Username associated with the Container Registry Admin account - if the admin account is enabled.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L134">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L140">property georeplicationLocations</a>
+</h3>
+
+```typescript
+georeplicationLocations?: pulumi.Input<pulumi.Input<string>[]>;
+```
+
+
+A list of Azure locations where the container registry should be geo-replicated.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L144">property location</a>
 </h3>
 
 ```typescript
@@ -1979,7 +2078,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L138">property loginServer</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L148">property loginServer</a>
 </h3>
 
 ```typescript
@@ -1990,7 +2089,7 @@ loginServer?: pulumi.Input<string>;
 The URL that can be used to log into the container registry.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L142">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L152">property name</a>
 </h3>
 
 ```typescript
@@ -2001,7 +2100,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Container Registry. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L146">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L156">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2012,7 +2111,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L150">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L160">property sku</a>
 </h3>
 
 ```typescript
@@ -2023,7 +2122,7 @@ sku?: pulumi.Input<string>;
 The SKU name of the the container registry. Possible values are `Classic` (which was previously `Basic`), `Basic`, `Standard` and `Premium`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L151">property storageAccount</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L161">property storageAccount</a>
 </h3>
 
 ```typescript
@@ -2031,7 +2130,7 @@ storageAccount?: pulumi.Input<{ ... }>;
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L155">property storageAccountId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L165">property storageAccountId</a>
 </h3>
 
 ```typescript
@@ -2042,7 +2141,7 @@ storageAccountId?: pulumi.Input<string>;
 The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L159">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/registry.ts#L169">property tags</a>
 </h3>
 
 ```typescript
@@ -2067,7 +2166,7 @@ agentPoolProfile: pulumi.Input<{ ... }>;
 ```
 
 
-One or more Agent Pool Profile's block as documented below.
+A Agent Pool Profile's block as documented below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/service.ts#L230">property diagnosticsProfile</a>
@@ -2183,7 +2282,7 @@ agentPoolProfile?: pulumi.Input<{ ... }>;
 ```
 
 
-One or more Agent Pool Profile's block as documented below.
+A Agent Pool Profile's block as documented below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/containerservice/service.ts#L184">property diagnosticsProfile</a>

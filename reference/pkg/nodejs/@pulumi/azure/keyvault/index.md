@@ -67,7 +67,7 @@ Create a AccessPolicy resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccessPolicyState): AccessPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccessPolicyState, opts?: pulumi.CustomResourceOptions): AccessPolicy
 ```
 
 
@@ -135,7 +135,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 
 ```typescript
-public keyPermissions: pulumi.Output<string[]>;
+public keyPermissions: pulumi.Output<string[] | undefined>;
 ```
 
 
@@ -174,7 +174,7 @@ create the namespace. Changing this forces a new resource to be created.
 </h3>
 
 ```typescript
-public secretPermissions: pulumi.Output<string[]>;
+public secretPermissions: pulumi.Output<string[] | undefined>;
 ```
 
 
@@ -244,7 +244,7 @@ Create a Certifiate resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertifiateState): Certifiate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertifiateState, opts?: pulumi.CustomResourceOptions): Certifiate
 ```
 
 
@@ -420,7 +420,7 @@ Create a Key resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyState): Key
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyState, opts?: pulumi.CustomResourceOptions): Key
 ```
 
 
@@ -598,7 +598,7 @@ Create a KeyVault resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyVaultState): KeyVault
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyVaultState, opts?: pulumi.CustomResourceOptions): KeyVault
 ```
 
 
@@ -810,7 +810,7 @@ Create a Secret resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecretState): Secret
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SecretState, opts?: pulumi.CustomResourceOptions): Secret
 ```
 
 
@@ -978,13 +978,13 @@ Use this data source to access information about an existing Key Vault Secret.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h2 class="pdoc-module-header" id="AccessPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L178">interface AccessPolicyArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L172">interface AccessPolicyArgs</a>
 </h2>
 
 The set of arguments for constructing a AccessPolicy resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L182">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L176">property applicationId</a>
 </h3>
 
 ```typescript
@@ -995,7 +995,7 @@ applicationId?: pulumi.Input<string>;
 The object ID of an Application in Azure Active Directory.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L188">property certificatePermissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L182">property certificatePermissions</a>
 </h3>
 
 ```typescript
@@ -1008,11 +1008,11 @@ the following: `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import
 `managecontacts`, `manageissuers`, `purge`, `recover`, `setissuers` and `update`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L194">property keyPermissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L188">property keyPermissions</a>
 </h3>
 
 ```typescript
-keyPermissions: pulumi.Input<pulumi.Input<string>[]>;
+keyPermissions?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
@@ -1021,7 +1021,7 @@ the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `impor
 `recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L201">property objectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L195">property objectId</a>
 </h3>
 
 ```typescript
@@ -1035,7 +1035,7 @@ be unique for the list of access policies. Changing this forces a new resource
 to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L206">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L200">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1047,11 +1047,11 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L211">property secretPermissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L205">property secretPermissions</a>
 </h3>
 
 ```typescript
-secretPermissions: pulumi.Input<pulumi.Input<string>[]>;
+secretPermissions?: pulumi.Input<pulumi.Input<string>[]>;
 ```
 
 
@@ -1059,7 +1059,7 @@ List of secret permissions, must be one or more
 from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L217">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L211">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1072,7 +1072,7 @@ for authenticating requests to the key vault. Changing this forces a new resourc
 to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L222">property vaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L216">property vaultName</a>
 </h3>
 
 ```typescript
@@ -1084,13 +1084,13 @@ Specifies the name of the Key Vault resource. Changing this
 forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="AccessPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L128">interface AccessPolicyState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L122">interface AccessPolicyState</a>
 </h2>
 
 Input properties used for looking up and filtering AccessPolicy resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L132">property applicationId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L126">property applicationId</a>
 </h3>
 
 ```typescript
@@ -1101,7 +1101,7 @@ applicationId?: pulumi.Input<string>;
 The object ID of an Application in Azure Active Directory.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L138">property certificatePermissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L132">property certificatePermissions</a>
 </h3>
 
 ```typescript
@@ -1114,7 +1114,7 @@ the following: `create`, `delete`, `deleteissuers`, `get`, `getissuers`, `import
 `managecontacts`, `manageissuers`, `purge`, `recover`, `setissuers` and `update`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L144">property keyPermissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L138">property keyPermissions</a>
 </h3>
 
 ```typescript
@@ -1127,7 +1127,7 @@ the following: `backup`, `create`, `decrypt`, `delete`, `encrypt`, `get`, `impor
 `recover`, `restore`, `sign`, `unwrapKey`, `update`, `verify` and `wrapKey`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L151">property objectId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L145">property objectId</a>
 </h3>
 
 ```typescript
@@ -1141,7 +1141,7 @@ be unique for the list of access policies. Changing this forces a new resource
 to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L156">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L150">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1153,7 +1153,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L161">property secretPermissions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L155">property secretPermissions</a>
 </h3>
 
 ```typescript
@@ -1165,7 +1165,7 @@ List of secret permissions, must be one or more
 from the following: `backup`, `delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L167">property tenantId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L161">property tenantId</a>
 </h3>
 
 ```typescript
@@ -1178,7 +1178,7 @@ for authenticating requests to the key vault. Changing this forces a new resourc
 to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L172">property vaultName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/keyvault/accessPolicy.ts#L166">property vaultName</a>
 </h3>
 
 ```typescript

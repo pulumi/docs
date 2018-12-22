@@ -62,7 +62,7 @@ Create a Cache resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CacheState): Cache
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CacheState, opts?: pulumi.CustomResourceOptions): Cache
 ```
 
 
@@ -165,7 +165,7 @@ Create a CachesIscsiVolume resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CachesIscsiVolumeState): CachesIscsiVolume
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CachesIscsiVolumeState, opts?: pulumi.CustomResourceOptions): CachesIscsiVolume
 ```
 
 
@@ -387,7 +387,7 @@ Create a Gateway resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GatewayState): Gateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GatewayState, opts?: pulumi.CustomResourceOptions): Gateway
 ```
 
 
@@ -582,7 +582,7 @@ Create a NfsFileShare resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NfsFileShareState): NfsFileShare
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: NfsFileShareState, opts?: pulumi.CustomResourceOptions): NfsFileShare
 ```
 
 
@@ -824,7 +824,7 @@ Create a SmbFileShare resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SmbFileShareState): SmbFileShare
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SmbFileShareState, opts?: pulumi.CustomResourceOptions): SmbFileShare
 ```
 
 
@@ -1068,7 +1068,7 @@ Create a UploadBuffer resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UploadBufferState): UploadBuffer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UploadBufferState, opts?: pulumi.CustomResourceOptions): UploadBuffer
 ```
 
 
@@ -1169,7 +1169,7 @@ Create a WorkingStorage resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkingStorageState): WorkingStorage
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkingStorageState, opts?: pulumi.CustomResourceOptions): WorkingStorage
 ```
 
 

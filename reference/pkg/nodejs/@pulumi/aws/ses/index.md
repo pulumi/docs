@@ -72,7 +72,7 @@ Create a ActiveReceiptRuleSet resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActiveReceiptRuleSetState): ActiveReceiptRuleSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActiveReceiptRuleSetState, opts?: pulumi.CustomResourceOptions): ActiveReceiptRuleSet
 ```
 
 
@@ -160,7 +160,7 @@ Create a ConfgurationSet resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfgurationSetState): ConfgurationSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfgurationSetState, opts?: pulumi.CustomResourceOptions): ConfgurationSet
 ```
 
 
@@ -250,7 +250,7 @@ Create a DomainDkim resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainDkimState): DomainDkim
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainDkimState, opts?: pulumi.CustomResourceOptions): DomainDkim
 ```
 
 
@@ -354,7 +354,7 @@ Create a DomainIdentity resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainIdentityState): DomainIdentity
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainIdentityState, opts?: pulumi.CustomResourceOptions): DomainIdentity
 ```
 
 
@@ -476,7 +476,7 @@ Create a DomainIdentityVerification resource with the given unique name, argumen
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainIdentityVerificationState): DomainIdentityVerification
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainIdentityVerificationState, opts?: pulumi.CustomResourceOptions): DomainIdentityVerification
 ```
 
 
@@ -575,7 +575,7 @@ Create a EventDestination resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventDestinationState): EventDestination
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventDestinationState, opts?: pulumi.CustomResourceOptions): EventDestination
 ```
 
 
@@ -603,11 +603,11 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L26">property cloudwatchDestination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L26">property cloudwatchDestinations</a>
 </h3>
 
 ```typescript
-public cloudwatchDestination: pulumi.Output<{ ... } | undefined>;
+public cloudwatchDestinations: pulumi.Output<{ ... }[] | undefined>;
 ```
 
 
@@ -729,7 +729,7 @@ Create a IdentityNotificationTopic resource with the given unique name, argument
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityNotificationTopicState): IdentityNotificationTopic
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IdentityNotificationTopicState, opts?: pulumi.CustomResourceOptions): IdentityNotificationTopic
 ```
 
 
@@ -841,7 +841,7 @@ Create a MailFrom resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MailFromState): MailFrom
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MailFromState, opts?: pulumi.CustomResourceOptions): MailFrom
 ```
 
 
@@ -951,7 +951,7 @@ Create a ReceiptFilter resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReceiptFilterState): ReceiptFilter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReceiptFilterState, opts?: pulumi.CustomResourceOptions): ReceiptFilter
 ```
 
 
@@ -1061,7 +1061,7 @@ Create a ReceiptRule resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReceiptRuleState): ReceiptRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReceiptRuleState, opts?: pulumi.CustomResourceOptions): ReceiptRule
 ```
 
 
@@ -1292,7 +1292,7 @@ Create a ReceiptRuleSet resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReceiptRuleSetState): ReceiptRuleSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReceiptRuleSetState, opts?: pulumi.CustomResourceOptions): ReceiptRuleSet
 ```
 
 
@@ -1380,7 +1380,7 @@ Create a Template resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TemplateState): Template
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TemplateState, opts?: pulumi.CustomResourceOptions): Template
 ```
 
 
@@ -1707,11 +1707,11 @@ The domain name of the SES domain identity to verify.
 The set of arguments for constructing a EventDestination resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L132">property cloudwatchDestination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L132">property cloudwatchDestinations</a>
 </h3>
 
 ```typescript
-cloudwatchDestination?: pulumi.Input<{ ... }>;
+cloudwatchDestinations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 
@@ -1790,11 +1790,11 @@ Send the events to an SNS Topic destination
 Input properties used for looking up and filtering EventDestination resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L98">property cloudwatchDestination</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/eventDestination.ts#L98">property cloudwatchDestinations</a>
 </h3>
 
 ```typescript
-cloudwatchDestination?: pulumi.Input<{ ... }>;
+cloudwatchDestinations?: pulumi.Input<pulumi.Input<{ ... }>[]>;
 ```
 
 

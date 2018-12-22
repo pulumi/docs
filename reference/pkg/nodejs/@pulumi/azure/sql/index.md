@@ -54,7 +54,7 @@ Create a ActiveDirectoryAdministrator resource with the given unique name, argum
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActiveDirectoryAdministratorState): ActiveDirectoryAdministrator
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActiveDirectoryAdministratorState, opts?: pulumi.CustomResourceOptions): ActiveDirectoryAdministrator
 ```
 
 
@@ -186,7 +186,7 @@ Create a Database resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatabaseState): Database
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DatabaseState, opts?: pulumi.CustomResourceOptions): Database
 ```
 
 
@@ -483,7 +483,7 @@ Create a ElasticPool resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ElasticPoolState): ElasticPool
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ElasticPoolState, opts?: pulumi.CustomResourceOptions): ElasticPool
 ```
 
 
@@ -681,7 +681,7 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirewallRuleState): FirewallRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FirewallRuleState, opts?: pulumi.CustomResourceOptions): FirewallRule
 ```
 
 
@@ -817,7 +817,7 @@ Create a SqlServer resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SqlServerState): SqlServer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SqlServerState, opts?: pulumi.CustomResourceOptions): SqlServer
 ```
 
 
@@ -982,7 +982,7 @@ Create a VirtualNetworkRule resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkRuleState): VirtualNetworkRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VirtualNetworkRuleState, opts?: pulumi.CustomResourceOptions): VirtualNetworkRule
 ```
 
 

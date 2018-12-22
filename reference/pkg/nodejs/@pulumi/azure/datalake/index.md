@@ -54,7 +54,7 @@ Create a AnalyticsAccount resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsAccountState): AnalyticsAccount
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsAccountState, opts?: pulumi.CustomResourceOptions): AnalyticsAccount
 ```
 
 
@@ -197,7 +197,7 @@ Create a AnalyticsFirewallRule resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsFirewallRuleState): AnalyticsFirewallRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsFirewallRuleState, opts?: pulumi.CustomResourceOptions): AnalyticsFirewallRule
 ```
 
 
@@ -329,7 +329,7 @@ Create a Store resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StoreState): Store
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StoreState, opts?: pulumi.CustomResourceOptions): Store
 ```
 
 
@@ -519,7 +519,7 @@ Create a StoreFile resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StoreFileState): StoreFile
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StoreFileState, opts?: pulumi.CustomResourceOptions): StoreFile
 ```
 
 
@@ -629,7 +629,7 @@ Create a StoreFirewallRule resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StoreFirewallRuleState): StoreFirewallRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StoreFirewallRuleState, opts?: pulumi.CustomResourceOptions): StoreFirewallRule
 ```
 
 

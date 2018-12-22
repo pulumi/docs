@@ -54,7 +54,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertificateState): Certificate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertificateState, opts?: pulumi.CustomResourceOptions): Certificate
 ```
 
 
@@ -178,7 +178,7 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EndpointState): Endpoint
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EndpointState, opts?: pulumi.CustomResourceOptions): Endpoint
 ```
 
 
@@ -442,7 +442,7 @@ Create a ReplicationInstance resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationInstanceState): ReplicationInstance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationInstanceState, opts?: pulumi.CustomResourceOptions): ReplicationInstance
 ```
 
 
@@ -706,7 +706,7 @@ Create a ReplicationSubnetGroup resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationSubnetGroupState): ReplicationSubnetGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationSubnetGroupState, opts?: pulumi.CustomResourceOptions): ReplicationSubnetGroup
 ```
 
 
@@ -846,7 +846,7 @@ Create a ReplicationTask resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationTaskState): ReplicationTask
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ReplicationTaskState, opts?: pulumi.CustomResourceOptions): ReplicationTask
 ```
 
 

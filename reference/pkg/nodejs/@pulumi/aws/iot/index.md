@@ -60,7 +60,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertificateState): Certificate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CertificateState, opts?: pulumi.CustomResourceOptions): Certificate
 ```
 
 
@@ -172,7 +172,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyState): Policy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyState, opts?: pulumi.CustomResourceOptions): Policy
 ```
 
 
@@ -293,7 +293,7 @@ Create a PolicyAttachment resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyAttachmentState): PolicyAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PolicyAttachmentState, opts?: pulumi.CustomResourceOptions): PolicyAttachment
 ```
 
 
@@ -392,7 +392,7 @@ Create a Thing resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingState): Thing
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingState, opts?: pulumi.CustomResourceOptions): Thing
 ```
 
 
@@ -535,7 +535,7 @@ Create a ThingPrincipalAttachment resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingPrincipalAttachmentState): ThingPrincipalAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingPrincipalAttachmentState, opts?: pulumi.CustomResourceOptions): ThingPrincipalAttachment
 ```
 
 
@@ -634,7 +634,7 @@ Create a ThingType resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingTypeState): ThingType
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThingTypeState, opts?: pulumi.CustomResourceOptions): ThingType
 ```
 
 
@@ -749,7 +749,7 @@ Create a TopicRule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicRuleState): TopicRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicRuleState, opts?: pulumi.CustomResourceOptions): TopicRule
 ```
 
 

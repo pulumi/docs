@@ -39,7 +39,7 @@ Create a ManangementLock resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ManangementLockState): ManangementLock
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ManangementLockState, opts?: pulumi.CustomResourceOptions): ManangementLock
 ```
 
 

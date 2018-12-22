@@ -47,7 +47,7 @@ Create a Job resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobState): Job
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobState, opts?: pulumi.CustomResourceOptions): Job
 ```
 
 
@@ -247,7 +247,7 @@ Create a JobCollection resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobCollectionState): JobCollection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobCollectionState, opts?: pulumi.CustomResourceOptions): JobCollection
 ```
 
 

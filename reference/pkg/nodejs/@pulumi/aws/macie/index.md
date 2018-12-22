@@ -44,7 +44,7 @@ Create a MemberAccountAssociation resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberAccountAssociationState): MemberAccountAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberAccountAssociationState, opts?: pulumi.CustomResourceOptions): MemberAccountAssociation
 ```
 
 
@@ -134,7 +134,7 @@ Create a S3BucketAssociation resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: S3BucketAssociationState): S3BucketAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: S3BucketAssociationState, opts?: pulumi.CustomResourceOptions): S3BucketAssociation
 ```
 
 

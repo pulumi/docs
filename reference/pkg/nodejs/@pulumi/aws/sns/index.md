@@ -61,7 +61,7 @@ Create a PlatformApplication resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PlatformApplicationState): PlatformApplication
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PlatformApplicationState, opts?: pulumi.CustomResourceOptions): PlatformApplication
 ```
 
 
@@ -270,7 +270,7 @@ Create a SmsPreferences resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SmsPreferencesState): SmsPreferences
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SmsPreferencesState, opts?: pulumi.CustomResourceOptions): SmsPreferences
 ```
 
 
@@ -413,7 +413,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicState): Topic
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicState, opts?: pulumi.CustomResourceOptions): Topic
 ```
 
 
@@ -701,11 +701,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -783,7 +783,7 @@ Create a TopicPolicy resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicPolicyState): TopicPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicPolicyState, opts?: pulumi.CustomResourceOptions): TopicPolicy
 ```
 
 
@@ -893,7 +893,7 @@ Create a TopicSubscription resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicSubscriptionState): TopicSubscription
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TopicSubscriptionState, opts?: pulumi.CustomResourceOptions): TopicSubscription
 ```
 
 

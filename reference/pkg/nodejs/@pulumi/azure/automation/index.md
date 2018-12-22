@@ -57,7 +57,7 @@ Create a Account resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountState): Account
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountState, opts?: pulumi.CustomResourceOptions): Account
 ```
 
 
@@ -222,7 +222,7 @@ Create a Credential resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CredentialState): Credential
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CredentialState, opts?: pulumi.CustomResourceOptions): Credential
 ```
 
 
@@ -365,7 +365,7 @@ Create a DscConfiguration resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DscConfigurationState): DscConfiguration
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DscConfigurationState, opts?: pulumi.CustomResourceOptions): DscConfiguration
 ```
 
 
@@ -527,7 +527,7 @@ Create a DscNodeConfiguration resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DscNodeConfigurationState): DscNodeConfiguration
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DscNodeConfigurationState, opts?: pulumi.CustomResourceOptions): DscNodeConfiguration
 ```
 
 
@@ -656,7 +656,7 @@ Create a Module resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ModuleState): Module
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ModuleState, opts?: pulumi.CustomResourceOptions): Module
 ```
 
 
@@ -758,7 +758,7 @@ deployments.
 Manages a Automation Runbook.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L63">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L66">constructor</a>
 </h3>
 
 ```typescript
@@ -777,7 +777,7 @@ Create a RunBook resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RunBookState): RunBook
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RunBookState, opts?: pulumi.CustomResourceOptions): RunBook
 ```
 
 
@@ -927,12 +927,15 @@ public runbookType: pulumi.Output<string>;
 The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerShellWorkflow`, `PowerShellWorkflow`, `PowerShell` or `Script`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L63">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L66">property tags</a>
 </h3>
 
 ```typescript
 public tags: pulumi.Output<{ ... }>;
 ```
+
+
+A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property urn</a>
@@ -972,7 +975,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ScheduleState): Schedule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ScheduleState, opts?: pulumi.CustomResourceOptions): Schedule
 ```
 
 
@@ -1845,13 +1848,13 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which the Module is created. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="RunBookArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L177">interface RunBookArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L183">interface RunBookArgs</a>
 </h2>
 
 The set of arguments for constructing a RunBook resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L181">property accountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L187">property accountName</a>
 </h3>
 
 ```typescript
@@ -1862,7 +1865,7 @@ accountName: pulumi.Input<string>;
 The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L185">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L191">property content</a>
 </h3>
 
 ```typescript
@@ -1873,7 +1876,7 @@ content?: pulumi.Input<string>;
 The desired content of the runbook.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L189">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L195">property description</a>
 </h3>
 
 ```typescript
@@ -1884,7 +1887,7 @@ description?: pulumi.Input<string>;
 A description for this credential.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L193">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L199">property location</a>
 </h3>
 
 ```typescript
@@ -1895,7 +1898,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L197">property logProgress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L203">property logProgress</a>
 </h3>
 
 ```typescript
@@ -1906,7 +1909,7 @@ logProgress: pulumi.Input<boolean>;
 Progress log option.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L201">property logVerbose</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L207">property logVerbose</a>
 </h3>
 
 ```typescript
@@ -1917,7 +1920,7 @@ logVerbose: pulumi.Input<boolean>;
 Verbose log option.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L205">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L211">property name</a>
 </h3>
 
 ```typescript
@@ -1928,7 +1931,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Runbook. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L209">property publishContentLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L215">property publishContentLink</a>
 </h3>
 
 ```typescript
@@ -1939,7 +1942,7 @@ publishContentLink: pulumi.Input<{ ... }>;
 The published runbook content link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L213">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L219">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -1950,7 +1953,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L217">property runbookType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L223">property runbookType</a>
 </h3>
 
 ```typescript
@@ -1961,21 +1964,24 @@ runbookType: pulumi.Input<string>;
 The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerShellWorkflow`, `PowerShellWorkflow`, `PowerShell` or `Script`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L218">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L227">property tags</a>
 </h3>
 
 ```typescript
 tags?: pulumi.Input<{ ... }>;
 ```
 
+
+A mapping of tags to assign to the resource.
+
 <h2 class="pdoc-module-header" id="RunBookState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L130">interface RunBookState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L133">interface RunBookState</a>
 </h2>
 
 Input properties used for looking up and filtering RunBook resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L134">property accountName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L137">property accountName</a>
 </h3>
 
 ```typescript
@@ -1986,7 +1992,7 @@ accountName?: pulumi.Input<string>;
 The name of the automation account in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L138">property content</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L141">property content</a>
 </h3>
 
 ```typescript
@@ -1997,7 +2003,7 @@ content?: pulumi.Input<string>;
 The desired content of the runbook.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L142">property description</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L145">property description</a>
 </h3>
 
 ```typescript
@@ -2008,7 +2014,7 @@ description?: pulumi.Input<string>;
 A description for this credential.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L146">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L149">property location</a>
 </h3>
 
 ```typescript
@@ -2019,7 +2025,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L150">property logProgress</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L153">property logProgress</a>
 </h3>
 
 ```typescript
@@ -2030,7 +2036,7 @@ logProgress?: pulumi.Input<boolean>;
 Progress log option.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L154">property logVerbose</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L157">property logVerbose</a>
 </h3>
 
 ```typescript
@@ -2041,7 +2047,7 @@ logVerbose?: pulumi.Input<boolean>;
 Verbose log option.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L158">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L161">property name</a>
 </h3>
 
 ```typescript
@@ -2052,7 +2058,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Runbook. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L162">property publishContentLink</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L165">property publishContentLink</a>
 </h3>
 
 ```typescript
@@ -2063,7 +2069,7 @@ publishContentLink?: pulumi.Input<{ ... }>;
 The published runbook content link.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L166">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L169">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2074,7 +2080,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which the Runbook is created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L170">property runbookType</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L173">property runbookType</a>
 </h3>
 
 ```typescript
@@ -2085,12 +2091,15 @@ runbookType?: pulumi.Input<string>;
 The type of the runbook - can be either `Graph`, `GraphPowerShell`, `GraphPowerShellWorkflow`, `PowerShellWorkflow`, `PowerShell` or `Script`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L171">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/runBook.ts#L177">property tags</a>
 </h3>
 
 ```typescript
 tags?: pulumi.Input<{ ... }>;
 ```
+
+
+A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="ScheduleArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/automation/schedule.ts#L182">interface ScheduleArgs</a>

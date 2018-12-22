@@ -39,7 +39,7 @@ Create a Portfolio resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PortfolioState): Portfolio
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PortfolioState, opts?: pulumi.CustomResourceOptions): Portfolio
 ```
 
 

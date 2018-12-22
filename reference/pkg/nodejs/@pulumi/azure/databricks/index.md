@@ -20,7 +20,7 @@ title: Module databricks
 Manages a Databricks Workspace
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L46">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L50">constructor</a>
 </h3>
 
 ```typescript
@@ -39,7 +39,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkspaceState): Workspace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkspaceState, opts?: pulumi.CustomResourceOptions): Workspace
 ```
 
 
@@ -101,7 +101,18 @@ public managedResourceGroupId: pulumi.Output<string>;
 The ID of the Managed Resource Group created by the Databricks Workspace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L34">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L34">property managedResourceGroupName</a>
+</h3>
+
+```typescript
+public managedResourceGroupName: pulumi.Output<string>;
+```
+
+
+The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L38">property name</a>
 </h3>
 
 ```typescript
@@ -112,7 +123,7 @@ public name: pulumi.Output<string>;
 Specifies the name of the Databricks Workspace resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L38">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L42">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -123,7 +134,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the Resource Group in which the Databricks Workspace should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L42">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L46">property sku</a>
 </h3>
 
 ```typescript
@@ -134,7 +145,7 @@ public sku: pulumi.Output<string>;
 The `sku` to use for the Databricks Workspace. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L46">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L50">property tags</a>
 </h3>
 
 ```typescript
@@ -157,13 +168,13 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h2 class="pdoc-module-header" id="WorkspaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L121">interface WorkspaceArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L131">interface WorkspaceArgs</a>
 </h2>
 
 The set of arguments for constructing a Workspace resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L125">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L135">property location</a>
 </h3>
 
 ```typescript
@@ -174,7 +185,18 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L129">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L139">property managedResourceGroupName</a>
+</h3>
+
+```typescript
+managedResourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L143">property name</a>
 </h3>
 
 ```typescript
@@ -185,7 +207,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Databricks Workspace resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L133">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L147">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -196,7 +218,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the Resource Group in which the Databricks Workspace should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L137">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L151">property sku</a>
 </h3>
 
 ```typescript
@@ -207,7 +229,7 @@ sku: pulumi.Input<string>;
 The `sku` to use for the Databricks Workspace. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L141">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L155">property tags</a>
 </h3>
 
 ```typescript
@@ -218,13 +240,13 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="WorkspaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L91">interface WorkspaceState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L97">interface WorkspaceState</a>
 </h2>
 
 Input properties used for looking up and filtering Workspace resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L95">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L101">property location</a>
 </h3>
 
 ```typescript
@@ -235,7 +257,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource has to be created. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L99">property managedResourceGroupId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L105">property managedResourceGroupId</a>
 </h3>
 
 ```typescript
@@ -246,7 +268,18 @@ managedResourceGroupId?: pulumi.Input<string>;
 The ID of the Managed Resource Group created by the Databricks Workspace.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L103">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L109">property managedResourceGroupName</a>
+</h3>
+
+```typescript
+managedResourceGroupName?: pulumi.Input<string>;
+```
+
+
+The name of the resource group where Azure should place the managed Databricks resources. Changing this forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L113">property name</a>
 </h3>
 
 ```typescript
@@ -257,7 +290,7 @@ name?: pulumi.Input<string>;
 Specifies the name of the Databricks Workspace resource. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L107">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L117">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -268,7 +301,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the Resource Group in which the Databricks Workspace should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L111">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L121">property sku</a>
 </h3>
 
 ```typescript
@@ -279,7 +312,7 @@ sku?: pulumi.Input<string>;
 The `sku` to use for the Databricks Workspace. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L115">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/databricks/workspace.ts#L125">property tags</a>
 </h3>
 
 ```typescript

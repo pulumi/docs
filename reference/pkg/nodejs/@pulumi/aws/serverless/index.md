@@ -27,7 +27,7 @@ implemented by a Pulumi lambda expression and with a set of attached policies.
 </h3>
 
 ```typescript
-new Function(name: string, options: FunctionOptions, func?: Handler, opts?: pulumi.ResourceOptions, serialize?: { ... })
+new Function(name: string, options: FunctionOptions, func?: Handler, opts?: pulumi.ResourceOptions)
 ```
 
 * `func` Deprecated.  Pass the function as [options.func] or [options.factoryFunc] instead.
@@ -49,11 +49,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">

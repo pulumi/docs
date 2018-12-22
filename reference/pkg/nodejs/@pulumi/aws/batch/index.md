@@ -57,7 +57,7 @@ Create a ComputeEnvironment resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeEnvironmentState): ComputeEnvironment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ComputeEnvironmentState, opts?: pulumi.CustomResourceOptions): ComputeEnvironment
 ```
 
 
@@ -241,7 +241,7 @@ Create a JobDefinition resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobDefinitionState): JobDefinition
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobDefinitionState, opts?: pulumi.CustomResourceOptions): JobDefinition
 ```
 
 
@@ -408,7 +408,7 @@ Create a JobQueue resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobQueueState): JobQueue
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: JobQueueState, opts?: pulumi.CustomResourceOptions): JobQueue
 ```
 
 

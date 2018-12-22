@@ -29,7 +29,7 @@ title: Module operationalinsights
 Manages a Log Analytics (formally Operational Insights) Solution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L43">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L46">constructor</a>
 </h3>
 
 ```typescript
@@ -48,7 +48,7 @@ Create a AnalyticsSolution resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsSolutionState): AnalyticsSolution
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsSolutionState, opts?: pulumi.CustomResourceOptions): AnalyticsSolution
 ```
 
 
@@ -144,15 +144,18 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L39">property workspaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L42">property workspaceName</a>
 </h3>
 
 ```typescript
 public workspaceName: pulumi.Output<string>;
 ```
 
+
+The full name of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L43">property workspaceResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L46">property workspaceResourceId</a>
 </h3>
 
 ```typescript
@@ -188,7 +191,7 @@ Create a AnalyticsWorkspace resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsWorkspaceState): AnalyticsWorkspace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsWorkspaceState, opts?: pulumi.CustomResourceOptions): AnalyticsWorkspace
 ```
 
 
@@ -375,7 +378,7 @@ Create a AnalyticsWorkspaceLinkedService resource with the given unique name, ar
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsWorkspaceLinkedServiceState): AnalyticsWorkspaceLinkedService
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AnalyticsWorkspaceLinkedServiceState, opts?: pulumi.CustomResourceOptions): AnalyticsWorkspaceLinkedService
 ```
 
 
@@ -504,13 +507,13 @@ getAnalyticsWorkspace(args: GetAnalyticsWorkspaceArgs, opts?: pulumi.InvokeOptio
 Use this data source to access information about an existing Log Analytics (formally Operational Insights) Workspace.
 
 <h2 class="pdoc-module-header" id="AnalyticsSolutionArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L124">interface AnalyticsSolutionArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L130">interface AnalyticsSolutionArgs</a>
 </h2>
 
 The set of arguments for constructing a AnalyticsSolution resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L128">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L134">property location</a>
 </h3>
 
 ```typescript
@@ -521,7 +524,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L132">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L138">property plan</a>
 </h3>
 
 ```typescript
@@ -532,7 +535,7 @@ plan: pulumi.Input<{ ... }>;
 A `plan` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L136">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L142">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -543,7 +546,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which the Log Analytics solution is created. Changing this forces a new resource to be created. Note: The solution and it's related workspace can only exist in the same resource group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L140">property solutionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L146">property solutionName</a>
 </h3>
 
 ```typescript
@@ -554,15 +557,18 @@ solutionName: pulumi.Input<string>;
 Specifies the name of the solution to be deployed. See [here for options](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-add-solutions).Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L141">property workspaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L150">property workspaceName</a>
 </h3>
 
 ```typescript
 workspaceName: pulumi.Input<string>;
 ```
 
+
+The full name of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L145">property workspaceResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L154">property workspaceResourceId</a>
 </h3>
 
 ```typescript
@@ -573,13 +579,13 @@ workspaceResourceId: pulumi.Input<string>;
 The full resource ID of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.
 
 <h2 class="pdoc-module-header" id="AnalyticsSolutionState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L97">interface AnalyticsSolutionState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L100">interface AnalyticsSolutionState</a>
 </h2>
 
 Input properties used for looking up and filtering AnalyticsSolution resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L101">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L104">property location</a>
 </h3>
 
 ```typescript
@@ -590,7 +596,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L105">property plan</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L108">property plan</a>
 </h3>
 
 ```typescript
@@ -601,7 +607,7 @@ plan?: pulumi.Input<{ ... }>;
 A `plan` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L109">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L112">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -612,7 +618,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which the Log Analytics solution is created. Changing this forces a new resource to be created. Note: The solution and it's related workspace can only exist in the same resource group.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L113">property solutionName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L116">property solutionName</a>
 </h3>
 
 ```typescript
@@ -623,15 +629,18 @@ solutionName?: pulumi.Input<string>;
 Specifies the name of the solution to be deployed. See [here for options](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-add-solutions).Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L114">property workspaceName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L120">property workspaceName</a>
 </h3>
 
 ```typescript
 workspaceName?: pulumi.Input<string>;
 ```
 
+
+The full name of the Log Analytics workspace with which the solution will be linked. Changing this forces a new resource to be created.
+
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L118">property workspaceResourceId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/operationalinsights/analyticsSolution.ts#L124">property workspaceResourceId</a>
 </h3>
 
 ```typescript

@@ -42,7 +42,7 @@ Create a Activity resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActivityState): Activity
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActivityState, opts?: pulumi.CustomResourceOptions): Activity
 ```
 
 
@@ -141,7 +141,7 @@ Create a StateMachine resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StateMachineState): StateMachine
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StateMachineState, opts?: pulumi.CustomResourceOptions): StateMachine
 ```
 
 

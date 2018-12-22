@@ -57,7 +57,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainState): Domain
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainState, opts?: pulumi.CustomResourceOptions): Domain
 ```
 
 
@@ -160,7 +160,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState): Instance
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: InstanceState, opts?: pulumi.CustomResourceOptions): Instance
 ```
 
 
@@ -213,7 +213,7 @@ public availabilityZone: pulumi.Output<string>;
 
 
 The Availability Zone in which to create your
-instance. At this time, must be in `us-east-1`, `us-east-2`, `us-west-2`, `eu-west-1`, `eu-west-2`, `eu-central-1`, `ap-southeast-1`, `ap-southeast-2`, `ap-northeast-1`, `ap-south-1` regions
+instance (see list below)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lightsail/instance.ts#L45">property blueprintId</a>
@@ -390,7 +390,7 @@ Create a KeyPair resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyPairState): KeyPair
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: KeyPairState, opts?: pulumi.CustomResourceOptions): KeyPair
 ```
 
 
@@ -572,7 +572,7 @@ Create a StaticIp resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StaticIpState): StaticIp
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StaticIpState, opts?: pulumi.CustomResourceOptions): StaticIp
 ```
 
 
@@ -695,7 +695,7 @@ Create a StaticIpAttachment resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StaticIpAttachmentState): StaticIpAttachment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StaticIpAttachmentState, opts?: pulumi.CustomResourceOptions): StaticIpAttachment
 ```
 
 
@@ -829,7 +829,7 @@ availabilityZone: pulumi.Input<string>;
 
 
 The Availability Zone in which to create your
-instance. At this time, must be in `us-east-1`, `us-east-2`, `us-west-2`, `eu-west-1`, `eu-west-2`, `eu-central-1`, `ap-southeast-1`, `ap-southeast-2`, `ap-northeast-1`, `ap-south-1` regions
+instance (see list below)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lightsail/instance.ts#L193">property blueprintId</a>
@@ -920,7 +920,7 @@ availabilityZone?: pulumi.Input<string>;
 
 
 The Availability Zone in which to create your
-instance. At this time, must be in `us-east-1`, `us-east-2`, `us-west-2`, `eu-west-1`, `eu-west-2`, `eu-central-1`, `ap-southeast-1`, `ap-southeast-2`, `ap-northeast-1`, `ap-south-1` regions
+instance (see list below)
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lightsail/instance.ts#L152">property blueprintId</a>

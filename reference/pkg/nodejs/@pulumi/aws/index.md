@@ -15,6 +15,7 @@ ES6 modules:
 import * as aws from "@pulumi/aws";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Provider">class Provider</a>
@@ -91,6 +92,7 @@ import * as aws from "@pulumi/aws";
 * <a href="apigateway">apigateway</a>
 * <a href="appautoscaling">appautoscaling</a>
 * <a href="applicationloadbalancing">applicationloadbalancing</a>
+* <a href="appmesh">appmesh</a>
 * <a href="appsync">appsync</a>
 * <a href="athena">athena</a>
 * <a href="autoscaling">autoscaling</a>
@@ -155,6 +157,7 @@ import * as aws from "@pulumi/aws";
 * <a href="route53">route53</a>
 * <a href="s3">s3</a>
 * <a href="secretsmanager">secretsmanager</a>
+* <a href="securityhub">securityhub</a>
 * <a href="serverless">serverless</a>
 * <a href="servicecatalog">servicecatalog</a>
 * <a href="servicediscovery">servicediscovery</a>
@@ -166,6 +169,7 @@ import * as aws from "@pulumi/aws";
 * <a href="ssm">ssm</a>
 * <a href="storagegateway">storagegateway</a>
 * <a href="swf">swf</a>
+* <a href="transfer">transfer</a>
 * <a href="waf">waf</a>
 * <a href="wafregional">wafregional</a>
 * <a href="workspaces">workspaces</a>
@@ -401,7 +405,7 @@ getIpRanges(args: GetIpRangesArgs, opts?: pulumi.InvokeOptions): Promise<GetIpRa
 ```
 
 
-Use this data source to get the [IP ranges][1] of various AWS products and services.
+Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documention][1].
 
 <h2 class="pdoc-module-header" id="getPartition">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getPartition.ts#L10">function getPartition</a>
@@ -1091,13 +1095,13 @@ names: string[];
 A list of the Autoscaling Groups in the current region.
 
 <h2 class="pdoc-module-header" id="GetAvailabilityZoneArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L31">interface GetAvailabilityZoneArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L32">interface GetAvailabilityZoneArgs</a>
 </h2>
 
 A collection of arguments for invoking getAvailabilityZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L35">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L36">property name</a>
 </h3>
 
 ```typescript
@@ -1108,7 +1112,7 @@ name?: string;
 The full name of the availability zone to select.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L40">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L41">property state</a>
 </h3>
 
 ```typescript
@@ -1119,14 +1123,25 @@ state?: string;
 A specific availability zone state to require. May
 be any of `"available"`, `"information"` or `"impaired"`.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L45">property zoneId</a>
+</h3>
+
+```typescript
+zoneId?: string;
+```
+
+
+The zone ID of the availability zone to select.
+
 <h2 class="pdoc-module-header" id="GetAvailabilityZoneResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L46">interface GetAvailabilityZoneResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L51">interface GetAvailabilityZoneResult</a>
 </h2>
 
 A collection of values returned by getAvailabilityZone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L69">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L78">property id</a>
 </h3>
 
 ```typescript
@@ -1137,7 +1152,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L50">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L55">property name</a>
 </h3>
 
 ```typescript
@@ -1148,7 +1163,7 @@ name: string;
 The name of the selected availability zone.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L55">property nameSuffix</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L60">property nameSuffix</a>
 </h3>
 
 ```typescript
@@ -1160,7 +1175,7 @@ The part of the AZ name that appears after the region name,
 uniquely identifying the AZ within its region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L61">property region</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L66">property region</a>
 </h3>
 
 ```typescript
@@ -1173,7 +1188,7 @@ This is always the region selected on the provider, since this data source
 searches only within that region.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L65">property state</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L70">property state</a>
 </h3>
 
 ```typescript
@@ -1182,6 +1197,17 @@ state: string;
 
 
 The current state of the AZ.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZone.ts#L74">property zoneId</a>
+</h3>
+
+```typescript
+zoneId: string;
+```
+
+
+(Optional) The zone ID of the selected availability zone.
 
 <h2 class="pdoc-module-header" id="GetAvailabilityZonesArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts#L25">interface GetAvailabilityZonesArgs</a>
@@ -1210,7 +1236,7 @@ to which the underlying AWS account has access, regardless of their state.
 A collection of values returned by getAvailabilityZones.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts#L46">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts#L50">property id</a>
 </h3>
 
 ```typescript
@@ -1230,6 +1256,17 @@ names: string[];
 
 
 A list of the Availability Zone names available to the account.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getAvailabilityZones.ts#L46">property zoneIds</a>
+</h3>
+
+```typescript
+zoneIds: string[];
+```
+
+
+A list of the Availability Zone IDs available to the account.
 
 <h2 class="pdoc-module-header" id="GetBillingServiceAccountResult">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getBillingServiceAccount.ts#L18">interface GetBillingServiceAccountResult</a>
@@ -1324,7 +1361,7 @@ displayName: string;
 ```
 
 
-The human-friendly name linked to the canonical user ID.
+The human-friendly name linked to the canonical user ID. The bucket owner's display name. **NOTE:** [This value](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTServiceGET.html) is only included in the response in the US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU (Ireland), and South America (São Paulo) regions.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getCanonicalUserId.ts#L27">property id</a>
@@ -1504,13 +1541,13 @@ tags: { ... };
 Key-value map of tags associated with Elastic IP.
 
 <h2 class="pdoc-module-header" id="GetIpRangesArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L20">interface GetIpRangesArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L21">interface GetIpRangesArgs</a>
 </h2>
 
 A collection of arguments for invoking getIpRanges.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L26">property regions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L27">property regions</a>
 </h3>
 
 ```typescript
@@ -1523,7 +1560,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 (e.g. `eu-central-1`)
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L31">property services</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L32">property services</a>
 </h3>
 
 ```typescript
@@ -1534,14 +1571,25 @@ services: string[];
 Filter IP ranges by services. Valid items are `amazon`
 (for amazon.com), `cloudfront`, `codebuild`, `ec2`, `route53`, `route53_healthchecks` and `S3`.
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L36">property url</a>
+</h3>
+
+```typescript
+url?: string;
+```
+
+
+Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documention][1]. Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
+
 <h2 class="pdoc-module-header" id="GetIpRangesResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L37">interface GetIpRangesResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L42">interface GetIpRangesResult</a>
 </h2>
 
 A collection of values returned by getIpRanges.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L41">property cidrBlocks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L46">property cidrBlocks</a>
 </h3>
 
 ```typescript
@@ -1552,7 +1600,7 @@ cidrBlocks: string[];
 The lexically ordered list of CIDR blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L45">property createDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L50">property createDate</a>
 </h3>
 
 ```typescript
@@ -1563,7 +1611,7 @@ createDate: string;
 The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L58">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L63">property id</a>
 </h3>
 
 ```typescript
@@ -1574,7 +1622,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L49">property ipv6CidrBlocks</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L54">property ipv6CidrBlocks</a>
 </h3>
 
 ```typescript
@@ -1585,7 +1633,7 @@ ipv6CidrBlocks: string[];
 The lexically ordered list of IPv6 CIDR blocks.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L54">property syncToken</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/getIpRanges.ts#L59">property syncToken</a>
 </h3>
 
 ```typescript

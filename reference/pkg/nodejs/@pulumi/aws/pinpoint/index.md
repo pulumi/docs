@@ -73,7 +73,7 @@ Create a AdmChannel resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AdmChannelState): AdmChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AdmChannelState, opts?: pulumi.CustomResourceOptions): AdmChannel
 ```
 
 
@@ -191,7 +191,7 @@ Create a ApnsChannel resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsChannelState): ApnsChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsChannelState, opts?: pulumi.CustomResourceOptions): ApnsChannel
 ```
 
 
@@ -337,7 +337,7 @@ Create a ApnsSandboxChannel resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsSandboxChannelState): ApnsSandboxChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsSandboxChannelState, opts?: pulumi.CustomResourceOptions): ApnsSandboxChannel
 ```
 
 
@@ -483,7 +483,7 @@ Create a ApnsVoipChannel resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsVoipChannelState): ApnsVoipChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsVoipChannelState, opts?: pulumi.CustomResourceOptions): ApnsVoipChannel
 ```
 
 
@@ -629,7 +629,7 @@ Create a ApnsVoipSandboxChannel resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsVoipSandboxChannelState): ApnsVoipSandboxChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApnsVoipSandboxChannelState, opts?: pulumi.CustomResourceOptions): ApnsVoipSandboxChannel
 ```
 
 
@@ -778,7 +778,7 @@ Create a App resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AppState): App
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AppState, opts?: pulumi.CustomResourceOptions): App
 ```
 
 
@@ -925,7 +925,7 @@ Create a BaiduChannel resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BaiduChannelState): BaiduChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BaiduChannelState, opts?: pulumi.CustomResourceOptions): BaiduChannel
 ```
 
 
@@ -1043,7 +1043,7 @@ Create a EmailChannel resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EmailChannelState): EmailChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EmailChannelState, opts?: pulumi.CustomResourceOptions): EmailChannel
 ```
 
 
@@ -1165,7 +1165,7 @@ Create a EventStream resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventStreamState): EventStream
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventStreamState, opts?: pulumi.CustomResourceOptions): EventStream
 ```
 
 
@@ -1263,7 +1263,7 @@ Create a GcmChannel resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GcmChannelState): GcmChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GcmChannelState, opts?: pulumi.CustomResourceOptions): GcmChannel
 ```
 
 
@@ -1361,7 +1361,7 @@ Create a SmsChannel resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SmsChannelState): SmsChannel
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SmsChannelState, opts?: pulumi.CustomResourceOptions): SmsChannel
 ```
 
 

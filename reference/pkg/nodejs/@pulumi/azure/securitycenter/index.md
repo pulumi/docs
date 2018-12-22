@@ -47,7 +47,7 @@ Create a Contact resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContactState): Contact
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContactState, opts?: pulumi.CustomResourceOptions): Contact
 ```
 
 
@@ -172,7 +172,7 @@ Create a SubscriptionPricing resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubscriptionPricingState): SubscriptionPricing
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SubscriptionPricingState, opts?: pulumi.CustomResourceOptions): SubscriptionPricing
 ```
 
 
@@ -264,7 +264,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkspaceState): Workspace
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: WorkspaceState, opts?: pulumi.CustomResourceOptions): Workspace
 ```
 
 

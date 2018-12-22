@@ -55,7 +55,7 @@ Create a Distribution resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DistributionState): Distribution
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DistributionState, opts?: pulumi.CustomResourceOptions): Distribution
 ```
 
 
@@ -464,7 +464,7 @@ Create a OriginAccessIdentity resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OriginAccessIdentityState): OriginAccessIdentity
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: OriginAccessIdentityState, opts?: pulumi.CustomResourceOptions): OriginAccessIdentity
 ```
 
 
@@ -611,7 +611,7 @@ Create a PublicKey resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicKeyState): PublicKey
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicKeyState, opts?: pulumi.CustomResourceOptions): PublicKey
 ```
 
 

@@ -62,7 +62,7 @@ Create a ActiveSlot resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActiveSlotState): ActiveSlot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActiveSlotState, opts?: pulumi.CustomResourceOptions): ActiveSlot
 ```
 
 
@@ -174,7 +174,7 @@ Create a AppService resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AppServiceState): AppService
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AppServiceState, opts?: pulumi.CustomResourceOptions): AppService
 ```
 
 
@@ -427,7 +427,7 @@ Create a CustomHostnameBinding resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomHostnameBindingState): CustomHostnameBinding
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: CustomHostnameBindingState, opts?: pulumi.CustomResourceOptions): CustomHostnameBinding
 ```
 
 
@@ -537,7 +537,7 @@ Create a FunctionApp resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionAppState): FunctionApp
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: FunctionAppState, opts?: pulumi.CustomResourceOptions): FunctionApp
 ```
 
 
@@ -793,7 +793,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 Manage an App Service Plan component.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L54">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L63">constructor</a>
 </h3>
 
 ```typescript
@@ -812,7 +812,7 @@ Create a Plan resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PlanState): Plan
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PlanState, opts?: pulumi.CustomResourceOptions): Plan
 ```
 
 
@@ -840,6 +840,17 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L26">property appServiceEnvironmentId</a>
+</h3>
+
+```typescript
+public appServiceEnvironmentId: pulumi.Output<string>;
+```
+
+
+The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
 </h3>
 
@@ -852,7 +863,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L26">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L30">property kind</a>
 </h3>
 
 ```typescript
@@ -863,7 +874,7 @@ public kind: pulumi.Output<string | undefined>;
 The kind of the App Service Plan to create. Possible values are `Windows` (also available as `App`), `Linux` and `FunctionApp` (for a Consumption Plan). Defaults to `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L30">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L34">property location</a>
 </h3>
 
 ```typescript
@@ -874,7 +885,7 @@ public location: pulumi.Output<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L34">property maximumNumberOfWorkers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L38">property maximumNumberOfWorkers</a>
 </h3>
 
 ```typescript
@@ -882,10 +893,10 @@ public maximumNumberOfWorkers: pulumi.Output<number>;
 ```
 
 
-Maximum number of instances that can be assigned to this App Service plan.
+The maximum number of workers supported with the App Service Plan's sku.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L38">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L42">property name</a>
 </h3>
 
 ```typescript
@@ -896,18 +907,37 @@ public name: pulumi.Output<string>;
 Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L42">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L46">property perSiteScaling</a>
+</h3>
+
+```typescript
+public perSiteScaling: pulumi.Output<boolean>;
+```
+
+
+Can Apps assigned to this App Service Plan be scaled independently? If set to `false` apps assigned to this plan will scale to all instances of the plan.  Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L47">property properties</a>
 </h3>
 
 ```typescript
 public properties: pulumi.Output<{ ... }>;
 ```
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L51">property reserved</a>
+</h3>
 
-A `properties` block as documented below.
+```typescript
+public reserved: pulumi.Output<boolean>;
+```
+
+
+Is this App Service Plan `Reserved`. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L46">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L55">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -918,7 +948,7 @@ public resourceGroupName: pulumi.Output<string>;
 The name of the resource group in which to create the App Service Plan component.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L50">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L59">property sku</a>
 </h3>
 
 ```typescript
@@ -929,7 +959,7 @@ public sku: pulumi.Output<{ ... }>;
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L54">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L63">property tags</a>
 </h3>
 
 ```typescript
@@ -980,7 +1010,7 @@ Create a Slot resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SlotState): Slot
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: SlotState, opts?: pulumi.CustomResourceOptions): Slot
 ```
 
 
@@ -2354,13 +2384,24 @@ tags: { ... };
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="PlanArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L141">interface PlanArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L165">interface PlanArgs</a>
 </h2>
 
 The set of arguments for constructing a Plan resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L145">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L169">property appServiceEnvironmentId</a>
+</h3>
+
+```typescript
+appServiceEnvironmentId?: pulumi.Input<string>;
+```
+
+
+The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L173">property kind</a>
 </h3>
 
 ```typescript
@@ -2371,7 +2412,7 @@ kind?: pulumi.Input<string>;
 The kind of the App Service Plan to create. Possible values are `Windows` (also available as `App`), `Linux` and `FunctionApp` (for a Consumption Plan). Defaults to `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L149">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L177">property location</a>
 </h3>
 
 ```typescript
@@ -2382,7 +2423,7 @@ location: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L153">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L181">property name</a>
 </h3>
 
 ```typescript
@@ -2393,18 +2434,37 @@ name?: pulumi.Input<string>;
 Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L157">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L185">property perSiteScaling</a>
+</h3>
+
+```typescript
+perSiteScaling?: pulumi.Input<boolean>;
+```
+
+
+Can Apps assigned to this App Service Plan be scaled independently? If set to `false` apps assigned to this plan will scale to all instances of the plan.  Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L186">property properties</a>
 </h3>
 
 ```typescript
 properties?: pulumi.Input<{ ... }>;
 ```
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L190">property reserved</a>
+</h3>
 
-A `properties` block as documented below.
+```typescript
+reserved?: pulumi.Input<boolean>;
+```
+
+
+Is this App Service Plan `Reserved`. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L161">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L194">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2415,7 +2475,7 @@ resourceGroupName: pulumi.Input<string>;
 The name of the resource group in which to create the App Service Plan component.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L165">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L198">property sku</a>
 </h3>
 
 ```typescript
@@ -2426,7 +2486,7 @@ sku: pulumi.Input<{ ... }>;
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L169">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L202">property tags</a>
 </h3>
 
 ```typescript
@@ -2437,13 +2497,24 @@ tags?: pulumi.Input<{ ... }>;
 A mapping of tags to assign to the resource.
 
 <h2 class="pdoc-module-header" id="PlanState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L103">interface PlanState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L118">interface PlanState</a>
 </h2>
 
 Input properties used for looking up and filtering Plan resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L107">property kind</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L122">property appServiceEnvironmentId</a>
+</h3>
+
+```typescript
+appServiceEnvironmentId?: pulumi.Input<string>;
+```
+
+
+The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L126">property kind</a>
 </h3>
 
 ```typescript
@@ -2454,7 +2525,7 @@ kind?: pulumi.Input<string>;
 The kind of the App Service Plan to create. Possible values are `Windows` (also available as `App`), `Linux` and `FunctionApp` (for a Consumption Plan). Defaults to `Windows`. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L111">property location</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L130">property location</a>
 </h3>
 
 ```typescript
@@ -2465,7 +2536,7 @@ location?: pulumi.Input<string>;
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L115">property maximumNumberOfWorkers</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L134">property maximumNumberOfWorkers</a>
 </h3>
 
 ```typescript
@@ -2473,10 +2544,10 @@ maximumNumberOfWorkers?: pulumi.Input<number>;
 ```
 
 
-Maximum number of instances that can be assigned to this App Service plan.
+The maximum number of workers supported with the App Service Plan's sku.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L119">property name</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L138">property name</a>
 </h3>
 
 ```typescript
@@ -2487,18 +2558,37 @@ name?: pulumi.Input<string>;
 Specifies the name of the App Service Plan component. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L123">property properties</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L142">property perSiteScaling</a>
+</h3>
+
+```typescript
+perSiteScaling?: pulumi.Input<boolean>;
+```
+
+
+Can Apps assigned to this App Service Plan be scaled independently? If set to `false` apps assigned to this plan will scale to all instances of the plan.  Defaults to `false`.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L143">property properties</a>
 </h3>
 
 ```typescript
 properties?: pulumi.Input<{ ... }>;
 ```
 
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L147">property reserved</a>
+</h3>
 
-A `properties` block as documented below.
+```typescript
+reserved?: pulumi.Input<boolean>;
+```
+
+
+Is this App Service Plan `Reserved`. Defaults to `false`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L127">property resourceGroupName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L151">property resourceGroupName</a>
 </h3>
 
 ```typescript
@@ -2509,7 +2599,7 @@ resourceGroupName?: pulumi.Input<string>;
 The name of the resource group in which to create the App Service Plan component.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L131">property sku</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L155">property sku</a>
 </h3>
 
 ```typescript
@@ -2520,7 +2610,7 @@ sku?: pulumi.Input<{ ... }>;
 A `sku` block as documented below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L135">property tags</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/appservice/plan.ts#L159">property tags</a>
 </h3>
 
 ```typescript

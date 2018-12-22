@@ -63,7 +63,7 @@ Create a Account resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountState): Account
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountState, opts?: pulumi.CustomResourceOptions): Account
 ```
 
 
@@ -483,7 +483,7 @@ Create a Blob resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BlobState): Blob
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BlobState, opts?: pulumi.CustomResourceOptions): Blob
 ```
 
 
@@ -696,7 +696,7 @@ Create a Container resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerState): Container
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ContainerState, opts?: pulumi.CustomResourceOptions): Container
 ```
 
 
@@ -830,7 +830,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueState): Queue
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: QueueState, opts?: pulumi.CustomResourceOptions): Queue
 ```
 
 
@@ -942,7 +942,7 @@ Create a Share resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ShareState): Share
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ShareState, opts?: pulumi.CustomResourceOptions): Share
 ```
 
 
@@ -1076,7 +1076,7 @@ Create a Table resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TableState): Table
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TableState, opts?: pulumi.CustomResourceOptions): Table
 ```
 
 
@@ -1185,7 +1185,7 @@ Create a ZipBlob resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZipBlobState): ZipBlob
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ZipBlobState, opts?: pulumi.CustomResourceOptions): ZipBlob
 ```
 
 

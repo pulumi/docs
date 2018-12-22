@@ -15,6 +15,7 @@ ES6 modules:
 import * as awsInfra from "@pulumi/aws-infra";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#Cluster">class Cluster</a>

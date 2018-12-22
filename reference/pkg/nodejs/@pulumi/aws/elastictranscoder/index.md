@@ -42,7 +42,7 @@ Create a Pipeline resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PipelineState): Pipeline
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PipelineState, opts?: pulumi.CustomResourceOptions): Pipeline
 ```
 
 
@@ -237,7 +237,7 @@ Create a Preset resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PresetState): Preset
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PresetState, opts?: pulumi.CustomResourceOptions): Preset
 ```
 
 

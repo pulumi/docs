@@ -42,7 +42,7 @@ Create a ConditionalForwader resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConditionalForwaderState): ConditionalForwader
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConditionalForwaderState, opts?: pulumi.CustomResourceOptions): ConditionalForwader
 ```
 
 
@@ -155,7 +155,7 @@ Create a Directory resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DirectoryState): Directory
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DirectoryState, opts?: pulumi.CustomResourceOptions): Directory
 ```
 
 

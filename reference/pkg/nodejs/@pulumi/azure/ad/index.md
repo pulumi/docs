@@ -53,7 +53,7 @@ Create a Application resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationState): Application
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationState, opts?: pulumi.CustomResourceOptions): Application
 ```
 
 
@@ -209,7 +209,7 @@ Create a ServicePrincipal resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServicePrincipalState): ServicePrincipal
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServicePrincipalState, opts?: pulumi.CustomResourceOptions): ServicePrincipal
 ```
 
 
@@ -310,7 +310,7 @@ Create a ServicePrincipalPassword resource with the given unique name, arguments
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServicePrincipalPasswordState): ServicePrincipalPassword
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ServicePrincipalPasswordState, opts?: pulumi.CustomResourceOptions): ServicePrincipalPassword
 ```
 
 

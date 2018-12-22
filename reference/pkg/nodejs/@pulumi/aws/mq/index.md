@@ -60,7 +60,7 @@ Create a Broker resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BrokerState): Broker
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BrokerState, opts?: pulumi.CustomResourceOptions): Broker
 ```
 
 
@@ -324,7 +324,7 @@ Create a Configuration resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfigurationState): Configuration
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfigurationState, opts?: pulumi.CustomResourceOptions): Configuration
 ```
 
 

@@ -15,6 +15,7 @@ ES6 modules:
 import * as vsphere from "@pulumi/vsphere";
 ```
 
+
 <h2 class="pdoc-module-header">Index</h2>
 
 * <a href="#ComputeCluster">class ComputeCluster</a>

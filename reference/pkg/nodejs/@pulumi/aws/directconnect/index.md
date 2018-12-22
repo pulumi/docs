@@ -75,7 +75,7 @@ Create a BgpPeer resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BgpPeerState): BgpPeer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BgpPeerState, opts?: pulumi.CustomResourceOptions): BgpPeer
 ```
 
 
@@ -231,7 +231,7 @@ Create a Connection resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConnectionState): Connection
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConnectionState, opts?: pulumi.CustomResourceOptions): Connection
 ```
 
 
@@ -374,7 +374,7 @@ Create a ConnectionAssociation resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConnectionAssociationState): ConnectionAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConnectionAssociationState, opts?: pulumi.CustomResourceOptions): ConnectionAssociation
 ```
 
 
@@ -473,7 +473,7 @@ Create a Gateway resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GatewayState): Gateway
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GatewayState, opts?: pulumi.CustomResourceOptions): Gateway
 ```
 
 
@@ -572,7 +572,7 @@ Create a GatewayAssociation resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GatewayAssociationState): GatewayAssociation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: GatewayAssociationState, opts?: pulumi.CustomResourceOptions): GatewayAssociation
 ```
 
 
@@ -672,7 +672,7 @@ Create a HostedPrivateVirtualInterface resource with the given unique name, argu
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPrivateVirtualInterfaceState): HostedPrivateVirtualInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPrivateVirtualInterfaceState, opts?: pulumi.CustomResourceOptions): HostedPrivateVirtualInterface
 ```
 
 
@@ -882,7 +882,7 @@ Create a HostedPrivateVirtualInterfaceAccepter resource with the given unique na
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPrivateVirtualInterfaceAccepterState): HostedPrivateVirtualInterfaceAccepter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPrivateVirtualInterfaceAccepterState, opts?: pulumi.CustomResourceOptions): HostedPrivateVirtualInterfaceAccepter
 ```
 
 
@@ -1015,7 +1015,7 @@ Create a HostedPublicVirtualInterface resource with the given unique name, argum
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPublicVirtualInterfaceState): HostedPublicVirtualInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPublicVirtualInterfaceState, opts?: pulumi.CustomResourceOptions): HostedPublicVirtualInterface
 ```
 
 
@@ -1214,7 +1214,7 @@ Create a HostedPublicVirtualInterfaceAccepter resource with the given unique nam
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPublicVirtualInterfaceAccepterState): HostedPublicVirtualInterfaceAccepter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: HostedPublicVirtualInterfaceAccepterState, opts?: pulumi.CustomResourceOptions): HostedPublicVirtualInterfaceAccepter
 ```
 
 
@@ -1324,7 +1324,7 @@ Create a LinkAggregationGroup resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LinkAggregationGroupState): LinkAggregationGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LinkAggregationGroupState, opts?: pulumi.CustomResourceOptions): LinkAggregationGroup
 ```
 
 
@@ -1478,7 +1478,7 @@ Create a PrivateVirtualInterface resource with the given unique name, arguments,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PrivateVirtualInterfaceState): PrivateVirtualInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PrivateVirtualInterfaceState, opts?: pulumi.CustomResourceOptions): PrivateVirtualInterface
 ```
 
 
@@ -1710,7 +1710,7 @@ Create a PublicVirtualInterface resource with the given unique name, arguments, 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicVirtualInterfaceState): PublicVirtualInterface
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PublicVirtualInterfaceState, opts?: pulumi.CustomResourceOptions): PublicVirtualInterface
 ```
 
 

@@ -72,7 +72,7 @@ Create a Activation resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActivationState): Activation
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ActivationState, opts?: pulumi.CustomResourceOptions): Activation
 ```
 
 
@@ -237,7 +237,7 @@ Create a Association resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssociationState): Association
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssociationState, opts?: pulumi.CustomResourceOptions): Association
 ```
 
 
@@ -414,7 +414,7 @@ Create a Document resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DocumentState): Document
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DocumentState, opts?: pulumi.CustomResourceOptions): Document
 ```
 
 
@@ -686,7 +686,7 @@ Create a MaintenanceWindow resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MaintenanceWindowState): MaintenanceWindow
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MaintenanceWindowState, opts?: pulumi.CustomResourceOptions): MaintenanceWindow
 ```
 
 
@@ -826,7 +826,7 @@ Create a MaintenanceWindowTarget resource with the given unique name, arguments,
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MaintenanceWindowTargetState): MaintenanceWindowTarget
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MaintenanceWindowTargetState, opts?: pulumi.CustomResourceOptions): MaintenanceWindowTarget
 ```
 
 
@@ -947,7 +947,7 @@ Create a MaintenanceWindowTask resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MaintenanceWindowTaskState): MaintenanceWindowTask
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MaintenanceWindowTaskState, opts?: pulumi.CustomResourceOptions): MaintenanceWindowTask
 ```
 
 
@@ -1153,7 +1153,7 @@ Create a Parameter resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterState): Parameter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ParameterState, opts?: pulumi.CustomResourceOptions): Parameter
 ```
 
 
@@ -1333,7 +1333,7 @@ Create a PatchBaseline resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PatchBaselineState): PatchBaseline
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PatchBaselineState, opts?: pulumi.CustomResourceOptions): PatchBaseline
 ```
 
 
@@ -1498,7 +1498,7 @@ Create a PatchGroup resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PatchGroupState): PatchGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: PatchGroupState, opts?: pulumi.CustomResourceOptions): PatchGroup
 ```
 
 
@@ -1597,7 +1597,7 @@ Create a ResourceDataSync resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceDataSyncState): ResourceDataSync
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceDataSyncState, opts?: pulumi.CustomResourceOptions): ResourceDataSync
 ```
 
 

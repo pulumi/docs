@@ -47,7 +47,7 @@ Create a AssessmentTarget resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssessmentTargetState): AssessmentTarget
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssessmentTargetState, opts?: pulumi.CustomResourceOptions): AssessmentTarget
 ```
 
 
@@ -155,7 +155,7 @@ Create a AssessmentTemplate resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssessmentTemplateState): AssessmentTemplate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AssessmentTemplateState, opts?: pulumi.CustomResourceOptions): AssessmentTemplate
 ```
 
 
@@ -287,7 +287,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceGroupState): ResourceGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceGroupState, opts?: pulumi.CustomResourceOptions): ResourceGroup
 ```
 
 

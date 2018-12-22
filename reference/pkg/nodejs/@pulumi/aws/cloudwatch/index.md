@@ -86,7 +86,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DashboardState): Dashboard
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DashboardState, opts?: pulumi.CustomResourceOptions): Dashboard
 ```
 
 
@@ -196,7 +196,7 @@ Create a EventPermission resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventPermissionState): EventPermission
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventPermissionState, opts?: pulumi.CustomResourceOptions): EventPermission
 ```
 
 
@@ -317,7 +317,7 @@ Create a EventRule resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventRuleState): EventRule
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventRuleState, opts?: pulumi.CustomResourceOptions): EventRule
 ```
 
 
@@ -487,11 +487,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -564,7 +564,7 @@ Create a EventTarget resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventTargetState): EventTarget
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EventTargetState, opts?: pulumi.CustomResourceOptions): EventTarget
 ```
 
 
@@ -774,7 +774,7 @@ Create a LogDestination resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogDestinationState): LogDestination
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogDestinationState, opts?: pulumi.CustomResourceOptions): LogDestination
 ```
 
 
@@ -895,7 +895,7 @@ Create a LogDestinationPolicy resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogDestinationPolicyState): LogDestinationPolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogDestinationPolicyState, opts?: pulumi.CustomResourceOptions): LogDestinationPolicy
 ```
 
 
@@ -994,7 +994,7 @@ Create a LogGroup resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogGroupState): LogGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogGroupState, opts?: pulumi.CustomResourceOptions): LogGroup
 ```
 
 
@@ -1142,11 +1142,11 @@ static isInstance(obj: any): boolean
 ```
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method registerOutputs</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method registerOutputs</a>
 </h3>
 
 ```typescript
-protected registerOutputs(outputs: Inputs | Promise<Inputs> | Output<Inputs> | undefined): void
+protected registerOutputs(outputs?: Inputs | Promise<Inputs> | Output<Inputs>): void
 ```
 
 <h3 class="pdoc-member-header">
@@ -1219,7 +1219,7 @@ Create a LogMetricFilter resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogMetricFilterState): LogMetricFilter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogMetricFilterState, opts?: pulumi.CustomResourceOptions): LogMetricFilter
 ```
 
 
@@ -1342,7 +1342,7 @@ Create a LogResourcePolicy resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogResourcePolicyState): LogResourcePolicy
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogResourcePolicyState, opts?: pulumi.CustomResourceOptions): LogResourcePolicy
 ```
 
 
@@ -1441,7 +1441,7 @@ Create a LogStream resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogStreamState): LogStream
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogStreamState, opts?: pulumi.CustomResourceOptions): LogStream
 ```
 
 
@@ -1551,7 +1551,7 @@ Create a LogSubscriptionFilter resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogSubscriptionFilterState): LogSubscriptionFilter
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: LogSubscriptionFilterState, opts?: pulumi.CustomResourceOptions): LogSubscriptionFilter
 ```
 
 
@@ -1694,7 +1694,7 @@ Create a MetricAlarm resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MetricAlarmState): MetricAlarm
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MetricAlarmState, opts?: pulumi.CustomResourceOptions): MetricAlarm
 ```
 
 

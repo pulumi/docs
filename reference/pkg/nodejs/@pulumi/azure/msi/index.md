@@ -36,7 +36,7 @@ Create a UserAssignedIdentity resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserAssignedIdentityState): UserAssignedIdentity
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UserAssignedIdentityState, opts?: pulumi.CustomResourceOptions): UserAssignedIdentity
 ```
 
 

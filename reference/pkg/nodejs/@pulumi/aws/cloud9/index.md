@@ -39,7 +39,7 @@ Create a EnvironmentEC2 resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EnvironmentEC2State): EnvironmentEC2
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EnvironmentEC2State, opts?: pulumi.CustomResourceOptions): EnvironmentEC2
 ```
 
 

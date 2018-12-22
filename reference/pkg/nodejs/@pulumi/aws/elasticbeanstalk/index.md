@@ -59,7 +59,7 @@ Create a Application resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationState): Application
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationState, opts?: pulumi.CustomResourceOptions): Application
 ```
 
 
@@ -181,7 +181,7 @@ Create a ApplicationVersion resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationVersionState): ApplicationVersion
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApplicationVersionState, opts?: pulumi.CustomResourceOptions): ApplicationVersion
 ```
 
 
@@ -327,7 +327,7 @@ Create a ConfigurationTemplate resource with the given unique name, arguments, a
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfigurationTemplateState): ConfigurationTemplate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ConfigurationTemplateState, opts?: pulumi.CustomResourceOptions): ConfigurationTemplate
 ```
 
 
@@ -478,7 +478,7 @@ Create a Environment resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EnvironmentState): Environment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: EnvironmentState, opts?: pulumi.CustomResourceOptions): Environment
 ```
 
 

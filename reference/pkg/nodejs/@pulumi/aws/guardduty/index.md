@@ -50,7 +50,7 @@ Create a Detector resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DetectorState): Detector
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DetectorState, opts?: pulumi.CustomResourceOptions): Detector
 ```
 
 
@@ -151,7 +151,7 @@ Create a IPSet resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IPSetState): IPSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IPSetState, opts?: pulumi.CustomResourceOptions): IPSet
 ```
 
 
@@ -285,7 +285,7 @@ Create a Member resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberState): Member
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MemberState, opts?: pulumi.CustomResourceOptions): Member
 ```
 
 
@@ -441,7 +441,7 @@ Create a ThreatIntelSet resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThreatIntelSetState): ThreatIntelSet
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ThreatIntelSetState, opts?: pulumi.CustomResourceOptions): ThreatIntelSet
 ```
 
 

@@ -32,6 +32,7 @@ title: Module apigateway
 * <a href="#getKey">function getKey</a>
 * <a href="#getResource">function getResource</a>
 * <a href="#getRestApi">function getRestApi</a>
+* <a href="#getVpcLink">function getVpcLink</a>
 * <a href="#AccountArgs">interface AccountArgs</a>
 * <a href="#AccountState">interface AccountState</a>
 * <a href="#ApiKeyArgs">interface ApiKeyArgs</a>
@@ -56,6 +57,8 @@ title: Module apigateway
 * <a href="#GetResourceResult">interface GetResourceResult</a>
 * <a href="#GetRestApiArgs">interface GetRestApiArgs</a>
 * <a href="#GetRestApiResult">interface GetRestApiResult</a>
+* <a href="#GetVpcLinkArgs">interface GetVpcLinkArgs</a>
+* <a href="#GetVpcLinkResult">interface GetVpcLinkResult</a>
 * <a href="#IntegrationArgs">interface IntegrationArgs</a>
 * <a href="#IntegrationResponseArgs">interface IntegrationResponseArgs</a>
 * <a href="#IntegrationResponseState">interface IntegrationResponseState</a>
@@ -85,7 +88,7 @@ title: Module apigateway
 * <a href="#VpcLinkArgs">interface VpcLinkArgs</a>
 * <a href="#VpcLinkState">interface VpcLinkState</a>
 
-<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts">apigateway/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts">apigateway/apiKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts">apigateway/authorizer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts">apigateway/basePathMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts">apigateway/clientCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts">apigateway/deployment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts">apigateway/documentationPart.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts">apigateway/documentationVersion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts">apigateway/domainName.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts">apigateway/getKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts">apigateway/getResource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts">apigateway/getRestApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts">apigateway/integration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts">apigateway/integrationResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts">apigateway/method.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts">apigateway/methodResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts">apigateway/methodSettings.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts">apigateway/model.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts">apigateway/requestValidator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts">apigateway/resource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts">apigateway/response.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts">apigateway/restApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts">apigateway/stage.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts">apigateway/usagePlan.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts">apigateway/usagePlanKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts">apigateway/vpcLink.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/account.ts">apigateway/account.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/apiKey.ts">apigateway/apiKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/authorizer.ts">apigateway/authorizer.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/basePathMapping.ts">apigateway/basePathMapping.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/clientCertificate.ts">apigateway/clientCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/deployment.ts">apigateway/deployment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationPart.ts">apigateway/documentationPart.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/documentationVersion.ts">apigateway/documentationVersion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts">apigateway/domainName.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getKey.ts">apigateway/getKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getResource.ts">apigateway/getResource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getRestApi.ts">apigateway/getRestApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts">apigateway/getVpcLink.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts">apigateway/integration.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integrationResponse.ts">apigateway/integrationResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/method.ts">apigateway/method.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodResponse.ts">apigateway/methodResponse.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/methodSettings.ts">apigateway/methodSettings.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/model.ts">apigateway/model.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/requestValidator.ts">apigateway/requestValidator.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/resource.ts">apigateway/resource.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/response.ts">apigateway/response.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/restApi.ts">apigateway/restApi.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/stage.ts">apigateway/stage.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlan.ts">apigateway/usagePlan.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/usagePlanKey.ts">apigateway/usagePlanKey.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/vpcLink.ts">apigateway/vpcLink.ts</a> 
 
 
 <h2 class="pdoc-module-header" id="Account">
@@ -116,7 +119,7 @@ Create a Account resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountState): Account
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AccountState, opts?: pulumi.CustomResourceOptions): Account
 ```
 
 
@@ -219,7 +222,7 @@ Create a ApiKey resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApiKeyState): ApiKey
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ApiKeyState, opts?: pulumi.CustomResourceOptions): ApiKey
 ```
 
 
@@ -373,7 +376,7 @@ Create a Authorizer resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AuthorizerState): Authorizer
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: AuthorizerState, opts?: pulumi.CustomResourceOptions): Authorizer
 ```
 
 
@@ -561,7 +564,7 @@ Create a BasePathMapping resource with the given unique name, arguments, and opt
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BasePathMappingState): BasePathMapping
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: BasePathMappingState, opts?: pulumi.CustomResourceOptions): BasePathMapping
 ```
 
 
@@ -682,7 +685,7 @@ Create a ClientCertificate resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClientCertificateState): ClientCertificate
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ClientCertificateState, opts?: pulumi.CustomResourceOptions): ClientCertificate
 ```
 
 
@@ -806,7 +809,7 @@ Create a Deployment resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DeploymentState): Deployment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DeploymentState, opts?: pulumi.CustomResourceOptions): Deployment
 ```
 
 
@@ -974,7 +977,7 @@ Create a DocumentationPart resource with the given unique name, arguments, and o
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DocumentationPartState): DocumentationPart
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DocumentationPartState, opts?: pulumi.CustomResourceOptions): DocumentationPart
 ```
 
 
@@ -1084,7 +1087,7 @@ Create a DocumentationVersion resource with the given unique name, arguments, an
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DocumentationVersionState): DocumentationVersion
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DocumentationVersionState, opts?: pulumi.CustomResourceOptions): DocumentationVersion
 ```
 
 
@@ -1194,7 +1197,7 @@ the `regional_domain_name` attribute.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L112">constructor</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L108">constructor</a>
 </h3>
 
 ```typescript
@@ -1213,7 +1216,7 @@ Create a DomainName resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainNameState): DomainName
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: DomainNameState, opts?: pulumi.CustomResourceOptions): DomainName
 ```
 
 
@@ -1241,7 +1244,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L47">property certificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L45">property certificateArn</a>
 </h3>
 
 ```typescript
@@ -1249,12 +1252,10 @@ public certificateArn: pulumi.Output<string | undefined>;
 ```
 
 
-The ARN for an AWS-managed certificate. Used when an edge-optimized domain name is
-desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`,
-`regional_certificate_arn`, and `regional_certificate_name`.
+The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L53">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L51">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -1267,7 +1268,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L60">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L58">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -1281,7 +1282,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
 `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L66">property certificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L64">property certificateName</a>
 </h3>
 
 ```typescript
@@ -1294,7 +1295,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
 `regional_certificate_name`. Required if `certificate_arn` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L71">property certificatePrivateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L69">property certificatePrivateKey</a>
 </h3>
 
 ```typescript
@@ -1306,7 +1307,7 @@ The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L75">property certificateUploadDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L73">property certificateUploadDate</a>
 </h3>
 
 ```typescript
@@ -1317,7 +1318,7 @@ public certificateUploadDate: pulumi.Output<string>;
 The upload date associated with the domain certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L80">property cloudfrontDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L78">property cloudfrontDomainName</a>
 </h3>
 
 ```typescript
@@ -1329,7 +1330,7 @@ The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L85">property cloudfrontZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L83">property cloudfrontZoneId</a>
 </h3>
 
 ```typescript
@@ -1341,7 +1342,7 @@ For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L89">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L87">property domainName</a>
 </h3>
 
 ```typescript
@@ -1352,7 +1353,7 @@ public domainName: pulumi.Output<string>;
 The fully-qualified domain name to register
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L93">property endpointConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L91">property endpointConfiguration</a>
 </h3>
 
 ```typescript
@@ -1360,7 +1361,7 @@ public endpointConfiguration: pulumi.Output<{ ... }>;
 ```
 
 
-Nested argument defining API endpoint configuration including endpoint type. Defined below.
+Configuration block defining API endpoint information including type. Defined below.
 
 <h3 class="pdoc-member-header">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property id</a>
@@ -1375,7 +1376,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L99">property regionalCertificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L95">property regionalCertificateArn</a>
 </h3>
 
 ```typescript
@@ -1383,12 +1384,10 @@ public regionalCertificateArn: pulumi.Output<string | undefined>;
 ```
 
 
-The ARN for an AWS-managed certificate. Used when a regional domain name is
-desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-`certificate_private_key`.
+The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L104">property regionalCertificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L100">property regionalCertificateName</a>
 </h3>
 
 ```typescript
@@ -1400,7 +1399,7 @@ The user-friendly name of the certificate that will be used by regional endpoint
 `certificate_private_key`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L108">property regionalDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L104">property regionalDomainName</a>
 </h3>
 
 ```typescript
@@ -1411,7 +1410,7 @@ public regionalDomainName: pulumi.Output<string>;
 The hostname for the custom domain's regional endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L112">property regionalZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L108">property regionalZoneId</a>
 </h3>
 
 ```typescript
@@ -1459,7 +1458,7 @@ Create a Integration resource with the given unique name, arguments, and options
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IntegrationState): Integration
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IntegrationState, opts?: pulumi.CustomResourceOptions): Integration
 ```
 
 
@@ -1734,7 +1733,7 @@ Create a IntegrationResponse resource with the given unique name, arguments, and
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IntegrationResponseState): IntegrationResponse
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: IntegrationResponseState, opts?: pulumi.CustomResourceOptions): IntegrationResponse
 ```
 
 
@@ -1914,7 +1913,7 @@ Create a Method resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MethodState): Method
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MethodState, opts?: pulumi.CustomResourceOptions): Method
 ```
 
 
@@ -2122,7 +2121,7 @@ Create a MethodResponse resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MethodResponseState): MethodResponse
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MethodResponseState, opts?: pulumi.CustomResourceOptions): MethodResponse
 ```
 
 
@@ -2278,7 +2277,7 @@ Create a MethodSettings resource with the given unique name, arguments, and opti
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MethodSettingsState): MethodSettings
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: MethodSettingsState, opts?: pulumi.CustomResourceOptions): MethodSettings
 ```
 
 
@@ -2399,7 +2398,7 @@ Create a Model resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ModelState): Model
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ModelState, opts?: pulumi.CustomResourceOptions): Model
 ```
 
 
@@ -2531,7 +2530,7 @@ Create a RequestValidator resource with the given unique name, arguments, and op
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RequestValidatorState): RequestValidator
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RequestValidatorState, opts?: pulumi.CustomResourceOptions): RequestValidator
 ```
 
 
@@ -2652,7 +2651,7 @@ Create a Resource resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceState): Resource
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceState, opts?: pulumi.CustomResourceOptions): Resource
 ```
 
 
@@ -2773,7 +2772,7 @@ Create a Response resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResponseState): Response
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResponseState, opts?: pulumi.CustomResourceOptions): Response
 ```
 
 
@@ -2905,7 +2904,7 @@ Create a RestApi resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RestApiState): RestApi
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: RestApiState, opts?: pulumi.CustomResourceOptions): RestApi
 ```
 
 
@@ -3105,7 +3104,7 @@ Create a Stage resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StageState): Stage
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: StageState, opts?: pulumi.CustomResourceOptions): Stage
 ```
 
 
@@ -3340,7 +3339,7 @@ Create a UsagePlan resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UsagePlanState): UsagePlan
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UsagePlanState, opts?: pulumi.CustomResourceOptions): UsagePlan
 ```
 
 
@@ -3483,7 +3482,7 @@ Create a UsagePlanKey resource with the given unique name, arguments, and option
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UsagePlanKeyState): UsagePlanKey
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: UsagePlanKeyState, opts?: pulumi.CustomResourceOptions): UsagePlanKey
 ```
 
 
@@ -3615,7 +3614,7 @@ Create a VpcLink resource with the given unique name, arguments, and options.
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcLinkState): VpcLink
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: VpcLinkState, opts?: pulumi.CustomResourceOptions): VpcLink
 ```
 
 
@@ -3735,6 +3734,20 @@ getRestApi(args: GetRestApiArgs, opts?: pulumi.InvokeOptions): Promise<GetRestAp
 Use this data source to get the id and root_resource_id of a REST API in
 API Gateway. To fetch the REST API you must provide a name to match against.
 As there is no unique name constraint on REST APIs this data source will
+error if there is more than one match.
+
+<h2 class="pdoc-module-header" id="getVpcLink">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts#L13">function getVpcLink</a>
+</h2>
+
+```typescript
+getVpcLink(args: GetVpcLinkArgs, opts?: pulumi.InvokeOptions): Promise<GetVpcLinkResult>
+```
+
+
+Use this data source to get the id of a VPC Link in
+API Gateway. To fetch the VPC Link you must provide a name to match against.
+As there is no unique name constraint on API Gateway VPC Links this data source will
 error if there is more than one match.
 
 <h2 class="pdoc-module-header" id="AccountArgs">
@@ -4642,13 +4655,13 @@ version?: pulumi.Input<string>;
 The version identifier of the API documentation snapshot.
 
 <h2 class="pdoc-module-header" id="DomainNameArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L244">interface DomainNameArgs</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L236">interface DomainNameArgs</a>
 </h2>
 
 The set of arguments for constructing a DomainName resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L250">property certificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L240">property certificateArn</a>
 </h3>
 
 ```typescript
@@ -4656,12 +4669,10 @@ certificateArn?: pulumi.Input<string>;
 ```
 
 
-The ARN for an AWS-managed certificate. Used when an edge-optimized domain name is
-desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`,
-`regional_certificate_arn`, and `regional_certificate_name`.
+The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L256">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L246">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -4674,7 +4685,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L263">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L253">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -4688,7 +4699,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
 `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L269">property certificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L259">property certificateName</a>
 </h3>
 
 ```typescript
@@ -4701,7 +4712,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
 `regional_certificate_name`. Required if `certificate_arn` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L274">property certificatePrivateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L264">property certificatePrivateKey</a>
 </h3>
 
 ```typescript
@@ -4713,7 +4724,7 @@ The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L278">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L268">property domainName</a>
 </h3>
 
 ```typescript
@@ -4724,7 +4735,7 @@ domainName: pulumi.Input<string>;
 The fully-qualified domain name to register
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L282">property endpointConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L272">property endpointConfiguration</a>
 </h3>
 
 ```typescript
@@ -4732,10 +4743,10 @@ endpointConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 
-Nested argument defining API endpoint configuration including endpoint type. Defined below.
+Configuration block defining API endpoint information including type. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L288">property regionalCertificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L276">property regionalCertificateArn</a>
 </h3>
 
 ```typescript
@@ -4743,12 +4754,10 @@ regionalCertificateArn?: pulumi.Input<string>;
 ```
 
 
-The ARN for an AWS-managed certificate. Used when a regional domain name is
-desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-`certificate_private_key`.
+The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L293">property regionalCertificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L281">property regionalCertificateName</a>
 </h3>
 
 ```typescript
@@ -4760,13 +4769,13 @@ The user-friendly name of the certificate that will be used by regional endpoint
 `certificate_private_key`.
 
 <h2 class="pdoc-module-header" id="DomainNameState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L167">interface DomainNameState</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L163">interface DomainNameState</a>
 </h2>
 
 Input properties used for looking up and filtering DomainName resources.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L173">property certificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L167">property certificateArn</a>
 </h3>
 
 ```typescript
@@ -4774,12 +4783,10 @@ certificateArn?: pulumi.Input<string>;
 ```
 
 
-The ARN for an AWS-managed certificate. Used when an edge-optimized domain name is
-desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`,
-`regional_certificate_arn`, and `regional_certificate_name`.
+The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L179">property certificateBody</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L173">property certificateBody</a>
 </h3>
 
 ```typescript
@@ -4792,7 +4799,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L186">property certificateChain</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L180">property certificateChain</a>
 </h3>
 
 ```typescript
@@ -4806,7 +4813,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
 `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L192">property certificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L186">property certificateName</a>
 </h3>
 
 ```typescript
@@ -4819,7 +4826,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
 `regional_certificate_name`. Required if `certificate_arn` is not set.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L197">property certificatePrivateKey</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L191">property certificatePrivateKey</a>
 </h3>
 
 ```typescript
@@ -4831,7 +4838,7 @@ The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L201">property certificateUploadDate</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L195">property certificateUploadDate</a>
 </h3>
 
 ```typescript
@@ -4842,7 +4849,7 @@ certificateUploadDate?: pulumi.Input<string>;
 The upload date associated with the domain certificate.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L206">property cloudfrontDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L200">property cloudfrontDomainName</a>
 </h3>
 
 ```typescript
@@ -4854,7 +4861,7 @@ The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L211">property cloudfrontZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L205">property cloudfrontZoneId</a>
 </h3>
 
 ```typescript
@@ -4866,7 +4873,7 @@ For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L215">property domainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L209">property domainName</a>
 </h3>
 
 ```typescript
@@ -4877,7 +4884,7 @@ domainName?: pulumi.Input<string>;
 The fully-qualified domain name to register
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L219">property endpointConfiguration</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L213">property endpointConfiguration</a>
 </h3>
 
 ```typescript
@@ -4885,10 +4892,10 @@ endpointConfiguration?: pulumi.Input<{ ... }>;
 ```
 
 
-Nested argument defining API endpoint configuration including endpoint type. Defined below.
+Configuration block defining API endpoint information including type. Defined below.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L225">property regionalCertificateArn</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L217">property regionalCertificateArn</a>
 </h3>
 
 ```typescript
@@ -4896,12 +4903,10 @@ regionalCertificateArn?: pulumi.Input<string>;
 ```
 
 
-The ARN for an AWS-managed certificate. Used when a regional domain name is
-desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-`certificate_private_key`.
+The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L230">property regionalCertificateName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L222">property regionalCertificateName</a>
 </h3>
 
 ```typescript
@@ -4913,7 +4918,7 @@ The user-friendly name of the certificate that will be used by regional endpoint
 `certificate_private_key`.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L234">property regionalDomainName</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L226">property regionalDomainName</a>
 </h3>
 
 ```typescript
@@ -4924,7 +4929,7 @@ regionalDomainName?: pulumi.Input<string>;
 The hostname for the custom domain's regional endpoint.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L238">property regionalZoneId</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/domainName.ts#L230">property regionalZoneId</a>
 </h3>
 
 ```typescript
@@ -5091,6 +5096,41 @@ rootResourceId: string;
 
 
 Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
+
+<h2 class="pdoc-module-header" id="GetVpcLinkArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts#L22">interface GetVpcLinkArgs</a>
+</h2>
+
+A collection of arguments for invoking getVpcLink.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts#L27">property name</a>
+</h3>
+
+```typescript
+name: string;
+```
+
+
+The name of the API Gateway VPC Link to look up. If no API Gateway VPC Link is found with this name, an error will be returned.
+If multiple API Gateway VPC Links are found with this name, an error will be returned.
+
+<h2 class="pdoc-module-header" id="GetVpcLinkResult">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts#L33">interface GetVpcLinkResult</a>
+</h2>
+
+A collection of values returned by getVpcLink.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/getVpcLink.ts#L37">property id</a>
+</h3>
+
+```typescript
+id: string;
+```
+
+
+Set to the ID of the found API Gateway VPC Link.
 
 <h2 class="pdoc-module-header" id="IntegrationArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/apigateway/integration.ts#L252">interface IntegrationArgs</a>

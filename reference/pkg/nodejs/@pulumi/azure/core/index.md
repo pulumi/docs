@@ -17,6 +17,7 @@ title: Module core
 * <a href="#GetResourceGroupResult">interface GetResourceGroupResult</a>
 * <a href="#GetSubscriptionArgs">interface GetSubscriptionArgs</a>
 * <a href="#GetSubscriptionResult">interface GetSubscriptionResult</a>
+* <a href="#GetSubscriptionsArgs">interface GetSubscriptionsArgs</a>
 * <a href="#GetSubscriptionsResult">interface GetSubscriptionsResult</a>
 * <a href="#ResourceGroupArgs">interface ResourceGroupArgs</a>
 * <a href="#ResourceGroupState">interface ResourceGroupState</a>
@@ -52,7 +53,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceGroupState): ResourceGroup
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: ResourceGroupState, opts?: pulumi.CustomResourceOptions): ResourceGroup
 ```
 
 
@@ -168,7 +169,7 @@ Create a TemplateDeployment resource with the given unique name, arguments, and 
 </h3>
 
 ```typescript
-public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TemplateDeploymentState): TemplateDeployment
+public static get(name: string, id: pulumi.Input<pulumi.ID>, state?: TemplateDeploymentState, opts?: pulumi.CustomResourceOptions): TemplateDeployment
 ```
 
 
@@ -338,7 +339,7 @@ Use this data source to access information about an existing Subscription.
 </h2>
 
 ```typescript
-getSubscriptions(opts?: pulumi.InvokeOptions): Promise<GetSubscriptionsResult>
+getSubscriptions(args?: GetSubscriptionsArgs, opts?: pulumi.InvokeOptions): Promise<GetSubscriptionsResult>
 ```
 
 
@@ -554,14 +555,42 @@ The subscription state. Possible values are Enabled, Warned, PastDue, Disabled, 
 subscriptionId: string;
 ```
 
+<h2 class="pdoc-module-header" id="GetSubscriptionsArgs">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L21">interface GetSubscriptionsArgs</a>
+</h2>
+
+A collection of arguments for invoking getSubscriptions.
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L25">property displayNameContains</a>
+</h3>
+
+```typescript
+displayNameContains?: string;
+```
+
+
+A case-insensitive value which must be contained within the `display_name` field, used to filter the results
+
+<h3 class="pdoc-member-header">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L29">property displayNamePrefix</a>
+</h3>
+
+```typescript
+displayNamePrefix?: string;
+```
+
+
+A case-insensitive prefix which can be used to filter on the `display_name` field
+
 <h2 class="pdoc-module-header" id="GetSubscriptionsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L18">interface GetSubscriptionsResult</a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L35">interface GetSubscriptionsResult</a>
 </h2>
 
 A collection of values returned by getSubscriptions.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L26">property id</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L43">property id</a>
 </h3>
 
 ```typescript
@@ -572,7 +601,7 @@ id: string;
 id is the provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-member-header">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L22">property subscriptions</a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/core/getSubscriptions.ts#L39">property subscriptions</a>
 </h3>
 
 ```typescript
