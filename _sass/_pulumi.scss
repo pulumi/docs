@@ -676,11 +676,30 @@ h4 { font-size: 22px; font-weight: 500; }
 }
 
 .pdoc-module-header {
+    border-radius: 4px;
     background-color: #f5e0f5;
-    font-size: 20px;
+    font-size: 22px;
     padding: 8px;
     font-weight: normal;
 }
+
+.pdoc-module-contents {
+    margin-left: 16px;
+}
+
+.pdoc-member-header {
+    font-size: 20px;
+}
+
+.pdoc-member-contents {
+    margin-left: 8px;
+}
+
+.toggleButton { cursor: pointer; }
+.toggle > .collapsed { display: block; }
+.toggle > .expanded { display: none; }
+.toggleVisible > .collapsed { display: none; }
+.toggleVisible > .expanded { display: block; }
 
 //  Widget showing the downloads for Pulumi.
 .downloads-container {

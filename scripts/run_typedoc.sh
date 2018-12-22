@@ -8,129 +8,65 @@
 # support relative paths within a TypeScript file. (So, you can point it at a folder,
 # but if those .ts files use a path like "..\", typedoc will fail to resolve as intended.)
 
-set -o nounset -o errexit -o pipefail
+set -o errexit -o pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
 
-PULUMI_DOCS=`mktemp -d`
+TOOL_TYPEDOC="$SCRIPT_DIR/../node_modules/.bin/typedoc"
+TOOL_APIDOCGEN="go run ./tools/tscdocgen/*.go"
 
-# pulumi
-echo -e "\033[0;95mrunning typedoc on pulumi\033[0m"
-pushd .
-cd ../pulumi/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
+PULUMI_DOC_TMP=`mktemp -d`
+PULUMI_DOC_BASE=./reference/pkg/nodejs/@pulumi
 
-# pulumi-aws
-echo -e "\033[0;95mrunning typedoc on pulumi-aws\033[0m"
-pushd .
-cd ../pulumi-aws/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-aws.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
+# Generates API documentation for a given package. The arguments are:
+#     * $1 - the simple name of the package
+#     * $2 - the package root directory (to run `make ensure` for dependency updates)
+#     * $3 - the package source directory, relative to the root, optionally empty if the same
+# If the PKGS envvar is set, only packages in that list (space delimited) are regenerated.
+generate_docs() {
+    GENPKG=""
+    if [ -z "$PKGS" ]; then
+        GENPKG=$1
+    else
+        for PKG in $PKGS; do
+            if [ "$PKG" == "$1" ]; then
+                GENPKG=$1
+            fi
+        done
+    fi
 
-# pulumi-cloud
-echo -e "\033[0;95mrunning typedoc on pulumi-cloud\033[0m"
-pushd .
-cd ../pulumi-cloud/api
-$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
+    if [ ! -z "$GENPKG" ]; then
+        echo -e "\033[0;95m$1\033[0m"
+        echo -e "\033[0;93mGenerating typedocs\033[0m"
+        pushd ../$2
+        if [ -z "$NOBUILD" ]; then
+            make ensure && make build && make install
+        fi
+        if [ ! -z "$3" ]; then
+            cd $3
+        fi
+        $TOOL_TYPEDOC --json $PULUMI_DOC_TMP/$1.docs.json \
+            --mode modules --includeDeclarations --excludeExternals --excludePrivate
+        popd
+        echo -e "\033[0;93mGenerating pulumi.io API docs\033[0m"
+        $TOOL_APIDOCGEN $PULUMI_DOC_TMP/$1.docs.json $PULUMI_DOC_BASE/$1
+    fi
+}
 
-# pulumi-cloud-aws
-echo -e "\033[0;95mrunning typedoc on pulumi-cloud-aws\033[0m"
-pushd .
-cd ../pulumi-cloud/aws
-$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud-aws.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-cloud-azure
-echo -e "\033[0;95mrunning typedoc on pulumi-cloud-azure\033[0m"
-pushd .
-cd ../pulumi-cloud/azure
-$TYPEDOC --json $PULUMI_DOCS/pulumi-cloud-azure.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-azure
-echo -e "\033[0;95mrunning typedoc on pulumi-azure\033[0m"
-pushd .
-cd ../pulumi-azure/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-azure.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-kubernetes
-echo -e "\033[0;95mrunning typedoc on pulumi-kubernetes\033[0m"
-pushd .
-cd ../pulumi-kubernetes/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-kubernetes.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-gcp
-echo -e "\033[0;95mrunning typedoc on pulumi-gcp\033[0m"
-pushd .
-cd ../pulumi-gcp/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-gcp.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-aws-infra
-echo -e "\033[0;95mrunning typedoc on pulumi-aws-infra\033[0m"
-pushd .
-cd ../pulumi-aws-infra/nodejs/aws-infra
-$TYPEDOC --json $PULUMI_DOCS/pulumi-aws-infra.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-azure-serverless
-echo -e "\033[0;95mrunning typedoc on pulumi-azure-serverless\033[0m"
-pushd .
-cd ../pulumi-azure-serverless/nodejs/azure-serverless
-$TYPEDOC --json $PULUMI_DOCS/pulumi-azure-serverless.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-docker
-echo -e "\033[0;95mrunning typedoc on pulumi-docker\033[0m"
-pushd .
-cd ../pulumi-docker/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-docker.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-openstack
-echo -e "\033[0;95mrunning typedoc on pulumi-openstack\033[0m"
-pushd .
-cd ../pulumi-openstack/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-openstack.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# pulumi-vsphere
-echo -e "\033[0;95mrunning typedoc on pulumi-vsphere\033[0m"
-pushd .
-cd ../pulumi-vsphere/sdk/nodejs
-$TYPEDOC --json $PULUMI_DOCS/pulumi-vsphere.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-# eks
-echo -e "\033[0;95mrunning typedoc on eks\033[0m"
-pushd .
-cd ../eks/nodejs/eks
-$TYPEDOC --json $PULUMI_DOCS/eks.docs.json --mode modules --includeDeclarations --excludeExternals --excludePrivate
-popd
-
-
-echo "Finished running typedoc. Generating update docs..."
-TSC_DOCGEN="go run ./tools/tscdocgen/*.go"
-PKG_DOCS=./reference/pkg/nodejs/@pulumi
-
-$TSC_DOCGEN $PULUMI_DOCS/pulumi.docs.json $PKG_DOCS/pulumi
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-aws.docs.json $PKG_DOCS/aws
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-cloud.docs.json $PKG_DOCS/cloud
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-cloud-aws.docs.json $PKG_DOCS/cloud-aws
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-cloud-azure.docs.json $PKG_DOCS/cloud-azure
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-azure.docs.json $PKG_DOCS/azure
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-kubernetes.docs.json $PKG_DOCS/kubernetes
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-gcp.docs.json $PKG_DOCS/gcp
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-aws-infra.docs.json $PKG_DOCS/aws-infra
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-azure-serverless.docs.json $PKG_DOCS/azure-serverless
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-docker.docs.json $PKG_DOCS/docker
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-openstack.docs.json $PKG_DOCS/openstack
-$TSC_DOCGEN $PULUMI_DOCS/pulumi-vsphere.docs.json $PKG_DOCS/vsphere
-$TSC_DOCGEN $PULUMI_DOCS/eks.docs.json $PKG_DOCS/eks
+generate_docs "pulumi" "pulumi/sdk/nodejs"
+generate_docs "aws" "pulumi-aws" "sdk/nodejs"
+generate_docs "aws-infra" "pulumi-aws-infra/nodejs/aws-infra"
+generate_docs "aws-serverless" "pulumi-aws-serverless/nodejs/aws-serverless"
+generate_docs "azure" "pulumi-azure" "sdk/nodejs"
+generate_docs "azure-serverless" "pulumi-azure-serverless/nodejs/azure-serverless"
+generate_docs "cloud" "pulumi-cloud/api"
+generate_docs "cloud-aws" "pulumi-cloud/aws"
+generate_docs "cloud-azure" "pulumi-cloud/azure"
+generate_docs "docker" "pulumi-docker" "sdk/nodejs"
+generate_docs "eks" "pulumi-eks/nodejs/eks"
+generate_docs "kubernetes" "pulumi-kubernetes" "sdk/nodejs"
+generate_docs "gcp" "pulumi-gcp" "sdk/nodejs"
+generate_docs "openstack" "pulumi-openstack" "sdk/nodejs"
+generate_docs "vsphere" "pulumi-vsphere" "sdk/nodejs"
 
 echo "Done"
