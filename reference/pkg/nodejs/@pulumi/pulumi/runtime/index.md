@@ -196,7 +196,7 @@ deserializeProperties fetches the raw outputs and deserializes them from a gRPC 
 
 </div>
 <h2 class="pdoc-module-header" id="deserializeProperty">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L310">function <b>deserializeProperty</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L338">function <b>deserializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
