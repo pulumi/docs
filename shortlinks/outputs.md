@@ -1,4 +1,4 @@
 ---
-redirect_to: /references/programming-model#outputs
+redirect_to: /reference/programming-model.html#outputs
 permalink: help/outputs/
 ---
