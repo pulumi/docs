@@ -116,6 +116,9 @@ Next, you'll need to configure your cloud credentials. This is dependent on your
 
 Enter these as secrets, just like you did `PULUMI_ACCESS_TOKEN`, so that your GitHub Action can deploy to your cloud.
 
+**Important**: Make sure to also add these to your workflow action's `secrets` section, otherwise GitHub Actions
+won't make them available to the running container, and things will behave as if you didn't set them at all!
+
 ## Branch Mappings
 
 Pulumi has a concept of *stacks*, which are isolated environments for your application (e.g., production, staging, or
