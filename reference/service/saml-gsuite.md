@@ -8,7 +8,7 @@ been created for you in the Pulumi Cloud Console by a Pulumi administrator.
 
 ## Creating the SAML Application
 
-1. In the [Admin console](https://admin.google.com/) for your G Suite domain, open the flyout menu
+1. In the [administrator console](https://admin.google.com/) for your G Suite domain, open the flyout menu
 in the upper-left corner and choose **Apps &gt; SAML Apps**.
 
     ![The G Suite console](../../images/reference/service/saml-gsuite/gsuite-console.png)
@@ -22,7 +22,7 @@ in the upper-left corner and choose **Apps &gt; SAML Apps**.
     ![Step 1: Set up a custom app](../../images/reference/service/saml-gsuite/gsuite-dialog-step-1.png)
 
 1. Next, choose **Option 2: Download IDP Metadata** to download an XML document that identifies
-and describes your Google service as a SAML SSO identity provider. We'll use this document later
+and describes your G Suite domain as a SAML IdP. We'll use this document later
 to complete the process of configuring your Pulumi organization. For now, note the location of
 the downloaded file, then click **Next** to continue.
 

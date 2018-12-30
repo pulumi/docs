@@ -1,5 +1,5 @@
 ---
-title: SAML Configuration > Okta
+title: SAML Configuration &gt; Okta
 ---
 
 This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with
