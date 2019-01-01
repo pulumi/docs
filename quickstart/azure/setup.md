@@ -22,7 +22,7 @@ environments, particularly in CI, a Service Principal is recommended.
 > **Note:** Authenticating using the CLI will not work for Service Principal logins (e.g.,
 > `az login --service-principal`).  For such cases, authenticate using the Service Principal method instead.
 
-## CLI Authentication
+### CLI Authentication
 
 Simply login to the Azure CLI and Pulumi will automatically use your credentials:
 
@@ -46,13 +46,13 @@ $ az account list
 $ az account set --subscription=<id>
 ```
 
-## Service Principal Authentication
+### Service Principal Authentication
 
 A Service Principal is an application in Azure Active Directory with three authorization tokens: a client ID, a client
 secret, and a tenant ID.  (These are often simply called `appId`, `password`, and `tenant`, respectively.)  Using a
 Service Principal is the recommended way to connect Pulumi to Azure in a team or CI setting.
 
-### Configuring Authorization Tokens
+#### Configuring Authorization Tokens
 
 Once obtained, there are two ways to communicate your authorization tokens to Pulumi:
 
@@ -66,7 +66,7 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     $ pulumi config set azure:tenantId <tenantID>
     ```
 
-### Creating a Service Principal
+#### Creating a Service Principal
 
 To use a Service Principal, you must first create one.  This can be done using the Azure CLI or the Azure Portal.
 Please refer to the Azure documentation for detailed instructions:
@@ -109,3 +109,21 @@ $ pulumi config set azure:tenantId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 ```
 
 Remember to pass `--secret` when setting `clientSecret` so that it is properly encrypted.
+
+## Installing the Azure Resource Provider Plugin
+
+Pulumi uses dynamically loaded plugins as an extensibility mechanism for supporting any number of resource providers. These plugins are distributed out of band and must be installed manually. Attempting to use a package that provisions resources without the corresponding plugin will fail.
+
+To interact with the Azure cloud environment, install the Azure resource provider plugin:
+
+```bash
+$ pulumi plugin install resource azure v0.16.6
+```
+
+You can also choose to first create your Azure project and then execute the `plugin install` command without any further parameters and let Pulumi compute the set of plugins that may be required by the current project:
+
+```bash
+$ pulumi plugin install
+```
+
+Refer to the [`pulumi plugin` command reference](../../reference/cli/pulumi_plugin.html) for more information.
