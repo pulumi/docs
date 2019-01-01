@@ -206,7 +206,7 @@ action "Pulumi Deploy (Current Stack)" {
 }
 ```
 
-This tells Pulumi that the project can be founder underneath the repo's `infra` directory.
+This tells Pulumi that the project can be found underneath the repo's `infra` directory.
 
 ## Demos and Examples
 
