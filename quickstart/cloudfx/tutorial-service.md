@@ -77,16 +77,18 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
     $ npm install --save @pulumi/cloud  @pulumi/cloud-aws @pulumi/cloud-azure
     ```
 
-1.  If you are running on AWS, configure the region and whether to use Fargate:
+1.  If you are running on AWS, configure the provider, the region and whether to use Fargate:
 
     ```bash
+    $ pulumi config set cloud:provider aws
     $ pulumi config set aws:region us-east-1
     $ pulumi config set cloud-aws:useFargate true
     ```
 
-    If you are running on Azure, configure the location:
+    If you are running on Azure, configure the provider and the location:
 
     ```bash
+    $ pulumi config set cloud:provider azure
     $ pulumi config set cloud-azure:location WestUS2
     ```
 
