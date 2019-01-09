@@ -21,6 +21,7 @@ The easiest way to start with AWS is to follow one of the tutorials:
 * [EC2 Linux WebServer VM](./tutorial-ec2-webserver.html): Create an EC2 Linux Web Server virtual machine
 * [A simple containerized app](./tutorial-service.html): Deploy EC2 or Fargate ECS Services
 * [Serve a Static Website from S3](./tutorial-s3-website.html): Serve a static website out of content in an S3 bucket
+* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete  application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 

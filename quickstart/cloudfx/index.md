@@ -21,14 +21,14 @@ The easiest way to start with the Cloud Framework is to follow one of the tutori
 
 * [A simple serverless REST API](./tutorial-rest-api.html): Deploy cloud-agnostic managed REST API
 * [A simple containerized app](./tutorial-service.html): Deploy cloud-agnostic containerized services
-* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete cloud-angostic application using a combination of buckets, serverless functions and containers.
+* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 
 * [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
 * [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
 * [Thumbnailer (buckets, containers, functions)](https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer)
-* [URL Shortner (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener)
+* [URL Shortener (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-url-shortener)
 * [Voting App (table, API)](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app)
 
 ## Example
@@ -52,7 +52,7 @@ The following packages are available in package managers:
 The provider-specific implementations of this library are also available for use directly when writing code that does not need to be portable:
 * JavaScript/TypeScript: https://www.npmjs.com/package/@pulumi/cloud-aws
 
-The Cloud framework is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repo. 
+The Cloud framework is open source and available in the [pulumi/pulumi-cloud](https://github.com/pulumi/pulumi-cloud) repo.
 
 ## Authentication
 
@@ -75,7 +75,7 @@ The AWS implementation of the Cloud framework accepts the following configuratio
 * `ecsClusterSecurityGroup`: (Optional) ECS cluster security group that all ALBs for services within the cluster will use.
 * `ecsClusterEfsMountPath`: (Optional) EFS mount path on the cluster hosts.  If not provided, `Volumes` cannot be used in `cloud.Service` and `cloud.Task`.
 * `usePrivateNetwork`: (Optional) Put all compute in a private network.
-* `externalVpcId`: (Optional) Use an existing VPC.  If both `usePrivateNetwork` and `externalVpcId` are provided, the VPC must be configured to run all compute in private subnets with Internet egress enabled via NAT Gateways. 
+* `externalVpcId`: (Optional) Use an existing VPC.  If both `usePrivateNetwork` and `externalVpcId` are provided, the VPC must be configured to run all compute in private subnets with Internet egress enabled via NAT Gateways.
 * `externalSubnets`: (Optional) Provide subnets ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
 * `externalPublicSubnets`: (Optional) Provide public subnets ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
 * `externalSecurityGroups`: (Optional) Provide securityGroup ids for the VPC as a comma-seperated string.  Required if using an existing VPC.
