@@ -18,6 +18,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"html"
 	"io/ioutil"
 	"log"
 	"os"
@@ -714,7 +715,7 @@ func createCodeDetails(node *typeDocNode) string {
 			label += ": " + proptyp
 		}
 		if node.DefaultValue != nil {
-			label += " = " + *node.DefaultValue
+			label += " = " + html.EscapeString(*node.DefaultValue)
 		}
 		return label + ";"
 	case typeDocVariableNode:
@@ -729,7 +730,7 @@ func createCodeDetails(node *typeDocNode) string {
 			label += ": " + vartyp
 		}
 		if node.DefaultValue != nil {
-			label += " = <span class='s2'>" + *node.DefaultValue + "</span>"
+			label += " = <span class='s2'>" + html.EscapeString(*node.DefaultValue) + "</span>"
 		}
 		return label + ";"
 	default:
