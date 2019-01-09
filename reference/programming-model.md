@@ -85,7 +85,7 @@ All resource constructors also accept a third argument which can provide the fol
 
 Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
 1. An eventually available value of the output
-2. The depdency on the source(s) of the output value
+2. The dependency on the source(s) of the output value
 
 In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
 
