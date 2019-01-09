@@ -10767,61 +10767,61 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/tenancy.ts#L23">const <b>DedicatedTenancy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> DedicatedTenancy: <a href='#Tenancy'>Tenancy</a> = <span class='s2'>"dedicated"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> DedicatedTenancy: <a href='#Tenancy'>Tenancy</a> = <span class='s2'>&#34;dedicated&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="DefaultTenancy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/tenancy.ts#L22">const <b>DefaultTenancy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> DefaultTenancy: <a href='#Tenancy'>Tenancy</a> = <span class='s2'>"default"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> DefaultTenancy: <a href='#Tenancy'>Tenancy</a> = <span class='s2'>&#34;default&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="LinuxUnixPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L22">const <b>LinuxUnixPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> LinuxUnixPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Linux/UNIX"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> LinuxUnixPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Linux/UNIX&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="RedHatEnterpriseLinuxPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L23">const <b>RedHatEnterpriseLinuxPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> RedHatEnterpriseLinuxPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Red Hat Enterprise Linux"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> RedHatEnterpriseLinuxPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Red Hat Enterprise Linux&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="SuseLinuxPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L24">const <b>SuseLinuxPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> SuseLinuxPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"SUSE Linux"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> SuseLinuxPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;SUSE Linux&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="WindowsPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L25">const <b>WindowsPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> WindowsPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Windows"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> WindowsPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="WindowsWithSqlServerEnterprisePlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L27">const <b>WindowsWithSqlServerEnterprisePlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerEnterprisePlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Windows with SQL Server Enterprise"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerEnterprisePlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server Enterprise&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="WindowsWithSqlServerPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L26">const <b>WindowsWithSqlServerPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Windows with SQL Server"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="WindowsWithSqlServerStandardPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L28">const <b>WindowsWithSqlServerStandardPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerStandardPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Windows with SQL Server Standard"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerStandardPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server Standard&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="WindowsWithSqlServerWebPlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L29">const <b>WindowsWithSqlServerWebPlatform</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerWebPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>"Windows with SQL Server Web"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> WindowsWithSqlServerWebPlatform: <a href='#InstancePlatform'>InstancePlatform</a> = <span class='s2'>&#34;Windows with SQL Server Web&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="getInstance">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/getInstance.ts#L11">function <b>getInstance</b></a>
@@ -25038,67 +25038,67 @@ The VPC ID to create in.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L22">let <b>C3Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c3.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C3Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L23">let <b>C3Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C3Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c3.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C3Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C3Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L24">let <b>C3Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c3.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C3InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L25">let <b>C3InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c3.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C3InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L26">let <b>C3InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c3.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c3.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C4Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L27">let <b>C4Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C4Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c4.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C4Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C4Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L28">let <b>C4Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C4Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c4.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C4Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C4Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L29">let <b>C4Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C4Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c4.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C4Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C4InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L30">let <b>C4InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C4InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c4.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C4InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="C4InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L31">let <b>C4InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> C4InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"c4.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> C4InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;c4.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ClusterStrategy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/placementStrategy.ts#L31">let <b>ClusterStrategy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ClusterStrategy: <a href='#PlacementStrategy'>PlacementStrategy</a> = <span class='s2'>"cluster"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ClusterStrategy: <a href='#PlacementStrategy'>PlacementStrategy</a> = <span class='s2'>&#34;cluster&#34;</span>;</pre>
 
 A `cluster` placement group is a logical grouping of instances within a single
 Availability Zone that benefit from low network latency, high network throughput.
@@ -25108,325 +25108,325 @@ Availability Zone that benefit from low network latency, high network throughput
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L32">let <b>D2Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> D2Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"d2.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> D2Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="D2Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L33">let <b>D2Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> D2Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"d2.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> D2Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="D2Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L34">let <b>D2Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> D2Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"d2.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> D2Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="D2InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L35">let <b>D2InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> D2InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"d2.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> D2InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;d2.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="F1Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L36">let <b>F1Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> F1Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"f1.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> F1Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;f1.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="F1Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L37">let <b>F1Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> F1Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"f1.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> F1Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;f1.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="G2Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L38">let <b>G2Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> G2Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"g2.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> G2Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g2.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="G2Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L39">let <b>G2Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> G2Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"g2.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> G2Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;g2.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="I3Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L40">let <b>I3Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> I3Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"i3.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> I3Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="I3Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L41">let <b>I3Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> I3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"i3.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> I3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="I3Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L42">let <b>I3Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> I3Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"i3.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> I3Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="I3Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L43">let <b>I3Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> I3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"i3.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> I3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="I3InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L44">let <b>I3InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> I3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"i3.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> I3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="I3InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L45">let <b>I3InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> I3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"i3.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> I3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;i3.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M3Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L46">let <b>M3Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m3.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M3InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L47">let <b>M3InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m3.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M3InstanceMedium">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L48">let <b>M3InstanceMedium</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M3InstanceMedium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m3.medium"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M3InstanceMedium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.medium&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M3InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L49">let <b>M3InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m3.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m3.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M4Instance10XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L50">let <b>M4Instance10XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M4Instance10XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m4.10xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M4Instance10XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.10xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M4Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L51">let <b>M4Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M4Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m4.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M4Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M4Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L52">let <b>M4Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M4Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m4.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M4Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M4Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L53">let <b>M4Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M4Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m4.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M4Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M4InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L54">let <b>M4InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M4InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m4.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M4InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M4InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L55">let <b>M4InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M4InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m4.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M4InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m4.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5Instance12XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L60">let <b>M5Instance12XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5Instance12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5.12xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5Instance12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.12xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5Instance24XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L61">let <b>M5Instance24XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5Instance24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5.24xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5Instance24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.24xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L58">let <b>M5Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L59">let <b>M5Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L56">let <b>M5InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L57">let <b>M5InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5dInstance12XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L66">let <b>M5dInstance12XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5dInstance12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5d.12xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5dInstance12XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.12xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5dInstance24XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L67">let <b>M5dInstance24XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5dInstance24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5d.24xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5dInstance24XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.24xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5dInstance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L64">let <b>M5dInstance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5dInstance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5d.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5dInstance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5dInstance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L65">let <b>M5dInstance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5dInstance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5d.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5dInstance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5dInstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L62">let <b>M5dInstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5dInstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5d.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5dInstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="M5dInstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L63">let <b>M5dInstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> M5dInstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"m5d.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> M5dInstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;m5d.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="P2Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L68">let <b>P2Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> P2Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"p2.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> P2Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p2.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="P2Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L69">let <b>P2Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> P2Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"p2.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> P2Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p2.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="P2InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L70">let <b>P2InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> P2InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"p2.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> P2InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p2.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="P3Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L71">let <b>P3Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> P3Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"p3.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> P3Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="P3Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L72">let <b>P3Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> P3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"p3.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> P3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="P3Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L73">let <b>P3Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> P3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"p3.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> P3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;p3.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R3Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L74">let <b>R3Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r3.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R3Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R3Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L75">let <b>R3Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R3Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r3.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R3Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R3Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L76">let <b>R3Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r3.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R3Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R3InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L77">let <b>R3InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r3.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R3InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R3InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L78">let <b>R3InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r3.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R3InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r3.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R4Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L79">let <b>R4Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R4Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r4.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R4Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R4Instance2XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L80">let <b>R4Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R4Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r4.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R4Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R4Instance4XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L81">let <b>R4Instance4XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R4Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r4.4xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R4Instance4XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.4xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R4Instance8XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L82">let <b>R4Instance8XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R4Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r4.8xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R4Instance8XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.8xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R4InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L83">let <b>R4InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R4InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r4.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R4InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="R4InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L84">let <b>R4InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> R4InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"r4.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> R4InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;r4.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="SpreadStrategy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/placementStrategy.ts#L25">let <b>SpreadStrategy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> SpreadStrategy: <a href='#PlacementStrategy'>PlacementStrategy</a> = <span class='s2'>"spread"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> SpreadStrategy: <a href='#PlacementStrategy'>PlacementStrategy</a> = <span class='s2'>&#34;spread&#34;</span>;</pre>
 
  A `spread` placement group places instances on distinct hardware.
 
@@ -25435,55 +25435,55 @@ Availability Zone that benefit from low network latency, high network throughput
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L85">let <b>T2Instance2XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.2xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2Instance2XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.2xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="T2InstanceLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L86">let <b>T2InstanceLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.large"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2InstanceLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.large&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="T2InstanceMedium">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L87">let <b>T2InstanceMedium</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2InstanceMedium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.medium"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2InstanceMedium: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.medium&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="T2InstanceMicro">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L88">let <b>T2InstanceMicro</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2InstanceMicro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.micro"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2InstanceMicro: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.micro&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="T2InstanceNano">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L89">let <b>T2InstanceNano</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2InstanceNano: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.nano"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2InstanceNano: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.nano&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="T2InstanceSmall">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L90">let <b>T2InstanceSmall</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2InstanceSmall: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.small"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2InstanceSmall: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.small&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="T2InstanceXLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L91">let <b>T2InstanceXLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> T2InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"t2.xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> T2InstanceXLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;t2.xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="X1Instance16XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L92">let <b>X1Instance16XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> X1Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"x1.16xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> X1Instance16XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1.16xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="X1Instance32XLarge">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instanceType.ts#L93">let <b>X1Instance32XLarge</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> X1Instance32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>"x1.32xlarge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> X1Instance32XLarge: <a href='#InstanceType'>InstanceType</a> = <span class='s2'>&#34;x1.32xlarge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="InstancePlatform">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ec2/instancePlatform.ts#L31">type <b>InstancePlatform</b></a>

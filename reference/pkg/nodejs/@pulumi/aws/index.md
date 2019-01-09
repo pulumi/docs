@@ -1919,91 +1919,91 @@ to an AWS resource.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L15">let <b>APNortheast1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> APNortheast1Region: <a href='#Region'>Region</a> = <span class='s2'>"ap-northeast-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> APNortheast1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;ap-northeast-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="APNortheast2Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L16">let <b>APNortheast2Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> APNortheast2Region: <a href='#Region'>Region</a> = <span class='s2'>"ap-northeast-2"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> APNortheast2Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;ap-northeast-2&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="APSouth1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L17">let <b>APSouth1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> APSouth1Region: <a href='#Region'>Region</a> = <span class='s2'>"ap-south-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> APSouth1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;ap-south-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="APSouthEast2Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L18">let <b>APSouthEast2Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> APSouthEast2Region: <a href='#Region'>Region</a> = <span class='s2'>"ap-southeast-2"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> APSouthEast2Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;ap-southeast-2&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="APSoutheast1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L19">let <b>APSoutheast1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> APSoutheast1Region: <a href='#Region'>Region</a> = <span class='s2'>"ap-southeast-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> APSoutheast1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;ap-southeast-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CACentralRegion">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L20">let <b>CACentralRegion</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> CACentralRegion: <a href='#Region'>Region</a> = <span class='s2'>"ca-central-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> CACentralRegion: <a href='#Region'>Region</a> = <span class='s2'>&#34;ca-central-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="EUCentral1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L21">let <b>EUCentral1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> EUCentral1Region: <a href='#Region'>Region</a> = <span class='s2'>"eu-central-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> EUCentral1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;eu-central-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="EUWest1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L22">let <b>EUWest1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> EUWest1Region: <a href='#Region'>Region</a> = <span class='s2'>"eu-west-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> EUWest1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;eu-west-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="EUWest2Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L23">let <b>EUWest2Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> EUWest2Region: <a href='#Region'>Region</a> = <span class='s2'>"eu-west-2"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> EUWest2Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;eu-west-2&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="EUWest3Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L24">let <b>EUWest3Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> EUWest3Region: <a href='#Region'>Region</a> = <span class='s2'>"eu-west-3"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> EUWest3Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;eu-west-3&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="SAEast1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L25">let <b>SAEast1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> SAEast1Region: <a href='#Region'>Region</a> = <span class='s2'>"sa-east-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> SAEast1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;sa-east-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="USEast1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L26">let <b>USEast1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> USEast1Region: <a href='#Region'>Region</a> = <span class='s2'>"us-east-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> USEast1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;us-east-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="USEast2Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L27">let <b>USEast2Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> USEast2Region: <a href='#Region'>Region</a> = <span class='s2'>"us-east-2"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> USEast2Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;us-east-2&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="USWest1Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L28">let <b>USWest1Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> USWest1Region: <a href='#Region'>Region</a> = <span class='s2'>"us-west-1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> USWest1Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;us-west-1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="USWest2Region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/region.ts#L29">let <b>USWest2Region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> USWest2Region: <a href='#Region'>Region</a> = <span class='s2'>"us-west-2"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> USWest2Region: <a href='#Region'>Region</a> = <span class='s2'>&#34;us-west-2&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ARN">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/arn.ts#L18">type <b>ARN</b></a>

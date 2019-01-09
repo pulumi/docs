@@ -2648,85 +2648,85 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L32">let <b>GroupDesiredCapacityMetric</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupDesiredCapacityMetric: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupDesiredCapacity"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupDesiredCapacityMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupDesiredCapacity&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupInServiceInstancesMetric">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L33">let <b>GroupInServiceInstancesMetric</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupInServiceInstancesMetric: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupInServiceInstances"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupInServiceInstancesMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupInServiceInstances&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupMaxSizeMetric">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L31">let <b>GroupMaxSizeMetric</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupMaxSizeMetric: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupMaxSize"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupMaxSizeMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupMaxSize&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupMinSizeMetric">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L30">let <b>GroupMinSizeMetric</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupMinSizeMetric: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupMinSize"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupMinSizeMetric: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupMinSize&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupPendingInstances">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L34">let <b>GroupPendingInstances</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupPendingInstances: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupPendingInstances"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupPendingInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupPendingInstances&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupStandbyInstances">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L35">let <b>GroupStandbyInstances</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupStandbyInstances: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupStandbyInstances"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupStandbyInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupStandbyInstances&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupTerminatingInstances">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L36">let <b>GroupTerminatingInstances</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupTerminatingInstances: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupTerminatingInstances"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupTerminatingInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupTerminatingInstances&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="GroupTotalInstances">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L37">let <b>GroupTotalInstances</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> GroupTotalInstances: <a href='#Metric'>Metric</a> = <span class='s2'>"GroupTotalInstances"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> GroupTotalInstances: <a href='#Metric'>Metric</a> = <span class='s2'>&#34;GroupTotalInstances&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="InstanceLaunchErrorNotification">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L24">let <b>InstanceLaunchErrorNotification</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> InstanceLaunchErrorNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>"autoscaling:EC2_INSTANCE_LAUNCH_ERROR"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> InstanceLaunchErrorNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="InstanceLaunchNotification">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L22">let <b>InstanceLaunchNotification</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> InstanceLaunchNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>"autoscaling:EC2_INSTANCE_LAUNCH"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> InstanceLaunchNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_LAUNCH&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="InstanceTerminateErrorNotification">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L25">let <b>InstanceTerminateErrorNotification</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> InstanceTerminateErrorNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>"autoscaling:EC2_INSTANCE_TERMINATE_ERROR"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> InstanceTerminateErrorNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="InstanceTerminateNotification">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L23">let <b>InstanceTerminateNotification</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> InstanceTerminateNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>"autoscaling:EC2_INSTANCE_TERMINATE"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> InstanceTerminateNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:EC2_INSTANCE_TERMINATE&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="OneMinuteMetricsGranularity">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L24">let <b>OneMinuteMetricsGranularity</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> OneMinuteMetricsGranularity: <a href='#MetricsGranularity'>MetricsGranularity</a> = <span class='s2'>"1Minute"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> OneMinuteMetricsGranularity: <a href='#MetricsGranularity'>MetricsGranularity</a> = <span class='s2'>&#34;1Minute&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="TestNotification">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/notificationType.ts#L26">let <b>TestNotification</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> TestNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>"autoscaling:TEST_NOTIFICATION"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> TestNotification: <a href='#NotificationType'>NotificationType</a> = <span class='s2'>&#34;autoscaling:TEST_NOTIFICATION&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Metric">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/autoscaling/metrics.ts#L40">type <b>Metric</b></a>
