@@ -5,12 +5,12 @@ redirect_from:
   - /quickstart/aws/tutorial-containers-ecs-fargate.html
 ---
 
-In this tutorial, we'll use JavaScript to build and deploy a simple container using the [`@pulumi/cloud`]() framework.  This example can be deployed to AWS (on either Fargate or ECS) or to Azure (on ACI).  By authoring our infrastructure using the `@pulumi/cloud` framework, it can be deployed transparently to either cloud (with support for other clouds on the roadmap). The [code for this tutorial](https://github.com/pulumi/examples/tree/master/cloud-js-containers) is available on GitHub.
+In this tutorial, we'll use TypeScript to build and deploy a simple container using the [`@pulumi/aws`]() and [`@pulumi/aws-infra`]() frameworks.  This example can be deployed to AWS on either Fargate, and can be simply updated to use ECS as well.  The [code for this tutorial](https://github.com/pulumi/examples/tree/master/aws-ts-containers) is available on GitHub.
 
 ## Prerequisites
 
 1.  [Install Pulumi](../install.html)
-1.  Configure [AWS](../aws/setup.html) and/or [Azure](../azure/setup.html) credentials
+1.  Configure [AWS](../aws/setup.html) credentials
 
 ## Serve an HTML file in an NGINX container
 
@@ -19,31 +19,38 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 1.  Run `pulumi new`:
 
     ```bash
-    $ pulumi new javascript --dir container-quickstart
+    $ pulumi new typescript --dir container-quickstart
     $ cd container-quickstart
     ```
 
-1.  Replace the contents of `index.js` with the following:
+1.  Replace the contents of `index.ts` with the following:
 
-    ```js
-    const cloud = require("@pulumi/cloud");
+    ```ts
+    // Create an elastic network listener to listen for requests and route them to the container.
+    // See https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html
+    // for more details.
+    let listener = new awsx.elasticloadbalancingv2.NetworkListener("nginx", { port: 80 });
 
-    let service = new cloud.Service("pulumi-nginx", {
-        containers: {
-            nginx: {
-                build: "./app",
-                memory: 128,
-                ports: [{ port: 80 }],
+    // Define the service to run.  We pass in the listener to hook up the network load balancer
+    // to the containers the service will launch.
+    let service = new awsx.ecs.FargateService("nginx", {
+        desiredCount: 2,
+        taskDefinitionArgs: {
+            containers: {
+                nginx: {
+                    image: awsx.ecs.Image.fromPath("./app"),
+                    memory: 512,
+                    portMappings: [listener],
+                },
             },
         },
-        replicas: 2,
     });
 
     // export just the hostname property of the container frontend
-    exports.url = service.defaultEndpoint.apply(e => `http://${e.hostname}`);
+    export const hostname = listener.endpoint().apply(e => `http://${e.hostname}`);
     ```
 
-    This example uses [cloud.Service](/reference/pkg/nodejs/@pulumi/cloud/index.html#Service), which is a high-level, convenient interface for building containers and provisioning a container service on your target cloud.
+    This example uses awsx.ecs.FargateService, which is a high-level, convenient interface for building containers and provisioning a fargate service in aws.
 
 1.  Create a subfolder `app` with the following files:
 
@@ -71,28 +78,19 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
       index.html
     ```
 
-1.  Install the `@pulumi/cloud` NPM package an one or both of the platform-specific implementations depending on which platform you will deploy to:
+1.  Install the necessary NPM packages:
 
     ```bash
-    $ npm install --save @pulumi/cloud  @pulumi/cloud-aws @pulumi/cloud-azure
+    $ npm install --save @pulumi/pulumi  @pulumi/aws @pulumi/aws-infra
     ```
 
-1.  If you are running on AWS, configure the provider, the region and whether to use Fargate:
+1.  Configure the AWS region you would like to use:
 
     ```bash
-    $ pulumi config set cloud:provider aws
     $ pulumi config set aws:region us-east-1
-    $ pulumi config set cloud-aws:useFargate true
     ```
 
-    If you are running on Azure, configure the provider and the location:
-
-    ```bash
-    $ pulumi config set cloud:provider azure
-    $ pulumi config set cloud-azure:location WestUS2
-    ```
-
-1.  Preview and deploy changes via `pulumi update`. This will take a few minutes. Pulumi automatically builds and provisions a container registry (ECR or ACR), builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
+1.  Preview and deploy changes via `pulumi update`. This will take a few minutes. Pulumi automatically builds and provisions an ecr container registry, builds the Docker container, and pushed the image into the repository. This all happens automatically and does not require manual configuration on your part.
 
     ```
     $ pulumi update
@@ -149,4 +147,4 @@ In this tutorial, we'll use JavaScript to build and deploy a simple container us
 
 For an end-to-end application also includes serverless functions, see the [Serverless and Container Thumbnailer](./tutorial-thumbnailer.html) tutorial.
 
-For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/cloud-ts-voting-app) TypeScript sample.
+For an example application that connects two containers, see the [Voting App](https://github.com/pulumi/examples/tree/master/aws-ts-voting-app) TypeScript sample.

@@ -5,7 +5,7 @@ redirect_from: /reference/aws.html
 
 <img src="/images/quickstart/aws-purple.png" align="right">
 
-The Amazon Web Services (AWS) provider for Pulumi can be used to provision any of the cloud resources available in [AWS](https://aws.amazon.com/).  The AWS provider must be configured with credentials to deploy and update resources in AWS. 
+The Amazon Web Services (AWS) provider for Pulumi can be used to provision any of the cloud resources available in [AWS](https://aws.amazon.com/).  The AWS provider must be configured with credentials to deploy and update resources in AWS.
 
 See the [full API documentation](/reference/pkg/nodejs/@pulumi/aws/index.html) for complete details of the available AWS provider APIs.
 
@@ -19,7 +19,9 @@ The easiest way to start with AWS is to follow one of the tutorials:
 
 * [Serverless REST APIs using Lambda](./tutorial-rest-api.html): Create simple RESTful web server using AWS Lambdas
 * [EC2 Linux WebServer VM](./tutorial-ec2-webserver.html): Create an EC2 Linux Web Server virtual machine
+* [A simple containerized app](./tutorial-service.html): Deploy EC2 or Fargate ECS Services
 * [Serve a Static Website from S3](./tutorial-s3-website.html): Serve a static website out of content in an S3 bucket
+* [Serverless + Containers + Infrastructure](./tutorial-thumbnailer.html): Deploy a complete  application using a combination of buckets, serverless functions and containers.
 
 In addition to the tutorials, several interesting examples are available complete with instructions:
 
@@ -50,7 +52,7 @@ The following packages are available in package managers:
 * Python: [`pulumi-aws`](https://pypi.org/project/pulumi-aws/)
 * Go: [`github.com/pulumi/pulumi-aws/sdk/go/aws`](https://github.com/pulumi/pulumi-aws)
 
-The AWS provider is open source and available in the [pulumi/pulumi-aws](https://github.com/pulumi/pulumi-aws) repo. 
+The AWS provider is open source and available in the [pulumi/pulumi-aws](https://github.com/pulumi/pulumi-aws) repo.
 
 ## Configuration
 
