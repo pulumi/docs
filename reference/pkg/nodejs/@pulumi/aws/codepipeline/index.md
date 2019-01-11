@@ -35,7 +35,7 @@ title: Module codepipeline
 
 Provides a CodePipeline.
 
-~> **NOTE on `aws_codepipeline`:** - the `GITHUB_TOKEN` environment variable must be set if the GitHub provider is specified.
+> **NOTE on `aws_codepipeline`:** - the `GITHUB_TOKEN` environment variable must be set if the GitHub provider is specified.
 
 <h3 class="pdoc-member-header" id="Pipeline-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/codepipeline/pipeline.ts#L42"> <b>constructor</b></a>

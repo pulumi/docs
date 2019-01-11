@@ -29,23 +29,23 @@ title: Module config
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts#L9">let <b>credentials</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> credentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("credentials") || utilities.getEnv("GOOGLE_CREDENTIALS", "GOOGLE_CLOUD_KEYFILE_JSON", "GCLOUD_KEYFILE_JSON")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> credentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;credentials&#34;) || utilities.getEnv(&#34;GOOGLE_CREDENTIALS&#34;, &#34;GOOGLE_CLOUD_KEYFILE_JSON&#34;, &#34;GCLOUD_KEYFILE_JSON&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="project">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts#L10">let <b>project</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("project") || utilities.getEnv("GOOGLE_PROJECT", "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUDSDK_CORE_PROJECT")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;project&#34;) || utilities.getEnv(&#34;GOOGLE_PROJECT&#34;, &#34;GOOGLE_CLOUD_PROJECT&#34;, &#34;GCLOUD_PROJECT&#34;, &#34;CLOUDSDK_CORE_PROJECT&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="region">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts#L11">let <b>region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("region") || utilities.getEnv("GOOGLE_REGION", "GCLOUD_REGION", "CLOUDSDK_COMPUTE_REGION")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;region&#34;) || utilities.getEnv(&#34;GOOGLE_REGION&#34;, &#34;GCLOUD_REGION&#34;, &#34;CLOUDSDK_COMPUTE_REGION&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="zone">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/config/vars.ts#L12">let <b>zone</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("zone") || utilities.getEnv("GOOGLE_ZONE", "GCLOUD_ZONE", "CLOUDSDK_COMPUTE_ZONE")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> zone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;zone&#34;) || utilities.getEnv(&#34;GOOGLE_ZONE&#34;, &#34;GCLOUD_ZONE&#34;, &#34;CLOUDSDK_COMPUTE_ZONE&#34;)</span>;</pre>
 </div>

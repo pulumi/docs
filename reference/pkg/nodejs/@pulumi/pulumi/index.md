@@ -846,7 +846,7 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/version.ts#L15">const <b>version</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> version: <span class='s2'>"${VERSION}"</span> = <span class='s2'>"${VERSION}"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> version: <span class='s2'>"${VERSION}"</span> = <span class='s2'>&#34;${VERSION}&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="all">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L559">function <b>all</b></a>

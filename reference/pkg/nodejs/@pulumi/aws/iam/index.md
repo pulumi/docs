@@ -569,7 +569,7 @@ deployments and may be missing (undefined) during planning phases.
 <pre class="highlight"><span class='kd'>public </span>encryptedSecret: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The encrypted secret, base64 encoded.
-~> **NOTE:** The encrypted secret may be decrypted using the command line,
+> **NOTE:** The encrypted secret may be decrypted using the command line,
 for example: `terraform output encrypted_secret | base64 --decode | keybase pgp decrypt`.
 
 </div>
@@ -963,13 +963,13 @@ The group's name. The name must consist of upper and lowercase alphanumeric char
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
-~> **WARNING:** Multiple aws_iam_group_membership resources with the same group name will produce inconsistent behavior!
+> **WARNING:** Multiple aws_iam_group_membership resources with the same group name will produce inconsistent behavior!
 
 Provides a top level resource to manage IAM Group membership for IAM Users. For
 more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 [IAM Users][2]
 
-~> **Note:** `aws_iam_group_membership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
+> **Note:** `aws_iam_group_membership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [`aws_iam_user_group_membership` resource][3].
 
 <h3 class="pdoc-member-header" id="GroupMembership-constructor">
@@ -1189,7 +1189,7 @@ assign a random, unique name.
 
 Attaches a Managed IAM Policy to an IAM group
 
-~> **NOTE:** The usage of this resource conflicts with the `aws_iam_policy_attachment` resource and will permanently show a difference if both are defined.
+> **NOTE:** The usage of this resource conflicts with the `aws_iam_policy_attachment` resource and will permanently show a difference if both are defined.
 
 <h3 class="pdoc-member-header" id="GroupPolicyAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/groupPolicyAttachment.ts#L35"> <b>constructor</b></a>
@@ -1285,7 +1285,7 @@ The group the policy should be applied to
 
 Provides an IAM instance profile.
 
-~> **NOTE:** Either `role` or `roles` (**deprecated**) must be specified.
+> **NOTE:** Either `role` or `roles` (**deprecated**) must be specified.
 
 <h3 class="pdoc-member-header" id="InstanceProfile-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/instanceProfile.ts#L60"> <b>constructor</b></a>
@@ -1681,7 +1681,7 @@ Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
 
 !> **WARNING:** The aws_iam_policy_attachment resource creates **exclusive** attachments of IAM policies. Across the entire AWS account, all of the users/roles/groups to which a single policy is attached must be declared by a single aws_iam_policy_attachment resource. This means that even any users/roles/groups that have the attached policy via any other mechanism (including other Terraform resources) will have that attached policy revoked by this resource. Consider `aws_iam_role_policy_attachment`, `aws_iam_user_policy_attachment`, or `aws_iam_group_policy_attachment` instead. These resources do not enforce exclusive attachment of an IAM policy.
 
-~> **NOTE:** The usage of this resource conflicts with the `aws_iam_group_policy_attachment`, `aws_iam_role_policy_attachment`, and `aws_iam_user_policy_attachment` resources and will permanently show a difference if both are defined.
+> **NOTE:** The usage of this resource conflicts with the `aws_iam_group_policy_attachment`, `aws_iam_role_policy_attachment`, and `aws_iam_user_policy_attachment` resources and will permanently show a difference if both are defined.
 
 <h3 class="pdoc-member-header" id="PolicyAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/policyAttachment.ts#L51"> <b>constructor</b></a>
@@ -2103,7 +2103,7 @@ prefix. Conflicts with `name`.
 
 Attaches a Managed IAM Policy to an IAM role
 
-~> **NOTE:** The usage of this resource conflicts with the `aws_iam_policy_attachment` resource and will permanently show a difference if both are defined.
+> **NOTE:** The usage of this resource conflicts with the `aws_iam_policy_attachment` resource and will permanently show a difference if both are defined.
 
 <h3 class="pdoc-member-header" id="RolePolicyAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/rolePolicyAttachment.ts#L35"> <b>constructor</b></a>
@@ -2320,7 +2320,7 @@ Certs uploaded to IAM can easily work with other AWS services such as:
 For information about server certificates in IAM, see [Managing Server
 Certificates][2] in AWS Documentation.
 
-~> **Note:** All arguments including the private key will be stored in the raw state as plain-text.
+> **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header" id="ServerCertificate-constructor">
@@ -3236,7 +3236,7 @@ Creates a unique name beginning with the specified prefix. Conflicts with `name`
 
 Attaches a Managed IAM Policy to an IAM user
 
-~> **NOTE:** The usage of this resource conflicts with the `aws_iam_policy_attachment` resource and will permanently show a difference if both are defined.
+> **NOTE:** The usage of this resource conflicts with the `aws_iam_policy_attachment` resource and will permanently show a difference if both are defined.
 
 <h3 class="pdoc-member-header" id="UserPolicyAttachment-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/userPolicyAttachment.ts#L35"> <b>constructor</b></a>
@@ -5896,7 +5896,7 @@ Input properties used for looking up and filtering AccessKey resources.
 <pre class="highlight"><span class='kd'></span>encryptedSecret?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The encrypted secret, base64 encoded.
-~> **NOTE:** The encrypted secret may be decrypted using the command line,
+> **NOTE:** The encrypted secret may be decrypted using the command line,
 for example: `terraform output encrypted_secret | base64 --decode | keybase pgp decrypt`.
 
 </div>

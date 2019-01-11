@@ -35,7 +35,7 @@ title: Module macie
 
 Associates an AWS account with Amazon Macie as a member account.
 
-~> **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
+> **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
 
 <h3 class="pdoc-member-header" id="MemberAccountAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/macie/memberAccountAssociation.ts#L28"> <b>constructor</b></a>
@@ -122,7 +122,7 @@ deployments.
 
 Associates an S3 resource with Amazon Macie for monitoring and data classification.
 
-~> **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
+> **NOTE:** Before using Amazon Macie for the first time it must be enabled manually. Instructions are [here](https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable).
 
 <h3 class="pdoc-member-header" id="S3BucketAssociation-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/macie/s3BucketAssociation.ts#L40"> <b>constructor</b></a>

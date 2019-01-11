@@ -47,10 +47,10 @@ phase because a modification has not yet taken place. You can use the
 `apply_immediately` flag to instruct the service to apply the change immediately
 (see documentation below).
 
-~> **Note:** using `apply_immediately` can result in a
+> **Note:** using `apply_immediately` can result in a
 brief downtime as the broker reboots.
 
-~> **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
+> **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 <h3 class="pdoc-member-header" id="Broker-constructor">

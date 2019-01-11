@@ -449,7 +449,7 @@ Most commonly, this resource is used together with `aws_route53_record` and
 `aws_ses_domain_identity` to request an SES domain identity,
 deploy the required DNS verification records, and wait for verification to complete.
 
-~> **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
+> **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
 <h3 class="pdoc-member-header" id="DomainIdentityVerification-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/domainIdentityVerification.ts#L36"> <b>constructor</b></a>
@@ -796,7 +796,7 @@ The identity for which the Amazon SNS topic will be set. You can specify an iden
 
 Provides an SES domain MAIL FROM resource.
 
-~> **NOTE:** For the MAIL FROM domain to be fully usable, this resource should be paired with the [aws_ses_domain_identity resource](https://www.terraform.io/docs/providers/aws/r/ses_domain_identity.html). To validate the MAIL FROM domain, a DNS MX record is required. To pass SPF checks, a DNS TXT record may also be required. See the [Amazon SES MAIL FROM documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html) for more information.
+> **NOTE:** For the MAIL FROM domain to be fully usable, this resource should be paired with the [aws_ses_domain_identity resource](https://www.terraform.io/docs/providers/aws/r/ses_domain_identity.html). To validate the MAIL FROM domain, a DNS MX record is required. To pass SPF checks, a DNS TXT record may also be required. See the [Amazon SES MAIL FROM documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from-set.html) for more information.
 
 <h3 class="pdoc-member-header" id="MailFrom-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ses/mailFrom.ts#L36"> <b>constructor</b></a>

@@ -393,7 +393,7 @@ Retention time for this table.
 
 Provides a Glue Classifier resource.
 
-~> **NOTE:** It is only valid to create one type of classifier (grok, JSON, or XML). Changing classifier types will recreate the classifier.
+> **NOTE:** It is only valid to create one type of classifier (grok, JSON, or XML). Changing classifier types will recreate the classifier.
 
 <h3 class="pdoc-member-header" id="Classifier-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/glue/classifier.ts#L40"> <b>constructor</b></a>

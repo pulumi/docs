@@ -31,7 +31,7 @@ title: Module config
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/config/vars.ts#L12">let <b>caMaterial</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> caMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("caMaterial") || utilities.getEnv("DOCKER_CA_MATERIAL")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> caMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caMaterial&#34;) || utilities.getEnv(&#34;DOCKER_CA_MATERIAL&#34;)</span>;</pre>
 
 PEM-encoded content of Docker host CA certificate
 
@@ -40,7 +40,7 @@ PEM-encoded content of Docker host CA certificate
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/config/vars.ts#L16">let <b>certMaterial</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> certMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("certMaterial") || utilities.getEnv("DOCKER_CERT_MATERIAL")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> certMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certMaterial&#34;) || utilities.getEnv(&#34;DOCKER_CERT_MATERIAL&#34;)</span>;</pre>
 
 PEM-encoded content of Docker client certificate
 
@@ -49,7 +49,7 @@ PEM-encoded content of Docker client certificate
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/config/vars.ts#L20">let <b>certPath</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> certPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("certPath") || utilities.getEnv("DOCKER_CERT_PATH")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> certPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certPath&#34;) || utilities.getEnv(&#34;DOCKER_CERT_PATH&#34;)</span>;</pre>
 
 Path to directory with Docker TLS config
 
@@ -58,7 +58,7 @@ Path to directory with Docker TLS config
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/config/vars.ts#L24">let <b>host</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> utilities.requireWithDefault(() => __config.require("host"), (utilities.getEnv("DOCKER_HOST") || "unix:///var/run/docker.sock"))</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> utilities.requireWithDefault(() =&gt; __config.require(&#34;host&#34;), (utilities.getEnv(&#34;DOCKER_HOST&#34;) || &#34;unix:///var/run/docker.sock&#34;))</span>;</pre>
 
 The Docker daemon address
 
@@ -67,7 +67,7 @@ The Docker daemon address
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/config/vars.ts#L28">let <b>keyMaterial</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> keyMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get("keyMaterial") || utilities.getEnv("DOCKER_KEY_MATERIAL")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> keyMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;keyMaterial&#34;) || utilities.getEnv(&#34;DOCKER_KEY_MATERIAL&#34;)</span>;</pre>
 
 PEM-encoded content of Docker client private key
 
@@ -81,5 +81,5 @@ PEM-encoded content of Docker client private key
     configFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject<{ address: string, configFile?: string, password?: string, username?: string }[]>("registryAuth")</span>;</pre>
+}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ address: string, configFile?: string, password?: string, username?: string }[]&gt;(&#34;registryAuth&#34;)</span>;</pre>
 </div>

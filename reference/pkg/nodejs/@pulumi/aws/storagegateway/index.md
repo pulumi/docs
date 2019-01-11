@@ -53,7 +53,7 @@ title: Module storagegateway
 
 Manages an AWS Storage Gateway cache.
 
-~> **NOTE:** The Storage Gateway API provides no method to remove a cache disk. Destroying this Terraform resource does not perform any Storage Gateway actions.
+> **NOTE:** The Storage Gateway API provides no method to remove a cache disk. Destroying this Terraform resource does not perform any Storage Gateway actions.
 
 <h3 class="pdoc-member-header" id="Cache-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/cache.ts#L32"> <b>constructor</b></a>
@@ -149,9 +149,9 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 
 Manages an AWS Storage Gateway cached iSCSI volume.
 
-~> **NOTE:** The gateway must have cache added (e.g. via the [`aws_storagegateway_cache`](https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html) resource) before creating volumes otherwise the Storage Gateway API will return an error.
+> **NOTE:** The gateway must have cache added (e.g. via the [`aws_storagegateway_cache`](https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html) resource) before creating volumes otherwise the Storage Gateway API will return an error.
 
-~> **NOTE:** The gateway must have an upload buffer added (e.g. via the [`aws_storagegateway_upload_buffer`](https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html) resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
+> **NOTE:** The gateway must have an upload buffer added (e.g. via the [`aws_storagegateway_upload_buffer`](https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html) resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
 
 <h3 class="pdoc-member-header" id="CachesIscsiVolume-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/cachesIscsiVolume.ts#L78"> <b>constructor</b></a>
@@ -346,7 +346,7 @@ The ARN for an existing volume. Specifying this ARN makes the new volume into an
 
 Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.
 
-~> NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
+> NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
 
 <h3 class="pdoc-member-header" id="Gateway-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/gateway.ts#L65"> <b>constructor</b></a>
@@ -951,7 +951,7 @@ Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption
 
 Manages an AWS Storage Gateway upload buffer.
 
-~> **NOTE:** The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this Terraform resource does not perform any Storage Gateway actions.
+> **NOTE:** The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this Terraform resource does not perform any Storage Gateway actions.
 
 <h3 class="pdoc-member-header" id="UploadBuffer-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/uploadBuffer.ts#L32"> <b>constructor</b></a>
@@ -1047,7 +1047,7 @@ Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
 
 Manages an AWS Storage Gateway working storage.
 
-~> **NOTE:** The Storage Gateway API provides no method to remove a working storage disk. Destroying this Terraform resource does not perform any Storage Gateway actions.
+> **NOTE:** The Storage Gateway API provides no method to remove a working storage disk. Destroying this Terraform resource does not perform any Storage Gateway actions.
 
 <h3 class="pdoc-member-header" id="WorkingStorage-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/storagegateway/workingStorage.ts#L32"> <b>constructor</b></a>
