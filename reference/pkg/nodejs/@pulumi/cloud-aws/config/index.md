@@ -63,7 +63,7 @@ setEcsCluster configures the ambient ECS cluster imperatively rather than using 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L61">let <b>acmCertificateARN</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> acmCertificateARN: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("acmCertificateARN")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> acmCertificateARN: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;acmCertificateARN&#34;)</span>;</pre>
 
 Optional ACM certificate ARN to support services HTTPS traffic.
 
@@ -72,7 +72,7 @@ Optional ACM certificate ARN to support services HTTPS traffic.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L56">let <b>computeIAMRolePolicyARNs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> computeIAMRolePolicyARNs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("computeIAMRolePolicyARNs")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> computeIAMRolePolicyARNs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;computeIAMRolePolicyARNs&#34;)</span>;</pre>
 
 Set the IAM role policies to apply to compute (both Lambda and ECS) within this Pulumi program. The default is:
 "arn:aws:iam::aws:policy/AWSLambdaFullAccess,arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess".
@@ -82,7 +82,7 @@ Set the IAM role policies to apply to compute (both Lambda and ECS) within this 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L133">let <b>ecsAutoCluster</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoCluster: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean("ecsAutoCluster") || false</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoCluster: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean(&#34;ecsAutoCluster&#34;) || false</span>;</pre>
 
 Optionally auto-provision an ECS Cluster.  If set to true, parameters for the cluster can be provided via
 the other "ecsAutoCluster*" configuration variables.
@@ -92,7 +92,7 @@ the other "ecsAutoCluster*" configuration variables.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L181">let <b>ecsAutoClusterECSOptimizedAMIName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterECSOptimizedAMIName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("ecsAutoClusterECSOptimizedAMIName")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterECSOptimizedAMIName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;ecsAutoClusterECSOptimizedAMIName&#34;)</span>;</pre>
 
 The name of the ECS-optimzed AMI to use for the Container Instances in this cluster, e.g.
 "amzn-ami-2017.09.l-amazon-ecs-optimized".
@@ -105,7 +105,7 @@ See http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceDockerImageVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'>
-    config.getNumber("ecsAutoClusterInstanceDockerImageVolumeSize")</span>;</pre>
+    config.getNumber(&#34;ecsAutoClusterInstanceDockerImageVolumeSize&#34;)</span>;</pre>
 
 The size (in GiB) of the EBS volume to attach to each instance as Docker Image volume.  Defaults to 50 GiB.
 
@@ -114,7 +114,7 @@ The size (in GiB) of the EBS volume to attach to each instance as Docker Image v
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L147">let <b>ecsAutoClusterInstanceRolePolicyARNs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceRolePolicyARNs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("ecsAutoClusterInstanceRolePolicyARNs")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceRolePolicyARNs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;ecsAutoClusterInstanceRolePolicyARNs&#34;)</span>;</pre>
 
 The EC2 instance role policy ARN to use for the cluster.  Defaults to
 `arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role,
@@ -125,7 +125,7 @@ The EC2 instance role policy ARN to use for the cluster.  Defaults to
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L151">let <b>ecsAutoClusterInstanceRootVolumeSize</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceRootVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber("ecsAutoClusterInstanceRootVolumeSize")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceRootVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber(&#34;ecsAutoClusterInstanceRootVolumeSize&#34;)</span>;</pre>
 
 The size (in GiB) of the EBS volume to attach to each instance as the root volume.  Defaults to 8 GiB.
 
@@ -134,7 +134,7 @@ The size (in GiB) of the EBS volume to attach to each instance as the root volum
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L160">let <b>ecsAutoClusterInstanceSwapVolumeSize</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceSwapVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber("ecsAutoClusterInstanceSwapVolumeSize")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceSwapVolumeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber(&#34;ecsAutoClusterInstanceSwapVolumeSize&#34;)</span>;</pre>
 
 The size (in GiB) of the EBS volume to attach to each instance as the swap volume.  Defaults to 5 GiB.
 
@@ -143,7 +143,7 @@ The size (in GiB) of the EBS volume to attach to each instance as the swap volum
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L141">let <b>ecsAutoClusterInstanceType</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("ecsAutoClusterInstanceType")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterInstanceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;ecsAutoClusterInstanceType&#34;)</span>;</pre>
 
 The EC2 instance type to use for the cluster.  Defaults to `t2.micro`.
 
@@ -152,7 +152,7 @@ The EC2 instance type to use for the cluster.  Defaults to `t2.micro`.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L168">let <b>ecsAutoClusterMaxSize</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterMaxSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber("ecsAutoClusterMaxSize")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterMaxSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber(&#34;ecsAutoClusterMaxSize&#34;)</span>;</pre>
 
 The maximum size of the cluster. Defaults to 100.
 
@@ -161,7 +161,7 @@ The maximum size of the cluster. Defaults to 100.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L164">let <b>ecsAutoClusterMinSize</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterMinSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber("ecsAutoClusterMinSize")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterMinSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber(&#34;ecsAutoClusterMinSize&#34;)</span>;</pre>
 
 The minimum size of the cluster. Defaults to 2.
 
@@ -170,7 +170,7 @@ The minimum size of the cluster. Defaults to 2.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L137">let <b>ecsAutoClusterNumberOfAZs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterNumberOfAZs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber("ecsAutoClusterNumberOfAZs")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterNumberOfAZs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber(&#34;ecsAutoClusterNumberOfAZs&#34;)</span>;</pre>
 
 The number of AZs to create subnets in as part of the cluster.  Defaults to 2.
 
@@ -179,7 +179,7 @@ The number of AZs to create subnets in as part of the cluster.  Defaults to 2.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L174">let <b>ecsAutoClusterPublicKey</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterPublicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("ecsAutoClusterPublicKey")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterPublicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;ecsAutoClusterPublicKey&#34;)</span>;</pre>
 
 Public key material for SSH access to the cluster. See allowed formats at:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
@@ -190,7 +190,7 @@ If not provided, no SSH access is enabled on VMs.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L185">let <b>ecsAutoClusterUseEFS</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterUseEFS: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean("ecsAutoClusterUseEFS") || false</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsAutoClusterUseEFS: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean(&#34;ecsAutoClusterUseEFS&#34;) || false</span>;</pre>
 
 Optionally auto-provision an Elastic File System for the Cluster.  Defaults to false.
 
@@ -199,7 +199,7 @@ Optionally auto-provision an Elastic File System for the Cluster.  Defaults to f
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L67">let <b>ecsClusterARN</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsClusterARN: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> config.get("ecsClusterARN")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsClusterARN: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> config.get(&#34;ecsClusterARN&#34;)</span>;</pre>
 
 Optional ECS cluster ARN.  If not provided, `Service`s and `Task`s are not available for the target
 environment.
@@ -209,7 +209,7 @@ environment.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L77">let <b>ecsClusterEfsMountPath</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsClusterEfsMountPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("ecsClusterEfsMountPath")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsClusterEfsMountPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;ecsClusterEfsMountPath&#34;)</span>;</pre>
 
 Optional EFS mount path on the cluster hosts.  If not provided, `Volumes` cannot be used in `Service`s and `Task`s.
 
@@ -218,7 +218,7 @@ Optional EFS mount path on the cluster hosts.  If not provided, `Volumes` cannot
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L72">let <b>ecsClusterSecurityGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> ecsClusterSecurityGroup: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> config.get("ecsClusterSecurityGroup")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> ecsClusterSecurityGroup: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> config.get(&#34;ecsClusterSecurityGroup&#34;)</span>;</pre>
 
 Optional ECS cluster security group that all ALBs for services within the cluster will use.
 
@@ -254,7 +254,7 @@ Provide subnets ids for the VPC as a comma-seperated string.  Required if using 
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L88">let <b>externalVpcId</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> externalVpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get("externalVpcId")</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> externalVpcId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> config.get(&#34;externalVpcId&#34;)</span>;</pre>
 
 Use an existing VPC.  If both `usePrivateNetwork` and `externalVpcId` are provided, the VPC must be configured to run
 all compute in private subnets with Internet egress enabled via NAT Gateways.
@@ -284,7 +284,7 @@ JavaScript callbacks.  E.g "./img.png,app/".
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L27">let <b>functionMemorySize</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> functionMemorySize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber("functionMemorySize") || 128</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> functionMemorySize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> = <span class='s2'> config.getNumber(&#34;functionMemorySize&#34;) || 128</span>;</pre>
 
 Optionally override the Lambda function memory size for all functions.
 
@@ -293,7 +293,7 @@ Optionally override the Lambda function memory size for all functions.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L127">let <b>useFargate</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> useFargate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean("useFargate") || false</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> useFargate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean(&#34;useFargate&#34;) || false</span>;</pre>
 
 Optionally use Fargate-based container compute. All tasks must be Fargate-compatible.
 
@@ -302,7 +302,7 @@ Optionally use Fargate-based container compute. All tasks must be Fargate-compat
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/config/index.ts#L82">let <b>usePrivateNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> usePrivateNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean("usePrivateNetwork") || false</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> usePrivateNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'> config.getBoolean(&#34;usePrivateNetwork&#34;) || false</span>;</pre>
 
 Optionally put all compute in a private network with no Internet ingress except via explicit API.
 
