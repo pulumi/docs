@@ -40,7 +40,7 @@ export GOOGLE_CREDENTIALS=$(cat credentials.json)
 Windows Powershell
 
 ```bash
-$env:GOOGLE_CREDENTIALS="C:\PATH\TO\CREDENTIALS\credentials.json"
+$env:GOOGLE_CREDENTIALS=cat credentials.json
 ```
 
 ## Optional Settings
