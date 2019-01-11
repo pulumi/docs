@@ -3328,619 +3328,619 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L18">const <b>AWSAccountActivityAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSAccountActivityAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSAccountActivityAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSAccountActivityAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountActivityAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSAccountUsageReportAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L19">const <b>AWSAccountUsageReportAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSAccountUsageReportAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSAccountUsageReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAccountUsageReportAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSAgentlessDiscoveryService">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L20">const <b>AWSAgentlessDiscoveryService</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSAgentlessDiscoveryService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSApplicationDiscoveryAgentAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L21">const <b>AWSApplicationDiscoveryAgentAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSApplicationDiscoveryAgentAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSApplicationDiscoveryServiceFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L22">const <b>AWSApplicationDiscoveryServiceFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSApplicationDiscoveryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSBatchFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L23">const <b>AWSBatchFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSBatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSBatchFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSBatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSBatchFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSBatchServiceRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L24">const <b>AWSBatchServiceRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSBatchServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSBatchServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCertificateManagerFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L25">const <b>AWSCertificateManagerFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCertificateManagerFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCertificateManagerReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L26">const <b>AWSCertificateManagerReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCertificateManagerReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCloudFormationReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L27">const <b>AWSCloudFormationReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCloudFormationReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCloudHSMFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L28">const <b>AWSCloudHSMFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCloudHSMFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCloudHSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCloudHSMReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L29">const <b>AWSCloudHSMReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCloudHSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCloudHSMRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L30">const <b>AWSCloudHSMRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCloudHSMRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCloudHSMRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCloudTrailFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L31">const <b>AWSCloudTrailFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCloudTrailFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCloudTrailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCloudTrailReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L32">const <b>AWSCloudTrailReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCloudTrailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeBuildAdminAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L33">const <b>AWSCodeBuildAdminAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeBuildAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeBuildDeveloperAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L34">const <b>AWSCodeBuildDeveloperAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeBuildDeveloperAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeBuildReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L35">const <b>AWSCodeBuildReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeBuildReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeCommitFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L36">const <b>AWSCodeCommitFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeCommitFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeCommitFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeCommitPowerUser">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L37">const <b>AWSCodeCommitPowerUser</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeCommitPowerUser"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeCommitPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitPowerUser&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeCommitReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L38">const <b>AWSCodeCommitReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeCommitReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeCommitReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeCommitReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeDeployDeployerAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L39">const <b>AWSCodeDeployDeployerAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployDeployerAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeDeployFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L40">const <b>AWSCodeDeployFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeDeployFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeDeployReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L41">const <b>AWSCodeDeployReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeDeployRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L42">const <b>AWSCodeDeployRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeDeployRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodePipelineApproverAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L43">const <b>AWSCodePipelineApproverAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineApproverAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodePipelineCustomActionAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L44">const <b>AWSCodePipelineCustomActionAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineCustomActionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodePipelineFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L45">const <b>AWSCodePipelineFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodePipelineFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodePipelineReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L46">const <b>AWSCodePipelineReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodePipelineReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeStarFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L47">const <b>AWSCodeStarFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSCodeStarFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeStarFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSCodeStarFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSCodeStarServiceRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L48">const <b>AWSCodeStarServiceRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSCodeStarServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSConfigRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L49">const <b>AWSConfigRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSConfigRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSConfigRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSConfigRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSConfigRulesExecutionRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L50">const <b>AWSConfigRulesExecutionRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSConfigRulesExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSConfigUserAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L51">const <b>AWSConfigUserAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSConfigUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSConfigUserAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSConfigUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConfigUserAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSConnector">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L52">const <b>AWSConnector</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSConnector"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSConnector&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDataPipelineRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L53">const <b>AWSDataPipelineRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDataPipeline_FullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L54">const <b>AWSDataPipeline_FullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDataPipeline_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDataPipeline_PowerUser">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L55">const <b>AWSDataPipeline_PowerUser</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDataPipeline_PowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDeviceFarmFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L56">const <b>AWSDeviceFarmFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDeviceFarmFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDirectConnectFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L57">const <b>AWSDirectConnectFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDirectConnectFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDirectConnectFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDirectConnectReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L58">const <b>AWSDirectConnectReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDirectConnectReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDirectoryServiceFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L59">const <b>AWSDirectoryServiceFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDirectoryServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSDirectoryServiceReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L60">const <b>AWSDirectoryServiceReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSDirectoryServiceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkCustomPlatformforEC2Role">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L61">const <b>AWSElasticBeanstalkCustomPlatformforEC2Role</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkCustomPlatformforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkEnhancedHealth">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L62">const <b>AWSElasticBeanstalkEnhancedHealth</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkEnhancedHealth: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L63">const <b>AWSElasticBeanstalkFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkMulticontainerDocker">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L64">const <b>AWSElasticBeanstalkMulticontainerDocker</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkMulticontainerDocker: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L65">const <b>AWSElasticBeanstalkReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkService">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L66">const <b>AWSElasticBeanstalkService</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkService: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkWebTier">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L67">const <b>AWSElasticBeanstalkWebTier</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkWebTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSElasticBeanstalkWorkerTier">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L68">const <b>AWSElasticBeanstalkWorkerTier</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSElasticBeanstalkWorkerTier: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSGreengrassFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L69">const <b>AWSGreengrassFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSGreengrassFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSGreengrassFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSGreengrassFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSGreengrassResourceAccessRolePolicy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L70">const <b>AWSGreengrassResourceAccessRolePolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSGreengrassResourceAccessRolePolicy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSHealthFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L71">const <b>AWSHealthFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSHealthFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSHealthFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSHealthFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSHealthFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSImportExportFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L72">const <b>AWSImportExportFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSImportExportFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSImportExportFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSImportExportFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSImportExportReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L73">const <b>AWSImportExportReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSImportExportReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSIoTConfigAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L74">const <b>AWSIoTConfigAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSIoTConfigAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSIoTConfigAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSIoTConfigAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSIoTConfigReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L75">const <b>AWSIoTConfigReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSIoTConfigReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSIoTDataAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L76">const <b>AWSIoTDataAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSIoTDataAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSIoTDataAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSIoTDataAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTDataAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSIoTFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L77">const <b>AWSIoTFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSIoTFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSIoTFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSIoTFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSIoTFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSIoTLogging">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L78">const <b>AWSIoTLogging</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSIoTLogging: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSIoTLogging"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSIoTLogging: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTLogging&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSIoTRuleActions">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L79">const <b>AWSIoTRuleActions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSIoTRuleActions: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSIoTRuleActions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSKeyManagementServicePowerUser">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L80">const <b>AWSKeyManagementServicePowerUser</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSKeyManagementServicePowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaBasicExecutionRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L81">const <b>AWSLambdaBasicExecutionRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaBasicExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaDynamoDBExecutionRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L82">const <b>AWSLambdaDynamoDBExecutionRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaDynamoDBExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaENIManagementAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L83">const <b>AWSLambdaENIManagementAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaENIManagementAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaExecute">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L84">const <b>AWSLambdaExecute</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaExecute: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSLambdaExecute"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaExecute: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaExecute&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L85">const <b>AWSLambdaFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSLambdaFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaInvocationDynamoDB">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L86">const <b>AWSLambdaInvocationDynamoDB</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaInvocationDynamoDB: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaKinesisExecutionRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L87">const <b>AWSLambdaKinesisExecutionRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaKinesisExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L88">const <b>AWSLambdaReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L89">const <b>AWSLambdaRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSLambdaRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSLambdaVPCAccessExecutionRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L90">const <b>AWSLambdaVPCAccessExecutionRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSLambdaVPCAccessExecutionRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMarketplaceFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L91">const <b>AWSMarketplaceFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMarketplaceFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMarketplaceGetEntitlements">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L92">const <b>AWSMarketplaceGetEntitlements</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceGetEntitlements: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMarketplaceManageSubscriptions">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L93">const <b>AWSMarketplaceManageSubscriptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceManageSubscriptions: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMarketplaceMeteringFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L94">const <b>AWSMarketplaceMeteringFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceMeteringFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMarketplaceReadonly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L95">const <b>AWSMarketplaceReadonly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMarketplaceRead-only"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMarketplaceReadonly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMarketplaceRead-only&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMobileHub_FullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L96">const <b>AWSMobileHub_FullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMobileHub_FullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMobileHub_FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_FullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMobileHub_ReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L97">const <b>AWSMobileHub_ReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMobileHub_ReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSMobileHub_ServiceUseOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L98">const <b>AWSMobileHub_ServiceUseOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSMobileHub_ServiceUseOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksCMInstanceProfileRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L99">const <b>AWSOpsWorksCMInstanceProfileRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCMInstanceProfileRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksCMServiceRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L100">const <b>AWSOpsWorksCMServiceRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCMServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksCloudWatchLogs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L101">const <b>AWSOpsWorksCloudWatchLogs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L102">const <b>AWSOpsWorksFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSOpsWorksFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksInstanceRegistration">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L103">const <b>AWSOpsWorksInstanceRegistration</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksInstanceRegistration: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksRegisterCLI">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L104">const <b>AWSOpsWorksRegisterCLI</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksRegisterCLI: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSOpsWorksRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L105">const <b>AWSOpsWorksRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSOpsWorksRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSQuickSightDescribeRDS">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L106">const <b>AWSQuickSightDescribeRDS</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSQuickSightDescribeRDS: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSQuickSightDescribeRedshift">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L107">const <b>AWSQuickSightDescribeRedshift</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSQuickSightDescribeRedshift: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSQuickSightListIAM">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L108">const <b>AWSQuickSightListIAM</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSQuickSightListIAM: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSQuickSightListIAM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSQuicksightAthenaAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L109">const <b>AWSQuicksightAthenaAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSQuicksightAthenaAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSStepFunctionsConsoleFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L110">const <b>AWSStepFunctionsConsoleFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSStepFunctionsFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L111">const <b>AWSStepFunctionsFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSStepFunctionsReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L112">const <b>AWSStepFunctionsReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSStepFunctionsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSStorageGatewayFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L113">const <b>AWSStorageGatewayFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSStorageGatewayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSStorageGatewayReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L114">const <b>AWSStorageGatewayReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSStorageGatewayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSSupportAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L115">const <b>AWSSupportAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSSupportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSSupportAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSSupportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSSupportAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSWAFFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L116">const <b>AWSWAFFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSWAFFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSWAFFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSWAFFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSWAFReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L117">const <b>AWSWAFReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSWAFReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSXrayFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L118">const <b>AWSXrayFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSXrayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSXrayFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSXrayFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSXrayReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L119">const <b>AWSXrayReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSXrayReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AWSXrayWriteOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L120">const <b>AWSXrayWriteOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AWSXrayWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AcmServicePrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L20">const <b>AcmServicePrincipal</b></a>
@@ -3953,674 +3953,674 @@ Service Principal for Amazon Certificate Manager
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L20">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"acm.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;acm.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AdministratorAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L121">const <b>AdministratorAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AdministratorAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AdministratorAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AdministratorAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AdministratorAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAPIGatewayAdministrator">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L122">const <b>AmazonAPIGatewayAdministrator</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAPIGatewayInvokeFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L123">const <b>AmazonAPIGatewayInvokeFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayInvokeFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAPIGatewayPushToCloudWatchLogs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L124">const <b>AmazonAPIGatewayPushToCloudWatchLogs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAPIGatewayPushToCloudWatchLogs: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAppStreamFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L125">const <b>AmazonAppStreamFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonAppStreamFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAppStreamFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAppStreamReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L126">const <b>AmazonAppStreamReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAppStreamReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAppStreamServiceAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L127">const <b>AmazonAppStreamServiceAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAppStreamServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonAthenaFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L128">const <b>AmazonAthenaFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonAthenaFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonAthenaFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonAthenaFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonCloudDirectoryFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L129">const <b>AmazonCloudDirectoryFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonCloudDirectoryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonCloudDirectoryReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L130">const <b>AmazonCloudDirectoryReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonCloudDirectoryReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonCognitoDeveloperAuthenticatedIdentities">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L131">const <b>AmazonCognitoDeveloperAuthenticatedIdentities</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonCognitoDeveloperAuthenticatedIdentities: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonCognitoPowerUser">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L132">const <b>AmazonCognitoPowerUser</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonCognitoPowerUser"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonCognitoPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoPowerUser&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonCognitoReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L133">const <b>AmazonCognitoReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonCognitoReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonCognitoReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonCognitoReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDMSCloudWatchLogsRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L134">const <b>AmazonDMSCloudWatchLogsRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDMSCloudWatchLogsRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDMSRedshiftS3Role">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L135">const <b>AmazonDMSRedshiftS3Role</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDMSRedshiftS3Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDMSVPCManagementRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L136">const <b>AmazonDMSVPCManagementRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDMSVPCManagementRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDRSVPCManagement">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L137">const <b>AmazonDRSVPCManagement</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonDRSVPCManagement"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDRSVPCManagement: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDRSVPCManagement&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDynamoDBFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L138">const <b>AmazonDynamoDBFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDynamoDBFullAccesswithDataPipeline">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L139">const <b>AmazonDynamoDBFullAccesswithDataPipeline</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBFullAccesswithDataPipeline: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonDynamoDBReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L140">const <b>AmazonDynamoDBReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonDynamoDBReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerRegistryFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L141">const <b>AmazonEC2ContainerRegistryFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerRegistryPowerUser">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L142">const <b>AmazonEC2ContainerRegistryPowerUser</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryPowerUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerRegistryReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L143">const <b>AmazonEC2ContainerRegistryReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerRegistryReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerServiceAutoscaleRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L144">const <b>AmazonEC2ContainerServiceAutoscaleRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerServiceFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L145">const <b>AmazonEC2ContainerServiceFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerServiceRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L146">const <b>AmazonEC2ContainerServiceRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ContainerServiceforEC2Role">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L147">const <b>AmazonEC2ContainerServiceforEC2Role</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ContainerServiceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2FullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L148">const <b>AmazonEC2FullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2FullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2FullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L149">const <b>AmazonEC2ReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2ReportsAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L150">const <b>AmazonEC2ReportsAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonEC2ReportsAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2ReportsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonEC2ReportsAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2RoleforAWSCodeDeploy">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L151">const <b>AmazonEC2RoleforAWSCodeDeploy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforAWSCodeDeploy: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2RoleforDataPipelineRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L152">const <b>AmazonEC2RoleforDataPipelineRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforDataPipelineRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2RoleforSSM">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L153">const <b>AmazonEC2RoleforSSM</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2RoleforSSM: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2SpotFleetAutoscaleRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L154">const <b>AmazonEC2SpotFleetAutoscaleRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2SpotFleetAutoscaleRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonEC2SpotFleetRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L155">const <b>AmazonEC2SpotFleetRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonEC2SpotFleetRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonESFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L156">const <b>AmazonESFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonESFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonESReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L157">const <b>AmazonESReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonESReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonESReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElastiCacheFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L158">const <b>AmazonElastiCacheFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElastiCacheFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElastiCacheReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L159">const <b>AmazonElastiCacheReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElastiCacheReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticFileSystemFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L160">const <b>AmazonElasticFileSystemFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticFileSystemFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticFileSystemReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L161">const <b>AmazonElasticFileSystemReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticFileSystemReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticMapReduceFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L162">const <b>AmazonElasticMapReduceFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticMapReduceReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L163">const <b>AmazonElasticMapReduceReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticMapReduceRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L164">const <b>AmazonElasticMapReduceRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticMapReduceforAutoScalingRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L165">const <b>AmazonElasticMapReduceforAutoScalingRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceforAutoScalingRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticMapReduceforEC2Role">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L166">const <b>AmazonElasticMapReduceforEC2Role</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticMapReduceforEC2Role: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticTranscoderFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L167">const <b>AmazonElasticTranscoderFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticTranscoderJobsSubmitter">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L168">const <b>AmazonElasticTranscoderJobsSubmitter</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderJobsSubmitter: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticTranscoderReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L169">const <b>AmazonElasticTranscoderReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonElasticTranscoderRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L170">const <b>AmazonElasticTranscoderRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonElasticTranscoderRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonGlacierFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L171">const <b>AmazonGlacierFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonGlacierFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonGlacierFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonGlacierReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L172">const <b>AmazonGlacierReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonGlacierReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonInspectorFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L173">const <b>AmazonInspectorFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonInspectorFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonInspectorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonInspectorReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L174">const <b>AmazonInspectorReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonInspectorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonKinesisAnalyticsFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L175">const <b>AmazonKinesisAnalyticsFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonKinesisAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonKinesisAnalyticsReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L176">const <b>AmazonKinesisAnalyticsReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonKinesisAnalyticsReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonKinesisFirehoseFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L177">const <b>AmazonKinesisFirehoseFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonKinesisFirehoseFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonKinesisFirehoseReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L178">const <b>AmazonKinesisFirehoseReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonKinesisFirehoseReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonKinesisFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L179">const <b>AmazonKinesisFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonKinesisFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonKinesisFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonKinesisReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L180">const <b>AmazonKinesisReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonKinesisReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonLexFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L181">const <b>AmazonLexFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonLexFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonLexFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonLexFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonLexReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L182">const <b>AmazonLexReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonLexReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonLexReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonLexReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonLexRunBotsOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L183">const <b>AmazonLexRunBotsOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonLexRunBotsOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonLexRunBotsOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonLexRunBotsOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningBatchPredictionsAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L184">const <b>AmazonMachineLearningBatchPredictionsAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningBatchPredictionsAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningCreateOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L185">const <b>AmazonMachineLearningCreateOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningCreateOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L186">const <b>AmazonMachineLearningFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningManageRealTimeEndpointOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L187">const <b>AmazonMachineLearningManageRealTimeEndpointOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningManageRealTimeEndpointOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L188">const <b>AmazonMachineLearningReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningRealTimePredictionOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L189">const <b>AmazonMachineLearningRealTimePredictionOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningRealTimePredictionOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMachineLearningRoleforRedshiftDataSource">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L190">const <b>AmazonMachineLearningRoleforRedshiftDataSource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMachineLearningRoleforRedshiftDataSource: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMechanicalTurkFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L191">const <b>AmazonMechanicalTurkFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMechanicalTurkFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMechanicalTurkReadOnly">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L192">const <b>AmazonMechanicalTurkReadOnly</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMechanicalTurkReadOnly: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMobileAnalyticsFinancialReportAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L193">const <b>AmazonMobileAnalyticsFinancialReportAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsFinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMobileAnalyticsFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L194">const <b>AmazonMobileAnalyticsFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMobileAnalyticsNonfinancialReportAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L195">const <b>AmazonMobileAnalyticsNonfinancialReportAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsNonfinancialReportAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonMobileAnalyticsWriteOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L196">const <b>AmazonMobileAnalyticsWriteOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonMobileAnalyticsWriteOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonPollyFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L197">const <b>AmazonPollyFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonPollyFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonPollyFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonPollyFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonPollyReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L198">const <b>AmazonPollyReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonPollyReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRDSDirectoryServiceAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L199">const <b>AmazonRDSDirectoryServiceAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRDSDirectoryServiceAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRDSEnhancedMonitoringRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L200">const <b>AmazonRDSEnhancedMonitoringRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRDSEnhancedMonitoringRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRDSFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L201">const <b>AmazonRDSFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRDSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRDSFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRDSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRDSReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L202">const <b>AmazonRDSReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRDSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRedshiftFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L203">const <b>AmazonRedshiftFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRedshiftFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRedshiftFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRedshiftReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L204">const <b>AmazonRedshiftReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRedshiftReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRekognitionFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L205">const <b>AmazonRekognitionFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRekognitionFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRekognitionFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRekognitionReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L206">const <b>AmazonRekognitionReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRekognitionReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRoute53DomainsFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L207">const <b>AmazonRoute53DomainsFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRoute53DomainsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRoute53DomainsReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L208">const <b>AmazonRoute53DomainsReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRoute53DomainsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRoute53FullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L209">const <b>AmazonRoute53FullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRoute53FullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRoute53FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53FullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonRoute53ReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L210">const <b>AmazonRoute53ReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonRoute53ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonS3FullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L211">const <b>AmazonS3FullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonS3FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonS3FullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonS3FullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3FullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonS3ReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L212">const <b>AmazonS3ReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonS3ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSESFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L213">const <b>AmazonSESFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSESFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSESFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSESReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L214">const <b>AmazonSESReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSESReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSNSFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L215">const <b>AmazonSNSFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSNSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSNSFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSNSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSNSReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L216">const <b>AmazonSNSReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSNSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSNSRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L217">const <b>AmazonSNSRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSNSRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonSNSRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSNSRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSNSRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSQSFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L218">const <b>AmazonSQSFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSQSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSQSFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSQSFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSQSReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L219">const <b>AmazonSQSReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSQSReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSSMAutomationRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L220">const <b>AmazonSSMAutomationRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSSMAutomationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSSMFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L221">const <b>AmazonSSMFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSSMFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSSMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSSMMaintenanceWindowRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L222">const <b>AmazonSSMMaintenanceWindowRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSSMMaintenanceWindowRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonSSMReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L223">const <b>AmazonSSMReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonSSMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonVPCFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L224">const <b>AmazonVPCFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonVPCFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonVPCFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonVPCFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonVPCReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L225">const <b>AmazonVPCReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonVPCReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonWorkMailFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L226">const <b>AmazonWorkMailFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonWorkMailFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonWorkMailFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonWorkMailReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L227">const <b>AmazonWorkMailReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonWorkMailReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonWorkSpacesAdmin">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L228">const <b>AmazonWorkSpacesAdmin</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonWorkSpacesAdmin: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonWorkSpacesApplicationManagerAdminAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L229">const <b>AmazonWorkSpacesApplicationManagerAdminAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonWorkSpacesApplicationManagerAdminAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonZocaloFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L230">const <b>AmazonZocaloFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonZocaloFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonZocaloFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AmazonZocaloReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L231">const <b>AmazonZocaloReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AmazonZocaloReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ApiGatewayPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L25">const <b>ApiGatewayPrincipal</b></a>
@@ -4633,14 +4633,14 @@ Service Principal for API Gateway
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L25">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"apigateway.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;apigateway.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationAutoScalingForAmazonAppStreamAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L232">const <b>ApplicationAutoScalingForAmazonAppStreamAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ApplicationAutoScalingForAmazonAppStreamAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AthenaPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L30">const <b>AthenaPrincipal</b></a>
@@ -4653,38 +4653,38 @@ Service Principal for Athena
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L30">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"athena.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;athena.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingConsoleFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L233">const <b>AutoScalingConsoleFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AutoScalingConsoleFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingConsoleReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L234">const <b>AutoScalingConsoleReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AutoScalingConsoleReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L235">const <b>AutoScalingFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AutoScalingFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AutoScalingFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AutoScalingFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingNotificationAccessRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L236">const <b>AutoScalingNotificationAccessRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AutoScalingNotificationAccessRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AutoScalingReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L237">const <b>AutoScalingReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> AutoScalingReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AutoscalingPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L35">const <b>AutoscalingPrincipal</b></a>
@@ -4697,14 +4697,14 @@ Service Principal for Autoscaling
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L35">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"autoscaling.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;autoscaling.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Billing">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L238">const <b>Billing</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> Billing: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/Billing"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> Billing: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/Billing&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudDirectoryPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L40">const <b>CloudDirectoryPrincipal</b></a>
@@ -4717,26 +4717,26 @@ Service Principal for Cloud Directory
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L40">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"clouddirectory.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;clouddirectory.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CloudFrontFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L239">const <b>CloudFrontFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudFrontFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudFrontFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudFrontFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudFrontReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L240">const <b>CloudFrontReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudFrontReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudSearchFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L241">const <b>CloudSearchFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudSearchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudSearchFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudSearchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudSearchPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L55">const <b>CloudSearchPrincipal</b></a>
@@ -4749,68 +4749,68 @@ Service Principal for Cloud Search
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L55">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"cloudsearch.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudsearch.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CloudSearchReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L242">const <b>CloudSearchReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudSearchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchActionsEC2Access">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L243">const <b>CloudWatchActionsEC2Access</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchActionsEC2Access"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchActionsEC2Access: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchActionsEC2Access&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchEventsBuiltInTargetExecutionAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L244">const <b>CloudWatchEventsBuiltInTargetExecutionAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsBuiltInTargetExecutionAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchEventsFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L245">const <b>CloudWatchEventsFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchEventsFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchEventsInvocationAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L246">const <b>CloudWatchEventsInvocationAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsInvocationAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchEventsReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L247">const <b>CloudWatchEventsReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchEventsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L248">const <b>CloudWatchFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchLogsFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L249">const <b>CloudWatchLogsFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchLogsFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchLogsReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L250">const <b>CloudWatchLogsReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchLogsReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudWatchReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L251">const <b>CloudWatchReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> CloudWatchReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="CloudformationPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L45">const <b>CloudformationPrincipal</b></a>
@@ -4823,7 +4823,7 @@ Service Principal for Cloudformation
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L45">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"cloudformation.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudformation.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CloudfrontPrincipal">
@@ -4837,7 +4837,7 @@ Service Principal for Cloudfront
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L50">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"cloudfront.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudfront.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CloudtrailPrincipal">
@@ -4851,7 +4851,7 @@ Service Principal for Cloudtrail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L60">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"cloudtrail.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;cloudtrail.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CodeCommitPrincipal">
@@ -4865,7 +4865,7 @@ Service Principal for CodeCommit
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L65">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"codecommit.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;codecommit.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CodeDeployPrincipal">
@@ -4879,7 +4879,7 @@ Service Principal for CodeDeploy
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L70">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"codedeploy.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;codedeploy.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CodePipelinePrincipal">
@@ -4893,7 +4893,7 @@ Service Principal for CodePipeline
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L75">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"codepipeline.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;codepipeline.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigPrincipal">
@@ -4907,7 +4907,7 @@ Service Principal for EC2 Config Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L80">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"config.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;config.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataPipelinePrincipal">
@@ -4921,20 +4921,20 @@ Service Principal for Data Pipeline
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L85">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"datapipeline.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;datapipeline.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DataScientist">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L252">const <b>DataScientist</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> DataScientist: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/DataScientist"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> DataScientist: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DataScientist&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseAdministrator">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L253">const <b>DatabaseAdministrator</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> DatabaseAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/DatabaseAdministrator"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> DatabaseAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/DatabaseAdministrator&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="DirectConnectPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L90">const <b>DirectConnectPrincipal</b></a>
@@ -4947,7 +4947,7 @@ Service Principal for DirectConnect
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L90">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"directconnect.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;directconnect.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DirectoryServicesPrincipal">
@@ -4961,7 +4961,7 @@ Service Principal for Directory Services
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L95">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"ds.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ds.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DynamoDbPrincipal">
@@ -4975,7 +4975,7 @@ Service Principal for DynamoDB
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L100">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"dynamodb.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;dynamodb.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Ec2Principal">
@@ -4989,7 +4989,7 @@ Service Principal for EC2
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L105">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"ec2.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ec2.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EcrPrincipal">
@@ -5003,7 +5003,7 @@ Service Principal for Elastic Container Registry
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L110">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"ecr.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ecr.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EcsPrincipal">
@@ -5017,7 +5017,7 @@ Service Principal for Elastic Container Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L115">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"ecs.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ecs.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EdgeLambdaPrincipal">
@@ -5031,7 +5031,7 @@ Service Principal for Edge Lambda
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L120">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"edgelambda.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;edgelambda.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ElasticBeanstalkPrincipal">
@@ -5045,7 +5045,7 @@ Service Principal for Elastic Beanstalk
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L130">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"elasticbeanstalk.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticbeanstalk.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ElasticFileSystemPrincipal">
@@ -5059,7 +5059,7 @@ Service Principal for Elastic File System
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L135">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"elasticfilesystem.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticfilesystem.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ElasticLoadBalancingPrincipal">
@@ -5073,7 +5073,7 @@ Service Principal for Elastic Load Balancing
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L140">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"elasticloadbalancing.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticloadbalancing.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ElasticMapReducePrincipal">
@@ -5087,7 +5087,7 @@ Service Principal for Elastic MapReduce
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L145">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"elasticmapreduce.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticmapreduce.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ElasticachePrincipal">
@@ -5101,7 +5101,7 @@ Service Principal for Elasticache
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L125">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"elasticache.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;elasticache.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventsPrincipal">
@@ -5115,7 +5115,7 @@ Service Principal for Events
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L150">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"events.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;events.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HealthPrincipal">
@@ -5129,38 +5129,38 @@ Service Principal for Health
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L155">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"health.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;health.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IAMFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L254">const <b>IAMFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> IAMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/IAMFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> IAMFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="IAMReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L255">const <b>IAMReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> IAMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/IAMReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> IAMReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="IAMSelfManageServiceSpecificCredentials">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L256">const <b>IAMSelfManageServiceSpecificCredentials</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> IAMSelfManageServiceSpecificCredentials: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="IAMUserChangePassword">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L257">const <b>IAMUserChangePassword</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> IAMUserChangePassword: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/IAMUserChangePassword"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> IAMUserChangePassword: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserChangePassword&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="IAMUserSSHKeys">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L258">const <b>IAMUserSSHKeys</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> IAMUserSSHKeys: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/IAMUserSSHKeys"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> IAMUserSSHKeys: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/IAMUserSSHKeys&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="IamPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L160">const <b>IamPrincipal</b></a>
@@ -5173,7 +5173,7 @@ Service Principal for IAM
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L160">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"iam.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;iam.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InspectorPrincipal">
@@ -5187,7 +5187,7 @@ Service Principal for AWS Inspector
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L165">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"inspector.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;inspector.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KinesisPrincipal">
@@ -5201,7 +5201,7 @@ Service Principal for Kinesis
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L170">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"kinesis.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;kinesis.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KmsPrincipal">
@@ -5215,7 +5215,7 @@ Service Principal for Key Mangaement Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L175">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"kms.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;kms.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LambdaPrincipal">
@@ -5229,7 +5229,7 @@ Service Principal for Lambda
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L180">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"lambda.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;lambda.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LightsailPrincipal">
@@ -5243,7 +5243,7 @@ Service Principal for Lightsail
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L185">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"lightsail.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;lightsail.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogsPrincipal">
@@ -5257,7 +5257,7 @@ Service Principal for Cloudwatch Logs
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L190">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"logs.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;logs.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MonitoringPrincipal">
@@ -5271,14 +5271,14 @@ Service Principal for Cloudwatch Monitoring
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L195">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"monitoring.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;monitoring.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkAdministrator">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L259">const <b>NetworkAdministrator</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> NetworkAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/NetworkAdministrator"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> NetworkAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/NetworkAdministrator&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="OpsworksPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L200">const <b>OpsworksPrincipal</b></a>
@@ -5291,7 +5291,7 @@ Service Principal for Opsworks
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L200">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"opsworks.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;opsworks.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationsPrincipal">
@@ -5305,20 +5305,20 @@ Service Principal for Organizations
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L205">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"organizations.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;organizations.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PowerUserAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L260">const <b>PowerUserAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> PowerUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/PowerUserAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> PowerUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/PowerUserAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="RDSCloudHsmAuthorizationRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L261">const <b>RDSCloudHsmAuthorizationRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> RDSCloudHsmAuthorizationRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="RdsPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L210">const <b>RdsPrincipal</b></a>
@@ -5331,14 +5331,14 @@ Service Principal for Relational Database Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L210">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"rds.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;rds.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L262">const <b>ReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="RedshiftPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L215">const <b>RedshiftPrincipal</b></a>
@@ -5351,20 +5351,20 @@ Service Principal for Redshift
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L215">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"redshift.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;redshift.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceGroupsandTagEditorFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L263">const <b>ResourceGroupsandTagEditorFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ResourceGroupsandTagEditorFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ResourceGroupsandTagEditorReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L264">const <b>ResourceGroupsandTagEditorReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ResourceGroupsandTagEditorReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Route53Principal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L220">const <b>Route53Principal</b></a>
@@ -5377,7 +5377,7 @@ Service Principal for Route 53
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L220">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"route53.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;route53.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="S3Principal">
@@ -5391,50 +5391,50 @@ Service Principal for S3
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L225">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"s3.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;s3.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityAudit">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L265">const <b>SecurityAudit</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> SecurityAudit: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/SecurityAudit"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> SecurityAudit: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SecurityAudit&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServerMigrationConnector">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L266">const <b>ServerMigrationConnector</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ServerMigrationConnector: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ServerMigrationConnector"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ServerMigrationConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServerMigrationConnector&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServerMigrationServiceRole">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L267">const <b>ServerMigrationServiceRole</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ServerMigrationServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ServerMigrationServiceRole: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServiceCatalogAdminFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L268">const <b>ServiceCatalogAdminFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ServiceCatalogAdminFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServiceCatalogAdminReadOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L269">const <b>ServiceCatalogAdminReadOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ServiceCatalogAdminReadOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServiceCatalogEndUserAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L270">const <b>ServiceCatalogEndUserAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ServiceCatalogEndUserAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServiceCatalogEndUserFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L271">const <b>ServiceCatalogEndUserFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ServiceCatalogEndUserFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ServiceCatalogPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L230">const <b>ServiceCatalogPrincipal</b></a>
@@ -5447,7 +5447,7 @@ Service Principal for Service Catalog
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L230">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"servicecatalog.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;servicecatalog.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SesPrincipal">
@@ -5461,7 +5461,7 @@ Service Principal for Simple Email Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L235">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"ses.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ses.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SigninPrincipal">
@@ -5475,14 +5475,14 @@ Service Principal for Signin Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L240">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"signin.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;signin.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SimpleWorkflowFullAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L272">const <b>SimpleWorkflowFullAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/SimpleWorkflowFullAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> SimpleWorkflowFullAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/SimpleWorkflowFullAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="SnsPrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L245">const <b>SnsPrincipal</b></a>
@@ -5495,7 +5495,7 @@ Service Principal for Simple Notification Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L245">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"sns.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;sns.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SqsPrincipal">
@@ -5509,7 +5509,7 @@ Service Principal for Simple Queue Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L250">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"sqs.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;sqs.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SsmPrincipal">
@@ -5523,7 +5523,7 @@ Service Principal for Systems Manager
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L255">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"ssm.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;ssm.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StorageGatewayPrincipal">
@@ -5537,7 +5537,7 @@ Service Principal for Storage Gateway
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L260">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"storagegateway.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;storagegateway.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StsPrincipal">
@@ -5551,7 +5551,7 @@ Service Principal for Security Token Service
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L265">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"sts.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;sts.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SupportPrincipal">
@@ -5565,32 +5565,32 @@ Service Principal for AWS Support
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L270">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"support.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;support.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SupportUser">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L273">const <b>SupportUser</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> SupportUser: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/SupportUser"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> SupportUser: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SupportUser&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="SystemAdministrator">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L274">const <b>SystemAdministrator</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> SystemAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/SystemAdministrator"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> SystemAdministrator: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/SystemAdministrator&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="VMImportExportRoleForAWSConnector">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L275">const <b>VMImportExportRoleForAWSConnector</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> VMImportExportRoleForAWSConnector: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="ViewOnlyAccess">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/managedPolicies.ts#L276">const <b>ViewOnlyAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> ViewOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>"arn:aws:iam::aws:policy/job-function/ViewOnlyAccess"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> ViewOnlyAccess: <a href='#ARN'>ARN</a> = <span class='s2'>&#34;arn:aws:iam::aws:policy/job-function/ViewOnlyAccess&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="VmiePrincipal">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L275">const <b>VmiePrincipal</b></a>
@@ -5603,7 +5603,7 @@ Service Principal for VM Import/Export
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L275">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"vmie.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;vmie.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VpcFlowLogsPrincipal">
@@ -5617,7 +5617,7 @@ Service Principal for VPC Flow Logs
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L280">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"vpc-flow-logs.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;vpc-flow-logs.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WafPrincipal">
@@ -5631,7 +5631,7 @@ Service Principal for Web Application Firewall
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L285">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"waf.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;waf.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkDocsPrincipal">
@@ -5645,7 +5645,7 @@ Service Principal for WorkDocs
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L290">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"workdocs.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;workdocs.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkspacesPrincipal">
@@ -5659,7 +5659,7 @@ Service Principal for Workspaces
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/iam/principals.ts#L295">let <b>Service</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>"workspaces.amazonaws.com"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'>&#34;workspaces.amazonaws.com&#34;</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="assumeRolePolicyForPrincipal">

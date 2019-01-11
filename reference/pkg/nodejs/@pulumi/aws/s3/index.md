@@ -3137,49 +3137,49 @@ aws.s3.BucketNotification.lambdaFunctions for more details.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L26">let <b>AuthenticatedReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> AuthenticatedReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"authenticated-read"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> AuthenticatedReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;authenticated-read&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="AwsExecReadAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L25">let <b>AwsExecReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> AwsExecReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"aws-exec-read"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> AwsExecReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;aws-exec-read&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="BucketOwnerFullControlAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L28">let <b>BucketOwnerFullControlAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> BucketOwnerFullControlAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"bucket-owner-full-control"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> BucketOwnerFullControlAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;bucket-owner-full-control&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="BucketOwnerReadAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L27">let <b>BucketOwnerReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> BucketOwnerReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"bucket-owner-read"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> BucketOwnerReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;bucket-owner-read&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="LogDeliveryWriteAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L29">let <b>LogDeliveryWriteAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> LogDeliveryWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"log-delivery-write"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> LogDeliveryWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;log-delivery-write&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="PrivateAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L22">let <b>PrivateAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> PrivateAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"private"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> PrivateAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;private&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="PublicReadAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L23">let <b>PublicReadAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> PublicReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"public-read"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> PublicReadAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;public-read&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="PublicReadWriteAcl">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/cannedAcl.ts#L24">let <b>PublicReadWriteAcl</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> PublicReadWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>"public-read-write"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> PublicReadWriteAcl: <a href='#CannedAcl'>CannedAcl</a> = <span class='s2'>&#34;public-read-write&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="BucketEventHandler">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/s3/s3Mixins.ts#L105">type <b>BucketEventHandler</b></a>

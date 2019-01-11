@@ -2724,73 +2724,73 @@ A statement identifier prefix. Terraform will generate a unique suffix. Conflict
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L32">let <b>DotnetCore1d0Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> DotnetCore1d0Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"dotnetcore1.0"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> DotnetCore1d0Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;dotnetcore1.0&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="DotnetCore2d0Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L33">let <b>DotnetCore2d0Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> DotnetCore2d0Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"dotnetcore2.0"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> DotnetCore2d0Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;dotnetcore2.0&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="DotnetCore2d1Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L34">let <b>DotnetCore2d1Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> DotnetCore2d1Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"dotnetcore2.1"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> DotnetCore2d1Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;dotnetcore2.1&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Go1dxRuntime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L35">let <b>Go1dxRuntime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Go1dxRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"go1.x"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Go1dxRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;go1.x&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Java8Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L36">let <b>Java8Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Java8Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"java8"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Java8Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;java8&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="NodeJS4d3EdgeRuntime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L37">let <b>NodeJS4d3EdgeRuntime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> NodeJS4d3EdgeRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"nodejs4.3-edge"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> NodeJS4d3EdgeRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs4.3-edge&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="NodeJS4d3Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L38">let <b>NodeJS4d3Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> NodeJS4d3Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"nodejs4.3"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> NodeJS4d3Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs4.3&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="NodeJS6d10Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L39">let <b>NodeJS6d10Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> NodeJS6d10Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"nodejs6.10"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> NodeJS6d10Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs6.10&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="NodeJS8d10Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L40">let <b>NodeJS8d10Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> NodeJS8d10Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"nodejs8.10"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> NodeJS8d10Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs8.10&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="NodeJSRuntime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L41">let <b>NodeJSRuntime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> NodeJSRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"nodejs"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> NodeJSRuntime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;nodejs&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Python2d7Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L42">let <b>Python2d7Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Python2d7Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"python2.7"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Python2d7Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;python2.7&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Python3d6Runtime">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/runtimes.ts#L43">let <b>Python3d6Runtime</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>let</span> Python3d6Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>"python3.6"</span>;</pre>
+<pre class="highlight"><span class='kd'>let</span> Python3d6Runtime: <a href='#Runtime'>Runtime</a> = <span class='s2'>&#34;python3.6&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="BaseCallbackFunctionArgs">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/lambda/lambdaMixins.ts#L157">type <b>BaseCallbackFunctionArgs</b></a>
