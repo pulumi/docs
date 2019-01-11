@@ -31,8 +31,16 @@ To communicate your credentials to the Pulumi Google Cloud Platform Provider,
 export the contents of your credentials file to the `GOOGLE_CREDENTIALS`
 environment variable:
 
+Linux and Mac OS X
+
 ```bash
 export GOOGLE_CREDENTIALS=$(cat credentials.json)
+```
+
+Windows Powershell
+
+```bash
+$env:GOOGLE_CREDENTIALS=cat credentials.json
 ```
 
 ## Optional Settings
