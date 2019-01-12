@@ -406,6 +406,9 @@ h4 { font-size: 22px; font-weight: 500; }
 }
 
 .toc {
+    border: 1px solid rgba(0,0,0,.12);
+    background-color: #f0f0f0;
+    padding: 8px;
     margin-right: 16px;
 
     // Render links like headings.
@@ -423,7 +426,7 @@ h4 { font-size: 22px; font-weight: 500; }
     }
 
     .sidenav-section {
-        font-size: 13px;
+        font-size: 16px;
         line-height: 20px;
         padding: 8px 0;
     }
@@ -444,11 +447,12 @@ h4 { font-size: 22px; font-weight: 500; }
         a {
             font-weight: bold !important;
         }
-        background-color: $accent4;
+        color: $primary;
     }
 
     .sidenav-subsection {
-        padding: 8px 0 0 16px;
+        font-size: 14px;
+        padding: 16px;
     }
 
     .sidenav-subsection a {
