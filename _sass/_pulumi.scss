@@ -406,8 +406,6 @@ h4 { font-size: 22px; font-weight: 500; }
 }
 
 .toc {
-    border: 1px solid rgba(0,0,0,.12);
-    background-color: #f0f0f0;
     padding: 8px;
     margin-right: 16px;
 
@@ -426,7 +424,6 @@ h4 { font-size: 22px; font-weight: 500; }
     }
 
     .sidenav-section {
-        font-size: 16px;
         line-height: 20px;
         padding: 8px 0;
     }
@@ -451,7 +448,6 @@ h4 { font-size: 22px; font-weight: 500; }
     }
 
     .sidenav-subsection {
-        font-size: 14px;
         padding: 16px;
     }
 
@@ -460,9 +456,23 @@ h4 { font-size: 22px; font-weight: 500; }
     }
 }
 
-// The Table of Contents is displayed in a hamberger menu visible when on
+// Add some special styling for the TOC when not on mobile. This shouldn't
+// be applied to mobile because (as per the following block), we use a hamburger
+// instead and don't want this specific styling.
+@media (min-width: $MOBILE-WIDTH) {
+    border: 1px solid rgba(0,0,0,.12);
+    background-color: #f0f0f0;
+    .sidenav-section {
+        font-size: 16px;
+    }
+    .sidenav-subsection {
+        font-size: 14px;
+    }
+}
+
+// The Table of Contents is displayed in a hamburger menu visible when on
 // a small screen. We style it very differently than the regular .toc
-// so that it matches the display of other items in the hamberger menu.
+// so that it matches the display of other items in the hamburger menu.
 .toc-in-nav {
     // Copied from _header.scss .main-nav.
     padding-bottom: 27px;
@@ -472,6 +482,7 @@ h4 { font-size: 22px; font-weight: 500; }
     margin-right: 0 !important;
 
     color: #fff;
+    background-color: $purple-mid;
 
     .sidenav-section {
         font-weight: 500;
