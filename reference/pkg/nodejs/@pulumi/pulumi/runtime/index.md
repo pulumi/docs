@@ -102,10 +102,10 @@ whether or not this function should throw or return `undefined.
 
 </div>
 <h2 class="pdoc-module-header" id="rootPulumiStackTypeName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L24">const <b>rootPulumiStackTypeName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L25">const <b>rootPulumiStackTypeName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> rootPulumiStackTypeName: <span class='s2'>"pulumi:pulumi:Stack"</span> = <span class='s2'>"pulumi:pulumi:Stack"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> rootPulumiStackTypeName: <span class='s2'>"pulumi:pulumi:Stack"</span> = <span class='s2'>&#34;pulumi:pulumi:Stack&#34;</span>;</pre>
 
 rootPulumiStackTypeName is the type name that should be used to construct the root component in the tree of Pulumi
 resources allocated by a deployment.  This must be kept up to date with
@@ -116,7 +116,7 @@ resources allocated by a deployment.  This must be kept up to date with
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L216">const <b>specialArchiveSig</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> specialArchiveSig: <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span> = <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> specialArchiveSig: <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span> = <span class='s2'>&#34;0def7320c3a5731c473e5ecbe6d01bc7&#34;</span>;</pre>
 
 specialArchiveSig is a randomly assigned hash used to identify archives in maps.  See pkg/resource/asset.go.
 
@@ -125,7 +125,7 @@ specialArchiveSig is a randomly assigned hash used to identify archives in maps.
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L212">const <b>specialAssetSig</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> specialAssetSig: <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span> = <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> specialAssetSig: <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span> = <span class='s2'>&#34;c44067f5952c0a294b673a41bacd8c17&#34;</span>;</pre>
 
 specialAssetSig is a randomly assigned hash used to identify assets in maps.  See pkg/resource/asset.go.
 
@@ -134,7 +134,7 @@ specialAssetSig is a randomly assigned hash used to identify assets in maps.  Se
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L208">const <b>specialSigKey</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> specialSigKey: <span class='s2'>"4dabf18193072939515e22adb298388d"</span> = <span class='s2'>"4dabf18193072939515e22adb298388d"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> specialSigKey: <span class='s2'>"4dabf18193072939515e22adb298388d"</span> = <span class='s2'>&#34;4dabf18193072939515e22adb298388d&#34;</span>;</pre>
 
 specialSigKey is sometimes used to encode type identity inside of a map.  See pkg/resource/properties.go.
 
@@ -143,7 +143,7 @@ specialSigKey is sometimes used to encode type identity inside of a map.  See pk
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L204">const <b>unknownValue</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>const</span> unknownValue: <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span> = <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span>;</pre>
+<pre class="highlight"><span class='kd'>const</span> unknownValue: <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span> = <span class='s2'>&#34;04da6b54-80e4-46f7-96ec-b56ff0331ba9&#34;</span>;</pre>
 
 Unknown values are encoded as a distinguished string value.
 
@@ -424,7 +424,7 @@ a function that, when invoked, signals that the RPC has completed.
 
 </div>
 <h2 class="pdoc-module-header" id="runInPulumiStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L30">function <b>runInPulumiStack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L31">function <b>runInPulumiStack</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
