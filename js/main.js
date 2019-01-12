@@ -19,6 +19,21 @@ function bindToggles(selector) {
     });
 }
 
+function generateMiniToc() {
+    var toc = $(".mini-toc > ul");
+    if (toc) {
+        $("h2").each(function () {
+            var id = $(this).attr("id");
+            var text = $(this).text();
+            if (id && text) {
+                toc.append($("<li/>", {
+                    html: "<a href='#" + id + "'>" + text + "</a>"
+                }));
+            }
+        });
+    }
+}
+
 (function ($) {
     //----------------------------------------
     // Essentials
@@ -28,6 +43,9 @@ function bindToggles(selector) {
     // Set up toggle functionality.
     bindToggles(".toggle");
     bindToggles(".toggleVisible");
+
+    // Create a mini TOC if desired.
+    generateMiniToc();
 
     // breakpoints
     var $screen_xxs = 320;
