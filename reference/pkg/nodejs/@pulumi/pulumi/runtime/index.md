@@ -102,7 +102,7 @@ whether or not this function should throw or return `undefined.
 
 </div>
 <h2 class="pdoc-module-header" id="rootPulumiStackTypeName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L24">const <b>rootPulumiStackTypeName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L25">const <b>rootPulumiStackTypeName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> rootPulumiStackTypeName: <span class='s2'>"pulumi:pulumi:Stack"</span> = <span class='s2'>&#34;pulumi:pulumi:Stack&#34;</span>;</pre>
@@ -424,7 +424,7 @@ a function that, when invoked, signals that the RPC has completed.
 
 </div>
 <h2 class="pdoc-module-header" id="runInPulumiStack">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L30">function <b>runInPulumiStack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/stack.ts#L31">function <b>runInPulumiStack</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
