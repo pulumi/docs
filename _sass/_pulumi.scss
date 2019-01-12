@@ -705,6 +705,43 @@ h4 { font-size: 22px; font-weight: 500; }
 .toggleVisible > .collapsed { display: none; }
 .toggleVisible > .expanded { display: block; }
 
+// Mini table of contents styling.
+.mini-toc p {
+    font-size: 18px;
+    color: #707070;
+    font-weight: 700;
+    margin: 0px;
+}
+.mini-toc ul {
+    padding: 16px;
+    margin: 0;
+}
+.mini-toc ul li {
+    list-style: none;
+    margin: 0 0 .7em;
+    padding: 0 0 0 17px;
+}
+.mini-toc ul li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    background: $primary2;
+}
+.mini-toc ul li:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 1px;
+    left: 0;
+    bottom: 18px;
+    border-left: 1px solid #bbecff; /*lightened primary2 blue*/
+}
+
 //  Widget showing the downloads for Pulumi.
 .downloads-container {
     display: flex;
