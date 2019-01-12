@@ -1,12 +1,13 @@
 ---
-title: Collaboration
+title: Teams
+redirect_from: "/reference/service/collaboration.html"
 ---
 
 The Pulumi Cloud Console offers multiple ways for people to collaborate on a
 stack.
 
 > Note: This feature is only available on organizations using the Pulumi Team Edition.
-> For more information, see [Pulumi Editions](./editions.html).
+> For more information, see [Organizations](./orgs.html).
 
 ## Teams
 

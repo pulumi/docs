@@ -1,5 +1,6 @@
 ---
-title: Pulumi Editions
+title: Organizations
+redirect_from: "/reference/service/editions.html"
 ---
 
 There are several editions of the Pulumi Cloud Console available, each offering an expanding set

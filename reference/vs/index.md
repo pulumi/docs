@@ -1,4 +1,4 @@
-# Pulumi vs. Others
+# Pulumi vs. Other Solutions
 
 Pulumi is a cloud native infrastructure as code project. It lets you provision and manage resources, across many clouds
 (AWS, Azure, Google Cloud, Kubernetes, OpenStack), using your favorite language. It works great for a wide range of

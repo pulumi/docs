@@ -1,11 +1,11 @@
-nav_section: "Getting Started"
+nav_section: "Get Started"
 toc:
-- title: Getting Started
+- title: Get Started
   path: /quickstart/index
   toplevel: true
-  section:
-   - quickstart/install.md
-   - quickstart/clouds.md
+- title: Download and Install
+  path: /quickstart/install
+  toplevel: true
 - title: AWS
   path: /quickstart/aws/index
   section:

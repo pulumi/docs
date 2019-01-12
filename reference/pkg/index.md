@@ -1,6 +1,8 @@
 ---
-title: Packages
+title: API Reference
 ---
+
+{% include mini-toc.html %}
 
 All Pulumi libraries are distributed in your chosen language's package manager, even those packages that define
 cloud resource definitions. That means NPM for Node.js and PyPI for Python, for instance. There is a dedicated
@@ -16,15 +18,13 @@ These packages can be mixed to enable multi-cloud and a spectrum of control to p
 
 Below you will find a list of current packages in each language with links to their full documentation.
 
-## JavaScript/TypeScript
-
-### Pulumi SDK
+## Pulumi SDK
 
 The Pulumi SDK package is used for accessing the core programming model around resources, configuration, etc. directly:
 
 * [Pulumi SDK `@pulumi/pulumi`](nodejs/@pulumi/pulumi)
 
-### Cloud Providers
+## Cloud Providers
 
 Each cloud vendor has a dedicated package for deploying resources to it:
 
@@ -35,7 +35,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [OpenStack (`@pulumi/openstack`)](nodejs/@pulumi/openstack)
 * [vSphere (`@pulumi/vsphere`)](nodejs/@pulumi/vsphere)
 
-### Cloud-Agnostic Packages
+## Multi-Cloud Packages
 
 Pulumi offers highly productive, cloud-agnostic packages, for container and serverless oriented programming.  The
 `@pulumi/cloud` package provides common abstractions, while the individual implementation packages supply the
@@ -45,7 +45,7 @@ cloud-specific behavior, in addition to extensions for accessing more cloud-spec
 * [Pulumi Cloud Framework on AWS (`@pulumi/cloud-aws`)](nodejs/@pulumi/cloud-aws)
 * [Pulumi Cloud Framework on Azure (`@pulumi/cloud-azure`)](nodejs/@pulumi/cloud-azure)
 
-### Helper Libraries
+## Helper Libraries
 
 These libraries help with common cloud programming patterns and practices:
 
@@ -54,7 +54,3 @@ These libraries help with common cloud programming patterns and practices:
 * [AWS EKS Cluster (`@pulumi/eks`)](nodejs/@pulumi/eks): simple creation and management of AWS EKS clusters
 * [Azure Serverless Components (`@pulumi/azure-serverless`)](nodejs/@pulumi/azure-serverless): components for writing
   serverless applications on Azure
-
-## Python
-
-Coming soon!

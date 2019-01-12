@@ -1,14 +1,16 @@
 ---
-title: "Configuration"
+title: "Configuration and Secrets"
 ---
+
+{% include mini-toc.html %}
 
 Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
 
 For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
 
-## Adding and configuring stack settings {#config-stack}
+## Configuring Stacks {#config-stack}
 
-To add a new stack setting, use `pulumi config set <key> [value]`. 
+To add a new configuration key/value pair, use `pulumi config set <key> [value]`. 
 
 Since [Pulumi components](./programming-model.html#components) can define configuration keys, you can use a namespace with the syntax  `namespace:key`. If a namespace is not specified, the [project name] defined in `Pulumi.yaml` is used. 
 
@@ -34,7 +36,7 @@ $ cat my_key.pub | pulumi config set publicKey
 
 > NOTE: When using the `config set` command, any existing values for `<key>` will be overridden without warning. 
 
-### Encrypted configuration values {#secrets}
+## Encrypted Secrets {#secrets}
 
 To add an encrypted stack setting, such as for configuration secrets, use the `--secret` flag. Secrets are encrypted using a unique stack key that is stored on pulumi.com. Pulumi first adds a random encryption salt, so if you use the same plaintext value for two different keys, you'll have two different ciphertext values stored in  `Pulumi.<stackname>.yaml`.
 
@@ -47,13 +49,13 @@ aws:region                                       us-west-1
 secretValue                                      ********                                        
 ```
 
-### Stack settings and source control
+## Source Control
 
 For stacks that are actively developed by multiple members of a team, the recommended practice is to check them in to source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
 
 For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked in to source control.
 
-## Viewing stack settings
+## Viewing Configuration
 
 To view the active settings for the currently selected stack, use `pulumi config`. To view the values of secrets, use the `--show-secrets` flag.
 
@@ -71,7 +73,7 @@ aws:region                                       us-west-1
 secretValue                                      S3cr37                                          
 ```
 
-## Using configuration values in code
+## Using Configuration in Code
 
 On `pulumi update`, secret values are decrypted. Your Pulumi program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
 
@@ -88,18 +90,25 @@ $ pulumi config set --secret secretValue S3cr37 # set a secret value
 
 Use the following code to access these configuration values in your Pulumi program.
 
-#### JavaScript {#javascript}
+{% include langchoose.html %}
 
 ```javascript
-const pulumi = require("@pulumi/pulumi");
+var pulumi = require("@pulumi/pulumi");
 
-let config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
+var config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
 
 console.log(config.require("name"));           // prints "BroomeLLC"
 console.log(config.require("secretValue"));    // prints "S3cr37"
 ```
 
-#### Python {#python}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config("broome-proj"); // broome-proj is name defined in Pulumi.yaml
+
+console.log(config.require("name"));           // prints "BroomeLLC"
+console.log(config.require("secretValue"));    // prints "S3cr37"
+```
 
 ```python
 import pulumi
@@ -108,6 +117,13 @@ config = pulumi.Config('broome-proj')  # broome-proj is name defined in Pulumi.y
 
 print(config.require('name'))          # prints "BroomeLLC"
 print(config.require('secretValue'))   # prints "S3cr37"
+```
+
+```go
+c := config.New(ctx, "broome-proj")
+
+fmt.Println(c.Require("name"))        // prints "BroomeLLC"
+fmt.Println(c.Require("secretValue")) // prints "S3cr37"
 ```
 
 <!-- MARKDOWN LINKS -->

@@ -1,5 +1,5 @@
 ---
-title: Pulumi Cloud Console
+title: Teams & Collaboration
 ---
 
 [The Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables
@@ -26,8 +26,14 @@ the organization associated with your GitHub account. e.g. `octocruise/my-devsta
 To create or select a stack in a different organization, prefix it with the organization's name
 followed by a slash. For example, `pulumi stack init robot-co/new-service`.
 
-For more information on adding new organizations to Pulumi, see
-[Pulumi Editions](./editions.html).
+For more information on adding new organizations to Pulumi, see [Organizations](./orgs.html).
+
+## Teams
+
+The Pulumi Cloud Console allows people to collaborate on stacks within
+an organization, including role-based access using GitHub teams.
+
+For more information on the types of collaboration supported, see [Teams](./teams.html).
 
 ## Roles and Access Controls
 
@@ -37,11 +43,3 @@ can update existing stacks.
 
 For more information about organization roles, stack permissions, and how they
 are managed in the Pulumi Cloud Console, see [Roles and Access Controls](./roles-and-access-controls.html).
-
-## Collaboration
-
-The Pulumi Cloud Console allows people to collaborate on stacks within
-an organization, including role-based access using GitHub teams.
-
-For more information on the types of collaobration supported, see
-[Collaboration](./collaboration.html).

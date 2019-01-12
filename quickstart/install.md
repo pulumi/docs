@@ -1,7 +1,7 @@
 ---
-title: "Installation"
+title: "Download and Install"
 installer_version: "0.16.10"
-redirect_from: install/index.html
+redirect_from: "/install/index.html"
 ---
 
 <!--
@@ -206,7 +206,7 @@ back and ensure your path contains the directory containing the `pulumi` CLI ins
 
 ## Next Steps
 
-Now choose a cloud to get started:
+After installation, choose a cloud to get started:
 
 {% include quickstart-clouds.md %}
 

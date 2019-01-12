@@ -150,11 +150,13 @@ $accent4: #fbe5d7; // light orange
 }
 
 .content-block {
-    padding-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 120px;
     min-height: calc(100vh - 396px);
 }
 
 .button {
+    padding: 16px;
     min-width: 120px;
     font-size: 14px;
     font-weight: bold;
@@ -168,7 +170,8 @@ $accent4: #fbe5d7; // light orange
 
 .button.small {
     font-size: 12px;
-    padding: 10px 12px;
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
 .button.primary {
@@ -453,7 +456,8 @@ h4 { font-size: 22px; font-weight: 500; }
     }
 
     .sidenav-topic {
-        padding: 2px 2px 2px 8px;
+        padding: 2px 2px 2px 24px;
+        text-indent: -16px; /*hanging indent*/
     }
 
     .sidenav-selected {

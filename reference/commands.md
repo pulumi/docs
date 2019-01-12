@@ -1,11 +1,19 @@
 ---
-title: "Commands (CLI)"
+title: "Command Line"
 ---
 
-Pulumi is controlled primarily using the command line interface (CLI).  The Pulumi service works in conjunction with
-the CLI to carry out tasks such as deploying updates to your cloud program and infrastructure, and keeping a history
-of who updated what in your team and when.  This CLI has been designed to work well in unattended scenarios, such as
-in [continuous integration and deployment](cd.html), and communicates all errors properly using non-zero exit codes.
+{% include mini-toc.html %}
+
+Pulumi is controlled primarily using the command line interface (CLI). It works in conjunction with the Pulumi service
+to deploy changes to your cloud apps and infrastructure, and keeps a history of who updated what in your team and when.
+This CLI has been designed for great inner loop productivity, in addition to
+[continuous integration and deployment](cd.html) scenarios.
+
+## Installation
+
+The Pulumi CLI is free to download and install:
+
+<a href="/quickstart/install.html"><button class="button primary small">INSTALL PULUMI</button></a>
 
 ## Common Commands
 
@@ -23,7 +31,7 @@ The most common commands in the CLI that you'll be using are as follows:
 Below is the complete documentation for all available commands:
 
 {% capture pulumi_cli %}{% include_relative cli/pulumi.md %}{% endcapture %}
-{{ pulumi_cli | markdownify | replace_regex: 'pulumi_(.*)\.md', './cli/pulumi_\1.html' }}
+{{ pulumi_cli | markdownify | replace_regex: 'pulumi_(.*)\.md', './cli/pulumi_\1.html' | replace_regex: 'h2', 'h3' }}
 
 ## Command-line Completion
 
