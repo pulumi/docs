@@ -1,5 +1,6 @@
 ---
-title: Collaboration
+title: Teams
+redirect_from: collaboration.html
 ---
 
 The Pulumi Cloud Console offers multiple ways for people to collaborate on a

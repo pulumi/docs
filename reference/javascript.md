@@ -1,9 +1,21 @@
 ---
-title: "JavaScript and TypeScript"
+title: "Node.js"
 redirect_from: "npm-packages.html"
 redirect_from: "install/configure-npm.html"
 
 ---
+
+Pulumi supports JavaScript programs running on Node.js.
+
+Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
+That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
+test frameworks.
+
+Any Node.js version after 6.10.x is supported, as long it is under **Active LTS** or is the **Current** stable release.
+
+<a href="https://nodejs.org/en/download/" target="_blank"><button class="button primary small">INSTALL NODE.JS</button></a>
+
+## Getting Started
 
 The fastest way to get started in JavaScript is using a template.  From the directory in which you'd like to create a new project:
 
@@ -13,32 +25,6 @@ Your project was created successfully.
 ```
 
 This will create a `Pulumi.yaml` [project file](./project.html), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
-
-## Pulumi packages
-
-All Pulumi packages are regular NPM packages in the [`@pulumi` organization scope](https://www.npmjs.com/org/pulumi) on NPMJS.
-
-To add a new package from the `@pulumi` namespace, run `npm install --save @pulumi/package-name`.  The following packages are available:
-
-- [@pulumi/pulumi](https://www.npmjs.com/package/@pulumi/pulumi): the core Pulumi JavaScript SDK package
-- [@pulumi/aws](https://www.npmjs.com/package/@pulumi/aws): the AWS resource provider package, for programming AWS directly
-- [@pulumi/aws-infra](https://www.npmjs.com/package/@pulumi/aws-infra): infrastructure components on top of `@pulumi/aws`
-- [@pulumi/aws-serverless](https://www.npmjs.com/package/@pulumi/aws-serverless): easily create Lambda functions that subscribe to AWS events
-- [@pulumi/cloud](https://www.npmjs.com/package/@pulumi/cloud): Pulumi's high-level, cross-cloud programming framework
-- [@pulumi/cloud-aws](https://www.npmjs.com/package/@pulumi/cloud-aws): the implementation package for Pulumi's cloud framework, for use when targeting AWS
-- [@pulumi/kubernetes](https://www.npmjs.com/package/@pulumi/kubernetes): the Kubernetes resource provider package, for programming Kubernetes directly
-- [@pulumi/azure](https://www.npmjs.com/package/@pulumi/azure): the Azure resource provider package, for programming Azure directly
-- [@pulumi/gcp](https://www.npmjs.com/package/@pulumi/gcp): the Google Cloud Platform resource provider package
-
-> **Note:** To use `@pulumi/cloud` on AWS, you must also include the package `@pulumi/cloud-aws`.
-
-## Node.js runtime
-
-Any Node.js version after 6.10.x is supported, as long it is under **Active LTS** or is the **Current** stable release.
-
-## Using Pulumi configuration values
-
-To use configuration values in JavaScript, use the [`pulumi.Config`] class. For more information, see [Using configuration values in JavaScript].
 
 ## TypeScript
 
@@ -119,7 +105,7 @@ Tools like VS Code will give you completion lists, live error reporting and inli
 
 ## Disabiling built in TypeScript support
 
-When using the built in TypeScript support, Pulumi sets the following compiler settings, which may not be overriden:
+When using the built in TypeScript support, Pulumi sets the following compiler settings, which may not be overridden:
 
 - target: "es6",
 - module: "commonjs",

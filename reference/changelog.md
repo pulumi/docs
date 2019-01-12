@@ -1,5 +1,5 @@
 ---
-title: "Change Log"
+title: "Changelog"
 redirect_from: /install/changelog.html
 ---
 

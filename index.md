@@ -14,7 +14,7 @@ searchindex: false
     <p style="text-align: center; margin-bottom: 0">
         <a href="/quickstart/install.html"><button class="button primary">INSTALL</button></a>
         <a href="/quickstart"><button class="button primary">GET STARTED</button></a>
-        <a href="https://github.com/pulumi/examples" target="_blank"><button class="button primary">EXAMPLES</button></a>
+        <a href="/reference"><button class="button primary">LEARN</button></a>
     </p>
 </div>
 

@@ -1,5 +1,5 @@
 ---
-title: Pulumi Cloud Console
+title: Teams & Collaboration
 ---
 
 [The Pulumi Cloud Console](https://app.pulumi.com) allows you to manage your stacks online. It enables

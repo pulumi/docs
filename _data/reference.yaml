@@ -1,31 +1,109 @@
-nav_section: "Reference"
+nav_section: "Documentation"
 toc:
-- title: Concepts
+- title: Documentation
   path: /reference/index
+  toplevel: true
+- title: Architecture & Concepts
+  path: /reference/concepts
   section:
   - title: Programming Model
     path: /reference/programming-model.html
-  - title: Stacks
-    path: /reference/stack.html
   - title: Projects
     path: /reference/project.html
-  - title: Configuration
+  - title: Stacks
+    path: /reference/stack.html
+  - title: Configuration and Secrets
     path: /reference/config.html
-  - title: JavaScript and TypeScript
-    path: /reference/javascript.html
-  - title: Python
-    path: /reference/python.html
-  - title: "Tutorial: Pulumi Components"
-    path: /reference/component-tutorial.html
+  - title: Organizing Stacks and Projects
+    path: /reference/organizing-stacks-projects.html
   - title: How Pulumi Works
     path: /reference/how.html
   - title: State and Backends
     path: /reference/state.html
-  - title: Organizing Stacks and Projects
-    path: /reference/organizing-stacks-projects.html
-  - title: Troubleshooting
-    path: /reference/troubleshooting.html
-- title: Packages
+- title: Command Line
+  path: /reference/commands
+  section:
+  - title: Cancel
+    path: /reference/cli/pulumi_cancel.html
+  - title: Config
+    path: /reference/cli/pulumi_config.html
+  - title: Destroy
+    path: /reference/cli/pulumi_destroy.html
+  - title: Login
+    path: /reference/cli/pulumi_login.html
+  - title: Logout
+    path: /reference/cli/pulumi_logout.html
+  - title: Logs
+    path: /reference/cli/pulumi_logs.html
+  - title: New
+    path: /reference/cli/pulumi_new.html
+  - title: Plugin
+    path: /reference/cli/pulumi_plugin.html
+  - title: Preview
+    path: /reference/cli/pulumi_preview.html
+  - title: Refresh
+    path: /reference/cli/pulumi_refresh.html
+  - title: Stack
+    path: /reference/cli/pulumi_stack.html
+  - title: State
+    path: /reference/cli/pulumi_state.html
+  - title: Update
+    path: /reference/cli/pulumi_up.html
+- title: Teams & Collaboration
+  path: /reference/service/index
+  section:
+  - title: Organizations
+    path: /reference/service/orgs.html
+  - title: Teams
+    path: /reference/service/teams.html
+  - title: Roles and Access Controls
+    path: /reference/service/roles-and-access-controls.html
+  - title: GitHub App
+    path: /reference/cd-github.html
+  - title: Creating a 'Deploy with Pulumi' Button
+    path: /reference/service/pulumi-button.html
+- title: Continuous Delivery
+  path: /reference/cd
+  section:
+  - title: AWS Code Services
+    path: /reference/cd-aws-code-services.html
+  - title: Azure DevOps
+    path: /reference/cd-azure-devops.html
+  - title: CircleCI
+    path: /reference/cd-circleci.html
+  - title: GitHub Actions
+    path: /reference/cd-github-actions.html
+  - title: GitLab CI
+    path: /reference/cd-gitlab-ci.html
+  - title: Travis CI
+    path: /reference/cd-travis.html
+- title: Supported Clouds
+  path: /reference/clouds
+- title: Supported Languages
+  path: /reference/languages
+  section:
+  - title: Node.js
+    path: /reference/javascript.html
+  - title: Python
+    path: /reference/python.html
+- title: Compared to Others
+  path: /reference/vs/index
+  section:
+  - title: Terraform
+    path: /reference/vs/terraform.html
+  - title: Cloud Templates
+    path: /reference/vs/cloud_templates.html
+  - title: Cloud SDKs
+    path: /reference/vs/cloud_sdks.html
+  - title: Serverless
+    path: /reference/vs/serverless.html
+  - title: Kubernetes YAML
+    path: /reference/vs/k8s_yaml_dsls.html
+  - title: Chef, Puppet, etc.
+    path: /reference/vs/chef_puppet_etc.html
+  - title: Custom Solutions
+    path: /reference/vs/custom.html
+- title: API Reference
   path: /reference/pkg/index
   section:
     - title: pulumi
@@ -58,83 +136,12 @@ toc:
       path: /reference/pkg/nodejs/@pulumi/openstack/index.html
     - title: vsphere
       path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
-- title: Commands (CLI)
-  path: /reference/commands
-  section:
-  - title: Cancel
-    path: /reference/cli/pulumi_cancel.html
-  - title: Config
-    path: /reference/cli/pulumi_config.html
-  - title: Destroy
-    path: /reference/cli/pulumi_destroy.html
-  - title: Login
-    path: /reference/cli/pulumi_login.html
-  - title: Logout
-    path: /reference/cli/pulumi_logout.html
-  - title: Logs
-    path: /reference/cli/pulumi_logs.html
-  - title: New
-    path: /reference/cli/pulumi_new.html
-  - title: Plugin
-    path: /reference/cli/pulumi_plugin.html
-  - title: Preview
-    path: /reference/cli/pulumi_preview.html
-  - title: Refresh
-    path: /reference/cli/pulumi_refresh.html
-  - title: Stack
-    path: /reference/cli/pulumi_stack.html
-  - title: State
-    path: /reference/cli/pulumi_state.html
-  - title: Update
-    path: /reference/cli/pulumi_up.html
-- title: Cloud Console
-  path: /reference/service/index
-  section:
-  - title: Pulumi Editions
-    path: /reference/service/editions.html
-  - title: Roles and Access Controls
-    path: /reference/service/roles-and-access-controls.html
-  - title: Collaboration
-    path: /reference/service/collaboration.html
-  - title: Creating a 'Deploy with Pulumi' Button
-    path: /reference/service/pulumi-button.html
-- title: Continuous Deployment
-  path: /reference/cd
-  section:
-  - title: Pulumi GitHub App
-    path: /reference/cd-github.html
-  - title: AWS Code Services
-    path: /reference/cd-aws-code-services.html
-  - title: Azure DevOps
-    path: /reference/cd-azure-devops.html
-  - title: CircleCI
-    path: /reference/cd-circleci.html
-  - title: GitHub Actions
-    path: /reference/cd-github-actions.html
-  - title: GitLab CI
-    path: /reference/cd-gitlab-ci.html
-  - title: Travis CI
-    path: /reference/cd-travis.html
-- title: Pulumi Vs. Others
-  path: /reference/vs/index
-  section:
-  - title: Terraform
-    path: /reference/vs/terraform.html
-  - title: Cloud Templates
-    path: /reference/vs/cloud_templates.html
-  - title: Cloud SDKs
-    path: /reference/vs/cloud_sdks.html
-  - title: Serverless
-    path: /reference/vs/serverless.html
-  - title: Kubernetes YAML
-    path: /reference/vs/k8s_yaml_dsls.html
-  - title: Chef, Puppet, etc.
-    path: /reference/vs/chef_puppet_etc.html
-  - title: Custom Solutions
-    path: /reference/vs/custom.html
 - title: FAQ
   path: /reference/faq
   toplevel: true
-- title: Change Log
+- title: Changelog
   path: /reference/changelog
+  toplevel: true
+- title: Troubleshooting & Support
+  path: /reference/troubleshooting
   toplevel: true

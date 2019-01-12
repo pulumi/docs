@@ -1,11 +1,18 @@
 ---
-title: Troubleshooting
+title: Troubleshooting & Support
 ---
 
+{% include mini-toc.html %}
+
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.
-However, the reality is that sometimes things go wrong. If you can't update your stack, or there's
-some other problem that is preventing you from being productive with a Pulumi stack, you've come to the
-right place.
+However, sometimes things go wrong. If you can't update your stack, or there's some other problem that is
+preventing you from being productive with a Pulumi stack, you've come to the right place.
+
+## Contact Us
+
+First thing's first, we are always happy to hear from you and will try to help. Please
+[join our Community Slack](https://slack.pulumi.io), where our whole team, in addition to a passionate
+community of users, are there to help out. Any and all questions are welcome!
 
 ## Common Problems
 
@@ -99,7 +106,7 @@ You may encounter an error when you downgrade provider versions _after_ your sta
 If you must downgrade the version of a provider your `pulumi` program depends on, you will need to [manually edit your deployment](#editing-your-deployment)
 and change the version of the provider your stack depends on and then import that as the latest state of your stack.
 
-## Recovering from an interrupted update {#interrupted-update-recovery}
+## Recovering from an Interrupted Update {#interrupted-update-recovery}
 
 If the Pulumi CLI is interrupted when performing a deployment, you may see an error message
 that looks something like this on your next update:

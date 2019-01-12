@@ -30,11 +30,20 @@
                                 {% endif %}
                             </div>
 
+                            {% if toc.nav_section == "Documentation" %}
+                                {% if page.path contains "reference/pkg/" %}
+                                    {% assign is_docs = false %}
+                                    {% assign is_apis = true %}
+                                {% else %}
+                                    {% assign is_docs = true %}
+                                    {% assign is_apis = false %}
+                                {% endif %}
+                            {% endif %}
+
                             <ul class="main-nav">
-                                <li class="{% if toc.nav_section == "Getting Started" %}current-page{% endif %}"><a href="/quickstart">Getting Started</a></li>
-                                <li class="{% if toc.nav_section == "Tour" %}current-page{% endif %}"><a href="/tour">Tour</a></li>
-                                <li class="{% if toc.nav_section == "Reference" %}current-page{% endif %}"><a href="/reference">Reference</a></li>
-                                <li><a href="https://github.com/pulumi/examples" target=_blank>Examples</a></li>
+                                <li class="{% if toc.nav_section == "Get Started" %}current-page{% endif %}"><a href="/quickstart">Get Started</a></li>
+                                <li class="{% if is_docs %}current-page{% endif %}"><a href="/reference">Documentation</a></li>
+                                <li class="{% if is_apis %}current-page{% endif %}"><a href="/reference/pkg">APIs</a></li>
                             </ul>
 
                             <ul class="utility-nav visible-xs-block visible-sm-block">

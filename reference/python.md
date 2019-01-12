@@ -2,10 +2,13 @@
 title: "Python"
 ---
 
-> **Note:** Pulumi >=0.16.4 only supports Python 3.6 or greater. You must have installed Python 3.6 prior to running
-> Pulumi programs, or you will likely see syntax errors - Pulumi makes use of new Python syntax that is not
-> backwards-compatible with Python 2. Past versions of Pulumi (<0.16.4) only supported Python 2.7.
+Pulumi supports programs written in Python 3.
 
+> **Note:** As of Pulumi 0.16.4, we have removed support for Python 2.7, and only support Python 3.6 or greater. You must
+> have installed Python 3.6 prior to running Pulumi programs, or you will likely see syntax errors - Pulumi makes use of
+> new Python syntax that is not backwards-compatible with Python 2. Older Pulumi versions did support Python 2.7.
+
+<a href="https://www.python.org/downloads/" target="_blank"><button class="button primary small">INSTALL PYTHON</button></a>
 
 ## Getting Started
 
