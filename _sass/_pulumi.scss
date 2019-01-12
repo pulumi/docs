@@ -35,16 +35,16 @@ $primary2: #00acf2; // primary blue
     @media(min-width: $screen-md){
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 120px;
         transform: translateY(-50%);
     }
-    
+
     padding-left: 8px;
 
     // Just make the two elements adjacent to each other.
     display: flex;
     height: 38px;
-    
+
     input {
         outline: 0;
         border: 0;
@@ -60,12 +60,28 @@ $primary2: #00acf2; // primary blue
     button {
         i { color: white; }  // The FontAwesome icon.
         outline: 0;
-        border: 0;
+        border: 1px solid #007dbf;
+        border-radius: 3px;
 
         background-color: $primary2;
 
         padding: 7px 21px;
         width: 100px;
+    }
+    button:hover {
+        background-color: #66deff;
+    }
+}
+
+#right-nav-block {
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+
+@media(max-width: $screen-md){
+    #sign-in-button {
+        display: none;
     }
 }
 
@@ -144,10 +160,10 @@ $accent4: #fbe5d7; // light orange
     font-weight: bold;
     color: $primary2;
     background-color: #fff;
-    border: 1px solid $primary2;
+    border: 1px solid #007dbf;
 }
 .button:hover {
-    background-color: $primary2;
+    background-color: #66deff;
 }
 
 .button.small {
@@ -160,8 +176,8 @@ $accent4: #fbe5d7; // light orange
     background-color: $primary2;
 }
 .button.primary:hover {
-    border: 1px solid $primary;
-    background-color: $primary;
+    border: 1px solid #007dbf;
+    background-color: #66deff;
 }
 
 // Don't have SVG icons default to black. Just use current text color.
