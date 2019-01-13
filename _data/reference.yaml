@@ -78,7 +78,7 @@ toc:
   - title: Travis CI
     path: /reference/cd-travis.html
 - title: Supported Clouds
-  path: /reference/clouds
+  path: /reference/clouds.html
 - title: Supported Languages
   path: /reference/languages
   section:
