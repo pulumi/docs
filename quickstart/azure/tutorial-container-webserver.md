@@ -142,4 +142,4 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Google Cloud, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Microsoft Azure, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
