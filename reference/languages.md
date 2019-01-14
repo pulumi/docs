@@ -10,5 +10,5 @@ targeted -- each language is just as capable as the other and supports the entir
 * Go - statically compiled Go binaries (*documentation coming soon*)
 
 If your favorite language isn't listed, it may be on its way soon. (It is, in fact, possible
-[to add your own language](http://localhost:4000/reference/faq.html#how-can-i-add-support-for-my-favorite-language).
+[to add your own language](http://localhost:4000/reference/faq.html#how-can-i-add-support-for-my-favorite-language).)
 In either case, please [contact us](troubleshooting.html) to inquire and let us know what you're looking for.
