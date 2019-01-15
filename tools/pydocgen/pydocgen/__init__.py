@@ -1,0 +1,235 @@
+"""
+(A) Pulumi Python documentation generator, at your service!
+
+This module provides a mechanism for producing HTML documentation for Pulumi packages directly from their source, in a
+format that is amenable for inclusion in the Pulumi Docs repo. It accomplishes this using a two-fold transformation:
+
+    1. This script walks all providers that it intends to generate documentation and generates an input to Sphinx, the
+       documentation generator. The output of this stage is a directory full of reStructuredText files (.rst) that
+       Sphinx will interpret.
+    2. The script invokes sphinx directly. Sphinx walks the packages that we intend to document and generates a lot of
+       documentation for them. We use the "json" builder for Sphinx, which is a target that splats a large amount of
+       HTML into a JSON document for each input RST file that we gave it.
+    3. The script processes the JSON output of Sphinx and produces a series of folders and Markdown documents that our
+       Jekyll front-end is aware of and can render in a reasonable fashion in the context of our docs website.
+
+This is a little crazy. I will understand if you hate me. However, this script is very effective at what it does, mostly
+because Sphinx is an incredibly powerful tool that is well-suited for this purpose. The "correct" way to accomplish this
+task is likely to create a custom Sphinx theme that outputs HTML directly in the format that our site expects, but this
+is "hard" (read: time-consuming for the author).
+"""
+
+import glob
+import json
+from os import path, mkdir
+import shutil
+from subprocess import check_call
+import sys
+import tempfile
+from typing import NamedTuple, List
+from jinja2 import Environment, PackageLoader, select_autoescape
+
+class Project(NamedTuple):
+    """
+    A Project is a collection of metadata about the current project that we'll feed to Sphinx.
+    """
+    name: str
+    copyright: str
+    author: str
+    version: str
+    release: str
+
+
+class Provider(NamedTuple):
+    """
+    A provider is a tuple of "name" (a human-readable name) and "package_name" (the actual Python package name).
+    """
+    name: str
+    package_name: str
+
+class Input(NamedTuple):
+    """
+    Input is the schema of the JSON document loaded as an input to the documentation generator. It contains metadata
+    about the current project (see Project) and a list of providers that we intend to document.
+    """
+    project: Project
+    providers: List[Provider]
+
+class Context(NamedTuple):
+    """
+    The context is some state kept around during the transformation process.
+    """
+    template_env: Environment
+    tempdir: str
+    outdir: str
+    mdoutdir: str
+    input: Input
+
+def read_input(input_file: str) -> Input:
+    """
+    read_input produces an Input from an input file with the given filename.
+
+    :param str input_file: Filename of a JSON file to read inputs from.
+    :returns str: An Input representing the current run of the tool.
+    """
+    with open(input_file) as f:
+        input_dict = json.load(f)
+        project = Project(**input_dict["project"])
+        providers = []
+        for provider in input_dict.get("providers") or []:
+            providers.append(Provider(**provider))
+        return Input(project=project, providers=providers)
+
+def render_template_to(ctx: Context, dest: str, template_name: str, **kwargs):
+    """
+    Helper function for rendering templates to the context's temporary directory.
+
+    :param Context ctx: The current context.
+    :param str dest: The destination path relative to the root of the output directory.
+    :param str template_name: The name of the template to render.
+    :param **kwargs: Passed verbatim to the template.
+    """
+    template_instance = ctx.template_env.get_template(template_name)
+    out_path = path.join(ctx.tempdir, dest)
+    with open(out_path, "w") as f:
+        rendered = template_instance.render(**kwargs)
+        f.write(rendered)
+
+def generate_sphinx_files(ctx: Context):
+    """
+    Generates Sphinx input from the list of packages given to this tool. The Sphinx input is saved in the temporary
+    directory created by the context (ctx.tempdir).
+    """
+
+    # Sphinx expects a conf.py file at the root of the folder - render it.
+    render_template_to(ctx, "conf.py", "conf.py", input=ctx.input)
+
+    # We're also shipping a Sphinx plugin to hack our docstrings.
+    render_template_to(ctx, "markdown_docstring.py", "markdown_docstring.py")
+
+    # Sphinx begins at index.rst and walks it recursively to discover all files to render. Although we're not using the
+    # output of index.rst in any way, we must still render it to refer to all of the provider pages that we intend to
+    # document so that Sphinx knows to recurse into them.
+    render_template_to(ctx, "index.rst", "index.rst", input=ctx.input)
+    create_dir(ctx.tempdir, "providers")
+    create_dir(ctx.tempdir, "_static") # Sphinx complains if this isn't there.
+
+    # Templates that we intend to use.
+    without_module_template = path.join("providers", "provider_without_module.rst")
+    with_module_template = path.join("providers", "provider_with_module.rst")
+    module_template = path.join("providers", "module.rst")
+    for provider in ctx.input.providers:
+        doc_path = path.join("providers", f"{provider.package_name}.rst")
+        # __import__ is Python magic - it literally imports the package that we're about to document. For this reason
+        # (and because Sphinx does something similar), the packages that we are documenting MUST be installed in the
+        # current environment.
+        module = __import__(provider.package_name)
+
+        # The reason we're importing the module is to inspect its `__all__` member - so we can discover any submodules
+        # that this module has.
+        #
+        # TFGen explicitly populates this array.
+        if not hasattr(module, "__all__"):
+            # No submodules? Render the without_module_template and be done.
+            render_template_to(ctx, doc_path, without_module_template, provider=provider)
+        else:
+            # If there are submodules, run through each one and render module templates for each one.
+            all_modules = getattr(module, "__all__")
+            render_template_to(ctx, doc_path, with_module_template, provider=provider, submodules=all_modules)
+            create_dir(ctx.tempdir, "providers", provider.package_name)
+            for module in all_modules:
+                dest = path.join("providers", provider.package_name, f"{module}.rst")
+                module_meta = {"name": module, "full_name": f"{provider.package_name}.{module}"}
+                render_template_to(ctx, dest, module_template, module=module_meta)
+
+
+def build_sphinx(ctx: Context):
+    """
+    build_sphinx invokes Sphinx on the inputs that we generated in `generate_sphinx_files`.
+
+    :param Context ctx: The current context.
+    """
+    check_call(["sphinx-build", "-j", "auto", "-b", "json", ctx.tempdir, ctx.outdir])
+
+def transform_sphinx_output_to_markdown(ctx: Context):
+    """
+    Transforms the Sphinx output in `ctx.outdir` to markdown by post-processing the JSON output by Sphinx. The directory
+    structure written by this function mirrors the `reference/pkg` directory in the docs repo, so that `reference/pkg`
+    can serve as an output directory of this script.
+
+    :param Context ctx: The current context.
+    """
+    out_base  = create_dir(ctx.mdoutdir, "python")
+    base_json = path.join(ctx.outdir, "providers")
+    for provider in ctx.input.providers:
+        provider_path = create_dir(out_base, provider.package_name)
+        provider_sphinx_output = path.join(base_json, provider.package_name)
+        # If this thing has submodules, provider_sphinx_output is a directory and it exists.
+        if path.exists(provider_sphinx_output):
+            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "index.md"))
+            # Recurse through all submodules (all fjson files in this directory) and produce folders with an index.md
+            # in them.
+            for file in glob.iglob(path.join(provider_sphinx_output, "*.fjson")):
+                module_name = path.splitext(path.basename(file))[0]
+                module_path = create_dir(provider_path, module_name)
+                create_markdown_file(file, path.join(module_path, "index.md"))
+        else:
+            # Otherwise, just drop an index.md in the provider directory.
+            create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "index.md"))
+
+        
+def create_dir(*args):
+    full_path = path.join(*args)
+    if not path.exists(full_path):
+        mkdir(full_path)
+
+    return full_path
+
+def create_markdown_file(file: str, out_file: str):
+    """
+    Derives a Markdown file from the Sphinx output file `file` and saves the result to `out_file`.
+
+    :param str file: Sphinx output file, to be used as the source of data to derive a Markdown file. It is technically
+           JSON but in reality it's a JSON object with a "body" property that's filled with HTML.
+    :param str out_file: The name of the Markdown file to output.
+    """
+    with open(file) as f:
+        contents = json.load(f)
+
+    with open(out_file, "w") as f:
+        # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
+        # going to slam it verbatim into a file and call it Markdown, because we're professionals.
+        f.write(contents["body"])
+
+def main():
+    if len(sys.argv) != 2:
+        print("usage: python -m pydocgen <output_dir>")
+        exit(1)
+
+    output_directory = sys.argv[1]
+    input = read_input("pulumi-docs.json")
+    env = Environment(
+        loader=PackageLoader('pydocgen', 'templates'),
+        autoescape=select_autoescape(['html', 'xml']))
+
+    tempdir = tempfile.mkdtemp()
+    outdir = tempfile.mkdtemp()
+    mdoutdir = output_directory
+    ctx = Context(template_env=env,  input=input, tempdir=tempdir, outdir=outdir, mdoutdir=mdoutdir)
+
+    try:
+        print("Generating Sphinx input...")
+        generate_sphinx_files(ctx)
+        print("Running Sphinx...")
+        build_sphinx(ctx)
+        print("Transforming Sphinx output into Markdown...")
+        transform_sphinx_output_to_markdown(ctx)
+        print("Done!")
+    finally:
+        if path.exists(tempdir):
+            pass
+            #shutil.rmtree(tempdir)
+        if path.exists(outdir):
+            pass
+            #shutil.rmtree(outdir)
+
