@@ -136,6 +136,8 @@ toc:
       path: /reference/pkg/nodejs/@pulumi/openstack/index.html
     - title: vsphere
       path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
+    - title: Pulumi Webhooks
+      path: /reference/service/webhooks.html
 - title: FAQ
   path: /reference/faq
   toplevel: true
