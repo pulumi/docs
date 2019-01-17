@@ -186,7 +186,7 @@ def split(input):
 
 #### Working with Outputs and strings {#ouputs-and-strings}
 
-It's very common want to build a string to use out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically compute string as an [Input](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input) to another Resource.  For example, say you had the following:
+It's very common want to build a string to use out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input) to another Resource.  For example, say you had the following:
 
 {% include langchoose.html %}
 
@@ -207,9 +207,9 @@ const url: Output<string> = // ?
 ```
 
 ```python
-// Helpers for combining Outputs into strings are not yet available in Python.
-// 
-// See https://github.com/pulumi/pulumi/issues/2366.
+# Helpers for combining Outputs into strings are not yet available in Python.
+# 
+# See https://github.com/pulumi/pulumi/issues/2366.
 ```
 
 ```go
@@ -229,9 +229,9 @@ const url: Output<string> = pulumi.all([hostname, port]).apply(([hostname, port]
 ```
 
 ```python
-// Helpers for combining Outputs into strings are not yet available in Python.
-// 
-// See https://github.com/pulumi/pulumi/issues/2366.
+# Helpers for combining Outputs into strings are not yet available in Python.
+# 
+# See https://github.com/pulumi/pulumi/issues/2366.
 ```
 
 ```go
@@ -253,9 +253,9 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 ```
 
 ```python
-// Helpers for combining Outputs into strings are not yet available in Python.
-// 
-// See https://github.com/pulumi/pulumi/issues/2366.
+# Helpers for combining Outputs into strings are not yet available in Python.
+# 
+# See https://github.com/pulumi/pulumi/issues/2366.
 ```
 
 ```go
