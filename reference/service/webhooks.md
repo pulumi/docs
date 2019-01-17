@@ -3,9 +3,9 @@ title: Pulumi Webhooks
 ---
 
 Webhooks allow you to build applications that will be notified when events
-happen on Pulumi. For example, whenever a stack is updated, an team is modified,
-and so on. Whenever an event occurres will send an HTTP `POST` request to all
-registered webhooks. The webhook then can then be used to emit some
+happen on Pulumi. For example, whenever a stack is updated, a team is modified,
+and so on. Whenever an event occurs, Pulumi will send an HTTP `POST` request to
+all registered webhooks. The webhook then can then be used to emit some
 notification, start running integration tests, or even update additional stacks.
 
 Webhooks can be used for pretty much anything you want, and are the foundation
@@ -60,9 +60,9 @@ URL_, and an optional _shared secret_.
 
 ![Stack webhooks](../../images/reference/service/webhooks/stack-webhooks.png)
 
-If a secret is provided, then webhook deliveries will be contain a signature in
-the request header that can be use to authenticate messages as coming from the
-Pulumi Cloud Console.
+If a shared secret is provided, then webhook deliveries will contain a signature
+in the request header that can be used to authenticate messages as coming from
+the Pulumi Cloud Console.
 
 For details on how to verify payload signatures, see the _Headers_ section below.
 
@@ -86,9 +86,10 @@ The following events are only delivered to organization-based webhooks.
 
 ## Payloads
 
-Each webhook payload has a format specific to the payload being emitted. Every payload will contain a sender, organization, and stack reference.
+Each webhook payload has a format specific to the payload being emitted. Every payload will contain a sender, organization,
+and stack reference as appropriate. For examples of the specific payloads, see _Payload Reference_ below.
 
-Each webhook should contain a `user` field, which is the user who requested the action, an `organization` which is
+Each webhook will contain a `user` field, which is the user who requested the action, an `organization` which is
 the organization name and URL for the event. And finally the `stackName` for the stack which was modified as applicable.
 
 ### Headers
@@ -113,7 +114,7 @@ var crypto = require('crypto');
 const sharedSecret = ...
 const payload = req.body.toString();
 
-var hmacAlg = crypto.createHmac('sha256', sharedSecret)
+var hmacAlg = crypto.createHmac('sha256', sharedSecret);
 var expectedSignature = hmac.update(payloadBody).digest('hex');
 ```
 
@@ -171,7 +172,11 @@ the stack update or performed the action.
 		"githubLogin": "morty",
 		"avatarUrl": "https://crazy-adventures.net/morty.png",
 	},
-	"organization": "cazy-adventures",
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
 	"action": "created",
 	"stackName": "website-prod",
 }
@@ -186,7 +191,11 @@ the stack update or performed the action.
 		"githubLogin": "morty",
 		"avatarUrl": "https://crazy-adventures.net/morty.png",
 	},
-	"organization": "cazy-adventures",
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
 	"action": "updated",
 	"stackName": "website-prod",
 	"team": {
@@ -218,7 +227,11 @@ the stack update or performed the action.
 		"githubLogin": "morty",
 		"avatarUrl": "https://crazy-adventures.net/morty.png",
 	},
-	"organization": "cazy-adventures",
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
 	"stackName": "website-prod",
 	"updateUrl": "https://app.pulumi.com/crazy-adventures/website-prod/42",
 	"kind": "refresh",
@@ -240,7 +253,11 @@ the stack update or performed the action.
 		"githubLogin": "morty",
 		"avatarUrl": "https://crazy-adventures.net/morty.png",
 	},
-	"organization": "cazy-adventures",
+	"organization": {
+		"name": "Crazy Adventures",
+		"githubLogin": "crazy-adventures",
+		"avatarUrl": "https://crazy-adventures.net/logo.png"
+	},
 	"stackName": "website-prod",
 	"updateUrl": "https://app.pulumi.com/crazy-adventures/website-prod/11bf162b-d9d5-4715-8f88-20dcd0e0b167",
 	"kind": "update",

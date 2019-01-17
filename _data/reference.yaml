@@ -60,6 +60,8 @@ toc:
     path: /reference/service/roles-and-access-controls.html
   - title: GitHub App
     path: /reference/cd-github.html
+  - title: Pulumi Webhooks
+    path: /reference/service/webhooks.html
   - title: Creating a 'Deploy with Pulumi' Button
     path: /reference/service/pulumi-button.html
 - title: Continuous Delivery
@@ -136,8 +138,6 @@ toc:
       path: /reference/pkg/nodejs/@pulumi/openstack/index.html
     - title: vsphere
       path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
-    - title: Pulumi Webhooks
-      path: /reference/service/webhooks.html
 - title: FAQ
   path: /reference/faq
   toplevel: true
