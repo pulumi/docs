@@ -240,7 +240,7 @@ const url: Output<string> = pulumi.all([hostname, port]).apply(([hostname, port]
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-However, this is quite verbose and unweildy.  To make this easier, Pulumi exposes two helpers `concat` and `interpolate`  to make this more convenient.  They can be used as follows:
+However, this is quite verbose and unwieldy.  To make this easier, Pulumi exposes two helpers `concat` and `interpolate`  to make this more convenient.  They can be used as follows:
 
 ```javascript
 const url1 = pulumi.concat("http://", hostname, ":", port, "/");
