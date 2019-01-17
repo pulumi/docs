@@ -43,8 +43,10 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="#testingOptions">const testingOptions</a>
 * <a href="#version">const version</a>
 * <a href="#all">function all</a>
+* <a href="#concat">function concat</a>
 * <a href="#getProject">function getProject</a>
 * <a href="#getStack">function getStack</a>
+* <a href="#interpolate">function interpolate</a>
 * <a href="#output">function output</a>
 * <a href="#ComponentResourceOptions">interface ComponentResourceOptions</a>
 * <a href="#CustomResourceOptions">interface CustomResourceOptions</a>
@@ -896,6 +898,25 @@ d1 and d2.
 <pre class="highlight"><span class='kd'></span>all&lt;T&gt;(ds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#Output'>Output</a>&lt;T&gt;[]): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]&gt;</pre>
 
 </div>
+<h2 class="pdoc-module-header" id="concat">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L687">function <b>concat</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>concat(params: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;[]): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+
+
+[concat] takes a sequence of [Inputs], stringifies each, and concatenates all values into one
+final string.  Individual inputs can be any sort of [Input] value.  i.e. they can be [Promise]s,
+[Output]s, or just plain JavaScript values.  This can be used like so:
+
+```ts
+     // 'server' and 'loadBalancer' are both resources that expose [Output] properties.
+     let val: Output<string> = pulumi.concat("http://", server.hostname, ":", loadBalancer.port);
+```
+
+
+</div>
 <h2 class="pdoc-module-header" id="getProject">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/metadata.ts#L22">function <b>getProject</b></a>
 </h2>
@@ -916,6 +937,26 @@ getProject returns the current project name.  It throws an exception if none is 
 
 
 getStack returns the current stack name.  It throws an exception if none is registered.
+
+</div>
+<h2 class="pdoc-module-header" id="interpolate">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L703">function <b>interpolate</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>interpolate(literals: TemplateStringsArray, placeholders: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;[]): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+
+
+[interpolate] is similar to [concat] but is designed to be used as a tagged template expression.
+i.e.:
+
+```ts
+     // 'server' and 'loadBalancer' are both resources that expose [Output] properties.
+     let val: Output<string> = pulumi.interpolate `http://${server.hostname}:${loadBalancer.port}`
+```
+
+As with [concat] the 'placeholders' between `${}` can be any Inputs.  i.e. they can be
+[Promise]s, [Output]s, or just plain JavaScript values.
 
 </div>
 <h2 class="pdoc-module-header" id="output">
