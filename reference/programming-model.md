@@ -93,7 +93,7 @@ In fact, `Output`s are similar to promises/futures that you may be familiar with
 
 The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updatred until all their dependencies are availabe and up to date.  
 
-### Apply {#apply}
+#### Apply {#apply}
 
 To transform an output into a new value, use the [`apply` method](pkg/nodejs/@pulumi/pulumi/#property-apply). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine: 
 
@@ -123,7 +123,7 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 > Note: The `Output` itself cannot be used directly in string concatenation or other operations, as it is not itself the value of the output.  To transform the value of the output (when it becomes available), the `apply` method should be used instead.
 
-### All {#all}
+#### All {#all}
 
 To combine multiple `Output`s into a transformed value, use [pulumi.all].  This allows a new value to be constructed from several inputs, such as concatenating outputs from two different resources together, or constructing a policy document using information from several other resources.
 
@@ -151,7 +151,7 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-### Convert Input to Output {#frominput}
+#### Convert Input to Output {#frominput}
 
 To turn an `Input` into an `Output`, use [pulumi.output].  This can be useful when you want to transform an input value that could either be a raw value or an `Output`:
 
@@ -183,6 +183,88 @@ def split(input):
 // 
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
+
+#### Working with Outputs and strings {#ouputs-and-strings}
+
+It's very common want to build a string to use out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input) to another Resource.  For example, say you had the following:
+
+{% include langchoose.html %}
+
+```javascript
+const hostName = // get some Output
+const port = // get some Output
+
+// Would like to produce a string equivalent to: http://${hostname}:${port}/
+const url = // ?
+```
+
+```typescript
+const hostName: Output<string> = // get some Output
+const port: Output<number> = // get some Output
+
+// Would like to produce a string equivalent to: http://${hostname}:${port}/
+const url: Output<string> = // ?
+```
+
+```python
+# Helpers for combining Outputs into strings are not yet available in Python.
+# 
+# See https://github.com/pulumi/pulumi/issues/2366.
+```
+
+```go
+// Helpers for combining Outputs into strings are not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+Using [.apply](#apply) and [.all](#all) this could be solved as shown above like so:
+
+```javascript
+const url = pulumi.all([hostname, port]).apply(([hostname, port]) => `http://${hostname}:${port}/`);
+```
+
+```typescript
+const url: Output<string> = pulumi.all([hostname, port]).apply(([hostname, port]) => `http://${hostname}:${port}/`);
+```
+
+```python
+# Helpers for combining Outputs into strings are not yet available in Python.
+# 
+# See https://github.com/pulumi/pulumi/issues/2366.
+```
+
+```go
+// Helpers for combining Outputs into strings are not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+However, this is quite verbose and unwieldy.  To make this easier, Pulumi exposes two helpers `concat` and `interpolate`  to make this more convenient.  They can be used as follows:
+
+```javascript
+const url1 = pulumi.concat("http://", hostname, ":", port, "/");
+const url2 = pulumi.interpolate `http://${hostname}:${port}/`;
+```
+
+```typescript
+const url1: Output<string> = pulumi.concat("http://", hostname, ":", port, "/");
+const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
+```
+
+```python
+# Helpers for combining Outputs into strings are not yet available in Python.
+# 
+# See https://github.com/pulumi/pulumi/issues/2366.
+```
+
+```go
+// Helpers for combining Outputs into strings are not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+`concat` takes a list of arguments that can be `Inputs`, `Outputs`, `Promises` and simple JavaScript values, and creates an `Output` with all their underlying values concatenated together.  `interpolate` does the same, but allows you to use a JavaScript `template literal` if that's your preferred way of combining values into strings.
 
 ## Stack output {#stack-outputs}
 
