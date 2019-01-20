@@ -27,6 +27,8 @@ import (
 	"sort"
 	"strings"
 	"unicode"
+
+	"github.com/pkg/errors"
 )
 
 func main() {
@@ -101,8 +103,11 @@ func emitMarkdownDocs(doc *typeDocNode, outdir string) error {
 	pkg := doc.Name
 	repoURL := gitHubBaseURLs[pkg]
 	e := newEmitter(pkg, repoURL, outdir)
+	root, err := e.gatherModules(doc, rootModule)
+	if err != nil {
+		return err
+	}
 	e.augmentNode(doc, nil)
-	root := e.gatherModules(doc)
 	return e.emitMarkdownModule(rootModule, root, true)
 }
 
@@ -264,15 +269,12 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 		members = append(members, member)
 	}
-	sort.Strings(files)
-	sort.Slice(members, func(i, j int) bool {
-		if members[i].Label != members[j].Label {
-			return members[i].Label < members[j].Label
-		}
-		return members[i].Name < members[j].Name
-	})
 
-	// Get any submodules, make relative links, and ensure they are sorted in a deterministic order.
+	// Ensure the files, members, and children (deeply throughout the tree) are sorted deterministically.
+	sort.Strings(files)
+	transitiveSortByLabels(members)
+
+	// Get any submodules, make relative links, and ensure they are also sorted in a deterministic order.
 	var modules []struct {
 		Name string
 		Link string
@@ -322,8 +324,29 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	return nil
 }
 
+// labelSorter sorts nodes with labels alphabetically.
+func labelSorter(nodes []*typeDocNode) func(i, j int) bool {
+	return func(i, j int) bool {
+		if nodes[i].Label != nodes[j].Label {
+			return nodes[i].Label < nodes[j].Label
+		}
+		return nodes[i].Name < nodes[j].Name
+	}
+}
+
+// transitiveSortByLabels sorts an array of nodes and their children, deeply.
+func transitiveSortByLabels(nodes []*typeDocNode) {
+	// First sort the nodes themselves.
+	sort.SliceStable(nodes, labelSorter(nodes))
+
+	// And now their children, deeply. Note that we use a stable sort because some children don't have labels.
+	for _, node := range nodes {
+		transitiveSortByLabels(node.Children)
+	}
+}
+
 // gatherModules walks a Typedoc AST and turns it into a proper module structure, to ease Markdown emission.
-func (e *emitter) gatherModules(doc *typeDocNode) *module {
+func (e *emitter) gatherModules(doc *typeDocNode, parentModule string) (*module, error) {
 	// First gather up all modules.  Since the AST nodes may appear in arbitrary order, we need to perform this
 	// pass first, before we can build up a proper tree structure with parents/children.
 	mods := make(map[string]*module)
@@ -335,35 +358,42 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 
 		// We expect all top-level children to be modules.  (This is why `--mode file` won't work.)
 		if modnode.Kind != typeDocExternalModuleNode {
-			fmt.Fprintf(os.Stderr, "warning: expected a module, got %s (%s)\n", modnode.Kind, modnode.Name)
-			continue
+			return nil, errors.Errorf("expected a module, got %s (%s)", modnode.Kind, modnode.Name)
 		}
 
 		// Simplify the module name, because we assume a simplified index-based re-export structure.  This will
 		// flatten out all inner submodules to their index, so that all children will aggregate naturally.
-		modname := simplifyModuleName(modnode)
+		modname := simplifyModuleName(modnode, parentModule)
 
 		// Lazy init the module if appropriate.
 		mod := mods[modname]
 		if mod == nil {
-			mod = newModule()
+			mod = newModule(modname)
 			mods[modname] = mod
 		}
 
 		// Add all exported children from this module to the export list.
 		for _, child := range modnode.Children {
 			// Skip unexported children.
-			if !child.Flags.IsExported {
+			isModule := child.Kind == typeDocModuleNode
+			if !isModule && !child.Flags.IsExported {
 				continue
 			}
 
-			if child.Kind == typeDocModuleNode {
-				// If this is a module (namespace), we must explode it out into the top-level modules list.
+			if isModule {
+				// If this is a module, we must explode it out into the top-level modules list.
 				// This may very well conflict, so we'll need to merge the new members in if so.
-				nss := e.gatherNamespaceModules(path.Join(child.Name), child)
+				chname := simplifyModuleName(child, modname)
+				nss, err := e.gatherNamespaceModules(chname, child)
+				if err != nil {
+					return nil, err
+				}
+
 				for nsname, ns := range nss {
 					if exist, has := mods[nsname]; has {
-						exist.Merge(ns)
+						if err := exist.Merge(ns); err != nil {
+							return nil, err
+						}
 					} else {
 						mods[nsname] = ns
 					}
@@ -371,9 +401,11 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 			} else {
 				// Else, register this child as an export.
 				name := child.Name
-				if mod.Exports[name] != nil {
-					fmt.Fprintf(os.Stderr, "warning: duplicate child %s for module %s\n", name, modname)
-					continue
+				if exist, has := mod.Exports[name]; has {
+					var err error
+					if child, err = exist.Merge(child); err != nil {
+						return nil, err
+					}
 				}
 				mod.Exports[name] = child
 			}
@@ -384,7 +416,7 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 	// Now that we've done a first pass, construct the tree structure, and return the root node.
 	root := mods[rootModule]
 	if root == nil {
-		root = newModule()
+		root = newModule(rootModule)
 		mods[rootModule] = root
 	}
 	for modname, mod := range mods {
@@ -392,20 +424,20 @@ func (e *emitter) gatherModules(doc *typeDocNode) *module {
 			parname := getModuleParentName(modname)
 			par := mods[parname]
 			if par == nil {
-				par = newModule()
+				par = newModule(parname)
 				mods[parname] = par
 			}
 			par.Modules[modname] = mod
 		}
 	}
-	return root
+	return root, nil
 }
 
 // gatherNamespaceModules returns a flat list of namespaces, recursively extracted from the tree.  The list is
 // flat so that we can easily merge any duplicate entries, as namespaces can be spread across many modules.
-func (e *emitter) gatherNamespaceModules(name string, node *typeDocNode) map[string]*module {
+func (e *emitter) gatherNamespaceModules(name string, node *typeDocNode) (map[string]*module, error) {
 	// Start with a single module, but be prepared to append more if we find them.
-	ns := newModule()
+	ns := newModule(name)
 	nss := map[string]*module{
 		name: ns,
 	}
@@ -413,57 +445,76 @@ func (e *emitter) gatherNamespaceModules(name string, node *typeDocNode) map[str
 	// Find any children modules.
 	for _, child := range node.Children {
 		if child.Kind == typeDocModuleNode {
-			submods := e.gatherNamespaceModules(path.Join(name, child.Name), child)
+			submods, err := e.gatherNamespaceModules(path.Join(name, child.Name), child)
+			if err != nil {
+				return nil, err
+			}
+
 			for subname, submod := range submods {
 				if exist, has := nss[subname]; has {
-					exist.Merge(submod)
+					if err := exist.Merge(submod); err != nil {
+						return nil, err
+					}
 				} else {
 					nss[subname] = submod
 				}
 			}
 		} else {
 			cn := child.Name
-			if ns.Exports[cn] != nil {
-				fmt.Fprintf(os.Stderr, "warning: duplicate child %s for namespace %s\n", cn, name)
-				continue
+			if exist, has := ns.Exports[cn]; has {
+				var err error
+				if child, err = exist.Merge(child); err != nil {
+					return nil, err
+				}
 			}
 			ns.Exports[cn] = child
 		}
 	}
 
-	return nss
+	return nss, nil
 }
 
 // module is an aggregate structure conceptually mapping to an ES6 module.
 type module struct {
+	// Name is the name of this module.
+	Name string
 	// Exports is a map of names to the exported member's Typedoc AST node.
 	Exports map[string]*typeDocNode
 	// Modules is a map of names to nested ES6 modules re-exported as a name by this module.
 	Modules map[string]*module
 }
 
-func newModule() *module {
+func newModule(name string) *module {
 	return &module{
+		Name:    name,
 		Exports: make(map[string]*typeDocNode),
 		Modules: make(map[string]*module),
 	}
 }
 
 // Merge another module into this one, in place, by mutating it.
-func (m *module) Merge(other *module) {
+func (m *module) Merge(other *module) error {
+	// Now clone the other module, resolving and merging conflicts, if any arise.
 	for k, exp := range other.Exports {
-		if _, has := m.Exports[k]; has {
-			//fmt.Fprintf(os.Stderr, "warning: duplicate module member %s\n", k)
+		if exist, has := m.Exports[k]; has {
+			var err error
+			if exp, err = exist.Merge(exp); err != nil {
+				return err
+			}
 		}
 		m.Exports[k] = exp
 	}
 	for k, mod := range other.Modules {
 		if exist, has := m.Modules[k]; has {
-			exist.Merge(mod)
+			if err := exist.Merge(mod); err != nil {
+				return err
+			}
 		} else {
 			m.Modules[k] = mod
 		}
 	}
+
+	return nil
 }
 
 // rootModule is the special name of the root index module.
@@ -485,12 +536,22 @@ func getModuleParentName(m string) string {
 }
 
 // simplifyModuleName turns a module AST's name into a simplified module name.
-func simplifyModuleName(modnode *typeDocNode) string {
+func simplifyModuleName(modnode *typeDocNode, parentModule string) string {
+	// Remove the quotes that will always surround the name.
 	name := strings.Trim(modnode.Name, "\"")
+
+	// If it begins with a "./", simplify it to just the parent name.
+	if strings.Index(name, "./") == 0 {
+		return parentModule
+	}
+
+	// If the name contains a "/", then it's a subm-module, and we choose to simplify to the parent name.
 	if slix := strings.IndexRune(name, '/'); slix != -1 {
 		return name[:slix]
 	}
-	return rootModule
+
+	// Otherwise, there is no sub-module component, and this will belong to the parent.
+	return parentModule
 }
 
 // isLocalSource returns true if this source is local to this repo. This filters out references to types or
@@ -569,6 +630,32 @@ type typeDocNode struct {
 	Extends string
 	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
 	Implements string
+}
+
+// Merge attempts to merge two different document nodes. Only certain kinds of nodes can be merged with
+// one another (generally just interface kinds). If they are unmergable, an error is returned.
+func (n *typeDocNode) Merge(o *typeDocNode) (*typeDocNode, error) {
+	// Check that the node types are compatible, and also select the "primary" node that will drive the
+	// resulting merged node's type, tie breaking, etc. TL;DR, we prefer classes over interfaces.
+	var p *typeDocNode
+	var s *typeDocNode
+	if n.Kind == typeDocInterfaceNode && o.Kind == typeDocInterfaceNode {
+		p, s = n, o // either is fine, since they are interfaces, so choose the existing one
+	} else if n.Kind == typeDocClassNode && o.Kind == typeDocInterfaceNode {
+		p, s = n, o // class wins
+	} else if n.Kind == typeDocInterfaceNode && o.Kind == typeDocClassNode {
+		p, s = o, n // class wins
+	} else {
+		return nil, errors.Errorf(
+			"cannot merge two nodes with same name '%s'; incompatible types %s and %s", n.Name, n.Kind, o.Kind)
+	}
+
+	// Mutate the existing primary node. This is done rather than creating a copy, so that we don't
+	// need to worry about patching up existing pointers from parents into children, and so forth.
+	p.Children = append(p.Children, s.Children...)
+	p.ImplementedTypes = append(p.ImplementedTypes, s.ImplementedTypes...)
+	p.Sources = append(p.Sources, s.Sources...)
+	return p, nil
 }
 
 type typeDocNodeKind string
