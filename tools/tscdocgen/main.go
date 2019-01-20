@@ -269,15 +269,12 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 		members = append(members, member)
 	}
-	sort.Strings(files)
-	sort.Slice(members, func(i, j int) bool {
-		if members[i].Label != members[j].Label {
-			return members[i].Label < members[j].Label
-		}
-		return members[i].Name < members[j].Name
-	})
 
-	// Get any submodules, make relative links, and ensure they are sorted in a deterministic order.
+	// Ensure the files, members, and children (deeply throughout the tree) are sorted deterministically.
+	sort.Strings(files)
+	transitiveSortByLabels(members)
+
+	// Get any submodules, make relative links, and ensure they are also sorted in a deterministic order.
 	var modules []struct {
 		Name string
 		Link string
@@ -325,6 +322,27 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		}
 	}
 	return nil
+}
+
+// labelSorter sorts nodes with labels alphabetically.
+func labelSorter(nodes []*typeDocNode) func(i, j int) bool {
+	return func(i, j int) bool {
+		if nodes[i].Label != nodes[j].Label {
+			return nodes[i].Label < nodes[j].Label
+		}
+		return nodes[i].Name < nodes[j].Name
+	}
+}
+
+// transitiveSortByLabels sorts an array of nodes and their children, deeply.
+func transitiveSortByLabels(nodes []*typeDocNode) {
+	// First sort the nodes themselves.
+	sort.SliceStable(nodes, labelSorter(nodes))
+
+	// And now their children, deeply. Note that we use a stable sort because some children don't have labels.
+	for _, node := range nodes {
+		transitiveSortByLabels(node.Children)
+	}
 }
 
 // gatherModules walks a Typedoc AST and turns it into a proper module structure, to ease Markdown emission.
