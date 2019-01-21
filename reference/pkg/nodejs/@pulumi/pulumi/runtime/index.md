@@ -909,36 +909,6 @@ Options is a bag of settings that controls the behavior of previews and deployme
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Entry'>Entry</a>, <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
-<h3 class="pdoc-member-header" id="PropertyMap-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>values</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>values(): IterableIterator&lt;<a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
-
-
-Returns an iterable of values in the map
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-set">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>set</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>set(key: <a href='#Entry'>Entry</a>, value: <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>): <span class='kd'>this</span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="PropertyMap-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>keys</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>keys(): IterableIterator&lt;<a href='#Entry'>Entry</a>&gt;</pre>
-
-
-Returns an iterable of keys in the map
-
-</div>
 <h3 class="pdoc-member-header" id="PropertyMap-__@iterator">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>__@iterator</b></a>
 </h3>
@@ -1001,11 +971,41 @@ Returns an iterable of key, value pairs for every entry in the map.
 <pre class="highlight"><span class='kd'></span>has(key: <a href='#Entry'>Entry</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 </div>
-<h3 class="pdoc-member-header" id="PropertyMap-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">property <b>size</b></a>
+<h3 class="pdoc-member-header" id="PropertyMap-keys">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>keys</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+
+<pre class="highlight"><span class='kd'></span>keys(): IterableIterator&lt;<a href='#Entry'>Entry</a>&gt;</pre>
+
+
+Returns an iterable of keys in the map
+
+</div>
+<h3 class="pdoc-member-header" id="PropertyMap-set">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>set</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>set(key: <a href='#Entry'>Entry</a>, value: <a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>): <span class='kd'>this</span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="PropertyMap-values">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">method <b>values</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>values(): IterableIterator&lt;<a href='#PropertyInfoAndValue'>PropertyInfoAndValue</a>&gt;</pre>
+
+
+Returns an iterable of values in the map
+
+</div>
+<h3 class="pdoc-member-header" id="PropertyMap-Map">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">property <b>Map</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>Map: MapConstructor;</pre>
 </div>
 <h3 class="pdoc-member-header" id="PropertyMap-__@toStringTag">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">property <b>__@toStringTag</b></a>
@@ -1013,11 +1013,11 @@ Returns an iterable of key, value pairs for every entry in the map.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>__@toStringTag: <span class='s2'>"Map"</span>;</pre>
 </div>
-<h3 class="pdoc-member-header" id="PropertyMap-Map">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">property <b>Map</b></a>
+<h3 class="pdoc-member-header" id="PropertyMap-size">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/closure/createClosure.ts#L79">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>Map: MapConstructor;</pre>
+<pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SerializeFunctionArgs">

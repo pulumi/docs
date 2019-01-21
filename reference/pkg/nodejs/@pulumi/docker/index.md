@@ -129,13 +129,45 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
-<h3 class="pdoc-member-header" id="Container-cpuShares">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L52">property <b>cpuShares</b></a>
+<h3 class="pdoc-member-header" id="Container-attach">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L26">property <b>attach</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>cpuShares: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>attach: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-CPU shares (relative weight) for the container.
+If true attach to the container after its creation and waits the end of his execution.
+
+</div>
+<h3 class="pdoc-member-header" id="Container-bridge">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L30">property <b>bridge</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>bridge: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The network bridge of the container as read from its NetworkSettings.
+
+</div>
+<h3 class="pdoc-member-header" id="Container-capabilities">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L34">property <b>capabilities</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>capabilities: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
+    adds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
+    drops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
+} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+See Capabilities below for details.
+
+</div>
+<h3 class="pdoc-member-header" id="Container-command">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L40">property <b>command</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>command: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+The command to use to start the
+container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
+command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
 
 </div>
 <h3 class="pdoc-member-header" id="Container-containerLogs">
@@ -156,15 +188,13 @@ The logs of the container if its execution is done (`attach` must be disabled).
 A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
 
 </div>
-<h3 class="pdoc-member-header" id="Container-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L40">property <b>command</b></a>
+<h3 class="pdoc-member-header" id="Container-cpuShares">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L52">property <b>cpuShares</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>command: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>cpuShares: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-The command to use to start the
-container. For example, to run `/usr/bin/myprogram -f baz.conf` set the
-command to be `["/usr/bin/myprogram", "-f", "baz.conf"]`.
+CPU shares (relative weight) for the container.
 
 </div>
 <h3 class="pdoc-member-header" id="Container-destroyGraceSeconds">
@@ -579,16 +609,17 @@ See Ulimits below for
 details.
 
 </div>
-<h3 class="pdoc-member-header" id="Container-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L34">property <b>capabilities</b></a>
+<h3 class="pdoc-member-header" id="Container-uploads">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L231">property <b>uploads</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>capabilities: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    adds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    drops: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>uploads: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
+    content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+    executable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
+    file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
+}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-See Capabilities below for details.
+See File Upload below for details.
 
 </div>
 <h3 class="pdoc-member-header" id="Container-urn">
@@ -636,37 +667,6 @@ Sets the usernamespace mode for the container when usernamespace remapping optio
 See Volumes below for details.
 
 </div>
-<h3 class="pdoc-member-header" id="Container-bridge">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L30">property <b>bridge</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>bridge: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The network bridge of the container as read from its NetworkSettings.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-attach">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L26">property <b>attach</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>attach: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-If true attach to the container after its creation and waits the end of his execution.
-
-</div>
-<h3 class="pdoc-member-header" id="Container-uploads">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/container.ts#L231">property <b>uploads</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>uploads: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    executable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-See File Upload below for details.
-
-</div>
 </div>
 <h2 class="pdoc-module-header" id="Image">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L78">class <b>Image</b></a>
@@ -697,6 +697,14 @@ Azure Container Instances.
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
+<h3 class="pdoc-member-header" id="Image-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+</div>
 <h3 class="pdoc-member-header" id="Image-registerOutputs">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method <b>registerOutputs</b></a>
 </h3>
@@ -705,13 +713,27 @@ Azure Container Instances.
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
-<h3 class="pdoc-member-header" id="Image-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<h3 class="pdoc-member-header" id="Image-baseImageName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L83">property <b>baseImageName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>baseImageName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+The base image name that was built and pushed.  This does not include the id annotation, so
+is not pinned to the specific build performed by this docker.Image.
 
+</div>
+<h3 class="pdoc-member-header" id="Image-digest">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L101">property <b>digest</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>digest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="Image-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L94">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Image-imageName">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L87">property <b>imageName</b></a>
@@ -740,28 +762,6 @@ The server the image is located at.
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-</div>
-<h3 class="pdoc-member-header" id="Image-baseImageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L83">property <b>baseImageName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>baseImageName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The base image name that was built and pushed.  This does not include the id annotation, so
-is not pinned to the specific build performed by this docker.Image.
-
-</div>
-<h3 class="pdoc-member-header" id="Image-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L101">property <b>digest</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>digest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Image-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/image.ts#L94">property <b>id</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Network">
@@ -821,6 +821,36 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="Network-attachable">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L29">property <b>attachable</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>attachable: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+Enable manual container attachment to the network.
+Defaults to `false`.
+
+</div>
+<h3 class="pdoc-member-header" id="Network-checkDuplicate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L34">property <b>checkDuplicate</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>checkDuplicate: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+Requests daemon to check for networks
+with same name.
+
+</div>
+<h3 class="pdoc-member-header" id="Network-driver">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L39">property <b>driver</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>driver: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Name of the network driver to use. Defaults to
+`bridge` driver.
+
+</div>
 <h3 class="pdoc-member-header" id="Network-id">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
 </h3>
@@ -876,14 +906,14 @@ Driver used by the custom IP scheme of the
 network.
 
 </div>
-<h3 class="pdoc-member-header" id="Network-driver">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L39">property <b>driver</b></a>
+<h3 class="pdoc-member-header" id="Network-ipv6">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L64">property <b>ipv6</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>driver: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ipv6: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
-Name of the network driver to use. Defaults to
-`bridge` driver.
+Enable IPv6 networking.
+Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-labels">
@@ -928,36 +958,6 @@ the drivers.
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-</div>
-<h3 class="pdoc-member-header" id="Network-checkDuplicate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L34">property <b>checkDuplicate</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>checkDuplicate: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-Requests daemon to check for networks
-with same name.
-
-</div>
-<h3 class="pdoc-member-header" id="Network-attachable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L29">property <b>attachable</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>attachable: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-Enable manual container attachment to the network.
-Defaults to `false`.
-
-</div>
-<h3 class="pdoc-member-header" id="Network-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/network.ts#L64">property <b>ipv6</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>ipv6: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-Enable IPv6 networking.
-Defaults to `false`.
 
 </div>
 </div>
@@ -1052,14 +1052,6 @@ Create a RemoteImage resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 </div>
-<h3 class="pdoc-member-header" id="RemoteImage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-</div>
 <h3 class="pdoc-member-header" id="RemoteImage-get">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L23">method <b>get</b></a>
 </h3>
@@ -1070,6 +1062,14 @@ Create a RemoteImage resource with the given unique name, arguments, and options
 
 Get an existing RemoteImage resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteImage-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="RemoteImage-isInstance">
@@ -1092,6 +1092,32 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteImage-keepLocally">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L32">property <b>keepLocally</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>keepLocally: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+If true, then the Docker image won't be
+deleted on destroy operation. If this is false, it will delete the image from
+the docker local storage on destroy operation.
+
+</div>
+<h3 class="pdoc-member-header" id="RemoteImage-latest">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L33">property <b>latest</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>latest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="RemoteImage-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L37">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The name of the Docker image, including any tags or SHA256 repo digests.
 
 </div>
 <h3 class="pdoc-member-header" id="RemoteImage-pullTrigger">
@@ -1125,32 +1151,6 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 </div>
-<h3 class="pdoc-member-header" id="RemoteImage-keepLocally">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L32">property <b>keepLocally</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>keepLocally: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-If true, then the Docker image won't be
-deleted on destroy operation. If this is false, it will delete the image from
-the docker local storage on destroy operation.
-
-</div>
-<h3 class="pdoc-member-header" id="RemoteImage-latest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L33">property <b>latest</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>latest: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="RemoteImage-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/remoteImage.ts#L37">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The name of the Docker image, including any tags or SHA256 repo digests.
-
-</div>
 </div>
 <h2 class="pdoc-module-header" id="Volume">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/volume.ts#L12">class <b>Volume</b></a>
@@ -1177,14 +1177,6 @@ Create a Volume resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 </div>
-<h3 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-</div>
 <h3 class="pdoc-member-header" id="Volume-get">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/volume.ts#L21">method <b>get</b></a>
 </h3>
@@ -1195,6 +1187,14 @@ Create a Volume resource with the given unique name, arguments, and options.
 
 Get an existing Volume resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
+
+</div>
+<h3 class="pdoc-member-header" id="Volume-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Volume-isInstance">
@@ -1216,32 +1216,6 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <pre class="highlight"><span class='kd'>public </span>driver: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 Driver type for the volume (defaults to local).
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-mountpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/volume.ts#L37">property <b>mountpoint</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>mountpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-</div>
-<h3 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/volume.ts#L42">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The name of the Docker volume (generated if not
-provided).
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Volume-driverOpts">
@@ -1270,6 +1244,32 @@ deployments and may be missing (undefined) during planning phases.
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 
 User-defined key/value metadata.
+
+</div>
+<h3 class="pdoc-member-header" id="Volume-mountpoint">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/volume.ts#L37">property <b>mountpoint</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>mountpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="Volume-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/volume.ts#L42">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The name of the Docker volume (generated if not
+provided).
+
+</div>
+<h3 class="pdoc-member-header" id="Volume-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>

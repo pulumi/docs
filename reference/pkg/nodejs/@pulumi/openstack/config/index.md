@@ -21,9 +21,11 @@ title: Module config
 * <a href="#defaultDomain">let defaultDomain</a>
 * <a href="#domainId">let domainId</a>
 * <a href="#domainName">let domainName</a>
+* <a href="#endpointOverrides">let endpointOverrides</a>
 * <a href="#endpointType">let endpointType</a>
 * <a href="#insecure">let insecure</a>
 * <a href="#key">let key</a>
+* <a href="#maxRetries">let maxRetries</a>
 * <a href="#password">let password</a>
 * <a href="#projectDomainId">let projectDomainId</a>
 * <a href="#projectDomainName">let projectDomainName</a>
@@ -107,14 +109,23 @@ The ID of the Domain to scope to (Identity v3).
 The name of the Domain to scope to (Identity v3).
 
 </div>
+<h2 class="pdoc-module-header" id="endpointOverrides">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L40">let <b>endpointOverrides</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>let</span> endpointOverrides: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{[key: string]: any}&gt;(&#34;endpointOverrides&#34;)</span>;</pre>
+
+A map of services with an endpoint to override what was from the Keystone catalog
+
+</div>
 <h2 class="pdoc-module-header" id="endpointType">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L37">let <b>endpointType</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L41">let <b>endpointType</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> endpointType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpointType&#34;) || utilities.getEnv(&#34;OS_ENDPOINT_TYPE&#34;)</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="insecure">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L41">let <b>insecure</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L45">let <b>insecure</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> insecure: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecure&#34;) || utilities.getEnvBoolean(&#34;OS_INSECURE&#34;)</span>;</pre>
@@ -123,7 +134,7 @@ Trust self-signed certificates.
 
 </div>
 <h2 class="pdoc-module-header" id="key">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L45">let <b>key</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L49">let <b>key</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;key&#34;) || utilities.getEnv(&#34;OS_KEY&#34;)</span>;</pre>
@@ -131,8 +142,17 @@ Trust self-signed certificates.
 A client private key to authenticate with.
 
 </div>
+<h2 class="pdoc-module-header" id="maxRetries">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L53">let <b>maxRetries</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>let</span> maxRetries: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;maxRetries&#34;)</span>;</pre>
+
+How many times HTTP connection should be retried until giving up.
+
+</div>
 <h2 class="pdoc-module-header" id="password">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L49">let <b>password</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L57">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;) || utilities.getEnv(&#34;OS_PASSWORD&#34;)</span>;</pre>
@@ -141,7 +161,7 @@ Password to login with.
 
 </div>
 <h2 class="pdoc-module-header" id="projectDomainId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L53">let <b>projectDomainId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L61">let <b>projectDomainId</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> projectDomainId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;projectDomainId&#34;) || utilities.getEnv(&#34;OS_PROJECT_DOMAIN_ID&#34;)</span>;</pre>
@@ -150,7 +170,7 @@ The ID of the domain where the proejct resides (Identity v3).
 
 </div>
 <h2 class="pdoc-module-header" id="projectDomainName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L57">let <b>projectDomainName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L65">let <b>projectDomainName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> projectDomainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;projectDomainName&#34;) || utilities.getEnv(&#34;OS_PROJECT_DOMAIN_NAME&#34;)</span>;</pre>
@@ -159,7 +179,7 @@ The name of the domain where the project resides (Identity v3).
 
 </div>
 <h2 class="pdoc-module-header" id="region">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L61">let <b>region</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L69">let <b>region</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;region&#34;) || utilities.getEnv(&#34;OS_REGION_NAME&#34;)</span>;</pre>
@@ -168,7 +188,7 @@ The OpenStack region to connect to.
 
 </div>
 <h2 class="pdoc-module-header" id="swauth">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L65">let <b>swauth</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L73">let <b>swauth</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> swauth: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;swauth&#34;) || utilities.getEnvBoolean(&#34;OS_SWAUTH&#34;)</span>;</pre>
@@ -177,7 +197,7 @@ Use Swift's authentication system instead of Keystone. Only used for interaction
 
 </div>
 <h2 class="pdoc-module-header" id="tenantId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L69">let <b>tenantId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L77">let <b>tenantId</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantId&#34;) || utilities.getEnv(&#34;OS_TENANT_ID&#34;, &#34;OS_PROJECT_ID&#34;)</span>;</pre>
@@ -186,7 +206,7 @@ The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 
 </div>
 <h2 class="pdoc-module-header" id="tenantName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L73">let <b>tenantName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L81">let <b>tenantName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> tenantName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tenantName&#34;) || utilities.getEnv(&#34;OS_TENANT_NAME&#34;, &#34;OS_PROJECT_NAME&#34;)</span>;</pre>
@@ -195,7 +215,7 @@ The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 
 </div>
 <h2 class="pdoc-module-header" id="token">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L77">let <b>token</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L85">let <b>token</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;OS_TOKEN&#34;, &#34;OS_AUTH_TOKEN&#34;)</span>;</pre>
@@ -204,7 +224,7 @@ Authentication token to use as an alternative to username/password.
 
 </div>
 <h2 class="pdoc-module-header" id="useOctavia">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L81">let <b>useOctavia</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L89">let <b>useOctavia</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> useOctavia: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;useOctavia&#34;) || utilities.getEnvBoolean(&#34;OS_USE_OCTAVIA&#34;)</span>;</pre>
@@ -213,7 +233,7 @@ If set to `true`, API requests will go the Load Balancer service (Octavia) inste
 
 </div>
 <h2 class="pdoc-module-header" id="userDomainId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L85">let <b>userDomainId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L93">let <b>userDomainId</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> userDomainId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;userDomainId&#34;) || utilities.getEnv(&#34;OS_USER_DOMAIN_ID&#34;)</span>;</pre>
@@ -222,7 +242,7 @@ The ID of the domain where the user resides (Identity v3).
 
 </div>
 <h2 class="pdoc-module-header" id="userDomainName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L89">let <b>userDomainName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L97">let <b>userDomainName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> userDomainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;userDomainName&#34;) || utilities.getEnv(&#34;OS_USER_DOMAIN_NAME&#34;)</span>;</pre>
@@ -231,7 +251,7 @@ The name of the domain where the user resides (Identity v3).
 
 </div>
 <h2 class="pdoc-module-header" id="userId">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L93">let <b>userId</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L101">let <b>userId</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;userId&#34;) || utilities.getEnv(&#34;OS_USER_ID&#34;)</span>;</pre>
@@ -240,7 +260,7 @@ Username to login with.
 
 </div>
 <h2 class="pdoc-module-header" id="userName">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L97">let <b>userName</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/config/vars.ts#L105">let <b>userName</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;userName&#34;) || utilities.getEnv(&#34;OS_USERNAME&#34;)</span>;</pre>

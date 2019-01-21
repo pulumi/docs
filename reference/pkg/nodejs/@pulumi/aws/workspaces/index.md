@@ -25,7 +25,7 @@ title: Module workspaces
 
 
 <h2 class="pdoc-module-header" id="getBundle">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L10">function <b>getBundle</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L21">function <b>getBundle</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -34,16 +34,27 @@ title: Module workspaces
 
 Use this data source to get information about a Workspaces Bundle.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const aws_workspaces_bundle_example = pulumi.output(aws.workspaces.getBundle({
+    bundleId: "wsb-b0s22j3d7",
+}));
+```
+
 </div>
 <h2 class="pdoc-module-header" id="GetBundleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L19">interface <b>GetBundleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L30">interface <b>GetBundleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getBundle.
 
 <h3 class="pdoc-member-header" id="GetBundleArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L23">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L34">property <b>bundleId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>bundleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -53,14 +64,14 @@ The ID of the bundle.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetBundleResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L29">interface <b>GetBundleResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L40">interface <b>GetBundleResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getBundle.
 
 <h3 class="pdoc-member-header" id="GetBundleResult-computeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L33">property <b>computeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L44">property <b>computeTypes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>computeTypes: {
@@ -71,7 +82,7 @@ The compute type. See supported fields below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L37">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L48">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -80,7 +91,7 @@ The description of the bundle.
 
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -89,7 +100,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L41">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L52">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -98,7 +109,7 @@ The name of the compute type.
 
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L45">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L56">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -107,7 +118,7 @@ The owner of the bundle.
 
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-rootStorages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L49">property <b>rootStorages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L60">property <b>rootStorages</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>rootStorages: {
@@ -118,7 +129,7 @@ The root volume. See supported fields below.
 
 </div>
 <h3 class="pdoc-member-header" id="GetBundleResult-userStorages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L53">property <b>userStorages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/workspaces/getBundle.ts#L64">property <b>userStorages</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>userStorages: {

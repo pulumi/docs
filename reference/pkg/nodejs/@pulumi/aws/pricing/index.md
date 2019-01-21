@@ -25,7 +25,7 @@ title: Module pricing
 
 
 <h2 class="pdoc-module-header" id="getProduct">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L11">function <b>getProduct</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L66">function <b>getProduct</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -35,16 +35,71 @@ title: Module pricing
 Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const aws_pricing_product_example = pulumi.output(aws.pricing.getProduct({
+    filters: [
+        {
+            field: "instanceType",
+            value: "c5.xlarge",
+        },
+        {
+            field: "operatingSystem",
+            value: "Linux",
+        },
+        {
+            field: "location",
+            value: "US East (N. Virginia)",
+        },
+        {
+            field: "preInstalledSw",
+            value: "NA",
+        },
+        {
+            field: "licenseModel",
+            value: "No License required",
+        },
+        {
+            field: "tenancy",
+            value: "Shared",
+        },
+    ],
+    serviceCode: "AmazonEC2",
+}));
+```
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const aws_pricing_product_example = pulumi.output(aws.pricing.getProduct({
+    filters: [
+        {
+            field: "instanceType",
+            value: "ds1.xlarge",
+        },
+        {
+            field: "location",
+            value: "US East (N. Virginia)",
+        },
+    ],
+    serviceCode: "AmazonRedshift",
+}));
+```
+
 </div>
 <h2 class="pdoc-module-header" id="GetProductArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L21">interface <b>GetProductArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L76">interface <b>GetProductArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getProduct.
 
 <h3 class="pdoc-member-header" id="GetProductArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L25">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L80">property <b>filters</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filters: {
@@ -56,7 +111,7 @@ A list of filters. Passed directly to the API (see GetProducts API reference). T
 
 </div>
 <h3 class="pdoc-member-header" id="GetProductArgs-serviceCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L29">property <b>serviceCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L84">property <b>serviceCode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>serviceCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -66,14 +121,14 @@ The code of the service. Available service codes can be fetched using the Descri
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetProductResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L35">interface <b>GetProductResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L90">interface <b>GetProductResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getProduct.
 
 <h3 class="pdoc-member-header" id="GetProductResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L98">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -82,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetProductResult-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L39">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/pricing/getProduct.ts#L94">property <b>result</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>result: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

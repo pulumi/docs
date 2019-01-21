@@ -1084,18 +1084,6 @@ The headers of the HTTP request.
 
 Response represents the response to an API request.
 
-<h3 class="pdoc-member-header" id="Response-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts#L78">method <b>status</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>status(code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <a href='#Response'>Response</a></pre>
-
-
-Sets the HTTP response status code and returns a `Response` for chaining
-operations.
-
-</div>
 <h3 class="pdoc-member-header" id="Response-end">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts#L97">method <b>end</b></a>
 </h3>
@@ -1156,6 +1144,18 @@ the optional status code, defaulting to 302.
 
 Sets a header on the HTTP response and returns the `Response` for
 chaining operations.
+
+</div>
+<h3 class="pdoc-member-header" id="Response-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts#L78">method <b>status</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>status(code: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <a href='#Response'>Response</a></pre>
+
+
+Sets the HTTP response status code and returns a `Response` for chaining
+operations.
 
 </div>
 <h3 class="pdoc-member-header" id="Response-write">
@@ -1547,17 +1547,6 @@ All queries provide a subset of properties to filter on, and only filters on
 value equality are supported.  The `get`, `update` and `delete` operations
 expect the query to contain only the value for the primary key.
 
-<h3 class="pdoc-member-header" id="Table-update">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L111">method <b>update</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>update(query: Object, updates: Object): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
-
-
-Updates a documents in the table.
-
-</div>
 <h3 class="pdoc-member-header" id="Table-delete">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L101">method <b>delete</b></a>
 </h3>
@@ -1605,13 +1594,15 @@ Gets all documents from the table.
 <pre class="highlight"><span class='kd'></span>scan(callback: (items: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[]) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
 
 </div>
-<h3 class="pdoc-member-header" id="Table-primaryKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L65">property <b>primaryKeyType</b></a>
+<h3 class="pdoc-member-header" id="Table-update">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L111">method <b>update</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>primaryKeyType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The type of the primary key.
+<pre class="highlight"><span class='kd'></span>update(query: Object, updates: Object): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+
+
+Updates a documents in the table.
 
 </div>
 <h3 class="pdoc-member-header" id="Table-primaryKey">
@@ -1621,6 +1612,15 @@ The type of the primary key.
 <pre class="highlight"><span class='kd'></span>primaryKey: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The name of the primary key.
+
+</div>
+<h3 class="pdoc-member-header" id="Table-primaryKeyType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts#L65">property <b>primaryKeyType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>primaryKeyType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The type of the primary key.
 
 </div>
 </div>
