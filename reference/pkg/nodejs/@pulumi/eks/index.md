@@ -31,10 +31,21 @@ import * as eks from "@pulumi/eks";
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents" markdown="1">
 * <a href="#Cluster">class Cluster</a>
+* <a href="#NodeGroup">class NodeGroup</a>
 * <a href="#ServiceRole">class ServiceRole</a>
 * <a href="#VpcCni">class VpcCni</a>
+* <a href="#createCore">function createCore</a>
+* <a href="#createDashboard">function createDashboard</a>
+* <a href="#createNodeGroup">function createNodeGroup</a>
+* <a href="#createNodeGroupSecurityGroup">function createNodeGroupSecurityGroup</a>
 * <a href="#createStorageClass">function createStorageClass</a>
+* <a href="#ClusterNodeGroupOptions">interface ClusterNodeGroupOptions</a>
 * <a href="#ClusterOptions">interface ClusterOptions</a>
+* <a href="#CoreData">interface CoreData</a>
+* <a href="#DashboardOptions">interface DashboardOptions</a>
+* <a href="#NodeGroupData">interface NodeGroupData</a>
+* <a href="#NodeGroupOptions">interface NodeGroupOptions</a>
+* <a href="#NodeGroupSecurityGroupOptions">interface NodeGroupSecurityGroupOptions</a>
 * <a href="#RoleMapping">interface RoleMapping</a>
 * <a href="#ServiceRoleArgs">interface ServiceRoleArgs</a>
 * <a href="#StorageClass">interface StorageClass</a>
@@ -42,14 +53,14 @@ import * as eks from "@pulumi/eks";
 * <a href="#VpcCniOptions">interface VpcCniOptions</a>
 * <a href="#EBSVolumeType">type EBSVolumeType</a>
 
-<a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cni.ts">cni.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/servicerole.ts">servicerole.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/storageclass.ts">storageclass.ts</a> 
+<a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts">cluster.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cni.ts">cni.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/dashboard.ts">dashboard.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts">nodegroup.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/securitygroup.ts">securitygroup.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/servicerole.ts">servicerole.ts</a> <a href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/storageclass.ts">storageclass.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Cluster">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L188">class <b>Cluster</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L473">class <b>Cluster</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -58,7 +69,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 nodes, its optional StorageClasses, and an optional deployment of the Kubernetes Dashboard.
 
 <h3 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L223"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L518"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -73,20 +84,20 @@ requested.
 * `opts` A bag of options that control this copmonent&#39;s behavior.
 
 </div>
+<h3 class="pdoc-member-header" id="Cluster-createNodeGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L596">method <b>createNodeGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>createNodeGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ClusterNodeGroupOptions'>ClusterNodeGroupOptions</a>): <a href='#NodeGroup'>NodeGroup</a></pre>
+
+</div>
 <h3 class="pdoc-member-header" id="Cluster-getProvider">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="Cluster-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-isInstance">
@@ -97,8 +108,16 @@ requested.
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
 </div>
+<h3 class="pdoc-member-header" id="Cluster-registerOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method <b>registerOutputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
 <h3 class="pdoc-member-header" id="Cluster-clusterSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L208">property <b>clusterSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L493">property <b>clusterSecurityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>clusterSecurityGroup: aws.ec2.SecurityGroup;</pre>
@@ -106,8 +125,54 @@ requested.
 The security group for the EKS cluster.
 
 </div>
+<h3 class="pdoc-member-header" id="Cluster-core">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L518">property <b>core</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>core: <a href='#CoreData'>CoreData</a>;</pre>
+
+The EKS cluster and it's dependencies.
+
+</div>
+<h3 class="pdoc-member-header" id="Cluster-eksCluster">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L513">property <b>eksCluster</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>eksCluster: aws.eks.Cluster;</pre>
+
+The EKS cluster.
+
+</div>
+<h3 class="pdoc-member-header" id="Cluster-eksClusterIngressRule">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L508">property <b>eksClusterIngressRule</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>eksClusterIngressRule: aws.ec2.SecurityGroupRule;</pre>
+
+The ingress rule that gives node group access to cluster API server
+
+</div>
+<h3 class="pdoc-member-header" id="Cluster-instanceRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L498">property <b>instanceRole</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>instanceRole: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.iam.Role&gt;;</pre>
+
+The service role used by the EKS cluster.
+
+</div>
+<h3 class="pdoc-member-header" id="Cluster-kubeconfig">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L478">property <b>kubeconfig</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>kubeconfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
+
+A kubeconfig that can be used to connect to the EKS cluster. This must be serialized as a string before passing
+to the Kubernetes provider.
+
+</div>
 <h3 class="pdoc-member-header" id="Cluster-nodeSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L218">property <b>nodeSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L503">property <b>nodeSecurityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>nodeSecurityGroup: aws.ec2.SecurityGroup;</pre>
@@ -116,7 +181,7 @@ The security group for the cluster's nodes.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-provider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L203">property <b>provider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L488">property <b>provider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>provider: k8s.Provider;</pre>
@@ -139,32 +204,82 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 </div>
-<h3 class="pdoc-member-header" id="Cluster-eksCluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L223">property <b>eksCluster</b></a>
+</div>
+<h2 class="pdoc-module-header" id="NodeGroup">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L120">class <b>NodeGroup</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+<pre class="highlight"><span class='kd'>implements</span> <a href='#NodeGroupData'>NodeGroupData</a></pre>
+
+NodeGroup is a component that wraps the AWS EC2 instances that provide compute capacity for an EKS cluster.
+
+<h3 class="pdoc-member-header" id="NodeGroup-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L129"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>eksCluster: aws.eks.Cluster;</pre>
 
-The EKS cluster.
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NodeGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NodeGroupOptions'>NodeGroupOptions</a>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+
+
+Create a new EKS cluster with worker nodes, optional storage classes, and deploy the Kubernetes Dashboard if
+requested.
+
+* `name` The _unique_ name of this component.
+* `args` The arguments for this cluster.
+* `opts` A bag of options that control this copmonent&#39;s behavior.
 
 </div>
-<h3 class="pdoc-member-header" id="Cluster-instanceRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L213">property <b>instanceRole</b></a>
+<h3 class="pdoc-member-header" id="NodeGroup-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>instanceRole: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.iam.Role&gt;;</pre>
 
-The service role used by the EKS cluster.
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
-<h3 class="pdoc-member-header" id="Cluster-kubeconfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L193">property <b>kubeconfig</b></a>
+<h3 class="pdoc-member-header" id="NodeGroup-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>kubeconfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
 
-A kubeconfig that can be used to connect to the EKS cluster. This must be serialized as a string before passing
-to the Kubernetes provider.
+<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroup-registerOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method <b>registerOutputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroup-cfnStack">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L129">property <b>cfnStack</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>cfnStack: aws.cloudformation.Stack;</pre>
+
+The CloudFormation Stack which defines the Node AutoScalingGroup.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroup-nodeSecurityGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L124">property <b>nodeSecurityGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>nodeSecurityGroup: aws.ec2.SecurityGroup;</pre>
+
+The security group for the cluster's nodes.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroup-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
 
 </div>
 </div>
@@ -200,20 +315,20 @@ Create a new ServiceRole.
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
-<h3 class="pdoc-member-header" id="ServiceRole-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-</div>
 <h3 class="pdoc-member-header" id="ServiceRole-isInstance">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+</div>
+<h3 class="pdoc-member-header" id="ServiceRole-registerOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L136">method <b>registerOutputs</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceRole-role">
@@ -291,6 +406,38 @@ deployments.
 
 </div>
 </div>
+<h2 class="pdoc-module-header" id="createCore">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L83">function <b>createCore</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>createCore(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ClusterOptions'>ClusterOptions</a>, parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>pulumi.ComponentResource</a>): <a href='#CoreData'>CoreData</a></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="createDashboard">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/dashboard.ts#L22">function <b>createDashboard</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>createDashboard(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DashboardOptions'>DashboardOptions</a>, parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>pulumi.ComponentResource</a>, k8sProvider: k8s.Provider): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="createNodeGroup">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L159">function <b>createNodeGroup</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>createNodeGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NodeGroupOptions'>NodeGroupOptions</a>, parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>pulumi.ComponentResource</a>, k8sProvider: k8s.Provider): <a href='#NodeGroupData'>NodeGroupData</a></pre>
+
+</div>
+<h2 class="pdoc-module-header" id="createNodeGroupSecurityGroup">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/securitygroup.ts#L35">function <b>createNodeGroupSecurityGroup</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>createNodeGroupSecurityGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NodeGroupSecurityGroupOptions'>NodeGroupSecurityGroupOptions</a>, parent: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>pulumi.ComponentResource</a>): aws.ec2.SecurityGroup</pre>
+
+</div>
 <h2 class="pdoc-module-header" id="createStorageClass">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/storageclass.ts#L98">function <b>createStorageClass</b></a>
 </h2>
@@ -299,15 +446,158 @@ deployments.
 <pre class="highlight"><span class='kd'></span>createStorageClass(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, storageClass: <a href='#StorageClass'>StorageClass</a>, opts: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
+<h2 class="pdoc-module-header" id="ClusterNodeGroupOptions">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L394">interface <b>ClusterNodeGroupOptions</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+NodeGroupOptions describes the configuration options accepted by a cluster
+to create its own node groups. It's a subset of NodeGroupOptions.
+
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-amiId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L461">property <b>amiId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>amiId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The AMI to use for worker nodes. Defaults to the value of Amazon EKS - Optimized AMI if no value is provided.
+More information about the AWS eks optimized ami is available at https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
+Use the information provided by AWS if you want to build your own AMI.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-desiredCapacity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L444">property <b>desiredCapacity</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The number of worker nodes that should be running in the cluster. Defaults to 2.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-instanceType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L405">property <b>instanceType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>instanceType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ec2.InstanceType&gt;;</pre>
+
+The instance type to use for the cluster's nodes. Defaults to "t2.medium".
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-keyName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L427">property <b>keyName</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>keyName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Name of the key pair to use for SSH access to worker nodes.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L466">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
+
+Custom k8s node labels to be attached to each woker node
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-maxSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L454">property <b>maxSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>maxSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The maximum number of worker nodes running in the cluster. Defaults to 2.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-minSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L449">property <b>minSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>minSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The minimum number of worker nodes running in the cluster. Defaults to 1.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-nodePublicKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L422">property <b>nodePublicKey</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodePublicKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Public key material for SSH access to worker nodes. See allowed formats at:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+If not provided, no SSH access is enabled on VMs.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-nodeRootVolumeSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L432">property <b>nodeRootVolumeSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeRootVolumeSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The size in GiB of a cluster node's root volume. Defaults to 20.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-nodeSecurityGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L415">property <b>nodeSecurityGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeSecurityGroup?: aws.ec2.SecurityGroup;</pre>
+
+The security group to use for all nodes in this worker node group.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-nodeSubnetIds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L400">property <b>nodeSubnetIds</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeSubnetIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+
+The IDs of the explicit node subnets to attach to the worker node group.
+
+This option overrides clusterSubnetIds option.
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-nodeUserData">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L439">property <b>nodeUserData</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeUserData?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node
+signals its readiness to the managing CloudFormation stack. This code must be a typical user data script:
+critically it must begin with an interpreter directive (i.e. a `#!`).
+
+</div>
+<h3 class="pdoc-member-header" id="ClusterNodeGroupOptions-spotPrice">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L410">property <b>spotPrice</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>spotPrice?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Bidding price for spot instance. If set, only spot instances will be added as worker node
+
+</div>
+</div>
 <h2 class="pdoc-module-header" id="ClusterOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L72">interface <b>ClusterOptions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L263">interface <b>ClusterOptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 ClusterOptions describes the configuration options accepted by an EKSCluster component.
 
+<h3 class="pdoc-member-header" id="ClusterOptions-customInstanceRolePolicy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L307">property <b>customInstanceRolePolicy</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>customInstanceRolePolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Attach a custom role policy to worker node instance role
+
+</div>
 <h3 class="pdoc-member-header" id="ClusterOptions-deployDashboard">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L181">property <b>deployDashboard</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L387">property <b>deployDashboard</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deployDashboard?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -332,7 +622,7 @@ Defaults to `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L142">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L343">property <b>desiredCapacity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -340,8 +630,17 @@ Defaults to `true`.
 The number of worker nodes that should be running in the cluster. Defaults to 2.
 
 </div>
+<h3 class="pdoc-member-header" id="ClusterOptions-instanceRole">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L302">property <b>instanceRole</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>instanceRole?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.iam.Role&gt;;</pre>
+
+The instance role to use for all nodes in this node group.
+
+</div>
 <h3 class="pdoc-member-header" id="ClusterOptions-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L106">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L297">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ec2.InstanceType&gt;;</pre>
@@ -350,7 +649,7 @@ The instance type to use for the cluster's nodes. Defaults to "t2.medium".
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L152">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L353">property <b>maxSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maxSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -359,7 +658,7 @@ The maximum number of worker nodes running in the cluster. Defaults to 2.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L147">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L348">property <b>minSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>minSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -368,7 +667,7 @@ The minimum number of worker nodes running in the cluster. Defaults to 1.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-nodeAmiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L113">property <b>nodeAmiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L314">property <b>nodeAmiId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeAmiId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -379,7 +678,7 @@ Use the information provided by AWS if you want to build your own AMI.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-nodePublicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L125">property <b>nodePublicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L321">property <b>nodePublicKey</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodePublicKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -390,7 +689,7 @@ If not provided, no SSH access is enabled on VMs.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-nodeRootVolumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L130">property <b>nodeRootVolumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L331">property <b>nodeRootVolumeSize</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeRootVolumeSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -399,7 +698,7 @@ The size in GiB of a cluster node's root volume. Defaults to 20.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-nodeSubnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L118">property <b>nodeSubnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L326">property <b>nodeSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeSubnetIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -408,7 +707,7 @@ The subnets to use for worker nodes. Defaults to the value of subnetIds.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-nodeUserData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L137">property <b>nodeUserData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L338">property <b>nodeUserData</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeUserData?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -419,7 +718,7 @@ critically it must begin with an interpreter directive (i.e. a `#!`).
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-roleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L90">property <b>roleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L281">property <b>roleMappings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>roleMappings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RoleMapping'>RoleMapping</a>&gt;[]&gt;;</pre>
@@ -427,8 +726,17 @@ critically it must begin with an interpreter directive (i.e. a `#!`).
 Optional mappings from AWS IAM roles to Kubernetes users and groups.
 
 </div>
+<h3 class="pdoc-member-header" id="ClusterOptions-skipDefaultNodeGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L366">property <b>skipDefaultNodeGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>skipDefaultNodeGroup?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+
+If this toggle is set to true, the EKS cluster will be created without node group attached.
+
+</div>
 <h3 class="pdoc-member-header" id="ClusterOptions-storageClasses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L160">property <b>storageClasses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L361">property <b>storageClasses</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>storageClasses?: {[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='#StorageClass'>StorageClass</a>} | <a href='#EBSVolumeType'>EBSVolumeType</a>;</pre>
@@ -440,7 +748,7 @@ Defaults to "gp2".
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L85">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L276">property <b>subnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -452,7 +760,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html for more deta
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-userMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L95">property <b>userMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L286">property <b>userMappings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>userMappings?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#UserMapping'>UserMapping</a>&gt;[]&gt;;</pre>
@@ -461,7 +769,7 @@ Optional mappings from AWS IAM users to Kubernetes users and groups.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-vpcCniOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L101">property <b>vpcCniOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L292">property <b>vpcCniOptions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcCniOptions?: <a href='#VpcCniOptions'>VpcCniOptions</a>;</pre>
@@ -471,7 +779,7 @@ for the VpcCniOptions type.
 
 </div>
 <h3 class="pdoc-member-header" id="ClusterOptions-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L77">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L268">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpcId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -481,15 +789,282 @@ default VPC.
 
 </div>
 </div>
+<h2 class="pdoc-module-header" id="CoreData">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L71">interface <b>CoreData</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+CoreData defines the core set of data associated with an EKS cluster, including the network in which is runs.
+
+<h3 class="pdoc-member-header" id="CoreData-cluster">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L72">property <b>cluster</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>cluster: aws.eks.Cluster;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-clusterSecurityGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L75">property <b>clusterSecurityGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>clusterSecurityGroup: aws.ec2.SecurityGroup;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-eksNodeAccess">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L78">property <b>eksNodeAccess</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>eksNodeAccess?: k8s.core.v1.ConfigMap;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-instanceProfile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L77">property <b>instanceProfile</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>instanceProfile: aws.iam.InstanceProfile;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-kubeconfig">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L79">property <b>kubeconfig</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>kubeconfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-provider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L76">property <b>provider</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>provider: k8s.Provider;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-subnetIds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L74">property <b>subnetIds</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>subnetIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-vpcCni">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L80">property <b>vpcCni</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>vpcCni?: <a href='#VpcCni'>VpcCni</a>;</pre>
+</div>
+<h3 class="pdoc-member-header" id="CoreData-vpcId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L73">property <b>vpcId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>vpcId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+</div>
+</div>
+<h2 class="pdoc-module-header" id="DashboardOptions">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/dashboard.ts#L20">interface <b>DashboardOptions</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+</div>
+<h2 class="pdoc-module-header" id="NodeGroupData">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L112">interface <b>NodeGroupData</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="NodeGroupData-cfnStack">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L114">property <b>cfnStack</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>cfnStack: aws.cloudformation.Stack;</pre>
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupData-nodeSecurityGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L113">property <b>nodeSecurityGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeSecurityGroup: aws.ec2.SecurityGroup;</pre>
+</div>
+</div>
+<h2 class="pdoc-module-header" id="NodeGroupOptions">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L27">interface <b>NodeGroupOptions</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+NodeGroupOptions describes the configuration options accepted by a NodeGroup component.
+
+<h3 class="pdoc-member-header" id="NodeGroupOptions-amiId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L104">property <b>amiId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>amiId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The AMI to use for worker nodes. Defaults to the value of Amazon EKS - Optimized AMI if no value is provided.
+More information about the AWS eks optimized ami is available at https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html.
+Use the information provided by AWS if you want to build your own AMI.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-cluster">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L31">property <b>cluster</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>cluster: <a href='#Cluster'>Cluster</a> | <a href='#CoreData'>CoreData</a>;</pre>
+
+The target EKS cluster.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-clusterIngressRule">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L58">property <b>clusterIngressRule</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>clusterIngressRule?: aws.ec2.SecurityGroupRule;</pre>
+
+The ingress rule that gives node group access.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-desiredCapacity">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L87">property <b>desiredCapacity</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>desiredCapacity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The number of worker nodes that should be running in the cluster. Defaults to 2.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-instanceType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L43">property <b>instanceType</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>instanceType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ec2.InstanceType&gt;;</pre>
+
+The instance type to use for the cluster's nodes. Defaults to "t2.medium".
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-keyName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L70">property <b>keyName</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>keyName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Name of the key pair to use for SSH access to worker nodes.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-labels">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L109">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>labels?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</pre>
+
+Custom k8s node labels to be attached to each woker node
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-maxSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L97">property <b>maxSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>maxSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The maximum number of worker nodes running in the cluster. Defaults to 2.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-minSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L92">property <b>minSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>minSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The minimum number of worker nodes running in the cluster. Defaults to 1.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-nodePublicKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L65">property <b>nodePublicKey</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodePublicKey?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Public key material for SSH access to worker nodes. See allowed formats at:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+If not provided, no SSH access is enabled on VMs.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-nodeRootVolumeSize">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L75">property <b>nodeRootVolumeSize</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeRootVolumeSize?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+
+The size in GiB of a cluster node's root volume. Defaults to 20.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-nodeSecurityGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L53">property <b>nodeSecurityGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeSecurityGroup?: aws.ec2.SecurityGroup;</pre>
+
+The security group to use for all nodes in this worker node group.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-nodeSubnetIds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L38">property <b>nodeSubnetIds</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeSubnetIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+
+The IDs of the explicit node subnets to attach to the worker node group.
+
+This option overrides clusterSubnetIds option.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-nodeUserData">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L82">property <b>nodeUserData</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>nodeUserData?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Extra code to run on node startup. This code will run after the AWS EKS bootstrapping code and before the node
+signals its readiness to the managing CloudFormation stack. This code must be a typical user data script:
+critically it must begin with an interpreter directive (i.e. a `#!`).
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupOptions-spotPrice">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/nodegroup.ts#L48">property <b>spotPrice</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>spotPrice?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Bidding price for spot instance. If set, only spot instances will be added as worker node
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="NodeGroupSecurityGroupOptions">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/securitygroup.ts#L18">interface <b>NodeGroupSecurityGroupOptions</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="NodeGroupSecurityGroupOptions-clusterSecurityGroup">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/securitygroup.ts#L27">property <b>clusterSecurityGroup</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>clusterSecurityGroup: aws.ec2.SecurityGroup;</pre>
+
+The security group associated with the EKS cluster.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupSecurityGroupOptions-eksCluster">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/securitygroup.ts#L32">property <b>eksCluster</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>eksCluster: aws.eks.Cluster;</pre>
+
+The security group associated with the EKS cluster.
+
+</div>
+<h3 class="pdoc-member-header" id="NodeGroupSecurityGroupOptions-vpcId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/securitygroup.ts#L22">property <b>vpcId</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>vpcId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The VPC in which to create the worker node group.
+
+</div>
+</div>
 <h2 class="pdoc-module-header" id="RoleMapping">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L32">interface <b>RoleMapping</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L31">interface <b>RoleMapping</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 RoleMapping describes a mapping from an AWS IAM role to a Kubernetes user and groups.
 
 <h3 class="pdoc-member-header" id="RoleMapping-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L46">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L45">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>groups: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -498,7 +1073,7 @@ A list of groups within Kubernetes to which the role is mapped.
 
 </div>
 <h3 class="pdoc-member-header" id="RoleMapping-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L36">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L35">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>roleArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ARN&gt;;</pre>
@@ -507,7 +1082,7 @@ The ARN of the IAM role to add.
 
 </div>
 <h3 class="pdoc-member-header" id="RoleMapping-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L41">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L40">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>username: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -671,14 +1246,14 @@ time.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserMapping">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L52">interface <b>UserMapping</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L51">interface <b>UserMapping</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 UserMapping describes a mapping from an AWS IAM user to a Kubernetes user and groups.
 
 <h3 class="pdoc-member-header" id="UserMapping-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L66">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L65">property <b>groups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>groups: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -687,7 +1262,7 @@ A list of groups within Kubernetes to which the user is mapped to.
 
 </div>
 <h3 class="pdoc-member-header" id="UserMapping-userArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L56">property <b>userArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L55">property <b>userArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>userArn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ARN&gt;;</pre>
@@ -696,7 +1271,7 @@ The ARN of the IAM user to add.
 
 </div>
 <h3 class="pdoc-member-header" id="UserMapping-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L61">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-eks/blob/master/nodejs/cluster.ts#L60">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>username: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
