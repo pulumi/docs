@@ -25,15 +25,247 @@ title: Module autoscale
 
 
 <h2 class="pdoc-module-header" id="Setting">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L10">class <b>Setting</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L242">class <b>Setting</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
 Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const azurerm_resource_group_test = new azure.core.ResourceGroup("test", {
+    location: "West US",
+    name: "autoscalingTest",
+});
+const azurerm_virtual_machine_scale_set_test = new azure.compute.ScaleSet("test", {});
+const azurerm_autoscale_setting_test = new azure.autoscale.Setting("test", {
+    location: azurerm_resource_group_test.location,
+    name: "myAutoscaleSetting",
+    notification: {
+        email: {
+            customEmails: ["admin@contoso.com"],
+            sendToSubscriptionAdministrator: true,
+            sendToSubscriptionCoAdministrator: true,
+        },
+    },
+    profiles: [{
+        capacity: {
+            default: 1,
+            maximum: 10,
+            minimum: 1,
+        },
+        name: "defaultProfile",
+        rules: [
+            {
+                metricTrigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: azurerm_virtual_machine_scale_set_test.id,
+                    operator: "GreaterThan",
+                    statistic: "Average",
+                    threshold: 75,
+                    timeAggregation: "Average",
+                    timeGrain: "PT1M",
+                    timeWindow: "PT5M",
+                },
+                scaleAction: {
+                    cooldown: "PT1M",
+                    direction: "Increase",
+                    type: "ChangeCount",
+                    value: Number.parseFloat("1"),
+                },
+            },
+            {
+                metricTrigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: azurerm_virtual_machine_scale_set_test.id,
+                    operator: "LessThan",
+                    statistic: "Average",
+                    threshold: 25,
+                    timeAggregation: "Average",
+                    timeGrain: "PT1M",
+                    timeWindow: "PT5M",
+                },
+                scaleAction: {
+                    cooldown: "PT1M",
+                    direction: "Decrease",
+                    type: "ChangeCount",
+                    value: Number.parseFloat("1"),
+                },
+            },
+        ],
+    }],
+    resourceGroupName: azurerm_resource_group_test.name,
+    targetResourceId: azurerm_virtual_machine_scale_set_test.id,
+});
+```
+
+## Example Usage (repeating on weekends)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const azurerm_resource_group_test = new azure.core.ResourceGroup("test", {
+    location: "West US",
+    name: "autoscalingTest",
+});
+const azurerm_virtual_machine_scale_set_test = new azure.compute.ScaleSet("test", {});
+const azurerm_autoscale_setting_test = new azure.autoscale.Setting("test", {
+    location: azurerm_resource_group_test.location,
+    name: "myAutoscaleSetting",
+    notification: {
+        email: {
+            customEmails: ["admin@contoso.com"],
+            sendToSubscriptionAdministrator: true,
+            sendToSubscriptionCoAdministrator: true,
+        },
+    },
+    profiles: [{
+        capacity: {
+            default: 1,
+            maximum: 10,
+            minimum: 1,
+        },
+        name: "Weekends",
+        recurrence: {
+            days: [
+                "Saturday",
+                "Sunday",
+            ],
+            frequency: "Week",
+            hours: 12,
+            minutes: 0,
+            timezone: "Pacific Standard Time",
+        },
+        rules: [
+            {
+                metricTrigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: azurerm_virtual_machine_scale_set_test.id,
+                    operator: "GreaterThan",
+                    statistic: "Average",
+                    threshold: 90,
+                    timeAggregation: "Average",
+                    timeGrain: "PT1M",
+                    timeWindow: "PT5M",
+                },
+                scaleAction: {
+                    cooldown: "PT1M",
+                    direction: "Increase",
+                    type: "ChangeCount",
+                    value: Number.parseFloat("2"),
+                },
+            },
+            {
+                metricTrigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: azurerm_virtual_machine_scale_set_test.id,
+                    operator: "LessThan",
+                    statistic: "Average",
+                    threshold: 10,
+                    timeAggregation: "Average",
+                    timeGrain: "PT1M",
+                    timeWindow: "PT5M",
+                },
+                scaleAction: {
+                    cooldown: "PT1M",
+                    direction: "Decrease",
+                    type: "ChangeCount",
+                    value: Number.parseFloat("2"),
+                },
+            },
+        ],
+    }],
+    resourceGroupName: azurerm_resource_group_test.name,
+    targetResourceId: azurerm_virtual_machine_scale_set_test.id,
+});
+```
+
+## Example Usage (for fixed dates)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const azurerm_resource_group_test = new azure.core.ResourceGroup("test", {
+    location: "West US",
+    name: "autoscalingTest",
+});
+const azurerm_virtual_machine_scale_set_test = new azure.compute.ScaleSet("test", {});
+const azurerm_autoscale_setting_test = new azure.autoscale.Setting("test", {
+    enabled: true,
+    location: azurerm_resource_group_test.location,
+    name: "myAutoscaleSetting",
+    notification: {
+        email: {
+            customEmails: ["admin@contoso.com"],
+            sendToSubscriptionAdministrator: true,
+            sendToSubscriptionCoAdministrator: true,
+        },
+    },
+    profiles: [{
+        capacity: {
+            default: 1,
+            maximum: 10,
+            minimum: 1,
+        },
+        fixedDate: {
+            end: "2020-07-31T23:59:59Z",
+            start: "2020-07-01T00:00:00Z",
+            timezone: "Pacific Standard Time",
+        },
+        name: "forJuly",
+        rules: [
+            {
+                metricTrigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: azurerm_virtual_machine_scale_set_test.id,
+                    operator: "GreaterThan",
+                    statistic: "Average",
+                    threshold: 90,
+                    timeAggregation: "Average",
+                    timeGrain: "PT1M",
+                    timeWindow: "PT5M",
+                },
+                scaleAction: {
+                    cooldown: "PT1M",
+                    direction: "Increase",
+                    type: "ChangeCount",
+                    value: Number.parseFloat("2"),
+                },
+            },
+            {
+                metricTrigger: {
+                    metricName: "Percentage CPU",
+                    metricResourceId: azurerm_virtual_machine_scale_set_test.id,
+                    operator: "LessThan",
+                    statistic: "Average",
+                    threshold: 10,
+                    timeAggregation: "Average",
+                    timeGrain: "PT1M",
+                    timeWindow: "PT5M",
+                },
+                scaleAction: {
+                    cooldown: "PT1M",
+                    direction: "Decrease",
+                    type: "ChangeCount",
+                    value: Number.parseFloat("2"),
+                },
+            },
+        ],
+    }],
+    resourceGroupName: azurerm_resource_group_test.name,
+    targetResourceId: azurerm_virtual_machine_scale_set_test.id,
+});
+```
+
 <h3 class="pdoc-member-header" id="Setting-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L286"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -48,7 +280,7 @@ Create a Setting resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Setting-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L251">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -79,8 +311,36 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
+<h3 class="pdoc-member-header" id="Setting-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L258">property <b>enabled</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>enabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+
+Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
+
+</div>
+<h3 class="pdoc-member-header" id="Setting-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+</div>
+<h3 class="pdoc-member-header" id="Setting-location">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L262">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
+
+</div>
 <h3 class="pdoc-member-header" id="Setting-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L34">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L266">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -89,7 +349,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 
 </div>
 <h3 class="pdoc-member-header" id="Setting-notification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L38">property <b>notification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L270">property <b>notification</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>notification: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -108,7 +368,7 @@ Specifies a `notification` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="Setting-profiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L42">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L274">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>profiles: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -152,17 +412,17 @@ Specifies a `notification` block as defined below.
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
 </div>
-<h3 class="pdoc-member-header" id="Setting-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L30">property <b>location</b></a>
+<h3 class="pdoc-member-header" id="Setting-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L278">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
+The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 
 </div>
 <h3 class="pdoc-member-header" id="Setting-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L50">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L282">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -171,7 +431,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Setting-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L54">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L286">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -189,44 +449,16 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 </div>
-<h3 class="pdoc-member-header" id="Setting-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-
-id is the provider-assigned unique ID for this managed resource.  It is set during
-deployments and may be missing (undefined) during planning phases.
-
-</div>
-<h3 class="pdoc-member-header" id="Setting-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L26">property <b>enabled</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>enabled: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-
-Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-
-</div>
-<h3 class="pdoc-member-header" id="Setting-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L46">property <b>resourceGroupName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-
-The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-
-</div>
 </div>
 <h2 class="pdoc-module-header" id="SettingArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L144">interface <b>SettingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L376">interface <b>SettingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Setting resource.
 
 <h3 class="pdoc-member-header" id="SettingArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L148">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L380">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -235,7 +467,7 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L152">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L384">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -244,7 +476,7 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L156">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L388">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -253,7 +485,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-notification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L160">property <b>notification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L392">property <b>notification</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>notification?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -272,7 +504,7 @@ Specifies a `notification` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-profiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L164">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L396">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>profiles: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -317,7 +549,7 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L168">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L400">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -326,7 +558,7 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L404">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -335,7 +567,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L176">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L408">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetResourceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -345,14 +577,14 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SettingState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L106">interface <b>SettingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L338">interface <b>SettingState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Setting resources.
 
 <h3 class="pdoc-member-header" id="SettingState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L110">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L342">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -361,7 +593,7 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L114">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L346">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>location?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -370,7 +602,7 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L350">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -379,7 +611,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-notification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L122">property <b>notification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L354">property <b>notification</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>notification?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -398,7 +630,7 @@ Specifies a `notification` block as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-profiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L126">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L358">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>profiles?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -443,7 +675,7 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L130">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L362">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -452,7 +684,7 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L366">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -461,7 +693,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SettingState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L138">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/autoscale/setting.ts#L370">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetResourceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
