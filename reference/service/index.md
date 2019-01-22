@@ -9,10 +9,10 @@ history, integrate with your CI/CD system, and more!
 ## Getting Started
 
 To get started using the Pulumi Cloud Console, go to [app.pulumi.com](https://app.pulumi.com) and
-sign in with your GitHub account.
+sign in with your GitHub or GitLab account.
 
 > Pulumi supports several identity providers. If you want to login with something other than GitHub
-> please [contact us](https://www.pulumi.com/about/#contact-us).
+> or GitLab, please [contact us](https://www.pulumi.com/about/#contact-us).
 
 ## Organizations
 
@@ -43,3 +43,8 @@ can update existing stacks.
 
 For more information about organization roles, stack permissions, and how they
 are managed in the Pulumi Cloud Console, see [Roles and Access Controls](./roles-and-access-controls.html).
+
+## APIs and Integration
+
+The Pulumi Cloud Console exposes REST APIs so you can build custom integrations
+on top of Pulumi. See [Webhooks](./webhooks.html) for more information.
