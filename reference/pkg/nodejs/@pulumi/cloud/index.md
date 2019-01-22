@@ -610,7 +610,7 @@ https://docs.docker.com/engine/reference/commandline/run.
 <pre class="highlight"><span class='kd'></span>volumes?: <a href='#ContainerVolumeMount'>ContainerVolumeMount</a>[];</pre>
 
 An array of volume mounts, indicating a volume to mount and a path within
-the container at which to moung the volume.  Maps to the Docker
+the container at which to mount the volume.  Maps to the Docker
 `--volume` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
@@ -1424,7 +1424,7 @@ as part of the running service.  Defaults to `1`.
 <pre class="highlight"><span class='kd'></span>volumes?: <a href='#ContainerVolumeMount'>ContainerVolumeMount</a>[];</pre>
 
 An array of volume mounts, indicating a volume to mount and a path within
-the container at which to moung the volume.  Maps to the Docker
+the container at which to mount the volume.  Maps to the Docker
 `--volume` option - see
 https://docs.docker.com/engine/reference/commandline/run.
 
