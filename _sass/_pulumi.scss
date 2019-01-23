@@ -947,7 +947,7 @@ table.clouds-table td {
 div[id^="module-"] {
     // Don't show the header link - there's an anchorjs link on this header that does the
     // job just as well.
-    h1[id$="¶"] {
+    h1[id$="\B6"] {
         a.headerlink {
             display: none;
         }
