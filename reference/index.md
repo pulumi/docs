@@ -20,7 +20,7 @@ please refer to the index below to help navigate around the content.
 ## Using Pulumi in Production or in a Team
 
 * [Teams and Collaboration](service/): use Pulumi in your team, with organizations, RBAC, and more
-* [Continuous Delivery](cd.html): hook Pulumi up to your CI/CD to get continuous apps and infrastructure delivery
+* [Continuous Delivery](cd.html): hook Pulumi up to your CI/CD system to get continuous apps and infrastructure delivery
 
 ## Useful Reference Material
 

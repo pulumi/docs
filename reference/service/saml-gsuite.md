@@ -87,7 +87,7 @@ Your Pulumi organization is now configured to use Google as a SAML SSO identity 
 
 Direct your users to the SAML-specific login page for your organization. For example, if you were using
 the public Pulumi service, and the name of your Pulumi organization were `acmecorp`, that URL would be
-`http://app.pulumi.com/welcome/acmecorp/sso`.
+`https://app.pulumi.com/welcome/acmecorp/sso`.
 
 ![Sign in with SAML](../../images/reference/service/saml-gsuite/console-sso-signin.png)
 
