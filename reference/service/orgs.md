@@ -18,13 +18,13 @@ Adding a new Pulumi organization can be done directly from the Pulumi Cloud Cons
     <button class="button">ADD ORGANIZATION</button>
 </a>
 
-## GitHub and GitLab-backed Organizations
+## Imported Organizations
 
-Organizations using the Pulumi Team and Enterprise editions may be backed by a GitHub organization or GitLab group,
-enabling you to manage user access and team permissions by using your existing access
-controls.
+Organizations using the Pulumi Team and Enterprise editions may be backed by an external service,
+such as GitHub or GitLab. This enables you to manage user access and team permissions by using
+your existing access controls.
 
-Here's a table to help you map the terms used by GitHub and GitLab to Pulumi's nomenclature.
+Here's a table that shows you the mapping between the supported 3rd-party services and Pulumi.
 
 <style>
 table {
