@@ -183,6 +183,10 @@ $accent4: #fbe5d7; // light orange
     background-color: #66deff;
 }
 
+.no-wrap {
+    white-space: nowrap !important;
+}
+
 // Don't have SVG icons default to black. Just use current text color.
 svg {
     fill: currentColor;
