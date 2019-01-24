@@ -107,7 +107,7 @@ $ pulumi stack output publicIp
 
 ## Import and export a stack deployment
 
-A stack can be exported to see the raw data associated with the stack.  This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of.  The modified stack can then be imported to set the current state of the stack to the new values.  The format of the stack files is versioned, and 
+A stack can be exported to see the raw data associated with the stack.  This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of.  The modified stack can then be imported to set the current state of the stack to the new values.
 
 > **Note:** This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments.  Importing an incorrect stack specification could lead to orphaning of cloud resources or the inability to make future updates to the stack.  Use care when using the import and export capabilities.
 
