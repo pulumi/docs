@@ -128,3 +128,7 @@ structure enables seamless continuous deployment.
 
 In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
 its associated Pulumi stack. Please read more about [how these mapping are maintained here](./cd.html).
+
+## Tagging Stacks
+
+Stacks have associated metadata in the form of name/value tags. You can assign custom tags to stacks to customize how stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in the Pulumi Cloud Console, you'll be able to group stacks by `Tag: environment`. Please read more about [how to manage stack tags here](stack.md#stack-tags).
