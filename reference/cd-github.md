@@ -24,11 +24,12 @@ into your organization.
 The Pulumi GitHub app will automatically add comments to Pull Requests with the results of any
 stack changes. This includes a summary of how many resources were created, updated, and/or deleted.
 This allows you to quickly see the changes caused by your Pulumi program without needing to leave
-GitHub's Pull Request view, with a link to the richer details available on [pulumi.com](https://pulumi.com).
+GitHub's Pull Request view, with a link to the richer details available on the
+[Pulumi Cloud Console](https://app.pulumi.com).
 
 ![Comment on Pull Request](/images/github-app/pr-comment.png){:class="img-bordered"}{:class="move-right"}
 
-Beyond Pull Request comments, the GitHub application also integrates with GitHub's new [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/).
+Beyond Pull Request comments, the GitHub application also integrates with GitHub's [Checks API](https://blog.github.com/2018-05-07-introducing-checks-api/).
 This provides even more detail about any resource changes, including the full update log.
 
 ![Results on GitHub Check](/images/github-app/checks-detail.png){:width="600px"}{:class="img-bordered"}{:class="move-right"}
@@ -58,19 +59,26 @@ other Pulumi-managed resources.
 Once installed in your organization, any `pulumi preview` or `pulumi update` that is run in your CI
 system will have its results reported back to GitHub.
 
-Currently, Pulumi's GitHub application only supports Travis CI. (For instructions on configuring
-Travis, see [our guide](https://pulumi.io/reference/cd-travis.html).) If you would like
-GitHub workflow integration for another CI system, please let us know.
+Pulumi supports a wide array of CI/CD systems, and the Pulumi GitHub App should pick up your changes
+automatically. For instructions for specific CI services, see one of our existing guides:
 
-While the system is in preview, you will also need to set the following environment variable
-on your CI build machine.
+* [AWS Code Services](./cd-aws-code-services.html)
+* [Azure DevOps](./cd-azure-devops.html)
+* [CircleCI](./cd-circleci.html)
+* [GitHub Actions](./cd-github-actions.html)
+* [GitLab CI](./cd-gitlab-ci.html)
+* [Travis](./cd-travis.html)
 
-```
-export PULUMI_PERSIST_PREVIEWS="1"
-```
+If you are using a system we don't support yet, please [file an issue](https://github.com/pulumi/pulumi/issues/new)
+so we can add it.
 
-That's it! When Travis CI performs a build that runs `pulumi preview` or `pulumi update`, the
-results will be reported on the corresponding Git commit or Pull Request.
+By setting a few environment variables, you can ensure that any stack updates from your CI/CD environment will be
+associated with your GitHub Pull Request.
+
+- `PULUMI_CI_SYSTEM`. The name of whatever CI/CD system you are using. e.g. "Deploytron-9000".
+- `PULUMI_CI_PULL_REQUEST_SHA` (optional). If your CI/CD system is deploying from a different git commit than the
+  GitHub PR, such as the resulting merge commit, then set the `PULUMI_CI_PULL_REQUEST_SHA` to the origional
+  commit SHA, matching what is found on the Pull Request.
 
 ## GitHub UI
 
