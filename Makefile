@@ -34,6 +34,7 @@ serve:
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
 	./scripts/run_typedoc.sh
+	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./reference/cli
 
 .PHONY: build

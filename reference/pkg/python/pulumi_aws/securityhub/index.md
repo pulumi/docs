@@ -1,0 +1,120 @@
+<div class="section" id="module-pulumi_aws.securityhub">
+<span id="securityhub"></span><h1>securityhub<a class="headerlink" href="#module-pulumi_aws.securityhub" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pulumi_aws.securityhub.Account">
+<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account" title="Permalink to this definition">¶</a></dt>
+<dd><p>-&gt; <strong>Note:</strong> Destroying this resource will disable Security Hub for this AWS account.</p>
+<p>Enables Security Hub for this AWS account.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pulumi_aws.securityhub.Account.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.securityhub.Account.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.Account.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.securityhub.ProductSubscription">
+<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">ProductSubscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>product_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribes to a Security Hub product.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>product_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the product that generates findings that you want to import into Security Hub - see below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.securityhub.ProductSubscription.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of a resource that represents your subscription to the product that generates the findings that you want to import into Security Hub.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.securityhub.ProductSubscription.product_arn">
+<code class="descname">product_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.product_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the product that generates findings that you want to import into Security Hub - see below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.securityhub.ProductSubscription.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.securityhub.ProductSubscription.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.ProductSubscription.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.securityhub.StandardsSubscription">
+<em class="property">class </em><code class="descclassname">pulumi_aws.securityhub.</code><code class="descname">StandardsSubscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>standards_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribes to a Security Hub standard.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>standards_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of a standard - see below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.securityhub.StandardsSubscription.standards_arn">
+<code class="descname">standards_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription.standards_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of a standard - see below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.securityhub.StandardsSubscription.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.securityhub.StandardsSubscription.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.securityhub.StandardsSubscription.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>

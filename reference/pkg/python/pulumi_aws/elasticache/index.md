@@ -1,0 +1,938 @@
+<div class="section" id="module-pulumi_aws.elasticache">
+<span id="elasticache"></span><h1>elasticache<a class="headerlink" href="#module-pulumi_aws.elasticache" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pulumi_aws.elasticache.Cluster">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>availability_zone=None</em>, <em>availability_zones=None</em>, <em>az_mode=None</em>, <em>cluster_id=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>preferred_availability_zones=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance.
+For working with Redis (Cluster Mode Enabled) replication groups, see the
+[<cite>aws_elasticache_replication_group</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html">https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html</a>).</p>
+<p>&gt; <strong>Note:</strong> When you change an attribute, such as <cite>node_type</cite>, by default
+it is applied in the next maintenance window. Because of this, Terraform may report
+a difference in its planning phase because the actual modification has not yet taken
+place. You can use the <cite>apply_immediately</cite> flag to instruct the service to apply the
+change immediately. Using <cite>apply_immediately</cite> can result in a brief downtime as the server reboots.
+See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is
+<cite>false</cite>. See [Amazon ElastiCache Documentation for more information.][1]
+(Available since v0.6.0)</li>
+<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <cite>preferred_availability_zones</cite> instead. Default: System chosen Availability Zone.</li>
+<li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Use <cite>preferred_availability_zones</cite> instead unless you want to create cache nodes in single-az, then use <cite>availability_zone</cite>. Set of Availability Zones in which the cache nodes will be created.</li>
+<li><strong>az_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster’s region. Valid values for this parameter are <cite>single-az</cite> or <cite>cross-az</cite>, default is <cite>single-az</cite>. If you want to choose <cite>cross-az</cite>, <cite>num_cache_nodes</cite> must be greater than <cite>1</cite></li>
+<li><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group identifier. ElastiCache converts
+this name to lowercase</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cache engine to be used for this cache cluster.
+Valid values for this parameter are <cite>memcached</cite> or <cite>redis</cite></li>
+<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version number of the cache engine to be used.
+See [Describe Cache Engine Versions](<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html">https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html</a>)
+in the AWS Documentation center for supported versions</li>
+<li><strong>maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the weekly time range for when maintenance
+on the cache cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh24:mi</cite> (24H Clock UTC).
+The minimum maintenance window is a 60 minute period. Example: <cite>sun:05:00-sun:09:00</cite></li>
+<li><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes. See
+[Available Cache Node Types](<a class="reference external" href="https://aws.amazon.com/elasticache/details#Available_Cache_Node_Types">https://aws.amazon.com/elasticache/details#Available_Cache_Node_Types</a>) for
+supported node types</li>
+<li><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
+SNS topic to send ElastiCache notifications to. Example:
+<cite>arn:aws:sns:us-east-1:012345678999:my_sns_topic</cite></li>
+<li><strong>num_cache_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The initial number of cache nodes that the
+cache cluster will have. For Redis, this value must be 1. For Memcache, this
+value must be between 1 and 20. If this number is reduced on subsequent runs,
+the highest numbered nodes will be removed.</li>
+<li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the parameter group to associate
+with this cache cluster</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <cite>replication_group_id</cite>.</li>
+<li><strong>preferred_availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of <cite>num_cache_nodes</cite>. If you want all the nodes in the same Availability Zone, use <cite>availability_zone</cite> instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.</li>
+<li><strong>replication_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more VPC security groups associated
+with the cache cluster</li>
+<li><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group
+names to associate with this cache cluster</li>
+<li><strong>snapshot_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A single-element string list containing an
+Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
+Example: <cite>arn:aws:s3:::my_bucket/snapshot1.rdb</cite></li>
+<li><strong>snapshot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a snapshot from which to restore data into the new node group.  Changing the <cite>snapshot_name</cite> forces a new resource.</li>
+<li><strong>snapshot_retention_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days for which ElastiCache will
+retain automatic cache cluster snapshots before deleting them. For example, if you set
+SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
+before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
+Please note that setting a <cite>snapshot_retention_limit</cite> is not supported on cache.t1.micro or cache.t2.* cache nodes</li>
+<li><strong>snapshot_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which ElastiCache will
+begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</li>
+<li><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the subnet group to be used
+for the cache cluster.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.apply_immediately">
+<code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is
+<cite>false</cite>. See [Amazon ElastiCache Documentation for more information.][1]
+(Available since v0.6.0)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.availability_zone">
+<code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.availability_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use <cite>preferred_availability_zones</cite> instead. Default: System chosen Availability Zone.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.availability_zones">
+<code class="descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.availability_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use <cite>preferred_availability_zones</cite> instead unless you want to create cache nodes in single-az, then use <cite>availability_zone</cite>. Set of Availability Zones in which the cache nodes will be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.az_mode">
+<code class="descname">az_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.az_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster’s region. Valid values for this parameter are <cite>single-az</cite> or <cite>cross-az</cite>, default is <cite>single-az</cite>. If you want to choose <cite>cross-az</cite>, <cite>num_cache_nodes</cite> must be greater than <cite>1</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.cache_nodes">
+<code class="descname">cache_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.cache_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of node objects including <cite>id</cite>, <cite>address</cite>, <cite>port</cite> and <cite>availability_zone</cite>.
+Referenceable e.g. as <cite>${aws_elasticache_cluster.bar.cache_nodes.0.address}</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.cluster_address">
+<code class="descname">cluster_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.cluster_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Memcached only) The DNS name of the cache cluster without the port appended.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.cluster_id">
+<code class="descname">cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group identifier. ElastiCache converts
+this name to lowercase</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.configuration_endpoint">
+<code class="descname">configuration_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.configuration_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Memcached only) The configuration endpoint to allow host discovery.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.engine">
+<code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the cache engine to be used for this cache cluster.
+Valid values for this parameter are <cite>memcached</cite> or <cite>redis</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.engine_version">
+<code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.engine_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version number of the cache engine to be used.
+See [Describe Cache Engine Versions](<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html">https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html</a>)
+in the AWS Documentation center for supported versions</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.maintenance_window">
+<code class="descname">maintenance_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.maintenance_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the weekly time range for when maintenance
+on the cache cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh24:mi</cite> (24H Clock UTC).
+The minimum maintenance window is a 60 minute period. Example: <cite>sun:05:00-sun:09:00</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.node_type">
+<code class="descname">node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.node_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The compute and memory capacity of the nodes. See
+[Available Cache Node Types](<a class="reference external" href="https://aws.amazon.com/elasticache/details#Available_Cache_Node_Types">https://aws.amazon.com/elasticache/details#Available_Cache_Node_Types</a>) for
+supported node types</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.notification_topic_arn">
+<code class="descname">notification_topic_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.notification_topic_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Amazon Resource Name (ARN) of an
+SNS topic to send ElastiCache notifications to. Example:
+<cite>arn:aws:sns:us-east-1:012345678999:my_sns_topic</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.num_cache_nodes">
+<code class="descname">num_cache_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.num_cache_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial number of cache nodes that the
+cache cluster will have. For Redis, this value must be 1. For Memcache, this
+value must be between 1 and 20. If this number is reduced on subsequent runs,
+the highest numbered nodes will be removed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.parameter_group_name">
+<code class="descname">parameter_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.parameter_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the parameter group to associate
+with this cache cluster</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379. Cannot be provided with <cite>replication_group_id</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.preferred_availability_zones">
+<code class="descname">preferred_availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.preferred_availability_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of <cite>num_cache_nodes</cite>. If you want all the nodes in the same Availability Zone, use <cite>availability_zone</cite> instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.replication_group_id">
+<code class="descname">replication_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.replication_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.security_group_ids">
+<code class="descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.security_group_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more VPC security groups associated
+with the cache cluster</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.security_group_names">
+<code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.security_group_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of security group
+names to associate with this cache cluster</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.snapshot_arns">
+<code class="descname">snapshot_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.snapshot_arns" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single-element string list containing an
+Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
+Example: <cite>arn:aws:s3:::my_bucket/snapshot1.rdb</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.snapshot_name">
+<code class="descname">snapshot_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.snapshot_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of a snapshot from which to restore data into the new node group.  Changing the <cite>snapshot_name</cite> forces a new resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.snapshot_retention_limit">
+<code class="descname">snapshot_retention_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.snapshot_retention_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of days for which ElastiCache will
+retain automatic cache cluster snapshots before deleting them. For example, if you set
+SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
+before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
+Please note that setting a <cite>snapshot_retention_limit</cite> is not supported on cache.t1.micro or cache.t2.* cache nodes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.snapshot_window">
+<code class="descname">snapshot_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.snapshot_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>The daily time range (in UTC) during which ElastiCache will
+begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.subnet_group_name">
+<code class="descname">subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.subnet_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the subnet group to be used
+for the cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.Cluster.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.Cluster.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.Cluster.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticache.GetClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>availability_zone=None</em>, <em>cache_nodes=None</em>, <em>cluster_address=None</em>, <em>configuration_endpoint=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCluster.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.availability_zone">
+<code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.availability_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Availability Zone for the cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.cache_nodes">
+<code class="descname">cache_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.cache_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of node objects including <cite>id</cite>, <cite>address</cite>, <cite>port</cite> and <cite>availability_zone</cite>.
+Referenceable e.g. as <cite>${data.aws_elasticache_cluster.bar.cache_nodes.0.address}</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.cluster_address">
+<code class="descname">cluster_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.cluster_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Memcached only) The DNS name of the cache cluster without the port appended.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.configuration_endpoint">
+<code class="descname">configuration_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.configuration_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Memcached only) The configuration endpoint to allow host discovery.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.engine">
+<code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the cache engine.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.engine_version">
+<code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.engine_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version number of the cache engine.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.maintenance_window">
+<code class="descname">maintenance_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.maintenance_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the weekly time range for when maintenance
+on the cache cluster is performed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.node_type">
+<code class="descname">node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.node_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cluster node type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.notification_topic_arn">
+<code class="descname">notification_topic_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.notification_topic_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Amazon Resource Name (ARN) of an
+SNS topic that ElastiCache notifications get sent to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.num_cache_nodes">
+<code class="descname">num_cache_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.num_cache_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of cache nodes that the cache cluster has.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.parameter_group_name">
+<code class="descname">parameter_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.parameter_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the parameter group associated with this cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port number on which each of the cache nodes will
+accept connections.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.replication_group_id">
+<code class="descname">replication_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.replication_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The replication group to which this cache cluster belongs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.security_group_ids">
+<code class="descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.security_group_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List VPC security groups associated with the cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.security_group_names">
+<code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.security_group_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of security group names associated with this cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.snapshot_retention_limit">
+<code class="descname">snapshot_retention_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.snapshot_retention_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of days for which ElastiCache will
+retain automatic cache cluster snapshots before deleting them.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.snapshot_window">
+<code class="descname">snapshot_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.snapshot_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>The daily time range (in UTC) during which ElastiCache will
+begin taking a daily snapshot of the cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.subnet_group_name">
+<code class="descname">subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.subnet_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the subnet group associated to the cache cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tags assigned to the resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetClusterResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">GetReplicationGroupResult</code><span class="sig-paren">(</span><em>auth_token_enabled=None</em>, <em>automatic_failover_enabled=None</em>, <em>configuration_endpoint_address=None</em>, <em>member_clusters=None</em>, <em>node_type=None</em>, <em>number_cache_clusters=None</em>, <em>port=None</em>, <em>primary_endpoint_address=None</em>, <em>replication_group_description=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getReplicationGroup.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.auth_token_enabled">
+<code class="descname">auth_token_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.auth_token_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>A flag that enables using an AuthToken (password) when issuing Redis commands.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.automatic_failover_enabled">
+<code class="descname">automatic_failover_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.automatic_failover_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.configuration_endpoint_address">
+<code class="descname">configuration_endpoint_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.configuration_endpoint_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The configuration endpoint address to allow host discovery.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.member_clusters">
+<code class="descname">member_clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.member_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifiers of all the nodes that are part of this replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.node_type">
+<code class="descname">node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.node_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cluster node type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.number_cache_clusters">
+<code class="descname">number_cache_clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.number_cache_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of cache clusters that the replication group has.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port number on which the configuration endpoint will accept connections.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.primary_endpoint_address">
+<code class="descname">primary_endpoint_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.primary_endpoint_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint of the primary node in this node group (shard).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.replication_group_description">
+<code class="descname">replication_group_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.replication_group_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.snapshot_retention_limit">
+<code class="descname">snapshot_retention_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.snapshot_retention_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.snapshot_window">
+<code class="descname">snapshot_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.snapshot_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.GetReplicationGroupResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.GetReplicationGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticache.ParameterGroup">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an ElastiCache parameter group resource.</p>
+<p>&gt; <strong>NOTE:</strong> Attempting to remove the <cite>reserved-memory</cite> parameter when <cite>family</cite> is set to <cite>redis2.6</cite> or <cite>redis2.8</cite> may show a perpetual difference in Terraform due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the ElastiCache parameter group. Defaults to “Managed by Terraform”.</li>
+<li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the ElastiCache parameter group.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ElastiCache parameter.</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ElastiCache parameters to apply.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ParameterGroup.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the ElastiCache parameter group. Defaults to “Managed by Terraform”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ParameterGroup.family">
+<code class="descname">family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.family" title="Permalink to this definition">¶</a></dt>
+<dd><p>The family of the ElastiCache parameter group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ParameterGroup.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the ElastiCache parameter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ParameterGroup.parameters">
+<code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of ElastiCache parameters to apply.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.ParameterGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.ParameterGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticache.ReplicationGroup">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">ReplicationGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>at_rest_encryption_enabled=None</em>, <em>auth_token=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>automatic_failover_enabled=None</em>, <em>availability_zones=None</em>, <em>cluster_mode=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>number_cache_clusters=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_group_description=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>transit_encryption_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an ElastiCache Replication Group resource.
+For working with Memcached or single primary Redis instances (Cluster Mode Disabled), see the
+[<cite>aws_elasticache_cluster</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html</a>).</p>
+<p>&gt; <strong>Note:</strong> When you change an attribute, such as <cite>engine_version</cite>, by
+default the ElastiCache API applies it in the next maintenance window. Because
+of this, Terraform may report a difference in its planning phase because the
+actual modification has not yet taken place. You can use the
+<cite>apply_immediately</cite> flag to instruct the service to apply the change
+immediately. Using <cite>apply_immediately</cite> can result in a brief downtime as
+servers reboots.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is <cite>false</cite>.</li>
+<li><strong>at_rest_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable encryption at rest.</li>
+<li><strong>auth_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password used to access a password protected server. Can be specified only if <cite>transit_encryption_enabled = true</cite>.</li>
+<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to <cite>true</cite>.</li>
+<li><strong>automatic_failover_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to <cite>false</cite>.</li>
+<li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 availability zones in which the replication group’s cache clusters will be created. The order of the availability zones in the list is not important.</li>
+<li><strong>cluster_mode</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Create a native redis cluster. <cite>automatic_failover_enabled</cite> must be set to true. Cluster Mode documented below. Only 1 <cite>cluster_mode</cite> block is allowed.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cache engine to be used for the clusters in this replication group. e.g. <cite>redis</cite></li>
+<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version number of the cache engine to be used for the cache clusters in this replication group.</li>
+<li><strong>maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the weekly time range for when maintenance
+on the cache cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh24:mi</cite> (24H Clock UTC).
+The minimum maintenance window is a 60 minute period. Example: <cite>sun:05:00-sun:09:00</cite></li>
+<li><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes in the node group.</li>
+<li><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
+SNS topic to send ElastiCache notifications to. Example:
+<cite>arn:aws:sns:us-east-1:012345678999:my_sns_topic</cite></li>
+<li><strong>number_cache_clusters</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.</li>
+<li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</li>
+<li><strong>replication_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-created description for the replication group.</li>
+<li><strong>replication_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The replication group identifier. This parameter is stored as a lowercase string.</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud</li>
+<li><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of cache security group names to associate with this replication group.</li>
+<li><strong>snapshot_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A single-element string list containing an
+Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
+Example: <cite>arn:aws:s3:::my_bucket/snapshot1.rdb</cite></li>
+<li><strong>snapshot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a snapshot from which to restore data into the new node group. Changing the <cite>snapshot_name</cite> forces a new resource.</li>
+<li><strong>snapshot_retention_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days for which ElastiCache will
+retain automatic cache cluster snapshots before deleting them. For example, if you set
+SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
+before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
+Please note that setting a <cite>snapshot_retention_limit</cite> is not supported on cache.t1.micro or cache.t2.* cache nodes</li>
+<li><strong>snapshot_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which ElastiCache will
+begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: <cite>05:00-09:00</cite></li>
+<li><strong>subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cache subnet group to be used for the replication group.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</li>
+<li><strong>transit_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable encryption in transit.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.apply_immediately">
+<code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.apply_immediately" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is <cite>false</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.at_rest_encryption_enabled">
+<code class="descname">at_rest_encryption_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.at_rest_encryption_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to enable encryption at rest.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.auth_token">
+<code class="descname">auth_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.auth_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password used to access a password protected server. Can be specified only if <cite>transit_encryption_enabled = true</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.auto_minor_version_upgrade">
+<code class="descname">auto_minor_version_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.auto_minor_version_upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to <cite>true</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.automatic_failover_enabled">
+<code class="descname">automatic_failover_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.automatic_failover_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If true, Multi-AZ is enabled for this replication group. If false, Multi-AZ is disabled for this replication group. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to <cite>false</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.availability_zones">
+<code class="descname">availability_zones</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.availability_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of EC2 availability zones in which the replication group’s cache clusters will be created. The order of the availability zones in the list is not important.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.cluster_mode">
+<code class="descname">cluster_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.cluster_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a native redis cluster. <cite>automatic_failover_enabled</cite> must be set to true. Cluster Mode documented below. Only 1 <cite>cluster_mode</cite> block is allowed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.configuration_endpoint_address">
+<code class="descname">configuration_endpoint_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.configuration_endpoint_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>The address of the replication group configuration endpoint when cluster mode is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.engine">
+<code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the cache engine to be used for the clusters in this replication group. e.g. <cite>redis</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.engine_version">
+<code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.engine_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version number of the cache engine to be used for the cache clusters in this replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.maintenance_window">
+<code class="descname">maintenance_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.maintenance_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the weekly time range for when maintenance
+on the cache cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh24:mi</cite> (24H Clock UTC).
+The minimum maintenance window is a 60 minute period. Example: <cite>sun:05:00-sun:09:00</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.member_clusters">
+<code class="descname">member_clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.member_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifiers of all the nodes that are part of this replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.node_type">
+<code class="descname">node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.node_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The compute and memory capacity of the nodes in the node group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.notification_topic_arn">
+<code class="descname">notification_topic_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.notification_topic_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Amazon Resource Name (ARN) of an
+SNS topic to send ElastiCache notifications to. Example:
+<cite>arn:aws:sns:us-east-1:012345678999:my_sns_topic</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.number_cache_clusters">
+<code class="descname">number_cache_clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.number_cache_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.parameter_group_name">
+<code class="descname">parameter_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.parameter_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.primary_endpoint_address">
+<code class="descname">primary_endpoint_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.primary_endpoint_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.replication_group_description">
+<code class="descname">replication_group_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.replication_group_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A user-created description for the replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.replication_group_id">
+<code class="descname">replication_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.replication_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The replication group identifier. This parameter is stored as a lowercase string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.security_group_ids">
+<code class="descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.security_group_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.security_group_names">
+<code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.security_group_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of cache security group names to associate with this replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.snapshot_arns">
+<code class="descname">snapshot_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.snapshot_arns" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single-element string list containing an
+Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
+Example: <cite>arn:aws:s3:::my_bucket/snapshot1.rdb</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.snapshot_name">
+<code class="descname">snapshot_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.snapshot_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of a snapshot from which to restore data into the new node group. Changing the <cite>snapshot_name</cite> forces a new resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.snapshot_retention_limit">
+<code class="descname">snapshot_retention_limit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.snapshot_retention_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of days for which ElastiCache will
+retain automatic cache cluster snapshots before deleting them. For example, if you set
+SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days
+before being deleted. If the value of SnapshotRetentionLimit is set to zero (0), backups are turned off.
+Please note that setting a <cite>snapshot_retention_limit</cite> is not supported on cache.t1.micro or cache.t2.* cache nodes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.snapshot_window">
+<code class="descname">snapshot_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.snapshot_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>The daily time range (in UTC) during which ElastiCache will
+begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: <cite>05:00-09:00</cite></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.subnet_group_name">
+<code class="descname">subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.subnet_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the cache subnet group to be used for the replication group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.transit_encryption_enabled">
+<code class="descname">transit_encryption_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.transit_encryption_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to enable encryption in transit.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.ReplicationGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticache.SecurityGroup">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>security_group_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an ElastiCache Security Group to control access to one or more cache
+clusters.</p>
+<p>&gt; <strong>NOTE:</strong> ElastiCache Security Groups are for use only when working with an
+ElastiCache cluster <strong>outside</strong> of a VPC. If you are using a VPC, see the
+ElastiCache Subnet Group resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – description for the cache security group. Defaults to “Managed by Terraform”.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the cache security group. This value is stored as a lowercase string.</li>
+<li><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of EC2 security group names to be
+authorized for ingress to the cache security group</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.SecurityGroup.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>description for the cache security group. Defaults to “Managed by Terraform”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.SecurityGroup.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name for the cache security group. This value is stored as a lowercase string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.SecurityGroup.security_group_names">
+<code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.security_group_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of EC2 security group names to be
+authorized for ingress to the cache security group</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.SecurityGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.SecurityGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticache.SubnetGroup">
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an ElastiCache Subnet Group resource.</p>
+<p>&gt; <strong>NOTE:</strong> ElastiCache Subnet Groups are only for use when working with an
+ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
+ElastiCache Security Group resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the cache subnet group. Defaults to “Managed by Terraform”.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the cache subnet group. Elasticache converts this name to lowercase.</li>
+<li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC Subnet IDs for the cache subnet group</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.SubnetGroup.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description for the cache subnet group. Defaults to “Managed by Terraform”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.SubnetGroup.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name for the cache subnet group. Elasticache converts this name to lowercase.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticache.SubnetGroup.subnet_ids">
+<code class="descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.subnet_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of VPC Subnet IDs for the cache subnet group</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.SubnetGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.elasticache.SubnetGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.elasticache.get_cluster">
+<code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information about an Elasticache Cluster</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.elasticache.get_replication_group">
+<code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">get_replication_group</code><span class="sig-paren">(</span><em>replication_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information about an Elasticache Replication Group.</p>
+</dd></dl>
+
+</div>

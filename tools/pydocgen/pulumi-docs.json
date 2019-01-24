@@ -1,0 +1,27 @@
+{
+  "project": {
+    "name": "Pulumi",
+    "copyright": "Pulumi",
+    "author": "Pulumi",
+    "version": "0.16",
+    "release": ""
+  },
+  "providers": [
+    {
+      "name": "Pulumi Random",
+      "package_name": "pulumi_random"
+    },
+    {
+      "name": "Pulumi AWS",
+      "package_name": "pulumi_aws"
+    },
+    {
+      "name": "Pulumi Azure",
+      "package_name": "pulumi_azure"
+    },
+    {
+      "name": "Pulumi GCP",
+      "package_name": "pulumi_gcp"
+    }
+  ]
+}

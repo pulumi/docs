@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+sphinx = ">=1.8.3"
+Jinja2 = ">=2.10"
+m2r = ">=0.2.1"
+
+[requires]
+python_version = "3.6"

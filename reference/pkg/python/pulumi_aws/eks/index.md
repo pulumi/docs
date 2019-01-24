@@ -1,0 +1,153 @@
+<div class="section" id="module-pulumi_aws.eks">
+<span id="eks"></span><h1>eks<a class="headerlink" href="#module-pulumi_aws.eks" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pulumi_aws.eks.Cluster">
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an EKS Cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster.</li>
+<li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes master version. If you do not specify a value, the latest available version is used.</li>
+<li><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](<a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a>) and [Cluster Security Group Considerations](<a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html</a>) in the Amazon EKS User Guide. Configuration detailed below.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.certificate_authority">
+<code class="descname">certificate_authority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.certificate_authority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested attribute containing <cite>certificate-authority-data</cite> for your cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.endpoint">
+<code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint for your Kubernetes API server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.platform_version">
+<code class="descname">platform_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.platform_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The platform version for the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.role_arn">
+<code class="descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Desired Kubernetes master version. If you do not specify a value, the latest available version is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.vpc_config">
+<code class="descname">vpc_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.vpc_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested argument for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](<a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a>) and [Cluster Security Group Considerations](<a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html</a>) in the Amazon EKS User Guide. Configuration detailed below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.eks.Cluster.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.eks.Cluster.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.eks.GetClusterResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_authority=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>platform_version=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getCluster.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.certificate_authority">
+<code class="descname">certificate_authority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.certificate_authority" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested attribute containing <cite>certificate-authority-data</cite> for your cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.created_at">
+<code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Unix epoch time stamp in seconds for when the cluster was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.endpoint">
+<code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint for your Kubernetes API server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.platform_version">
+<code class="descname">platform_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.platform_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The platform version for the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.role_arn">
+<code class="descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Kubernetes server version for the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.vpc_config">
+<code class="descname">vpc_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.vpc_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested attribute containing VPC configuration for the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.eks.get_cluster">
+<code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve information about an EKS Cluster.</p>
+</dd></dl>
+
+</div>

@@ -1,0 +1,99 @@
+<div class="section" id="module-pulumi_azure.managementgroups">
+<span id="managementgroups"></span><h1>managementgroups<a class="headerlink" href="#module-pulumi_azure.managementgroups" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pulumi_azure.managementgroups.GetManagementGroupResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">GetManagementGroupResult</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getManagementGroup.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.GetManagementGroupResult.display_name">
+<code class="descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A friendly name for the Management Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.GetManagementGroupResult.parent_management_group_id">
+<code class="descname">parent_management_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult.parent_management_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of any Parent Management Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.GetManagementGroupResult.subscription_ids">
+<code class="descname">subscription_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult.subscription_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Subscription ID’s which are assigned to the Management Group.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.GetManagementGroupResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.GetManagementGroupResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.managementgroups.ManagementGroup">
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">ManagementGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Management Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>__opts__</strong> (<em>pulumi.ResourceOptions</em>) – Options for the resource.</li>
+<li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for this Management Group. If not specified, this’ll be the same as the <cite>group_id</cite>.</li>
+<li><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.</li>
+<li><strong>parent_management_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Parent Management Group. Changing this forces a new resource to be created.</li>
+<li><strong>subscription_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subscription ID’s which should be assigned to the Management Group.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.display_name">
+<code class="descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A friendly name for this Management Group. If not specified, this’ll be the same as the <cite>group_id</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.group_id">
+<code class="descname">group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.parent_management_group_id">
+<code class="descname">parent_management_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.parent_management_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Parent Management Group. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.subscription_ids">
+<code class="descname">subscription_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.subscription_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of Subscription ID’s which should be assigned to the Management Group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.managementgroups.ManagementGroup.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.managementgroups.get_management_group">
+<code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">get_management_group</code><span class="sig-paren">(</span><em>group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.get_management_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Management Group.</p>
+</dd></dl>
+
+</div>
