@@ -116,31 +116,10 @@ Next, you'll need to configure your cloud credentials. This is dependent on your
 
 Enter these as secrets, just like you did `PULUMI_ACCESS_TOKEN`, so that your GitHub Action can deploy to your cloud.
 
-**Important**: Make sure to also add these to your workflow action's `secrets` section, otherwise GitHub Actions
-won't make them available to the running container, and things will behave as if you didn't set them at all!
+> **Important**: Make sure to also add these to your workflow action's `secrets` section, otherwise GitHub Actions
+> won't make them available to the running container, and things will behave as if you didn't set them at all!
 
-## Branch Mappings
-
-Pulumi has a concept of *stacks*, which are isolated environments for your application (e.g., production, staging, or
-even distinct services). By default, the GitHub Action will assume a project has a single stack, and will associate the
-`master` branch with it. For sophisticated scenarios, this can be overridden in the `.pulumi/ci.json` file.
-
-This is simply a JSON map. For example:
-
-```json
-{
-    "master": "production",
-    "staging": "staging"
-}
-```
-
-Often, we'll map `master` to a `production` stack, and `staging` to a distinct `staging` stack, for example, and then
-use Pull Requests to promote code between the two. This mappings file is intentionally flexible.
-
-Note that you'll need to create these stacks in the usual way using Pulumi's service console or CLI. After setting this
-up, everything will be on autopilot.
-
-## Try It Out!
+# Try It Out!
 
 To try things out, simply create a Pull Request or commit, and you will see these new actions showing up in
 the usual GitHub Checks dialog, with a green checkmark if everything went as planned:
@@ -192,7 +171,68 @@ your cloud). After configuring these, you should see the green secrets with lock
 
 ![Editor Secrets](/images/reference/gh-actions-editor-secrets.png)
 
-# Using a Different Root Directory
+# Pull Request Flow
+
+If you are using Pulumi's GitHub Actions to preview infrastructure changes from Pull Requests, you may want to
+have Pulumi comment on those PRs so that you don't need to look at the specific update logs to see if there
+were any changes.
+
+There are two ways to do this: using the Pulumi GitHub App (recommended), or configuring the GitHub Actions
+container directly.
+
+## Pulumi GitHub App
+
+The [Pulumi GitHub App](https://pulumi.io/reference/cd-github.html) is something you install into your GitHub
+organization, that will allow the Pulumi service to leave comments on Pull Requests. (It will not have access
+to your source code.)
+
+Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of any resource changes
+is left on the Pull Request. As well as links to the Pulumi Cloud Console for more detailed information.
+
+You can install the Pulumi GitHub App now, by visiting [github.com/apps/pulumi](https://github.com/apps/pulumi)
+or clicking the button below.
+
+<a href="https://github.com/apps/pulumi" target="_blank">
+    <button class="button">INSTALL</button>
+</a>
+
+Example comment when using the Pulumi GitHub App:
+
+![Comment from the Pulumi GitHub App](/images/github-actions/pr-comment-gh-app.png){:width="600px"}{:class="img-bordered"}
+
+## Comments By GitHub Actions
+
+If you don't want to use the Pulumi GitHub App, you can configure Pulumi's GitHub Actions to copy the output
+of the pulumi invocation on the pull request. This option doesn't have as rich of an output display as the
+Pulumi GitHub App, and just copies the raw output of the Pulumi command-line.
+
+To do this you need to set the `COMMENT_ON_PR` environment variable, and add the `GITHUB_TOKEN` value to
+the secrets passed to the GitHub Action step. For example, 
+
+```
+action "Pulumi Preview (Merged Stack)" {
+  uses = "docker://pulumi/actions"
+  args = ["preview"]
+  env = {
+    PULUMI_CI = "pr"
+    COMMENT_ON_PR = "1"
+  }
+  secrets = [
+    "PULUMI_ACCESS_TOKEN",
+    "GITHUB_TOKEN",
+  ]
+}
+```
+
+Example comment when using GitHub Actions directly:
+
+![Comment from GitHub Actions](/images/github-actions/pr-comment-actions.png){:width="600px"}{:class="img-bordered"}
+
+# Configuration
+
+You can configure how Pulumi's GitHub Actions work to have more control about which stacks get updated, and when.
+
+## Using a Different Root Directory
 
 By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root directory. If you are using a
 different root directory for your project, simply set the `PULUMI_ROOT` variable in your workflow. For example
@@ -208,7 +248,28 @@ action "Pulumi Deploy (Current Stack)" {
 
 This tells Pulumi that the project can be found underneath the repo's `infra` directory.
 
-## Demos and Examples
+## Branch Mappings
+
+Pulumi has a concept of *stacks*, which are isolated environments for your application (e.g., production, staging, or
+even distinct services). By default, the GitHub Action will assume a project has a single stack, and will associate the
+`master` branch with it. For sophisticated scenarios, this can be overridden in the `.pulumi/ci.json` file.
+
+This is simply a JSON map. For example:
+
+```json
+{
+    "master": "production",
+    "staging": "staging"
+}
+```
+
+Often, we'll map `master` to a `production` stack, and `staging` to a distinct `staging` stack, for example, and then
+use Pull Requests to promote code between the two. This mappings file is intentionally flexible.
+
+Note that you'll need to create these stacks in the usual way using Pulumi's service console or CLI. After setting this
+up, everything will be on autopilot.
+
+# Demos and Examples
 
 To see some examples of this in action, see the following links:
 
