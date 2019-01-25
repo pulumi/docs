@@ -5,8 +5,7 @@ title: Python Packages
 The Pulumi Python SDK package is used for accessing the core programming model around resources, configuration, etc.
 directly:
 
-* Pulumi SDK (`pulumi`) (API Documentation Coming Soon)
-
+* [Pulumi SDK (`pulumi`)](pulumi)
 
 ### Cloud Providers
 

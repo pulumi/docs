@@ -144,6 +144,8 @@ toc:
     - title: Python
       path: /reference/pkg/python/index
       section:
+      - title: pulumi
+        path: /reference/pkg/python/pulumi/index.html
       - title: pulumi_aws
         path: /reference/pkg/python/pulumi_aws/index.html
       - title: pulumi_azure

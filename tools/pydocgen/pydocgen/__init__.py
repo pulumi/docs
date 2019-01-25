@@ -118,6 +118,11 @@ def generate_sphinx_files(ctx: Context):
     without_module_template = path.join("providers", "provider_without_module.rst")
     with_module_template = path.join("providers", "provider_with_module.rst")
     module_template = path.join("providers", "module.rst")
+
+    # Render pulumi.rst - it's special since it's not really a provider.
+    pulumi_doc_path = path.join("providers", "pulumi.rst")
+    render_template_to(ctx, pulumi_doc_path, pulumi_doc_path)
+
     for provider in ctx.input.providers:
         doc_path = path.join("providers", f"{provider.package_name}.rst")
         # __import__ is Python magic - it literally imports the package that we're about to document. For this reason
@@ -161,7 +166,8 @@ def transform_sphinx_output_to_markdown(ctx: Context):
     """
     out_base  = create_dir(ctx.mdoutdir, "python")
     base_json = path.join(ctx.outdir, "providers")
-    for provider in ctx.input.providers:
+    pulumi_pkg = Provider(name="Pulumi SDK", package_name="pulumi")
+    for provider in ctx.input.providers + [pulumi_pkg]:
         provider_path = create_dir(out_base, provider.package_name)
         provider_sphinx_output = path.join(base_json, provider.package_name)
         # If this thing has submodules, provider_sphinx_output is a directory and it exists.
@@ -227,9 +233,7 @@ def main():
         print("Done!")
     finally:
         if path.exists(tempdir):
-            pass
-            #shutil.rmtree(tempdir)
+            shutil.rmtree(tempdir)
         if path.exists(outdir):
-            pass
-            #shutil.rmtree(outdir)
+            shutil.rmtree(outdir)
 

@@ -947,8 +947,8 @@ table.clouds-table td {
 // the two kinds of pages that Sphinx emits: the first kind is a module page, containing
 // information on on members within a module, and the second kind is a table of contents.
 
-// This selector is for the module page.
-div[id^="module-"] {
+// This selector is for the module page and for the Pulumi Python SDK page.
+div[id^="module-"], div[id="pulumi-python-sdk"] {
     // Don't show the header link - there's an anchorjs link on this header that does the
     // job just as well.
     h1[id$="\B6"] {
@@ -960,7 +960,7 @@ div[id^="module-"] {
     // The definition of a single (Python) class or function. Not to be confused with the CSS class.
     // Sphinx emits a DL for every class it processes, with a few well-known immediate
     // subchildren:
-    dl.class, dl.function {
+    dl.class, dl.function, dl.exception {
         // The first dt is the header of the class or function definition. It contains the name of the
         // class or function, all of its arguments, and a permalink anchor.
         //
