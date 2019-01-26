@@ -49,6 +49,7 @@ tbody tr td {
 | --------------- | ----- |
 | Single sign on URL | https://api.pulumi.com/login/robot-co/sso/saml/acs |
 | Audience URI | https://api.pulumi.com/login/robot-co/sso/saml/metadata |
+| Default Relay State | https://api.pulumi.com/login/robot-co/sso |
 | Name ID format | Unspecified |
 | App username | Email |
 
@@ -80,8 +81,8 @@ The final step is to configure the Pulumi Cloud Console with the details about y
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
-First, navigate to the "General" tab on the application page and click the "View setup instructions"
-page.
+First, navigate to the "Sign On" tab on the application page and click the "View Setup Instructions"
+button.
 
 ![View Setup Instructions](../../images/reference/service/saml-okta/view-setup-instructions.png)
 

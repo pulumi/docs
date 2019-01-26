@@ -40,6 +40,7 @@ Pulumi organization were `acmecorp`, those values would be:
 
     * ACS URL: `https://api.pulumi.com/login/acmecorp/sso/saml/acs`
     * Entity ID: `https://api.pulumi.com/login/acmecorp/sso/saml/metadata`
+    * Start URL: `https://api.pulumi.com/login/acmecorp/sso`
 
     ![Step 4: Provide ACS and metadata URLs](../../images/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 
