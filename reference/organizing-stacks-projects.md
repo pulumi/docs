@@ -2,7 +2,7 @@
 title: Organizing Projects and Stacks
 ---
 
-[Projects](./project.html) and [stacks](./stack.html) are intentionally flexible so that they can accommodate a
+[Projects](./project.html) and [stacks](./stack.html) are intentionally flexible so that they can accommodate
 diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
 repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
 there are some clear best practices that, when followed, will ensure Pulumi works seamless for your situation. This
@@ -11,8 +11,7 @@ article describes some of the most common approaches and when to choose one over
 ## Tradeoffs
 
 Everything described below is on a spectrum of tradeoffs. Remember that each project is a collection of code,
-and that each stack is a unit of deployment. Each stack has its own separate configuration and secrets, role
-based access controls (RBAC) and policies, and concurrent deployments.
+and that each stack is a unit of deployment. Each stack has its own separate configuration and secrets, role-based access controls (RBAC) and policies, and concurrent deployments.
 
 ## Monolithic
 
@@ -27,11 +26,11 @@ Most users will start a monolithic structure, for a few good reasons
 
 * **Simplicity.** Having a single project and collection of stacks is, quite simply, the easiest thing you could
   possibly do. Pulumi diffs edits to your application and infrastructure code, and so this approach leaves the
-  hard work of doing incremental deployments, and tracking dependencies, to the Pulumi engine.
+  hard work of doing incremental deployments and tracking dependencies to the Pulumi engine.
 
 * **Versioning.** By placing all code in one project, it's easier to share and version logic within your project.
   Of course, Pulumi supports package managers, so sharing across projects is also possible, but it entails dealing
-  with packages which means introducing a loosely coupled versioning boundary with distinct update cadences.
+  with packages which means introducing a loosely-coupled versioning boundary with distinct update cadences.
 
 * **Agility.** All of the above means that using a monolithic approach will almost always lead to the best
   productivity and therefore agility. For small projects or teams, this is usually the right place to start.
@@ -42,7 +41,7 @@ migrate to a finer grained decomposition of projects and stacks.
 ## Micro-Stacks
 
 At the other end of the spectrum is a pattern we call _micro-stacks_. This is the moral equivalent to microservices,
-only in project and stack form. In this model, a project is broken into separately managed pieces, often across
+only in project and stack form. In this model, a project is broken into separately managed smaller projects, often across
 different dimensions. This approach has several advantages:
 
 * **Independence.** Although Pulumi can diff changes and make only those updates mandated by a code edit,
@@ -121,7 +120,7 @@ Because Pulumi is a natural choice for enabling GitOps-style continuous deployme
 project structure to their Git repo structure. Organizations that prefer mono-repos often prefer monolithic
 project structures, and organizations that prefer fine-grained repos tend to prefer micro-project structures.
 
-This alignment is not a requirement, of course. We have many users who have choose to have multiple projects in a
+This alignment is not a requirement, of course. We have many users who have chosen to have multiple projects in a
 single Git repo -- or the reverse, using Git submodules, they might deploy code from multiple Git repos in a single
 Pulumi project. However, most users find that a close alignment between Git repo structure and Pulumi project
 structure enables seamless continuous deployment.
