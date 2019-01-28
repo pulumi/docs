@@ -59,7 +59,7 @@ Pulumi programs are authored in general purpose programming languages such as [J
 
 When `pulumi update` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi update`.
 
-A Pulumi program is contained within a [project](project.html). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program. 
+A Pulumi program is contained within a [project](project.html) and each project has exactly one program. In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program. 
 
 ## @pulumi/pulumi Package {#pulumipulumi}
 
