@@ -39,7 +39,9 @@ When using JavaScript, the working directory for the project should contain a `p
 
 ### Paths
 
-When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. For example, the following code references a subfolder `app` of the working directory, that contains a `Dockerfile`:
+When your Pulumi program references resources in the local filesystem, they are always relative to the working directory. 
+
+`cloud.Task` is a Pulumi abstraction over a Docker container. For example, the following code references a subfolder `app` of the working directory. Inside that subfolder is a Dockerfile. The `cloud.Task` abstraction will invoke Docker passing it that subfolder.
 
 ```js
 const myTask = new cloud.Task("myTask", {
