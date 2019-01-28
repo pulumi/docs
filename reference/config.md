@@ -4,7 +4,7 @@ title: "Configuration and Secrets"
 
 {% include mini-toc.html %}
 
-Often, your Pulumi program will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
+Often, your Pulumi [program](#programs) will need configuration values that change independently from the program itself. For example, you may want to use a different size of AWS EC2 instance depending on whether the program is deployed to a development or production stack. 
 
 For these configuration values, you can use _stack settings_. Stack settings are defined in [`Pulumi.<stack-name>.yaml`] and are set via the `pulumi config set` command. 
 
@@ -46,12 +46,12 @@ $ pulumi config set --secret secretValue S3cr37
 $ pulumi config
 KEY                                              VALUE                                           
 aws:region                                       us-west-1                                       
-secretValue                                      ********                                        
+secretValue                                      \[secret\]                                        
 ```
 
 ## Source Control
 
-For stacks that are actively developed by multiple members of a team, the recommended practice is to check them in to source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
+For stacks that are actively developed by multiple members of a team, the recommended practice is to check the stack settings in to source control as a means of collaboration. Since secret values are encrypted, it is safe to check in these stack settings.
 
 For stacks that are ephemeral or are used in "inner loop" development, the stack settings are typically not checked in to source control.
 
@@ -63,7 +63,7 @@ To view the active settings for the currently selected stack, use `pulumi config
 $ pulumi config
 KEY                                              VALUE                                           
 aws:region                                       us-west-1                                       
-secretValue                                      ********                                        
+secretValue                                      \[secret\]                                        
 ```
 
 ```bash
@@ -75,11 +75,11 @@ secretValue                                      S3cr37
 
 ## Using Configuration in Code
 
-On `pulumi update`, secret values are decrypted. Your Pulumi program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted before your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
+On `pulumi update`, your Pulumi program can read any configuration value that is set via `pulumi config`. Since secret values are decrypted while your program is executed, secret and plaintext values are accessed the same way, through APIs specific to each language.
 
 Additionally, all shell environment variables are passed to the running program and can be accessed via standard runtime APIs, such as `process.env` in Node.js and `os.environ` in Python.
 
-To access configuration values, use `pulumi.Config` and specify the configuration namespace. This is generally the same as the project name defined in `Pulumi.yaml`.
+To access configuration values, use `pulumi.Config` and specify the configuration namespace. This is typically the project name defined in `Pulumi.yaml` but may be a package-specific name.
 
 For example, assume the following configuration values have been set:
 
