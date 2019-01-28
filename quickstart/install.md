@@ -1,6 +1,6 @@
 ---
 title: "Download and Install"
-installer_version: "0.16.11"
+installer_version: "0.16.12"
 redirect_from: "/install/index.html"
 ---
 
