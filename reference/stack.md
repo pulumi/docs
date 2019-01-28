@@ -80,7 +80,7 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## View stack outputs {#outputs}
 
-When you use module exports in your Pulumi program, they become stack outputs. Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
+When you use module exports in your Pulumi program, they become [stack outputs](#stack-outputs). Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
 
 **JavaScript code**
 ```js
@@ -121,7 +121,7 @@ $ pulumi stack import < stack.json
 
 To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.  
 
-If a stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed. 
+If a stack still has resources associated with it, they should first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed. 
 
 To force the deletion of a stack that still contains resources --- potentially orphaning them --- use `pulumi stack rm --force`.  
 
