@@ -6,6 +6,12 @@ title: "Programming Model"
 
 ## Overview {#overview}
 
+In Pulimi, you define your application’s infrastructure configuration by using code: real, executable code in a program that, when you run it, creates objects that form a model of the desired state of a stack and then updates the stack to match the model.  
+
+A stack is an isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev).
+
+The model represents the desired resources, dependencies, [settings]{#config}, etc.  Pulumi then updates the stack to match that model.
+
 In Pulumi, [resources](#resources) are defined by allocating resource objects in a [program](#programs), such as `new aws.ec2.Instance(...)`.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. To create dependencies between resources, just reference the [output properties](#outputs) of a resource. For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
 
 {% include langchoose.html %}
@@ -55,7 +61,7 @@ In Pulumi, you can group multiple resources in a [component](#components). A com
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general purpose programming languages such as [JavaScript](javascript.html) or [Python](python.html). You can use any packages supported by the languages package manager, as well as [Pulumi packages](pkg/). 
+Pulumi programs are authored in general purpose programming languages such as [JavaScript](javascript.html) or [Python](python.html). You can use any packages supported by the languages' package manager, as well as [Pulumi packages](pkg/). 
 
 When `pulumi update` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi update`.
 
@@ -63,7 +69,7 @@ A Pulumi program is contained within a [project](project.html). In JavaScript, t
 
 ## @pulumi/pulumi Package {#pulumipulumi}
 
-The [@pulumi/pulumi] package is the core library for working with the Pulumi planning engine. This package defines the following:
+The [@pulumi/pulumi] package is the core library for working with the Pulumi engine. This package defines the following object types, among others, which are used in a model:
 - Resources ([pulumi.Resource])
 - External cloud platform resources ([pulumi.CustomResource])
 - Components defined entirely in JavaScript ([pulumi.ComponentResource])
@@ -79,7 +85,7 @@ This package also provides the following helpers:
 
 A resource is created via `new Resource(name, args)` in JavaScript. All resources must have a name, which must be unique in the Pulumi program.
 
-All resource constructors also accept a third argument which can provide the following additional properties. 
+All resource constructors accept a third argument which can provide the following additional properties. 
 - `dependsOn` - a list of explicit resource dependencies
 - `protect` - whether to mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.
 - `parent` - optional parent for the resource. See [Components](#components).
@@ -87,7 +93,7 @@ All resource constructors also accept a third argument which can provide the fol
 
 ## Resource outputs {#outputs}
 
-Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
+Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are described by a special [`Output`][pulumi.Output] type which internally represents two things:
 1. An eventually available value of the output
 2. The dependency on the source(s) of the output value
 
@@ -121,7 +127,7 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 })
 ```
 
-The `apply` method accepts a callback which will be passed the value of the `Output` when it is availabe, and which returns the new value.  The result of the call to `apply` is new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
+The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
 > Note: The `Output` itself cannot be used directly in string concatenation or other operations, as it is not itself the value of the output.  To transform the value of the output (when it becomes available), the `apply` method should be used instead.
 
@@ -270,7 +276,7 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 
 ## Stack output {#stack-outputs}
 
-A [stack output](stack.html#outputs) is a value that can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
+A [stack output](stack.html#outputs) is a value exported from a stack. A stack outputs can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
 
 {% include langchoose.html %}
 
@@ -371,7 +377,7 @@ fmt.Printf("Hello, %s!", name);
 
 Config values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
 
-Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumer] will convert the string value to a number and return a `Number`value instead of a string.  It will raise an exception if the value cannot be parsed as a number. 
+Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number. 
 
 For richer structured data, the [config.getObject] method can be used to parse JSON values.  For example, following `pulumi config set data '{"active": true, "nums": [1,2,3]}'`, a program can read the `data` config into a rich object with:
 
@@ -408,7 +414,7 @@ console.log(`Active: ${data.active}`);
 
 ## Components {#components}
 
-A Pulumi **component** is a logical group of resources which contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program. 
+A Pulumi **component** is a logical group of resources that contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program. 
 
 To create a new component, either in a top-level program or in a library, create a subclass of [pulumi.ComponentResource]. Components provide a way to create reusable abstractions made up of other resources.
 
@@ -682,9 +688,9 @@ let myResource = new MyResource("myResource", { providers: { aws: useast1, kuber
 
 ## Packages {#packages}
 
-Pulumi packages are normal NPM or Python packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  This ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
+Pulumi packages are normal NPM, Python, or other supported language packages. They transitively depend on `@pulumi/pulumi` which defines how resources created by a Pulumi program will be communicated to the Pulumi engine.  This ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package.
 
-Some Pulumi packages have a dependency on a [Resource Provider plugin](/reference/cli/pulumi_plugin.html) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Intance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/aws-infra] contain only higher-level component resources, which are not managed by a resource provider plugin.
+Some Pulumi packages have a dependency on a [Resource Provider plugin](/reference/cli/pulumi_plugin.html) which contains the implementation for how to Create, Read, Update and Delete resources defined by the package.  The [pulumi.CustomResource] base class is used to connect a JavaScript resource class with the resource provider it depends on for resource management.  Packages like [@pulumi/aws] and [@pulumi/kubernetes] define resources, such as `aws.ec2.Intance`, `kubernetes.Pod`, which are managed by the AWS and Kubernetes resource provider plugins. Packages such as [@pulumi/cloud] and [@pulumi/aws-infra] contain only higher-level component resources, which are not managed by a resource-provider plugin.
 
 ## Runtime code {#runtime}
 
