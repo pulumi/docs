@@ -1,11 +1,11 @@
 ## pulumi logs
 
-Show aggregated logs for a stack
+Show the aggregated logs for a stack.
 
 ### Synopsis
 
 
-Show aggregated logs for a stack
+Show the aggregated logs for a stack.
 
 ```
 pulumi logs [flags]
