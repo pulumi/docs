@@ -1,15 +1,18 @@
 ## pulumi stack
 
-Manage stacks
+Manage stacks.
 
 ### Synopsis
 
+Manage stacks.
 
-Manage stacks
+Every Pulumi program is deployed to a **stack**.  A stack is an isolated, independently configurable
+instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as **development**, **staging** and **production**) or feature branches (such as **feature-x-dev**, **jane-feature-x-dev**).
 
-An stack is a named update target, and a single project may have many of them.
+A single project may have many stacks.  Each stack is associated with only one project.
+
 Each stack has a configuration and update history associated with it, stored in
-the workspace, in addition to a full checkpoint of the last known good update.
+the workspace backend, in addition to a full checkpoint of the last known good update.
 
 
 ```
