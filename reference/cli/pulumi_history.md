@@ -1,13 +1,13 @@
 ## pulumi history
 
-Update history for a stack
+Display the history for a stack
 
 ### Synopsis
 
 
-Update history for a stack
+Display the history for a stack
 
-This command lists data about previous updates for a stack.
+This command lists data about previous updates, destroys, etc. for a stack.
 
 ```
 pulumi history [flags]
