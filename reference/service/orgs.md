@@ -58,8 +58,8 @@ tbody tr td:first-child {
 |--------|--------|--------|--------|
 | Organization | Team | Organization | Group |
 
-[This](https://about.gitlab.com/2017/09/11/comparing-confusing-terms-in-github-bitbucket-and-gitlab/) post from GitLab explains the similarities between the popular
-cloud source-control providers.
+[This](https://about.gitlab.com/2017/09/11/comparing-confusing-terms-in-github-bitbucket-and-gitlab/) post from GitLab explains the similarities and the subtle differences
+between each of those cloud source-control providers.
 
 You can learn more about each of the external services using these links:
 
