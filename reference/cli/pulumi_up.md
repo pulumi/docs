@@ -9,10 +9,12 @@ Create or update the resources in a stack.
 
 This command creates or updates resources in a stack. The new desired goal state for the target stack
 is computed by running the current Pulumi program and observing all resource allocations to produce a
-resource graph. This goal state is then compared against the existing state to determine what create,
-read, update, and/or delete operations must take place to achieve the desired goal state, in the most
-minimally disruptive way. This command records a full transactional snapshot of the stack's new state
-afterwards so that the stack may be updated incrementally again later on.
+resource graph. This goal state is then compared against the existing state, as recorded in the snapshot taken during the last `pulumi up` command, to determine what create,
+read, update, and/or delete operations must take place to achieve the desired goal state in the most
+minimally disruptive way. 
+
+This command records a full transactional snapshot of the stack's new state
+afterwards in the workspace backend so that the stack may be updated incrementally again later on.
 
 The program to run is loaded from the project in the current directory by default. Use the `-C` or
 `--cwd` flag to use a different directory.
