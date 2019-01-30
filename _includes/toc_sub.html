@@ -11,6 +11,13 @@
     {% endcapture %}
 
     {% assign filename = path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
+
+    {% comment %}Append ".md" to the filename, if needed.{% endcomment %}
+    {% assign filename_end = filename | slice: -3, 3 %}
+    {% if filename_end != ".md" %}
+        {% assign filename = filename | append: '.md' %}
+    {% endif %}
+
     {% if filename == page.path %}
         {% assign sidenav_selected = "sidenav-selected" %}
     {% else %}
