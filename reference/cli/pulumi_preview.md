@@ -8,8 +8,7 @@ Show a preview of updates to a stack's resources
 Show a preview of updates a stack's resources.
 
 This command displays a preview of the updates to an existing stack whose state is
-represented by an existing snapshot file. The new desired state is computed by running
-a Pulumi program, and extracting all resource allocations from its resulting object graph.
+represented by an existing snapshot file. (This file was created by the last  `pulumi up` command.)  The new desired state is computed by running a Pulumi program, and extracting all resource allocations from its resulting object graph.
 These allocations are then compared against the existing state to determine what
 operations must take place to achieve the desired state. No changes to the stack will
 actually take place.
