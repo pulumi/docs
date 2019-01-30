@@ -6,7 +6,13 @@ title: "Programming Model"
 
 ## Overview {#overview}
 
-In Pulumi, [resources](#resources) are defined by allocating resource objects in a [program](#programs), such as `new aws.ec2.Instance(...)`.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. To create dependencies between resources, just reference the [output properties](#outputs) of a resource. For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
+Each Pulumi [project](project.html) contains a [program](#programs) and configuration parameters  Each project has one or more related [stacks](stack.html).  
+
+The program is code you write that, when run by the Pulumi engine, creates objects and dependencies that model the desired state of a [stack](stack.html).  The model describes the resources needed in the stack and their settings. As it runs, the Pulumi engine updates the stack to match the model.
+
+A [stack](stack.html) is an isolated, independently configurable instance of a Pulumi program. Each stack belongs to a single project.  Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev). Stacks contain their configuration values.
+
+In Pulumi, [resources](#resources) are defined by allocating resource objects in a [program](#programs), such as `new aws.ec2.Instance(...)`.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. To create dependencies between resources, you will reference the [output properties](#outputs) of a resource. For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
 
 {% include langchoose.html %}
 
