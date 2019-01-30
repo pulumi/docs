@@ -2,16 +2,6 @@
 title: "FAQ"
 ---
 
-## How does Pulumi depend on pulumi.com?
-
-Pulumi uses pulumi.com to store information about the current state of your application, which is used during updates, previews and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, pulumi.com ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, pulumi.com ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on pulumi.com. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](https://pulumi.io/reference/how.html).
-
-## What happens if pulumi.com is down?
-
-Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not effect any runtime behavior of your application.  
-
-If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers, however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
-
 ## How can I add support for my favorite cloud?
 
 To enable a new cloud, you need to create a Pulumi Resource Provider.  This requires a gRPC interface, and can be implemented directly; see see https://github.com/pulumi/pulumi-kubernetes for an example of this.  
@@ -35,6 +25,25 @@ Depending on how you use your secrets, they may be visible in parts of your appl
 ## If I don't want my secret to end up in the checkpoint, what can I do?
 
 We are actively looking for ways to improve pulumi's secret management, see [pulumi/pulumi#1547](https://github.com/pulumi/pulumi/issues/1547) and [pulumi/pulumi#397](https://github.com/pulumi/pulumi/issues/397). In the meantime we recommend you manually use some third party key management (e.g. Amazon KMS). 
+
+## How do I create a stack inside an Organization instead of my User account?
+
+To create a stack in a different Pulumi organization, simply prefix the stack's
+name with the organization's login. For example:
+
+```sh
+$ pulumi stack init acme-corp/widget-server
+```
+
+## How does Pulumi depend on pulumi.com?
+
+Pulumi uses pulumi.com to store information about the current state of your application, which is used during updates, previews and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, pulumi.com ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, pulumi.com ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on pulumi.com. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](https://pulumi.io/reference/how.html).
+
+## What happens if pulumi.com is down?
+
+Any infrastructure that you’ve deployed using Pulumi will continue working and can be managed with your cloud provider’s console or CLI, that is, pulumi.com should not effect any runtime behavior of your application.  
+
+If pulumi.com is down, you'll be unable to preview, update or destroy a stack using Pulumi.  Some commands, like `pulumi logs`, use pulumi.com to find the correct log stream, so will not function until pulumi.com recovers, however, your cloud provider will still produce logs that you can use for diagnostics and you can view these via your cloud console or CLI. 
 
 ## Can I use Pulumi without depending on pulumi.com?
 
@@ -61,12 +70,3 @@ $ pulumi stack import --file my-app-production.checkpoint.json # import the new 
 ```
 
 In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint.
-
-## How do I create a stack inside an Organization instead of my User account?
-
-To create a stack in a different Pulumi organization, simply prefix the stack's
-name with the organization's login. For example:
-
-```sh
-$ pulumi stack init acme-corp/widget-server
-```
