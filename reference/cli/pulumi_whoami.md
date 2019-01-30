@@ -1,11 +1,11 @@
 ## pulumi whoami
 
-Display current logged in user
+Display the current logged-in user
 
 ### Synopsis
 
 
-Display current logged in user
+Display the current logged-in user
 
 Displays the username of the currently logged in user.
 
