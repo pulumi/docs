@@ -20,9 +20,8 @@ Adding a new Pulumi organization can be done directly from the Pulumi Cloud Cons
 
 ## Imported Organizations
 
-Organizations using the Pulumi Team and Enterprise editions may be backed by an external service,
-such as GitHub or GitLab. This enables you to manage user access and team permissions by using
-your existing access controls.
+Organizations using the Pulumi Team and Enterprise editions may be backed by an external service.
+This enables you to manage user access and team permissions by using your existing access controls.
 
 Here's a table that shows you the mapping between the supported 3rd-party services and Pulumi.
 
@@ -55,15 +54,20 @@ tbody tr td:first-child {
 }
 </style>
 
-| Pulumi | GitHub | GitLab |
-|--------|--------|--------|
-| Organization | Organization | Group |
+| Pulumi | Bitbucket | GitHub | GitLab |
+|--------|--------|--------|--------|
+| Organization | Team | Organization | Group |
 
-[This](https://about.gitlab.com/2017/09/11/comparing-confusing-terms-in-github-bitbucket-and-gitlab/) post from GitLab explains the similarities between the popular
-cloud source-control providers.
+[This](https://about.gitlab.com/2017/09/11/comparing-confusing-terms-in-github-bitbucket-and-gitlab/) post from GitLab explains the similarities and the subtle differences
+between each of those cloud source-control providers.
+
+You can learn more about each of the external services using these links:
+
+- [Bitbucket Teams](https://confluence.atlassian.com/bitbucket/teams-321853005.html)
+- [GitHub Organizations](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team)
+- [GitLab Groups](https://docs.gitlab.com/ce/user/group/)
 
 ### GitHub-backed Organizations
-> Learn more about setting up GitHub Organizations [here](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team).
 
 To add a GitHub-backed organization to Pulumi, an administrator of the GitHub organization must
 first grant the _Pulumi Cloud_ OAuth app the `read:org` scope. This can be done on GitHub by
@@ -74,7 +78,6 @@ Pulumi requires this scope in order to verify memberships within the GitHub orga
 will not have access to any of the organizations source repositories.
 
 ### GitLab-backed Organizations
-> Learn more about GitLab Groups [here](https://docs.gitlab.com/ce/user/group/).
 
 To add a GitLab-backed organization to Pulumi, an administrator of the GitLab group
 may add the group to Pulumi, and invite its members to join Pulumi.
