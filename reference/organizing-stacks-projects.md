@@ -80,14 +80,14 @@ you may have inter-dependencies between your stacks -- something that Pulumi sup
 
 ## Inter-Stack Dependencies
 
-Let's imagine you decide to define your cluster infrastructure in one project and consume it from another.
-Perhaps one project, `acmecorp-infra`, defines your Kubernetes cluster and another, `acmecorp-services`, deploys
+Let's imagine that acmecorp decides to define its cluster infrastructure in one project and consume it from another.
+Perhaps one project, `infra`, defines the Kubernetes cluster and another, `services`, deploys
 services into it. Let's further imagine we are doing this across three distinct environments, production, staging,
 and testing. In that case, we'll have six distinct stacks, that pair up together:
 
-* `acmecorp-infra-production` provides the cluster used by `acmecorp-services-production`
-* `acmecorp-infra-staging` provides the cluster used by `acmecorp-services-staging`
-* `acmecorp-infra-testing` provides the cluster used by `acmecorp-services-testing`
+* `acmecorp/infra/production` provides the cluster used by `acmecorp/services/production`
+* `acmecorp/infra/staging` provides the cluster used by `acmecorp/services/staging`
+* `acmecorp/infra/testing` provides the cluster used by `acmecorp/services/testing`
 
 The way Pulumi programs communicate information for external consumption is by using stack exports. For instance,
 our infrastructure stack might export the Kubernetes configuration information needed to deploy into a cluster:
@@ -104,16 +104,19 @@ The Pulumi programming model offers a way to do this with its `StackReference` r
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
-const env = pulumi.getStack().substring(pulumi.getStack().lastIndexOf("-"));
-const infra = new pulumi.StackReference(`acmecorp-infra-${env}`);
+const env = pulumi.getStack();
+const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
 const provider = new k8s.Provider("k8s", { kubeConfig: infra.getOutput("kubeConfig") });
 const service = new k8s.v1.core.Service(..., { provider: provider });
 ```
 
-The `StackReference` constructor takes as input the name of another stack from which to fetch outputs. We
-need to do a little parsing here to map, say, `acmecorp-services-production` to `acmecorp-infra-production`.
-But once we have that resource, we can fetch the `kubeConfig` output variable with the `getOutput` function.
-From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
+The `StackReference` constructor takes as input a string of the form `<organization>/<project>/<stack>`, and lets
+you access the outputs of that stack.
+
+In this above example, we construct a stack reference to a specific stack in this project which has the same name
+as our current stack (i.e. when deploying the "staging" stack of the above program, we reference the "staging" stack)
+from the infra project. Once we have that resource, we can fetch the `kubeConfig` output variable with the `getOutput`
+function.  From that point onwards, Pulumi understands the inter-stack dependency for scenarios like cascading updates.
 
 ## Aligning to Git Repos
 
