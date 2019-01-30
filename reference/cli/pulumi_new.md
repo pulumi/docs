@@ -1,11 +1,11 @@
 ## pulumi new
 
-Create a new Pulumi project
+Create a new Pulumi project.
 
 ### Synopsis
 
 
-Create a new Pulumi project
+Create a new Pulumi project by creating a Pulumi.yaml file.
 
 ```
 pulumi new [template|url] [flags]
