@@ -21,46 +21,74 @@ include.tree is the actual set of sections to render. It is an array with shape:
     {% endcapture %}
     <div class="sidenav-section toggleVisible {% if forloop.last == false %}separator{% endif %}">
         {% assign sidenav_expanded = false %}
-        {% assign filename = path | replace: '/', ' ' | strip | replace: ' ', '/' | append: '.md' %}
+        {% assign sidenav_selected = "" %}
+
+        {% assign filepath = path | replace: '/', ' ' | strip | replace: ' ', '/' %}
+        {% assign filename = filepath | append: '.md' %}
+
+        {% comment %}
+        `prefix` is used as a means of determining whether `sidenav_expanded` should be `true`,
+        when `page.path` starts with the `prefix`.
+        If `item.sidenav_expanded_prefix` is set, then it is used, otherwise, `prefix` is determined based on the item's file path.
+        If `page.path` does not start with `prefix`, we fallback to drilling down into `item.section` to determine
+        if the nav should be expanded.
+        {% endcomment %}
+        {% if item.sidenav_expanded_prefix %}
+            {% assign prefix = item.sidenav_expanded_prefix %}
+        {% else %}
+            {% assign prefix = filepath | replace: '.html', '' %}
+            {% assign prefix_end = prefix | slice: -5, 5 %}
+            {% if prefix_end == "index" %}
+                {% assign prefix_length = prefix | size | minus: 5 %}
+                {% assign prefix = prefix | slice: 0, prefix_length %}
+            {% endif %}
+        {% endif %}
+
         {% if page.path == filename %}
             {% assign sidenav_expanded = true %}
             {% assign sidenav_selected = "sidenav-selected" %}
         {% else %}
-            {% assign sidenav_selected = "" %}
-            {% if item.section or item.toplevel %}
-                {% for section in item.section %}
-                    {% if section.path %}
-                        {% assign section_path = section.path %}
-                    {% else %}
-                        {% assign section_path = section %}
-                    {% endif %}
-                    {% assign section_filename = section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
+            {% comment %}See if `page.path` starts with `prefix`.{% endcomment %}
+            {% assign startsWithPrefixArray = page.path | split:prefix %}
+            {% if startsWithPrefixArray[0] == "" %}
+                {% comment %}`page.path` starts with `prefix`.{% endcomment %}
+                {% assign sidenav_expanded = true %}
+            {% else %}
+                {% if item.section or item.toplevel %}
+                    {% for section in item.section %}
+                        {% if section.path %}
+                            {% assign section_path = section.path %}
+                        {% else %}
+                            {% assign section_path = section %}
+                        {% endif %}
+                        {% assign section_filename = section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
 
-                    {% comment %}Append ".md" to the section_filename, if needed.{% endcomment %}
-                    {% assign section_filename_end = section_filename | slice: -3, 3 %}
-                    {% if section_filename_end != ".md" %}
-                        {% assign section_filename = section_filename | append: '.md' %}
-                    {% endif %}
+                        {% comment %}Append ".md" to the section_filename, if needed.{% endcomment %}
+                        {% assign section_filename_end = section_filename | slice: -3, 3 %}
+                        {% if section_filename_end != ".md" %}
+                            {% assign section_filename = section_filename | append: '.md' %}
+                        {% endif %}
 
-                    {% if page.path == section_filename %}
-                        {% assign sidenav_expanded = true %}
-                    {% endif %}
+                        {% if page.path == section_filename %}
+                            {% assign sidenav_expanded = true %}
+                        {% endif %}
 
-                    {% comment %}Our API Reference is an extra level deep, so check the next level as well.{% endcomment %}
-                    {% if sidenav_expanded != true and section.section %}
-                        {% for inner_section in section.section %}
-                            {% if inner_section.path %}
-                                {% assign inner_section_path = inner_section.path %}
-                            {% else %}
-                                {% assign inner_section_path = inner_section %}
-                            {% endif %}
-                            {% assign inner_section_filename = inner_section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
-                            {% if page.path == inner_section_filename %}
-                                {% assign sidenav_expanded = true %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                {% endfor %}
+                        {% comment %}Our API Reference is an extra level deep, so check the next level as well.{% endcomment %}
+                        {% if sidenav_expanded != true and section.section %}
+                            {% for inner_section in section.section %}
+                                {% if inner_section.path %}
+                                    {% assign inner_section_path = inner_section.path %}
+                                {% else %}
+                                    {% assign inner_section_path = inner_section %}
+                                {% endif %}
+                                {% assign inner_section_filename = inner_section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
+                                {% if page.path == inner_section_filename %}
+                                    {% assign sidenav_expanded = true %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             {% endif %}
         {% endif %}
         {% comment %}

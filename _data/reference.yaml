@@ -22,6 +22,7 @@ toc:
     path: /reference/state.html
 - title: Command Line
   path: /reference/commands
+  sidenav_expanded_prefix: reference/cli/
   section:
   - title: Cancel
     path: /reference/cli/pulumi_cancel.html
@@ -110,6 +111,7 @@ toc:
   section:
     - title: Node.js
       path: /reference/pkg/nodejs/index
+      sidenav_disable_prefix_selection: true
       section:
       - title: pulumi
         path: /reference/pkg/nodejs/@pulumi/pulumi/index.html
@@ -143,6 +145,7 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
     - title: Python
       path: /reference/pkg/python/index
+      sidenav_disable_prefix_selection: true
       section:
       - title: pulumi_aws
         path: /reference/pkg/python/pulumi_aws/index.html
