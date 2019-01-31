@@ -35,8 +35,30 @@ include.tree is the actual set of sections to render. It is an array with shape:
                         {% assign section_path = section %}
                     {% endif %}
                     {% assign section_filename = section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
+
+                    {% comment %}Append ".md" to the section_filename, if needed.{% endcomment %}
+                    {% assign section_filename_end = section_filename | slice: -3, 3 %}
+                    {% if section_filename_end != ".md" %}
+                        {% assign section_filename = section_filename | append: '.md' %}
+                    {% endif %}
+
                     {% if page.path == section_filename %}
                         {% assign sidenav_expanded = true %}
+                    {% endif %}
+
+                    {% comment %}Our API Reference is an extra level deep, so check the next level as well.{% endcomment %}
+                    {% if sidenav_expanded != true and section.section %}
+                        {% for inner_section in section.section %}
+                            {% if inner_section.path %}
+                                {% assign inner_section_path = inner_section.path %}
+                            {% else %}
+                                {% assign inner_section_path = inner_section %}
+                            {% endif %}
+                            {% assign inner_section_filename = inner_section_path | replace: '/', ' ' | strip | replace: ' ', '/' | replace: '.html', '.md' %}
+                            {% if page.path == inner_section_filename %}
+                                {% assign sidenav_expanded = true %}
+                            {% endif %}
+                        {% endfor %}
                     {% endif %}
                 {% endfor %}
             {% endif %}
