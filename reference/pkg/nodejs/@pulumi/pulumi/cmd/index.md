@@ -24,7 +24,7 @@ title: Module cmd
 
 
 <h2 class="pdoc-module-header" id="main">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L287">function <b>main</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/cmd/dynamic-provider/index.ts#L288">function <b>main</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
