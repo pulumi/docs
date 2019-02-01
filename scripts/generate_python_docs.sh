@@ -4,6 +4,7 @@ set -o errexit -o pipefail
 set -x
 
 PACKAGES=(
+  "pulumi"
   "pulumi_aws"
   "pulumi_azure"
   "pulumi_gcp"
