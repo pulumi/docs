@@ -170,7 +170,7 @@ the stack update or performed the action.
 	"user": {
 		"name": "Morty Smith",
 		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
 	},
 	"organization": {
 		"name": "Crazy Adventures",
@@ -178,7 +178,8 @@ the stack update or performed the action.
 		"avatarUrl": "https://crazy-adventures.net/logo.png"
 	},
 	"action": "created",
-	"stackName": "website-prod",
+	"projectName": "website",
+	"stackName": "website-prod"
 }
 ```
 
@@ -189,7 +190,7 @@ the stack update or performed the action.
 	"user": {
 		"name": "Morty Smith",
 		"githubLogin": "morty",
-		"avatarUrl": "https://crazy-adventures.net/morty.png",
+		"avatarUrl": "https://crazy-adventures.net/morty.png"
 	},
 	"organization": {
 		"name": "Crazy Adventures",
@@ -205,14 +206,14 @@ the stack update or performed the action.
 			{
 				"name": "Morty Smith",
 				"githubLogin": "morty",
-				"avatarUrl": "https://crazy-adventures.net/morty.png",
+				"avatarUrl": "https://crazy-adventures.net/morty.png"
 			}
 		],
 		"stacks": [
 			{
 				"stackName": "website-prod",
-				"permission": 3,
-			},
+				"permission": 3
+			}
 		]
 	}
 }
@@ -232,6 +233,7 @@ the stack update or performed the action.
 		"githubLogin": "crazy-adventures",
 		"avatarUrl": "https://crazy-adventures.net/logo.png"
 	},
+	"projectName": "website",
 	"stackName": "website-prod",
 	"updateUrl": "https://app.pulumi.com/crazy-adventures/website-prod/42",
 	"kind": "refresh",
@@ -258,6 +260,7 @@ the stack update or performed the action.
 		"githubLogin": "crazy-adventures",
 		"avatarUrl": "https://crazy-adventures.net/logo.png"
 	},
+	"projectName": "website",
 	"stackName": "website-prod",
 	"updateUrl": "https://app.pulumi.com/crazy-adventures/website-prod/11bf162b-d9d5-4715-8f88-20dcd0e0b167",
 	"kind": "update",
