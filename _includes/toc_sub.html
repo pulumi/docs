@@ -18,10 +18,30 @@
         {% assign filename = filename | append: '.md' %}
     {% endif %}
 
+    {% unless item.sidenav_disable_prefix_selection %}
+        {% comment %}
+        We use `prefix` here to determine whether the item should be selected, when `page.path` starts with `prefix`.
+        {% endcomment %}
+        {% assign prefix = filename | replace: '.md', '' %}
+        {% assign prefix_end = prefix | slice: -5, 5 %}
+        {% if prefix_end == "index" %}
+            {% assign prefix_length = prefix | size | minus: 5 %}
+            {% assign prefix = prefix | slice: 0, prefix_length %}
+        {% endif %}
+    {% endunless %}
+
+    {% assign sidenav_selected = "" %}
     {% if filename == page.path %}
         {% assign sidenav_selected = "sidenav-selected" %}
     {% else %}
-        {% assign sidenav_selected = "" %}
+        {% unless item.sidenav_disable_prefix_selection %}
+            {% comment %}See if `page.path` starts with `prefix`.{% endcomment %}
+            {% assign startsWithPrefixArray = page.path | split:prefix %}
+            {% if startsWithPrefixArray[0] == "" %}
+                {% comment %}`page.path` starts with `prefix`.{% endcomment %}
+                {% assign sidenav_selected = "sidenav-selected" %}
+            {% endif %}
+        {% endunless %}
     {% endif %}
     {% if item.section %}
         <div data-title="{{item.title}}">
