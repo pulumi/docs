@@ -347,7 +347,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L316">class <b>Output</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L314">class <b>Output</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -358,7 +358,7 @@ value as well as the Resource the value came from.  This allows for a precise 'R
 dependency graph' to be created, which properly tracks the relationship between resources.
 
 <h3 class="pdoc-member-header" id="Output-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L406"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L404"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -366,7 +366,7 @@ dependency graph' to be created, which properly tracks the relationship between 
 
 </div>
 <h3 class="pdoc-member-header" id="Output-create">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L394">method <b>create</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L392">method <b>create</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -381,7 +381,7 @@ values as necessary.
 
 </div>
 <h3 class="pdoc-member-header" id="Output-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L404">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L402">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -393,7 +393,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Output-__pulumiOutput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L323">property <b>__pulumiOutput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L321">property <b>__pulumiOutput</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__pulumiOutput?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span> = true;</pre>
@@ -404,7 +404,7 @@ This is internal instead of being truly private, to support mixins and our seria
 
 </div>
 <h3 class="pdoc-member-header" id="Output-apply">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L375">property <b>apply</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L373">property <b>apply</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>apply: (func: (t: T) => <a href='#Input'>Input</a>&lt;U&gt;) => <a href='#Output'>Output</a>&lt;U&gt;;</pre>
@@ -436,7 +436,7 @@ of the Output during cloud runtime execution, use `get()`.
 
 </div>
 <h3 class="pdoc-member-header" id="Output-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L386">property <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L384">property <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>get: () => T;</pre>
@@ -451,7 +451,7 @@ the dependency graph to be changed.
 
 </div>
 <h3 class="pdoc-member-header" id="Output-isKnown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L332">property <b>isKnown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L330">property <b>isKnown</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>isKnown: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -464,7 +464,7 @@ value that itself knows it should not perform .apply calls.
 
 </div>
 <h3 class="pdoc-member-header" id="Output-promise">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L340">property <b>promise</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L338">property <b>promise</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>promise: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;;</pre>
@@ -476,7 +476,7 @@ Only callable on the outside.
 
 </div>
 <h3 class="pdoc-member-header" id="Output-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L347">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L345">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resources: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
@@ -834,11 +834,11 @@ deployments.
 <pre class="highlight"><span class='kd'>const</span> deploymentOnlyModule: <span class='kd'>true</span> = <span class='s2'>true</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="testingOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L305">const <b>testingOptions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L303">const <b>testingOptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="isDryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L306">let <b>isDryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L304">let <b>isDryRun</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> isDryRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'>false</span>;</pre>
@@ -851,7 +851,7 @@ deployments.
 <pre class="highlight"><span class='kd'>const</span> version: <span class='s2'>"${VERSION}"</span> = <span class='s2'>&#34;${VERSION}&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="all">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L559">function <b>all</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L557">function <b>all</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -899,7 +899,7 @@ d1 and d2.
 
 </div>
 <h2 class="pdoc-module-header" id="concat">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L687">function <b>concat</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L685">function <b>concat</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -940,7 +940,7 @@ getStack returns the current stack name.  It throws an exception if none is regi
 
 </div>
 <h2 class="pdoc-module-header" id="interpolate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L703">function <b>interpolate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L701">function <b>interpolate</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -960,7 +960,7 @@ As with [concat] the 'placeholders' between `${}` can be any Inputs.  i.e. they 
 
 </div>
 <h2 class="pdoc-module-header" id="output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L502">function <b>output</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L500">function <b>output</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1159,12 +1159,12 @@ The name of the stack to reference.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UnwrappedArray">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">interface <b>UnwrappedArray</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">interface <b>UnwrappedArray</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array'>Array</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
 <h3 class="pdoc-member-header" id="UnwrappedArray-__@iterator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>__@iterator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>__@iterator</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1175,7 +1175,7 @@ Iterator
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-__@unscopables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>__@unscopables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>__@unscopables</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1195,7 +1195,7 @@ when they will be absent when used in a 'with' statement.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-concat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>concat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>concat</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1212,7 +1212,7 @@ Combines two or more arrays.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-copyWithin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>copyWithin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>copyWithin</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1224,7 +1224,7 @@ to the same array starting at position target
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>entries</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1235,7 +1235,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-every">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>every</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>every</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1246,7 +1246,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-fill">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>fill</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>fill</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1257,7 +1257,7 @@ Returns the this object after filling the section identified by start and end wi
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1274,7 +1274,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-find">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>find</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>find</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1289,7 +1289,7 @@ otherwise.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-findIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>findIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>findIndex</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1301,7 +1301,7 @@ otherwise.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-forEach">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>forEach</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>forEach</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1312,7 +1312,7 @@ Performs the specified action for each element in an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-indexOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>indexOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>indexOf</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1323,7 +1323,7 @@ Returns the index of the first occurrence of a value in an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-join">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>join</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>join</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1334,7 +1334,7 @@ Adds all the elements of an array separated by the specified separator string.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>keys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>keys</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1345,7 +1345,7 @@ Returns an iterable of keys in the array
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-lastIndexOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>lastIndexOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>lastIndexOf</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1356,7 +1356,7 @@ Returns the index of the last occurrence of a specified value in an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-map">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>map</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>map</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1367,7 +1367,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-pop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>pop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>pop</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1378,7 +1378,7 @@ Removes the last element from an array and returns it.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-push">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>push</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>push</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1389,7 +1389,7 @@ Appends new elements to an array, and returns the new length of the array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-reduce">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>reduce</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>reduce</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1409,7 +1409,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-reduceRight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>reduceRight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>reduceRight</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1429,7 +1429,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-reverse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>reverse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>reverse</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1440,7 +1440,7 @@ Reverses the elements in an Array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-shift">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>shift</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>shift</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1451,7 +1451,7 @@ Removes the first element from an array and returns it.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-slice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>slice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>slice</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1462,7 +1462,7 @@ Returns a section of an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-some">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>some</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>some</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1473,7 +1473,7 @@ Determines whether the specified callback function returns true for any element 
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-sort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>sort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>sort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1484,7 +1484,7 @@ Sorts an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-splice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>splice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>splice</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1501,7 +1501,7 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-toLocaleString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>toLocaleString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>toLocaleString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1512,7 +1512,7 @@ Returns a string representation of an array. The elements are converted to strin
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-toString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>toString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>toString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1523,7 +1523,7 @@ Returns a string representation of an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-unshift">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>unshift</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>unshift</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1534,7 +1534,7 @@ Inserts new elements at the start of an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">method <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">method <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1545,13 +1545,13 @@ Returns an iterable of values in the array
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-Array">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">property <b>Array</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">property <b>Array</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>Array: ArrayConstructor;</pre>
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L668">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>length: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1567,7 +1567,7 @@ Gets or sets the length of the array. This is a number one higher than the highe
 <pre class="highlight"><span class='kd'>type</span> ID = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Input">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L610">type <b>Input</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L608">type <b>Input</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Input = T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#Output'>Output</a>&lt;T&gt;;</pre>
@@ -1577,7 +1577,7 @@ for one, or the output from a existing Resource.
 
 </div>
 <h2 class="pdoc-module-header" id="Inputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L616">type <b>Inputs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L614">type <b>Inputs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Inputs = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
@@ -1593,7 +1593,7 @@ property value.
 <pre class="highlight"><span class='kd'>type</span> URN = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Unwrap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L642">type <b>Unwrap</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L640">type <b>Unwrap</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Unwrap = Unwrap<T>;</pre>
@@ -1623,7 +1623,7 @@ It should always either be `{ a: Promise<NonOutput> }` or just `{ a: Output<...>
 
 </div>
 <h2 class="pdoc-module-header" id="UnwrapSimple">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L655">type <b>UnwrapSimple</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L653">type <b>UnwrapSimple</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> UnwrapSimple = UnwrapSimple<T>;</pre>
@@ -1632,7 +1632,7 @@ Handles encountering basic types when unwrapping.
 
 </div>
 <h2 class="pdoc-module-header" id="UnwrappedObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L672">type <b>UnwrappedObject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L670">type <b>UnwrappedObject</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> UnwrappedObject = { ... };</pre>

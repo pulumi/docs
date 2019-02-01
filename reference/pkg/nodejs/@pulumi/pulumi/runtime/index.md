@@ -19,6 +19,7 @@ title: Module runtime
 * <a href="#rootPulumiStackTypeName">const rootPulumiStackTypeName</a>
 * <a href="#specialArchiveSig">const specialArchiveSig</a>
 * <a href="#specialAssetSig">const specialAssetSig</a>
+* <a href="#specialSecretSig">const specialSecretSig</a>
 * <a href="#specialSigKey">const specialSigKey</a>
 * <a href="#unknownValue">const unknownValue</a>
 * <a href="#allConfig">function allConfig</a>
@@ -113,34 +114,43 @@ resources allocated by a deployment.  This must be kept up to date with
 
 </div>
 <h2 class="pdoc-module-header" id="specialArchiveSig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L216">const <b>specialArchiveSig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L219">const <b>specialArchiveSig</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> specialArchiveSig: <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span> = <span class='s2'>&#34;0def7320c3a5731c473e5ecbe6d01bc7&#34;</span>;</pre>
 
-specialArchiveSig is a randomly assigned hash used to identify archives in maps.  See pkg/resource/asset.go.
+specialArchiveSig is a randomly assigned hash used to identify archives in maps. See pkg/resource/asset.go.
 
 </div>
 <h2 class="pdoc-module-header" id="specialAssetSig">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L212">const <b>specialAssetSig</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L215">const <b>specialAssetSig</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> specialAssetSig: <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span> = <span class='s2'>&#34;c44067f5952c0a294b673a41bacd8c17&#34;</span>;</pre>
 
-specialAssetSig is a randomly assigned hash used to identify assets in maps.  See pkg/resource/asset.go.
+specialAssetSig is a randomly assigned hash used to identify assets in maps. See pkg/resource/asset.go.
+
+</div>
+<h2 class="pdoc-module-header" id="specialSecretSig">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L223">const <b>specialSecretSig</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>const</span> specialSecretSig: <span class='s2'>"1b47061264138c4ac30d75fd1eb44270"</span> = <span class='s2'>&#34;1b47061264138c4ac30d75fd1eb44270&#34;</span>;</pre>
+
+specialSecretSig is a randomly assigned hash used to identify secrets in maps. See pkg/resource/properties.go.
 
 </div>
 <h2 class="pdoc-module-header" id="specialSigKey">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L208">const <b>specialSigKey</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L211">const <b>specialSigKey</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> specialSigKey: <span class='s2'>"4dabf18193072939515e22adb298388d"</span> = <span class='s2'>&#34;4dabf18193072939515e22adb298388d&#34;</span>;</pre>
 
-specialSigKey is sometimes used to encode type identity inside of a map.  See pkg/resource/properties.go.
+specialSigKey is sometimes used to encode type identity inside of a map. See pkg/resource/properties.go.
 
 </div>
 <h2 class="pdoc-module-header" id="unknownValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L204">const <b>unknownValue</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L207">const <b>unknownValue</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>const</span> unknownValue: <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span> = <span class='s2'>&#34;04da6b54-80e4-46f7-96ec-b56ff0331ba9&#34;</span>;</pre>
@@ -185,7 +195,7 @@ debuggablePromise optionally wraps a promise with some goo to make it easier to 
 
 </div>
 <h2 class="pdoc-module-header" id="deserializeProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L115">function <b>deserializeProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L118">function <b>deserializeProperties</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -196,7 +206,7 @@ deserializeProperties fetches the raw outputs and deserializes them from a gRPC 
 
 </div>
 <h2 class="pdoc-module-header" id="deserializeProperty">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L338">function <b>deserializeProperty</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L345">function <b>deserializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -352,7 +362,7 @@ Returns true if we're currently performing a dry-run, or false if this is a true
 
 </div>
 <h2 class="pdoc-module-header" id="readResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L56">function <b>readResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L58">function <b>readResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -364,7 +374,7 @@ will not be part of the resulting stack's state, as they are presumed to belong 
 
 </div>
 <h2 class="pdoc-module-header" id="registerResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L112">function <b>registerResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L114">function <b>registerResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -377,7 +387,7 @@ objects that the registration operation will resolve at the right time (or remai
 
 </div>
 <h2 class="pdoc-module-header" id="registerResourceOutputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L319">function <b>registerResourceOutputs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/resource.ts#L336">function <b>registerResourceOutputs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -388,7 +398,7 @@ registerResourceOutputs completes the resource registration, attaching an option
 
 </div>
 <h2 class="pdoc-module-header" id="resolveProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L135">function <b>resolveProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L138">function <b>resolveProperties</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -477,11 +487,11 @@ There are several known limitations:
 
 </div>
 <h2 class="pdoc-module-header" id="serializeProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L107">function <b>serializeProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L110">function <b>serializeProperties</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>serializeProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, dependentResources: <a href='#Resource'>Resource</a>[]): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</pre>
+<pre class="highlight"><span class='kd'></span>serializeProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, propertyDependencies: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Resource'>Resource</a>[]&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</pre>
 
 
 serializeProperties walks the props object passed in, awaiting all interior promises, creating a reasonable
@@ -489,7 +499,7 @@ POJO object that can be remoted over to registerResource.
 
 </div>
 <h2 class="pdoc-module-header" id="serializeProperty">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L222">function <b>serializeProperty</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L229">function <b>serializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -501,11 +511,11 @@ appropriate, in addition to translating certain "special" values so that they ar
 
 </div>
 <h2 class="pdoc-module-header" id="serializeResourceProperties">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L98">function <b>serializeResourceProperties</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/runtime/rpc.ts#L101">function <b>serializeResourceProperties</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, dependentResources: <a href='#Resource'>Resource</a>[]): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</pre>
+<pre class="highlight"><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, propertyDependencies: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Resource'>Resource</a>[]&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;</pre>
 
 
 serializeResourceProperties walks the props object passed in, awaiting all interior promises besides those for `id`
