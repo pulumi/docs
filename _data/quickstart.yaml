@@ -14,6 +14,7 @@ toc:
    - quickstart/aws/tutorial-containers-ecs-fargate.md
    - quickstart/aws/tutorial-ec2-webserver.md
    - quickstart/aws/tutorial-s3-website.md
+   - quickstart/aws/tutorial-eks.md
 - title: Microsoft Azure
   path: /quickstart/azure/index
   section:
