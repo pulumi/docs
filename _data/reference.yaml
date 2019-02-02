@@ -143,6 +143,10 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/openstack/index.html
       - title: vsphere
         path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
+      - title: f5bigip
+        path: /reference/pkg/nodejs/@pulumi/f5bigip/index.html
+      - title: packet
+        path: /reference/pkg/nodejs/@pulumi/packet/index.html
     - title: Python
       path: /reference/pkg/python/index
       sidenav_disable_prefix_selection: true
