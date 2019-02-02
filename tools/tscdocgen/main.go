@@ -84,7 +84,7 @@ var gitHubBaseURLs = map[string]string{
 	"@pulumi/cloud-aws":        "https://github.com/pulumi/pulumi-cloud/blob/master/aws",
 	"@pulumi/cloud-azure":      "https://github.com/pulumi/pulumi-cloud/blob/master/azure",
 	"@pulumi/docker":           "https://github.com/pulumi/pulumi-docker/blob/master/sdk/nodejs",
-	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/master/nodejs",
+	"@pulumi/eks":              "https://github.com/pulumi/pulumi-eks/blob/master/nodejs/eks",
 	"@pulumi/kubernetes":       "https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/nodejs",
 	"@pulumi/gcp":              "https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs",
 	"@pulumi/openstack":        "https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs",
