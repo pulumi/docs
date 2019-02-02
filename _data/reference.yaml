@@ -161,6 +161,14 @@ toc:
         path: /reference/pkg/python/pulumi_gcp/index.html
       - title: pulumi_random
         path: /reference/pkg/python/pulumi_random/index.html 
+      - title: pulumi_openstack
+        path: /reference/pkg/python/pulumi_openstack/index.html 
+      # - title: pulumi_vsphere
+      #   path: /reference/pkg/python/pulumi_vsphere/index.html 
+      - title: pulumi_f5bigip
+        path: /reference/pkg/python/pulumi_f5bigip/index.html 
+      # - title: pulumi_packet
+      #   path: /reference/pkg/python/pulumi_packet/index.html 
 - title: FAQ
   path: /reference/faq
   toplevel: true

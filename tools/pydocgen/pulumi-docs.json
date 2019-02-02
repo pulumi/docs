@@ -22,6 +22,22 @@
     {
       "name": "Pulumi GCP",
       "package_name": "pulumi_gcp"
+    },
+    {
+      "name": "Pulumi vSphere",
+      "package_name": "pulumi_vsphere"
+    },
+    {
+      "name": "Pulumi OpenStack",
+      "package_name": "pulumi_openstack"
+    },
+    {
+      "name": "Pulumi F5BigIP",
+      "package_name": "pulumi_f5bigip"
+    },
+    {
+      "name": "Pulumi Packet",
+      "package_name": "pulumi_packet"
     }
   ]
 }

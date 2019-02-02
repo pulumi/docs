@@ -99,7 +99,7 @@ provider for the given module member.</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The <a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProviderResource</span></code></a> associated with the given module member, or None if one does not exist.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[ProviderReference]</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[<a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource">ProviderResource</a>]</td>
 </tr>
 </tbody>
 </table>
@@ -199,7 +199,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -216,6 +216,7 @@ If no provider is supplied, the default provider for the resource’s package wi
 provider is pulled from the parent’s provider bag.</li>
 <li><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</li>
+<li><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</li>
 </ul>
 </td>
 </tr>
@@ -251,6 +252,12 @@ provider bag (see also ResourceOptions.providers).</p>
 <dt id="pulumi.ResourceOptions.providers">
 <code class="descname">providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.providers" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional set of providers to use for child resources. Keyed by package name (e.g. “aws”)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.delete_before_replace">
+<code class="descname">delete_before_replace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.delete_before_replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided and True, this resource must be deleted before it is replaced.</p>
 </dd></dl>
 
 </dd></dl>
@@ -612,7 +619,7 @@ value as well as the Resource the value came from.  This allows for a precise �
 dependency graph’ to be created, which properly tracks the relationship between resources.</p>
 <dl class="method">
 <dt id="pulumi.Output.__getitem__">
-<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>key: Any</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getitem__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for looking up attributes dynamically off of outputs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -630,7 +637,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.__getattr__">
-<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__getattr__</code><span class="sig-paren">(</span><em>item: str</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.Any][Any]<a class="headerlink" href="#pulumi.Output.__getattr__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Syntax sugar for retrieving attributes off of outputs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -648,7 +655,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="method">
 <dt id="pulumi.Output.apply">
-<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[T, Union[T, Awaitable[T], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
+<code class="descname">apply</code><span class="sig-paren">(</span><em>func: Callable[[T], Union[U, Awaitable[U], Output[T]]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~U][U]<a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
@@ -674,7 +681,7 @@ type.</td>
 
 <dl class="staticmethod">
 <dt id="pulumi.Output.from_input">
-<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">from_input</code><span class="sig-paren">(</span><em>val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
 given the type.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -693,7 +700,7 @@ given the type.</p>
 
 <dl class="staticmethod">
 <dt id="pulumi.Output.all">
-<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[typing.List[~T]][List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an Output of Lists from a List of Inputs.</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
 Output which can then be used as the target of <cite>apply</cite>. Resource dependencies
