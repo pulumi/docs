@@ -12,7 +12,6 @@
 <li class="toctree-l1"><a class="reference internal" href="cdn/">cdn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cognitive/">cognitive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="compute/">compute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config/">config</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containerservice/">containerservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
