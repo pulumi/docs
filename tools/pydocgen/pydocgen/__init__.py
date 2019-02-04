@@ -254,6 +254,5 @@ def main():
         if path.exists(tempdir):
             shutil.rmtree(tempdir)
         if path.exists(outdir):
-            pass
             shutil.rmtree(outdir)
 
