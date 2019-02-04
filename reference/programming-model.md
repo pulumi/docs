@@ -142,9 +142,10 @@ let connectionString = pulumi.all([sqlServer.name, database.name])
 ```
 
 ```python
-# `all` is not yet available in Python
-#
-# See https://github.com/pulumi/pulumi/issues/2284.
+from pulumi import Output
+
+connection_string = Output.all(sql_server.name, database.name) \
+    .apply(lambda args: f"Server=tcp:{args[0]}.database.windows.net;initial catalog={args[1]}...")
 ```
 
 ```go
@@ -176,7 +177,7 @@ function split(input: pulumi.Input<string>): pulumi.Output<string[]> {
 ```python
 def split(input):
     output = Output.from_input(input);
-    output.apply(lambda v: v.split());
+    return output.apply(lambda v: v.split());
 }
 ```
 
@@ -510,9 +511,10 @@ let component = new MyResource("component", { providers: { aws: useast1, kuberne
 ```
 
 ```python
-# Providers are not supported in Python currently.
-#
-# See https://github.com/pulumi/pulumi/issues/1535.
+component = MyResource("component", ResourceOptions(providers={
+    "aws": useast1,
+    "kubernetes": myk8s,
+}))
 ```
 
 ```go
@@ -548,9 +550,9 @@ let instance = new aws.ec2.Instance("myInstance", {
 ```
 
 ```python
-# Providers are not supported in Python currently.
-#
-# See https://github.com/pulumi/pulumi/issues/1535.
+from pulumi_aws import ec2
+
+instance = ec2.Instance("myInstance", instance_type="t2.micro", ami="myAMI")
 ```
 
 ```go
@@ -592,7 +594,7 @@ let listener = new aws.elasticloadbalancingv2.Listener("listener", {
         targetGroupArn: targetGroupArn,
         type: "forward",
     },
-});
+})
 ```
 
 ```typescript
@@ -623,9 +625,29 @@ let listener = new aws.elasticloadbalancingv2.Listener("listener", {
 ```
 
 ```python
-# Providers are not supported in Python currently.
-#
-# See https://github.com/pulumi/pulumi/issues/1535.
+import pulumi
+import pulumi_aws as aws
+
+# Create an AWS provider for the us-east-1 region.
+useast1 = aws.Provider("useast1", region="us-east-1")
+
+# Create an ACM certificate in us-east-1.
+cert = aws.acm.Certificate("cert",
+    domain_name="foo.com",
+    validation_method="EMAIL",
+    __opts__=pulumi.ResourceOptions(provider=useast1))
+
+# Create an ALB listener in the default region that references the ACM certificate created above.
+listener = aws.elasticloadbalancingv2.Listener("listener",
+    load_balancer_arn=load_balancer_arn,
+    port=443,
+    protocol="HTTPS",
+    ssl_policy="ELBSecurityPolicy-2016-08",
+    certificate_arn=cert.arn,
+    default_action={
+        "target_group_arn": target_group_arn,
+        "type": "forward",
+    })
 ```
 
 ```go
@@ -669,9 +691,17 @@ let myResource = new MyResource("myResource", { providers: { aws: useast1, kuber
 ```
 
 ```python
-# Providers are not supported in Python currently.
-#
-# See https://github.com/pulumi/pulumi/issues/1535.
+class MyResource(pulumi.ComponentResource):
+    def __init__(self, name, opts):
+        instance = aws.ec2.Instance("instance", ..., __opts__=pulumi.ResourceOptions(parent=self))
+        pod = kubernetes.core.v1.Pod("pod", ..., __opts__=pulumi.ResourceOptions(parent=self))
+
+useast1 = aws.Provider("useast1", region="us-east-1")
+myk8s = kubernetes.Provider("myk8s", context="test-ci")
+my_resource = MyResource("myResource", pulumi.ResourceOptions(providers={
+    "aws": useast1,
+    "kubernetes": myk8s,
+})
 ```
 
 ```go
