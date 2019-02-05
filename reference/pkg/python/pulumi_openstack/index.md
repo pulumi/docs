@@ -4,7 +4,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="blockstorage/">blockstorage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="compute/">compute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config/">config</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containerinfra/">containerinfra</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database/">database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
