@@ -58,7 +58,6 @@
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kinesis/">kinesis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lambda/">lambda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licensemanager/">licensemanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lightsail/">lightsail</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macie/">macie</a></li>

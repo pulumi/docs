@@ -29,7 +29,6 @@
 <li class="toctree-l1"><a class="reference internal" href="redis/">redis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resourcemanager/">resourcemanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runtimeconfig/">runtimeconfig</a></li>
-<li class="toctree-l1"><a class="reference internal" href="serviceAccount/">serviceAccount</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sourcerepo/">sourcerepo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spanner/">spanner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sql/">sql</a></li>
