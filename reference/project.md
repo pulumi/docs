@@ -26,7 +26,7 @@ A project file contains the following attributes:
   associated stacks and their resources underneath the project, as a simple kind of hierarchy.
 
 * `runtime`: (required) the language runtime to use for your program.  Possible options are `nodejs`
-  (for JavaScript and TypeScript) and `python` (for Python).  At the moment, Pulumi doesn't depend on specific versions
+  (for JavaScript and TypeScript), `python` (for Python), and `go` (for Go).  At the moment, Pulumi doesn't depend on specific versions
   of these runtimes, and will simply use whatever version you have installed on your machine.
 
 * `description`: (optional) a friendly description about your project.
