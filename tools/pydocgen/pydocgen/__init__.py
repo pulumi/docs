@@ -152,7 +152,7 @@ def generate_sphinx_files(ctx: Context):
 def should_generate_multimodule(module):
     """
     Returns whether or not we should generate a multi-page page tree for this particular module or if we should fit
-    evernthing on a single page.
+    everything on a single page.
 
     :param Any module: A module object to inspect.
     :return True if we should generate a multi-page page tree for this module.
