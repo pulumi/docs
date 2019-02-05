@@ -68,5 +68,7 @@ generate_docs "kubernetes" "pulumi-kubernetes" "sdk/nodejs"
 generate_docs "gcp" "pulumi-gcp" "sdk/nodejs"
 generate_docs "openstack" "pulumi-openstack" "sdk/nodejs"
 generate_docs "vsphere" "pulumi-vsphere" "sdk/nodejs"
+generate_docs "f5bigip" "pulumi-f5bigip" "sdk/nodejs"
+generate_docs "packet" "pulumi-packet" "sdk/nodejs"
 
 echo "Done"

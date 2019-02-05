@@ -49,23 +49,22 @@ The following repos must be peers of `docs`, should be checked out to an appropr
 - `pulumi-gcp`
 - `pulumi-kubernetes`
 
-## Generating a change log
+## Updating API docs
 
-To generate a change log from closed pull requests, run the script `/scripts/generate_changelog.sh`. It generates a file using the rules documented here: [Planning, Work Items, and Changelog](https://github.com/pulumi/home/wiki/Planning,-Work-Items,-and-Changelog#tldr-minimal-label-requirements).
+to update API docs for all Pulumi packages, run the following commands to fetch latest release of each pacakge and rebuild docs into `./reference/pkg` folder:
 
-1. Run `./scripts/update_repos.sh` to pull down the latest tags for the repos `pulumi`, `pulumi-cloud`, `pulumi-aws`, `pulumi-terraform`, and `pulumi-azure`
+```
+$ ./scripts/update_repos.sh
+$ ./scripts/run_typedoc.sh
+```
 
-1. Set the environment variable `GITHUB_TOKEN` to a token that has "repo" scope.
+To update a single package, make sure you have it checked out at the desired release label, and then run:
 
-1. [Will be improved] Clone the repo at https://github.com/pulumi/github-pr-changelog and run `npm i -g` to globally install the command `gh-changelog`.
+```
+$ PKGS=yourpackagename ./scripts/run_typedoc.sh
+```
 
-1. Generate a change log with the following command:
-
-    ```
-    ./scripts/generate_changelog.sh <from-git-tag> <to-git-tag> > output.file
-    ```
-
-    You can also use the optional flags `--all-prs` to print out all PRs (not just ones with the relevant labels) and `--tab-output` to print in a format that can be pasted to a Google Sheet.
+Docs for additional pacakges can be added by updating `./scripts/run_typedoc.sh` to include the package, and then updating `./_data/reference.yaml` to include the package in the TOC.
 
 ## Deploying updates
 
