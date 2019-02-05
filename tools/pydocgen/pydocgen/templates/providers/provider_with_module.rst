@@ -1,5 +1,5 @@
 {{ provider.name }}
-===================
+====================================
 
 .. toctree::
     {% for module in submodules %}

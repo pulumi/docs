@@ -20,6 +20,8 @@ is "hard" (read: time-consuming for the author).
 """
 
 import glob
+import importlib
+import keyword
 import json
 from os import path, mkdir
 import shutil
@@ -114,40 +116,70 @@ def generate_sphinx_files(ctx: Context):
     create_dir(ctx.tempdir, "providers")
     create_dir(ctx.tempdir, "_static") # Sphinx complains if this isn't there.
 
-    # Templates that we intend to use.
-    without_module_template = path.join("providers", "provider_without_module.rst")
-    with_module_template = path.join("providers", "provider_with_module.rst")
-    module_template = path.join("providers", "module.rst")
-
     # Render pulumi.rst - it's special since it's not really a provider.
     pulumi_doc_path = path.join("providers", "pulumi.rst")
     render_template_to(ctx, pulumi_doc_path, pulumi_doc_path)
 
+    # Render all providers that we've been asked to render.
     for provider in ctx.input.providers:
-        doc_path = path.join("providers", f"{provider.package_name}.rst")
-        # __import__ is Python magic - it literally imports the package that we're about to document. For this reason
-        # (and because Sphinx does something similar), the packages that we are documenting MUST be installed in the
-        # current environment.
-        module = __import__(provider.package_name)
+        generate_module(ctx, provider, "", "providers", use_provider_metadata=True)
 
-        # The reason we're importing the module is to inspect its `__all__` member - so we can discover any submodules
-        # that this module has.
-        #
-        # TFGen explicitly populates this array.
-        if not should_generate_multimodule(module):
-            # No submodules? Render the without_module_template and be done.
-            render_template_to(ctx, doc_path, without_module_template, provider=provider)
-        else:
-            # If there are submodules, run through each one and render module templates for each one.
-            all_modules = getattr(module, "__all__")
-            # Skip the "config" submodule - it can't be imported.
-            all_modules = list(filter(lambda mod: mod != "config", all_modules))
-            render_template_to(ctx, doc_path, with_module_template, provider=provider, submodules=all_modules)
-            create_dir(ctx.tempdir, "providers", provider.package_name)
-            for module in all_modules:
-                dest = path.join("providers", provider.package_name, f"{module}.rst")
-                module_meta = {"name": module, "full_name": f"{provider.package_name}.{module}"}
-                render_template_to(ctx, dest, module_template, module=module_meta)
+def generate_module(ctx, provider, import_path, output_path, use_provider_metadata=False):
+    """
+    Generates Sphinx input for a particular module that is a member of the given provider. This function recursively
+    walks the module tree of a given import path and produces reStructuredText files that will ultimately be given to
+    Sphinx.
+
+    :param Context ctx: The current context.
+    :param Provider provider: The provider that we are generating.
+    :param str import_path: The import path for the module that we intend to generate documentation for. If it's the
+           empty string, this module is treated as the root module.
+    :param str output_path: The root of the output directory that this function will write RST files into.
+    :param bool use_provider_metadata: If true, uses the provider's metadata for the title of a page instead of the
+           raw name of the module. Useful for presenting human-readable titles for top-level packages.
+    """
+    # Some templates we're going to be using.
+    without_module_template = path.join("providers", "provider_without_module.rst")
+    with_module_template = path.join("providers", "provider_with_module.rst")
+
+    # Try to import the module. It might fail; this is always a bug in tfgen. Since there are a few outstanding bugs
+    # in tfgen, ignore the failed imports for now and emit a warning.
+    try:
+        module = importlib.import_module(import_path or ".", package=provider.package_name)
+    except ModuleNotFoundError:
+        print(f"warning: skipping {provider.package_name}{import_path}, failed to import")
+        return
+
+    # Construct the "metadata" for this module. This metadata bag is passed verbatim to the template engine.
+    module_name = module.__name__.split(".").pop()
+    if use_provider_metadata:
+        meta = { "name": provider.name, "package_name": provider.package_name }
+    else:
+        meta = { "name": module_name, "package_name": module.__name__ }
+
+    # If this module doesn't have any submodules, we're going to generate all of the type documentation in a single file
+    # and not proceed any further.
+    if not should_generate_multimodule(module):
+        render_template_to(ctx, path.join(output_path, f"{module_name}.rst"), without_module_template, provider=meta)
+        print(f"{provider.package_name + import_path: <50} -> {output_path}/{module_name}.rst")
+        return
+
+    # If there are submodules, run through each one and render module templates for each one.
+    all_modules = getattr(module, "__all__")
+    # Skip the "config" submodule - it can't be imported.
+    all_modules = list(filter(lambda mod: mod != "config", all_modules))
+    print(f"{provider.package_name + import_path: <50} -> {output_path}/{module_name}.rst")
+    render_template_to(ctx, path.join(output_path, f"{module_name}.rst"), with_module_template, provider=meta, submodules=all_modules)
+    for mod in all_modules:
+        # If a module is a keyword, we won't be able to import it. Append a _ at the end of it. This is again almost
+        # always a bug in tfgen if a package contains a module that can't be legally imported without hacks.
+        if keyword.iskeyword(mod):
+            mod += "_"
+
+        # Recursively render all submodules of this module.
+        create_dir(ctx.tempdir, output_path, module_name)
+        generate_module(ctx, provider, import_path + "." + mod, path.join(output_path, module_name))
+
 
 def should_generate_multimodule(module):
     """
@@ -165,7 +197,6 @@ def should_generate_multimodule(module):
     # Config is not a "real" submodule - Sphinx can't import it and there are no docs to generate for it.
     all_modules = getattr(module, "__all__")
     return all_modules != ["config"]
-
 
 def build_sphinx(ctx: Context):
     """
@@ -194,9 +225,16 @@ def transform_sphinx_output_to_markdown(ctx: Context):
             create_markdown_file(f"{provider_sphinx_output}.fjson", path.join(provider_path, "index.md"))
             # Recurse through all submodules (all fjson files in this directory) and produce folders with an index.md
             # in them.
-            for file in glob.iglob(path.join(provider_sphinx_output, "*.fjson")):
-                module_name = path.splitext(path.basename(file))[0]
-                module_path = create_dir(provider_path, module_name)
+            for file in glob.iglob(path.join(provider_sphinx_output, "**/*.fjson"), recursive=True):
+                rel_file = path.relpath(file, start=provider_sphinx_output)
+                directory, filename = path.split(rel_file)
+                module_name = path.splitext(path.basename(filename))[0]
+                # If this globbed file is in a subdirectory of provider_sphinx_output, be sure to preserve the directory
+                # in the output directory as well.
+                if directory:
+                    module_path = create_dir(provider_path, directory, module_name)
+                else:
+                    module_path = create_dir(provider_path, module_name)
                 create_markdown_file(file, path.join(module_path, "index.md"))
         else:
             # Otherwise, just drop an index.md in the provider directory.
