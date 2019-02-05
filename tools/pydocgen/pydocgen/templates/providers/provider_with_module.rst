@@ -3,4 +3,4 @@
 
 .. toctree::
     {% for module in submodules %}
-    {{provider.package_name}}/{{module}}{% endfor %}
+    {{provider.directory_name}}/{{module}}{% endfor %}

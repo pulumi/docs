@@ -153,9 +153,9 @@ def generate_module(ctx, provider, import_path, output_path, use_provider_metada
     # Construct the "metadata" for this module. This metadata bag is passed verbatim to the template engine.
     module_name = module.__name__.split(".").pop()
     if use_provider_metadata:
-        meta = { "name": provider.name, "package_name": provider.package_name }
+        meta = { "name": provider.name, "package_name": provider.package_name, "directory_name": provider.package_name }
     else:
-        meta = { "name": module_name, "package_name": module.__name__ }
+        meta = { "name": module_name, "package_name": module.__name__, "directory_name": module_name }
 
     # If this module doesn't have any submodules, we're going to generate all of the type documentation in a single file
     # and not proceed any further.

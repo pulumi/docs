@@ -13,6 +13,7 @@ PACKAGES=(
   "pulumi_openstack"
   "pulumi_f5bigip"
   "pulumi_packet"
+  "pulumi_kubernetes"
 )
 
 run_pydocgen() {
