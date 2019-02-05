@@ -11,7 +11,6 @@
 <li class="toctree-l1"><a class="reference internal" href="cloudfunctions/">cloudfunctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="composer/">composer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="compute/">compute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config/">config</a></li>
 <li class="toctree-l1"><a class="reference internal" href="container/">container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="containeranalysis/">containeranalysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataflow/">dataflow</a></li>

@@ -99,7 +99,7 @@ provider for the given module member.</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The <a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProviderResource</span></code></a> associated with the given module member, or None if one does not exist.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[ProviderReference]</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Optional[<a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource">ProviderResource</a>]</td>
 </tr>
 </tbody>
 </table>
@@ -199,7 +199,7 @@ resource.</li>
 
 <dl class="class">
 <dt id="pulumi.ResourceOptions">
-<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">ResourceOptions</code><span class="sig-paren">(</span><em>parent: Optional[Resource] = None</em>, <em>depends_on: Optional[List[Resource]] = None</em>, <em>protect: Optional[bool] = None</em>, <em>provider: Optional[ProviderResource] = None</em>, <em>providers: Optional[Mapping[str</em>, <em>ProviderResource]] = None</em>, <em>delete_before_replace: Optional[bool] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>ResourceOptions is a bag of optional settings that control a resource’s behavior.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -216,6 +216,7 @@ If no provider is supplied, the default provider for the resource’s package wi
 provider is pulled from the parent’s provider bag.</li>
 <li><strong>providers</strong> (<em>Optional</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em><a class="reference internal" href="#pulumi.ProviderResource" title="pulumi.ProviderResource"><em>ProviderResource</em></a><em>]</em><em>]</em>) – An optional set of providers to use for child resources. Keyed
 by package name (e.g. “aws”)</li>
+<li><strong>delete_before_replace</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em>) – If provided and True, this resource must be deleted before it is replaced.</li>
 </ul>
 </td>
 </tr>
@@ -251,6 +252,12 @@ provider bag (see also ResourceOptions.providers).</p>
 <dt id="pulumi.ResourceOptions.providers">
 <code class="descname">providers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.providers" title="Permalink to this definition">¶</a></dt>
 <dd><p>An optional set of providers to use for child resources. Keyed by package name (e.g. “aws”)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi.ResourceOptions.delete_before_replace">
+<code class="descname">delete_before_replace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi.ResourceOptions.delete_before_replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided and True, this resource must be deleted before it is replaced.</p>
 </dd></dl>
 
 </dd></dl>

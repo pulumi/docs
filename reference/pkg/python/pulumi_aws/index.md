@@ -25,7 +25,6 @@
 <li class="toctree-l1"><a class="reference internal" href="codedeploy/">codedeploy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codepipeline/">codepipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cognito/">cognito</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config/">config</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasync/">datasync</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dax/">dax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devicefarm/">devicefarm</a></li>

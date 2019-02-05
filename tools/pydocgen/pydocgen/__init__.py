@@ -134,18 +134,37 @@ def generate_sphinx_files(ctx: Context):
         # that this module has.
         #
         # TFGen explicitly populates this array.
-        if not hasattr(module, "__all__"):
+        if not should_generate_multimodule(module):
             # No submodules? Render the without_module_template and be done.
             render_template_to(ctx, doc_path, without_module_template, provider=provider)
         else:
             # If there are submodules, run through each one and render module templates for each one.
             all_modules = getattr(module, "__all__")
+            # Skip the "config" submodule - it can't be imported.
+            all_modules = list(filter(lambda mod: mod != "config", all_modules))
             render_template_to(ctx, doc_path, with_module_template, provider=provider, submodules=all_modules)
             create_dir(ctx.tempdir, "providers", provider.package_name)
             for module in all_modules:
                 dest = path.join("providers", provider.package_name, f"{module}.rst")
                 module_meta = {"name": module, "full_name": f"{provider.package_name}.{module}"}
                 render_template_to(ctx, dest, module_template, module=module_meta)
+
+def should_generate_multimodule(module):
+    """
+    Returns whether or not we should generate a multi-page page tree for this particular module or if we should fit
+    everything on a single page.
+
+    :param Any module: A module object to inspect.
+    :return True if we should generate a multi-page page tree for this module.
+    :rtype bool
+    """
+    if not hasattr(module, "__all__"):
+        return False
+
+    # Even if this module does define __all__, if its only submodule is config, treat it as a single-page module.
+    # Config is not a "real" submodule - Sphinx can't import it and there are no docs to generate for it.
+    all_modules = getattr(module, "__all__")
+    return all_modules != ["config"]
 
 
 def build_sphinx(ctx: Context):
