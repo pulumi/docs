@@ -718,14 +718,14 @@ Some Pulumi packages have a dependency on a [Resource Provider plugin](/referenc
 
 ## Runtime code {#runtime}
 
-You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, a JavaScript callback could be used as the implementation of an AWS Lambda function. 
+You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime. For example, you can create an AWS Lambda function (or an Azure Function) by providing a JavaScript callback to be used as its implementation. 
 
 {% include langchoose.html %}
 
 ```javascript
 let bucket = new aws.s3.Bucket("mybucket");
 bucket.onObjectCreated("onObject", async (ev) => {
-    // This callback will be invoked at runtime any time an object is added to the bucket.
+    // This is the code that will be run when the Lambda is invoked (any time an object is added to the bucket).
     console.log(JSON.stringify(ev));
 });
 ```
@@ -733,7 +733,7 @@ bucket.onObjectCreated("onObject", async (ev) => {
 ```typescript
 let bucket = new aws.s3.Bucket("mybucket");
 bucket.onObjectCreated("onObject", async (ev: aws.s3.BucketEvent) => {
-    // This callback will be invoked at runtime any time an object is added to the bucket.
+    // This is the code that will be run when the Lambda is invoked (any time an object is added to the bucket).
     console.log(JSON.stringify(ev));
 });
 ```
