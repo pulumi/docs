@@ -6,7 +6,7 @@ title: Package @pulumi/cloud-azure
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 
-{% include langchoose.html %}
+{% include langchoose.html nodeonly=true %}
 
 ```javascript
 var cloudAzure = require("@pulumi/cloud-azure");
@@ -15,12 +15,6 @@ var cloudAzure = require("@pulumi/cloud-azure");
 ```typescript
 import * as cloudAzure from "@pulumi/cloud-azure";
 ```
-
-<div class="language-prologue-python"></div>
-> Python API documentation is [coming soon](https://github.com/pulumi/docs/issues/630).
-
-<div class="language-prologue-go"></div>
-> Go API documentation is [coming soon](https://github.com/pulumi/docs/issues/722).
 
 
 

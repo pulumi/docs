@@ -6,7 +6,7 @@ title: Package @pulumi/aws-serverless
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/tscdocgen. -->
 
 
-{% include langchoose.html %}
+{% include langchoose.html nodeonly=true %}
 
 ```javascript
 var awsServerless = require("@pulumi/aws-serverless");
@@ -15,12 +15,6 @@ var awsServerless = require("@pulumi/aws-serverless");
 ```typescript
 import * as awsServerless from "@pulumi/aws-serverless";
 ```
-
-<div class="language-prologue-python"></div>
-> Python API documentation is [coming soon](https://github.com/pulumi/docs/issues/630).
-
-<div class="language-prologue-go"></div>
-> Go API documentation is [coming soon](https://github.com/pulumi/docs/issues/722).
 
 
 <div class="toggleVisible" markdown="1">
