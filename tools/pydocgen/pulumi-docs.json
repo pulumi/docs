@@ -38,6 +38,10 @@
     {
       "name": "Pulumi Packet",
       "package_name": "pulumi_packet"
+    },
+    {
+      "name": "Pulumi Kubernetes",
+      "package_name": "pulumi_kubernetes"
     }
   ]
 }

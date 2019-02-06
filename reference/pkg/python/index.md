@@ -14,6 +14,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [Amazon Web Services (`pulumi_aws`)](pulumi_aws)
 * [Microsoft Azure (`pulumi_azure`)](pulumi_azure)
 * [Google Cloud Platform (`pulumi_gcp`)](pulumi_gcp)
+* [Kubernetes (`pulumi_kubernetes`)](pulumi_kubernetes)
 
 ### Helper Libraries
 

@@ -159,6 +159,8 @@ toc:
         path: /reference/pkg/python/pulumi_azure/index.html
       - title: pulumi_gcp
         path: /reference/pkg/python/pulumi_gcp/index.html
+      - title: pulumi_kubernetes
+        path: /reference/pkg/python/pulumi_kubernetes/index.html
       - title: pulumi_random
         path: /reference/pkg/python/pulumi_random/index.html 
       - title: pulumi_openstack
