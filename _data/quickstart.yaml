@@ -19,6 +19,7 @@ toc:
   path: /quickstart/azure/index
   section:
    - quickstart/azure/setup.md
+   - quickstart/azure/tutorial-container-webserver.md
 - title: Google Cloud Platform
   path: /quickstart/gcp/index
   section:
