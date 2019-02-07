@@ -23,6 +23,7 @@ toc:
   path: /quickstart/gcp/index
   section:
    - quickstart/gcp/setup.md
+   - quickstart/gcp/tutorial-gce-webserver.md
 - title: Kubernetes
   path: /quickstart/kubernetes/index
   section:
