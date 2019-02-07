@@ -345,10 +345,59 @@ $ kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi st
 We can also create another NGINX Deployment into the `default` namespace using
 `kubectl` natively:
 
-```
+```bash
 $ kubectl create deployment my-nginx --image=nginx
 $ kubectl get pods
 $ kubectl delete deployment my-nginx
+```
+
+## Experimentation
+
+From here on, feel free to experiment with Pulumi. Simply making edits and
+running `pulumi up` afterwords, will incrementally update your stack.
+
+For example, if you wish to pull existing Kubernetes YAML manifests into
+Pulumi to aid in your transition, append the following code block to the existing
+`index.ts` file and run `pulumi up`.
+
+This is an example of how to create the standard Kubernetes Guestbook manifests in
+Pulumi using the Guestbook YAML manifests. We take the additional steps of transforming
+its properties to use the same Namespace and metadata labels that
+the NGINX stack uses, and also make its frontend service use a
+LoadBalancer typed Service to expose it publicly.
+
+```typescript
+// Create resources for the Kubernetes Guestbook from its YAML manifests
+const guestbook = new k8s.yaml.ConfigFile("guestbook",
+    {
+        file: "https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/examples/yaml-guestbook/yaml/guestbook.yaml",
+        transformations: [
+            (obj: any) => {
+                // Do transformations on the YAML to use the same namespace and
+                // labels as the NGINX stack above
+                if (obj.metadata.labels) {
+                    obj.metadata.labels['appClass'] = namespaceName
+                } else {
+                    obj.metadata.labels = appLabels
+                }
+
+                // Make the 'frontend' Service public by setting it to be of type
+                // LoadBalancer
+                if (obj.kind == "Service" && obj.metadata.name == "frontend") {
+                    if (obj.spec) {
+                        obj.spec.type = "LoadBalancer"
+                    }
+                }
+            }
+        ],
+    },
+    {
+        providers: { "kubernetes": clusterProvider },
+    },
+);
+
+// Export the Guestbook public LoadBalancer endpoint
+export const guestbookPublicIP = guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
 ```
 
 ## Clean up
