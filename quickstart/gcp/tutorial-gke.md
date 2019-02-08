@@ -23,11 +23,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1. Set the required GCP configuration variables:
 
-    Note, `credentials.json` is the GCP Service Account key downloaded from the [GCP
-    Credentials](https://console.cloud.google.com/apis/credentials) page.
-
     ```bash
-    $ cat credentials.json | pulumi config set gcp:credentials --secret
     $ pulumi config set gcp:project <your-gcp-project-here>
     $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
