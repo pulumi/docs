@@ -228,3 +228,4 @@ pulumi destroy
 [yarn]: https://yarnpkg.com/en/docs/install
 [pulumi-test]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
 [index.ts]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/index.ts
+[install]: https://pulumi.io/quickstart/install.html

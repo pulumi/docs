@@ -30,7 +30,6 @@ toc:
   path: /quickstart/kubernetes/index
   section:
    - quickstart/kubernetes/setup.md
-   - quickstart/kubernetes/tutorial-exposed-deployment.md
    - quickstart/kubernetes/tutorial-configmap-rollout.md
    - quickstart/kubernetes/tutorial-wordpress-chart.md
    - quickstart/kubernetes/tutorial-guestbook.md
