@@ -287,7 +287,7 @@ We can do this by configuring a Pulumi provider to our newly created cluster, an
     export const serviceHostname = service.status.apply(s => s.loadBalancer.ingress[0].hostname)
     ```
 
-1.  Run `pulumi update`, and select "yes" to preview and deploy the changes.
+1.  Run `pulumi up`, note the preview diff, and select "yes" to preview and deploy the changes.
 
     As part of the update, you'll see some new objects in the output: a
     `Namespace` in Kubernetes to deploy into, a `Deployment` resource for
@@ -295,25 +295,25 @@ We can do this by configuring a Pulumi provider to our newly created cluster, an
 
     Pulumi understands which changes to a given cloud resource can be made
     in-place, and which require replacement, and computes
-    the minimally disruptive change to achieve the desired state.
+    the minimally disruptive change to achieve the desired state. The CLI
+    will also output incremental status updates, as the Kubernetes changes progress.
 
-    **Note:** Pulumi auto-generates a suffix for all objects. Pulumi's object model does
-    create-before-delete replacements by default on updates, but this will only work if
-    you are using name auto-generation so that the newly created resource is
-    guaranteed to have a differing, non-conflicting name. Doing this
-    allows a new resource to be created, and dependencies to be updated to
-    point to the new resource, before the old resource is deleted.
-    This is generally quite useful.
-
-    ```
-    ...
-
-    + deploymentName : "helloworld-58jkmc7c"
-    ...
-    + namespaceName  : "helloworld-xaldhgca"
-    + serviceHostname: "a71f5ab3f2a6e11e3ac39200f4a9ad5d-1297981966.us-west-2.elb.amazonaws.com"
-    + serviceName    : "helloworld-3fc2uhh7"
-    ```
+	> **Note:** Pulumi auto-generates a suffix for all objects. Pulumi's object model does
+	> create-before-delete replacements by default on updates, but this will only work if
+	> you are using name auto-generation so that the newly created resource is
+	> guaranteed to have a differing, non-conflicting name. Doing this
+	> allows a new resource to be created, and dependencies to be updated to
+	> point to the new resource, before the old resource is deleted.
+	> This is generally quite useful.
+	>
+	> ```
+	> ...
+	> deploymentName : "helloworld-tlsr4sg5"
+	> ...
+	> namespaceName  : "helloworld-pz4u5kyq"
+	> serviceName    : "helloworld-l61b5dby"
+	> servicePublicIP: "35.236.26.151"
+	> ```
 
     If you visit the FQDN listed in `serviceHostname` you should land on the
     NGINX welcome page. Note, that it may take a minute or so for the
@@ -351,10 +351,15 @@ $ kubectl get pods
 $ kubectl delete deployment my-nginx
 ```
 
+Of course, by doing so, resources are outside of Pulumi's purview, but this simply
+demonstrates that all the `kubectl` commands you're used to will work.
+
 ## Experimentation
 
 From here on, feel free to experiment with Pulumi. Simply making edits and
 running `pulumi up` afterwords, will incrementally update your stack.
+
+### Running Off-the-Shelf Guestbook YAML
 
 For example, if you wish to pull existing Kubernetes YAML manifests into
 Pulumi to aid in your transition, append the following code block to the existing
@@ -397,20 +402,20 @@ const guestbook = new k8s.yaml.ConfigFile("guestbook",
 );
 
 // Export the Guestbook public LoadBalancer endpoint
-export const guestbookPublicIP = guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
+export const guestbookPublicIP =
+	guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
 ```
 
 ## Clean up
 
 Run the following command to tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
-   resources.
+1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources.
 
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console and cannot be undone.
 
 ## Summary
 
 In this tutorial, we saw how to use Pulumi programs to create and launch a Managed Kubernetes cluster on AWS EKS.
 
-For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see the [Kubernetes Tutorial: Deploying the WordPress Helm Chart](../kubernetes/tutorial-wordpress-chart.html).
+For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
