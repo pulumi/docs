@@ -23,11 +23,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1. Set the required GCP configuration variables:
 
-    Note, `credentials.json` is the GCP Service Account key downloaded from the [GCP
-    Credentials](https://console.cloud.google.com/apis/credentials) page.
-
     ```bash
-    $ cat credentials.json | pulumi config set gcp:credentials --secret
     $ pulumi config set gcp:project <your-gcp-project-here>
     $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
@@ -385,4 +381,4 @@ Run the following command to tear down the resources that are part of our stack.
 
 In this tutorial, we saw how to use Pulumi programs to create and launch a Managed Kubernetes cluster on GCP GKE.
 
-For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see the [Kubernetes Tutorial: Deploying the WordPress Helm Chart](../kubernetes/tutorial-wordpress-chart.html).
+For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see the [Kubernetes Tutorial: Deploying the WordPress Helm Chart](../kubernetes/tutorial-configmap-rollout.html).
