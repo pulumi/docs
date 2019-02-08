@@ -131,15 +131,15 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
 	```
 
-1.  To preview and deploy changes, run `pulumi update` and select "yes."
+1.  To preview and deploy changes, run `pulumi up` and select "yes."
 
-    The `update` sub-command shows a preview of the resources that will be created
+    The `up` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
     itself is counted as a resource, though it does not correspond
     to a physical cloud resource.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
 	Previewing update (gke-demo):
 
 		Type                            Name                             Plan
@@ -177,15 +177,17 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 	Duration: 3m51s
     ```
 
-   *Note*: By default, your cluster's config will be set to use 2 nodes of
-   type `n1-standard-1`. This is configurable, however; for instance if
-   we'd like to choose 3 nodes of type `n1-standard-2` instead,
-   we can run these commands and then `pulumi update` on a future run:
+    Note that provisioning a new GKE cluster takes between 2-5 minutes.
 
-   ```bash
-   $ pulumi config set nodeCount 3
-   $ pulumi config set nodeMachineType n1-standard-2
-   ```
+   > *Note*: By default, your cluster's config will be set to use 2 nodes of
+   > type `n1-standard-1`. This is configurable, however; for instance if
+   > we'd like to choose 3 nodes of type `n1-standard-2` instead,
+   > we can run these commands and then `pulumi up` on a future run:
+   >
+   > ```bash
+   > $ pulumi config set nodeCount 3
+   > $ pulumi config set nodeMachineType n1-standard-2
+   > ```
 
 ## Access the Kubernetes Cluster using Pulumi Providers
 
@@ -261,7 +263,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     export const servicePublicIP = service.status.apply(s => s.loadBalancer.ingress[0].ip)
     ```
 
-1.  Run `pulumi update`, and select "yes" to preview and deploy the changes.
+1.  Run `pulumi up`, note the preview diff, and select "yes" to deploy the changes.
 
     As part of the update, you'll see some new objects in the output: a
     `Namespace` in Kubernetes to deploy into, a `Deployment` resource for
@@ -269,24 +271,25 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
 
     Pulumi understands which changes to a given cloud resource can be made
     in-place, and which require replacement, and computes
-    the minimally disruptive change to achieve the desired state.
+    the minimally disruptive change to achieve the desired state. The CLI will
+    also output incremental status updates, as the Kubernetes changes progress.
 
-    **Note:** Pulumi auto-generates a suffix for all objects. Pulumi's object model does
-    create-before-delete replacements by default on updates, but this will only work if
-    you are using name auto-generation so that the newly created resource is
-    guaranteed to have a differing, non-conflicting name. Doing this
-    allows a new resource to be created, and dependencies to be updated to
-    point to the new resource, before the old resource is deleted.
-    This is generally quite useful.
-
-    ```
-    ...
-	deploymentName : "helloworld-tlsr4sg5"
-    ...
-	namespaceName  : "helloworld-pz4u5kyq"
-	serviceName    : "helloworld-l61b5dby"
-	servicePublicIP: "35.236.26.151"
-    ```
+    > **Note:** Pulumi auto-generates a suffix for all objects. Pulumi's object model does
+    > create-before-delete replacements by default on updates, but this will only work if
+    > you are using name auto-generation so that the newly created resource is
+    > guaranteed to have a differing, non-conflicting name. Doing this
+    > allows a new resource to be created, and dependencies to be updated to
+    > point to the new resource, before the old resource is deleted.
+    > This is generally quite useful.
+    >
+    > ```
+    > ...
+	> deploymentName : "helloworld-tlsr4sg5"
+    > ...
+	> namespaceName  : "helloworld-pz4u5kyq"
+	> serviceName    : "helloworld-l61b5dby"
+	> servicePublicIP: "35.236.26.151"
+    > ```
 
     If you visit the FQDN listed in `serviceHostname` you should land on the
     NGINX welcome page. Note, that it may take a minute or so for the
@@ -324,9 +327,14 @@ $ kubectl get pods
 $ kubectl delete deployment my-nginx
 ```
 
+Of course, by doing so, resources are outside of Pulumi's purview, but this simply
+demonstrates that all the `kubectl` commands you're used to will work.
+
 ## Experimentation
 
 From here on, feel free to experiment. Simply making edits and running `pulumi up` afterwords, will incrementally update your stack.
+
+### Running Off-the-Shelf Guestbook YAML
 
 For example, if you wish to pull existing Kubernetes YAML manifests into
 Pulumi to aid in your transition, append the following code block to the existing
@@ -369,7 +377,8 @@ const guestbook = new k8s.yaml.ConfigFile("guestbook",
 );
 
 // Export the Guestbook public LoadBalancer endpoint
-export const guestbookPublicIP = guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
+export const guestbookPublicIP =
+    guestbook.getResourceProperty("v1/Service", "frontend", "status").apply(s => s.loadBalancer.ingress[0].ip);
 ```
 
 ## Clean up
@@ -377,12 +386,14 @@ export const guestbookPublicIP = guestbook.getResourceProperty("v1/Service", "fr
 Run the following command to tear down the resources that are part of our stack.
 
 1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
-   resources.
+    resources.
 
-1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
+1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the
+    Pulumi Console and cannot be undone.
 
 ## Summary
 
 In this tutorial, we saw how to use Pulumi programs to create and launch a Managed Kubernetes cluster on GCP GKE.
 
-For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see the [Kubernetes Tutorial: Deploying the WordPress Helm Chart](../kubernetes/tutorial-wordpress-chart.html).
+For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see
+[Kubernetes Tutorial: Deploying the WordPress Helm Chart](../kubernetes/tutorial-wordpress-chart.html).

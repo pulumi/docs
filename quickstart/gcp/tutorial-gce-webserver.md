@@ -54,10 +54,10 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 
     This example uses the [@pulumi/gcp](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/) package to create and manage three Google Cloud resources: a [gcp.compute.Network](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/compute/#Network) in which the virtual machine will run, a [gcp.compute.Firewall](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/compute/#Firewall) which allows access for incoming SSH access, and a [gcp.compute.Instance](https://pulumi.io/reference/pkg/nodejs/@pulumi/gcp/compute/#Instance) which is created inside the network from the Debian 9 base image.
 
-1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+1.  To preview and deploy changes, run `pulumi up`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update (webservergcp-dev):
 
         Type                     Name                           Plan
@@ -120,7 +120,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Virtual Mach
 ## Updating the Pulumi program
 
 Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
-Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi update` to commit the changes.
+Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi up` to commit the changes.
 
 1.  Replace the creation of the two firewall and instance with the following. This exposes an additional port and adds a startup
     script to run a simple HTTP server at startup.
@@ -161,10 +161,10 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     defined in our program.  We'll see in later sections how we can deploy and version the application code of our
     program in a variety of different ways using Pulumi.
 
-1.  Run `pulumi update` to preview and deploy the changes. You'll see two changes: the `allows` property of the `Firewall` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new virtual machine Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
+1.  Run `pulumi up` to preview and deploy the changes. You'll see two changes: the `allows` property of the `Firewall` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new virtual machine Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
 
     ```bash
-    $ pulumi update
+    $ pulumi up
     Previewing update (webservergcp-dev):
     ...
 
@@ -206,6 +206,6 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Google Cloud, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi update`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in Google Cloud, using regular JavaScript and NPM packages. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
 
 For a similar example in other languages and clouds, see the [Web Server examples collection](https://github.com/pulumi/examples#web-server).
