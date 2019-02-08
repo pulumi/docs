@@ -36,7 +36,6 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     cluster.
 
     ```typescript
-    import * as pulumi from "@pulumi/pulumi";
     import { Config } from "@pulumi/pulumi";
 
     const config = new Config();
