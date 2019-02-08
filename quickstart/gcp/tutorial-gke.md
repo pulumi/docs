@@ -23,12 +23,17 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1. Set the required GCP configuration variables:
 
+    This sets the GCP project and zone for our GKE cluster.
+
     ```bash
     $ pulumi config set gcp:project <your-gcp-project-here>
     $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
 
 1.  Create a new file named `config.ts`, and insert the following content:
+
+    This sets some configuration options and default values for our GKE
+    cluster.
 
     ```typescript
     import * as pulumi from "@pulumi/pulumi";
@@ -53,6 +58,13 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     ```
 
 1.  Open the existing file `index.ts`, and replace the contents with the following:
+
+    This declares:
+	* The resources we want in GCP to provision the GKE cluster,
+	* The `kubeconfig` file to access the cluster, and
+	* The initialization of a Pulumi Kubernetes provider with the
+	`kubeconfig` so that we can deploy Kubernetes resources to it in
+	the next steps.
 
     ```typescript
     import * as k8s from "@pulumi/kubernetes";
@@ -123,6 +135,8 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1. Add the required dependencies:
 
+    This installs the dependent packages needed for our Pulumi program.
+
 	```bash
 	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
 	```
@@ -134,56 +148,47 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     itself is counted as a resource, though it does not correspond
     to a physical cloud resource.
 
-    ```bash
-    $ pulumi up
+    Running `pulumi up` will deploy the GKE cluster. Note, provisioning a
+    new GKE cluster takes between 2-5 minutes.
+
+	```bash
+	$ pulumi up
 	Previewing update (gke-demo):
 
-		Type                            Name                             Plan
-	+   pulumi:pulumi:Stack             gcp-ts-gke-hello-world-gke-demo  create
-	+   ├─ gcp:container:Cluster        helloworld                       create
-	+   ├─ pulumi:providers:kubernetes  helloworld                       create
-	+   ├─ kubernetes:core:Namespace    helloworld                       create
-	+   ├─ kubernetes:apps:Deployment   helloworld                       create
-	+   └─ kubernetes:core:Service      helloworld                       create
+		Type                            Name                 Plan
+	+   pulumi:pulumi:Stack             gke-hello-world-dev  create
+	+   ├─ gcp:container:Cluster        helloworld           create
+	+   └─ pulumi:providers:kubernetes  helloworld           create
 
 	Resources:
-		+ 6 to create
+		+ 3 to create
 
 	Updating (gke-demo):
 
-		Type                            Name                             Status
-	+   pulumi:pulumi:Stack             gcp-ts-gke-hello-world-gke-demo  created
-	+   ├─ gcp:container:Cluster        helloworld                       created
-	+   ├─ pulumi:providers:kubernetes  helloworld                       created
-	+   ├─ kubernetes:core:Namespace    helloworld                       created
-	+   ├─ kubernetes:apps:Deployment   helloworld                       created
-	+   └─ kubernetes:core:Service      helloworld                       created
+		Type                            Name                 Status
+	+   pulumi:pulumi:Stack             gke-hello-world-dev  created
+	+   ├─ gcp:container:Cluster        helloworld           created
+	+   └─ pulumi:providers:kubernetes  helloworld           created
 
 	Outputs:
-		clusterName    : "helloworld-e1557dc"
-		deploymentName : "helloworld-tlsr4sg5"
-		kubeconfig     : "<KUBECONFIG_CONTENTS>"
-		namespaceName  : "helloworld-pz4u5kyq"
-		serviceName    : "helloworld-l61b5dby"
-		servicePublicIP: "35.236.26.151"
+		clusterName: "helloworld-2a6de9a"
+		kubeconfig : "<KUBECONFIG_CONTENTS>"
 
 	Resources:
-		+ 6 created
+		+ 3 created
 
-	Duration: 3m51s
-    ```
+	Duration: 4m37s
+	```
 
-    Note that provisioning a new GKE cluster takes between 2-5 minutes.
-
-   > *Note*: By default, your cluster's config will be set to use 2 nodes of
-   > type `n1-standard-1`. This is configurable, however; for instance if
-   > we'd like to choose 3 nodes of type `n1-standard-2` instead,
-   > we can run these commands and then `pulumi up` on a future run:
-   >
-   > ```bash
-   > $ pulumi config set nodeCount 3
-   > $ pulumi config set nodeMachineType n1-standard-2
-   > ```
+	> *Note*: By default, your cluster's config will be set to use 2 nodes of
+	> type `n1-standard-1`. This is configurable, however; for instance if
+	> we'd like to choose 3 nodes of type `n1-standard-2` instead,
+	> we can run these commands and then `pulumi up` on a future run:
+	>
+	> ```bash
+	> $ pulumi config set nodeCount 3
+	> $ pulumi config set nodeMachineType n1-standard-2
+	> ```
 
 ## Access the Kubernetes Cluster using Pulumi Providers
 
@@ -191,6 +196,9 @@ Now that we have an instance of Kubernetes running, we may want to create API re
 We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program.
 
 1.  Create a new Kubernetes Namespace and Deployment:
+
+	This declares a new Kubernetes Namespace, Deployment and Service to be
+	created using the Pulumi Kubernetes provider to our cluster.
 
     Open the existing file `index.ts`, and append the following:
 
