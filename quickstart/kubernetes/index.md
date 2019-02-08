@@ -22,8 +22,8 @@ designed to fit in anywhere you already use Kubernetes:
     import * as k8s as "@pulumi/kubernetes";
     new k8s.yaml.ConfigFile("app.yaml");
     ```
--   **Drop-in replacement for `kubectl apply`.** Anywhere you have a [kubeconfig file][kubeconfig], you
-    can use Pulumi.
+-   **Drop-in replacement for `kubectl apply`.** Anywhere you have a [kubeconfig file][kubeconfig],
+    you can use Pulumi.
 
 The remainder of this document will demonstrate how to use Pulumi for Kubernetes development, as
 illustrated through a series of use cases and tutorials.
