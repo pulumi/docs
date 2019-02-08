@@ -1,71 +1,118 @@
 ---
-title: "Tutorial: Graceful app rollout"
+title: "Tutorial: Getting Started With Pulumi"
 ---
 
-In this tutorial, we'll use nginx to reverse-proxy traffic to `pulumi.github.io`. The nginx
-configuration is contained in the file `default.conf` in this directory; this program reads that
-file and puts it in a `ConfigMap`. Hence, changing data in that file will cause register as a change
-in the `ConfigMap`'s data, which will trigger a rollout of the nginx `Deployment`.
+This tutorial shows you how to use Pulumi to write and manage a Kubernetes application through it's
+lifecycle. We will use the Pulumi Kubernetes [TypeScript][ts] SDK to write the Kubernetes
+applications, and the Pulumi CLI to create, update, and destroy resources on the Kubernetes cluster.
+
+Along the way, we will get a taste for several of Pulumi's features for visualizing and
+understanding how an update will impact the application running in the cluster.
+
+For example, in the gif below, we can see how updating one resource (in this case, a `ConfigMap`) "ripples through" the rest of the application, causing other resources to be updated, as well.
+
+**Topics:**
+
+-   [Prerequisites](#prerequisites)
+-   [Provisioning a Kubernetes application](#provisioning-a-Kubernetes-application)
+-   [Using Pulumi's notion of "stack outputs"](#using-pulumis-notion-of-stack-outputs)
+-   [Using Pulumi's diff facilities to understand how a change affects an application](#using-pulumis-diff-facilities-to-understand-how-a-change-affects-an-application)
+-   [Updating an application](#updating-an-application)
+-   [Deleting resources safely](#deleting-resources-safely)
 
 ![configmapRollout](/images/quickstart/kubernetes/cm-rollout.gif "ConfigMap-induced Rollout")
 
-## Running the App
+## Prerequisites
 
-First, download the code
-[here](https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout).
+> **IMPORTANT:** This tutorial expects that you have provisioned a Kubernetes cluster and have an
+> active kubeconfig file. If you don't, please follow instructions [here](index.html).
 
-Follow the steps in [Pulumi Installation and Setup](https://docs.pulumi.com/install/) and
-[Configuring Pulumi Kubernetes](https://docs.pulumi.com/reference/kubernetes.html#configuration) to
-get setup with Pulumi and Kubernetes.
+1.  Install [Node.js][nodejs] version 6 or later.
+1.  Install a package manager for Node.js, such as [npm] or [Yarn].
+1.  Follow the directions [here][install] to install the Pulumi CLI.
 
-Install dependencies:
+## Provisioning a Kubernetes application
+
+We're going to provision one of Pulumi's [example applications][pulumi-test]. We'll dig into the
+code when we modify it later.
+
+This application will:
+
+-   Create a container running [nginx] (an open source web server).
+-   Create a `ConfigMap` with an configuration file that configures nginx to proxy traffic to
+    `pulumi.github.io`.
+-   Mount that configuration data into the nginx container.
+-   Expose the nginx container to the internet using a `Service`.
+
+To provision the application, we need to:
+
+1. **Run** `pulumi new`**.**
+
+    ```sh
+    mkdir test-pulumi && cd test-pulumi
+    # Clones the application into the current directory, and begins provisioning it in the active
+    # context of your kubeconfig file.
+    pulumi new https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
+    ```
+
+1. **Answer the questions prompted by** `pulumi new`**.** This will bring up a CLI prompt that looks
+   like the following, asking you questions to get you started. It is ok to accept default values
+   for all questions except `isMinikube`, where it is important to answer `false`.
+
+    > **IMPORTANT:** If you are using minikube, Docker for Mac, or any other compute provider that
+    > can't allocate a load balancer, you can answer `true`, but you won't be able to bring up the
+    > service in your browser without using something like `kubectl port-forward`.
+
+    ![Pulumi CLI questions](/images/quickstart/kubernetes/questions.png "Pulumi CLI questions prompt")
+
+1. **Accept the update.** After all the questions are answered, you should see a prompt like the
+   following, asking if you'd like to proceed with the update. You can opt to view the diff, if you like, but we'll also do this later when we update the application.
+
+    ```sh
+    Resources:
+        + 4 to create
+
+    Do you want to perform this update?
+      yes
+    > no
+      details
+    ```
+
+Once all this is complete, Pulumi will begin provisioning the application. It should look something
+like the following gif, though it will be slightly different, depending on the name you've given
+your stack.
+
+There are several things to notice here:
+
+-   **Resources are provisioned in a specific order.** We can see from the output that the
+    `ConfigMap` is provisioned first, the `Deployment` second, and the `Service` third.
+
+    As we will see in the following sections, Pulumi keeps track of resources as a _graph_. We will
+    also see that this allows Pulumi to tell us how a change to one resource will affect other
+    resources.
+
+-   **We get intermediate status updates as resources provision.** As the `Service` rolls out, for
+    example, we can see distinct stages in the initialization.
+
+These two things will be important in the next sections.
+
+![Allocating a public IP to a Deployment](/images/quickstart/kubernetes/exposed-deploy.gif "Allocating a public IP to a Deployment")
+
+## Using Pulumi's notion of "stack outputs"
+
+It's worth noting briefly that Pulumi provides convenient tooling for "exporting" values of
+initialized resources.
+
+This application exports `frontendIp`, which is the IP address of the load balancer that the
+underlying compute provider provisioned when you started the service. You can view it with the following command:
 
 ```sh
-npm install
+$ pulumi stack output frontendIp
+35.247.60.31
 ```
 
-Create a new stack:
-
-```sh
-$ pulumi stack init
-Enter a stack name: configmap-rollout-dev
-```
-
-This example will attempt to expose the `nginx` deployment to the Internet with
-a `Service` of type `LoadBalancer`. Since minikube does not support
-`LoadBalancer`, the application already knows to use type `ClusterIP` instead;
-all you need to do is to tell it whether you're deploying to minikube:
-
-```sh
-pulumi config set isMinikube <value>
-```
-
-Perform the deployment:
-
-```sh
-$ pulumi up
-Updating stack 'configmap-rollout-dev'
-Performing changes:
-
-     Type                           Name                                     Status      Info
- +   pulumi:pulumi:Stack            configmap-rollout-configmap-rollout-dev  created
- +   ├─ kubernetes:core:ConfigMap   nginx                                    created
- +   ├─ kubernetes:apps:Deployment  nginx                                    created
- +   └─ kubernetes:core:Service     nginx                                    created
-
----outputs:---
-frontendIp: "35.193.210.254"
-
-info: 4 changes performed:
-    + 4 resources created
-Update duration: 49.612528861s
-
-Permalink: https://app.pulumi.com/hausdorff/configmap-rollout-dev/updates/1
-```
-
-We can see here in the `---outputs:---` section that our proxy was allocated a public IP, in this
-case `35.193.210.254`. It is exported with a stack output variable, `frontendIp`. We can use `curl`
-and `grep` to retrieve the `<title>` of the site the proxy points at.
+If you paste this IP into your browser, you should see that it's redirected you to the [Pulumi
+homepage](http://www.pulumi.com). Alternatively, you can run this:
 
 ```sh
 $ curl -sL $(pulumi stack output frontendIp):80 | grep -C 1 "<title>"
@@ -73,82 +120,111 @@ $ curl -sL $(pulumi stack output frontendIp):80 | grep -C 1 "<title>"
     <title>Pulumi. Serverless // Containers // Infrastructure // Cloud // DevOps</title>
 ```
 
-Now, open `default.conf` and change `.node.server` and `.server.location.proxy_set_header` to point
-at `google.com`. If you're on macOS you can run `sed -i bak "s/pulumi.github.io/google.com/g" default.conf`
+## Using Pulumi's diff facilities to understand how a change affects an application
 
-The result should look like this:
+In this section, we'll re-configure nginx to point at google.com by changing the data in the
+`ConfigMap`.
 
-```conf
-upstream node {
-  server google.com;
-}
-server {
-  listen                  80;
-  server_name             _;
-  root                    /usr/share/nginx/html;
-  location / {
-    proxy_set_header X-Real-IP \$remote_addr;
-    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-    proxy_set_header Host google.com;
-    proxy_pass http://node;
-    proxy_redirect off;
-    port_in_redirect off;
-  }
-}
+This is one of the "gotchas" of Kubernetes -- by default `kubectl` will not trigger a rollout among
+the containers that reference a `ConfigMap` when its data will change. Instead, the kubelet silently, transparently syncs the data to the containers after the TTL expires.
+
+In this section, we will see that Pulumi plans a _safe_ update of the `ConfigMap`. It will:
+
+1. Create a new `ConfigMap` with a new name and the new data.
+1. Update the `PodTemplate` of the `Deployment` to point at the new `ConfigMap`. This update
+   triggers the `Deployment` controller to try to roll out a new set of containers with mounts
+   that contain this new data.
+1. Only once that succeeds, delete the old `ConfigMap`.
+
+Here are the steps to make this change:
+
+1. **Find the configuration data we need to change.** In [index.ts] we can see the definition of the
+   `ConfigMap`:
+
+    ```typescript
+    // nginx Configuration data to proxy traffic to `pulumi.github.io`. Read from
+    // `default.conf` file.
+    const nginxConfig = new k8s.core.v1.ConfigMap(appName, {
+        metadata: { labels: appLabels },
+        data: { "default.conf": fs.readFileSync("default.conf").toString() },
+    });
+    ```
+
+    This indicates that the `ConfigMap` is reading the `default.conf` file using `fs.readFileSync`.
+
+1. **Change the configuration file.** If you're on macOS, you can run:
+
+    ```sh
+    sed -i bak "s/pulumi.github.io/google.com/g" default.conf
+    ```
+
+    If you're running a platform that does not support `sed`, paste the following into your
+    `default.conf` file:
+
+    ```
+    upstream node {
+      server google.com;
+    }
+    server {
+      listen                  80;
+      server_name             _;
+      root                    /usr/share/nginx/html;
+      location / {
+        proxy_set_header X-Real-IP \$remote_addr;
+        proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+        proxy_set_header Host google.com;
+        proxy_pass http://node;
+        proxy_redirect off;
+        port_in_redirect off;
+      }
+    }
+    ```
+
+1. **Get a high-level view of the changes with** `pulumi preview`**.** It should look something like
+   the picture below. As we mentioned before, we can see that Pulumi plans to explicitly trigger a
+   rollout in the `Deployment` by replacing the `ConfigMap`. This is in contrast to `kubectl`, which
+   will silently sync the new version of the file to the containers.
+
+    ![Preview](/images/quickstart/kubernetes/preview.png "Preview")
+
+1. **Get a more detailed view of the changes with** `pulumi preview --diff`**.**. It will look
+   conceptually something like the following gif (though this gif is a different app).
+
+    ![diff](/images/quickstart/kubernetes/diff.gif "Diff")
+
+## Updating an application
+
+Once we're confident this is what we want, we can run the update:
+
+1. **Run** `pulumi up`**.**
+
+    ```typescript
+    pulumi up
+    ```
+
+    The output should look something like this.
+
+    ![configmapRollout](/images/quickstart/kubernetes/cm-rollout.gif "ConfigMap-induced Rollout")
+
+2. **Verify the rollout worked.** You can do this by pasting the URL into the browser (be sure to
+   disable the cache), or by running the following:
+    ```sh
+    $ curl -sL $(pulumi stack output frontendIp) | grep -o "<title>Google</title>"
+    <title>Google</title>
+    ```
+
+## Destroying an application
+
+Once we're done with the application, it's possible to destroy it using:
+
+```typescript
+pulumi destroy
 ```
 
-Running `preview` now shows that this change will cause us to replace the `ConfigMap` with a new one
-containing the new data, and subsequently trigger a rollout in the `Deployment`.
-
-> NOTE: This rollout is safe! Pulumi executes this plan with the following steps:
->
-> 1. Create a new `ConfigMap` with a new name and the new data.
-> 1. Update the `PodTemplate` of the `Deployment` to point at the new `ConfigMap`. This update
->    triggers the `Deployment` controller to try to roll out a new set of containers with mounts
->    that contain this new data.
-> 1. Only once that succeeds, delete the old `ConfigMap`.
-
-```sh
-Previewing update of stack 'configmap-rollout-dev'
-     Type                           Name                                     Status        Info
- *   pulumi:pulumi:Stack            configmap-rollout-configmap-rollout-dev  no change
- +-  ├─ kubernetes:core:ConfigMap   nginx                                    replace       changes: ~ data,metadata
- ~   └─ kubernetes:apps:Deployment  nginx                                    update        changes: ~ spec
-
-info: 2 changes previewed:
-    ~ 1 resource to update
-    +-1 resource to replace
-      2 resources unchanged
-```
-
-Running `pulumi up` should similarly look something like this:
-
-```sh
-Updating stack 'configmap-rollout-dev'
-     Type                           Name                                     Status       Info
- *   pulumi:pulumi:Stack            configmap-rollout-configmap-rollout-dev  done
- +-  ├─ kubernetes:core:ConfigMap   nginx                                    replaced     changes: ~ data,metadata
- ~   └─ kubernetes:apps:Deployment  nginx                                    updated      changes: ~ spec
-
----outputs:---
-frontendIp: "35.193.210.254"
-
-info: 2 changes performed:
-    ~ 1 resource updated
-    +-1 resource replaced
-      2 resources unchanged
-Update duration: 5.679919856s
-
-Permalink: https://app.pulumi.com/hausdorff/configmap-rollout-dev/updates/13
-```
-
-Now, if we `curl` the IP address once more, we see that it points at google.com!
-
-> _Note_: minikube does not support type `LoadBalancer`; if you are deploying to minikube, make sure
-> to run `kubectl port-forward svc/frontend 8080:80` to forward the cluster port to the local
-> machine and access the service via `localhost:8080`.
-
-```sh
-$ curl -sL $(pulumi stack output frontendIp) | grep -o "<title>Google</title>"
-<title>Google</title>
-```
+[ts]: https://www.typescriptlang.org/
+[nginx]: https://nginx.org/
+[nodejs]: https://nodejs.org/en/
+[npm]: https://www.npmjs.com/get-npm
+[yarn]: https://yarnpkg.com/en/docs/install
+[pulumi-test]: https://github.com/pulumi/examples/tree/master/kubernetes-ts-configmap-rollout
+[index.ts]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-configmap-rollout/index.ts
