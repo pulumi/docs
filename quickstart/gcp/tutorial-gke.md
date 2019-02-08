@@ -381,4 +381,4 @@ Run the following command to tear down the resources that are part of our stack.
 
 In this tutorial, we saw how to use Pulumi programs to create and launch a Managed Kubernetes cluster on GCP GKE.
 
-For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see the [Kubernetes Tutorial: Deploying the WordPress Helm Chart](../kubernetes/tutorial-configmap-rollout.html).
+For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see the [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
