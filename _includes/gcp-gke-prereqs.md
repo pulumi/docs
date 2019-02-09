@@ -4,8 +4,12 @@
 1. [Install Node.js version 6 or later](https://nodejs.org/en/download/)
 1. Install a package manager for Node.js, such as [npm](https://www.npmjs.com/get-npm) or [Yarn](https://yarnpkg.com/en/docs/install).
 1. [Install Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/downloads-interactive)
-1. Configure Auth Options
-    1. `gcloud` Login
+1. Configure GCP Auth
+
+    Choose *either option* below to configure your local machine with GCP
+    credentials.
+
+    1. Login using `gcloud`
 
         ```bash
         $ gcloud auth login

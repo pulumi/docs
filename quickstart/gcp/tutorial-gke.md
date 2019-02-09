@@ -21,6 +21,14 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     $ cd gke-hello-world
     ```
 
+1. Add the required dependencies:
+
+    This installs the dependent packages needed for our Pulumi program.
+
+	```bash
+	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
+	```
+
 1. Set the required GCP configuration variables:
 
     This sets the GCP project and zone for our GKE cluster.
@@ -132,14 +140,6 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     });
     ```
 
-1. Add the required dependencies:
-
-    This installs the dependent packages needed for our Pulumi program.
-
-	```bash
-	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
-	```
-
 1.  To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `up` sub-command shows a preview of the resources that will be created
@@ -188,6 +188,13 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 	> $ pulumi config set nodeCount 3
 	> $ pulumi config set nodeMachineType n1-standard-2
 	> ```
+    >
+    > Re-running `pulumi up` after these changes will actually create a new
+    > cluster with the desired settings, and then tear down your existing
+    > cluster as Pulumi performs create-before-delete replacements to
+    > declaratively update components and inform its dependents. If you'd
+    > actually like to scale your cluster up / down in-place, using node pools
+    > is the suggested path forward.
 
 ## Access the Kubernetes Cluster using Pulumi Providers
 
@@ -294,7 +301,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
 	> servicePublicIP: "35.236.26.151"
     > ```
 
-    If you visit the FQDN listed in `serviceHostname` you should land on the
+    If you visit the FQDN listed in `servicePublicIP` you should land on the
     NGINX welcome page. Note, that it may take a minute or so for the
     LoadBalancer to become active on GCP.
 
@@ -401,3 +408,7 @@ Managed Kubernetes cluster on GCP GKE.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
 apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
+
+We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
+[take Pulumi for a spin on GKE](https://youtu.be/ILMK65YVSKw) in an
+episode of [TGIK8s](https://github.com/heptio/tgik).
