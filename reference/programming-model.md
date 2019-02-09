@@ -77,13 +77,67 @@ This package also provides the following helpers:
 
 ## Creating resources {#resources}
 
-A resource is created via `new Resource(name, args)` in JavaScript. All resources must have a name, which must be unique in the Pulumi program.
+A resource is created with the following:
 
-All resource constructors also accept a third argument which can provide the following additional properties. 
-- `dependsOn` - a list of explicit resource dependencies
-- `protect` - whether to mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.
-- `parent` - optional parent for the resource. See [Components](#components).
-- `provider` - optional provider for the resource. See [Providers](#providers).
+{% include langchoose.html %}
+
+```javascript
+let res = new Resource(name, args, options)
+```
+
+```typescript
+let res = new Resource(name, args, options)
+```
+
+```python
+res = Resource(name, args, options)
+```
+
+```go
+res, err := NewResource(ctx, name, args, opt1, opt2)
+```
+
+All resources have a [`name`](#names), which must be unique in the Pulumi program.
+
+The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typicaly be either raw values or [outputs from other resources](#outputs). 
+
+All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi. 
+- `dependsOn` - Optionally provide a list of explicit resource dependencies to add to the implicit dependencies from inputs to the resource.  Default is `[]`.
+- `protect` - Optionally mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  Default is false.
+- `parent` - Optional parent for the resource. See [Components](#components).  Default is to parent to the implicitly-created `Stack` resource that is root resource for all Pulumi stacks.
+- `provider` - Pptional provider for the resource. See [Providers](#providers).  Default is to use the ambient provider specified by Pulumi configuration.
+- `deleteBeforeReplace` - Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scare resources behind the scenes.  Default is `false`.
+
+## Resource names {#names}
+
+Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in two ways:
+1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
+2. Most resource providers will use it as a default prefix for constructing the cloud-provider name of the resource.
+
+#### URNs {#urns}
+
+The URN of a resource is constructed from the name provided by the resource, the type of the resource, and the types of all the parent component resources.  It also include information about the project and stack.  For example:
+
+```
+urn:pulumi:thumbnailer-twitch::video-thumbnailer::cloud:bucket:Bucket$cloud:function:Function::onNewThumbnail
+urn:pulumi:    <stackname>   ::  <projectname>  ::    <parenttype>   $     <resourcetype>    ::<resourcename>
+```
+
+> Note: It is likely that the format of the URN will be changed in the future to be simpler and more flexible.
+
+Because it is used as the unique identity of a resource within a stack, this URN must be unique for each resource created by a single Pulumi program.  In particular, this requires that the resource name must be unique among resources of the same type with the same type of parent component. 
+
+Any change to the URN of a resource will cause the old and new resources to be treated as unrelated - the new one will be created (since it was not in the prior state) and the old one will be deleted (since it is not in the new desired state). This includes changing the `name` used to construct the resource or changing the parent of a resource.  Both of these operations will lead to a different URN, and thus to a `create` and a `delete` operation instead of an `update` or `replace` operation of the resource.  As a result, changes to names must be made with care.  
+
+Resources constructed as children of a [component](#components) should make sure that their names will be unique across multiple instances of the component.  In general, that means that the name of the component instance itself (the `name` parameter passed in to the component constructor) shoud be used as part of the name of the child resources.
+
+#### Auto-naming {#autonaming}
+
+The name of a resource is also used by many providers as a default prefix for constructing the cloud-provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` wil result in an AWS bucket named something like `mybucket-eb24ea8`.  
+
+This random postfix is added by default for two reasons.  First, it ensures that two instances of a program can be deployed to the same environment without risk of name collisions.  Second, it ensures that it will be possible to do zero-downtime replacements when needed, by creating the new resource first, updating any references to point to it, and then deleting the old resource.
+
+In cases where the two proprties above are not required, and where it would be useful to be able to precisely specify the name, it is typically possible to provide a `name: ` argument to the resource inputs to specify an explicit cloud-provider name.  For resources that may need to be replaced, this will often require also specifying `deleteBeforeReplace: true` in the resources's `ResourceOptions`.
 
 ## Resource outputs {#outputs}
 
