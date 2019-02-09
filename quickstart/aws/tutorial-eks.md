@@ -444,5 +444,9 @@ For a follow-up example on how to use Pulumi programs to create a Kubernetes
 apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
 
 We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
-[take Pulumi for a spin](https://youtu.be/ILMK65YVSKw) in an
-episode of [TGIK8s](https://github.com/heptio/tgik).
+take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ILMK65YVSKw" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
