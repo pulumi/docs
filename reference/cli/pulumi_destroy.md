@@ -8,11 +8,10 @@ Destroy an existing stack and its resources
 Destroy an existing stack and its resources
 
 This command deletes an entire existing stack by name.  The current state is
-loaded from the associated snapshot file in the workspace.  After running to completion,
-all of this stack's resources and associated state will be gone.
+loaded from the associated configuration snapshot file in the workspace.   (This file was created by the last `pulumi up` command.)  After running to completion, all of this stack's resources and associated state will be gone.
 
-Warning: although old snapshots can be used to recreate a stack, this command
-is generally irreversible and should be used with great care.
+Warning: although old snapshots can be used to attempt to recreate a stack, this command
+is typically irreversible and should be used with great care.
 
 ```
 pulumi destroy [flags]
