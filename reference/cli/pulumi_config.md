@@ -5,8 +5,12 @@ Manage configuration
 ### Synopsis
 
 
-Lists all configuration values for a specific stack. To add a new configuration value, run
-'pulumi config set', to remove and existing value run 'pulumi config rm'. To get the value of
+Lists all configuration values for a specific stack. 
+
+Configuration values, which will be used the next time you issue a `pulumi up` command, are stored for each stack in a file named `Pulumi.<stack name>.yaml`.
+
+To add a new configuration value to this file, run
+'pulumi config set'. To remove and existing value run 'pulumi config rm'. To get the value of
 for a specific configuration key, use 'pulumi config get <key-name>'.
 
 ```
