@@ -53,18 +53,18 @@ Creates a Snapshot of an EBS Volume.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_ebs_volume_example = new aws.ebs.Volume("example", {
+const example = new aws.ebs.Volume("example", {
     availabilityZone: "us-west-2a",
     size: 40,
     tags: {
         Name: "HelloWorld",
     },
 });
-const aws_ebs_snapshot_example_snapshot = new aws.ebs.Snapshot("example_snapshot", {
+const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
     tags: {
         Name: "HelloWorld_snap",
     },
-    volumeId: aws_ebs_volume_example.id,
+    volumeId: example.id,
 });
 ```
 
@@ -231,22 +231,22 @@ Creates a Snapshot of a snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_ebs_volume_example = new aws.ebs.Volume("example", {
+const example = new aws.ebs.Volume("example", {
     availabilityZone: "us-west-2a",
     size: 40,
     tags: {
         Name: "HelloWorld",
     },
 });
-const aws_ebs_snapshot_example_snapshot = new aws.ebs.Snapshot("example_snapshot", {
+const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
     tags: {
         Name: "HelloWorld_snap",
     },
-    volumeId: aws_ebs_volume_example.id,
+    volumeId: example.id,
 });
-const aws_ebs_snapshot_copy_example_copy = new aws.ebs.SnapshotCopy("example_copy", {
+const exampleCopy = new aws.ebs.SnapshotCopy("example_copy", {
     sourceRegion: "us-west-2",
-    sourceSnapshotId: aws_ebs_snapshot_example_snapshot.id,
+    sourceSnapshotId: exampleSnapshot.id,
     tags: {
         Name: "HelloWorld_copy_snap",
     },
@@ -429,7 +429,7 @@ Manages a single EBS volume.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_ebs_volume_example = new aws.ebs.Volume("example", {
+const example = new aws.ebs.Volume("example", {
     availabilityZone: "us-west-2a",
     size: 40,
     tags: {
@@ -437,8 +437,8 @@ const aws_ebs_volume_example = new aws.ebs.Volume("example", {
     },
 });
 ```
-> **NOTE**: One of `size` or `snapshot_id` is required when specifying an EBS volume
 
+> **NOTE**: One of `size` or `snapshot_id` is required when specifying an EBS volume
 
 <h3 class="pdoc-member-header" id="Volume-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/ebs/volume.ts#L75"> <b>constructor</b></a>
@@ -605,7 +605,7 @@ Use this data source to get information about an EBS Snapshot for use when provi
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_ebs_snapshot_ebs_volume = pulumi.output(aws.ebs.getSnapshot({
+const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
     filters: [
         {
             name: "volume-size",
@@ -639,7 +639,7 @@ criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_ebs_snapshot_ids_ebs_volumes = pulumi.output(aws.ebs.getSnapshotIds({
+const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
     filters: [
         {
             name: "volume-size",
@@ -672,7 +672,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_ebs_volume_ebs_volume = pulumi.output(aws.ebs.getVolume({
+const ebsVolume = pulumi.output(aws.ebs.getVolume({
     filters: [
         {
             name: "volume-type",

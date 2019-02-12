@@ -48,7 +48,7 @@ in all regions - available regions are listed
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_codecommit_repository_test = new aws.codecommit.Repository("test", {
+const test = new aws.codecommit.Repository("test", {
     description: "This is the Sample App Repository",
     repositoryName: "MyTestRepository",
 });
@@ -308,7 +308,7 @@ The CodeCommit Repository data source allows the ARN, Repository ID, Repository 
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_codecommit_repository_test = pulumi.output(aws.codecommit.getRepository({
+const test = pulumi.output(aws.codecommit.getRepository({
     repositoryName: "MyTestRepository",
 }));
 ```
