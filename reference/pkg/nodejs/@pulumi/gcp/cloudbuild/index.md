@@ -41,7 +41,7 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_cloudbuild_trigger_build_trigger = new gcp.cloudbuild.Trigger("build_trigger", {
+const buildTrigger = new gcp.cloudbuild.Trigger("build_trigger", {
     build: {
         images: ["gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA"],
         steps: [{
@@ -57,13 +57,14 @@ const google_cloudbuild_trigger_build_trigger = new gcp.cloudbuild.Trigger("buil
     },
 });
 ```
+
 OR
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_cloudbuild_trigger_build_trigger = new gcp.cloudbuild.Trigger("build_trigger", {
+const buildTrigger = new gcp.cloudbuild.Trigger("build_trigger", {
     filename: "cloudbuild.yaml",
     project: "my-project",
     triggerTemplate: {
@@ -73,7 +74,6 @@ const google_cloudbuild_trigger_build_trigger = new gcp.cloudbuild.Trigger("buil
     },
 });
 ```
-
 
 <h3 class="pdoc-member-header" id="Trigger-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/cloudbuild/trigger.ts#L103"> <b>constructor</b></a>

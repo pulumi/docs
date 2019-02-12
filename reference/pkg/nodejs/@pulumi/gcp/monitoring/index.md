@@ -56,7 +56,7 @@ To get more information about AlertPolicy, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_monitoring_alert_policy_basic = new gcp.monitoring.AlertPolicy("basic", {
+const basic = new gcp.monitoring.AlertPolicy("basic", {
     combiner: "OR",
     conditions: [{
         conditionThreshold: {
@@ -268,16 +268,16 @@ To get more information about Group, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_monitoring_group_basic = new gcp.MonitoringGroup("basic", {
+const basic = new gcp.monitoring.Group("basic", {
     displayName: "New Test Group",
     filter: "resource.metadata.region=\"europe-west2\"",
 });
 ```
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
   <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=monitoring_group_subgroup&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
     <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
   </a>
 </div>
-
 ## Example Usage - Monitoring Group Subgroup
 
 
@@ -285,14 +285,14 @@ const google_monitoring_group_basic = new gcp.MonitoringGroup("basic", {
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_monitoring_group_parent = new gcp.MonitoringGroup("parent", {
+const parent = new gcp.monitoring.Group("parent", {
     displayName: "New Test SubGroup",
     filter: "resource.metadata.region=\"europe-west2\"",
 });
-const google_monitoring_group_subgroup = new gcp.MonitoringGroup("subgroup", {
+const subgroup = new gcp.monitoring.Group("subgroup", {
     displayName: "New Test SubGroup",
     filter: "resource.metadata.region=\"europe-west2\"",
-    parentName: google_monitoring_group_parent.name,
+    parentName: parent.name,
 });
 ```
 
@@ -433,11 +433,11 @@ To get more information about NotificationChannel, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_monitoring_notification_channel_basic = new gcp.MonitoringNotificationChannel("basic", {
+const basic = new gcp.monitoring.NotificationChannel("basic", {
     displayName: "Test Notification Channel",
-    labels: [{
-        emailAddress: "fake_email@blahblah.com",
-    }],
+    labels: {
+        email_address: "fake_email@blahblah.com",
+    },
     type: "email",
 });
 ```
@@ -594,30 +594,30 @@ To get more information about UptimeCheckConfig, see:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_monitoring_uptime_check_config_http = new gcp.MonitoringUptimeCheckConfig("http", {
+const http = new gcp.monitoring.UptimeCheckConfig("http", {
     contentMatchers: [{
         content: "example",
     }],
     displayName: "http-uptime-check",
-    httpCheck: [{
+    httpCheck: {
         path: "/some-path",
-        port: "8010",
-    }],
-    monitoredResource: [{
-        labels: [{
+        port: 8010,
+    },
+    monitoredResource: {
+        labels: {
             host: "192.168.1.1",
-            projectId: "example",
-        }],
+            project_id: "example",
+        },
         type: "uptime_url",
-    }],
+    },
     timeout: "60s",
 });
 ```
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
   <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=uptime_check_tcp&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
     <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
   </a>
 </div>
-
 ## Example Usage - Uptime Check Tcp
 
 
@@ -625,19 +625,19 @@ const google_monitoring_uptime_check_config_http = new gcp.MonitoringUptimeCheck
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_monitoring_group_check = new gcp.MonitoringGroup("check", {
+const check = new gcp.monitoring.Group("check", {
     displayName: "uptime-check-group",
     filter: "resource.metadata.name=has_substring(\"foo\")",
 });
-const google_monitoring_uptime_check_config_tcp_group = new gcp.MonitoringUptimeCheckConfig("tcp_group", {
+const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcp_group", {
     displayName: "tcp-uptime-check",
-    resourceGroup: [{
-        groupId: google_monitoring_group_check.name,
+    resourceGroup: {
+        groupId: check.name,
         resourceType: "INSTANCE",
-    }],
-    tcpCheck: [{
+    },
+    tcpCheck: {
         port: 888,
-    }],
+    },
     timeout: "60s",
 });
 ```

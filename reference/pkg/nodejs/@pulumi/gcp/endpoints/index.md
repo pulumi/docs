@@ -39,20 +39,20 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as gcp from "@pulumi/gcp";
 
-const google_endpoints_service_grpc_service = new gcp.endpoints.Service("grpc_service", {
+const grpcService = new gcp.endpoints.Service("grpc_service", {
     grpcConfig: fs.readFileSync("service_spec.yml", "utf-8"),
     project: "project-id",
     protocOutput: fs.readFileSync("compiled_descriptor_file.pb", "utf-8"),
     serviceName: "api-name.endpoints.project-id.cloud.goog",
 });
-const google_endpoints_service_openapi_service = new gcp.endpoints.Service("openapi_service", {
+const openapiService = new gcp.endpoints.Service("openapi_service", {
     openapiConfig: fs.readFileSync("openapi_spec.yml", "utf-8"),
     project: "project-id",
     serviceName: "api-name.endpoints.project-id.cloud.goog",
 });
 ```
-The example in `examples/endpoints_on_compute_engine` shows the API from the quickstart running on a Compute Engine VM and reachable through Cloud Endpoints, which may also be useful.
 
+The example in `examples/endpoints_on_compute_engine` shows the API from the quickstart running on a Compute Engine VM and reachable through Cloud Endpoints, which may also be useful.
 
 <h3 class="pdoc-member-header" id="Service-constructor">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/endpoints/service.ts#L54"> <b>constructor</b></a>
