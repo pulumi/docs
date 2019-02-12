@@ -36,7 +36,7 @@ title: Module securityhub
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
 
--> **Note:** Destroying this resource will disable Security Hub for this AWS account.
+> **Note:** Destroying this resource will disable Security Hub for this AWS account.
 
 Enables Security Hub for this AWS account.
 
@@ -46,7 +46,7 @@ Enables Security Hub for this AWS account.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_securityhub_account_example = new aws.securityhub.Account("example", {});
+const example = new aws.securityhub.Account("example", {});
 ```
 
 <h3 class="pdoc-member-header" id="Account-constructor">
@@ -131,11 +131,11 @@ Subscribes to a Security Hub product.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_securityhub_account_example = new aws.securityhub.Account("example", {});
-const aws_region_current = pulumi.output(aws.getRegion({}));
-const aws_securityhub_product_subscription_example = new aws.securityhub.ProductSubscription("example", {
-    productArn: aws_region_current.apply(__arg0 => `arn:aws:securityhub:${__arg0.name}:733251395267:product/alertlogic/althreatmanagement`),
-}, {dependsOn: [aws_securityhub_account_example]});
+const exampleAccount = new aws.securityhub.Account("example", {});
+const current = pulumi.output(aws.getRegion({}));
+const exampleProductSubscription = new aws.securityhub.ProductSubscription("example", {
+    productArn: current.apply(current => `arn:aws:securityhub:${current.name}:733251395267:product/alertlogic/althreatmanagement`),
+}, {dependsOn: [exampleAccount]});
 ```
 
 <h3 class="pdoc-member-header" id="ProductSubscription-constructor">
@@ -238,10 +238,10 @@ Subscribes to a Security Hub standard.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_securityhub_account_example = new aws.securityhub.Account("example", {});
-const aws_securityhub_standards_subscription_example = new aws.securityhub.StandardsSubscription("example", {
+const exampleAccount = new aws.securityhub.Account("example", {});
+const exampleStandardsSubscription = new aws.securityhub.StandardsSubscription("example", {
     standardsArn: "arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0",
-}, {dependsOn: [aws_securityhub_account_example]});
+}, {dependsOn: [exampleAccount]});
 ```
 
 <h3 class="pdoc-member-header" id="StandardsSubscription-constructor">

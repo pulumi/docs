@@ -43,7 +43,7 @@ Associates an AWS account with Amazon Macie as a member account.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_macie_member_account_association_example = new aws.macie.MemberAccountAssociation("example", {
+const example = new aws.macie.MemberAccountAssociation("example", {
     memberAccountId: "123456789012",
 });
 ```
@@ -141,7 +141,7 @@ Associates an S3 resource with Amazon Macie for monitoring and data classificati
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_macie_s3_bucket_association_example = new aws.macie.S3BucketAssociation("example", {
+const example = new aws.macie.S3BucketAssociation("example", {
     bucketName: "tf-macie-example",
     classificationType: {
         oneTime: "FULL",

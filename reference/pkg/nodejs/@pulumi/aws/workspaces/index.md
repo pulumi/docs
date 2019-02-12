@@ -40,7 +40,7 @@ Use this data source to get information about a Workspaces Bundle.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const aws_workspaces_bundle_example = pulumi.output(aws.workspaces.getBundle({
+const example = pulumi.output(aws.workspaces.getBundle({
     bundleId: "wsb-b0s22j3d7",
 }));
 ```
