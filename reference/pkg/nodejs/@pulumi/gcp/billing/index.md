@@ -49,7 +49,7 @@ an existing Google Cloud Platform Billing Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_billing_account_iam_binding_binding = new gcp.BillingAccountIamBinding("binding", {
+const binding = new gcp.billing.AccountIamBinding("binding", {
     billingAccountId: "00AA00-000AAA-00AA0A",
     members: ["user:jane@example.com"],
     role: "roles/billing.viewer",
@@ -179,7 +179,7 @@ the IAM policy for an existing Google Cloud Platform Billing Account.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_billing_account_iam_member_binding = new gcp.BillingAccountIamMember("binding", {
+const binding = new gcp.billing.AccountIamMember("binding", {
     billingAccountId: "00AA00-000AAA-00AA0A",
     member: "user:jane@example.com",
     role: "roles/billing.viewer",
@@ -314,15 +314,15 @@ by use of this resource. The safest alternative is to use multiple `google_billi
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_iam_policy_admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/billing.viewer",
     }],
 }));
-const google_billing_account_iam_policy_policy = new gcp.BillingAccountIamPolicy("policy", {
+const policy = new gcp.billing.AccountIamPolicy("policy", {
     billingAccountId: "00AA00-000AAA-00AA0A",
-    policyData: google_iam_policy_admin.apply(__arg0 => __arg0.policyData),
+    policyData: admin.apply(admin => admin.policyData),
 });
 ```
 

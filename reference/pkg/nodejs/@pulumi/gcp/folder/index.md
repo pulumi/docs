@@ -52,12 +52,12 @@ an existing Google Cloud Platform folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_department1 = new gcp.organizations.Folder("department1", {
+const department1 = new gcp.organizations.Folder("department1", {
     displayName: "Department 1",
     parent: "organizations/1234567",
 });
-const google_folder_iam_binding_admin = new gcp.folder.IAMBinding("admin", {
-    folder: google_folder_department1.name,
+const admin = new gcp.folder.IAMBinding("admin", {
+    folder: department1.name,
     members: ["user:jane@example.com"],
     role: "roles/editor",
 });
@@ -194,12 +194,12 @@ the IAM policy for an existing Google Cloud Platform folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_department1 = new gcp.organizations.Folder("department1", {
+const department1 = new gcp.organizations.Folder("department1", {
     displayName: "Department 1",
     parent: "organizations/1234567",
 });
-const google_folder_iam_member_admin = new gcp.folder.IAMMember("admin", {
-    folder: google_folder_department1.name,
+const admin = new gcp.folder.IAMMember("admin", {
+    folder: department1.name,
     member: "user:jane@example.com",
     role: "roles/editor",
 });
@@ -330,19 +330,19 @@ Platform folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_iam_policy_admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
     bindings: [{
         members: ["user:jane@example.com"],
         role: "roles/editor",
     }],
 }));
-const google_folder_department1 = new gcp.organizations.Folder("department1", {
+const department1 = new gcp.organizations.Folder("department1", {
     displayName: "Department 1",
     parent: "organizations/1234567",
 });
-const google_folder_iam_policy_folder_admin_policy = new gcp.folder.IAMPolicy("folder_admin_policy", {
-    folder: google_folder_department1.name,
-    policyData: google_iam_policy_admin.apply(__arg0 => __arg0.policyData),
+const folderAdminPolicy = new gcp.folder.IAMPolicy("folder_admin_policy", {
+    folder: department1.name,
+    policyData: admin.apply(admin => admin.policyData),
 });
 ```
 
@@ -444,7 +444,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationPolicy">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L79">class <b>OrganizationPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L82">class <b>OrganizationPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -462,7 +462,7 @@ To set policy with a [boolean constraint](https://cloud.google.com/resource-mana
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_organization_policy_serial_port_policy = new gcp.folder.OrganizationPolicy("serial_port_policy", {
+const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy", {
     booleanPolicy: {
         enforced: true,
     },
@@ -471,13 +471,14 @@ const google_folder_organization_policy_serial_port_policy = new gcp.folder.Orga
 });
 ```
 
+
 To set a policy with a [list contraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-list-constraints):
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_organization_policy_services_policy = new gcp.folder.OrganizationPolicy("services_policy", {
+const servicesPolicy = new gcp.folder.OrganizationPolicy("services_policy", {
     constraint: "serviceuser.services",
     folder: "folders/123456789",
     listPolicy: {
@@ -488,13 +489,14 @@ const google_folder_organization_policy_services_policy = new gcp.folder.Organiz
 });
 ```
 
+
 Or to deny some services, use the following instead:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_organization_policy_services_policy = new gcp.folder.OrganizationPolicy("services_policy", {
+const servicesPolicy = new gcp.folder.OrganizationPolicy("services_policy", {
     constraint: "serviceuser.services",
     folder: "folders/123456789",
     listPolicy: {
@@ -505,13 +507,14 @@ const google_folder_organization_policy_services_policy = new gcp.folder.Organiz
     },
 });
 ```
+
 To restore the default folder organization policy, use the following instead:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_organization_policy_services_policy = new gcp.folder.OrganizationPolicy("services_policy", {
+const servicesPolicy = new gcp.folder.OrganizationPolicy("services_policy", {
     constraint: "serviceuser.services",
     folder: "folders/123456789",
     restorePolicy: {
@@ -521,7 +524,7 @@ const google_folder_organization_policy_services_policy = new gcp.folder.Organiz
 ```
 
 <h3 class="pdoc-member-header" id="OrganizationPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L124"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L127"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -536,7 +539,7 @@ Create a OrganizationPolicy resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L88">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L91">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -568,7 +571,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-booleanPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L95">property <b>booleanPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L98">property <b>booleanPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>booleanPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -579,7 +582,7 @@ A boolean policy is a constraint that is either enforced or not. Structure is do
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-constraint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L99">property <b>constraint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L102">property <b>constraint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>constraint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -588,7 +591,7 @@ The name of the Constraint the Policy is configuring, for example, `serviceuser.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L103">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L106">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -597,7 +600,7 @@ The name of the Constraint the Policy is configuring, for example, `serviceuser.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L107">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L110">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>folder: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -616,7 +619,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-listPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L112">property <b>listPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L115">property <b>listPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listPolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -636,7 +639,7 @@ can also be used to allow or deny all values. Structure is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-restorePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L116">property <b>restorePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L119">property <b>restorePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>restorePolicy: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -647,7 +650,7 @@ A restore policy is a constraint to restore the default policy. Structure is doc
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L120">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L123">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>updateTime: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -666,7 +669,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicy-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L124">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L127">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -925,14 +928,14 @@ policy applied to the folder.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationPolicyArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L209">interface <b>OrganizationPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L212">interface <b>OrganizationPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a OrganizationPolicy resource.
 
 <h3 class="pdoc-member-header" id="OrganizationPolicyArgs-booleanPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L213">property <b>booleanPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L216">property <b>booleanPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>booleanPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -943,7 +946,7 @@ A boolean policy is a constraint that is either enforced or not. Structure is do
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyArgs-constraint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L217">property <b>constraint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L220">property <b>constraint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>constraint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -952,7 +955,7 @@ The name of the Constraint the Policy is configuring, for example, `serviceuser.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L221">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L224">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>folder: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -961,7 +964,7 @@ The resource name of the folder to set the policy for. Its format is folders/{fo
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyArgs-listPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L226">property <b>listPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L229">property <b>listPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>listPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -981,7 +984,7 @@ can also be used to allow or deny all values. Structure is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyArgs-restorePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L230">property <b>restorePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L233">property <b>restorePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>restorePolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -992,7 +995,7 @@ A restore policy is a constraint to restore the default policy. Structure is doc
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L234">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L237">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>version?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1002,14 +1005,14 @@ Version of the Policy. Default version is 0.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationPolicyState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L170">interface <b>OrganizationPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L173">interface <b>OrganizationPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering OrganizationPolicy resources.
 
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-booleanPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L174">property <b>booleanPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L177">property <b>booleanPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>booleanPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1020,7 +1023,7 @@ A boolean policy is a constraint that is either enforced or not. Structure is do
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-constraint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L178">property <b>constraint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L181">property <b>constraint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>constraint?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1029,7 +1032,7 @@ The name of the Constraint the Policy is configuring, for example, `serviceuser.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L182">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L185">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>etag?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1038,7 +1041,7 @@ The name of the Constraint the Policy is configuring, for example, `serviceuser.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L186">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L189">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>folder?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1047,7 +1050,7 @@ The resource name of the folder to set the policy for. Its format is folders/{fo
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-listPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L191">property <b>listPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L194">property <b>listPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>listPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1067,7 +1070,7 @@ can also be used to allow or deny all values. Structure is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-restorePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L195">property <b>restorePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L198">property <b>restorePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>restorePolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -1078,7 +1081,7 @@ A restore policy is a constraint to restore the default policy. Structure is doc
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L199">property <b>updateTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L202">property <b>updateTime</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>updateTime?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1087,7 +1090,7 @@ A restore policy is a constraint to restore the default policy. Structure is doc
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationPolicyState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L203">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/folder/organizationPolicy.ts#L206">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>version?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>

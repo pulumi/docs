@@ -64,11 +64,11 @@ granted to the credentials used with Terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_logging_billing_account_exclusion_my_exclusion = new gcp.logging.BillingAccountExclusion("my-exclusion", {
+const my_exclusion = new gcp.logging.BillingAccountExclusion("my-exclusion", {
     billingAccount: "ABCDEF-012345-GHIJKL",
     description: "Exclude GCE instance debug logs",
+    // Exclude all DEBUG or lower severity messages relating to instances
     filter: "resource.type = gce_instance AND severity <= DEBUG",
-    name: "my-instance-debug-exclusion",
 });
 ```
 
@@ -189,7 +189,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BillingAccountSink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L37">class <b>BillingAccountSink</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L34">class <b>BillingAccountSink</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -209,22 +209,19 @@ typical IAM roles granted on a project.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_storage_bucket_log_bucket = new gcp.storage.Bucket("log-bucket", {
-    name: "billing-logging-bucket",
-});
-const google_logging_billing_account_sink_my_sink = new gcp.logging.BillingAccountSink("my-sink", {
+const log_bucket = new gcp.storage.Bucket("log-bucket", {});
+const my_sink = new gcp.logging.BillingAccountSink("my-sink", {
     billingAccount: "ABCDEF-012345-GHIJKL",
-    destination: google_storage_bucket_log_bucket.name.apply(__arg0 => `storage.googleapis.com/${__arg0}`),
-    name: "my-sink",
+    destination: log_bucket.name.apply(name => `storage.googleapis.com/${name}`),
 });
-const google_project_iam_binding_log_writer = new gcp.projects.IAMBinding("log-writer", {
-    members: [google_logging_billing_account_sink_my_sink.writerIdentity],
+const log_writer = new gcp.projects.IAMBinding("log-writer", {
+    members: [my_sink.writerIdentity],
     role: "roles/storage.objectCreator",
 });
 ```
 
 <h3 class="pdoc-member-header" id="BillingAccountSink-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L71"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -239,7 +236,7 @@ Create a BillingAccountSink resource with the given unique name, arguments, and 
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSink-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -271,7 +268,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSink-billingAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L53">property <b>billingAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L50">property <b>billingAccount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>billingAccount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -280,23 +277,18 @@ The billing account exported to the sink.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSink-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L64">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L56">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSink-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L70">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L62">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>filter: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -317,7 +309,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSink-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -336,7 +328,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSink-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L79">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L71">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>writerIdentity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -365,15 +357,15 @@ granted to the credentials used with Terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_my_folder = new gcp.organizations.Folder("my-folder", {
+const my_folder = new gcp.organizations.Folder("my-folder", {
     displayName: "My folder",
     parent: "organizations/123456",
 });
-const google_logging_folder_exclusion_my_exclusion = new gcp.logging.FolderExclusion("my-exclusion", {
+const my_exclusion = new gcp.logging.FolderExclusion("my-exclusion", {
     description: "Exclude GCE instance debug logs",
+    // Exclude all DEBUG or lower severity messages relating to instances
     filter: "resource.type = gce_instance AND severity <= DEBUG",
-    folder: google_folder_my_folder.name,
-    name: "my-instance-debug-exclusion",
+    folder: my_folder.name,
 });
 ```
 
@@ -495,7 +487,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FolderSink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L40">class <b>FolderSink</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L38">class <b>FolderSink</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -513,27 +505,25 @@ granted to the credentials used with terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_folder_my_folder = new gcp.organizations.Folder("my-folder", {
+const my_folder = new gcp.organizations.Folder("my-folder", {
     displayName: "My folder",
     parent: "organizations/123456",
 });
-const google_storage_bucket_log_bucket = new gcp.storage.Bucket("log-bucket", {
-    name: "folder-logging-bucket",
-});
-const google_logging_folder_sink_my_sink = new gcp.logging.FolderSink("my-sink", {
-    destination: google_storage_bucket_log_bucket.name.apply(__arg0 => `storage.googleapis.com/${__arg0}`),
+const log_bucket = new gcp.storage.Bucket("log-bucket", {});
+const my_sink = new gcp.logging.FolderSink("my-sink", {
+    destination: log_bucket.name.apply(name => `storage.googleapis.com/${name}`),
+    // Log all WARN or higher severity messages relating to instances
     filter: "resource.type = gce_instance AND severity >= WARN",
-    folder: google_folder_my_folder.name,
-    name: "my-sink",
+    folder: my_folder.name,
 });
-const google_project_iam_binding_log_writer = new gcp.projects.IAMBinding("log-writer", {
-    members: [google_logging_folder_sink_my_sink.writerIdentity],
+const log_writer = new gcp.projects.IAMBinding("log-writer", {
+    members: [my_sink.writerIdentity],
     role: "roles/storage.objectCreator",
 });
 ```
 
 <h3 class="pdoc-member-header" id="FolderSink-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L81"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -548,7 +538,7 @@ Create a FolderSink resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L47">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -580,23 +570,18 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L63">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L56">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L69">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L62">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>filter: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -607,7 +592,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L74">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L67">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>folder: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -627,7 +612,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-includeChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L79">property <b>includeChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L72">property <b>includeChildren</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>includeChildren: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -637,7 +622,7 @@ associated with child projects are also exported; otherwise only logs relating t
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L76">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -656,7 +641,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSink-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L88">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L81">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>writerIdentity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -685,10 +670,10 @@ granted to the credentials used with Terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_logging_organization_exclusion_my_exclusion = new gcp.logging.OrganizationExclusion("my-exclusion", {
+const my_exclusion = new gcp.logging.OrganizationExclusion("my-exclusion", {
     description: "Exclude GCE instance debug logs",
+    // Exclude all DEBUG or lower severity messages relating to instances
     filter: "resource.type = gce_instance AND severity <= DEBUG",
-    name: "my-instance-debug-exclusion",
     orgId: "123456789",
 });
 ```
@@ -810,7 +795,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationSink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L36">class <b>OrganizationSink</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L34">class <b>OrganizationSink</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -828,23 +813,21 @@ granted to the credentials used with terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_storage_bucket_log_bucket = new gcp.storage.Bucket("log-bucket", {
-    name: "organization-logging-bucket",
-});
-const google_logging_organization_sink_my_sink = new gcp.logging.OrganizationSink("my-sink", {
-    destination: google_storage_bucket_log_bucket.name.apply(__arg0 => `storage.googleapis.com/${__arg0}`),
+const log_bucket = new gcp.storage.Bucket("log-bucket", {});
+const my_sink = new gcp.logging.OrganizationSink("my-sink", {
+    destination: log_bucket.name.apply(name => `storage.googleapis.com/${name}`),
+    // Log all WARN or higher severity messages relating to instances
     filter: "resource.type = gce_instance AND severity >= WARN",
-    name: "my-sink",
     orgId: "123456789",
 });
-const google_project_iam_binding_log_writer = new gcp.projects.IAMBinding("log-writer", {
-    members: [google_logging_organization_sink_my_sink.writerIdentity],
+const log_writer = new gcp.projects.IAMBinding("log-writer", {
+    members: [my_sink.writerIdentity],
     role: "roles/storage.objectCreator",
 });
 ```
 
 <h3 class="pdoc-member-header" id="OrganizationSink-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L76"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -859,7 +842,7 @@ Create a OrganizationSink resource with the given unique name, arguments, and op
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -891,23 +874,18 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L59">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L52">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L65">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L58">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>filter: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -928,7 +906,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-includeChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L70">property <b>includeChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L63">property <b>includeChildren</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>includeChildren: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -938,7 +916,7 @@ associated with child projects are also exported; otherwise only logs relating t
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L67">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -947,7 +925,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L78">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L71">property <b>orgId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>orgId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -966,7 +944,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSink-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L83">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L76">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>writerIdentity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -995,10 +973,10 @@ granted to the credentials used with Terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_logging_project_exclusion_my_exclusion = new gcp.logging.ProjectExclusion("my-exclusion", {
+const my_exclusion = new gcp.logging.ProjectExclusion("my-exclusion", {
     description: "Exclude GCE instance debug logs",
+    // Exclude all DEBUG or lower severity messages relating to instances
     filter: "resource.type = gce_instance AND severity <= DEBUG",
-    name: "my-instance-debug-exclusion",
 });
 ```
 
@@ -1120,7 +1098,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectSink">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L69">class <b>ProjectSink</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L72">class <b>ProjectSink</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1141,13 +1119,16 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_logging_project_sink_my_sink = new gcp.logging.ProjectSink("my-sink", {
+const my_sink = new gcp.logging.ProjectSink("my-sink", {
+    // Can export to pubsub, cloud storage, or bigtable
     destination: "pubsub.googleapis.com/projects/my-project/topics/instance-activity",
+    // Log all WARN or higher severity messages relating to instances
     filter: "resource.type = gce_instance AND severity >= WARN",
-    name: "my-pubsub-instance-sink",
+    // Use a unique writer (creates a unique service account used for writing)
     uniqueWriterIdentity: true,
 });
 ```
+
 A more complete example follows: this creates a compute instance, as well as a log sink that logs all activity to a
 cloud storage bucket. Because we are using `unique_writer_identity`, we must grant it access to the bucket. Note that
 this grant requires the "Project IAM Admin" IAM role (`roles/resourcemanager.projectIamAdmin`) granted to the credentials
@@ -1157,37 +1138,37 @@ used with terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_compute_instance_my_logged_instance = new gcp.compute.Instance("my-logged-instance", {
+// Our logged compute instance
+const my_logged_instance = new gcp.compute.Instance("my-logged-instance", {
     bootDisk: {
         initializeParams: {
             image: "debian-cloud/debian-9",
         },
     },
     machineType: "n1-standard-1",
-    name: "my-instance",
     networkInterfaces: [{
         accessConfigs: [{}],
         network: "default",
     }],
     zone: "us-central1-a",
 });
-const google_storage_bucket_log_bucket = new gcp.storage.Bucket("log-bucket", {
-    name: "my-unique-logging-bucket",
-});
-const google_logging_project_sink_instance_sink = new gcp.logging.ProjectSink("instance-sink", {
-    destination: google_storage_bucket_log_bucket.name.apply(__arg0 => `storage.googleapis.com/${__arg0}`),
-    filter: google_compute_instance_my_logged_instance.instanceId.apply(__arg0 => `resource.type = gce_instance AND resource.labels.instance_id = "${__arg0}"`),
-    name: "my-instance-sink",
+// A bucket to store logs in
+const log_bucket = new gcp.storage.Bucket("log-bucket", {});
+// Our sink; this logs all activity related to our "my-logged-instance" instance
+const instance_sink = new gcp.logging.ProjectSink("instance-sink", {
+    destination: log_bucket.name.apply(name => `storage.googleapis.com/${name}`),
+    filter: my_logged_instance.instanceId.apply(instanceId => `resource.type = gce_instance AND resource.labels.instance_id = "${instanceId}"`),
     uniqueWriterIdentity: true,
 });
-const google_project_iam_binding_log_writer = new gcp.projects.IAMBinding("log-writer", {
-    members: [google_logging_project_sink_instance_sink.writerIdentity],
+// Because our sink uses a unique_writer, we must grant that writer access to the bucket.
+const log_writer = new gcp.projects.IAMBinding("log-writer", {
+    members: [instance_sink.writerIdentity],
     role: "roles/storage.objectCreator",
 });
 ```
 
 <h3 class="pdoc-member-header" id="ProjectSink-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L117"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1202,7 +1183,7 @@ Create a ProjectSink resource with the given unique name, arguments, and options
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L78">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L81">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1234,23 +1215,18 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L92">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L90">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L98">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L96">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>filter: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1271,7 +1247,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L100">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1280,7 +1256,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L107">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L105">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1290,7 +1266,7 @@ used.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-uniqueWriterIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L114">property <b>uniqueWriterIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L112">property <b>uniqueWriterIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>uniqueWriterIdentity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1312,7 +1288,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSink-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L119">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L117">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>writerIdentity: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1435,14 +1411,14 @@ The name of the logging exclusion.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BillingAccountSinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L155">interface <b>BillingAccountSinkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L142">interface <b>BillingAccountSinkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a BillingAccountSink resource.
 
 <h3 class="pdoc-member-header" id="BillingAccountSinkArgs-billingAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L159">property <b>billingAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L146">property <b>billingAccount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>billingAccount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1451,23 +1427,18 @@ The billing account exported to the sink.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L170">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L152">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L176">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L158">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1478,7 +1449,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L162">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1488,14 +1459,14 @@ The name of the logging sink.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BillingAccountSinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L119">interface <b>BillingAccountSinkState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L111">interface <b>BillingAccountSinkState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering BillingAccountSink resources.
 
 <h3 class="pdoc-member-header" id="BillingAccountSinkState-billingAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L123">property <b>billingAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L115">property <b>billingAccount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>billingAccount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1504,23 +1475,18 @@ The billing account exported to the sink.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L134">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L121">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L140">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L127">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1531,7 +1497,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L131">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1540,7 +1506,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="BillingAccountSinkState-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L149">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/billingAccountSink.ts#L136">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>writerIdentity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1665,30 +1631,25 @@ The name of the logging exclusion.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FolderSinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L172">interface <b>FolderSinkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L160">interface <b>FolderSinkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a FolderSink resource.
 
 <h3 class="pdoc-member-header" id="FolderSinkArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L183">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L166">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L189">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L172">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1699,7 +1660,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkArgs-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L194">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L177">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>folder: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1709,7 +1670,7 @@ accepted.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkArgs-includeChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L199">property <b>includeChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L182">property <b>includeChildren</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>includeChildren?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1719,7 +1680,7 @@ associated with child projects are also exported; otherwise only logs relating t
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L186">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1729,30 +1690,25 @@ The name of the logging sink.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FolderSinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L130">interface <b>FolderSinkState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L123">interface <b>FolderSinkState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering FolderSink resources.
 
 <h3 class="pdoc-member-header" id="FolderSinkState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L141">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L129">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L147">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L135">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1763,7 +1719,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkState-folder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L152">property <b>folder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L140">property <b>folder</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>folder?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1773,7 +1729,7 @@ accepted.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkState-includeChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L157">property <b>includeChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L145">property <b>includeChildren</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>includeChildren?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1783,7 +1739,7 @@ associated with child projects are also exported; otherwise only logs relating t
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L161">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L149">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1792,7 +1748,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="FolderSinkState-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L166">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/folderSink.ts#L154">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>writerIdentity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1915,30 +1871,25 @@ The organization to create the exclusion in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationSinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L166">interface <b>OrganizationSinkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L154">interface <b>OrganizationSinkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a OrganizationSink resource.
 
 <h3 class="pdoc-member-header" id="OrganizationSinkArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L177">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L160">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L183">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L166">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1949,7 +1900,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkArgs-includeChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L188">property <b>includeChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L171">property <b>includeChildren</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>includeChildren?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1959,7 +1910,7 @@ associated with child projects are also exported; otherwise only logs relating t
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L175">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1968,7 +1919,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkArgs-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L196">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L179">property <b>orgId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>orgId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1978,30 +1929,25 @@ The numeric ID of the organization to be exported to the sink.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="OrganizationSinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L125">interface <b>OrganizationSinkState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L118">interface <b>OrganizationSinkState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering OrganizationSink resources.
 
 <h3 class="pdoc-member-header" id="OrganizationSinkState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L136">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L124">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L142">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L130">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2012,7 +1958,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkState-includeChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L147">property <b>includeChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L135">property <b>includeChildren</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>includeChildren?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2022,7 +1968,7 @@ associated with child projects are also exported; otherwise only logs relating t
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L139">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2031,7 +1977,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkState-orgId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L155">property <b>orgId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L143">property <b>orgId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>orgId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2040,7 +1986,7 @@ The numeric ID of the organization to be exported to the sink.
 
 </div>
 <h3 class="pdoc-member-header" id="OrganizationSinkState-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L160">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/organizationSink.ts#L148">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>writerIdentity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2165,30 +2111,25 @@ used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectSinkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L202">interface <b>ProjectSinkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L195">interface <b>ProjectSinkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ProjectSink resource.
 
 <h3 class="pdoc-member-header" id="ProjectSinkArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L213">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L201">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkArgs-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L219">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L207">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2199,7 +2140,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L211">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2208,7 +2149,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L228">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L216">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2218,7 +2159,7 @@ used.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkArgs-uniqueWriterIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L235">property <b>uniqueWriterIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L223">property <b>uniqueWriterIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>uniqueWriterIdentity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2231,30 +2172,25 @@ must set `unique_writer_identity` to true.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectSinkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L158">interface <b>ProjectSinkState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L156">interface <b>ProjectSinkState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ProjectSink resources.
 
 <h3 class="pdoc-member-header" id="ProjectSinkState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L169">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L162">property <b>destination</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>destination?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```
-"storage.googleapis.com/[GCS_BUCKET]"
-"bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
-"pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
-```
 The writer associated with the sink must have access to write to the above resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkState-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L175">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L168">property <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>filter?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2265,7 +2201,7 @@ write a filter.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L172">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2274,7 +2210,7 @@ The name of the logging sink.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L184">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L177">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2284,7 +2220,7 @@ used.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkState-uniqueWriterIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L191">property <b>uniqueWriterIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L184">property <b>uniqueWriterIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>uniqueWriterIdentity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2296,7 +2232,7 @@ must set `unique_writer_identity` to true.
 
 </div>
 <h3 class="pdoc-member-header" id="ProjectSinkState-writerIdentity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L196">property <b>writerIdentity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/logging/projectSink.ts#L189">property <b>writerIdentity</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>writerIdentity?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

@@ -59,7 +59,7 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_container_cluster_primary = new gcp.container.Cluster("primary", {
+const primary = new gcp.container.Cluster("primary", {
     additionalZones: [
         "us-central1-b",
         "us-central1-c",
@@ -69,7 +69,6 @@ const google_container_cluster_primary = new gcp.container.Cluster("primary", {
         password: "adoy.rm",
         username: "mr.yoda",
     },
-    name: "marcellus-wallace",
     nodeConfig: {
         labels: {
             foo: "bar",
@@ -88,9 +87,10 @@ const google_container_cluster_primary = new gcp.container.Cluster("primary", {
     zone: "us-central1-a",
 });
 
-export const clientCertificate = google_container_cluster_primary.masterAuth.apply(__arg0 => __arg0.clientCertificate);
-export const clientKey = google_container_cluster_primary.masterAuth.apply(__arg0 => __arg0.clientKey);
-export const clusterCaCertificate = google_container_cluster_primary.masterAuth.apply(__arg0 => __arg0.clusterCaCertificate);
+// The following outputs allow authentication and connectivity to the GKE Cluster.
+export const clientCertificate = primary.masterAuth.apply(masterAuth => masterAuth.clientCertificate);
+export const clientKey = primary.masterAuth.apply(masterAuth => masterAuth.clientKey);
+export const clusterCaCertificate = primary.masterAuth.apply(masterAuth => masterAuth.clusterCaCertificate);
 ```
 
 <h3 class="pdoc-member-header" id="Cluster-constructor">
@@ -664,7 +664,7 @@ may be set. If neither zone nor region are set, the provider zone is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodePool">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L13">class <b>NodePool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L94">class <b>NodePool</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -674,8 +674,89 @@ Manages a Node Pool resource within GKE. For more information see
 and
 [API](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools).
 
+## Example usage
+
+### Standard usage
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    additionalZones: [
+        "us-central1-b",
+        "us-central1-c",
+    ],
+    initialNodeCount: 3,
+    masterAuth: {
+        password: "adoy.rm",
+        username: "mr.yoda",
+    },
+    nodeConfig: {
+        guestAccelerators: [{
+            count: 1,
+            type: "nvidia-tesla-k80",
+        }],
+        oauthScopes: [
+            "https://www.googleapis.com/auth/compute",
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+        ],
+    },
+    zone: "us-central1-a",
+});
+const np = new gcp.container.NodePool("np", {
+    cluster: primary.name,
+    nodeCount: 3,
+    zone: "us-central1-a",
+});
+```
+### Usage with an empty default pool.
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const primary = new gcp.container.Cluster("primary", {
+    nodePools: [{
+        name: "default-pool",
+    }],
+    zone: "us-central1-a",
+});
+const np = new gcp.container.NodePool("np", {
+    cluster: primary.name,
+    nodeConfig: {
+        machineType: "n1-standard-1",
+        oauthScopes: [
+            "compute-rw",
+            "storage-ro",
+            "logging-write",
+            "monitoring",
+        ],
+        preemptible: true,
+    },
+    nodeCount: 1,
+    zone: "us-central1-a",
+});
+```
+
+### Usage with a regional cluster
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const regional = new gcp.container.Cluster("regional", {
+    region: "us-central1",
+});
+const regional_np = new gcp.container.NodePool("regional-np", {
+    cluster: google_container_cluster_primary.name,
+    nodeCount: 1,
+    region: "us-central1",
+});
+```
+
 <h3 class="pdoc-member-header" id="NodePool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L175"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -690,7 +771,7 @@ Create a NodePool resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L103">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -722,7 +803,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-autoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L30">property <b>autoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L111">property <b>autoscaling</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>autoscaling: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -735,7 +816,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L34">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L115">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cluster: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -754,7 +835,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L39">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L120">property <b>initialNodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>initialNodeCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -764,13 +845,13 @@ recreation of the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L40">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L121">property <b>instanceGroupUrls</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>instanceGroupUrls: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NodePool-management">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L45">property <b>management</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L126">property <b>management</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>management: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -783,7 +864,7 @@ auto-upgrade is configured. Structure is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-maxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L53">property <b>maxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L134">property <b>maxPodsPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>maxPodsPerNode: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -796,7 +877,7 @@ See [Provider Versions](https://terraform.io/docs/providers/google/provider_vers
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L139">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -806,7 +887,7 @@ auto-generate a unique name.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L63">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L144">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -816,7 +897,7 @@ with the specified prefix. Conflicts with `name`.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L68">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L149">property <b>nodeConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>nodeConfig: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -851,7 +932,7 @@ google_container_cluster for schema.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L73">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L154">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>nodeCount: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -861,7 +942,7 @@ update the number of nodes per instance group but should not be used alongside `
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L78">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L159">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>project: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -871,7 +952,7 @@ the provider-configured project will be used.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L84">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L165">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -892,7 +973,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L90">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L171">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>version: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -903,7 +984,7 @@ be, so setting both is highly discouraged.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePool-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L94">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L175">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>zone: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -928,17 +1009,17 @@ Get info about a cluster within GKE from its name and zone.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_container_cluster_my_cluster = pulumi.output(gcp.container.getCluster({
+const myCluster = pulumi.output(gcp.container.getCluster({
     name: "my-cluster",
     zone: "us-east1-a",
 }));
 
-export const clusterPassword = google_container_cluster_my_cluster.apply(__arg0 => __arg0.masterAuths[0].password);
-export const clusterUsername = google_container_cluster_my_cluster.apply(__arg0 => __arg0.masterAuths[0].username);
-export const endpoint = google_container_cluster_my_cluster.apply(__arg0 => __arg0.endpoint);
-export const instanceGroupUrls = google_container_cluster_my_cluster.apply(__arg0 => __arg0.instanceGroupUrls);
-export const nodeConfig = google_container_cluster_my_cluster.apply(__arg0 => __arg0.nodeConfigs);
-export const nodePools = google_container_cluster_my_cluster.apply(__arg0 => __arg0.nodePools);
+export const clusterPassword = myCluster.apply(myCluster => myCluster.masterAuths[0].password);
+export const clusterUsername = myCluster.apply(myCluster => myCluster.masterAuths[0].username);
+export const endpoint = myCluster.apply(myCluster => myCluster.endpoint);
+export const instanceGroupUrls = myCluster.apply(myCluster => myCluster.instanceGroupUrls);
+export const nodeConfig = myCluster.apply(myCluster => myCluster.nodeConfigs);
+export const nodePools = myCluster.apply(myCluster => myCluster.nodePools);
 ```
 
 </div>
@@ -952,27 +1033,27 @@ export const nodePools = google_container_cluster_my_cluster.apply(__arg0 => __a
 
 Provides access to available Google Container Engine versions in a zone or region for a given project.
 
-```hcl
-data "google_container_engine_versions" "central1b" {
-  zone = "us-central1-b"
-}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
 
-resource "google_container_cluster" "foo" {
-  name               = "terraform-test-cluster"
-  zone               = "us-central1-b"
-  node_version       = "${data.google_container_engine_versions.central1b.latest_node_version}"
-  initial_node_count = 1
-
-  master_auth {
-    username = "mr.yoda"
-    password = "adoy.rm"
-  }
-}
+const central1b = pulumi.output(gcp.container.getEngineVersions({
+    zone: "us-central1-b",
+}));
+const foo = new gcp.container.Cluster("foo", {
+    initialNodeCount: 1,
+    masterAuth: {
+        password: "adoy.rm",
+        username: "mr.yoda",
+    },
+    nodeVersion: central1b.apply(central1b => central1b.latestNodeVersion),
+    zone: "us-central1-b",
+});
 ```
 
 </div>
 <h2 class="pdoc-module-header" id="getRegistryImage">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L23">function <b>getRegistryImage</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L25">function <b>getRegistryImage</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -989,9 +1070,11 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_container_registry_repository_foo = pulumi.output(gcp.container.getRegistryRepository({}));
+const debian = pulumi.output(gcp.container.getRegistryImage({
+    name: "debian",
+}));
 
-export const gcrLocation = google_container_registry_repository_foo.apply(__arg0 => __arg0.repositoryUrl);
+export const gcrLocation = debian.apply(debian => debian.imageUrl);
 ```
 
 </div>
@@ -1013,9 +1096,9 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_container_registry_repository_foo = pulumi.output(gcp.container.getRegistryRepository({}));
+const foo = pulumi.output(gcp.container.getRegistryRepository({}));
 
-export const gcrLocation = google_container_registry_repository_foo.apply(__arg0 => __arg0.repositoryUrl);
+export const gcrLocation = foo.apply(foo => foo.repositoryUrl);
 ```
 
 </div>
@@ -2484,52 +2567,52 @@ A list of versions available in the given zone for use with node instances.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRegistryImageArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L36">interface <b>GetRegistryImageArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L38">interface <b>GetRegistryImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of arguments for invoking getRegistryImage.
 
 <h3 class="pdoc-member-header" id="GetRegistryImageArgs-digest">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L37">property <b>digest</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L39">property <b>digest</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>digest?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetRegistryImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L40">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetRegistryImageArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L39">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L41">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetRegistryImageArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L40">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L42">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetRegistryImageArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L41">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L43">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRegistryImageResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L47">interface <b>GetRegistryImageResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L49">interface <b>GetRegistryImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 A collection of values returned by getRegistryImage.
 
 <h3 class="pdoc-member-header" id="GetRegistryImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L55">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2538,13 +2621,13 @@ id is the provider-assigned unique ID for this managed resource.
 
 </div>
 <h3 class="pdoc-member-header" id="GetRegistryImageResult-imageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L48">property <b>imageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L50">property <b>imageUrl</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>imageUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetRegistryImageResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L49">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/getRegistryImage.ts#L51">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2600,14 +2683,14 @@ id is the provider-assigned unique ID for this managed resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodePoolArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L224">interface <b>NodePoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L305">interface <b>NodePoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a NodePool resource.
 
 <h3 class="pdoc-member-header" id="NodePoolArgs-autoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L229">property <b>autoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L310">property <b>autoscaling</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>autoscaling?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2620,7 +2703,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L233">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L314">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cluster: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2629,7 +2712,7 @@ The cluster to create the node pool for.  Cluster must be present in `zone` prov
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L238">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L319">property <b>initialNodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>initialNodeCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2639,7 +2722,7 @@ recreation of the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-management">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L243">property <b>management</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L324">property <b>management</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>management?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2652,7 +2735,7 @@ auto-upgrade is configured. Structure is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-maxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L251">property <b>maxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L332">property <b>maxPodsPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maxPodsPerNode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2665,7 +2748,7 @@ See [Provider Versions](https://terraform.io/docs/providers/google/provider_vers
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L337">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2675,7 +2758,7 @@ auto-generate a unique name.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L261">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L342">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2685,7 +2768,7 @@ with the specified prefix. Conflicts with `name`.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L266">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L347">property <b>nodeConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2720,7 +2803,7 @@ google_container_cluster for schema.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L271">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L352">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2730,7 +2813,7 @@ update the number of nodes per instance group but should not be used alongside `
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L276">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L357">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2740,7 +2823,7 @@ the provider-configured project will be used.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L282">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L363">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2751,7 +2834,7 @@ See [Provider Versions](https://terraform.io/docs/providers/google/provider_vers
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L288">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L369">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>version?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2762,7 +2845,7 @@ be, so setting both is highly discouraged.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolArgs-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L292">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L373">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2772,14 +2855,14 @@ The zone in which the cluster resides.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NodePoolState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L149">interface <b>NodePoolState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L230">interface <b>NodePoolState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering NodePool resources.
 
 <h3 class="pdoc-member-header" id="NodePoolState-autoscaling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L154">property <b>autoscaling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L235">property <b>autoscaling</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>autoscaling?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2792,7 +2875,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L158">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L239">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cluster?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2801,7 +2884,7 @@ The cluster to create the node pool for.  Cluster must be present in `zone` prov
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-initialNodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L163">property <b>initialNodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L244">property <b>initialNodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>initialNodeCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2811,13 +2894,13 @@ recreation of the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-instanceGroupUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L164">property <b>instanceGroupUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L245">property <b>instanceGroupUrls</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>instanceGroupUrls?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-management">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L169">property <b>management</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L250">property <b>management</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>management?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2830,7 +2913,7 @@ auto-upgrade is configured. Structure is documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-maxPodsPerNode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L177">property <b>maxPodsPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L258">property <b>maxPodsPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>maxPodsPerNode?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2843,7 +2926,7 @@ See [Provider Versions](https://terraform.io/docs/providers/google/provider_vers
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L263">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2853,7 +2936,7 @@ auto-generate a unique name.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L187">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L268">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2863,7 +2946,7 @@ with the specified prefix. Conflicts with `name`.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L192">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L273">property <b>nodeConfig</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeConfig?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2898,7 +2981,7 @@ google_container_cluster for schema.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L197">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L278">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>nodeCount?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2908,7 +2991,7 @@ update the number of nodes per instance group but should not be used alongside `
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L202">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L283">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>project?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2918,7 +3001,7 @@ the provider-configured project will be used.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L208">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L289">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2929,7 +3012,7 @@ See [Provider Versions](https://terraform.io/docs/providers/google/provider_vers
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L214">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L295">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>version?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2940,7 +3023,7 @@ be, so setting both is highly discouraged.
 
 </div>
 <h3 class="pdoc-member-header" id="NodePoolState-zone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L218">property <b>zone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/nodejs/container/nodePool.ts#L299">property <b>zone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>zone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>

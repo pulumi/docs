@@ -43,7 +43,7 @@ Creates a dataset resource for Google BigQuery. For more information see
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const google_bigquery_dataset_default = new gcp.bigquery.Dataset("default", {
+const defaultDataset = new gcp.bigquery.Dataset("default", {
     accesses: [
         {
             domain: "example.com",
@@ -275,7 +275,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as gcp from "@pulumi/gcp";
 
-const google_bigquery_dataset_default = new gcp.bigquery.Dataset("default", {
+const defaultDataset = new gcp.bigquery.Dataset("default", {
     datasetId: "foo",
     defaultTableExpirationMs: 3600000,
     description: "This is a test description",
@@ -285,8 +285,8 @@ const google_bigquery_dataset_default = new gcp.bigquery.Dataset("default", {
     },
     location: "EU",
 });
-const google_bigquery_table_default = new gcp.bigquery.Table("default", {
-    datasetId: google_bigquery_dataset_default.datasetId,
+const defaultTable = new gcp.bigquery.Table("default", {
+    datasetId: defaultDataset.datasetId,
     labels: {
         env: "default",
     },
