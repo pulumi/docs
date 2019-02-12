@@ -71,8 +71,8 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     // Create a GKE cluster
     const cluster = new gcp.container.Cluster(name, {
         initialNodeCount: 2,
-        minMasterVersion: "latest"
-        nodeVersion: "latest"
+        minMasterVersion: "latest",
+        nodeVersion: "latest",
         nodeConfig: {
             machineType: "n1-standard-1",
             oauthScopes: [
