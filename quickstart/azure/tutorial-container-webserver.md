@@ -11,7 +11,8 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
 
 ## Create a Virtual Machine with SSH access {#webserver}
 
-1.  In a new folder `webserver`, create an empty project with `pulumi new`. Make sure you have run `az login` or configured credentials for Azure.
+1.  Make sure you have run `az login` or configured credentials for Azure.
+1.  In a new folder `webserver`, create an empty project with `pulumi new`. 
     ```
     $ pulumi new azure-javascript --dir webserver
     $ cd webserver
