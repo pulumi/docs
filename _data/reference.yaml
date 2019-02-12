@@ -141,6 +141,8 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
       - title: openstack
         path: /reference/pkg/nodejs/@pulumi/openstack/index.html
+      - title: random
+        path: /reference/pkg/nodejs/@pulumi/random/index.html
       - title: vsphere
         path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
       - title: f5bigip
