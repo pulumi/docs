@@ -12,7 +12,7 @@ admitted when it was ran. This graph is output in the DOT format. This command o
 on your stack's most recent deployment.
 
 ```
-pulumi stack graph [flags]
+pulumi stack graph [filename] [flags]
 ```
 
 ### Options
