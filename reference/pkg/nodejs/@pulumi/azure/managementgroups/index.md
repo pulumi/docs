@@ -41,9 +41,9 @@ Manages a Management Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const azurerm_subscription_current = pulumi.output(azure.core.getSubscription({}));
-const azurerm_management_group_test = new azure.managementgroups.ManagementGroup("test", {
-    subscriptionIds: [azurerm_subscription_current.apply(__arg0 => __arg0.id)],
+const current = pulumi.output(azure.core.getSubscription({}));
+const test = new azure.managementgroups.ManagementGroup("test", {
+    subscriptionIds: [current.apply(current => current.id)],
 });
 ```
 
@@ -167,11 +167,11 @@ Use this data source to access information about an existing Management Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const azurerm_management_group_test = pulumi.output(azure.managementgroups.getManagementGroup({
+const test = pulumi.output(azure.managementgroups.getManagementGroup({
     groupId: "00000000-0000-0000-0000-000000000000",
 }));
 
-export const displayName = azurerm_management_group_test.apply(__arg0 => __arg0.displayName);
+export const displayName = test.apply(test => test.displayName);
 ```
 
 </div>

@@ -59,6 +59,7 @@ import * as azure from "@pulumi/azure";
 * <a href="cosmosdb">cosmosdb</a>
 * <a href="databricks">databricks</a>
 * <a href="datalake">datalake</a>
+* <a href="ddosprotection">ddosprotection</a>
 * <a href="devspace">devspace</a>
 * <a href="devtest">devtest</a>
 * <a href="dns">dns</a>
@@ -66,6 +67,7 @@ import * as azure from "@pulumi/azure";
 * <a href="iot">iot</a>
 * <a href="keyvault">keyvault</a>
 * <a href="lb">lb</a>
+* <a href="loganalytics">loganalytics</a>
 * <a href="logicapps">logicapps</a>
 * <a href="managementgroups">managementgroups</a>
 * <a href="managementresource">managementresource</a>

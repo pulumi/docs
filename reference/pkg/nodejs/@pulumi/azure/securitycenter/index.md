@@ -46,7 +46,7 @@ Manages the subscription's Security Center Contact.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const azurerm_security_center_contact_example = new azure.securitycenter.Contact("example", {
+const example = new azure.securitycenter.Contact("example", {
     alertNotifications: true,
     alertsToAdmins: true,
     email: "contact@example.com",
@@ -176,7 +176,7 @@ Manages the Pricing Tier for Azure Security Center in the current subscription.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const azurerm_security_center_subscription_pricing_example = new azure.securitycenter.SubscriptionPricing("example", {
+const example = new azure.securitycenter.SubscriptionPricing("example", {
     tier: "Standard",
 });
 ```
@@ -259,7 +259,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Workspace">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L36">class <b>Workspace</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L34">class <b>Workspace</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -276,24 +276,22 @@ Manages the subscription's Security Center Workspace.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const azurerm_resource_group_example = new azure.core.ResourceGroup("example", {
+const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "westus",
-    name: "tfex-security-workspace",
 });
-const azurerm_log_analytics_workspace_example = new azure.operationalinsights.AnalyticsWorkspace("example", {
-    location: azurerm_resource_group_example.location,
-    name: "tfex-security-workspace",
-    resourceGroupName: azurerm_resource_group_example.name,
+const exampleAnalyticsWorkspace = new azure.operationalinsights.AnalyticsWorkspace("example", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
     sku: "PerGB2018",
 });
-const azurerm_security_center_workspace_example = new azure.securitycenter.Workspace("example", {
+const exampleWorkspace = new azure.securitycenter.Workspace("example", {
     scope: "/subscriptions/00000000-0000-0000-0000-000000000000",
-    workspaceId: azurerm_log_analytics_workspace_example.id,
+    workspaceId: exampleAnalyticsWorkspace.id,
 });
 ```
 
 <h3 class="pdoc-member-header" id="Workspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -308,7 +306,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Workspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L43">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -350,7 +348,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Workspace-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L52">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L50">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>scope: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -369,7 +367,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Workspace-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L56">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L54">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>workspaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -501,14 +499,14 @@ The pricing tier to use. Possible values are `Free` and `Standard`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkspaceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L104">interface <b>WorkspaceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L102">interface <b>WorkspaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Workspace resource.
 
 <h3 class="pdoc-member-header" id="WorkspaceArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L108">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L106">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scope: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -517,7 +515,7 @@ The scope of VMs to send their security data to the desired workspace, unless ov
 
 </div>
 <h3 class="pdoc-member-header" id="WorkspaceArgs-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L112">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L110">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -527,14 +525,14 @@ The ID of the Log Analytics Workspace to save the data in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="WorkspaceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L90">interface <b>WorkspaceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L88">interface <b>WorkspaceState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Workspace resources.
 
 <h3 class="pdoc-member-header" id="WorkspaceState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L94">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L92">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>scope?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -543,7 +541,7 @@ The scope of VMs to send their security data to the desired workspace, unless ov
 
 </div>
 <h3 class="pdoc-member-header" id="WorkspaceState-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L98">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs/securitycenter/workspace.ts#L96">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>workspaceId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
