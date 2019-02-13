@@ -61,7 +61,7 @@ When `pulumi update` is run, your Pulumi program is run and the Pulumi CLI deter
 
 A Pulumi program is contained within a [project](project.html). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program. 
 
-## @pulumi/pulumi Package {#pulumipulumi}
+## Pulumi SDK {#pulumipulumi}
 
 The [@pulumi/pulumi] package is the core library for working with the Pulumi planning engine. This package defines the following:
 - Resources ([pulumi.Resource])
@@ -75,7 +75,7 @@ This package also provides the following helpers:
 - [pulumi.log] for logging deployment information
 - [pulumi.runtime.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime).
 
-## Creating resources {#resources}
+## Resources {#resources}
 
 A resource is created with the following:
 
@@ -120,7 +120,7 @@ Optional provider for the resource. See [Providers](#providers).  The default is
 ###### `deleteBeforeReplace`
 Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
 
-## Resource names {#names}
+### Resource names {#names}
 
 Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in two ways:
 1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
@@ -151,7 +151,7 @@ This random postfix is added by default for two reasons.  First, it ensures that
 
 In cases where the two proprties above are not required, and where it would be useful to be able to precisely specify the name, it is typically possible to provide a `name: ` argument to the resource inputs to specify an explicit cloud-provider name.  For resources that may need to be replaced, this will often require also specifying `deleteBeforeReplace: true` in the resources's `ResourceOptions`.
 
-## Resource outputs {#outputs}
+## Outputs {#outputs}
 
 Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
 1. An eventually available value of the output
@@ -406,7 +406,7 @@ $ pulumi stack output --json
 }
 ```
 
-## Using configuration values {#config}
+## Config {#config}
 
 To access configuration values that have been set with `pulumi config set`, use the following:
 
