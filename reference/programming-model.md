@@ -101,12 +101,24 @@ All resources have a [`name`](#names), which must be unique in the Pulumi progra
 
 The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typicaly be either raw values or [outputs from other resources](#outputs). 
 
+### Resource options {#resourceoptions}
+
 All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi. 
-- `dependsOn` - Optionally provide a list of explicit resource dependencies to add to the implicit dependencies from inputs to the resource.  Default is `[]`.
-- `protect` - Optionally mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  Default is false.
-- `parent` - Optional parent for the resource. See [Components](#components).  Default is to parent to the implicitly-created `Stack` resource that is root resource for all Pulumi stacks.
-- `provider` - Pptional provider for the resource. See [Providers](#providers).  Default is to use the ambient provider specified by Pulumi configuration.
-- `deleteBeforeReplace` - Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scare resources behind the scenes.  Default is `false`.
+
+###### `dependsOn`
+Optionally provides a list of explicit resource dependencies to add to the implicit dependencies from inputs to the resource.  Every resource referenced directly or indirectly by an `Output` passed in to the resource constructor will implicitly be included, so this is only needed when the dependency is on something that is not already an input to the resource.  The default is `[]`.
+
+###### `protect`
+Optionally marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
+
+###### `parent`
+Optional parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
+
+###### `provider`
+Optional provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+
+###### `deleteBeforeReplace`
+Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
 
 ## Resource names {#names}
 
