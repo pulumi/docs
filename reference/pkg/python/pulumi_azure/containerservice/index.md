@@ -170,15 +170,15 @@
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Group">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>containers=None</em>, <em>dns_name_label=None</em>, <em>image_registry_credentials=None</em>, <em>ip_address_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>restart_policy=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>containers=None</em>, <em>dns_name_label=None</em>, <em>image_registry_credentials=None</em>, <em>ip_address_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>restart_policy=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage as an Azure Container Group instance.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>containers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The definition of a container that is part of the group as documented in the <cite>container</cite> block below. Changing this forces a new resource to be created.</li>
 <li><strong>dns_name_label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS label/name for the container groups IP.</li>
 <li><strong>image_registry_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set image registry credentials for the group as documented in the <cite>image_registry_credential</cite> block below</li>
@@ -308,7 +308,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.KubernetesCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>addon_profile=None</em>, <em>agent_pool_profile=None</em>, <em>dns_prefix=None</em>, <em>kubernetes_version=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profile=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_control=None</em>, <em>service_principal=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>addon_profile=None</em>, <em>agent_pool_profile=None</em>, <em>dns_prefix=None</em>, <em>kubernetes_version=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profile=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_control=None</em>, <em>service_principal=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</p>
 <p>&gt; <strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text. [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -316,8 +316,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>addon_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>addon_profile</cite> block.</li>
 <li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <cite>agent_pool_profile</cite> blocks as documented below.</li>
 <li><strong>dns_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.</li>
@@ -485,7 +485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Registry">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Registry</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_enabled=None</em>, <em>georeplication_locations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>storage_account=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Registry</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_enabled=None</em>, <em>georeplication_locations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>storage_account=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry.</p>
 <p>&gt; <strong>Note:</strong> All arguments including the access key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
@@ -494,8 +494,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>admin_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the admin user is enabled. Defaults to <cite>false</cite>.</li>
 <li><strong>georeplication_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Azure locations where the container registry should be geo-replicated.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
@@ -618,68 +618,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Service">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>agent_pool_profile=None</em>, <em>diagnostics_profile=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>master_profile=None</em>, <em>name=None</em>, <em>orchestration_platform=None</em>, <em>resource_group_name=None</em>, <em>service_principal=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>agent_pool_profile=None</em>, <em>diagnostics_profile=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>master_profile=None</em>, <em>name=None</em>, <em>orchestration_platform=None</em>, <em>resource_group_name=None</em>, <em>service_principal=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Service Instance</p>
 <p>&gt; <strong>NOTE:</strong> All arguments including the client secret will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
 <p>&gt; <strong>DEPRECATED:</strong> [Azure Container Service (ACS) has been deprecated by Azure in favour of Azure (Managed) Kubernetes Service (AKS)](<a class="reference external" href="https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/">https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/</a>). Support for ACS will be removed in the next major version of the AzureRM Provider (2.0) - and we <strong>strongly recommend</strong> you consider using Azure Kubernetes Service (AKS) for new deployments.</p>
 <p>##&nbsp;Example Usage (DCOS)</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>hcl
-resource “azurerm_resource_group” “test” {</p>
-<blockquote>
-<div>name     = “acctestRG1”
-location = “West US”</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “azurerm_container_service” “test” {</dt>
-<dd><p class="first">name                   = “acctestcontservice1”
-location               = “${azurerm_resource_group.test.location}”
-resource_group_name    = “${azurerm_resource_group.test.name}”
-orchestration_platform = “DCOS”</p>
-<dl class="docutils">
-<dt>master_profile {</dt>
-<dd>count      = 1
-dns_prefix = “acctestmaster1”</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>linux_profile {</dt>
-<dd><p class="first">admin_username = “acctestuser1”</p>
-<dl class="docutils">
-<dt>ssh_key {</dt>
-<dd>key_data = “ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqaZoyiz1qbdOQ8xEf6uEu1cCwYowo5FHtsBhqLoDnnp7KUTEBN+L2NxRIfQ781rxV6Iq5jSav6b2Q8z5KiseOlvKA/RF2wqU0UPYqQviQhLmW6THTpmrv/YkUCuzxDpsH7DUDhZcwySLKVVe0Qm3+5N2Ta6UYH3lsDf9R9wTP2K/+vAnflKebuypNlmocIvakFWoZda18FOmsOoIVXQ8HWFNCuw9ZCunMSN62QGamCe3dL5cXlkgHYv7ekJE15IA9aOJcM7e90oeTqo+7HTcWfdu0qQqPWY5ujyMw/llas8tsXY85LFqRnr3gJ02bAscjc477+X+j/gkpFoN1QEmt <a class="reference external" href="mailto:terraform&#37;&#52;&#48;demo&#46;tld">terraform<span>&#64;</span>demo<span>&#46;</span>tld</a>”</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>agent_pool_profile {</dt>
-<dd>name       = “default”
-count      = 1
-dns_prefix = “acctestagent1”
-vm_size    = “Standard_F2”</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>diagnostics_profile {</dt>
-<dd>enabled = false</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>tags {</dt>
-<dd>Environment = “Production”</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Agent Pool Profile’s block as documented below.</li>
 <li><strong>diagnostics_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A VM Diagnostics Profile block as documented below.</li>
 <li><strong>linux_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Linux Profile block as documented below.</li>

@@ -17,6 +17,7 @@
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datalake/">datalake</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ddosprotection/">ddosprotection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devspace/">devspace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devtest/">devtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dns/">dns</a></li>
@@ -24,6 +25,7 @@
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keyvault/">keyvault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loganalytics/">loganalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicapps/">logicapps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementgroups/">managementgroups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementresource/">managementresource</a></li>

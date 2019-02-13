@@ -2,8 +2,8 @@
 <span id="pulumi-vsphere"></span><h1>Pulumi vSphere<a class="headerlink" href="#module-pulumi_vsphere" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeCluster">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeCluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>dpm_automation_level=None</em>, <em>dpm_enabled=None</em>, <em>dpm_threshold=None</em>, <em>drs_advanced_options=None</em>, <em>drs_automation_level=None</em>, <em>drs_enable_predictive_drs=None</em>, <em>drs_enable_vm_overrides=None</em>, <em>drs_enabled=None</em>, <em>drs_migration_threshold=None</em>, <em>folder=None</em>, <em>force_evacuate_on_destroy=None</em>, <em>ha_admission_control_failover_host_system_ids=None</em>, <em>ha_admission_control_host_failure_tolerance=None</em>, <em>ha_admission_control_performance_tolerance=None</em>, <em>ha_admission_control_policy=None</em>, <em>ha_admission_control_resource_percentage_auto_compute=None</em>, <em>ha_admission_control_resource_percentage_cpu=None</em>, <em>ha_admission_control_resource_percentage_memory=None</em>, <em>ha_admission_control_slot_policy_explicit_cpu=None</em>, <em>ha_admission_control_slot_policy_explicit_memory=None</em>, <em>ha_admission_control_slot_policy_use_explicit_size=None</em>, <em>ha_advanced_options=None</em>, <em>ha_datastore_apd_recovery_action=None</em>, <em>ha_datastore_apd_response=None</em>, <em>ha_datastore_apd_response_delay=None</em>, <em>ha_datastore_pdl_response=None</em>, <em>ha_enabled=None</em>, <em>ha_heartbeat_datastore_ids=None</em>, <em>ha_heartbeat_datastore_policy=None</em>, <em>ha_host_isolation_response=None</em>, <em>ha_host_monitoring=None</em>, <em>ha_vm_component_protection=None</em>, <em>ha_vm_dependency_restart_condition=None</em>, <em>ha_vm_failure_interval=None</em>, <em>ha_vm_maximum_failure_window=None</em>, <em>ha_vm_maximum_resets=None</em>, <em>ha_vm_minimum_uptime=None</em>, <em>ha_vm_monitoring=None</em>, <em>ha_vm_restart_additional_delay=None</em>, <em>ha_vm_restart_priority=None</em>, <em>ha_vm_restart_timeout=None</em>, <em>host_cluster_exit_timeout=None</em>, <em>host_system_ids=None</em>, <em>name=None</em>, <em>proactive_ha_automation_level=None</em>, <em>proactive_ha_enabled=None</em>, <em>proactive_ha_moderate_remediation=None</em>, <em>proactive_ha_provider_ids=None</em>, <em>proactive_ha_severe_remediation=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>-&gt; <strong>A note on the naming of this resource:</strong> VMware refers to clusters of
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>dpm_automation_level=None</em>, <em>dpm_enabled=None</em>, <em>dpm_threshold=None</em>, <em>drs_advanced_options=None</em>, <em>drs_automation_level=None</em>, <em>drs_enable_predictive_drs=None</em>, <em>drs_enable_vm_overrides=None</em>, <em>drs_enabled=None</em>, <em>drs_migration_threshold=None</em>, <em>folder=None</em>, <em>force_evacuate_on_destroy=None</em>, <em>ha_admission_control_failover_host_system_ids=None</em>, <em>ha_admission_control_host_failure_tolerance=None</em>, <em>ha_admission_control_performance_tolerance=None</em>, <em>ha_admission_control_policy=None</em>, <em>ha_admission_control_resource_percentage_auto_compute=None</em>, <em>ha_admission_control_resource_percentage_cpu=None</em>, <em>ha_admission_control_resource_percentage_memory=None</em>, <em>ha_admission_control_slot_policy_explicit_cpu=None</em>, <em>ha_admission_control_slot_policy_explicit_memory=None</em>, <em>ha_admission_control_slot_policy_use_explicit_size=None</em>, <em>ha_advanced_options=None</em>, <em>ha_datastore_apd_recovery_action=None</em>, <em>ha_datastore_apd_response=None</em>, <em>ha_datastore_apd_response_delay=None</em>, <em>ha_datastore_pdl_response=None</em>, <em>ha_enabled=None</em>, <em>ha_heartbeat_datastore_ids=None</em>, <em>ha_heartbeat_datastore_policy=None</em>, <em>ha_host_isolation_response=None</em>, <em>ha_host_monitoring=None</em>, <em>ha_vm_component_protection=None</em>, <em>ha_vm_dependency_restart_condition=None</em>, <em>ha_vm_failure_interval=None</em>, <em>ha_vm_maximum_failure_window=None</em>, <em>ha_vm_maximum_resets=None</em>, <em>ha_vm_minimum_uptime=None</em>, <em>ha_vm_monitoring=None</em>, <em>ha_vm_restart_additional_delay=None</em>, <em>ha_vm_restart_priority=None</em>, <em>ha_vm_restart_timeout=None</em>, <em>host_cluster_exit_timeout=None</em>, <em>host_system_ids=None</em>, <em>name=None</em>, <em>proactive_ha_automation_level=None</em>, <em>proactive_ha_enabled=None</em>, <em>proactive_ha_moderate_remediation=None</em>, <em>proactive_ha_provider_ids=None</em>, <em>proactive_ha_severe_remediation=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>&gt; <strong>A note on the naming of this resource:</strong> VMware refers to clusters of
 hosts in the UI and documentation as _clusters_, _HA <a href="#id1"><span class="problematic" id="id2">clusters_</span></a>, or _DRS
 <a href="#id3"><span class="problematic" id="id4">clusters_</span></a>. All of these refer to the same kind of resource (with the latter two
 referring to specific features of clustering). In Terraform, we use
@@ -24,13 +24,49 @@ page][ref-vsphere-ha-clusters].</p>
 <p>&gt; <strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p>&gt; <strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+<p>## vSphere Version Requirements</p>
+<p>A large number of settings in the <cite>vsphere_compute_cluster</cite> resource require a
+specific version of vSphere to function. Rather than include warnings at every
+setting or section, these settings are documented below.  Note that this list
+is for cluster-specific attributes only, and does not include the
+<cite>tags</cite> parameter, which requires vSphere 6.0 or higher across all
+resources that can be tagged.</p>
+<p>All settings are footnoted by an asterisk (<cite>*</cite>) in their specific section in
+the documentation, which takes you here.</p>
+<p>### Settings that require vSphere version 6.0 or higher</p>
+<p>These settings require vSphere 6.0 or higher:</p>
+<ul class="simple">
+<li><cite>ha_datastore_apd_recovery_action</cite></li>
+<li><cite>ha_datastore_apd_response</cite></li>
+<li><cite>ha_datastore_apd_response_delay</cite></li>
+<li><cite>ha_datastore_pdl_response</cite></li>
+<li><cite>ha_vm_component_protection</cite></li>
+</ul>
+<p>### Settings that require vSphere version 6.5 or higher</p>
+<p>These settings require vSphere 6.5 or higher:</p>
+<ul class="simple">
+<li><cite>drs_enable_predictive_drs</cite></li>
+<li><cite>ha_admission_control_host_failure_tolerance</cite>
+(When <cite>ha_admission_control_policy</cite> is set to
+<cite>resourcePercentage</cite> or <cite>slotPolicy</cite>. Permitted in all versions under
+<cite>failoverHosts</cite>)</li>
+<li><cite>ha_admission_control_resource_percentage_auto_compute</cite></li>
+<li><cite>ha_vm_restart_timeout</cite></li>
+<li><cite>ha_vm_dependency_restart_condition</cite></li>
+<li><cite>ha_vm_restart_additional_delay</cite></li>
+<li><cite>proactive_ha_automation_level</cite></li>
+<li><cite>proactive_ha_enabled</cite></li>
+<li><cite>proactive_ha_moderate_remediation</cite></li>
+<li><cite>proactive_ha_provider_ids</cite></li>
+<li><cite>proactive_ha_severe_remediation</cite></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
@@ -704,7 +740,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeClusterHostGroup">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterHostGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>host_system_ids=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterHostGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>host_system_ids=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_compute_cluster_host_group</cite> resource can be used to manage groups
 of hosts in a cluster, either created by the
 [<cite>vsphere_compute_cluster</cite>][tf-vsphere-cluster-resource] resource or looked up
@@ -724,8 +760,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</li>
@@ -802,7 +838,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmAffinityRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmAffinityRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_compute_cluster_vm_affinity_rule</cite> resource can be used to manage
 VM affinity rules in a cluster, either created by the
 [<cite>vsphere_compute_cluster</cite>][tf-vsphere-cluster-resource] resource or looked up
@@ -814,7 +850,7 @@ single host within a cluster. When configured, DRS will make a best effort to
 ensure that the virtual machines run on the same host, or prevent any operation
 that would keep that from happening, depending on the value of the
 <cite>mandatory</cite> flag.</p>
-<p>-&gt; Keep in mind that this rule can only be used to tell VMs to run together on
+<p>&gt; Keep in mind that this rule can only be used to tell VMs to run together on
 a _non-<a href="#id7"><span class="problematic" id="id8">specific_</span></a> host - it can’t be used to pin VMs to a host. For that, see
 the
 [<cite>vsphere_compute_cluster_vm_host_rule</cite>][tf-vsphere-cluster-vm-host-rule-resource]
@@ -828,8 +864,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</li>
@@ -920,7 +956,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_compute_cluster_vm_anti_affinity_rule</cite> resource can be used to
 manage VM anti-affinity rules in a cluster, either created by the
 [<cite>vsphere_compute_cluster</cite>][tf-vsphere-cluster-resource] resource or looked up
@@ -933,7 +969,7 @@ application cluster scenarios. When configured, DRS will make a best effort to
 ensure that the virtual machines run on different hosts, or prevent any
 operation that would keep that from happening, depending on the value of the
 <cite>mandatory</cite> flag.</p>
-<p>-&gt; Keep in mind that this rule can only be used to tell VMs to run separately
+<p>&gt; Keep in mind that this rule can only be used to tell VMs to run separately
 on _non-<a href="#id9"><span class="problematic" id="id10">specific_</span></a> hosts - specific hosts cannot be specified with this rule.
 For that, see the
 [<cite>vsphere_compute_cluster_vm_host_rule</cite>][tf-vsphere-cluster-vm-host-rule-resource]
@@ -947,8 +983,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</li>
@@ -1039,7 +1075,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmDependencyRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>dependency_vm_group_name=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>vm_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmDependencyRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>dependency_vm_group_name=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>vm_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_compute_cluster_vm_dependency_rule</cite> resource can be used to manage
 VM dependency rules in a cluster, either created by the
 [<cite>vsphere_compute_cluster</cite>][tf-vsphere-cluster-resource] resource or looked up
@@ -1059,8 +1095,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</li>
@@ -1170,7 +1206,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeClusterVmGroup">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_compute_cluster_vm_group</cite> resource can be used to manage groups of
 virtual machines in a cluster, either created by the
 [<cite>vsphere_compute_cluster</cite>][tf-vsphere-cluster-resource] resource or looked up
@@ -1192,8 +1228,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
 resource if changed.</li>
@@ -1270,7 +1306,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmHostRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>affinity_host_group_name=None</em>, <em>anti_affinity_host_group_name=None</em>, <em>compute_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>vm_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ComputeClusterVmHostRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>affinity_host_group_name=None</em>, <em>anti_affinity_host_group_name=None</em>, <em>compute_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>vm_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_compute_cluster_vm_host_rule</cite> resource can be used to manage
 VM-to-host rules in a cluster, either created by the
 [<cite>vsphere_compute_cluster</cite>][tf-vsphere-cluster-resource] resource or looked up
@@ -1294,8 +1330,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>affinity_host_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this field is used, the virtual
 machines defined in <cite>vm_group_name</cite> will be run on the
 hosts defined in this host group.</li>
@@ -1410,7 +1446,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.CustomAttribute">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">CustomAttribute</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>managed_object_type=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">CustomAttribute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>managed_object_type=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_custom_attribute</cite> resource can be used to create and manage custom
 attributes, which allow users to associate user-specific meta-information with 
 vSphere managed objects. Custom attribute values must be strings and are stored 
@@ -1419,13 +1455,35 @@ on the vCenter Server and not the managed object.</p>
 <p>[ext-custom-attributes]: <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-73606C4C-763C-4E27-A1DA-032E4C46219D.html">https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-73606C4C-763C-4E27-A1DA-032E4C46219D.html</a></p>
 <p>&gt; <strong>NOTE:</strong> Custom attributes are unsupported on direct ESXi connections 
 and require vCenter.</p>
+<p>## Managed Object Types</p>
+<p>The following table will help you determine what value you need to enter for 
+the managed object type you want the attribute to apply to.</p>
+<p>Note that if you want a attribute to apply to all objects, leave the type 
+unspecified.</p>
+<p>&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Folders&lt;/td&gt;&lt;td&gt;`Folder`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Clusters&lt;/td&gt;&lt;td&gt;`ClusterComputeResource`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datacenters&lt;/td&gt;&lt;td&gt;`Datacenter`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datastores&lt;/td&gt;&lt;td&gt;`Datastore`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datastore Clusters&lt;/td&gt;&lt;td&gt;`StoragePod`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;DVS Portgroups&lt;/td&gt;&lt;td&gt;`DistributedVirtualPortgroup`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Distributed vSwitches&lt;/td&gt;&lt;td&gt;`DistributedVirtualSwitch`&lt;br&gt;`VmwareDistributedVirtualSwitch`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Hosts&lt;/td&gt;&lt;td&gt;`HostSystem`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Content Libraries&lt;/td&gt;&lt;td&gt;`com.vmware.content.Library`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Content Library Items&lt;/td&gt;&lt;td&gt;`com.vmware.content.library.Item`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Networks&lt;/td&gt;&lt;td&gt;`HostNetwork`&lt;br&gt;`Network`&lt;br&gt;`OpaqueNetwork`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Resource Pools&lt;/td&gt;&lt;td&gt;`ResourcePool`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;vApps&lt;/td&gt;&lt;td&gt;`VirtualApp`&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Virtual Machines&lt;/td&gt;&lt;td&gt;`VirtualMachine`&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>managed_object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object type that this attribute may be
 applied to. If not set, the custom attribute may be applied to any object
 type. For a full list, click here. Forces a new
@@ -1493,7 +1551,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.Datacenter">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Datacenter</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>custom_attributes=None</em>, <em>folder=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Datacenter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>folder=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1501,8 +1559,8 @@ container of inventory objects such as hosts and virtual machines.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to value 
 strings to set for datacenter resource. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
@@ -1596,7 +1654,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.DatastoreCluster">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DatastoreCluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>folder=None</em>, <em>name=None</em>, <em>sdrs_advanced_options=None</em>, <em>sdrs_automation_level=None</em>, <em>sdrs_default_intra_vm_affinity=None</em>, <em>sdrs_enabled=None</em>, <em>sdrs_free_space_threshold=None</em>, <em>sdrs_free_space_threshold_mode=None</em>, <em>sdrs_free_space_utilization_difference=None</em>, <em>sdrs_io_balance_automation_level=None</em>, <em>sdrs_io_latency_threshold=None</em>, <em>sdrs_io_load_balance_enabled=None</em>, <em>sdrs_io_load_imbalance_threshold=None</em>, <em>sdrs_io_reservable_iops_threshold=None</em>, <em>sdrs_io_reservable_percent_threshold=None</em>, <em>sdrs_io_reservable_threshold_mode=None</em>, <em>sdrs_load_balance_interval=None</em>, <em>sdrs_policy_enforcement_automation_level=None</em>, <em>sdrs_rule_enforcement_automation_level=None</em>, <em>sdrs_space_balance_automation_level=None</em>, <em>sdrs_space_utilization_threshold=None</em>, <em>sdrs_vm_evacuation_automation_level=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DatastoreCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>folder=None</em>, <em>name=None</em>, <em>sdrs_advanced_options=None</em>, <em>sdrs_automation_level=None</em>, <em>sdrs_default_intra_vm_affinity=None</em>, <em>sdrs_enabled=None</em>, <em>sdrs_free_space_threshold=None</em>, <em>sdrs_free_space_threshold_mode=None</em>, <em>sdrs_free_space_utilization_difference=None</em>, <em>sdrs_io_balance_automation_level=None</em>, <em>sdrs_io_latency_threshold=None</em>, <em>sdrs_io_load_balance_enabled=None</em>, <em>sdrs_io_load_imbalance_threshold=None</em>, <em>sdrs_io_reservable_iops_threshold=None</em>, <em>sdrs_io_reservable_percent_threshold=None</em>, <em>sdrs_io_reservable_threshold_mode=None</em>, <em>sdrs_load_balance_interval=None</em>, <em>sdrs_policy_enforcement_automation_level=None</em>, <em>sdrs_rule_enforcement_automation_level=None</em>, <em>sdrs_space_balance_automation_level=None</em>, <em>sdrs_space_utilization_threshold=None</em>, <em>sdrs_vm_evacuation_automation_level=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_datastore_cluster</cite> resource can be used to create and manage
 datastore clusters. This can be used to create groups of datastores with a
 shared management interface, allowing for resource control and load balancing
@@ -1612,8 +1670,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom attribute ids to attribute
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
@@ -1929,7 +1987,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DatastoreClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>datastore_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DatastoreClusterVmAntiAffinityRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>datastore_cluster_id=None</em>, <em>enabled=None</em>, <em>mandatory=None</em>, <em>name=None</em>, <em>virtual_machine_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_datastore_cluster_vm_anti_affinity_rule</cite> resource can be used to
 manage VM anti-affinity rules in a datastore cluster, either created by the
 [<cite>vsphere_datastore_cluster</cite>][tf-vsphere-datastore-cluster-resource] resource or looked up
@@ -1950,8 +2008,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
 a new resource if changed.</li>
@@ -2042,7 +2100,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.DistributedPortGroup">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DistributedPortGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>active_uplinks=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>auto_expand=None</em>, <em>block_all_ports=None</em>, <em>block_override_allowed=None</em>, <em>check_beacon=None</em>, <em>custom_attributes=None</em>, <em>description=None</em>, <em>directpath_gen2_allowed=None</em>, <em>distributed_virtual_switch_uuid=None</em>, <em>egress_shaping_average_bandwidth=None</em>, <em>egress_shaping_burst_size=None</em>, <em>egress_shaping_enabled=None</em>, <em>egress_shaping_peak_bandwidth=None</em>, <em>failback=None</em>, <em>ingress_shaping_average_bandwidth=None</em>, <em>ingress_shaping_burst_size=None</em>, <em>ingress_shaping_enabled=None</em>, <em>ingress_shaping_peak_bandwidth=None</em>, <em>lacp_enabled=None</em>, <em>lacp_mode=None</em>, <em>live_port_moving_allowed=None</em>, <em>name=None</em>, <em>netflow_enabled=None</em>, <em>netflow_override_allowed=None</em>, <em>network_resource_pool_key=None</em>, <em>network_resource_pool_override_allowed=None</em>, <em>notify_switches=None</em>, <em>number_of_ports=None</em>, <em>port_config_reset_at_disconnect=None</em>, <em>port_name_format=None</em>, <em>port_private_secondary_vlan_id=None</em>, <em>security_policy_override_allowed=None</em>, <em>shaping_override_allowed=None</em>, <em>standby_uplinks=None</em>, <em>tags=None</em>, <em>teaming_policy=None</em>, <em>traffic_filter_override_allowed=None</em>, <em>tx_uplink=None</em>, <em>type=None</em>, <em>uplink_teaming_override_allowed=None</em>, <em>vlan_id=None</em>, <em>vlan_override_allowed=None</em>, <em>vlan_ranges=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DistributedPortGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>active_uplinks=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>auto_expand=None</em>, <em>block_all_ports=None</em>, <em>block_override_allowed=None</em>, <em>check_beacon=None</em>, <em>custom_attributes=None</em>, <em>description=None</em>, <em>directpath_gen2_allowed=None</em>, <em>distributed_virtual_switch_uuid=None</em>, <em>egress_shaping_average_bandwidth=None</em>, <em>egress_shaping_burst_size=None</em>, <em>egress_shaping_enabled=None</em>, <em>egress_shaping_peak_bandwidth=None</em>, <em>failback=None</em>, <em>ingress_shaping_average_bandwidth=None</em>, <em>ingress_shaping_burst_size=None</em>, <em>ingress_shaping_enabled=None</em>, <em>ingress_shaping_peak_bandwidth=None</em>, <em>lacp_enabled=None</em>, <em>lacp_mode=None</em>, <em>live_port_moving_allowed=None</em>, <em>name=None</em>, <em>netflow_enabled=None</em>, <em>netflow_override_allowed=None</em>, <em>network_resource_pool_key=None</em>, <em>network_resource_pool_override_allowed=None</em>, <em>notify_switches=None</em>, <em>number_of_ports=None</em>, <em>port_config_reset_at_disconnect=None</em>, <em>port_name_format=None</em>, <em>port_private_secondary_vlan_id=None</em>, <em>security_policy_override_allowed=None</em>, <em>shaping_override_allowed=None</em>, <em>standby_uplinks=None</em>, <em>tags=None</em>, <em>teaming_policy=None</em>, <em>traffic_filter_override_allowed=None</em>, <em>tx_uplink=None</em>, <em>type=None</em>, <em>uplink_teaming_override_allowed=None</em>, <em>vlan_id=None</em>, <em>vlan_override_allowed=None</em>, <em>vlan_ranges=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_distributed_port_group</cite> resource can be used to manage vSphere
 distributed virtual port groups. These port groups are connected to distributed
 virtual switches, which can be managed by the
@@ -2063,8 +2121,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -2379,7 +2437,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DistributedVirtualSwitch</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>active_uplinks=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>block_all_ports=None</em>, <em>check_beacon=None</em>, <em>contact_detail=None</em>, <em>contact_name=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>description=None</em>, <em>directpath_gen2_allowed=None</em>, <em>egress_shaping_average_bandwidth=None</em>, <em>egress_shaping_burst_size=None</em>, <em>egress_shaping_enabled=None</em>, <em>egress_shaping_peak_bandwidth=None</em>, <em>failback=None</em>, <em>faulttolerance_maximum_mbit=None</em>, <em>faulttolerance_reservation_mbit=None</em>, <em>faulttolerance_share_count=None</em>, <em>faulttolerance_share_level=None</em>, <em>folder=None</em>, <em>hbr_maximum_mbit=None</em>, <em>hbr_reservation_mbit=None</em>, <em>hbr_share_count=None</em>, <em>hbr_share_level=None</em>, <em>hosts=None</em>, <em>ingress_shaping_average_bandwidth=None</em>, <em>ingress_shaping_burst_size=None</em>, <em>ingress_shaping_enabled=None</em>, <em>ingress_shaping_peak_bandwidth=None</em>, <em>ipv4_address=None</em>, <em>iscsi_maximum_mbit=None</em>, <em>iscsi_reservation_mbit=None</em>, <em>iscsi_share_count=None</em>, <em>iscsi_share_level=None</em>, <em>lacp_api_version=None</em>, <em>lacp_enabled=None</em>, <em>lacp_mode=None</em>, <em>link_discovery_operation=None</em>, <em>link_discovery_protocol=None</em>, <em>management_maximum_mbit=None</em>, <em>management_reservation_mbit=None</em>, <em>management_share_count=None</em>, <em>management_share_level=None</em>, <em>max_mtu=None</em>, <em>multicast_filtering_mode=None</em>, <em>name=None</em>, <em>netflow_active_flow_timeout=None</em>, <em>netflow_collector_ip_address=None</em>, <em>netflow_collector_port=None</em>, <em>netflow_enabled=None</em>, <em>netflow_idle_flow_timeout=None</em>, <em>netflow_internal_flows_only=None</em>, <em>netflow_observation_domain_id=None</em>, <em>netflow_sampling_rate=None</em>, <em>network_resource_control_enabled=None</em>, <em>network_resource_control_version=None</em>, <em>nfs_maximum_mbit=None</em>, <em>nfs_reservation_mbit=None</em>, <em>nfs_share_count=None</em>, <em>nfs_share_level=None</em>, <em>notify_switches=None</em>, <em>port_private_secondary_vlan_id=None</em>, <em>standby_uplinks=None</em>, <em>tags=None</em>, <em>teaming_policy=None</em>, <em>tx_uplink=None</em>, <em>uplinks=None</em>, <em>vdp_maximum_mbit=None</em>, <em>vdp_reservation_mbit=None</em>, <em>vdp_share_count=None</em>, <em>vdp_share_level=None</em>, <em>version=None</em>, <em>virtualmachine_maximum_mbit=None</em>, <em>virtualmachine_reservation_mbit=None</em>, <em>virtualmachine_share_count=None</em>, <em>virtualmachine_share_level=None</em>, <em>vlan_id=None</em>, <em>vlan_ranges=None</em>, <em>vmotion_maximum_mbit=None</em>, <em>vmotion_reservation_mbit=None</em>, <em>vmotion_share_count=None</em>, <em>vmotion_share_level=None</em>, <em>vsan_maximum_mbit=None</em>, <em>vsan_reservation_mbit=None</em>, <em>vsan_share_count=None</em>, <em>vsan_share_level=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DistributedVirtualSwitch</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>active_uplinks=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>block_all_ports=None</em>, <em>check_beacon=None</em>, <em>contact_detail=None</em>, <em>contact_name=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>description=None</em>, <em>directpath_gen2_allowed=None</em>, <em>egress_shaping_average_bandwidth=None</em>, <em>egress_shaping_burst_size=None</em>, <em>egress_shaping_enabled=None</em>, <em>egress_shaping_peak_bandwidth=None</em>, <em>failback=None</em>, <em>faulttolerance_maximum_mbit=None</em>, <em>faulttolerance_reservation_mbit=None</em>, <em>faulttolerance_share_count=None</em>, <em>faulttolerance_share_level=None</em>, <em>folder=None</em>, <em>hbr_maximum_mbit=None</em>, <em>hbr_reservation_mbit=None</em>, <em>hbr_share_count=None</em>, <em>hbr_share_level=None</em>, <em>hosts=None</em>, <em>ingress_shaping_average_bandwidth=None</em>, <em>ingress_shaping_burst_size=None</em>, <em>ingress_shaping_enabled=None</em>, <em>ingress_shaping_peak_bandwidth=None</em>, <em>ipv4_address=None</em>, <em>iscsi_maximum_mbit=None</em>, <em>iscsi_reservation_mbit=None</em>, <em>iscsi_share_count=None</em>, <em>iscsi_share_level=None</em>, <em>lacp_api_version=None</em>, <em>lacp_enabled=None</em>, <em>lacp_mode=None</em>, <em>link_discovery_operation=None</em>, <em>link_discovery_protocol=None</em>, <em>management_maximum_mbit=None</em>, <em>management_reservation_mbit=None</em>, <em>management_share_count=None</em>, <em>management_share_level=None</em>, <em>max_mtu=None</em>, <em>multicast_filtering_mode=None</em>, <em>name=None</em>, <em>netflow_active_flow_timeout=None</em>, <em>netflow_collector_ip_address=None</em>, <em>netflow_collector_port=None</em>, <em>netflow_enabled=None</em>, <em>netflow_idle_flow_timeout=None</em>, <em>netflow_internal_flows_only=None</em>, <em>netflow_observation_domain_id=None</em>, <em>netflow_sampling_rate=None</em>, <em>network_resource_control_enabled=None</em>, <em>network_resource_control_version=None</em>, <em>nfs_maximum_mbit=None</em>, <em>nfs_reservation_mbit=None</em>, <em>nfs_share_count=None</em>, <em>nfs_share_level=None</em>, <em>notify_switches=None</em>, <em>port_private_secondary_vlan_id=None</em>, <em>standby_uplinks=None</em>, <em>tags=None</em>, <em>teaming_policy=None</em>, <em>tx_uplink=None</em>, <em>uplinks=None</em>, <em>vdp_maximum_mbit=None</em>, <em>vdp_reservation_mbit=None</em>, <em>vdp_share_count=None</em>, <em>vdp_share_level=None</em>, <em>version=None</em>, <em>virtualmachine_maximum_mbit=None</em>, <em>virtualmachine_reservation_mbit=None</em>, <em>virtualmachine_share_count=None</em>, <em>virtualmachine_share_level=None</em>, <em>vlan_id=None</em>, <em>vlan_ranges=None</em>, <em>vmotion_maximum_mbit=None</em>, <em>vmotion_reservation_mbit=None</em>, <em>vmotion_share_count=None</em>, <em>vmotion_share_level=None</em>, <em>vsan_maximum_mbit=None</em>, <em>vsan_reservation_mbit=None</em>, <em>vsan_share_count=None</em>, <em>vsan_share_level=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_distributed_virtual_switch</cite> resource can be used to manage VMware
 Distributed Virtual Switches.</p>
 <p>An essential component of a distributed, scalable VMware datacenter, the
@@ -2402,8 +2460,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>active_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
 <cite>uplinks</cite> DVS argument. See
@@ -3038,7 +3096,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.DpmHostOverride">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DpmHostOverride</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>dpm_automation_level=None</em>, <em>dpm_enabled=None</em>, <em>host_system_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DpmHostOverride</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>dpm_automation_level=None</em>, <em>dpm_enabled=None</em>, <em>host_system_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_dpm_host_override</cite> resource can be used to add a DPM override to a
 cluster for a particular host. This allows you to control the power management
 settings for individual hosts in the cluster while leaving any unspecified ones
@@ -3054,8 +3112,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.</li>
@@ -3135,7 +3193,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.DrsVmOverride">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DrsVmOverride</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>drs_automation_level=None</em>, <em>drs_enabled=None</em>, <em>virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">DrsVmOverride</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>drs_automation_level=None</em>, <em>drs_enabled=None</em>, <em>virtual_machine_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_drs_vm_override</cite> resource can be used to add a DRS override to a
 cluster for a specific virtual machine. With this resource, one can enable or
 disable DRS and control the automation level for a single virtual machine
@@ -3151,8 +3209,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.</li>
@@ -3240,7 +3298,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.File">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">File</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>create_directories=None</em>, <em>datacenter=None</em>, <em>datastore=None</em>, <em>destination_file=None</em>, <em>source_datacenter=None</em>, <em>source_datastore=None</em>, <em>source_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">File</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>create_directories=None</em>, <em>datacenter=None</em>, <em>datastore=None</em>, <em>destination_file=None</em>, <em>source_datacenter=None</em>, <em>source_datastore=None</em>, <em>source_file=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_file</cite> resource can be used to upload files (such as virtual disk
 files) from the host machine that Terraform is running on to a target
 datastore.  The resource can also be used to copy files between datastores, or
@@ -3257,8 +3315,8 @@ the old location.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>create_directories</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create directories in <cite>destination_file</cite>
 path parameter if any missing for copy operation.</li>
 <li><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a datacenter in which the file will be
@@ -3371,7 +3429,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.Folder">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Folder</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>path=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Folder</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>datacenter_id=None</em>, <em>path=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_folder</cite> resource can be used to manage vSphere inventory folders.
 The resource supports creating folders of the 5 major types - datacenter
 folders, host and cluster folders, virtual machine folders, datastore folders,
@@ -3385,8 +3443,8 @@ as that folder exists.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute 
 value strings to set for folder. See [here][docs-setting-custom-attributes]
 for a reference on how to set values for custom attributes.</li>
@@ -3735,7 +3793,7 @@ operation, matching the supplied <cite>filter</cite>, if provided.</p>
 
 <dl class="class">
 <dt id="pulumi_vsphere.HaVmOverride">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">HaVmOverride</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_cluster_id=None</em>, <em>ha_datastore_apd_recovery_action=None</em>, <em>ha_datastore_apd_response=None</em>, <em>ha_datastore_apd_response_delay=None</em>, <em>ha_datastore_pdl_response=None</em>, <em>ha_host_isolation_response=None</em>, <em>ha_vm_failure_interval=None</em>, <em>ha_vm_maximum_failure_window=None</em>, <em>ha_vm_maximum_resets=None</em>, <em>ha_vm_minimum_uptime=None</em>, <em>ha_vm_monitoring=None</em>, <em>ha_vm_monitoring_use_cluster_defaults=None</em>, <em>ha_vm_restart_priority=None</em>, <em>ha_vm_restart_timeout=None</em>, <em>virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">HaVmOverride</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_cluster_id=None</em>, <em>ha_datastore_apd_recovery_action=None</em>, <em>ha_datastore_apd_response=None</em>, <em>ha_datastore_apd_response_delay=None</em>, <em>ha_datastore_pdl_response=None</em>, <em>ha_host_isolation_response=None</em>, <em>ha_vm_failure_interval=None</em>, <em>ha_vm_maximum_failure_window=None</em>, <em>ha_vm_maximum_resets=None</em>, <em>ha_vm_minimum_uptime=None</em>, <em>ha_vm_monitoring=None</em>, <em>ha_vm_monitoring_use_cluster_defaults=None</em>, <em>ha_vm_restart_priority=None</em>, <em>ha_vm_restart_timeout=None</em>, <em>virtual_machine_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_ha_vm_override</cite> resource can be used to add an override for
 vSphere HA settings on a cluster for a specific virtual machine. With this
 resource, one can control specific HA settings so that they are different than
@@ -3750,8 +3808,8 @@ connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.</li>
@@ -3992,7 +4050,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.HostPortGroup">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">HostPortGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>active_nics=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>check_beacon=None</em>, <em>failback=None</em>, <em>host_system_id=None</em>, <em>name=None</em>, <em>notify_switches=None</em>, <em>shaping_average_bandwidth=None</em>, <em>shaping_burst_size=None</em>, <em>shaping_enabled=None</em>, <em>shaping_peak_bandwidth=None</em>, <em>standby_nics=None</em>, <em>teaming_policy=None</em>, <em>virtual_switch_name=None</em>, <em>vlan_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">HostPortGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>active_nics=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>check_beacon=None</em>, <em>failback=None</em>, <em>host_system_id=None</em>, <em>name=None</em>, <em>notify_switches=None</em>, <em>shaping_average_bandwidth=None</em>, <em>shaping_burst_size=None</em>, <em>shaping_enabled=None</em>, <em>shaping_peak_bandwidth=None</em>, <em>standby_nics=None</em>, <em>teaming_policy=None</em>, <em>virtual_switch_name=None</em>, <em>vlan_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_host_port_group</cite> resource can be used to manage vSphere standard
 port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
@@ -4005,8 +4063,8 @@ virtual switches, which can be managed by the
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -4143,7 +4201,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.HostVirtualSwitch">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">HostVirtualSwitch</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>active_nics=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>beacon_interval=None</em>, <em>check_beacon=None</em>, <em>failback=None</em>, <em>host_system_id=None</em>, <em>link_discovery_operation=None</em>, <em>link_discovery_protocol=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>network_adapters=None</em>, <em>notify_switches=None</em>, <em>number_of_ports=None</em>, <em>shaping_average_bandwidth=None</em>, <em>shaping_burst_size=None</em>, <em>shaping_enabled=None</em>, <em>shaping_peak_bandwidth=None</em>, <em>standby_nics=None</em>, <em>teaming_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">HostVirtualSwitch</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>active_nics=None</em>, <em>allow_forged_transmits=None</em>, <em>allow_mac_changes=None</em>, <em>allow_promiscuous=None</em>, <em>beacon_interval=None</em>, <em>check_beacon=None</em>, <em>failback=None</em>, <em>host_system_id=None</em>, <em>link_discovery_operation=None</em>, <em>link_discovery_protocol=None</em>, <em>mtu=None</em>, <em>name=None</em>, <em>network_adapters=None</em>, <em>notify_switches=None</em>, <em>number_of_ports=None</em>, <em>shaping_average_bandwidth=None</em>, <em>shaping_burst_size=None</em>, <em>shaping_enabled=None</em>, <em>shaping_peak_bandwidth=None</em>, <em>standby_nics=None</em>, <em>teaming_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_host_virtual_switch</cite> resource can be used to manage vSphere
 standard switches on an ESXi host. These switches can be used as a backing for
 standard port groups, which can be managed by the
@@ -4157,8 +4215,8 @@ page][ref-vsphere-net-concepts].</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>active_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of active network adapters used for load
 balancing.</li>
 <li><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual
@@ -4409,15 +4467,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.License">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">License</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>labels=None</em>, <em>license_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">License</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>labels=None</em>, <em>license_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere license resource. This can be used to add and remove license keys.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key/value pairs to be attached as labels (tags) to the license key.</li>
 <li><strong>license_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The license key to add.</li>
 </ul>
@@ -4503,7 +4561,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.NasDatastore">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">NasDatastore</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_mode=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>folder=None</em>, <em>host_system_ids=None</em>, <em>name=None</em>, <em>remote_hosts=None</em>, <em>remote_path=None</em>, <em>security_type=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">NasDatastore</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_mode=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>folder=None</em>, <em>host_system_ids=None</em>, <em>name=None</em>, <em>remote_hosts=None</em>, <em>remote_path=None</em>, <em>security_type=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_nas_datastore</cite> resource can be used to create and manage NAS
 datastores on an ESXi host or a set of hosts. The resource supports mounting
 NFS v3 and v4.1 shares to be used as datastores.</p>
@@ -4517,8 +4575,8 @@ multiple hosts, you must specify each host that you want to add in the
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Access mode for the mount point. Can be one of
 <cite>readOnly</cite> or <cite>readWrite</cite>. Note that <cite>readWrite</cite> does not necessarily mean
 that the datastore will be read-write depending on the permissions of the
@@ -4743,7 +4801,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_unverified_ssl=None</em>, <em>client_debug=None</em>, <em>client_debug_path=None</em>, <em>client_debug_path_run=None</em>, <em>password=None</em>, <em>persist_session=None</em>, <em>rest_session_path=None</em>, <em>user=None</em>, <em>vcenter_server=None</em>, <em>vim_session_path=None</em>, <em>vsphere_server=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_unverified_ssl=None</em>, <em>client_debug=None</em>, <em>client_debug_path=None</em>, <em>client_debug_path_run=None</em>, <em>password=None</em>, <em>persist_session=None</em>, <em>rest_session_path=None</em>, <em>user=None</em>, <em>vcenter_server=None</em>, <em>vim_session_path=None</em>, <em>vsphere_server=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the vsphere package. By default, resources use package-wide configuration
 settings, however an explicit <cite>Provider</cite> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -4753,8 +4811,8 @@ construction to achieve fine-grained programmatic control over provider settings
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -4813,7 +4871,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.ResourcePool">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ResourcePool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cpu_expandable=None</em>, <em>cpu_limit=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_level=None</em>, <em>cpu_shares=None</em>, <em>custom_attributes=None</em>, <em>memory_expandable=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_level=None</em>, <em>memory_shares=None</em>, <em>name=None</em>, <em>parent_resource_pool_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">ResourcePool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cpu_expandable=None</em>, <em>cpu_limit=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_level=None</em>, <em>cpu_shares=None</em>, <em>custom_attributes=None</em>, <em>memory_expandable=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_level=None</em>, <em>memory_shares=None</em>, <em>name=None</em>, <em>parent_resource_pool_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_resource_pool</cite> resource can be used to create and manage
 resource pools in standalone hosts or on compute clusters.</p>
 <p>For more information on vSphere resource pools, see [this
@@ -4824,8 +4882,8 @@ page][ref-vsphere-resource_pools].</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cpu_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <cite>true</cite></li>
@@ -5030,7 +5088,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.StorageDrsVmOverride">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">StorageDrsVmOverride</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>datastore_cluster_id=None</em>, <em>sdrs_automation_level=None</em>, <em>sdrs_enabled=None</em>, <em>sdrs_intra_vm_affinity=None</em>, <em>virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">StorageDrsVmOverride</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>datastore_cluster_id=None</em>, <em>sdrs_automation_level=None</em>, <em>sdrs_enabled=None</em>, <em>sdrs_intra_vm_affinity=None</em>, <em>virtual_machine_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_storage_drs_vm_override</cite> resource can be used to add a Storage DRS
 override to a datastore cluster for a specific virtual machine. With this
 resource, one can enable or disable Storage DRS, and control the automation
@@ -5044,8 +5102,8 @@ page][ref-vsphere-datastore-clusters].</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.</li>
@@ -5152,7 +5210,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.Tag">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Tag</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>category_id=None</em>, <em>description=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">Tag</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>category_id=None</em>, <em>description=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_tag</cite> resource can be used to create and manage tags, which allow
 you to attach metadata to objects in the vSphere inventory to make these
 objects more sortable and searchable.</p>
@@ -5165,8 +5223,8 @@ requires vCenter 6.0 or higher.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>category_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent category in
 which this tag will be created. Forces a new resource if changed.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the tag.</li>
@@ -5239,7 +5297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.TagCategory">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">TagCategory</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>associable_types=None</em>, <em>cardinality=None</em>, <em>description=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">TagCategory</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>associable_types=None</em>, <em>cardinality=None</em>, <em>description=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_tag_category</cite> resource can be used to create and manage tag
 categories, which determine how tags are grouped together and applied to
 specific objects.</p>
@@ -5255,8 +5313,8 @@ requires vCenter 6.0 or higher.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>associable_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list object types that this category is
 valid to be assigned to. For a full list, click
 here.</li>
@@ -5342,7 +5400,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VappContainer">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VappContainer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cpu_expandable=None</em>, <em>cpu_limit=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_level=None</em>, <em>cpu_shares=None</em>, <em>custom_attributes=None</em>, <em>memory_expandable=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_level=None</em>, <em>memory_shares=None</em>, <em>name=None</em>, <em>parent_folder_id=None</em>, <em>parent_resource_pool_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VappContainer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cpu_expandable=None</em>, <em>cpu_limit=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_level=None</em>, <em>cpu_shares=None</em>, <em>custom_attributes=None</em>, <em>memory_expandable=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_level=None</em>, <em>memory_shares=None</em>, <em>name=None</em>, <em>parent_folder_id=None</em>, <em>parent_resource_pool_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_vapp_container</cite> resource can be used to create and manage
 vApps.</p>
 <p>For more information on vSphere vApps, see [this
@@ -5353,8 +5411,8 @@ page][ref-vsphere-vapp].</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cpu_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a vApp
 container can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: <cite>true</cite></li>
@@ -5572,7 +5630,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VappEntity">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VappEntity</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_id=None</em>, <em>custom_attributes=None</em>, <em>start_action=None</em>, <em>start_delay=None</em>, <em>start_order=None</em>, <em>stop_action=None</em>, <em>stop_delay=None</em>, <em>tags=None</em>, <em>target_id=None</em>, <em>wait_for_guest=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VappEntity</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_id=None</em>, <em>custom_attributes=None</em>, <em>start_action=None</em>, <em>start_delay=None</em>, <em>start_order=None</em>, <em>stop_action=None</em>, <em>stop_delay=None</em>, <em>tags=None</em>, <em>target_id=None</em>, <em>wait_for_guest=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_vapp_entity</cite> resource can be used to describe the behavior of an
 entity (virtual machine or sub-vApp container) in a vApp container.</p>
 <p>For more information on vSphere vApps, see [this
@@ -5583,8 +5641,8 @@ page][ref-vsphere-vapp].</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the vApp
 container the entity is a member of.</li>
 </ul>
@@ -5731,7 +5789,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualDisk">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualDisk</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>adapter_type=None</em>, <em>create_directories=None</em>, <em>datacenter=None</em>, <em>datastore=None</em>, <em>size=None</em>, <em>type=None</em>, <em>vmdk_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>adapter_type=None</em>, <em>create_directories=None</em>, <em>datacenter=None</em>, <em>datastore=None</em>, <em>size=None</em>, <em>type=None</em>, <em>vmdk_path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_virtual_disk</cite> resource can be used to create virtual disks outside
 of any given [<cite>vsphere_virtual_machine</cite>][docs-vsphere-virtual-machine]
 resource. These disks can be attached to a virtual machine by creating a disk
@@ -5743,8 +5801,8 @@ block with the [<cite>attach</cite>][docs-vsphere-virtual-machine-disk-attach] p
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>adapter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The adapter type for this virtual disk. Can be
 one of <cite>ide</cite>, <cite>lsiLogic</cite>, or <cite>busLogic</cite>.  Default: <cite>lsiLogic</cite>.</li>
 <li><strong>create_directories</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Tells the resource to create any
@@ -5861,7 +5919,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualMachine">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>alternate_guest_name=None</em>, <em>annotation=None</em>, <em>boot_delay=None</em>, <em>boot_retry_delay=None</em>, <em>boot_retry_enabled=None</em>, <em>cdrom=None</em>, <em>clone=None</em>, <em>cpu_hot_add_enabled=None</em>, <em>cpu_hot_remove_enabled=None</em>, <em>cpu_limit=None</em>, <em>cpu_performance_counters_enabled=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_count=None</em>, <em>cpu_share_level=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>datastore_id=None</em>, <em>disks=None</em>, <em>efi_secure_boot_enabled=None</em>, <em>enable_disk_uuid=None</em>, <em>enable_logging=None</em>, <em>ept_rvi_mode=None</em>, <em>extra_config=None</em>, <em>firmware=None</em>, <em>folder=None</em>, <em>force_power_off=None</em>, <em>guest_id=None</em>, <em>host_system_id=None</em>, <em>hv_mode=None</em>, <em>latency_sensitivity=None</em>, <em>memory=None</em>, <em>memory_hot_add_enabled=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_count=None</em>, <em>memory_share_level=None</em>, <em>migrate_wait_timeout=None</em>, <em>name=None</em>, <em>nested_hv_enabled=None</em>, <em>network_interfaces=None</em>, <em>num_cores_per_socket=None</em>, <em>num_cpus=None</em>, <em>resource_pool_id=None</em>, <em>run_tools_scripts_after_power_on=None</em>, <em>run_tools_scripts_after_resume=None</em>, <em>run_tools_scripts_before_guest_reboot=None</em>, <em>run_tools_scripts_before_guest_shutdown=None</em>, <em>run_tools_scripts_before_guest_standby=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_controller_count=None</em>, <em>scsi_type=None</em>, <em>shutdown_wait_timeout=None</em>, <em>swap_placement_policy=None</em>, <em>sync_time_with_host=None</em>, <em>tags=None</em>, <em>vapp=None</em>, <em>wait_for_guest_net_routable=None</em>, <em>wait_for_guest_net_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternate_guest_name=None</em>, <em>annotation=None</em>, <em>boot_delay=None</em>, <em>boot_retry_delay=None</em>, <em>boot_retry_enabled=None</em>, <em>cdrom=None</em>, <em>clone=None</em>, <em>cpu_hot_add_enabled=None</em>, <em>cpu_hot_remove_enabled=None</em>, <em>cpu_limit=None</em>, <em>cpu_performance_counters_enabled=None</em>, <em>cpu_reservation=None</em>, <em>cpu_share_count=None</em>, <em>cpu_share_level=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>datastore_id=None</em>, <em>disks=None</em>, <em>efi_secure_boot_enabled=None</em>, <em>enable_disk_uuid=None</em>, <em>enable_logging=None</em>, <em>ept_rvi_mode=None</em>, <em>extra_config=None</em>, <em>firmware=None</em>, <em>folder=None</em>, <em>force_power_off=None</em>, <em>guest_id=None</em>, <em>host_system_id=None</em>, <em>hv_mode=None</em>, <em>latency_sensitivity=None</em>, <em>memory=None</em>, <em>memory_hot_add_enabled=None</em>, <em>memory_limit=None</em>, <em>memory_reservation=None</em>, <em>memory_share_count=None</em>, <em>memory_share_level=None</em>, <em>migrate_wait_timeout=None</em>, <em>name=None</em>, <em>nested_hv_enabled=None</em>, <em>network_interfaces=None</em>, <em>num_cores_per_socket=None</em>, <em>num_cpus=None</em>, <em>resource_pool_id=None</em>, <em>run_tools_scripts_after_power_on=None</em>, <em>run_tools_scripts_after_resume=None</em>, <em>run_tools_scripts_before_guest_reboot=None</em>, <em>run_tools_scripts_before_guest_shutdown=None</em>, <em>run_tools_scripts_before_guest_standby=None</em>, <em>scsi_bus_sharing=None</em>, <em>scsi_controller_count=None</em>, <em>scsi_type=None</em>, <em>shutdown_wait_timeout=None</em>, <em>swap_placement_policy=None</em>, <em>sync_time_with_host=None</em>, <em>tags=None</em>, <em>vapp=None</em>, <em>wait_for_guest_net_routable=None</em>, <em>wait_for_guest_net_timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_virtual_machine</cite> resource can be used to manage the complex
 lifecycle of a virtual machine. It supports management of disk, network
 interface, and CDROM devices, creation from scratch or cloning from template,
@@ -5869,13 +5927,203 @@ and migration through both host and storage vMotion.</p>
 <p>For more details on working with virtual machines in vSphere, see [this
 page][vmware-docs-vm-management].</p>
 <p>[vmware-docs-vm-management]: <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-55238059-912E-411F-A0E9-A7A536972A91.html">https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-55238059-912E-411F-A0E9-A7A536972A91.html</a></p>
+<p>## About Working with Virtual Machines in Terraform</p>
+<p>A high degree of control and flexibility is afforded to a vSphere user when it
+comes to how to configure, deploy, and manage virtual machines - much more
+control than given in a traditional cloud provider. As such, Terraform has to
+make some decisions on how to manage the virtual machines it creates and
+manages. This section documents things you need to know about your virtual
+machine configuration that you should consider when setting up virtual
+machines, creating templates to clone from, or migrating from previous versions
+of this resource.</p>
+<p>### Disks</p>
+<p>The <cite>vsphere_virtual_machine</cite> resource currently only supports standard
+VMDK-backed virtual disks - it does not support other special kinds of disk
+devices like RDM disks.</p>
+<p>Disks are managed by an arbitrary label supplied to the <cite>label</cite>
+attribute of a <cite>disk</cite> block. This is separate from the
+automatic naming that vSphere picks for you when creating a virtual machine.
+Control over a virtual disk’s name is not supported unless you are attaching an
+external disk with the <cite>attach</cite> attribute.</p>
+<p>Virtual disks can be SCSI disks only. The SCSI controllers managed by Terraform
+can vary, depending on the value supplied to
+<cite>scsi_controller_count</cite>. This also dictates the
+controllers that are checked when looking for disks during a cloning process.
+By default, this value is <cite>1</cite>, meaning that you can have up to 15 disks
+configured on a virtual machine. These are all configured with the controller
+type defined by the <cite>scsi_type</cite> setting. If you are cloning from
+a template, devices will be added or re-configured as necessary.</p>
+<p>When cloning from a template, you must specify disks of either the same or
+greater size than the disks in the source template when creating a traditional
+clone, or exactly the same size when cloning from snapshot (also known as a
+linked clone). For more details, see the section on creating a virtual machine
+from a template.</p>
+<p>A maximum of 60 virtual disks can be configured when the
+<cite>scsi_controller_count</cite> setting is configured to its
+maximum of <cite>4</cite> controllers. See the disk options section for
+more details.</p>
+<p>### Customization and network waiters</p>
+<p>Terraform waits during various parts of a virtual machine deployment to ensure
+that it is in a correct expected state before proceeding. These happen when a
+VM is created, or also when it’s updated, depending on the waiter.</p>
+<p>Two waiters of note are:</p>
+<ul class="simple">
+<li><strong>The customization waiter:</strong> This waiter watches events in vSphere to
+monitor when customization on a virtual machine completes during VM creation.
+Depending on your vSphere or VM configuration it may be necessary to change
+the timeout or turn it off. This can be controlled by the
+<cite>timeout</cite> setting in the customization
+settings block.</li>
+<li><strong>The network waiter:</strong> This waiter waits for interfaces to show up on a
+guest virtual machine close to the end of both VM creation and update. This
+waiter is necessary to ensure that correct IP information gets reported to
+the guest virtual machine, mainly to facilitate the availability of a valid,
+reachable default IP address for any [provisioners][tf-docs-provisioners].
+The behavior of the waiter can be controlled with the
+<cite>wait_for_guest_net_timeout</cite> and
+<cite>wait_for_guest_net_routable</cite> settings.</li>
+</ul>
+<p>[tf-docs-provisioners]: /docs/provisioners/index.html</p>
+<p>### Migrating from a previous version of this resource</p>
+<p>&gt; <strong>NOTE:</strong> This section only applies to versions of this resource available
+in versions v0.4.2 of this provider or earlier.</p>
+<p>The path for migrating to the current version of this resource is very similar
+to the import path, with the exception that the <cite>terraform
+import</cite> command does not need to be run. See that section for details on what
+is required before you run <cite>terraform plan</cite> on a state that requires migration.</p>
+<p>A successful migration usually only results in a configuration-only diff - that
+is, Terraform reconciles some configuration settings that cannot be set during
+the migration process with state. In this event, no reconfiguration operations
+are sent to the vSphere server during the next <cite>terraform apply</cite>.  See the
+importing section for more details.</p>
+<p>## Creating a Virtual Machine from a Template</p>
+<p>The <cite>clone</cite> block can be used to create a new virtual machine from an existing
+virtual machine or template. The resource supports both making a complete copy
+of a virtual machine, or cloning from a snapshot (otherwise known as a linked
+clone).</p>
+<p>See the cloning and customization
+example for a usage synopsis.</p>
+<p>&gt; <strong>NOTE:</strong> Changing any option in <cite>clone</cite> after creation forces a new
+resource.</p>
+<p>&gt; <strong>NOTE:</strong> Cloning requires vCenter and is not supported on direct ESXi
+connections.</p>
+<p>The options available in the <cite>clone</cite> block are:</p>
+<ul class="simple">
+<li><cite>template_uuid</cite> - (Required) The UUID of the source virtual machine or
+template.</li>
+<li><cite>linked_clone</cite> - (Optional) Clone this virtual machine from a snapshot.
+Templates must have a single snapshot only in order to be eligible. Default:
+<cite>false</cite>.</li>
+<li><cite>timeout</cite> - (Optional) The timeout, in minutes, to wait for the virtual
+machine clone to complete. Default: 30 minutes.</li>
+<li><cite>customize</cite> - (Optional) The customization spec for this clone. This allows
+the user to configure the virtual machine post-clone. For more details, see
+virtual machine customization.</li>
+</ul>
+<p>### Additional requirements and notes for cloning</p>
+<p>Note that when cloning from a template, there are additional requirements in
+both the resource configuration and source template:</p>
+<ul class="simple">
+<li>The virtual machine must not be powered on at the time of cloning.</li>
+<li>All disks on the virtual machine must be SCSI disks.</li>
+<li>You must specify at least the same number of <cite>disk</cite> devices as there are
+disks that exist in the template. These devices are ordered and lined up by
+the <cite>unit_number</cite> attribute. Additional disks can be added past this.</li>
+<li>The <cite>size</cite> of a virtual disk must be at least the same size as its
+counterpart disk in the template.</li>
+<li>When using <cite>linked_clone</cite>, the <cite>size</cite>, <cite>thin_provisioned</cite>, and
+<cite>eagerly_scrub</cite> settings for each disk must be an exact match to the
+individual disk’s counterpart in the source template.</li>
+<li>The <cite>scsi_controller_count</cite> setting should be
+configured as necessary to cover all of the disks on the template. For best
+results, only configure this setting for the amount of controllers you will
+need to cover your disk quantity and bandwidth needs, and configure your
+template accordingly. For most workloads, this setting should be kept at its
+default of <cite>1</cite>, and all disks in the template should reside on the single,
+primary controller.</li>
+<li>Some operating systems (such as Windows) do not respond well to a change in
+disk controller type, so when using such OSes, take care to ensure that
+<cite>scsi_type</cite> is set to an exact match of the template’s controller set. For
+maximum compatibility, make sure the SCSI controllers on the source template
+are all the same type.</li>
+</ul>
+<p>To ease the gathering of some of these options, you can use the
+[<cite>vsphere_virtual_machine</cite> data source][tf-vsphere-virtual-machine-ds], which
+will give you disk attributes, network interface types, SCSI bus types, and
+also the guest ID of the source template.  See the cloning and customization
+example for usage details.</p>
+<p>## Virtual Machine Migration</p>
+<p>The <cite>vsphere_virtual_machine</cite> resource supports live migration (otherwise known
+as vMotion) both on the host and storage level. One can migrate the entire VM
+to another host, cluster, resource pool, or datastore, and migrate or pin a
+single disk to a specific datastore.</p>
+<p>### Host, cluster, and resource pool migration</p>
+<p>To migrate the virtual machine to another host or resource pool, change the
+<cite>host_system_id</cite> or <cite>resource_pool_id</cite> to the manged object IDs of the new host
+or resource pool accordingly. To change the virtual machine’s cluster or
+standalone host, select a resource pool within the specific target.</p>
+<p>The same rules apply for migration as they do for VM creation - any host
+specified needs to be a part of the resource pool supplied. Also keep in mind
+the implications of moving the virtual machine to a resource pool in another
+cluster or standalone host, namely ensuring that all hosts in the cluster (or
+the single standalone host) have access to the datastore that the virtual
+machine is in.</p>
+<p>## Importing</p>
+<p>### Additional requirements and notes for importing</p>
+<p>Many of the same requirements for
+cloning apply to importing,
+although since importing writes directly to state, a lot of these rules cannot
+be enforced at import time, so every effort should be made to ensure the
+correctness of the configuration before the import.</p>
+<p>In addition to these rules, the following extra rules apply to importing:</p>
+<ul class="simple">
+<li>Disks need to have their <cite>label</cite> argument assigned in a convention
+matching <cite>diskN</cite>, starting with disk number 0, based on each disk’s order on
+the SCSI bus. As an example, a disk on SCSI controller 0 with a unit number
+of 0 would be labeled <cite>disk0</cite>, a disk on the same controller with a unit
+number of 1 would be <cite>disk1</cite>, but the next disk, which is on SCSI controller
+1 with a unit number of 0, still becomes <cite>disk2</cite>.</li>
+<li>Disks always get imported with <cite>keep_on_remove</cite> enabled
+until the first <cite>terraform apply</cite> runs, which will remove the setting for
+known disks. This is an extra safeguard against naming or accounting mistakes
+in the disk configuration.</li>
+<li>The <cite>scsi_controller_count</cite> for the resource is set
+to the number of contiguous SCSI controllers found, starting with the SCSI
+controller at bus number 0. If no SCSI controllers are found, the VM is not
+eligible for import. To ensure maximum compatibility, make sure your virtual
+machine has the exact number of SCSI controllers it needs, and set
+<cite>scsi_controller_count</cite> accordingly.</li>
+</ul>
+<p>After importing, you should run <cite>terraform plan</cite>. Unless you have changed
+anything else in configuration that would be causing other attributes to
+change, the only difference should be configuration-only changes, usually
+comprising of:</p>
+<ul class="simple">
+<li>The <cite>imported</cite> flag will transition from <cite>true</cite> to <cite>false</cite>.</li>
+<li><cite>keep_on_remove</cite> of known disks will transition from
+<cite>true</cite> to <cite>false</cite>.</li>
+<li>Configuration supplied in the <cite>clone</cite> block, if present, will be
+persisted to state. This initial persistence operation does not perform any
+cloning or customization actions, nor does it force a new resource. After the
+first apply operation, further changes to <cite>clone</cite> will force a new resource
+as per normal operation.</li>
+</ul>
+<p>&gt; <strong>NOTE:</strong> Further to the above, do not make any configuration changes to
+<cite>clone</cite> after importing or upgrading from a legacy version of the provider
+before doing an initial <cite>terraform apply</cite> as these changes will not correctly
+force a new resource, and your changes will have persisted to state, preventing
+further plans from correctly triggering a diff.</p>
+<p>These changes only update Terraform state when applied, hence it is safe to run
+when the virtual machine is running. If more settings are being modified, you
+may need to plan maintenance accordingly for any necessary re-configuration of
+the virtual machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>alternate_guest_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The guest name for the operating system
 when <cite>guest_id</cite> is <cite>other</cite> or <cite>other-64</cite>.</li>
 <li><strong>annotation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-provided description of the virtual machine.
@@ -6605,7 +6853,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VirtualMachineSnapshot">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachineSnapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>consolidate=None</em>, <em>description=None</em>, <em>memory=None</em>, <em>quiesce=None</em>, <em>remove_children=None</em>, <em>snapshot_name=None</em>, <em>virtual_machine_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VirtualMachineSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>consolidate=None</em>, <em>description=None</em>, <em>memory=None</em>, <em>quiesce=None</em>, <em>remove_children=None</em>, <em>snapshot_name=None</em>, <em>virtual_machine_uuid=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_virtual_machine_snapshot</cite> resource can be used to manage snapshots
 for a virtual machine.</p>
 <p>For more information on managing snapshots and how they work in VMware, see
@@ -6629,8 +6877,8 @@ limitation of virtual machine snapshots, see [here][ext-vm-snap-limitations].</p
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>consolidate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <cite>true</cite>, the delta disks involved in this
 snapshot will be consolidated into the parent when this resource is
 destroyed.</li>
@@ -6739,7 +6987,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_vsphere.VmfsDatastore">
-<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VmfsDatastore</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>disks=None</em>, <em>folder=None</em>, <em>host_system_id=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_vsphere.</code><code class="descname">VmfsDatastore</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_attributes=None</em>, <em>datastore_cluster_id=None</em>, <em>disks=None</em>, <em>folder=None</em>, <em>host_system_id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <cite>vsphere_vmfs_datastore</cite> resource can be used to create and manage VMFS
 datastores on an ESXi host or a set of hosts. The resource supports using any
 SCSI device that can generally be used in a datastore, such as local disks, or
@@ -6747,13 +6995,35 @@ disks presented to a host or multiple hosts over Fibre Channel or iSCSI.
 Devices can be specified manually, or discovered using the
 [<cite>vsphere_vmfs_disks</cite>][data-source-vmfs-disks] data source.</p>
 <p>[data-source-vmfs-disks]: /docs/providers/vsphere/d/vmfs_disks.html</p>
+<p>## Auto-Mounting of Datastores Within vCenter</p>
+<p>Note that the current behaviour of this resource will auto-mount any created
+datastores to any other host within vCenter that has access to the same disk.</p>
+<p>Example: You want to create a datastore with a iSCSI LUN that is visible on 3
+hosts in a single vSphere cluster (<cite>esxi1</cite>, <cite>esxi2</cite> and <cite>esxi3</cite>). When you
+create the datastore on <cite>esxi1</cite>, the datastore will be automatically mounted on
+<cite>esxi2</cite> and <cite>esxi3</cite>, without the need to configure the resource on either of
+those two hosts.</p>
+<p>Future versions of this resource may allow you to control the hosts that a
+datastore is mounted to, but currently, this automatic behaviour cannot be
+changed, so keep this in mind when writing your configurations and deploying
+your disks.</p>
+<p>## Increasing Datastore Size</p>
+<p>To increase the size of a datastore, you must add additional disks to the
+<cite>disks</cite> attribute. Expanding the size of a datastore by increasing the size of
+an already provisioned disk is currently not supported (but may be in future
+versions of this resource).</p>
+<p>&gt; <strong>NOTE:</strong> You cannot decrease the size of a datastore. If the resource
+detects disks removed from the configuration, Terraform will give an error. To
+reduce the size of the datastore, the resource needs to be re-created - run
+[<cite>terraform taint</cite>][cmd-taint] to taint the resource so it can be re-created.</p>
+<p>[cmd-taint]: /docs/commands/taint.html</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute 
 value string to set on datastore resource. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
@@ -6939,7 +7209,7 @@ available through the [<cite>vsphere_resource_pool</cite>][docs-resource-pool-da
 data source.</p>
 <p>[docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 [docs-resource-pool-data-source]: /docs/providers/vsphere/d/resource_pool.html</p>
-<p>-&gt; You may also wish to see the
+<p>&gt; You may also wish to see the
 [<cite>vsphere_compute_cluster</cite>][docs-compute-cluster-resource] resource for further
 details about clusters or how to work with them in Terraform.</p>
 <p>[docs-compute-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html</p>

@@ -2,15 +2,16 @@
 <span id="autoscale"></span><h1>autoscale<a class="headerlink" href="#module-pulumi_azure.autoscale" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.autoscale.Setting">
-<em class="property">class </em><code class="descclassname">pulumi_azure.autoscale.</code><code class="descname">Setting</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification=None</em>, <em>profiles=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.autoscale.Setting" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.autoscale.</code><code class="descname">Setting</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification=None</em>, <em>profiles=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.autoscale.Setting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</p>
+<p>&gt; <strong>NOTE:</strong> This resource has been deprecated in favour of the <cite>azurerm_monitor_autoscale_setting</cite> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether automatic scaling is enabled for the target resource. Defaults to <cite>true</cite>.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the AutoScale Setting. Changing this forces a new resource to be created.</li>

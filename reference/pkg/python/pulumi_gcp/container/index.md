@@ -2,7 +2,7 @@
 <span id="container"></span><h1>container<a class="headerlink" href="#module-pulumi_gcp.container" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.container.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>additional_zones=None</em>, <em>addons_config=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>initial_node_count=None</em>, <em>ip_allocation_policy=None</em>, <em>logging_service=None</em>, <em>maintenance_policy=None</em>, <em>master_auth=None</em>, <em>master_authorized_networks_config=None</em>, <em>master_ipv4_cidr_block=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policy=None</em>, <em>node_config=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_config=None</em>, <em>private_cluster=None</em>, <em>private_cluster_config=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_zones=None</em>, <em>addons_config=None</em>, <em>cluster_ipv4_cidr=None</em>, <em>description=None</em>, <em>enable_binary_authorization=None</em>, <em>enable_kubernetes_alpha=None</em>, <em>enable_legacy_abac=None</em>, <em>enable_tpu=None</em>, <em>initial_node_count=None</em>, <em>ip_allocation_policy=None</em>, <em>logging_service=None</em>, <em>maintenance_policy=None</em>, <em>master_auth=None</em>, <em>master_authorized_networks_config=None</em>, <em>master_ipv4_cidr_block=None</em>, <em>min_master_version=None</em>, <em>monitoring_service=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_policy=None</em>, <em>node_config=None</em>, <em>node_pools=None</em>, <em>node_version=None</em>, <em>pod_security_policy_config=None</em>, <em>private_cluster=None</em>, <em>private_cluster_config=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remove_default_node_pool=None</em>, <em>resource_labels=None</em>, <em>subnetwork=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Google Kubernetes Engine (GKE) cluster. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/container-engine/docs/clusters">https://cloud.google.com/container-engine/docs/clusters</a>)
 and
@@ -14,8 +14,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>additional_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of additional Google Compute Engine
 locations in which the cluster’s nodes should be located. If additional zones are
 configured, the number of nodes specified in <cite>initial_node_count</cite> is created in
@@ -528,7 +528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.container.NodePool">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">NodePool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>autoscaling=None</em>, <em>cluster=None</em>, <em>initial_node_count=None</em>, <em>management=None</em>, <em>max_pods_per_node=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>node_config=None</em>, <em>node_count=None</em>, <em>project=None</em>, <em>region=None</em>, <em>version=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.container.</code><code class="descname">NodePool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling=None</em>, <em>cluster=None</em>, <em>initial_node_count=None</em>, <em>management=None</em>, <em>max_pods_per_node=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>node_config=None</em>, <em>node_count=None</em>, <em>project=None</em>, <em>region=None</em>, <em>version=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.NodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Node Pool resource within GKE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/container-engine/docs/node-pools">https://cloud.google.com/container-engine/docs/node-pools</a>)
 and
@@ -538,8 +538,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>autoscaling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.</li>
 <li><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster to create the node pool for.  Cluster must be present in <cite>zone</cite> provided for zonal clusters.</li>
@@ -718,25 +718,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.container.get_engine_versions">
 <code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_engine_versions</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Container Engine versions in a zone or region for a given project.</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>hcl
-data “google_container_engine_versions” “central1b” {</p>
-<blockquote>
-<div>zone = “us-central1-b”</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “google_container_cluster” “foo” {</dt>
-<dd><p class="first">name               = “terraform-test-cluster”
-zone               = “us-central1-b”
-node_version       = “${data.google_container_engine_versions.central1b.latest_node_version}”
-initial_node_count = 1</p>
-<dl class="docutils">
-<dt>master_auth {</dt>
-<dd>username = “mr.yoda”
-password = “adoy.rm”</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="function">

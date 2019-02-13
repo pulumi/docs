@@ -2,7 +2,7 @@
 <span id="kinesis"></span><h1>kinesis<a class="headerlink" href="#module-pulumi_aws.kinesis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AnalyticsApplication</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">AnalyticsApplication</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_logging_options=None</em>, <em>code=None</em>, <em>description=None</em>, <em>inputs=None</em>, <em>name=None</em>, <em>outputs=None</em>, <em>reference_data_sources=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.AnalyticsApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
 <p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
@@ -11,8 +11,8 @@ allows processing and analyzing streaming data using standard SQL.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cloudwatch_logging_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The CloudWatch log stream options to monitor application errors. 
 See CloudWatch Logging Options below for more details.</li>
 <li><strong>code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – SQL Code to transform input data, and generate output.</li>
@@ -143,7 +143,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>arn=None</em>, <em>destination=None</em>, <em>destination_id=None</em>, <em>elasticsearch_configuration=None</em>, <em>extended_s3_configuration=None</em>, <em>kinesis_source_configuration=None</em>, <em>name=None</em>, <em>redshift_configuration=None</em>, <em>s3_configuration=None</em>, <em>splunk_configuration=None</em>, <em>tags=None</em>, <em>version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>destination=None</em>, <em>destination_id=None</em>, <em>elasticsearch_configuration=None</em>, <em>extended_s3_configuration=None</em>, <em>kinesis_source_configuration=None</em>, <em>name=None</em>, <em>redshift_configuration=None</em>, <em>s3_configuration=None</em>, <em>splunk_configuration=None</em>, <em>tags=None</em>, <em>version_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
 <p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -151,8 +151,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the Stream</li>
 <li><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the destination to where the data is delivered. The only options are <cite>s3</cite> (Deprecated, use <cite>extended_s3</cite> instead), <cite>extended_s3</cite>, <cite>redshift</cite>, <cite>elasticsearch</cite>, and <cite>splunk</cite>.</li>
 </ul>
@@ -345,7 +345,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kinesis.Stream">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>encryption_type=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>retention_period=None</em>, <em>shard_count=None</em>, <em>shard_level_metrics=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.Stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
 <p>For more details, see the [Amazon Kinesis Documentation][1].</p>
@@ -354,8 +354,8 @@ scales elastically for real-time processing of streaming big data.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the Stream (same as <cite>id</cite>)</li>
 <li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encryption type to use. The only acceptable values are <cite>NONE</cite> or <cite>KMS</cite>. The default value is <cite>NONE</cite>.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias aws/kinesis.</li>

@@ -2,15 +2,15 @@
 <span id="resourcegroups"></span><h1>resourcegroups<a class="headerlink" href="#module-pulumi_aws.resourcegroups" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.resourcegroups.Group">
-<em class="property">class </em><code class="descclassname">pulumi_aws.resourcegroups.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>resource_query=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.resourcegroups.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.resourcegroups.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>resource_query=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.resourcegroups.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Resource Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the resource group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource group’s name. A resource group name can have a maximum of 127 characters, including letters, numbers, hyphens, dots, and underscores. The name cannot start with <cite>AWS</cite> or <cite>aws</cite>.</li>
 <li><strong>resource_query</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>resource_query</cite> block. Resource queries are documented below.</li>

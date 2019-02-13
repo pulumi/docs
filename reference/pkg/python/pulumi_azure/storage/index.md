@@ -2,15 +2,15 @@
 <span id="storage"></span><h1>storage<a class="headerlink" href="#module-pulumi_azure.storage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.storage.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_tier=None</em>, <em>account_encryption_source=None</em>, <em>account_kind=None</em>, <em>account_replication_type=None</em>, <em>account_tier=None</em>, <em>account_type=None</em>, <em>custom_domain=None</em>, <em>enable_blob_encryption=None</em>, <em>enable_file_encryption=None</em>, <em>enable_https_traffic_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_rules=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the access tier for <cite>BlobStorage</cite> and <cite>StorageV2</cite> accounts. Valid options are <cite>Hot</cite> and <cite>Cool</cite>, defaults to <cite>Hot</cite>.</li>
 <li><strong>account_encryption_source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Encryption Source for this Storage Account. Possible values are <cite>Microsoft.Keyvault</cite> and <cite>Microsoft.Storage</cite>. Defaults to <cite>Microsoft.Storage</cite>.</li>
 <li><strong>account_kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the Kind of account. Valid options are <cite>Storage</cite>,
@@ -275,15 +275,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Blob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Blob</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Blob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>source=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Blob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Blob.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attempts</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of attempts to make per page or block when uploading. Defaults to <cite>1</cite>.</li>
 <li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the storage blob. Cannot be defined if <cite>source_uri</cite> is defined. Defaults to <cite>application/octet-stream</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage blob. Must be unique within the storage container the blob is located.</li>
@@ -422,15 +422,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Container">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_access_type=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Container</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_access_type=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Container.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_access_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ‘interface’ for access the container provides. Can be either <cite>blob</cite>, <cite>container</cite> or <cite>private</cite>. Defaults to <cite>private</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage container. Must be unique within the storage service the container is located.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
@@ -705,15 +705,15 @@ for more information.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Queue">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Queue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Queue.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage queue. Must be unique within the storage account the queue is located.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the storage queue. Changing this forces a new resource to be created.</li>
@@ -786,15 +786,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Share">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Share</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Share</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage File Share.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the share. Must be unique within the storage account where the share is located.</li>
 <li><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
@@ -880,15 +880,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.Table">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_account_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Storage Table.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage table. Must be unique within the storage account the table is located.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the storage table. Changing this forces a new resource to be created.</li>
@@ -961,15 +961,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.ZipBlob">
-<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">ZipBlob</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.storage.</code><code class="descname">ZipBlob</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attempts=None</em>, <em>content_type=None</em>, <em>name=None</em>, <em>parallelism=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>content=None</em>, <em>source_uri=None</em>, <em>storage_account_name=None</em>, <em>storage_container_name=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.ZipBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a ZipBlob resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

@@ -98,15 +98,15 @@
 
 <dl class="class">
 <dt id="pulumi_aws.secretsmanager.Secret">
-<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">Secret</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>recovery_window_in_days=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">Secret</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>recovery_window_in_days=None</em>, <em>rotation_lambda_arn=None</em>, <em>rotation_rules=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.Secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Secrets Manager secret metadata. To manage a secret value, see the [<cite>aws_secretsmanager_secret_version</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret_version.html</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the secret.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don’t specify this value, then Secrets Manager defaults to using the AWS account’s default CMK (the one named <cite>aws/secretsmanager</cite>). If the default KMS CMK with that name doesn’t yet exist, then AWS Secrets Manager creates it for you automatically the first time.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: <cite>/_+=.&#64;-</cite> Conflicts with <cite>name_prefix</cite>.</li>
@@ -229,7 +229,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.secretsmanager.SecretVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">SecretVersion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">SecretVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>secret_binary=None</em>, <em>secret_id=None</em>, <em>secret_string=None</em>, <em>version_stages=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.SecretVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Secrets Manager secret version including its secret value. To manage secret metadata, see the [<cite>aws_secretsmanager_secret</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/r/secretsmanager_secret.html</a>).</p>
 <p>&gt; <strong>NOTE:</strong> If the <cite>AWSCURRENT</cite> staging label is present on this version during resource deletion, that label cannot be removed and will be skipped to prevent errors when fully deleting the secret. That label will leave this secret version active even after the resource is deleted from Terraform unless the secret itself is deleted. Move the <cite>AWSCURRENT</cite> staging label before or after deleting this resource from Terraform to fully trigger version deprecation if necessary.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -237,8 +237,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>secret_binary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.</li>
 <li><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.</li>
 <li><strong>secret_string</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.</li>

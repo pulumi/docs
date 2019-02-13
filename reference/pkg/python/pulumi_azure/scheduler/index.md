@@ -44,7 +44,7 @@
 
 <dl class="class">
 <dt id="pulumi_azure.scheduler.Job">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Scheduler Job.</p>
 <p>&gt; <strong>NOTE:</strong> Support for Scheduler Job has been deprecated by Microsoft in favour of Logic Apps ([more information can be found at this link](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps</a>)) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -52,8 +52,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>action_storage_queue</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>action_storage_queue</cite> block defining a storage queue job action as described below. Note this is identical to an <cite>error_action_storage_queue</cite> block.</li>
 <li><strong>action_web</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>action_web</cite> block defining the job action as described below. Note this is identical to an <cite>error_action_web</cite> block.</li>
 <li><strong>error_action_storage_queue</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>error_action_storage_queue</cite> block defining the a web action to take on an error as described below. Note this is identical to an <cite>action_storage_queue</cite> block.</li>
@@ -178,7 +178,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.scheduler.JobCollection">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">JobCollection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">JobCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Scheduler Job Collection.</p>
 <p>&gt; <strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps ([more information can be found at this link](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps</a>)) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -186,8 +186,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Scheduler Job Collection. Changing this forces a new resource to be created.</li>
 <li><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures the Job collection quotas as documented in the <cite>quota</cite> block below.</li>

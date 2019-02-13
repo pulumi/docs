@@ -2,7 +2,7 @@
 <span id="autoscaling"></span><h1>autoscaling<a class="headerlink" href="#module-pulumi_aws.autoscaling" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Attachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Attachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>alb_target_group_arn=None</em>, <em>autoscaling_group_name=None</em>, <em>elb=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Attachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alb_target_group_arn=None</em>, <em>autoscaling_group_name=None</em>, <em>elb=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Attachment resource.</p>
 <p>&gt; <strong>NOTE on AutoScaling Groups and ASG Attachments:</strong> Terraform currently provides
 both a standalone ASG Attachment resource (describing an ASG attached to
@@ -15,8 +15,8 @@ conflict and will overwrite attachments.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>alb_target_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an ALB Target Group.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of ASG to associate with the ELB.</li>
 <li><strong>elb</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ELB.</li>
@@ -187,16 +187,60 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Group">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zones=None</em>, <em>default_cooldown=None</em>, <em>desired_capacity=None</em>, <em>enabled_metrics=None</em>, <em>force_delete=None</em>, <em>health_check_grace_period=None</em>, <em>health_check_type=None</em>, <em>initial_lifecycle_hooks=None</em>, <em>launch_configuration=None</em>, <em>launch_template=None</em>, <em>load_balancers=None</em>, <em>max_size=None</em>, <em>metrics_granularity=None</em>, <em>min_elb_capacity=None</em>, <em>min_size=None</em>, <em>mixed_instances_policy=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>placement_group=None</em>, <em>protect_from_scale_in=None</em>, <em>service_linked_role_arn=None</em>, <em>suspended_processes=None</em>, <em>tags=None</em>, <em>tags_collection=None</em>, <em>target_group_arns=None</em>, <em>termination_policies=None</em>, <em>vpc_zone_identifiers=None</em>, <em>wait_for_capacity_timeout=None</em>, <em>wait_for_elb_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zones=None</em>, <em>default_cooldown=None</em>, <em>desired_capacity=None</em>, <em>enabled_metrics=None</em>, <em>force_delete=None</em>, <em>health_check_grace_period=None</em>, <em>health_check_type=None</em>, <em>initial_lifecycle_hooks=None</em>, <em>launch_configuration=None</em>, <em>launch_template=None</em>, <em>load_balancers=None</em>, <em>max_size=None</em>, <em>metrics_granularity=None</em>, <em>min_elb_capacity=None</em>, <em>min_size=None</em>, <em>mixed_instances_policy=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>placement_group=None</em>, <em>protect_from_scale_in=None</em>, <em>service_linked_role_arn=None</em>, <em>suspended_processes=None</em>, <em>tags=None</em>, <em>tags_collection=None</em>, <em>target_group_arns=None</em>, <em>termination_policies=None</em>, <em>vpc_zone_identifiers=None</em>, <em>wait_for_capacity_timeout=None</em>, <em>wait_for_elb_capacity=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Group resource.</p>
-<p>-&gt; <strong>Note:</strong> You must specify either <cite>launch_configuration</cite>, <cite>launch_template</cite>, or <cite>mixed_instances_policy</cite>.</p>
+<p>&gt; <strong>Note:</strong> You must specify either <cite>launch_configuration</cite>, <cite>launch_template</cite>, or <cite>mixed_instances_policy</cite>.</p>
+<p>## Waiting for Capacity</p>
+<p>A newly-created ASG is initially empty and begins to scale to <cite>min_size</cite> (or
+<cite>desired_capacity</cite>, if specified) by launching instances using the provided
+Launch Configuration. These instances take time to launch and boot.</p>
+<p>On ASG Update, changes to these values also take time to result in the target
+number of instances providing service.</p>
+<p>Terraform provides two mechanisms to help consistently manage ASG scale up
+time across dependent resources.</p>
+<p>#### Waiting for ASG Capacity</p>
+<p>The first is default behavior. Terraform waits after ASG creation for
+<cite>min_size</cite> (or <cite>desired_capacity</cite>, if specified) healthy instances to show up
+in the ASG before continuing.</p>
+<p>If <cite>min_size</cite> or <cite>desired_capacity</cite> are changed in a subsequent update,
+Terraform will also wait for the correct number of healthy instances before
+continuing.</p>
+<p>Terraform considers an instance “healthy” when the ASG reports <cite>HealthStatus:
+“Healthy”</cite> and <cite>LifecycleState: “InService”</cite>. See the [AWS AutoScaling
+Docs](<a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html">https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/AutoScalingGroupLifecycle.html</a>)
+for more information on an ASG’s lifecycle.</p>
+<p>Terraform will wait for healthy instances for up to
+<cite>wait_for_capacity_timeout</cite>. If ASG creation is taking more than a few minutes,
+it’s worth investigating for scaling activity errors, which can be caused by
+problems with the selected Launch Configuration.</p>
+<p>Setting <cite>wait_for_capacity_timeout</cite> to <cite>“0”</cite> disables ASG Capacity waiting.</p>
+<p>#### Waiting for ELB Capacity</p>
+<p>The second mechanism is optional, and affects ASGs with attached ELBs specified
+via the <cite>load_balancers</cite> attribute or with ALBs specified with <cite>target_group_arns</cite>.</p>
+<p>The <cite>min_elb_capacity</cite> parameter causes Terraform to wait for at least the
+requested number of instances to show up <cite>“InService”</cite> in all attached ELBs
+during ASG creation.  It has no effect on ASG updates.</p>
+<p>If <cite>wait_for_elb_capacity</cite> is set, Terraform will wait for exactly that number
+of Instances to be <cite>“InService”</cite> in all attached ELBs on both creation and
+updates.</p>
+<p>These parameters can be used to ensure that service is being provided before
+Terraform moves on. If new instances don’t pass the ELB’s health checks for any
+reason, the Terraform apply will time out, and the ASG will be marked as
+tainted (i.e. marked to be destroyed in a follow up run).</p>
+<p>As with ASG Capacity, Terraform will wait for up to <cite>wait_for_capacity_timeout</cite>
+for the proper number of instances to be healthy.</p>
+<p>#### Troubleshooting Capacity Waiting Timeouts</p>
+<p>If ASG creation takes more than a few minutes, this could indicate one of a
+number of configuration problems. See the [AWS Docs on Load Balancer
+Troubleshooting](<a class="reference external" href="https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html">https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html</a>)
+for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of one or more availability zones for the group. This parameter should not be specified when using <cite>vpc_zone_identifier</cite>.</li>
 <li><strong>default_cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.</li>
 <li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of Amazon EC2 instances that
@@ -223,7 +267,7 @@ syntax is exactly the same as the separate
 resource, without the <cite>autoscaling_group_name</cite> attribute. Please note that this will only work when creating
 a new autoscaling group. For all other use-cases, please use <cite>aws_autoscaling_lifecycle_hook</cite> resource.</li>
 <li><strong>launch_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch configuration to use.</li>
-<li><strong>launch_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument with Launch template specification to use to launch instances. Defined below.</li>
+<li><strong>launch_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing launch template settings along with the overrides to specify multiple instance types. Defined below.</li>
 <li><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the autoscaling
 group names. Only valid for classic load balancers. For ALBs, use <cite>target_group_arns</cite> instead.</li>
 <li><strong>max_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size of the auto scale group.</li>
@@ -342,7 +386,7 @@ a new autoscaling group. For all other use-cases, please use <cite>aws_autoscali
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.launch_template">
 <code class="descname">launch_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.launch_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nested argument with Launch template specification to use to launch instances. Defined below.</p>
+<dd><p>Nested argument containing launch template settings along with the overrides to specify multiple instance types. Defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -508,7 +552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.LifecycleHook">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">LifecycleHook</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>autoscaling_group_name=None</em>, <em>default_result=None</em>, <em>heartbeat_timeout=None</em>, <em>lifecycle_transition=None</em>, <em>name=None</em>, <em>notification_metadata=None</em>, <em>notification_target_arn=None</em>, <em>role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">LifecycleHook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling_group_name=None</em>, <em>default_result=None</em>, <em>heartbeat_timeout=None</em>, <em>lifecycle_transition=None</em>, <em>name=None</em>, <em>notification_metadata=None</em>, <em>notification_target_arn=None</em>, <em>role_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.LifecycleHook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Lifecycle Hook resource.</p>
 <p>&gt; <strong>NOTE:</strong> Terraform has two types of ways you can add lifecycle hooks - via
 the <cite>initial_lifecycle_hook</cite> attribute from the
@@ -526,8 +570,8 @@ but take care to not duplicate those hooks with this resource.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Auto Scaling group to which you want to assign the lifecycle hook</li>
 <li><strong>default_result</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.</li>
 <li><strong>heartbeat_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter</li>
@@ -631,7 +675,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Notification">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Notification</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>group_names=None</em>, <em>notifications=None</em>, <em>topic_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Notification</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>group_names=None</em>, <em>notifications=None</em>, <em>topic_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Group with Notification support, via SNS Topics. Each of
 the <cite>notifications</cite> map to a [Notification Configuration][2] inside Amazon Web
 Services, and are applied to each AutoScaling Group you supply.</p>
@@ -640,8 +684,8 @@ Services, and are applied to each AutoScaling Group you supply.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of AutoScaling Group Names</li>
 <li><strong>notifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Notification Types that trigger
 notifications. Acceptable values are documented [in the AWS documentation here][1]</li>
@@ -712,7 +756,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>adjustment_type=None</em>, <em>autoscaling_group_name=None</em>, <em>cooldown=None</em>, <em>estimated_instance_warmup=None</em>, <em>metric_aggregation_type=None</em>, <em>min_adjustment_magnitude=None</em>, <em>min_adjustment_step=None</em>, <em>name=None</em>, <em>policy_type=None</em>, <em>scaling_adjustment=None</em>, <em>step_adjustments=None</em>, <em>target_tracking_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>adjustment_type=None</em>, <em>autoscaling_group_name=None</em>, <em>cooldown=None</em>, <em>estimated_instance_warmup=None</em>, <em>metric_aggregation_type=None</em>, <em>min_adjustment_magnitude=None</em>, <em>min_adjustment_step=None</em>, <em>name=None</em>, <em>policy_type=None</em>, <em>scaling_adjustment=None</em>, <em>step_adjustments=None</em>, <em>target_tracking_configuration=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Scaling Policy resource.</p>
 <p>&gt; <strong>NOTE:</strong> You may want to omit <cite>desired_capacity</cite> attribute from attached <cite>aws_autoscaling_group</cite>
 when using autoscaling policies. It’s good practice to pick either
@@ -724,8 +768,8 @@ or [dynamic](<a class="reference external" href="https://docs.aws.amazon.com/Aut
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>adjustment_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are <cite>ChangeInCapacity</cite>, <cite>ExactCapacity</cite>, and <cite>PercentChangeInCapacity</cite>.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the autoscaling group.</li>
 <li><strong>cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
@@ -856,15 +900,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.autoscaling.Schedule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Schedule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>autoscaling_group_name=None</em>, <em>desired_capacity=None</em>, <em>end_time=None</em>, <em>max_size=None</em>, <em>min_size=None</em>, <em>recurrence=None</em>, <em>scheduled_action_name=None</em>, <em>start_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">Schedule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling_group_name=None</em>, <em>desired_capacity=None</em>, <em>end_time=None</em>, <em>max_size=None</em>, <em>min_size=None</em>, <em>recurrence=None</em>, <em>scheduled_action_name=None</em>, <em>start_time=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.Schedule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AutoScaling Schedule resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>autoscaling_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or Amazon Resource Name (ARN) of the Auto Scaling group.</li>
 <li><strong>desired_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don’t want to change the desired capacity at the scheduled time.</li>
 <li><strong>end_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time for this action to end, in “YYYY-MM-DDThh:mm:ssZ” format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).

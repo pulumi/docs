@@ -2,15 +2,15 @@
 <span id="elastictranscoder"></span><h1>elastictranscoder<a class="headerlink" href="#module-pulumi_aws.elastictranscoder" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.elastictranscoder.Pipeline">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>aws_kms_key_arn=None</em>, <em>content_config=None</em>, <em>content_config_permissions=None</em>, <em>input_bucket=None</em>, <em>name=None</em>, <em>notifications=None</em>, <em>output_bucket=None</em>, <em>role=None</em>, <em>thumbnail_config=None</em>, <em>thumbnail_config_permissions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_kms_key_arn=None</em>, <em>content_config=None</em>, <em>content_config_permissions=None</em>, <em>input_bucket=None</em>, <em>name=None</em>, <em>notifications=None</em>, <em>output_bucket=None</em>, <em>role=None</em>, <em>thumbnail_config=None</em>, <em>thumbnail_config_permissions=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder pipeline resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aws_kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.</li>
 <li><strong>content_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)</li>
 <li><strong>content_config_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The permissions for the <cite>content_config</cite> object. (documented below)</li>
@@ -128,15 +128,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elastictranscoder.Preset">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Preset</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>audio=None</em>, <em>audio_codec_options=None</em>, <em>container=None</em>, <em>description=None</em>, <em>name=None</em>, <em>thumbnails=None</em>, <em>type=None</em>, <em>video=None</em>, <em>video_codec_options=None</em>, <em>video_watermarks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elastictranscoder.</code><code class="descname">Preset</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audio=None</em>, <em>audio_codec_options=None</em>, <em>container=None</em>, <em>description=None</em>, <em>name=None</em>, <em>thumbnails=None</em>, <em>type=None</em>, <em>video=None</em>, <em>video_codec_options=None</em>, <em>video_watermarks=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Transcoder preset resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>audio</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Audio parameters object (documented below).</li>
 <li><strong>audio_codec_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Codec options for the audio parameters (documented below)</li>
 <li><strong>container</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container type for the output file. Valid values are <cite>flac</cite>, <cite>flv</cite>, <cite>fmp4</cite>, <cite>gif</cite>, <cite>mp3</cite>, <cite>mp4</cite>, <cite>mpg</cite>, <cite>mxf</cite>, <cite>oga</cite>, <cite>ogg</cite>, <cite>ts</cite>, and <cite>webm</cite>.</li>

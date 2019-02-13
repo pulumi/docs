@@ -2,7 +2,7 @@
 <span id="bigquery"></span><h1>bigquery<a class="headerlink" href="#module-pulumi_gcp.bigquery" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.Dataset">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Dataset</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>accesses=None</em>, <em>dataset_id=None</em>, <em>default_table_expiration_ms=None</em>, <em>description=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>location=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Dataset</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accesses=None</em>, <em>dataset_id=None</em>, <em>default_table_expiration_ms=None</em>, <em>description=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>location=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dataset resource for Google BigQuery. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/bigquery/docs/">https://cloud.google.com/bigquery/docs/</a>) and
 [API](<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets">https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets</a>).</p>
@@ -11,8 +11,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of objects that define dataset access for
 one or more entities. Structure is documented below.</li>
 <li><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the dataset containing this table.</li>
@@ -151,7 +151,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.bigquery.Table">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>dataset_id=None</em>, <em>description=None</em>, <em>expiration_time=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>project=None</em>, <em>schema=None</em>, <em>table_id=None</em>, <em>time_partitioning=None</em>, <em>view=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigquery.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dataset_id=None</em>, <em>description=None</em>, <em>expiration_time=None</em>, <em>friendly_name=None</em>, <em>labels=None</em>, <em>project=None</em>, <em>schema=None</em>, <em>table_id=None</em>, <em>time_partitioning=None</em>, <em>view=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigquery.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a table resource in a dataset for Google BigQuery. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/bigquery/docs/">https://cloud.google.com/bigquery/docs/</a>) and
 [API](<a class="reference external" href="https://cloud.google.com/bigquery/docs/reference/rest/v2/tables">https://cloud.google.com/bigquery/docs/reference/rest/v2/tables</a>).</p>
@@ -160,8 +160,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>dataset_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The dataset ID to create the table in.
 Changing this forces a new resource to be created.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The field description.</li>

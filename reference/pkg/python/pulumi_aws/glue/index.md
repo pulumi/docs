@@ -2,15 +2,15 @@
 <span id="glue"></span><h1>glue<a class="headerlink" href="#module-pulumi_aws.glue" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.glue.CatalogDatabase">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">CatalogDatabase</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>catalog_id=None</em>, <em>description=None</em>, <em>location_uri=None</em>, <em>name=None</em>, <em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">CatalogDatabase</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>catalog_id=None</em>, <em>description=None</em>, <em>location_uri=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Database Resource. You can refer to the [Glue Developer Guide](<a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html</a>) for a full explanation of the Glue Data Catalog functionality</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Glue Catalog to create the database in. If omitted, this defaults to the AWS Account ID.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the database.</li>
 <li><strong>location_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the database (for example, an HDFS path).</li>
@@ -93,15 +93,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.CatalogTable">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">CatalogTable</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>catalog_id=None</em>, <em>database_name=None</em>, <em>description=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>parameters=None</em>, <em>partition_keys=None</em>, <em>retention=None</em>, <em>storage_descriptor=None</em>, <em>table_type=None</em>, <em>view_expanded_text=None</em>, <em>view_original_text=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">CatalogTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>catalog_id=None</em>, <em>database_name=None</em>, <em>description=None</em>, <em>name=None</em>, <em>owner=None</em>, <em>parameters=None</em>, <em>partition_keys=None</em>, <em>retention=None</em>, <em>storage_descriptor=None</em>, <em>table_type=None</em>, <em>view_expanded_text=None</em>, <em>view_original_text=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Guide](<a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html</a>) for a full explanation of the Glue Data Catalog functionality.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.</li>
 <li><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the table.</li>
@@ -233,7 +233,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Classifier">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Classifier</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>grok_classifier=None</em>, <em>json_classifier=None</em>, <em>name=None</em>, <em>xml_classifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Classifier</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>grok_classifier=None</em>, <em>json_classifier=None</em>, <em>name=None</em>, <em>xml_classifier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Classifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Classifier resource.</p>
 <p>&gt; <strong>NOTE:</strong> It is only valid to create one type of classifier (grok, JSON, or XML). Changing classifier types will recreate the classifier.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -241,8 +241,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>grok_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier that uses grok patterns. Defined below.</li>
 <li><strong>json_classifier</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A classifier for JSON content. Defined below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the classifier.</li>
@@ -318,15 +318,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Connection">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>catalog_id=None</em>, <em>connection_properties=None</em>, <em>connection_type=None</em>, <em>description=None</em>, <em>match_criterias=None</em>, <em>name=None</em>, <em>physical_connection_requirements=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>catalog_id=None</em>, <em>connection_properties=None</em>, <em>connection_type=None</em>, <em>description=None</em>, <em>match_criterias=None</em>, <em>name=None</em>, <em>physical_connection_requirements=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Connection resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>catalog_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</li>
 <li><strong>connection_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key-value pairs used as parameters for this connection.</li>
 <li><strong>connection_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the connection. Defaults to <cite>JBDC</cite>.</li>
@@ -423,15 +423,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Crawler">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Crawler</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>classifiers=None</em>, <em>configuration=None</em>, <em>database_name=None</em>, <em>description=None</em>, <em>dynamodb_targets=None</em>, <em>jdbc_targets=None</em>, <em>name=None</em>, <em>role=None</em>, <em>s3_targets=None</em>, <em>schedule=None</em>, <em>schema_change_policy=None</em>, <em>security_configuration=None</em>, <em>table_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Crawler</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>classifiers=None</em>, <em>configuration=None</em>, <em>database_name=None</em>, <em>description=None</em>, <em>dynamodb_targets=None</em>, <em>jdbc_targets=None</em>, <em>name=None</em>, <em>role=None</em>, <em>s3_targets=None</em>, <em>schedule=None</em>, <em>schema_change_policy=None</em>, <em>security_configuration=None</em>, <em>table_prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](<a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html</a>)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>classifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.</li>
 <li><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of configuration information.</li>
 <li><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Glue database where results are written.</li>
@@ -594,15 +594,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Job">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocated_capacity=None</em>, <em>command=None</em>, <em>connections=None</em>, <em>default_arguments=None</em>, <em>description=None</em>, <em>execution_property=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>security_configuration=None</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_capacity=None</em>, <em>command=None</em>, <em>connections=None</em>, <em>default_arguments=None</em>, <em>description=None</em>, <em>execution_property=None</em>, <em>max_retries=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>security_configuration=None</em>, <em>timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Job resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</li>
 <li><strong>command</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The command of the job. Defined below.</li>
 <li><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of connections used for this job.</li>
@@ -727,15 +727,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.SecurityConfiguration">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">SecurityConfiguration</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>encryption_configuration=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">SecurityConfiguration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>encryption_configuration=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Security Configuration.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing encryption configuration. Detailed below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the security configuration.</li>
 </ul>
@@ -797,15 +797,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.glue.Trigger">
-<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>actions=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>predicate=None</em>, <em>schedule=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.glue.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>description=None</em>, <em>enabled=None</em>, <em>name=None</em>, <em>predicate=None</em>, <em>schedule=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Trigger resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of actions initiated by this trigger when it fires. Defined below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the new trigger.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Start the trigger. Defaults to <cite>true</cite>. Not valid to disable for <cite>ON_DEMAND</cite> type.</li>

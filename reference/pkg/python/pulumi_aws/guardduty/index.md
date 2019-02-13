@@ -2,7 +2,7 @@
 <span id="guardduty"></span><h1>guardduty<a class="headerlink" href="#module-pulumi_aws.guardduty" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.guardduty.Detector">
-<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">Detector</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enable=None</em>, <em>finding_publishing_frequency=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Detector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">Detector</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enable=None</em>, <em>finding_publishing_frequency=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Detector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a GuardDuty detector.</p>
 <p>&gt; <strong>NOTE:</strong> Deleting this resource is equivalent to “disabling” GuardDuty for an AWS region, which removes all existing findings. You can set the <cite>enable</cite> attribute to <cite>false</cite> to instead “suspend” monitoring and feedback reporting while keeping existing data. See the [Suspending or Disabling Amazon GuardDuty documentation](<a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html">https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_suspend-disable.html</a>) for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable monitoring and feedback reporting. Setting to <cite>false</cite> is equivalent to “suspending” GuardDuty. Defaults to <cite>true</cite>.</li>
 <li><strong>finding_publishing_frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the frequency of notifications sent for subsequent finding occurrences. Valid values: <cite>FIFTEEN_MINUTES, ONE_HOUR, SIX_HOURS</cite>. Default: <cite>SIX_HOURS</cite>. See [AWS Documentation](<a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency</a>) for more information.</li>
 </ul>
@@ -79,7 +79,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.guardduty.IPSet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">IPSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>activate=None</em>, <em>detector_id=None</em>, <em>format=None</em>, <em>location=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.IPSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">IPSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>activate=None</em>, <em>detector_id=None</em>, <em>format=None</em>, <em>location=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.IPSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a GuardDuty IPSet.</p>
 <p>&gt; <strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage IPSets. IPSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](<a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html">https://docs.aws.amazon.com/guardduty/latest/ug/create-ip-set.html</a>)</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -87,8 +87,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>activate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether GuardDuty is to start using the uploaded IPSet.</li>
 <li><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the GuardDuty.</li>
 <li><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the file that contains the IPSet. Valid values: <cite>TXT</cite> | <cite>STIX</cite> | <cite>OTX_CSV</cite> | <cite>ALIEN_VAULT</cite> | <cite>PROOF_POINT</cite> | <cite>FIRE_EYE</cite></li>
@@ -171,7 +171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.guardduty.Member">
-<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">Member</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_id=None</em>, <em>detector_id=None</em>, <em>disable_email_notification=None</em>, <em>email=None</em>, <em>invitation_message=None</em>, <em>invite=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Member" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">Member</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>detector_id=None</em>, <em>disable_email_notification=None</em>, <em>email=None</em>, <em>invitation_message=None</em>, <em>invite=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.Member" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a GuardDuty member.</p>
 <p>&gt; <strong>NOTE:</strong> Currently after using this resource, you must manually accept member account invitations before GuardDuty will begin sending cross-account events. More information for how to accomplish this via the AWS Console or API can be found in the [GuardDuty User Guide](<a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_accounts.html">https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_accounts.html</a>). Terraform implementation of the member acceptance resource can be tracked in [Github](<a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues/2489">https://github.com/terraform-providers/terraform-provider-aws/issues/2489</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -179,8 +179,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID for member account.</li>
 <li><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the GuardDuty account where you want to create member accounts.</li>
 <li><strong>disable_email_notification</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether an email notification is sent to the accounts. Defaults to <cite>false</cite>.</li>
@@ -276,7 +276,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.guardduty.ThreatIntelSet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">ThreatIntelSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>activate=None</em>, <em>detector_id=None</em>, <em>format=None</em>, <em>location=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.ThreatIntelSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">ThreatIntelSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>activate=None</em>, <em>detector_id=None</em>, <em>format=None</em>, <em>location=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.ThreatIntelSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a GuardDuty ThreatIntelSet.</p>
 <p>&gt; <strong>Note:</strong> Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the master account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](<a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html">https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html</a>)</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -284,8 +284,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>activate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.</li>
 <li><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the GuardDuty.</li>
 <li><strong>format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the file that contains the ThreatIntelSet. Valid values: <cite>TXT</cite> | <cite>STIX</cite> | <cite>OTX_CSV</cite> | <cite>ALIEN_VAULT</cite> | <cite>PROOF_POINT</cite> | <cite>FIRE_EYE</cite></li>

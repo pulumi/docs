@@ -2,15 +2,15 @@
 <span id="ecs"></span><h1>ecs<a class="headerlink" href="#module-pulumi_aws.ecs" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ecs.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</li>
 </ul>
@@ -264,17 +264,68 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.Service">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster=None</em>, <em>deployment_controller=None</em>, <em>deployment_maximum_percent=None</em>, <em>deployment_minimum_healthy_percent=None</em>, <em>desired_count=None</em>, <em>enable_ecs_managed_tags=None</em>, <em>health_check_grace_period_seconds=None</em>, <em>iam_role=None</em>, <em>launch_type=None</em>, <em>load_balancers=None</em>, <em>name=None</em>, <em>network_configuration=None</em>, <em>ordered_placement_strategies=None</em>, <em>placement_constraints=None</em>, <em>placement_strategies=None</em>, <em>platform_version=None</em>, <em>propagate_tags=None</em>, <em>scheduling_strategy=None</em>, <em>service_registries=None</em>, <em>tags=None</em>, <em>task_definition=None</em>, <em>wait_for_steady_state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>-&gt; <strong>Note:</strong> To prevent a race condition during service deletion, make sure to set <cite>depends_on</cite> to the related <cite>aws_iam_role_policy</cite>; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the <cite>DRAINING</cite> state.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster=None</em>, <em>deployment_controller=None</em>, <em>deployment_maximum_percent=None</em>, <em>deployment_minimum_healthy_percent=None</em>, <em>desired_count=None</em>, <em>enable_ecs_managed_tags=None</em>, <em>health_check_grace_period_seconds=None</em>, <em>iam_role=None</em>, <em>launch_type=None</em>, <em>load_balancers=None</em>, <em>name=None</em>, <em>network_configuration=None</em>, <em>ordered_placement_strategies=None</em>, <em>placement_constraints=None</em>, <em>placement_strategies=None</em>, <em>platform_version=None</em>, <em>propagate_tags=None</em>, <em>scheduling_strategy=None</em>, <em>service_registries=None</em>, <em>tags=None</em>, <em>task_definition=None</em>, <em>wait_for_steady_state=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.Service" title="Permalink to this definition">¶</a></dt>
+<dd><p>&gt; <strong>Note:</strong> To prevent a race condition during service deletion, make sure to set <cite>depends_on</cite> to the related <cite>aws_iam_role_policy</cite>; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the <cite>DRAINING</cite> state.</p>
 <p>Provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it (typically a webserver or a database).</p>
 <p>See [ECS Services section in AWS developer guide](<a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html</a>).</p>
+<p>## deployment_controller</p>
+<p>The <cite>deployment_controller</cite> configuration block supports the following:</p>
+<ul class="simple">
+<li><cite>type</cite> - (Optional) Type of deployment controller. Valid values: <cite>CODE_DEPLOY</cite>, <cite>ECS</cite>. Default: <cite>ECS</cite>.</li>
+</ul>
+<p>## load_balancer</p>
+<p><cite>load_balancer</cite> supports the following:</p>
+<ul class="simple">
+<li><cite>elb_name</cite> - (Required for ELB Classic) The name of the ELB (Classic) to associate with the service.</li>
+<li><cite>target_group_arn</cite> - (Required for ALB/NLB) The ARN of the Load Balancer target group to associate with the service.</li>
+<li><cite>container_name</cite> - (Required) The name of the container to associate with the load balancer (as it appears in a container definition).</li>
+<li><cite>container_port</cite> - (Required) The port on the container to associate with the load balancer.</li>
+</ul>
+<p>&gt; <strong>Note:</strong> As a result of an AWS limitation, a single <cite>load_balancer</cite> can be attached to the ECS service at most. See [related docs](<a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html#load-balancing-concepts">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html#load-balancing-concepts</a>).</p>
+<p>## ordered_placement_strategy</p>
+<p><cite>ordered_placement_strategy</cite> supports the following:</p>
+<ul class="simple">
+<li><cite>type</cite> - (Required) The type of placement strategy. Must be one of: <cite>binpack</cite>, <cite>random</cite>, or <cite>spread</cite></li>
+<li><cite>field</cite> - (Optional) For the <cite>spread</cite> placement strategy, valid values are <cite>instanceId</cite> (or <cite>host</cite>,</li>
+</ul>
+<blockquote>
+<div>which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the <cite>binpack</cite> type, valid values are <cite>memory</cite> and <cite>cpu</cite>. For the <cite>random</cite> type, this attribute is not
+needed. For more information, see [Placement Strategy](<a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html">https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html</a>).</div></blockquote>
+<p>&gt; <strong>Note:</strong> for <cite>spread</cite>, <cite>host</cite> and <cite>instanceId</cite> will be normalized, by AWS, to be <cite>instanceId</cite>. This means the statefile will show <cite>instanceId</cite> but your config will differ if you use <cite>host</cite>.</p>
+<p>## placement_constraints</p>
+<p><cite>placement_constraints</cite> support the following:</p>
+<ul class="simple">
+<li><cite>type</cite> - (Required) The type of constraint. The only valid values at this time are <cite>memberOf</cite> and <cite>distinctInstance</cite>.</li>
+<li><cite>expression</cite> -  (Optional) Cluster Query Language expression to apply to the constraint. Does not need to be specified</li>
+</ul>
+<p>for the <cite>distinctInstance</cite> type.
+For more information, see [Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide](<a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html</a>).</p>
+<p>## network_configuration</p>
+<p><cite>network_configuration</cite> support the following:</p>
+<ul class="simple">
+<li><cite>subnets</cite> - (Required) The subnets associated with the task or service.</li>
+<li><cite>security_groups</cite> - (Optional) The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</li>
+<li><cite>assign_public_ip</cite> - (Optional) Assign a public IP address to the ENI (Fargate launch type only). Valid values are <cite>true</cite> or <cite>false</cite>. Default <cite>false</cite>.</li>
+</ul>
+<p>For more information, see [Task Networking](<a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html</a>)</p>
+<p>## service_registries</p>
+<p><cite>service_registries</cite> support the following:</p>
+<ul class="simple">
+<li><cite>registry_arn</cite> - (Required) The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(<cite>aws_service_discovery_service</cite>). For more information, see [Service](<a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html">https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html</a>)</li>
+<li><cite>port</cite> - (Optional) The port value used if your Service Discovery service specified an SRV record.</li>
+<li><cite>container_port</cite> - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.</li>
+<li><cite>container_name</cite> - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of an ECS cluster</li>
 <li><strong>deployment_controller</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing deployment controller configuration. Defined below.</li>
 <li><strong>deployment_maximum_percent</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The upper limit (as a percentage of the service’s desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the <cite>DAEMON</cite> scheduling strategy.</li>
@@ -477,15 +528,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.TaskDefinition">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">TaskDefinition</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_definitions=None</em>, <em>cpu=None</em>, <em>execution_role_arn=None</em>, <em>family=None</em>, <em>ipc_mode=None</em>, <em>memory=None</em>, <em>network_mode=None</em>, <em>pid_mode=None</em>, <em>placement_constraints=None</em>, <em>requires_compatibilities=None</em>, <em>tags=None</em>, <em>task_role_arn=None</em>, <em>volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ecs.</code><code class="descname">TaskDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_definitions=None</em>, <em>cpu=None</em>, <em>execution_role_arn=None</em>, <em>family=None</em>, <em>ipc_mode=None</em>, <em>memory=None</em>, <em>network_mode=None</em>, <em>pid_mode=None</em>, <em>placement_constraints=None</em>, <em>requires_compatibilities=None</em>, <em>tags=None</em>, <em>task_role_arn=None</em>, <em>volumes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a revision of an ECS task definition to be used in <cite>aws_ecs_service</cite>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_definitions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A list of valid [container definitions]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html">http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html</a>) provided as a
 single valid JSON document. Please note that you should only provide values that are part of the container

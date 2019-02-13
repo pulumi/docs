@@ -2,15 +2,15 @@
 <span id="datalake"></span><h1>datalake<a class="headerlink" href="#module-pulumi_azure.datalake" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.datalake.AnalyticsAccount">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsAccount</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsAccount</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Data Lake Analytics Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_store_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the data lake store to use by default. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Analytics Account. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>
@@ -100,15 +100,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.AnalyticsFirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Analytics Firewall Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Analytics for which the Firewall Rule should take effect.</li>
 <li><strong>end_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End IP Address for the firewall rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Analytics. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>
@@ -239,17 +239,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.Store">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">Store</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">Store</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Data Lake Store.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>encryption_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Is Encryption enabled on this Data Lake Store Account? Possible values are <cite>Enabled</cite> or <cite>Disabled</cite>. Defaults to <cite>Enabled</cite>.</li>
-<li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Encryption Type used for this Data Lake Store Account. Currently can be set to <cite>SystemManaged</cite> when <cite>encryption_state</cite> is <cite>Enabled</cite> - and must be a blank string when it’s Disabled.</li>
+<li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Encryption Type used for this Data Lake Store Account. Currently can be set to <cite>ServiceManaged</cite> when <cite>encryption_state</cite> is <cite>Enabled</cite> - and must be a blank string when it’s Disabled.</li>
 <li><strong>firewall_allow_azure_ips</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – are Azure Service IP’s allowed through the firewall? Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>. Defaults to <cite>Enabled.</cite></li>
 <li><strong>firewall_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the state of the Firewall. Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>. Defaults to <cite>Enabled.</cite></li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
@@ -271,7 +271,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.encryption_type">
 <code class="descname">encryption_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.encryption_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Encryption Type used for this Data Lake Store Account. Currently can be set to <cite>SystemManaged</cite> when <cite>encryption_state</cite> is <cite>Enabled</cite> - and must be a blank string when it’s Disabled.</p>
+<dd><p>The Encryption Type used for this Data Lake Store Account. Currently can be set to <cite>ServiceManaged</cite> when <cite>encryption_state</cite> is <cite>Enabled</cite> - and must be a blank string when it’s Disabled.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -364,7 +364,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.StoreFile">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFile</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Store File.</p>
 <p>&gt; <strong>Note:</strong> If you want to change the data in the remote file without changing the <cite>local_file_path</cite>, then 
 taint the resource so the <cite>azurerm_data_lake_store_file</cite> gets recreated with the new data.</p>
@@ -373,8 +373,8 @@ taint the resource so the <cite>azurerm_data_lake_store_file</cite> gets recreat
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store for which the File should created.</li>
 <li><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the local file to be added to the Data Lake Store.</li>
 <li><strong>remote_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path created for the file on the Data Lake Store.</li>
@@ -443,15 +443,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.StoreFirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Store Firewall Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store for which the Firewall Rule should take effect.</li>
 <li><strong>end_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End IP Address for the firewall rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>

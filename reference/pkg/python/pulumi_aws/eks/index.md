@@ -2,15 +2,15 @@
 <span id="eks"></span><h1>eks<a class="headerlink" href="#module-pulumi_aws.eks" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.eks.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EKS Cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster.</li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.</li>
 <li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Desired Kubernetes master version. If you do not specify a value, the latest available version is used.</li>
@@ -109,6 +109,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.eks.GetClusterAuthResult">
+<em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterAuthResult</code><span class="sig-paren">(</span><em>token=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterAuthResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getClusterAuth.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterAuthResult.token">
+<code class="descname">token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterAuthResult.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>The token to use to authenticate with the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterAuthResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterAuthResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.eks.GetClusterResult">
 <em class="property">class </em><code class="descclassname">pulumi_aws.eks.</code><code class="descname">GetClusterResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>certificate_authority=None</em>, <em>created_at=None</em>, <em>endpoint=None</em>, <em>platform_version=None</em>, <em>role_arn=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
@@ -172,6 +190,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.eks.get_cluster">
 <code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EKS Cluster.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.eks.get_cluster_auth">
+<code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster_auth</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster_auth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an authentication token to communicate with an EKS cluster.</p>
+<p>Uses IAM credentials from the AWS provider to generate a temporary token that is compatible with
+[AWS IAM Authenticator](<a class="reference external" href="https://github.com/kubernetes-sigs/aws-iam-authenticator">https://github.com/kubernetes-sigs/aws-iam-authenticator</a>) authentication.
+This can be used to authenticate to an EKS cluster or to a cluster that has the AWS IAM Authenticator
+server configured.</p>
 </dd></dl>
 
 </div>

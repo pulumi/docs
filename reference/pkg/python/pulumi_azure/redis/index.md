@@ -2,15 +2,37 @@
 <span id="redis"></span><h1>redis<a class="headerlink" href="#module-pulumi_azure.redis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.redis.Cache">
-<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>capacity=None</em>, <em>enable_non_ssl_port=None</em>, <em>family=None</em>, <em>location=None</em>, <em>name=None</em>, <em>patch_schedules=None</em>, <em>private_static_ip_address=None</em>, <em>redis_configuration=None</em>, <em>resource_group_name=None</em>, <em>shard_count=None</em>, <em>sku_name=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capacity=None</em>, <em>enable_non_ssl_port=None</em>, <em>family=None</em>, <em>location=None</em>, <em>name=None</em>, <em>patch_schedules=None</em>, <em>private_static_ip_address=None</em>, <em>redis_configuration=None</em>, <em>resource_group_name=None</em>, <em>shard_count=None</em>, <em>sku_name=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.Cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Redis Cache.</p>
+<p>## Default Redis Configuration Values</p>
+<div class="line-block">
+<div class="line">Redis Value        | Basic        | Standard     | Premium      |</div>
+<div class="line">—————— | ———— | ———— | ———— |</div>
+<div class="line">maxmemory_reserved | 2            | 50           | 200          |</div>
+<div class="line">maxmemory_delta    | 2            | 50           | 200          |</div>
+<div class="line">maxmemory_policy   | volatile-lru | volatile-lru | volatile-lru |</div>
+</div>
+<p>_*Important*: The <cite>maxmemory_reserved</cite> and <cite>maxmemory_delta</cite> settings are only available for Standard and Premium caches. More details are available in the Relevant Links section below._</p>
+<ul class="simple">
+<li><cite>patch_schedule</cite> supports the following:</li>
+<li><cite>day_of_week</cite> (Required) the Weekday name - possible values include <cite>Monday</cite>, <cite>Tuesday</cite>, <cite>Wednesday</cite> etc.</li>
+<li><cite>start_hour_utc</cite> - (Optional) the Start Hour for maintenance in UTC - possible values range from <cite>0 - 23</cite>.</li>
+</ul>
+<p>&gt; <strong>Note:</strong> The Patch Window lasts for <cite>5</cite> hours from the <cite>start_hour_utc</cite>.</p>
+<p>## Relevant Links</p>
+<blockquote>
+<div><ul class="simple">
+<li>[Azure Redis Cache: SKU specific configuration limitations](<a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings">https://azure.microsoft.com/en-us/documentation/articles/cache-configure/#advanced-settings</a>)</li>
+<li>[Redis: Available Configuration Settings](<a class="reference external" href="http://redis.io/topics/config">http://redis.io/topics/config</a>)</li>
+</ul>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the Redis cache to deploy. Valid values for a SKU <cite>family</cite> of C (Basic/Standard) are <cite>0, 1, 2, 3, 4, 5, 6</cite>, and for P (Premium) <cite>family</cite> are <cite>1, 2, 3, 4</cite>.</li>
 <li><strong>enable_non_ssl_port</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable the non-SSL port (6789) - disabled by default.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU family to use. Valid values are <cite>C</cite> and <cite>P</cite>, where C = Basic/Standard, P = Premium.</li>
@@ -190,15 +212,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.redis.FirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>end_ip=None</em>, <em>name=None</em>, <em>redis_cache_name=None</em>, <em>resource_group_name=None</em>, <em>start_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.redis.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>end_ip=None</em>, <em>name=None</em>, <em>redis_cache_name=None</em>, <em>resource_group_name=None</em>, <em>start_ip=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.redis.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Firewall Rule associated with a Redis Cache.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>end_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The highest IP address included in the range.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Firewall Rule. Changing this forces a new resource to be created.</li>
 <li><strong>redis_cache_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redis Cache. Changing this forces a new resource to be created.</li>

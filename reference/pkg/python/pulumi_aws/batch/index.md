@@ -2,7 +2,7 @@
 <span id="batch"></span><h1>batch<a class="headerlink" href="#module-pulumi_aws.batch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.batch.ComputeEnvironment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">ComputeEnvironment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_environment_name=None</em>, <em>compute_resources=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">ComputeEnvironment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_environment_name=None</em>, <em>compute_resources=None</em>, <em>service_role=None</em>, <em>state=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.ComputeEnvironment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a AWS Batch compute environment. Compute environments contain the Amazon ECS container instances that are used to run containerized batch jobs.</p>
 <p>For information about AWS Batch, see [What is AWS Batch?][1] .
 For information about compute environment, see [Compute Environments][2] .</p>
@@ -15,8 +15,8 @@ For information about compute environment, see [Compute Environments][2] .</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_environment_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed.</li>
 <li><strong>compute_resources</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.</li>
 <li><strong>service_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.</li>
@@ -230,15 +230,25 @@ of the job queue.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.batch.JobDefinition">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobDefinition</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_properties=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>retry_strategy=None</em>, <em>timeout=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobDefinition</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_properties=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>retry_strategy=None</em>, <em>timeout=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Definition resource.</p>
+<p>## retry_strategy</p>
+<p><cite>retry_strategy</cite> supports the following:</p>
+<ul class="simple">
+<li><cite>attempts</cite> - (Optional) The number of times to move a job to the <cite>RUNNABLE</cite> status. You may specify between <cite>1</cite> and <cite>10</cite> attempts.</li>
+</ul>
+<p>## timeout</p>
+<p><cite>timeout</cite> supports the following:</p>
+<ul class="simple">
+<li><cite>attempt_duration_seconds</cite> - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is <cite>60</cite> seconds.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_properties</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid [container properties](<a class="reference external" href="http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html">http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html</a>)
 provided as a single valid JSON document. This parameter is required if the <cite>type</cite> parameter is <cite>container</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the job definition.</li>
@@ -344,15 +354,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.batch.JobQueue">
-<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobQueue</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compute_environments=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.batch.</code><code class="descname">JobQueue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compute_environments=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>state=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.batch.JobQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Batch Job Queue resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compute_environments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the set of compute environments
 mapped to a job queue and their order.  The position of the compute environments
 in the list will dictate the order. You can associate up to 3 compute environments

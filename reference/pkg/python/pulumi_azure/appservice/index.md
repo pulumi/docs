@@ -2,16 +2,16 @@
 <span id="appservice"></span><h1>appservice<a class="headerlink" href="#module-pulumi_azure.appservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.appservice.ActiveSlot">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">ActiveSlot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_service_name=None</em>, <em>app_service_slot_name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">ActiveSlot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_slot_name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.ActiveSlot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Promotes an App Service Slot to Production within an App Service.</p>
-<p>-&gt; <strong>Note:</strong> When using Slots - the <cite>app_settings</cite>, <cite>connection_string</cite> and <cite>site_config</cite> blocks on the <cite>azurerm_app_service</cite> resource will be overwritten when promoting a Slot using the <cite>azurerm_app_service_active_slot</cite> resource.</p>
+<p>&gt; <strong>Note:</strong> When using Slots - the <cite>app_settings</cite>, <cite>connection_string</cite> and <cite>site_config</cite> blocks on the <cite>azurerm_app_service</cite> resource will be overwritten when promoting a Slot using the <cite>azurerm_app_service_active_slot</cite> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service within which the Slot exists.  Changing this forces a new resource to be created.</li>
 <li><strong>app_service_slot_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service Slot which should be promoted to the Production Slot within the App Service.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.</li>
@@ -80,19 +80,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.AppService">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AppService</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">AppService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.AppService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service (within an App Service Plan).</p>
-<p>-&gt; <strong>Note:</strong> When using Slots - the <cite>app_settings</cite>, <cite>connection_string</cite> and <cite>site_config</cite> blocks on the <cite>azurerm_app_service</cite> resource will be overwritten when promoting a Slot using the <cite>azurerm_app_service_active_slot</cite> resource.</p>
+<p>&gt; <strong>Note:</strong> When using Slots - the <cite>app_settings</cite>, <cite>connection_string</cite> and <cite>site_config</cite> blocks on the <cite>azurerm_app_service</cite> resource will be overwritten when promoting a Slot using the <cite>azurerm_app_service_active_slot</cite> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this App Service. Changing this forces a new resource to be created.</li>
 <li><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</li>
 <li><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?</li>
+<li><strong>client_cert_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does the App Service require client certificates for incoming requests? Defaults to <cite>false</cite>.</li>
 <li><strong>connection_strings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An <cite>connection_string</cite> block as defined below.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the App Service Enabled? Changing this forces a new resource to be created.</li>
 <li><strong>https_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can the App Service only be accessed via HTTPS? Defaults to <cite>false</cite>.</li>
@@ -123,6 +124,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.AppService.client_affinity_enabled">
 <code class="descname">client_affinity_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.client_affinity_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Should the App Service send session affinity cookies, which route client requests in the same session to the same instance?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.AppService.client_cert_enabled">
+<code class="descname">client_cert_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.AppService.client_cert_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the App Service require client certificates for incoming requests? Defaults to <cite>false</cite>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -251,15 +258,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.CustomHostnameBinding">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">CustomHostnameBinding</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_service_name=None</em>, <em>hostname=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">CustomHostnameBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>hostname=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.CustomHostnameBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Hostname Binding within an App Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service in which to add the Custom Hostname Binding. Changing this forces a new resource to be created.</li>
 <li><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Custom Hostname to use for the App Service, example <cite>www.example.com</cite>. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the App Service exists. Changing this forces a new resource to be created.</li>
@@ -328,15 +335,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.FunctionApp">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">FunctionApp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enable_builtin_logging=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>storage_connection_string=None</em>, <em>tags=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">FunctionApp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enable_builtin_logging=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>storage_connection_string=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Function App.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this Function App. Changing this forces a new resource to be created.</li>
 <li><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</li>
 <li><strong>client_affinity_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?</li>
@@ -409,6 +416,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.FunctionApp.identity">
 <code class="descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <cite>identity</cite> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.FunctionApp.kind">
+<code class="descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.FunctionApp.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Function App kind - such as <cite>functionapp,linux,container</cite></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -555,7 +568,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.GetAppServiceResult">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServiceResult</code><span class="sig-paren">(</span><em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>location=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>site_config=None</em>, <em>site_credentials=None</em>, <em>source_controls=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">GetAppServiceResult</code><span class="sig-paren">(</span><em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>client_cert_enabled=None</em>, <em>connection_strings=None</em>, <em>default_site_hostname=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>location=None</em>, <em>outbound_ip_addresses=None</em>, <em>possible_outbound_ip_addresses=None</em>, <em>site_config=None</em>, <em>site_credentials=None</em>, <em>source_controls=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAppService.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.appservice.GetAppServiceResult.app_service_plan_id">
@@ -573,6 +586,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appservice.GetAppServiceResult.client_affinity_enabled">
 <code class="descname">client_affinity_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.client_affinity_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Does the App Service send session affinity cookies, which route client requests in the same session to the same instance?</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appservice.GetAppServiceResult.client_cert_enabled">
+<code class="descname">client_cert_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appservice.GetAppServiceResult.client_cert_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does the App Service require client certificates for incoming requests?</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -633,15 +652,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.Plan">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Plan</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_service_environment_id=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Plan</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_environment_id=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>per_site_scaling=None</em>, <em>properties=None</em>, <em>reserved=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an App Service Plan component.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_environment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.</li>
 <li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kind of the App Service Plan to create. Possible values are <cite>Windows</cite> (also available as <cite>App</cite>), <cite>Linux</cite> and <cite>FunctionApp</cite> (for a Consumption Plan). Defaults to <cite>Windows</cite>. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
@@ -759,16 +778,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appservice.Slot">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Slot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_service_name=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Slot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appservice.</code><code class="descname">Slot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_service_name=None</em>, <em>app_service_plan_id=None</em>, <em>app_settings=None</em>, <em>client_affinity_enabled=None</em>, <em>connection_strings=None</em>, <em>enabled=None</em>, <em>https_only=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>site_config=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appservice.Slot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an App Service Slot (within an App Service).</p>
-<p>-&gt; <strong>Note:</strong> When using Slots - the <cite>app_settings</cite>, <cite>connection_string</cite> and <cite>site_config</cite> blocks on the <cite>azurerm_app_service</cite> resource will be overwritten when promoting a Slot using the <cite>azurerm_app_service_active_slot</cite> resource.</p>
+<p>&gt; <strong>Note:</strong> When using Slots - the <cite>app_settings</cite>, <cite>connection_string</cite> and <cite>site_config</cite> blocks on the <cite>azurerm_app_service</cite> resource will be overwritten when promoting a Slot using the <cite>azurerm_app_service_active_slot</cite> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the App Service within which to create the App Service Slot.  Changing this forces a new resource to be created.</li>
 <li><strong>app_service_plan_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the App Service Plan within which to create this App Service Slot. Changing this forces a new resource to be created.</li>
 <li><strong>app_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A key-value pair of App Settings.</li>

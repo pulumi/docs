@@ -2,15 +2,15 @@
 <span id="directoryservice"></span><h1>directoryservice<a class="headerlink" href="#module-pulumi_aws.directoryservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">ConditionalForwader</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">ConditionalForwader</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of directory.</li>
 <li><strong>dns_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of forwarder IP addresses.</li>
 <li><strong>remote_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the remote domain for which forwarders will be used.</li>
@@ -79,7 +79,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.Directory">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">Directory</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">Directory</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Simple or Managed Microsoft directory in AWS Directory Service.</p>
 <p>&gt; <strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
@@ -88,8 +88,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias for the directory (must be unique amongst all aliases in AWS). Required for <cite>enable_sso</cite>.</li>
 <li><strong>connect_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Connector related information about the directory. Fields documented below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description for the directory.</li>

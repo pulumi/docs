@@ -74,19 +74,21 @@
 
 <dl class="class">
 <dt id="pulumi_openstack.dns.RecordSet">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">RecordSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>records=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">RecordSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>records=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS record set in the OpenStack DNS Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the  record set.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record set. Note the <cite>.</cite> at the end of the name.
 Changing this creates a new DNS  record set.</li>
-<li><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of DNS records.</li>
+<li><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of DNS records. _Note:_ if an IPv6 address
+contains brackets (<cite>[ ]</cite>), the brackets will be stripped and the modified
+address will be recorded in the state.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 DNS client.
 If omitted, the <cite>region</cite> argument of the provider is used.
 Changing this creates a new DNS  record set.</li>
@@ -118,7 +120,9 @@ Changing this creates a new DNS  record set.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.RecordSet.records">
 <code class="descname">records</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.records" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of DNS records.</p>
+<dd><p>An array of DNS records. _Note:_ if an IPv6 address
+contains brackets (<cite>[ ]</cite>), the brackets will be stripped and the modified
+address will be recorded in the state.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -198,15 +202,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.dns.Zone">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attributes=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS zone in the OpenStack DNS Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Attributes for the DNS Service scheduler.
 Changing this creates a new zone.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the zone.</li>

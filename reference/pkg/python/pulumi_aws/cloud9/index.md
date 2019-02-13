@@ -2,15 +2,15 @@
 <span id="cloud9"></span><h1>cloud9<a class="headerlink" href="#module-pulumi_aws.cloud9" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloud9.EnvironmentEC2">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloud9.</code><code class="descname">EnvironmentEC2</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>automatic_stop_time_minutes=None</em>, <em>description=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>owner_arn=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloud9.</code><code class="descname">EnvironmentEC2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automatic_stop_time_minutes=None</em>, <em>description=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>owner_arn=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloud9.EnvironmentEC2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloud9 EC2 Development Environment.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>automatic_stop_time_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes until the running instance is shut down after the environment has last been used.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the environment.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to connect to the environment, e.g. <cite>t2.micro</cite>.</li>

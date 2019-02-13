@@ -2,15 +2,15 @@
 <span id="logicapps"></span><h1>logicapps<a class="headerlink" href="#module-pulumi_azure.logicapps" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.logicapps.ActionCustom">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">ActionCustom</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>body=None</em>, <em>logic_app_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">ActionCustom</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>body=None</em>, <em>logic_app_id=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Action within a Logic App Workflow</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the JSON Blob defining the Body of this Custom Action.</li>
 <li><strong>logic_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the HTTP Action to be created within the Logic App Workflow. Changing this forces a new resource to be created.</li>
@@ -79,15 +79,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.ActionHttp">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">ActionHttp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>body=None</em>, <em>headers=None</em>, <em>logic_app_id=None</em>, <em>method=None</em>, <em>name=None</em>, <em>uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">ActionHttp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>body=None</em>, <em>headers=None</em>, <em>logic_app_id=None</em>, <em>method=None</em>, <em>name=None</em>, <em>uri=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.ActionHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an HTTP Action within a Logic App Workflow</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the HTTP Body that should be sent to the <cite>uri</cite> when this HTTP Action is triggered.</li>
 <li><strong>headers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a Map of Key-Value Pairs that should be sent to the <cite>uri</cite> when this HTTP Action is triggered.</li>
 <li><strong>logic_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</li>
@@ -225,15 +225,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.TriggerCustom">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">TriggerCustom</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>body=None</em>, <em>logic_app_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">TriggerCustom</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>body=None</em>, <em>logic_app_id=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerCustom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Custom Trigger within a Logic App Workflow</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the JSON Blob defining the Body of this Custom Trigger.</li>
 <li><strong>logic_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the HTTP Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.</li>
@@ -302,15 +302,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.TriggerHttpRequest">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">TriggerHttpRequest</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>logic_app_id=None</em>, <em>method=None</em>, <em>name=None</em>, <em>relative_path=None</em>, <em>schema=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">TriggerHttpRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>logic_app_id=None</em>, <em>method=None</em>, <em>name=None</em>, <em>relative_path=None</em>, <em>schema=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerHttpRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HTTP Request Trigger within a Logic App Workflow</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>logic_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</li>
 <li><strong>method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the HTTP Method which the request be using. Possible values include <cite>DELETE</cite>, <cite>GET</cite>, <cite>PATCH</cite>, <cite>POST</cite> or <cite>PUT</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the HTTP Request Trigger to be created within the Logic App Workflow. Changing this forces a new resource to be created.</li>
@@ -393,15 +393,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.TriggerRecurrence">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">TriggerRecurrence</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>frequency=None</em>, <em>interval=None</em>, <em>logic_app_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">TriggerRecurrence</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>frequency=None</em>, <em>interval=None</em>, <em>logic_app_id=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.TriggerRecurrence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Recurrence Trigger within a Logic App Workflow</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Frequency at which this Trigger should be run. Possible values include <cite>Month</cite>, <cite>Week</cite>, <cite>Day</cite>, <cite>Hour</cite>, <cite>Minute</cite> and <cite>Second</cite>.</li>
 <li><strong>interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies interval used for the Frequency, for example a value of <cite>4</cite> for <cite>interval</cite> and <cite>hour</cite> for <cite>frequency</cite> would run the Trigger every 4 hours.</li>
 <li><strong>logic_app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.</li>
@@ -477,15 +477,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.logicapps.Workflow">
-<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">Workflow</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>workflow_schema=None</em>, <em>workflow_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.logicapps.</code><code class="descname">Workflow</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>workflow_schema=None</em>, <em>workflow_version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.logicapps.Workflow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Logic App Workflow.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Logic App Workflow. Changing this forces a new resource to be created.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Key-Value pairs.</li>

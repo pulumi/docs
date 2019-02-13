@@ -2,7 +2,7 @@
 <span id="storage"></span><h1>storage<a class="headerlink" href="#module-pulumi_gcp.storage" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.storage.Bucket">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">Bucket</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cors=None</em>, <em>encryption=None</em>, <em>force_destroy=None</em>, <em>labels=None</em>, <em>lifecycle_rules=None</em>, <em>location=None</em>, <em>logging=None</em>, <em>name=None</em>, <em>project=None</em>, <em>storage_class=None</em>, <em>versioning=None</em>, <em>websites=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">Bucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cors=None</em>, <em>encryption=None</em>, <em>force_destroy=None</em>, <em>labels=None</em>, <em>lifecycle_rules=None</em>, <em>location=None</em>, <em>logging=None</em>, <em>name=None</em>, <em>project=None</em>, <em>storage_class=None</em>, <em>versioning=None</em>, <em>websites=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new bucket in Google cloud storage service (GCS).
 Once a bucket has been created, its location can’t be changed.
 [ACLs](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">https://cloud.google.com/storage/docs/access-control/lists</a>) can be applied
@@ -16,8 +16,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The bucket’s [Cross-Origin Resource Sharing (CORS)](<a class="reference external" href="https://www.w3.org/TR/cors/">https://www.w3.org/TR/cors/</a>) configuration. Multiple blocks of this type are permitted. Structure is documented below.</li>
 <li><strong>encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucket’s encryption configuration.</li>
 <li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When deleting a bucket, this
@@ -167,7 +167,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketACL">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketACL</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>default_acl=None</em>, <em>predefined_acl=None</em>, <em>role_entities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketACL" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketACL</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>default_acl=None</em>, <em>predefined_acl=None</em>, <em>role_entities=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketACL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new bucket ACL in Google cloud storage service (GCS). For more information see 
 [the official documentation](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">https://cloud.google.com/storage/docs/access-control/lists</a>) 
 and 
@@ -177,8 +177,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
 <li><strong>default_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configure this ACL to be the default ACL.</li>
 <li><strong>predefined_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [canned GCS ACL](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists#predefined-acl">https://cloud.google.com/storage/docs/access-control/lists#predefined-acl</a>) to apply. Must be set if <cite>role_entity</cite> is not.</li>
@@ -254,7 +254,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMBinding">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketIAMBinding</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>members=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketIAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>members=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for storage bucket. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><cite>google_storage_bucket_iam_binding</cite>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the storage bucket are preserved.</li>
@@ -267,8 +267,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
 </ul>
 </td>
@@ -340,7 +340,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMMember">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketIAMMember</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>member=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketIAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>member=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for storage bucket. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><cite>google_storage_bucket_iam_binding</cite>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the storage bucket are preserved.</li>
@@ -353,8 +353,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
 </ul>
 </td>
@@ -426,7 +426,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketIAMPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketIAMPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>policy_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketIAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>policy_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for storage bucket. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><cite>google_storage_bucket_iam_binding</cite>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the storage bucket are preserved.</li>
@@ -439,8 +439,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
 </ul>
 </td>
@@ -502,7 +502,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.BucketObject">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketObject</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>detect_md5hash=None</em>, <em>name=None</em>, <em>source=None</em>, <em>storage_class=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">BucketObject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>detect_md5hash=None</em>, <em>name=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new object inside an existing bucket in Google cloud storage service (GCS). 
 [ACLs](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">https://cloud.google.com/storage/docs/access-control/lists</a>) can be applied using the <cite>google_storage_object_acl</cite> resource.</p>
 <blockquote>
@@ -515,8 +515,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the containing bucket.</li>
 <li><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Cache-Control](<a class="reference external" href="https://tools.ietf.org/html/rfc7234#section-5.2">https://tools.ietf.org/html/rfc7234#section-5.2</a>)
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600</li>
@@ -665,23 +665,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.DefaultObjectACL">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">DefaultObjectACL</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>role_entities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectACL" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">DefaultObjectACL</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>role_entities=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectACL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new default object ACL in Google Cloud Storage service (GCS). For more information see</p>
-<p>-&gt; Note that for each object, its creator will have the <cite>“OWNER”</cite> role in addition
+<p>&gt; Note that for each object, its creator will have the <cite>“OWNER”</cite> role in addition
 to the default ACL that has been defined.</p>
 <p>For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">https://cloud.google.com/storage/docs/access-control/lists</a>) 
 and 
 [API](<a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls">https://cloud.google.com/storage/docs/json_api/v1/defaultObjectAccessControls</a>).</p>
-<p>-&gt; Want fine-grained control over default object ACLs? Use <cite>google_storage_default_object_access_control</cite>
+<p>&gt; Want fine-grained control over default object ACLs? Use <cite>google_storage_default_object_access_control</cite>
 to control individual role entity pairs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
 <li><strong>role_entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of role/entity pairs in the form <cite>ROLE:entity</cite>. See [GCS Object ACL documentation](<a class="reference external" href="https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls">https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls</a>) for more details.</li>
 </ul>
@@ -743,7 +743,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.DefaultObjectAccessControl">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">DefaultObjectAccessControl</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>entity=None</em>, <em>object=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">DefaultObjectAccessControl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>entity=None</em>, <em>object=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The DefaultObjectAccessControls resources represent the Access Control
 Lists (ACLs) applied to a new object within a Google Cloud Storage bucket
 when no ACL was provided for that object. ACLs let you specify who has
@@ -782,8 +782,8 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -872,7 +872,7 @@ in order to grant IAM permissions.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.Notification">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">Notification</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>custom_attributes=None</em>, <em>event_types=None</em>, <em>object_name_prefix=None</em>, <em>payload_format=None</em>, <em>topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Notification" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">Notification</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>custom_attributes=None</em>, <em>event_types=None</em>, <em>object_name_prefix=None</em>, <em>payload_format=None</em>, <em>topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.Notification" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic.</dt>
 <dd>For more information see</dd>
@@ -890,8 +890,8 @@ for an example of enabling notifications by granting the correct IAM permission.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket.</li>
 <li><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription</li>
 <li><strong>event_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: <cite>“OBJECT_FINALIZE”</cite>, <cite>“OBJECT_METADATA_UPDATE”</cite>, <cite>“OBJECT_DELETE”</cite>, <cite>“OBJECT_ARCHIVE”</cite></li>
@@ -991,7 +991,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.ObjectACL">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">ObjectACL</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>object=None</em>, <em>predefined_acl=None</em>, <em>role_entities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">ObjectACL</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>object=None</em>, <em>predefined_acl=None</em>, <em>role_entities=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectACL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new object ACL in Google cloud storage service (GCS). For more information see 
 [the official documentation](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control/lists">https://cloud.google.com/storage/docs/access-control/lists</a>) 
 and 
@@ -1001,8 +1001,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
 <li><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object it applies to.</li>
 <li><strong>predefined_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [canned GCS ACL](<a class="reference external" href="https://cloud.google.com/storage/docs/access-control#predefined-acl">https://cloud.google.com/storage/docs/access-control#predefined-acl</a>) to apply. Must be set if <cite>role_entity</cite> is not.</li>
@@ -1078,7 +1078,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.storage.ObjectAccessControl">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">ObjectAccessControl</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>entity=None</em>, <em>object=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.storage.</code><code class="descname">ObjectAccessControl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>entity=None</em>, <em>object=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ObjectAccessControls resources represent the Access Control Lists
 (ACLs) for objects within Google Cloud Storage. ACLs let you specify
 who has access to your data and to what extent.</p>
@@ -1116,8 +1116,8 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

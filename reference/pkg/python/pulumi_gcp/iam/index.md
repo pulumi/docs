@@ -34,17 +34,6 @@
 <dt id="pulumi_gcp.iam.get_rule">
 <code class="descclassname">pulumi_gcp.iam.</code><code class="descname">get_rule</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iam.get_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Google IAM Role.</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>hcl
-data “google_iam_role” “roleinfo” {</p>
-<blockquote>
-<div>name = “roles/compute.viewer”</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>output “the_role_permissions” {</dt>
-<dd>value = “${data.google_iam_role.roleinfo.included_permissions}”</dd>
-</dl>
-<p>}</p>
-<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
 </dd></dl>
 
 </div>

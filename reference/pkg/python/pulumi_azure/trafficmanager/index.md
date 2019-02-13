@@ -2,15 +2,15 @@
 <span id="trafficmanager"></span><h1>trafficmanager<a class="headerlink" href="#module-pulumi_azure.trafficmanager" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.trafficmanager.Endpoint">
-<em class="property">class </em><code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>endpoint_location=None</em>, <em>endpoint_status=None</em>, <em>geo_mappings=None</em>, <em>min_child_endpoints=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>profile_name=None</em>, <em>resource_group_name=None</em>, <em>target=None</em>, <em>target_resource_id=None</em>, <em>type=None</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.Endpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>endpoint_location=None</em>, <em>endpoint_status=None</em>, <em>geo_mappings=None</em>, <em>min_child_endpoints=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>profile_name=None</em>, <em>resource_group_name=None</em>, <em>target=None</em>, <em>target_resource_id=None</em>, <em>type=None</em>, <em>weight=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Traffic Manager Endpoint.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>endpoint_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Azure location of the Endpoint,
 this must be specified for Profiles using the <cite>Performance</cite> routing method
 if the Endpoint is of either type <cite>nestedEndpoints</cite> or <cite>externalEndpoints</cite>.
@@ -202,15 +202,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.trafficmanager.Profile">
-<em class="property">class </em><code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">Profile</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>dns_configs=None</em>, <em>monitor_configs=None</em>, <em>name=None</em>, <em>profile_status=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>traffic_routing_method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.Profile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.trafficmanager.</code><code class="descname">Profile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns_configs=None</em>, <em>monitor_configs=None</em>, <em>name=None</em>, <em>profile_status=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>traffic_routing_method=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.trafficmanager.Profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Traffic Manager Profile to which multiple endpoints can be attached.</p>
+<p>## Notes</p>
+<p>The Traffic Manager is created with the location <cite>global</cite>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>dns_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – This block specifies the DNS configuration of the
 Profile, it supports the fields documented below.</li>
 <li><strong>monitor_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – This block specifies the Endpoint monitoring

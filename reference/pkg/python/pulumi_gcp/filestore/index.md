@@ -2,7 +2,7 @@
 <span id="filestore"></span><h1>filestore<a class="headerlink" href="#module-pulumi_gcp.filestore" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.filestore.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.filestore.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>file_shares=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>project=None</em>, <em>tier=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.filestore.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>file_shares=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>project=None</em>, <em>tier=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Google Cloud Filestore instance.</p>
 <p>&gt; <strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
 See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
@@ -35,8 +35,8 @@ See [Provider Versions](<a class="reference external" href="https://terraform.io
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

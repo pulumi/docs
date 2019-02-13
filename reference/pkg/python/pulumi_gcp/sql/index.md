@@ -2,7 +2,7 @@
 <span id="sql"></span><h1>sql<a class="headerlink" href="#module-pulumi_gcp.sql" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.sql.Database">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>charset=None</em>, <em>collation=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>charset=None</em>, <em>collation=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL Database on a Google SQL Database Instance. For more information, see
 the [official documentation](<a class="reference external" href="https://cloud.google.com/sql/">https://cloud.google.com/sql/</a>),
 or the [JSON API](<a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/databases">https://cloud.google.com/sql/docs/admin-api/v1beta4/databases</a>).</p>
@@ -11,8 +11,8 @@ or the [JSON API](<a class="reference external" href="https://cloud.google.com/s
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>charset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The charset value. See MySQL’s
 [Supported Character Sets and Collations](<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html">https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html</a>)
 and Postgres’ [Character Set Support](<a class="reference external" href="https://www.postgresql.org/docs/9.6/static/multibyte.html">https://www.postgresql.org/docs/9.6/static/multibyte.html</a>)
@@ -119,7 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.sql.DatabaseInstance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">DatabaseInstance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>database_version=None</em>, <em>master_instance_name=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_configuration=None</em>, <em>settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">DatabaseInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database_version=None</em>, <em>master_instance_name=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_configuration=None</em>, <em>settings=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL Database Instance. For more information, see the [official documentation](<a class="reference external" href="https://cloud.google.com/sql/">https://cloud.google.com/sql/</a>),
 or the [JSON API](<a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/instances">https://cloud.google.com/sql/docs/admin-api/v1beta4/instances</a>).</p>
 <p>&gt; <strong>NOTE on `google_sql_database_instance`:</strong> - Second-generation instances include a
@@ -131,8 +131,8 @@ a restricted host and strong password.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>database_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MySQL version to
 use. Can be <cite>MYSQL_5_6</cite>, <cite>MYSQL_5_7</cite> or <cite>POSTGRES_9_6</cite> for second-generation
 instances, or <cite>MYSQL_5_5</cite> or <cite>MYSQL_5_6</cite> for first-generation instances.
@@ -292,7 +292,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.sql.SslCert">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">SslCert</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>common_name=None</em>, <em>instance=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.SslCert" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">SslCert</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>common_name=None</em>, <em>instance=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.SslCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](<a class="reference external" href="https://cloud.google.com/sql/">https://cloud.google.com/sql/</a>), or the [JSON API](<a class="reference external" href="https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts">https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts</a>).</p>
 <p>&gt; <strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
@@ -301,8 +301,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>common_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The common name to be used in the certificate to identify the 
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.</li>
 <li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Cloud SQL instance. Changing this
@@ -412,7 +412,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.sql.User">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">User</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>host=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>password=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.sql.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>password=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](<a class="reference external" href="https://cloud.google.com/sql/">https://cloud.google.com/sql/</a>), or the [JSON API](<a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/users">https://cloud.google.com/sql/docs/admin-api/v1beta4/users</a>).</p>
 <p>&gt; <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>). Passwords will not be retrieved when running
@@ -422,8 +422,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host the user can connect from. This is only supported
 for MySQL instances. Don’t set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.</li>

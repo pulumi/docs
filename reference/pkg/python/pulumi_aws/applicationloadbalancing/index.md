@@ -38,7 +38,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.Listener">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_arn=None</em>, <em>default_action=None</em>, <em>load_balancer_arn=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.Listener" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">Listener</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>default_action=None</em>, <em>load_balancer_arn=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>ssl_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Load Balancer Listener resource.</p>
 <p>&gt; <strong>Note:</strong> <cite>aws_alb_listener</cite> is known as <cite>aws_lb_listener</cite>. The functionality is identical.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -46,14 +46,14 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the [<cite>aws_lb_listener_certificate</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html">https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html</a>).</li>
 <li><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Action block. Action blocks are documented below.</li>
 <li><strong>load_balancer_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the load balancer.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port. Specify a value from <cite>1</cite> to <cite>65535</cite> or <cite>#{port}</cite>. Defaults to <cite>#{port}</cite>.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. Valid values are <cite>HTTP</cite>, <cite>HTTPS</cite>, or <cite>#{protocol}</cite>. Defaults to <cite>#{protocol}</cite>.</li>
-<li><strong>ssl_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL Policy for the listener. Required if <cite>protocol</cite> is <cite>HTTPS</cite>.</li>
+<li><strong>ssl_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSL Policy for the listener. Required if <cite>protocol</cite> is <cite>HTTPS</cite> or <cite>TLS</cite>.</li>
 </ul>
 </td>
 </tr>
@@ -98,7 +98,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.applicationloadbalancing.Listener.ssl_policy">
 <code class="descname">ssl_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.Listener.ssl_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the SSL Policy for the listener. Required if <cite>protocol</cite> is <cite>HTTPS</cite>.</p>
+<dd><p>The name of the SSL Policy for the listener. Required if <cite>protocol</cite> is <cite>HTTPS</cite> or <cite>TLS</cite>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -143,7 +143,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.ListenerCertificate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">ListenerCertificate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_arn=None</em>, <em>listener_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.ListenerCertificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">ListenerCertificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>listener_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.ListenerCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Load Balancer Listener Certificate resource.</p>
 <p>This resource is for additional certificates and does not replace the default certificate on the listener.</p>
 <p>&gt; <strong>Note:</strong> <cite>aws_alb_listener_certificate</cite> is known as <cite>aws_lb_listener_certificate</cite>. The functionality is identical.</p>
@@ -152,8 +152,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the certificate to attach to the listener.</li>
 <li><strong>listener_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the listener to which to attach the certificate.</li>
 </ul>
@@ -215,7 +215,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.ListenerRule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">ListenerRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>actions=None</em>, <em>conditions=None</em>, <em>listener_arn=None</em>, <em>priority=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.ListenerRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">ListenerRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions=None</em>, <em>conditions=None</em>, <em>listener_arn=None</em>, <em>priority=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.ListenerRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Load Balancer Listener Rule resource.</p>
 <p>&gt; <strong>Note:</strong> <cite>aws_alb_listener_rule</cite> is known as <cite>aws_lb_listener_rule</cite>. The functionality is identical.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -223,8 +223,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An Action block. Action blocks are documented below.</li>
 <li><strong>conditions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A Condition block. Condition blocks are documented below.</li>
 <li><strong>listener_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the listener to which to attach the rule.</li>
@@ -306,7 +306,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.LoadBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_logs=None</em>, <em>enable_cross_zone_load_balancing=None</em>, <em>enable_deletion_protection=None</em>, <em>enable_http2=None</em>, <em>idle_timeout=None</em>, <em>internal=None</em>, <em>ip_address_type=None</em>, <em>load_balancer_type=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>security_groups=None</em>, <em>subnet_mappings=None</em>, <em>subnets=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_logs=None</em>, <em>enable_cross_zone_load_balancing=None</em>, <em>enable_deletion_protection=None</em>, <em>enable_http2=None</em>, <em>idle_timeout=None</em>, <em>internal=None</em>, <em>ip_address_type=None</em>, <em>load_balancer_type=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>security_groups=None</em>, <em>subnet_mappings=None</em>, <em>subnets=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Load Balancer resource.</p>
 <p>&gt; <strong>Note:</strong> <cite>aws_alb</cite> is known as <cite>aws_lb</cite>. The functionality is identical.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -314,8 +314,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_logs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An Access Logs block. Access Logs documented below. Only valid for Load Balancers of type <cite>application</cite>.</li>
 <li><strong>enable_cross_zone_load_balancing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, cross-zone load balancing of the load balancer will be enabled.
 This is a <cite>network</cite> load balancer feature. Defaults to <cite>false</cite>.</li>
@@ -497,7 +497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.TargetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">TargetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>proxy_protocol_v2=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>target_type=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.TargetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">TargetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deregistration_delay=None</em>, <em>health_check=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>proxy_protocol_v2=None</em>, <em>slow_start=None</em>, <em>stickiness=None</em>, <em>tags=None</em>, <em>target_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.TargetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Target Group resource for use with Load Balancer resources.</p>
 <p>&gt; <strong>Note:</strong> <cite>aws_alb_target_group</cite> is known as <cite>aws_lb_target_group</cite>. The functionality is identical.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -505,8 +505,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>deregistration_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.</li>
 <li><strong>health_check</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Health Check block. Health Check blocks are documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the target group. If omitted, Terraform will assign a random, unique name.</li>
@@ -660,7 +660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.applicationloadbalancing.TargetGroupAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">TargetGroupAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>port=None</em>, <em>target_group_arn=None</em>, <em>target_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.TargetGroupAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.applicationloadbalancing.</code><code class="descname">TargetGroupAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>port=None</em>, <em>target_group_arn=None</em>, <em>target_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.applicationloadbalancing.TargetGroupAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the ability to register instances and containers with an Application Load Balancer (ALB) or Network Load Balancer (NLB) target group. For attaching resources with Elastic Load Balancer (ELB), see the [<cite>aws_elb_attachment</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elb_attachment.html">https://www.terraform.io/docs/providers/aws/r/elb_attachment.html</a>).</p>
 <p>&gt; <strong>Note:</strong> <cite>aws_alb_target_group_attachment</cite> is known as <cite>aws_lb_target_group_attachment</cite>. The functionality is identical.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -668,8 +668,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone where the IP address of the target is to be registered.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which targets receive traffic.</li>
 <li><strong>target_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the target group with which to register targets</li>

@@ -2,15 +2,15 @@
 <span id="cloudwatch"></span><h1>cloudwatch<a class="headerlink" href="#module-pulumi_aws.cloudwatch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.Dashboard">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>dashboard_body=None</em>, <em>dashboard_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.Dashboard" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">Dashboard</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dashboard_body=None</em>, <em>dashboard_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.Dashboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Dashboard resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>dashboard_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](<a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html</a>).</li>
 <li><strong>dashboard_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dashboard.</li>
 </ul>
@@ -78,15 +78,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.EventPermission">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventPermission</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>condition=None</em>, <em>principal=None</em>, <em>statement_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventPermission" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventPermission</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>condition=None</em>, <em>principal=None</em>, <em>statement_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventPermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a CloudWatch Events permission to support cross-account events in the current account default event bus.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The action that you are enabling the other account to perform. Defaults to <cite>events:PutEvents</cite>.</li>
 <li><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.</li>
 <li><strong>principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify <cite>*</cite> to permit any account to put events to your default event bus, optionally limited by <cite>condition</cite>.</li>
@@ -162,15 +162,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.EventRule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>event_pattern=None</em>, <em>is_enabled=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>role_arn=None</em>, <em>schedule_expression=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>event_pattern=None</em>, <em>is_enabled=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>role_arn=None</em>, <em>schedule_expression=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Rule resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the rule.</li>
 <li><strong>event_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Event pattern
 described a JSON object.
@@ -279,15 +279,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.EventTarget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventTarget</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>arn=None</em>, <em>batch_target=None</em>, <em>ecs_target=None</em>, <em>input=None</em>, <em>input_path=None</em>, <em>input_transformer=None</em>, <em>kinesis_target=None</em>, <em>role_arn=None</em>, <em>rule=None</em>, <em>run_command_targets=None</em>, <em>sqs_target=None</em>, <em>target_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">EventTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>batch_target=None</em>, <em>ecs_target=None</em>, <em>input=None</em>, <em>input_path=None</em>, <em>input_transformer=None</em>, <em>kinesis_target=None</em>, <em>role_arn=None</em>, <em>rule=None</em>, <em>run_command_targets=None</em>, <em>sqs_target=None</em>, <em>target_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Target resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) associated of the target.</li>
 <li><strong>batch_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.</li>
 <li><strong>ecs_target</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.</li>
@@ -445,15 +445,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogDestination">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogDestination</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>target_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestination" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogDestination</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>target_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs destination resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the log destination</li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target</li>
 <li><strong>target_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the target Amazon Kinesis stream or Amazon Lambda resource for the destination</li>
@@ -528,15 +528,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogDestinationPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogDestinationPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_policy=None</em>, <em>destination_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestinationPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogDestinationPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_policy=None</em>, <em>destination_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestinationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs destination policy resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string.</li>
 <li><strong>destination_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the subscription filter</li>
 </ul>
@@ -598,15 +598,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>retention_in_days=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>retention_in_days=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the KMS Key to use when encrypting log data. Please note, after the AWS KMS CMK is disassociated from the log group,
 AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All previously ingested data remains encrypted, and AWS CloudWatch Logs requires
 permissions for the CMK whenever the encrypted data is requested.</li>
@@ -701,15 +701,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogMetricFilter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogMetricFilter</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>log_group_name=None</em>, <em>metric_transformation=None</em>, <em>name=None</em>, <em>pattern=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogMetricFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogMetricFilter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>log_group_name=None</em>, <em>metric_transformation=None</em>, <em>name=None</em>, <em>pattern=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogMetricFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Metric Filter resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group to associate the metric filter with.</li>
 <li><strong>metric_transformation</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block defining collection of information
 needed to define how metric data gets emitted. See below.</li>
@@ -789,15 +789,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogResourcePolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogResourcePolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>policy_document=None</em>, <em>policy_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogResourcePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogResourcePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_document=None</em>, <em>policy_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogResourcePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a CloudWatch log resource policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.</li>
 <li><strong>policy_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the resource policy.</li>
 </ul>
@@ -859,15 +859,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogStream">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogStream</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>log_group_name=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogStream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogStream</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>log_group_name=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Stream resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group under which the log stream is to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log stream. Must not be longer than 512 characters and must not contain <cite>:</cite></li>
 </ul>
@@ -935,15 +935,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.LogSubscriptionFilter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogSubscriptionFilter</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination_arn=None</em>, <em>distribution=None</em>, <em>filter_pattern=None</em>, <em>log_group=None</em>, <em>name=None</em>, <em>role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogSubscriptionFilter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">LogSubscriptionFilter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_arn=None</em>, <em>distribution=None</em>, <em>filter_pattern=None</em>, <em>log_group=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogSubscriptionFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs subscription filter resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.</li>
 <li><strong>distribution</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are “Random” and “ByLogStream”.</li>
 <li><strong>filter_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.</li>
@@ -1033,15 +1033,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">MetricAlarm</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>actions_enabled=None</em>, <em>alarm_actions=None</em>, <em>alarm_description=None</em>, <em>name=None</em>, <em>comparison_operator=None</em>, <em>datapoints_to_alarm=None</em>, <em>dimensions=None</em>, <em>evaluate_low_sample_count_percentiles=None</em>, <em>evaluation_periods=None</em>, <em>extended_statistic=None</em>, <em>insufficient_data_actions=None</em>, <em>metric_name=None</em>, <em>namespace=None</em>, <em>ok_actions=None</em>, <em>period=None</em>, <em>statistic=None</em>, <em>threshold=None</em>, <em>treat_missing_data=None</em>, <em>unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">MetricAlarm</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions_enabled=None</em>, <em>alarm_actions=None</em>, <em>alarm_description=None</em>, <em>name=None</em>, <em>comparison_operator=None</em>, <em>datapoints_to_alarm=None</em>, <em>dimensions=None</em>, <em>evaluate_low_sample_count_percentiles=None</em>, <em>evaluation_periods=None</em>, <em>extended_statistic=None</em>, <em>insufficient_data_actions=None</em>, <em>metric_name=None</em>, <em>namespace=None</em>, <em>ok_actions=None</em>, <em>period=None</em>, <em>statistic=None</em>, <em>threshold=None</em>, <em>treat_missing_data=None</em>, <em>unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Metric Alarm resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>actions_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not actions should be executed during any changes to the alarm’s state. Defaults to <cite>true</cite>.</li>
 <li><strong>alarm_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Number (ARN).</li>
 <li><strong>alarm_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the alarm.</li>

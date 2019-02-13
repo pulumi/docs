@@ -2,17 +2,92 @@
 <span id="emr"></span><h1>emr<a class="headerlink" href="#module-pulumi_aws.emr" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.emr.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>additional_info=None</em>, <em>applications=None</em>, <em>autoscaling_role=None</em>, <em>bootstrap_actions=None</em>, <em>configurations=None</em>, <em>configurations_json=None</em>, <em>core_instance_count=None</em>, <em>core_instance_type=None</em>, <em>custom_ami_id=None</em>, <em>ebs_root_volume_size=None</em>, <em>ec2_attributes=None</em>, <em>instance_groups=None</em>, <em>keep_job_flow_alive_when_no_steps=None</em>, <em>kerberos_attributes=None</em>, <em>log_uri=None</em>, <em>master_instance_type=None</em>, <em>name=None</em>, <em>release_label=None</em>, <em>scale_down_behavior=None</em>, <em>security_configuration=None</em>, <em>service_role=None</em>, <em>steps=None</em>, <em>tags=None</em>, <em>termination_protection=None</em>, <em>visible_to_all_users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_info=None</em>, <em>applications=None</em>, <em>autoscaling_role=None</em>, <em>bootstrap_actions=None</em>, <em>configurations=None</em>, <em>configurations_json=None</em>, <em>core_instance_count=None</em>, <em>core_instance_type=None</em>, <em>custom_ami_id=None</em>, <em>ebs_root_volume_size=None</em>, <em>ec2_attributes=None</em>, <em>instance_groups=None</em>, <em>keep_job_flow_alive_when_no_steps=None</em>, <em>kerberos_attributes=None</em>, <em>log_uri=None</em>, <em>master_instance_type=None</em>, <em>name=None</em>, <em>release_label=None</em>, <em>scale_down_behavior=None</em>, <em>security_configuration=None</em>, <em>service_role=None</em>, <em>steps=None</em>, <em>tags=None</em>, <em>termination_protection=None</em>, <em>visible_to_all_users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic MapReduce Cluster, a web service that makes it easy to
 process large amounts of data efficiently. See [Amazon Elastic MapReduce Documentation](<a class="reference external" href="https://aws.amazon.com/documentation/elastic-mapreduce/">https://aws.amazon.com/documentation/elastic-mapreduce/</a>)
 for more information.</p>
+<p>## ec2_attributes</p>
+<p>Attributes for the Amazon EC2 instances running the job flow</p>
+<ul class="simple">
+<li><cite>key_name</cite> - (Optional) Amazon EC2 key pair that can be used to ssh to the master node as the user called <cite>hadoop</cite></li>
+<li><cite>subnet_id</cite> - (Optional) VPC subnet id where you want the job flow to launch. Cannot specify the <cite>cc1.4xlarge</cite> instance type for nodes of a job flow launched in a Amazon VPC</li>
+<li><cite>additional_master_security_groups</cite> - (Optional) String containing a comma separated list of additional Amazon EC2 security group IDs for the master node</li>
+<li><cite>additional_slave_security_groups</cite> - (Optional) String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string</li>
+<li><cite>emr_managed_master_security_group</cite> - (Optional) Identifier of the Amazon EC2 EMR-Managed security group for the master node</li>
+<li><cite>emr_managed_slave_security_group</cite> - (Optional) Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes</li>
+<li><cite>service_access_security_group</cite> - (Optional) Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet</li>
+<li><cite>instance_profile</cite> - (Required) Instance Profile for EC2 instances of the cluster assume this role</li>
+</ul>
+<p>&gt; <strong>NOTE on EMR-Managed security groups:</strong> These security groups will have any
+missing inbound or outbound access rules added and maintained by AWS, to ensure
+proper communication between instances in a cluster. The EMR service will
+maintain these rules for groups provided in <cite>emr_managed_master_security_group</cite>
+and <cite>emr_managed_slave_security_group</cite>; attempts to remove the required rules
+may succeed, only for the EMR service to re-add them in a matter of minutes.
+This may cause Terraform to fail to destroy an environment that contains an EMR
+cluster, because the EMR service does not revoke rules added on deletion,
+leaving a cyclic dependency between the security groups that prevents their
+deletion. To avoid this, use the <cite>revoke_rules_on_delete</cite> optional attribute for
+any Security Group used in <cite>emr_managed_master_security_group</cite> and
+<cite>emr_managed_slave_security_group</cite>. See [Amazon EMR-Managed Security
+Groups](<a class="reference external" href="http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-man-sec-groups.html">http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-man-sec-groups.html</a>)
+for more information about the EMR-managed security group rules.</p>
+<p>## kerberos_attributes</p>
+<p>Attributes for Kerberos configuration</p>
+<ul class="simple">
+<li><cite>ad_domain_join_password</cite> - (Optional) The Active Directory password for <cite>ad_domain_join_user</cite></li>
+<li><cite>ad_domain_join_user</cite> - (Optional) Required only when establishing a cross-realm trust with an Active Directory domain. A user with sufficient privileges to join resources to the domain.</li>
+<li><cite>cross_realm_trust_principal_password</cite> - (Optional) Required only when establishing a cross-realm trust with a KDC in a different realm. The cross-realm principal password, which must be identical across realms.</li>
+<li><cite>kdc_admin_password</cite> - (Required) The password used within the cluster for the kadmin service on the cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the cluster.</li>
+<li><cite>realm</cite> - (Required) The name of the Kerberos realm to which all nodes in a cluster belong. For example, <cite>EC2.INTERNAL</cite></li>
+</ul>
+<p>## instance_group</p>
+<p>Attributes for each task instance group in the cluster</p>
+<ul class="simple">
+<li><cite>instance_role</cite> - (Required) The role of the instance group in the cluster. Valid values are: <cite>MASTER</cite>, <cite>CORE</cite>, and <cite>TASK</cite>.</li>
+<li><cite>instance_type</cite> - (Required) The EC2 instance type for all instances in the instance group</li>
+<li><cite>instance_count</cite> - (Optional) Target number of instances for the instance group</li>
+<li><cite>name</cite> - (Optional) Friendly name given to the instance group</li>
+<li><cite>bid_price</cite> - (Optional) If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances. <cite>bid_price</cite> can not be set for the <cite>MASTER</cite> instance group, since that group must always be On-Demand</li>
+<li><cite>ebs_config</cite> - (Optional) A list of attributes for the EBS volumes attached to each instance in the instance group. Each <cite>ebs_config</cite> defined will result in additional EBS volumes being attached to _each_ instance in the instance group. Defined below</li>
+<li><cite>autoscaling_policy</cite> - (Optional) The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](<a class="reference external" href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html">https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html</a>)</li>
+</ul>
+<p>## ebs_config</p>
+<p>Attributes for the EBS volumes attached to each EC2 instance in the <cite>instance_group</cite></p>
+<ul class="simple">
+<li><cite>size</cite> - (Required) The volume size, in gibibytes (GiB).</li>
+<li><cite>type</cite> - (Required) The volume type. Valid options are <cite>gp2</cite>, <cite>io1</cite>, <cite>standard</cite> and <cite>st1</cite>. See [EBS Volume Types](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html</a>).</li>
+<li><cite>iops</cite> - (Optional) The number of I/O operations per second (IOPS) that the volume supports</li>
+<li><cite>volumes_per_instance</cite> - (Optional) The number of EBS volumes with this configuration to attach to each EC2 instance in the instance group (default is 1)</li>
+</ul>
+<p>## bootstrap_action</p>
+<ul class="simple">
+<li><cite>name</cite> - (Required) Name of the bootstrap action</li>
+<li><cite>path</cite> - (Required) Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system</li>
+<li><cite>args</cite> - (Optional) List of command line arguments to pass to the bootstrap action script</li>
+</ul>
+<p>## step</p>
+<p>Attributes for step configuration</p>
+<ul class="simple">
+<li><cite>action_on_failure</cite> - (Required) The action to take if the step fails. Valid values: <cite>TERMINATE_JOB_FLOW</cite>, <cite>TERMINATE_CLUSTER</cite>, <cite>CANCEL_AND_WAIT</cite>, and <cite>CONTINUE</cite></li>
+<li><cite>hadoop_jar_step</cite> - (Required) The JAR file used for the step. Defined below.</li>
+<li><cite>name</cite> - (Required) The name of the step.</li>
+</ul>
+<p>### hadoop_jar_step</p>
+<p>Attributes for Hadoop job step configuration</p>
+<ul class="simple">
+<li><cite>args</cite> - (Optional) List of command line arguments passed to the JAR file’s main function when executed.</li>
+<li><cite>jar</cite> - (Required) Path to a JAR file run during the step.</li>
+<li><cite>main_class</cite> - (Optional) Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.</li>
+<li><cite>properties</cite> - (Optional) Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>additional_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore Terraform cannot detect drift from the actual EMR cluster if its value is changed outside Terraform.</li>
 <li><strong>applications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of applications for the cluster. Valid values are: <cite>Flink</cite>, <cite>Hadoop</cite>, <cite>Hive</cite>, <cite>Mahout</cite>, <cite>Pig</cite>, <cite>Spark</cite>, and <cite>JupyterHub</cite> (as of EMR 5.14.0). Case insensitive</li>
 <li><strong>autoscaling_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.</li>
@@ -241,7 +316,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.emr.InstanceGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">InstanceGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster_id=None</em>, <em>ebs_configs=None</em>, <em>ebs_optimized=None</em>, <em>instance_count=None</em>, <em>instance_type=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">InstanceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_id=None</em>, <em>ebs_configs=None</em>, <em>ebs_optimized=None</em>, <em>instance_count=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.InstanceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic MapReduce Cluster Instance Group configuration.
 See [Amazon Elastic MapReduce Documentation](<a class="reference external" href="https://aws.amazon.com/documentation/emr/">https://aws.amazon.com/documentation/emr/</a>) for more information.</p>
 <p>&gt; <strong>NOTE:</strong> At this time, Instance Groups cannot be destroyed through the API nor
@@ -252,8 +327,8 @@ Terraform will resize any Instance Group to zero when destroying the resource.</
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.</li>
 <li><strong>ebs_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>ebs_config</cite> blocks as defined below. Changing this forces a new resource to be created.</li>
 <li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.</li>
@@ -343,15 +418,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.emr.SecurityConfiguration">
-<em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">SecurityConfiguration</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>configuration=None</em>, <em>name=None</em>, <em>name_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.emr.</code><code class="descname">SecurityConfiguration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>configuration=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.emr.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS EMR Security Configurations</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A JSON formatted Security Configuration</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the EMR Security Configuration. By default generated by Terraform.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified

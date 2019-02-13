@@ -2,15 +2,15 @@
 <span id="firewall"></span><h1>firewall<a class="headerlink" href="#module-pulumi_openstack.firewall" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.firewall.Firewall">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>associated_routers=None</em>, <em>description=None</em>, <em>name=None</em>, <em>no_routers=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_state_up=None</em>, <em>associated_routers=None</em>, <em>description=None</em>, <em>name=None</em>, <em>no_routers=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the firewall
 (must be “true” or “false” if provided - defaults to “true”).
 Changing this updates the <cite>admin_state_up</cite> of an existing firewall.</li>
@@ -197,15 +197,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.firewall.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>audited=None</em>, <em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>rules=None</em>, <em>shared=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall policy resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>audited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Audit status of the firewall policy
 (must be “true” or “false” if provided - defaults to “false”).
 This status is set to “false” whenever the firewall policy or any of its
@@ -333,15 +333,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.firewall.Rule">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>description=None</em>, <em>destination_ip_address=None</em>, <em>destination_port=None</em>, <em>enabled=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>source_ip_address=None</em>, <em>source_port=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>description=None</em>, <em>destination_ip_address=None</em>, <em>destination_port=None</em>, <em>enabled=None</em>, <em>ip_version=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>source_ip_address=None</em>, <em>source_port=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a v1 firewall rule resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Action to be taken ( must be “allow” or “deny”) when the
 firewall rule matches. Changing this updates the <cite>action</cite> of an existing
 firewall rule.</li>

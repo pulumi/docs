@@ -32,15 +32,15 @@
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.ProtectedVM">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectedVM</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backup_policy_id=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>source_vm_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectedVM</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup_policy_id=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>source_vm_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectedVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Recovery Protected VM.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backup_policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the id of the backup policy to use. Changing this forces a new resource to be created.</li>
 <li><strong>recovery_vault_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Recovery Services Protected VM. Changing this forces a new resource to be created.</li>
@@ -123,15 +123,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.ProtectionPolicyVM">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectionPolicyVM</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backup=None</em>, <em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>retention_daily=None</em>, <em>retention_monthly=None</em>, <em>retention_weekly=None</em>, <em>retention_yearly=None</em>, <em>tags=None</em>, <em>timezone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">ProtectionPolicyVM</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup=None</em>, <em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>retention_daily=None</em>, <em>retention_monthly=None</em>, <em>retention_weekly=None</em>, <em>retention_yearly=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.ProtectionPolicyVM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Recovery Services VM Protection Policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backup</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures the Policy backup frequecent, times &amp; days as documented in the <cite>backup</cite> block below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Recovery Services Vault Policy. Changing this forces a new resource to be created.</li>
 <li><strong>recovery_vault_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.</li>
@@ -249,15 +249,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.recoveryservices.Vault">
-<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">Vault</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">Vault</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.Vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Recovery Services Vault.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Recovery Services Vault. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Recovery Services Vault. Changing this forces a new resource to be created.</li>

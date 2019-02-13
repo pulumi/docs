@@ -2,15 +2,15 @@
 <span id="appinsights"></span><h1>appinsights<a class="headerlink" href="#module-pulumi_azure.appinsights" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.appinsights.ApiKey">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">ApiKey</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>application_insights_id=None</em>, <em>name=None</em>, <em>read_permissions=None</em>, <em>write_permissions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.ApiKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">ApiKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_insights_id=None</em>, <em>name=None</em>, <em>read_permissions=None</em>, <em>write_permissions=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.ApiKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Insights API key.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application_insights_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights API key. Changing this forces a
 new resource to be created.</li>
@@ -136,15 +136,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.appinsights.Insights">
-<em class="property">class </em><code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">Insights</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>application_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.appinsights.</code><code class="descname">Insights</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Application Insights component.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of Application Insights to create. Valid values are <cite>Java</cite>, <cite>iOS</cite>, <cite>MobileCenter</cite>, <cite>Other</cite>, <cite>Phone</cite>, <cite>Store</cite>, <cite>Web</cite> and <cite>Node.JS</cite>.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights component. Changing this forces a

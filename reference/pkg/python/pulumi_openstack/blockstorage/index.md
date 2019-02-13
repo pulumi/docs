@@ -110,15 +110,15 @@
 
 <dl class="class">
 <dt id="pulumi_openstack.blockstorage.Volume">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>consistency_group_id=None</em>, <em>description=None</em>, <em>enable_online_resize=None</em>, <em>image_id=None</em>, <em>metadata=None</em>, <em>multiattach=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>source_replica=None</em>, <em>source_vol_id=None</em>, <em>volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>consistency_group_id=None</em>, <em>description=None</em>, <em>enable_online_resize=None</em>, <em>image_id=None</em>, <em>metadata=None</em>, <em>multiattach=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>source_replica=None</em>, <em>source_vol_id=None</em>, <em>volume_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 volume resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone for the volume.
 Changing this creates a new volume.</li>
 <li><strong>consistency_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The consistency group to place the volume
@@ -298,7 +298,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.blockstorage.VolumeAttach">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeAttach</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attach_mode=None</em>, <em>device=None</em>, <em>host_name=None</em>, <em>initiator=None</em>, <em>ip_address=None</em>, <em>multipath=None</em>, <em>os_type=None</em>, <em>platform=None</em>, <em>region=None</em>, <em>volume_id=None</em>, <em>wwnn=None</em>, <em>wwpns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttach" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeAttach</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attach_mode=None</em>, <em>device=None</em>, <em>host_name=None</em>, <em>initiator=None</em>, <em>ip_address=None</em>, <em>multipath=None</em>, <em>os_type=None</em>, <em>platform=None</em>, <em>region=None</em>, <em>volume_id=None</em>, <em>wwnn=None</em>, <em>wwpns=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource is experimental and may be removed in the future! Feedback
 is requested if you find this resource useful or if you find any problems
 with it.</p>
@@ -315,8 +315,8 @@ the <cite>openstack_compute_volume_attach_v3</cite> resource for that.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attach_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify whether to attach the volume as Read-Only
 (<cite>ro</cite>) or Read-Write (<cite>rw</cite>). Only values of <cite>ro</cite> and <cite>rw</cite> are accepted.
 If left unspecified, the Block Storage API will apply a default of <cite>rw</cite>.</li>
@@ -484,7 +484,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.blockstorage.VolumeAttachV2">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeAttachV2</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attach_mode=None</em>, <em>device=None</em>, <em>host_name=None</em>, <em>initiator=None</em>, <em>ip_address=None</em>, <em>multipath=None</em>, <em>os_type=None</em>, <em>platform=None</em>, <em>region=None</em>, <em>volume_id=None</em>, <em>wwnn=None</em>, <em>wwpns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttachV2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeAttachV2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attach_mode=None</em>, <em>device=None</em>, <em>host_name=None</em>, <em>initiator=None</em>, <em>ip_address=None</em>, <em>multipath=None</em>, <em>os_type=None</em>, <em>platform=None</em>, <em>region=None</em>, <em>volume_id=None</em>, <em>wwnn=None</em>, <em>wwpns=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttachV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource is experimental and may be removed in the future! Feedback
 is requested if you find this resource useful or if you find any problems
 with it.</p>
@@ -501,8 +501,8 @@ the <cite>openstack_compute_volume_attach_v2</cite> resource for that.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attach_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify whether to attach the volume as Read-Only
 (<cite>ro</cite>) or Read-Write (<cite>rw</cite>). Only values of <cite>ro</cite> and <cite>rw</cite> are accepted.
 If left unspecified, the Block Storage API will apply a default of <cite>rw</cite>.</li>
@@ -670,15 +670,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.blockstorage.VolumeV1">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeV1</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>description=None</em>, <em>image_id=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>source_vol_id=None</em>, <em>volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeV1</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>description=None</em>, <em>image_id=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>source_vol_id=None</em>, <em>volume_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 volume resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone for the volume.
 Changing this creates a new volume.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the volume. Changing this updates
@@ -826,15 +826,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.blockstorage.VolumeV2">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeV2</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>consistency_group_id=None</em>, <em>description=None</em>, <em>image_id=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>source_replica=None</em>, <em>source_vol_id=None</em>, <em>volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">VolumeV2</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>consistency_group_id=None</em>, <em>description=None</em>, <em>image_id=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>region=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>source_replica=None</em>, <em>source_vol_id=None</em>, <em>volume_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 volume resource within OpenStack.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone for the volume.
 Changing this creates a new volume.</li>
 <li><strong>consistency_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The consistency group to place the volume

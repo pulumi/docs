@@ -2,15 +2,15 @@
 <span id="elasticsearch"></span><h1>elasticsearch<a class="headerlink" href="#module-pulumi_aws.elasticsearch" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.elasticsearch.Domain">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticsearch.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_policies=None</em>, <em>advanced_options=None</em>, <em>cluster_config=None</em>, <em>cognito_options=None</em>, <em>domain_name=None</em>, <em>ebs_options=None</em>, <em>elasticsearch_version=None</em>, <em>encrypt_at_rest=None</em>, <em>log_publishing_options=None</em>, <em>node_to_node_encryption=None</em>, <em>snapshot_options=None</em>, <em>tags=None</em>, <em>vpc_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticsearch.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_policies=None</em>, <em>advanced_options=None</em>, <em>cluster_config=None</em>, <em>cognito_options=None</em>, <em>domain_name=None</em>, <em>ebs_options=None</em>, <em>elasticsearch_version=None</em>, <em>encrypt_at_rest=None</em>, <em>log_publishing_options=None</em>, <em>node_to_node_encryption=None</em>, <em>snapshot_options=None</em>, <em>tags=None</em>, <em>vpc_options=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Elasticsearch Domain.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</li>
 <li><strong>advanced_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value string pairs to specify advanced configuration options.
 Note that the values for these configuration options must be strings (wrapped in quotes) or they
@@ -175,15 +175,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticsearch.DomainPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticsearch.</code><code class="descname">DomainPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_policies=None</em>, <em>domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticsearch.</code><code class="descname">DomainPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access_policies=None</em>, <em>domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM policy document specifying the access policies for the domain</li>
 <li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain.</li>
 </ul>

@@ -2,7 +2,7 @@
 <span id="cloudfront"></span><h1>cloudfront<a class="headerlink" href="#module-pulumi_aws.cloudfront" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>aliases=None</em>, <em>cache_behaviors=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>web_acl_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>cache_behaviors=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For specific information about creating
@@ -17,8 +17,8 @@ want to wait, you need to use the <cite>retain_on_delete</cite> flag.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Extra CNAMEs (alternate domain names), if any, for
 this distribution.</li>
 <li><strong>cache_behaviors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <strong>Deprecated</strong>, use <cite>ordered_cache_behavior</cite> instead.</li>
@@ -296,7 +296,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.OriginAccessIdentity">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">OriginAccessIdentity</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>comment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">OriginAccessIdentity</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront origin access identity.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For more information on generating
@@ -307,8 +307,8 @@ origin access identities, see
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment for the origin access identity.</li>
 </ul>
 </td>
@@ -400,15 +400,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.PublicKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">PublicKey</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>comment=None</em>, <em>encoded_key=None</em>, <em>name=None</em>, <em>name_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">PublicKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>encoded_key=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.PublicKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a PublicKey resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional comment about the public key.</li>
 <li><strong>encoded_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encoded public key that you want to add to CloudFront to use with features like field-level encryption.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the public key. By default generated by Terraform.</li>

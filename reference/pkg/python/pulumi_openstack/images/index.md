@@ -2,12 +2,20 @@
 <span id="images"></span><h1>images<a class="headerlink" href="#module-pulumi_openstack.images" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.images.GetImageResult">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>updated_at=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>checksum=None</em>, <em>container_format=None</em>, <em>created_at=None</em>, <em>disk_format=None</em>, <em>file=None</em>, <em>metadata=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>schema=None</em>, <em>size_bytes=None</em>, <em>tags=None</em>, <em>updated_at=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.GetImageResult.checksum">
 <code class="descname">checksum</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.checksum" title="Permalink to this definition">¶</a></dt>
 <dd><p>The checksum of the data associated with the image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.GetImageResult.created_at">
+<code class="descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the image was created.
+* <cite>container_format</cite>: The format of the image’s container.
+* <cite>disk_format</cite>: The format of the image’s disk.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -22,7 +30,7 @@ location of the image or the path to retrieve it.</p>
 <code class="descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
-and tags. See <a class="reference external" href="http://docs.openstack.org/developer/glance/metadefs-concepts.html">http://docs.openstack.org/developer/glance/metadefs-concepts.html</a>.</p>
+and tags. See <a class="reference external" href="https://docs.openstack.org/glance/latest/user/metadefs-concepts.html">https://docs.openstack.org/glance/latest/user/metadefs-concepts.html</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -57,6 +65,18 @@ the image or image</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_openstack.images.GetImageResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tags list of the image.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.GetImageResult.updated_at">
+<code class="descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the image was last updated.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_openstack.images.GetImageResult.id">
 <code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.GetImageResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
@@ -66,15 +86,26 @@ the image or image</p>
 
 <dl class="class">
 <dt id="pulumi_openstack.images.Image">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_format=None</em>, <em>disk_format=None</em>, <em>image_cache_path=None</em>, <em>image_source_url=None</em>, <em>local_file_path=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>verify_checksum=None</em>, <em>visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>container_format=None</em>, <em>disk_format=None</em>, <em>image_cache_path=None</em>, <em>image_source_url=None</em>, <em>local_file_path=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>verify_checksum=None</em>, <em>visibility=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Image resource within OpenStack Glance.</p>
+<p>## Notes</p>
+<p>### Properties</p>
+<p>This resource supports the ability to add properties to a resource during
+creation as well as add, update, and delete properties during an update of this
+resource.</p>
+<p>Newer versions of OpenStack are adding some read-only properties to each image.
+These properties start with the prefix <cite>os_</cite>. If these properties are detected,
+this resource will automatically reconcile these with the user-provided
+properties.</p>
+<p>In addition, the <cite>direct_url</cite> property is also automatically reconciled if the
+Image Service set it.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>container_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container format. Must be one of
 “ami”, “ari”, “aki”, “bare”, “ovf”.</li>
 <li><strong>disk_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The disk format. Must be one of
@@ -179,7 +210,7 @@ that will be uploaded to Glance. Conflicts with <cite>image_source_url</cite>.</
 <code class="descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
-and tags. See <a class="reference external" href="http://docs.openstack.org/developer/glance/metadefs-concepts.html">http://docs.openstack.org/developer/glance/metadefs-concepts.html</a>.</p>
+and tags. See <a class="reference external" href="https://docs.openstack.org/glance/latest/user/metadefs-concepts.html">https://docs.openstack.org/glance/latest/user/metadefs-concepts.html</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -262,6 +293,12 @@ At this time, it is not possible to delete all tags of an image.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.images.Image.update_at">
 <code class="descname">update_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.update_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<strong>Deprecated</strong> - use <cite>updated_at</cite> instead)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.images.Image.updated_at">
+<code class="descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.updated_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>The date the image was last updated.</p>
 </dd></dl>
 

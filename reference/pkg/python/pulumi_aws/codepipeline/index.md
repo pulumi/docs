@@ -2,7 +2,7 @@
 <span id="codepipeline"></span><h1>codepipeline<a class="headerlink" href="#module-pulumi_aws.codepipeline" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.codepipeline.Pipeline">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>artifact_store=None</em>, <em>name=None</em>, <em>role_arn=None</em>, <em>stages=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline.</p>
 <p>&gt; <strong>NOTE on `aws_codepipeline`:</strong> - the <cite>GITHUB_TOKEN</cite> environment variable must be set if the GitHub provider is specified.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>artifact_store</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An artifact_store block. Artifact stores are documented below.
 * <cite>stage</cite> (Minimum of at least two <cite>stage</cite> blocks is required) A stage block. Stages are documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pipeline.</li>
@@ -89,15 +89,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codepipeline.Webhook">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Webhook</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codepipeline.</code><code class="descname">Webhook</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>authentication_configuration=None</em>, <em>filters=None</em>, <em>name=None</em>, <em>target_action=None</em>, <em>target_pipeline=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codepipeline.Webhook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodePipeline Webhook.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>authentication</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of authentication  to use. One of <cite>IP</cite>, <cite>GITHUB_HMAC</cite>, or <cite>UNAUTHENTICATED</cite>.</li>
 <li><strong>authentication_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <cite>auth</cite> block. Required for <cite>IP</cite> and <cite>GITHUB_HMAC</cite>. Auth blocks are documented below.</li>
 <li><strong>filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>filter</cite> blocks. Filter blocks are documented below.</li>

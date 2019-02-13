@@ -2,15 +2,15 @@
 <span id="notificationhub"></span><h1>notificationhub<a class="headerlink" href="#module-pulumi_azure.notificationhub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.AuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>notification_hub_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>notification_hub_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>listen</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Authorization Rule have Listen access to the Notification Hub? Defaults to <cite>false</cite>.</li>
 <li><strong>manage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Authorization Rule have Manage access to the Notification Hub? Defaults to <cite>false</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for this Authorization Rule. Changing this forces a new resource to be created.</li>
@@ -185,15 +185,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.Hub">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Hub</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apns_credential=None</em>, <em>gcm_credential=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Hub" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Hub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apns_credential=None</em>, <em>gcm_credential=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Hub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Notification Hub within a Notification Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apns_credential</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>apns_credential</cite> block as defined below.</li>
 <li><strong>gcm_credential</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>gcm_credential</cite> block as defined below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.</li>
@@ -283,15 +283,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.notificationhub.Namespace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Namespace</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Namespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.notificationhub.</code><code class="descname">Namespace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_type=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.notificationhub.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Notification Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Notification Hub Namespace enabled? Defaults to <cite>true</cite>.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure Region in which this Notification Hub Namespace should be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for this Notification Hub Namespace. Changing this forces a new resource to be created.</li>

@@ -2,15 +2,15 @@
 <span id="apimanagement"></span><h1>apimanagement<a class="headerlink" href="#module-pulumi_azure.apimanagement" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.apimanagement.API">
-<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">API</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>additional_location=None</em>, <em>certificates=None</em>, <em>hostname_configuration=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification_sender_email=None</em>, <em>publisher_email=None</em>, <em>publisher_name=None</em>, <em>resource_group_name=None</em>, <em>security=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.API" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.apimanagement.</code><code class="descname">API</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>additional_location=None</em>, <em>certificates=None</em>, <em>hostname_configuration=None</em>, <em>identity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notification_sender_email=None</em>, <em>publisher_email=None</em>, <em>publisher_name=None</em>, <em>resource_group_name=None</em>, <em>security=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.apimanagement.API" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an API Management Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>additional_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <cite>additional_location</cite> blocks as defined below.</li>
 <li><strong>certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more (up to 10) <cite>certificate</cite> blocks as defined below.</li>
 <li><strong>hostname_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>hostname_configuration</cite> block as defined below.</li>

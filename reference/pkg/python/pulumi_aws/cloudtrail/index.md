@@ -20,7 +20,7 @@
 
 <dl class="class">
 <dt id="pulumi_aws.cloudtrail.Trail">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">Trail</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cloud_watch_logs_group_arn=None</em>, <em>cloud_watch_logs_role_arn=None</em>, <em>enable_log_file_validation=None</em>, <em>enable_logging=None</em>, <em>event_selectors=None</em>, <em>include_global_service_events=None</em>, <em>is_multi_region_trail=None</em>, <em>is_organization_trail=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>sns_topic_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">Trail</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloud_watch_logs_group_arn=None</em>, <em>cloud_watch_logs_role_arn=None</em>, <em>enable_log_file_validation=None</em>, <em>enable_logging=None</em>, <em>event_selectors=None</em>, <em>include_global_service_events=None</em>, <em>is_multi_region_trail=None</em>, <em>is_organization_trail=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>sns_topic_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudTrail resource.</p>
 <p>&gt; <em>NOTE:</em> For a multi-region trail, this resource must be in the home region of the trail.</p>
 <p>&gt; <em>NOTE:</em> For an organization trail, this resource must be in the master account of the organization.</p>
@@ -29,8 +29,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cloud_watch_logs_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a log group name using an Amazon Resource Name (ARN),
 that represents the log group to which CloudTrail logs will be delivered.</li>
 <li><strong>cloud_watch_logs_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the role for the CloudWatch Logs

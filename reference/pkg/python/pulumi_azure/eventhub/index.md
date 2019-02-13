@@ -2,7 +2,7 @@
 <span id="eventhub"></span><h1>eventhub<a class="headerlink" href="#module-pulumi_azure.eventhub" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventGridTopic">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventGridTopic</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventGridTopic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventGridTopic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventGridTopic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EventGrid Topic</p>
 <p>&gt; <strong>Note:</strong> at this time EventGrid Topic’s are only available in a limited number of regions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.</li>
@@ -105,15 +105,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHub">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHub</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>capture_description=None</em>, <em>location=None</em>, <em>message_retention=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>partition_count=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHub" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHub</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capture_description=None</em>, <em>location=None</em>, <em>message_retention=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>partition_count=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Event Hubs as a nested resource within a Event Hubs namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capture_description</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>capture_description</cite> block as defined below.</li>
 </ul>
 </td>
@@ -210,15 +210,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHubAuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubAuthorizationRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>eventhub_name=None</em>, <em>listen=None</em>, <em>location=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubAuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubAuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_name=None</em>, <em>listen=None</em>, <em>location=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubAuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Event Hubs authorization Rule within an Event Hub.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>eventhub_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventHub. Changing this forces a new resource to be created.</li>
 <li><strong>listen</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to <cite>false</cite>.</li>
 </ul>
@@ -340,15 +340,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHubConsumerGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubConsumerGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>eventhub_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>user_metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubConsumerGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubConsumerGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eventhub_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>user_metadata=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubConsumerGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>eventhub_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the EventHub. Changing this forces a new resource to be created.</li>
 </ul>
 </td>
@@ -432,15 +432,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHubNamespace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubNamespace</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_inflate_enabled=None</em>, <em>capacity=None</em>, <em>kafka_enabled=None</em>, <em>location=None</em>, <em>maximum_throughput_units=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubNamespace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_inflate_enabled=None</em>, <em>capacity=None</em>, <em>kafka_enabled=None</em>, <em>location=None</em>, <em>maximum_throughput_units=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an EventHub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_inflate_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Auto Inflate enabled for the EventHub Namespace?</li>
 <li><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the Capacity / Throughput Units for a <cite>Standard</cite> SKU namespace. Valid values range from 1 - 20.</li>
 <li><strong>kafka_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is Kafka enabled for the EventHub Namespace? Defaults to <cite>false</cite>.</li>
@@ -577,15 +577,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.EventHubNamespaceAuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubNamespaceAuthorizationRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>listen=None</em>, <em>location=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespaceAuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">EventHubNamespaceAuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>location=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespaceAuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Rule for an Event Hub Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>listen</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Grants listen access to this this Authorization Rule. Defaults to <cite>false</cite>.</li>
 </ul>
 </td>
@@ -773,16 +773,78 @@ authorization rule <cite>RootManageSharedAccessKey</cite>.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">GetServiceBusNamespaceResult</code><span class="sig-paren">(</span><em>capacity=None</em>, <em>default_primary_connection_string=None</em>, <em>default_primary_key=None</em>, <em>default_secondary_connection_string=None</em>, <em>default_secondary_key=None</em>, <em>location=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getServiceBusNamespace.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.capacity">
+<code class="descname">capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The capacity of the ServiceBus Namespace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_primary_connection_string">
+<code class="descname">default_primary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_primary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary connection string for the authorization
+rule <cite>RootManageSharedAccessKey</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_primary_key">
+<code class="descname">default_primary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_primary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primary access key for the authorization rule <cite>RootManageSharedAccessKey</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_secondary_connection_string">
+<code class="descname">default_secondary_connection_string</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_secondary_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary connection string for the
+authorization rule <cite>RootManageSharedAccessKey</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_secondary_key">
+<code class="descname">default_secondary_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.default_secondary_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary access key for the authorization rule <cite>RootManageSharedAccessKey</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the Resource Group in which the ServiceBus Namespace exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.sku">
+<code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Tier used for the ServiceBus Namespace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.eventhub.GetServiceBusNamespaceResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.GetServiceBusNamespaceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.eventhub.Namespace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Namespace</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>capacity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Namespace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capacity=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a ServiceBus Namespace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the capacity, can only be set when <cite>sku</cite> is <cite>Premium</cite> namespace. Can be <cite>1</cite>, <cite>2</cite> or <cite>4</cite>.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Namespace resource . Changing this forces a
@@ -902,15 +964,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.NamespaceAuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">NamespaceAuthorizationRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.NamespaceAuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">NamespaceAuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.NamespaceAuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a ServiceBus Namespace authorization Rule within a ServiceBus.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>listen</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Grants listen access to this this Authorization Rule. Defaults to <cite>false</cite>.</li>
 <li><strong>manage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Grants manage access to this this Authorization Rule. When this property is <cite>true</cite> - both <cite>listen</cite> and <cite>send</cite> must be too. Defaults to <cite>false</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.</li>
@@ -1024,15 +1086,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Queue">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_delete_on_idle=None</em>, <em>dead_lettering_on_message_expiration=None</em>, <em>default_message_ttl=None</em>, <em>duplicate_detection_history_time_window=None</em>, <em>enable_batched_operations=None</em>, <em>enable_express=None</em>, <em>enable_partitioning=None</em>, <em>location=None</em>, <em>lock_duration=None</em>, <em>max_delivery_count=None</em>, <em>max_size_in_megabytes=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_duplicate_detection=None</em>, <em>requires_session=None</em>, <em>resource_group_name=None</em>, <em>support_ordering=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Queue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_delete_on_idle=None</em>, <em>dead_lettering_on_message_expiration=None</em>, <em>default_message_ttl=None</em>, <em>duplicate_detection_history_time_window=None</em>, <em>enable_batched_operations=None</em>, <em>enable_express=None</em>, <em>enable_partitioning=None</em>, <em>location=None</em>, <em>lock_duration=None</em>, <em>max_delivery_count=None</em>, <em>max_size_in_megabytes=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_duplicate_detection=None</em>, <em>requires_session=None</em>, <em>resource_group_name=None</em>, <em>support_ordering=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage and manage a ServiceBus Queue.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ISO 8601 timespan duration of the idle interval after which the
 Queue is automatically deleted, minimum of 5 minutes.</li>
 <li><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to <cite>false</cite>.</li>
@@ -1238,15 +1300,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.QueueAuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">QueueAuthorizationRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>queue_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.QueueAuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">QueueAuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>queue_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.QueueAuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Authorization Rule for a ServiceBus Queue.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>listen</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to <cite>false</cite>.</li>
 <li><strong>manage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is <cite>true</cite> - both <cite>listen</cite> and <cite>send</cite> must be too. Defaults to <cite>false</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.</li>
@@ -1367,15 +1429,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Subscription">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_delete_on_idle=None</em>, <em>dead_lettering_on_filter_evaluation_exceptions=None</em>, <em>dead_lettering_on_message_expiration=None</em>, <em>default_message_ttl=None</em>, <em>enable_batched_operations=None</em>, <em>forward_to=None</em>, <em>location=None</em>, <em>lock_duration=None</em>, <em>max_delivery_count=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_session=None</em>, <em>resource_group_name=None</em>, <em>topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Subscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Subscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_delete_on_idle=None</em>, <em>dead_lettering_on_filter_evaluation_exceptions=None</em>, <em>dead_lettering_on_message_expiration=None</em>, <em>default_message_ttl=None</em>, <em>enable_batched_operations=None</em>, <em>forward_to=None</em>, <em>location=None</em>, <em>lock_duration=None</em>, <em>max_delivery_count=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_session=None</em>, <em>resource_group_name=None</em>, <em>topic_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a ServiceBus Subscription.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the
 Subscription is automatically deleted, minimum of 5 minutes. Provided in the
 TimeSpan format.</li>
@@ -1558,15 +1620,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.SubscriptionRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">SubscriptionRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>correlation_filter=None</em>, <em>filter_type=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>sql_filter=None</em>, <em>subscription_name=None</em>, <em>topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.SubscriptionRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">SubscriptionRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>correlation_filter=None</em>, <em>filter_type=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>sql_filter=None</em>, <em>subscription_name=None</em>, <em>topic_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.SubscriptionRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a ServiceBus Subscription Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.</li>
 <li><strong>correlation_filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>correlation_filter</cite> block as documented below to be evaluated against a BrokeredMessage. Required when <cite>filter_type</cite> is set to <cite>CorrelationFilter</cite>.</li>
 <li><strong>filter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of filter to be applied to a BrokeredMessage. Possible values are <cite>SqlFilter</cite> and <cite>CorrelationFilter</cite>.</li>
@@ -1677,7 +1739,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.Topic">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Topic</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_delete_on_idle=None</em>, <em>default_message_ttl=None</em>, <em>duplicate_detection_history_time_window=None</em>, <em>enable_batched_operations=None</em>, <em>enable_express=None</em>, <em>enable_filtering_messages_before_publishing=None</em>, <em>enable_partitioning=None</em>, <em>location=None</em>, <em>max_size_in_megabytes=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_duplicate_detection=None</em>, <em>resource_group_name=None</em>, <em>status=None</em>, <em>support_ordering=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Topic" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">Topic</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_delete_on_idle=None</em>, <em>default_message_ttl=None</em>, <em>duplicate_detection_history_time_window=None</em>, <em>enable_batched_operations=None</em>, <em>enable_express=None</em>, <em>enable_filtering_messages_before_publishing=None</em>, <em>enable_partitioning=None</em>, <em>location=None</em>, <em>max_size_in_megabytes=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>requires_duplicate_detection=None</em>, <em>resource_group_name=None</em>, <em>status=None</em>, <em>support_ordering=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.Topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a ServiceBus Topic.</p>
 <p><strong>Note</strong> Topics can only be created in Namespaces with an SKU of <cite>standard</cite> or higher.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1685,8 +1747,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ISO 8601 timespan duration of the idle interval after which the
 Topic is automatically deleted, minimum of 5 minutes.</li>
 <li><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ISO 8601 timespan duration of TTL of messages sent to this topic if no
@@ -1878,15 +1940,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.eventhub.TopicAuthorizationRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">TopicAuthorizationRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>topic_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.TopicAuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">TopicAuthorizationRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>listen=None</em>, <em>manage=None</em>, <em>name=None</em>, <em>namespace_name=None</em>, <em>resource_group_name=None</em>, <em>send=None</em>, <em>topic_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.TopicAuthorizationRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>listen</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Grants listen access to this this Authorization Rule. Defaults to <cite>false</cite>.</li>
 <li><strong>manage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Grants manage access to this this Authorization Rule. When this property is <cite>true</cite> - both <cite>listen</cite> and <cite>send</cite> must be too. Defaults to <cite>false</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.</li>
@@ -2009,6 +2071,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.eventhub.get_eventhub_namespace">
 <code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">get_eventhub_namespace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_eventhub_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing EventHub Namespace.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.eventhub.get_service_bus_namespace">
+<code class="descclassname">pulumi_azure.eventhub.</code><code class="descname">get_service_bus_namespace</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventhub.get_service_bus_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing ServiceBus Namespace.</p>
 </dd></dl>
 
 </div>

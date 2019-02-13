@@ -2,7 +2,7 @@
 <span id="elasticache"></span><h1>elasticache<a class="headerlink" href="#module-pulumi_aws.elasticache" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.elasticache.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>availability_zone=None</em>, <em>availability_zones=None</em>, <em>az_mode=None</em>, <em>cluster_id=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>preferred_availability_zones=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zone=None</em>, <em>availability_zones=None</em>, <em>az_mode=None</em>, <em>cluster_id=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>num_cache_nodes=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>preferred_availability_zones=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance.
 For working with Redis (Cluster Mode Enabled) replication groups, see the
 [<cite>aws_elasticache_replication_group</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html">https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html</a>).</p>
@@ -17,8 +17,8 @@ See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more informa
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
 <cite>false</cite>. See [Amazon ElastiCache Documentation for more information.][1]
@@ -510,7 +510,7 @@ begin taking a daily snapshot of the cache cluster.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ElastiCache parameter group resource.</p>
 <p>&gt; <strong>NOTE:</strong> Attempting to remove the <cite>reserved-memory</cite> parameter when <cite>family</cite> is set to <cite>redis2.6</cite> or <cite>redis2.8</cite> may show a perpetual difference in Terraform due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -518,8 +518,8 @@ begin taking a daily snapshot of the cache cluster.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the ElastiCache parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the ElastiCache parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ElastiCache parameter.</li>
@@ -595,7 +595,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.ReplicationGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">ReplicationGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>at_rest_encryption_enabled=None</em>, <em>auth_token=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>automatic_failover_enabled=None</em>, <em>availability_zones=None</em>, <em>cluster_mode=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>number_cache_clusters=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_group_description=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>transit_encryption_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">ReplicationGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>at_rest_encryption_enabled=None</em>, <em>auth_token=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>automatic_failover_enabled=None</em>, <em>availability_zones=None</em>, <em>cluster_mode=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>number_cache_clusters=None</em>, <em>parameter_group_name=None</em>, <em>port=None</em>, <em>replication_group_description=None</em>, <em>replication_group_id=None</em>, <em>security_group_ids=None</em>, <em>security_group_names=None</em>, <em>snapshot_arns=None</em>, <em>snapshot_name=None</em>, <em>snapshot_retention_limit=None</em>, <em>snapshot_window=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>transit_encryption_enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.ReplicationGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ElastiCache Replication Group resource.
 For working with Memcached or single primary Redis instances (Cluster Mode Disabled), see the
 [<cite>aws_elasticache_cluster</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html">https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html</a>).</p>
@@ -611,8 +611,8 @@ servers reboots.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is <cite>false</cite>.</li>
 <li><strong>at_rest_encryption_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable encryption at rest.</li>
 <li><strong>auth_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password used to access a password protected server. Can be specified only if <cite>transit_encryption_enabled = true</cite>.</li>
@@ -882,7 +882,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.SecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>security_group_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>security_group_names=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ElastiCache Security Group to control access to one or more cache
 clusters.</p>
 <p>&gt; <strong>NOTE:</strong> ElastiCache Security Groups are for use only when working with an
@@ -893,8 +893,8 @@ ElastiCache Subnet Group resource.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – description for the cache security group. Defaults to “Managed by Terraform”.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the cache security group. This value is stored as a lowercase string.</li>
 <li><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of EC2 security group names to be
@@ -965,7 +965,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticache.SubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ElastiCache Subnet Group resource.</p>
 <p>&gt; <strong>NOTE:</strong> ElastiCache Subnet Groups are only for use when working with an
 ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
@@ -975,8 +975,8 @@ ElastiCache Security Group resource.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description for the cache subnet group. Defaults to “Managed by Terraform”.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the cache subnet group. Elasticache converts this name to lowercase.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC Subnet IDs for the cache subnet group</li>

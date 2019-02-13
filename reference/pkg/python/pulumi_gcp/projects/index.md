@@ -2,7 +2,7 @@
 <span id="projects"></span><h1>projects<a class="headerlink" href="#module-pulumi_gcp.projects" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMBinding">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>members=None</em>, <em>project=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>project=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><cite>google_project_iam_policy</cite>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</li>
@@ -16,8 +16,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -100,7 +100,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMCustomRole">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>deleted=None</em>, <em>description=None</em>, <em>permissions=None</em>, <em>project=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMCustomRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deleted=None</em>, <em>description=None</em>, <em>permissions=None</em>, <em>project=None</em>, <em>role_id=None</em>, <em>stage=None</em>, <em>title=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a customized Cloud IAM project role. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/iam/docs/understanding-custom-roles">https://cloud.google.com/iam/docs/understanding-custom-roles</a>)
 and
@@ -118,8 +118,8 @@ by Terraform, and new roles cannot share that name.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -227,7 +227,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMMember">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMMember</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>member=None</em>, <em>project=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>project=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><cite>google_project_iam_policy</cite>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</li>
@@ -241,8 +241,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -325,7 +325,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.IAMPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>authoritative=None</em>, <em>disable_project=None</em>, <em>policy_data=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authoritative=None</em>, <em>disable_project=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Three different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><cite>google_project_iam_policy</cite>: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.</li>
@@ -339,8 +339,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>authoritative</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Optional, only for <cite>google_project_iam_policy</cite>)
 A boolean value indicating if this policy
 should overwrite any existing IAM policy on the project. When set to true,
@@ -460,7 +460,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.OrganizationPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">OrganizationPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>boolean_policy=None</em>, <em>constraint=None</em>, <em>list_policy=None</em>, <em>project=None</em>, <em>restore_policy=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.OrganizationPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">OrganizationPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>boolean_policy=None</em>, <em>constraint=None</em>, <em>list_policy=None</em>, <em>project=None</em>, <em>restore_policy=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.OrganizationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of Organization policies for a Google Project. For more information see
 [the official
 documentation](<a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">https://cloud.google.com/resource-manager/docs/organization-policy/overview</a>) and
@@ -470,8 +470,8 @@ documentation](<a class="reference external" href="https://cloud.google.com/reso
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>boolean_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A boolean policy is a constraint that is either enforced or not. Structure is documented below.</li>
 <li><strong>constraint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Constraint the Policy is configuring, for example, <cite>serviceuser.services</cite>. Check out the [complete list of available constraints](<a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints">https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints</a>).</li>
 <li><strong>list_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.</li>
@@ -573,7 +573,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.Service">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disable_on_destroy=None</em>, <em>project=None</em>, <em>service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disable_on_destroy=None</em>, <em>project=None</em>, <em>service=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a single API service for an existing Google Cloud Platform project.</p>
 <p>For a list of services available, visit the
 [API library page](<a class="reference external" href="https://console.cloud.google.com/apis/library">https://console.cloud.google.com/apis/library</a>) or run <cite>gcloud services list</cite>.</p>
@@ -586,8 +586,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disable_on_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, disable the service when the terraform resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not provided, the provider project is used.</li>
 <li><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service to enable.</li>
@@ -656,7 +656,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.Services">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">Services</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disable_on_destroy=None</em>, <em>project=None</em>, <em>services=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.Services" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">Services</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disable_on_destroy=None</em>, <em>project=None</em>, <em>services=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.Services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of enabled API services for an existing Google Cloud
 Platform project. Services in an existing project that are not defined
 in the config will be removed.</p>
@@ -673,8 +673,8 @@ google_project_service resource, one resource per API.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -751,7 +751,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.projects.UsageExportBucket">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">UsageExportBucket</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket_name=None</em>, <em>prefix=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.UsageExportBucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.projects.</code><code class="descname">UsageExportBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>prefix=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.UsageExportBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of a Google Cloud Platform project.</p>
 <p>Projects created with this resource must be associated with an Organization.
 See the [Organization documentation](<a class="reference external" href="https://cloud.google.com/resource-manager/docs/quickstarts">https://cloud.google.com/resource-manager/docs/quickstarts</a>) for more details.</p>
@@ -781,8 +781,8 @@ Terraform. Only newly added projects are affected.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

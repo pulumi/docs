@@ -2,7 +2,7 @@
 <span id="appengine"></span><h1>appengine<a class="headerlink" href="#module-pulumi_gcp.appengine" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.appengine.Application">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.appengine.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auth_domain=None</em>, <em>feature_settings=None</em>, <em>location_id=None</em>, <em>project=None</em>, <em>serving_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.appengine.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auth_domain=None</em>, <em>feature_settings=None</em>, <em>location_id=None</em>, <em>project=None</em>, <em>serving_status=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.appengine.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows creation and management of an App Engine application.</p>
 <dl class="docutils">
 <dt>&gt; App Engine applications cannot be deleted once they’re created; you have to delete the</dt>
@@ -15,8 +15,8 @@ Terraform is not able to delete App Engine applications.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auth_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to authenticate users with when using App Engine’s User API.</li>
 <li><strong>feature_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of optional settings to configure specific App Engine features:</li>
 <li><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [location](<a class="reference external" href="https://cloud.google.com/appengine/docs/locations">https://cloud.google.com/appengine/docs/locations</a>)

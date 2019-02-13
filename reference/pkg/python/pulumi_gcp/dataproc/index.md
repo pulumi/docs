@@ -2,7 +2,7 @@
 <span id="dataproc"></span><h1>dataproc<a class="headerlink" href="#module-pulumi_gcp.dataproc" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.dataproc.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.dataproc.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster_config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataproc.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.dataproc.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataproc.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Cloud Dataproc cluster resource within GCP. For more information see
 [the official dataproc documentation](<a class="reference external" href="https://cloud.google.com/dataproc/">https://cloud.google.com/dataproc/</a>).</p>
 <p>!&gt; <strong>Warning:</strong> Due to limitations of the API, all arguments except
@@ -13,8 +13,8 @@ whole cluster!</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Allows you to configure various aspects of the cluster.
 Structure defined below.</li>
 <li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The list of labels (key/value pairs) to be applied to
@@ -109,7 +109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.dataproc.Job">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.dataproc.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>force_delete=None</em>, <em>hadoop_config=None</em>, <em>hive_config=None</em>, <em>labels=None</em>, <em>pig_config=None</em>, <em>placement=None</em>, <em>project=None</em>, <em>pyspark_config=None</em>, <em>reference=None</em>, <em>region=None</em>, <em>scheduling=None</em>, <em>spark_config=None</em>, <em>sparksql_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataproc.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.dataproc.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>force_delete=None</em>, <em>hadoop_config=None</em>, <em>hive_config=None</em>, <em>labels=None</em>, <em>pig_config=None</em>, <em>placement=None</em>, <em>project=None</em>, <em>pyspark_config=None</em>, <em>reference=None</em>, <em>region=None</em>, <em>scheduling=None</em>, <em>spark_config=None</em>, <em>sparksql_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataproc.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a job resource within a Dataproc cluster within GCE. For more information see
 [the official dataproc documentation](<a class="reference external" href="https://cloud.google.com/dataproc/">https://cloud.google.com/dataproc/</a>).</p>
 <p>!&gt; <strong>Note:</strong> This resource does not support ‘update’ and changing any attributes will cause the resource to be recreated.</p>
@@ -118,8 +118,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.</li>

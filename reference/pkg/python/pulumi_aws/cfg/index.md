@@ -2,15 +2,15 @@
 <span id="cfg"></span><h1>cfg<a class="headerlink" href="#module-pulumi_aws.cfg" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cfg.AggregateAuthorization">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">AggregateAuthorization</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.AggregateAuthorization" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">AggregateAuthorization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.AggregateAuthorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Config Aggregate Authorization</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Account ID</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Region</li>
 </ul>
@@ -78,15 +78,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cfg.ConfigurationAggregator">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">ConfigurationAggregator</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_aggregation_source=None</em>, <em>name=None</em>, <em>organization_aggregation_source=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">ConfigurationAggregator</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_aggregation_source=None</em>, <em>name=None</em>, <em>organization_aggregation_source=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.ConfigurationAggregator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Config Configuration Aggregator</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_aggregation_source</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The account(s) to aggregate config data from as documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration aggregator.</li>
 <li><strong>organization_aggregation_source</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The organization to aggregate config data from as documented below.</li>
@@ -161,7 +161,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cfg.DeliveryChannel">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">DeliveryChannel</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>snapshot_delivery_properties=None</em>, <em>sns_topic_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.DeliveryChannel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">DeliveryChannel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>s3_bucket_name=None</em>, <em>s3_key_prefix=None</em>, <em>snapshot_delivery_properties=None</em>, <em>sns_topic_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.DeliveryChannel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Config Delivery Channel.</p>
 <p>&gt; <strong>Note:</strong> Delivery Channel requires a [Configuration Recorder](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html</a>) to be present. Use of <cite>depends_on</cite> (as shown below) is recommended to avoid race conditions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -169,8 +169,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the delivery channel. Defaults to <cite>default</cite>. Changing it recreates the resource.</li>
 <li><strong>s3_bucket_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the S3 bucket used to store the configuration history.</li>
 <li><strong>s3_key_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix for the specified S3 bucket.</li>
@@ -253,7 +253,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cfg.Recorder">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>recording_group=None</em>, <em>role_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.Recorder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>recording_group=None</em>, <em>role_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.Recorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Config Configuration Recorder. Please note that this resource <strong>does not start</strong> the created recorder automatically.</p>
 <p>&gt; <strong>Note:</strong> _Starting_ the Configuration Recorder requires a [delivery channel](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html</a>) (while delivery channel creation requires Configuration Recorder). This is why [<cite>aws_config_configuration_recorder_status</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder_status.html</a>) is a separate resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -261,8 +261,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the recorder. Defaults to <cite>default</cite>. Changing it recreates the resource.</li>
 <li><strong>recording_group</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Recording group - see below.</li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the IAM role.
@@ -335,7 +335,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cfg.RecorderStatus">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">RecorderStatus</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>is_enabled=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.RecorderStatus" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">RecorderStatus</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>is_enabled=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.RecorderStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages status (recording / stopped) of an AWS Config Configuration Recorder.</p>
 <p>&gt; <strong>Note:</strong> Starting Configuration Recorder requires a [Delivery Channel](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html">https://www.terraform.io/docs/providers/aws/r/config_delivery_channel.html</a>) to be present. Use of <cite>depends_on</cite> (as shown below) is recommended to avoid race conditions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -343,8 +343,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the configuration recorder should be enabled or disabled.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the recorder</li>
 </ul>
@@ -406,7 +406,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cfg.Rule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>input_parameters=None</em>, <em>maximum_execution_frequency=None</em>, <em>name=None</em>, <em>scope=None</em>, <em>source=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.Rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cfg.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>input_parameters=None</em>, <em>maximum_execution_frequency=None</em>, <em>name=None</em>, <em>scope=None</em>, <em>source=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cfg.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Config Rule.</p>
 <p>&gt; <strong>Note:</strong> Config Rule requires an existing [Configuration Recorder](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html">https://www.terraform.io/docs/providers/aws/r/config_configuration_recorder.html</a>) to be present. Use of <cite>depends_on</cite> is recommended (as shown below) to avoid race conditions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -414,8 +414,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule</li>
 <li><strong>input_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string in JSON format that is passed to the AWS Config rule Lambda function.</li>
 <li><strong>maximum_execution_frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The frequency that you want AWS Config to run evaluations for a rule that

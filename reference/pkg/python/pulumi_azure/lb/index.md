@@ -2,7 +2,7 @@
 <span id="lb"></span><h1>lb<a class="headerlink" href="#module-pulumi_azure.lb" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.lb.BackendAddressPool">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">BackendAddressPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">BackendAddressPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Load Balancer Backend Address Pool.</p>
 <p>&gt; <strong>NOTE:</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer in which to create the Backend Address Pool.</li>
 </ul>
 </td>
@@ -153,15 +153,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.LoadBalancer">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>frontend_ip_configurations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">LoadBalancer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>frontend_ip_configurations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Load Balancer Resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <cite>frontend_ip_configuration</cite> block as documented below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure Region where the Load Balancer should be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the frontend ip configuration.</li>
@@ -263,7 +263,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.NatPool">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">NatPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_port=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port_end=None</em>, <em>frontend_port_start=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">NatPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_port=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port_end=None</em>, <em>frontend_port_start=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer NAT pool.</p>
 <p>&gt; <strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -271,8 +271,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backend_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port used for the internal endpoint. Possible values range between 1 and 65535, inclusive.</li>
 <li><strong>frontend_ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the frontend IP configuration exposing this rule.</li>
 <li><strong>frontend_port_end</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with this Load Balancer. Possible values range between 1 and 65534, inclusive.</li>
@@ -377,7 +377,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.NatRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">NatRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_port=None</em>, <em>enable_floating_ip=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">NatRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_port=None</em>, <em>enable_floating_ip=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.NatRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer NAT Rule.</p>
 <p>&gt; <strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -385,8 +385,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backend_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port used for internal connections on the endpoint. Possible values range between 1 and 65535, inclusive.</li>
 <li><strong>enable_floating_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables the Floating IP Capacity, required to configure a SQL AlwaysOn Availability Group.</li>
 <li><strong>frontend_ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the frontend IP configuration exposing this rule.</li>
@@ -491,7 +491,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.Probe">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Probe</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>interval_in_seconds=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>number_of_probes=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>request_path=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Probe</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>interval_in_seconds=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>number_of_probes=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>request_path=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a LoadBalancer Probe Resource.</p>
 <p>&gt; <strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -499,8 +499,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>interval_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds between probes to the backend endpoint for health status. The default value is 15, the minimum value is 5.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the LoadBalancer in which to create the NAT Rule.</li>
 </ul>
@@ -605,7 +605,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.lb.Rule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_address_pool_id=None</em>, <em>backend_port=None</em>, <em>enable_floating_ip=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>load_distribution=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probe_id=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_address_pool_id=None</em>, <em>backend_port=None</em>, <em>enable_floating_ip=None</em>, <em>frontend_ip_configuration_name=None</em>, <em>frontend_port=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>load_distribution=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probe_id=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Load Balancer Rule.</p>
 <p>&gt; <strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -613,8 +613,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backend_address_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to a Backend Address Pool over which this Load Balancing Rule operates.</li>
 <li><strong>backend_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port used for internal connections on the endpoint. Possible values range between 0 and 65535, inclusive.</li>
 <li><strong>enable_floating_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Floating IP is pertinent to failover scenarios: a “floating” IP is reassigned to a secondary server in case the primary server fails. Floating IP is required for SQL AlwaysOn.</li>

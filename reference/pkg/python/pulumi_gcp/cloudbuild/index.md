@@ -2,7 +2,7 @@
 <span id="cloudbuild"></span><h1>cloudbuild<a class="headerlink" href="#module-pulumi_gcp.cloudbuild" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.cloudbuild.Trigger">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudbuild.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>build=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudbuild.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new build trigger within GCR. For more information, see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/container-builder/docs/running-builds/automate-builds">https://cloud.google.com/container-builder/docs/running-builds/automate-builds</a>)
 and
@@ -12,8 +12,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>build</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A build resource in the Container Builder API.
 Structure is documented below. At a high
 level, a <cite>build</cite> describes where to find source code, how to build it (for

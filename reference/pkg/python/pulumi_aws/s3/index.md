@@ -2,17 +2,17 @@
 <span id="s3"></span><h1>s3<a class="headerlink" href="#module-pulumi_aws.s3" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.s3.AccountPublicAccessBlock">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">AccountPublicAccessBlock</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_id=None</em>, <em>block_public_acls=None</em>, <em>block_public_policy=None</em>, <em>ignore_public_acls=None</em>, <em>restrict_public_buckets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">AccountPublicAccessBlock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>block_public_acls=None</em>, <em>block_public_policy=None</em>, <em>ignore_public_acls=None</em>, <em>restrict_public_buckets=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccountPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages S3 account-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](<a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html</a>).</p>
 <p>&gt; <strong>NOTE:</strong> Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.</p>
-<p>-&gt; Advanced usage: To use a custom API endpoint for this Terraform resource, use the [<cite>s3control</cite> endpoint provider configuration](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html#s3control">https://www.terraform.io/docs/providers/aws/index.html#s3control</a>), not the <cite>s3</cite> endpoint provider configuration.</p>
+<p>&gt; Advanced usage: To use a custom API endpoint for this Terraform resource, use the [<cite>s3control</cite> endpoint provider configuration](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html#s3control">https://www.terraform.io/docs/providers/aws/index.html#s3control</a>), not the <cite>s3</cite> endpoint provider configuration.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID to configure. Defaults to automatically determined account ID of the Terraform AWS provider.</li>
 <li><strong>block_public_acls</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <cite>false</cite>. Enabling this setting does not affect existing policies or ACLs. When set to <cite>true</cite> causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
@@ -105,15 +105,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.Bucket">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">Bucket</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>acceleration_status=None</em>, <em>acl=None</em>, <em>arn=None</em>, <em>bucket=None</em>, <em>bucket_prefix=None</em>, <em>cors_rules=None</em>, <em>force_destroy=None</em>, <em>hosted_zone_id=None</em>, <em>lifecycle_rules=None</em>, <em>loggings=None</em>, <em>object_lock_configuration=None</em>, <em>policy=None</em>, <em>region=None</em>, <em>replication_configuration=None</em>, <em>request_payer=None</em>, <em>server_side_encryption_configuration=None</em>, <em>tags=None</em>, <em>versioning=None</em>, <em>website=None</em>, <em>website_domain=None</em>, <em>website_endpoint=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Bucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">Bucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acceleration_status=None</em>, <em>acl=None</em>, <em>arn=None</em>, <em>bucket=None</em>, <em>bucket_prefix=None</em>, <em>cors_rules=None</em>, <em>force_destroy=None</em>, <em>hosted_zone_id=None</em>, <em>lifecycle_rules=None</em>, <em>loggings=None</em>, <em>object_lock_configuration=None</em>, <em>policy=None</em>, <em>region=None</em>, <em>replication_configuration=None</em>, <em>request_payer=None</em>, <em>server_side_encryption_configuration=None</em>, <em>tags=None</em>, <em>versioning=None</em>, <em>website=None</em>, <em>website_domain=None</em>, <em>website_endpoint=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>acceleration_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the accelerate configuration of an existing bucket. Can be <cite>Enabled</cite> or <cite>Suspended</cite>.</li>
 <li><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [canned ACL](<a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl</a>) to apply. Defaults to “private”.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the bucket. Will be of format <cite>arn:aws:s3:::bucketname</cite>.</li>
@@ -328,15 +328,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketMetric">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketMetric</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>filter=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketMetric" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketMetric</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketMetric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket [metrics configuration](<a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html">http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html</a>) resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put metric configuration.</li>
 <li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – [Object filtering](<a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter">http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter</a>) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique identifier of the metrics configuration for the bucket.</li>
@@ -405,15 +405,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketNotification">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketNotification</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>lambda_functions=None</em>, <em>queues=None</em>, <em>topics=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketNotification" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketNotification</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>lambda_functions=None</em>, <em>queues=None</em>, <em>topics=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketNotification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket notification resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put notification configuration.</li>
 <li><strong>lambda_functions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to configure notifications to a Lambda Function (documented below).</li>
 <li><strong>queues</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The notification configuration to SQS Queue (documented below).</li>
@@ -489,15 +489,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketObject">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketObject</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>acl=None</em>, <em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_base64=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>etag=None</em>, <em>key=None</em>, <em>kms_key_id=None</em>, <em>server_side_encryption=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>tags=None</em>, <em>website_redirect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketObject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acl=None</em>, <em>bucket=None</em>, <em>cache_control=None</em>, <em>content=None</em>, <em>content_base64=None</em>, <em>content_disposition=None</em>, <em>content_encoding=None</em>, <em>content_language=None</em>, <em>content_type=None</em>, <em>etag=None</em>, <em>key=None</em>, <em>kms_key_id=None</em>, <em>server_side_encryption=None</em>, <em>source=None</em>, <em>storage_class=None</em>, <em>tags=None</em>, <em>website_redirect=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket object resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [canned ACL](<a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl</a>) to apply. Defaults to “private”.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in.</li>
 <li><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies caching behavior along the request/reply chain Read [w3c cache_control](<a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9</a>) for further details.</li>
@@ -681,15 +681,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a policy to an S3 bucket resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to which to apply the policy.</li>
 <li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The text of the policy. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</li>
 </ul>
@@ -751,15 +751,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.BucketPublicAccessBlock">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketPublicAccessBlock</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>block_public_acls=None</em>, <em>block_public_policy=None</em>, <em>bucket=None</em>, <em>ignore_public_acls=None</em>, <em>restrict_public_buckets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">BucketPublicAccessBlock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>block_public_acls=None</em>, <em>block_public_policy=None</em>, <em>bucket=None</em>, <em>ignore_public_acls=None</em>, <em>restrict_public_buckets=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](<a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>block_public_acls</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether Amazon S3 should block public ACLs for this bucket. Defaults to <cite>false</cite>. Enabling this setting does not affect existing policies or ACLs. When set to <cite>true</cite> causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.</li>
@@ -1020,15 +1020,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.Inventory">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">Inventory</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>destination=None</em>, <em>enabled=None</em>, <em>filter=None</em>, <em>included_object_versions=None</em>, <em>name=None</em>, <em>optional_fields=None</em>, <em>schedule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Inventory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">Inventory</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>destination=None</em>, <em>enabled=None</em>, <em>filter=None</em>, <em>included_object_versions=None</em>, <em>name=None</em>, <em>optional_fields=None</em>, <em>schedule=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket [inventory configuration](<a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html</a>) resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket configuration where inventory results are published (documented below).</li>
 <li><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Destination bucket where inventory list files are written (documented below).</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the inventory is enabled or disabled.</li>

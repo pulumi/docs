@@ -2,15 +2,15 @@
 <span id="postgresql"></span><h1>postgresql<a class="headerlink" href="#module-pulumi_azure.postgresql" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.postgresql.Configuration">
-<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a PostgreSQL Configuration value on a PostgreSQL Server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the PostgreSQL Configuration, which needs [to be a valid PostgreSQL configuration name](<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIER">https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIER</a>). Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the PostgreSQL Server exists. Changing this forces a new resource to be created.</li>
 <li><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the PostgreSQL Server. Changing this forces a new resource to be created.</li>
@@ -86,15 +86,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.postgresql.Database">
-<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>charset=None</em>, <em>collation=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>charset=None</em>, <em>collation=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a PostgreSQL Database within a PostgreSQL Server</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>charset</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Charset for the PostgreSQL Database, which needs [to be a valid PostgreSQL Charset](<a class="reference external" href="https://www.postgresql.org/docs/current/static/multibyte.html">https://www.postgresql.org/docs/current/static/multibyte.html</a>). Changing this forces a new resource to be created.</li>
 <li><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Collation for the PostgreSQL Database, which needs [to be a valid PostgreSQL Collation](<a class="reference external" href="https://www.postgresql.org/docs/current/static/collation.html">https://www.postgresql.org/docs/current/static/collation.html</a>). Note that Microsoft uses different [notation](<a class="reference external" href="https://msdn.microsoft.com/library/windows/desktop/dd373814.aspx">https://msdn.microsoft.com/library/windows/desktop/dd373814.aspx</a>) - en-US instead of en_US. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the PostgreSQL Database, which needs [to be a valid PostgreSQL identifier](<a class="reference external" href="https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIERS">https://www.postgresql.org/docs/current/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIERS</a>). Changing this forces a
@@ -179,15 +179,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.postgresql.FirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Firewall Rule for a PostgreSQL Server</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>end_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the PostgreSQL Firewall Rule. Changing this forces a
 new resource to be created.</li>
@@ -272,15 +272,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.postgresql.Server">
-<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_enforcement=None</em>, <em>storage_profile=None</em>, <em>tags=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Server" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_enforcement=None</em>, <em>storage_profile=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a PostgreSQL Server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>administrator_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Administrator Login for the PostgreSQL Server. Changing this forces a new resource to be created.</li>
 <li><strong>administrator_login_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password associated with the <cite>administrator_login</cite> for the PostgreSQL Server.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
@@ -290,7 +290,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ssl_enforcement</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if SSL should be enforced on connections. Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>.</li>
 <li><strong>storage_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>storage_profile</cite> block as defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of PostgreSQL to use. Valid values are <cite>9.5</cite>, <cite>9.6</cite>, and <cite>10.0</cite>. Changing this forces a new resource to be created.</li>
+<li><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the version of PostgreSQL to use. Valid values are <cite>9.5</cite>, <cite>9.6</cite>, <cite>10</cite>, <cite>10.0</cite>, and <cite>10.2</cite>. Changing this forces a new resource to be created.</li>
 </ul>
 </td>
 </tr>
@@ -359,7 +359,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.postgresql.Server.version">
 <code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.postgresql.Server.version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the version of PostgreSQL to use. Valid values are <cite>9.5</cite>, <cite>9.6</cite>, and <cite>10.0</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the version of PostgreSQL to use. Valid values are <cite>9.5</cite>, <cite>9.6</cite>, <cite>10</cite>, <cite>10.0</cite>, and <cite>10.2</cite>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -404,16 +404,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.postgresql.VirtualNetworkRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.postgresql.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.postgresql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a PostgreSQL Virtual Network Rule.</p>
-<p>-&gt; <strong>NOTE:</strong> PostgreSQL Virtual Network Rules [can only be used with SKU Tiers of <cite>GeneralPurpose</cite> or <cite>MemoryOptimized</cite>](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet">https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet</a>)</p>
+<p>&gt; <strong>NOTE:</strong> PostgreSQL Virtual Network Rules [can only be used with SKU Tiers of <cite>GeneralPurpose</cite> or <cite>MemoryOptimized</cite>](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet">https://docs.microsoft.com/en-us/azure/postgresql/concepts-data-access-and-security-vnet</a>)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ignore_missing_vnet_service_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Network Rule be created before the Subnet has the Virtual Network Service Endpoint enabled? Defaults to <cite>false</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the PostgreSQL virtual network rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group where the PostgreSQL server resides. Changing this forces a new resource to be created.</li>

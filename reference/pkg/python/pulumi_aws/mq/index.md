@@ -2,7 +2,7 @@
 <span id="mq"></span><h1>mq<a class="headerlink" href="#module-pulumi_aws.mq" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.mq.Broker">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Broker</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Broker</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>logs=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an MQ Broker Resource. This resources also manages users for the broker.</p>
 <p>For more information on Amazon MQ, see [Amazon MQ documentation](<a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html</a>).</p>
 <p>Changes to an MQ Broker can occur when you change a
@@ -20,8 +20,8 @@ brief downtime as the broker reboots.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is <cite>false</cite>.</li>
 <li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.</li>
@@ -36,6 +36,7 @@ are applied immediately, or during the next maintenance window. Default is <cite
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable connections from applications outside of the VPC that hosts the broker’s subnets.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of security group IDs assigned to the broker.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of subnet IDs in which to launch the broker. A <cite>SINGLE_INSTANCE</cite> deployment requires one subnet. An <cite>ACTIVE_STANDBY_MULTI_AZ</cite> deployment requires two subnets.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of all ActiveMQ usernames for the specified broker. See below.</li>
 </ul>
 </td>
@@ -142,6 +143,12 @@ are applied immediately, or during the next maintenance window. Default is <cite
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.mq.Broker.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.mq.Broker.users">
 <code class="descname">users</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Broker.users" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of all ActiveMQ usernames for the specified broker. See below.</p>
@@ -189,7 +196,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.mq.Configuration">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>data=None</em>, <em>description=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">Configuration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data=None</em>, <em>description=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an MQ Configuration Resource.</p>
 <p>For more information on Amazon MQ, see [Amazon MQ documentation](<a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html">https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -197,8 +204,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The broker configuration in XML format.
 See [official docs](<a class="reference external" href="https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html">https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html</a>)
 for supported parameters and format of the XML.</li>
@@ -206,6 +213,7 @@ for supported parameters and format of the XML.</li>
 <li><strong>engine_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of broker engine.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the broker engine.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the configuration</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
@@ -255,6 +263,12 @@ for supported parameters and format of the XML.</p>
 <dd><p>The name of the configuration</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.mq.Configuration.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.mq.Configuration.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.mq.Configuration.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.Configuration.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -297,7 +311,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.mq.GetBrokerResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">GetBrokerResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_id=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>instances=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>users=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.GetBrokerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.mq.</code><code class="descname">GetBrokerResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>broker_id=None</em>, <em>broker_name=None</em>, <em>configuration=None</em>, <em>deployment_mode=None</em>, <em>engine_type=None</em>, <em>engine_version=None</em>, <em>host_instance_type=None</em>, <em>instances=None</em>, <em>maintenance_window_start_time=None</em>, <em>publicly_accessible=None</em>, <em>security_groups=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>users=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.GetBrokerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBroker.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.mq.GetBrokerResult.id">
@@ -309,7 +323,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.mq.get_broker">
-<code class="descclassname">pulumi_aws.mq.</code><code class="descname">get_broker</code><span class="sig-paren">(</span><em>broker_id=None</em>, <em>broker_name=None</em>, <em>logs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.mq.</code><code class="descname">get_broker</code><span class="sig-paren">(</span><em>broker_id=None</em>, <em>broker_name=None</em>, <em>logs=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.mq.get_broker" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a MQ Broker.</p>
 </dd></dl>
 

@@ -2,7 +2,7 @@
 <span id="elasticbeanstalk"></span><h1>elasticbeanstalk<a class="headerlink" href="#module-pulumi_aws.elasticbeanstalk" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.Application">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>appversion_lifecycle=None</em>, <em>description=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>appversion_lifecycle=None</em>, <em>description=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Application Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -13,8 +13,8 @@ the infrastructure that runs those applications.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -77,7 +77,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.ApplicationVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ApplicationVersion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>application=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ApplicationVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>bucket=None</em>, <em>description=None</em>, <em>force_delete=None</em>, <em>key=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ApplicationVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Application Version Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
@@ -97,8 +97,8 @@ Elastic Beanstalk Application. For example &amp;lt;revision&amp;gt;-&amp;lt;envi
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Beanstalk Application the version is associated with.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – S3 bucket that contains the Application Version source bundle.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Application Version.</li>
@@ -190,17 +190,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.ConfigurationTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ConfigurationTemplate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>application=None</em>, <em>description=None</em>, <em>environment_id=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">ConfigurationTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>description=None</em>, <em>environment_id=None</em>, <em>name=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.ConfigurationTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Configuration Template, which are associated with
 a specific application and are used to deploy different versions of the
 application with the same configuration settings.</p>
+<p>## Option Settings</p>
+<p>The <cite>setting</cite> field supports the following format:</p>
+<ul class="simple">
+<li><cite>namespace</cite> - unique namespace identifying the option’s associated AWS resource</li>
+<li><cite>name</cite> - name of the configuration option</li>
+<li><cite>value</cite> - value for the configuration option</li>
+<li><cite>resource</cite> - (Optional) resource name for [scheduled action](<a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction">https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction</a>)</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – name of the application to associate with this configuration template</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the Template</li>
 <li><strong>environment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the environment used with this configuration template</li>
@@ -296,19 +304,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.elasticbeanstalk.Environment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>application=None</em>, <em>cname_prefix=None</em>, <em>description=None</em>, <em>name=None</em>, <em>platform_arn=None</em>, <em>poll_interval=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>tags=None</em>, <em>template_name=None</em>, <em>tier=None</em>, <em>version=None</em>, <em>wait_for_ready_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application=None</em>, <em>cname_prefix=None</em>, <em>description=None</em>, <em>name=None</em>, <em>platform_arn=None</em>, <em>poll_interval=None</em>, <em>settings=None</em>, <em>solution_stack_name=None</em>, <em>tags=None</em>, <em>template_name=None</em>, <em>tier=None</em>, <em>version=None</em>, <em>wait_for_ready_timeout=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic Beanstalk Environment Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.</p>
 <p>Environments are often things such as <cite>development</cite>, <cite>integration</cite>, or
 <cite>production</cite>.</p>
+<p>## Option Settings</p>
+<p>Some options can be stack-specific, check [AWS Docs](<a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html">https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html</a>)
+for supported options and examples.</p>
+<p>The <cite>setting</cite> and <cite>all_settings</cite> mappings support the following format:</p>
+<ul class="simple">
+<li><cite>namespace</cite> - unique namespace identifying the option’s associated AWS resource</li>
+<li><cite>name</cite> - name of the configuration option</li>
+<li><cite>value</cite> - value for the configuration option</li>
+<li><cite>resource</cite> - (Optional) resource name for [scheduled action](<a class="reference external" href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction">https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction</a>)</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the application that contains the version
 to be deployed</li>
 <li><strong>cname_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix to use for the fully qualified DNS name of

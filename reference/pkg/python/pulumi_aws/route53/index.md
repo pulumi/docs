@@ -2,15 +2,15 @@
 <span id="route53"></span><h1>route53<a class="headerlink" href="#module-pulumi_aws.route53" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.route53.DelegationSet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">DelegationSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>reference_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.DelegationSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">DelegationSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>reference_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.DelegationSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a [Route53 Delegation Set](<a class="reference external" href="https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html">https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html</a>) resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>reference_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is a reference name used in Caller Reference
 (helpful for identifying single delegation set amongst others)</li>
 </ul>
@@ -116,15 +116,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.HealthCheck">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">HealthCheck</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>child_health_threshold=None</em>, <em>child_healthchecks=None</em>, <em>cloudwatch_alarm_name=None</em>, <em>cloudwatch_alarm_region=None</em>, <em>enable_sni=None</em>, <em>failure_threshold=None</em>, <em>fqdn=None</em>, <em>insufficient_data_health_status=None</em>, <em>invert_healthcheck=None</em>, <em>ip_address=None</em>, <em>measure_latency=None</em>, <em>port=None</em>, <em>reference_name=None</em>, <em>regions=None</em>, <em>request_interval=None</em>, <em>resource_path=None</em>, <em>search_string=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.HealthCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">HealthCheck</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>child_health_threshold=None</em>, <em>child_healthchecks=None</em>, <em>cloudwatch_alarm_name=None</em>, <em>cloudwatch_alarm_region=None</em>, <em>enable_sni=None</em>, <em>failure_threshold=None</em>, <em>fqdn=None</em>, <em>insufficient_data_health_status=None</em>, <em>invert_healthcheck=None</em>, <em>ip_address=None</em>, <em>measure_latency=None</em>, <em>port=None</em>, <em>reference_name=None</em>, <em>regions=None</em>, <em>request_interval=None</em>, <em>resource_path=None</em>, <em>search_string=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.HealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 health check.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>child_health_threshold</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive</li>
 <li><strong>child_healthchecks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – For a specified parent health check, a list of HealthCheckId values for the associated child health checks.</li>
 <li><strong>cloudwatch_alarm_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the CloudWatch alarm.</li>
@@ -307,7 +307,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.QueryLog">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">QueryLog</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cloudwatch_log_group_arn=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.QueryLog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">QueryLog</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_log_group_arn=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.QueryLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 query logging configuration resource.</p>
 <p>&gt; <strong>NOTE:</strong> There are restrictions on the configuration of query logging. Notably,
 the CloudWatch log group must be in the <cite>us-east-1</cite> region,
@@ -319,8 +319,8 @@ See [Configuring Logging for DNS Queries](<a class="reference external" href="ht
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cloudwatch_log_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CloudWatch log group ARN to send query logs.</li>
 <li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Route53 hosted zone ID to enable query logs.</li>
 </ul>
@@ -382,15 +382,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.Record">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>aliases=None</em>, <em>allow_overwrite=None</em>, <em>failover_routing_policies=None</em>, <em>geolocation_routing_policies=None</em>, <em>health_check_id=None</em>, <em>latency_routing_policies=None</em>, <em>multivalue_answer_routing_policy=None</em>, <em>name=None</em>, <em>records=None</em>, <em>set_identifier=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>weighted_routing_policies=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Record" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">Record</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>allow_overwrite=None</em>, <em>failover_routing_policies=None</em>, <em>geolocation_routing_policies=None</em>, <em>health_check_id=None</em>, <em>latency_routing_policies=None</em>, <em>multivalue_answer_routing_policy=None</em>, <em>name=None</em>, <em>records=None</em>, <em>set_identifier=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>weighted_routing_policies=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Route53 record resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An alias block. Conflicts with <cite>ttl</cite> &amp; <cite>records</cite>.
 Alias record documented below.</li>
 <li><strong>allow_overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow creation of this record in Terraform to overwrite an existing record, if any. This does not prevent other resources within Terraform or manual Route53 changes from overwriting this record. <cite>true</cite> by default.</li>
@@ -544,15 +544,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.Zone">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>comment=None</em>, <em>delegation_set_id=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpcs=None</em>, <em>vpc_id=None</em>, <em>vpc_region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Zone" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>comment=None</em>, <em>delegation_set_id=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpcs=None</em>, <em>vpc_id=None</em>, <em>vpc_region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Route53 Hosted Zone.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comment for the hosted zone. Defaults to ‘Managed by Terraform’.</li>
 <li><strong>delegation_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with <cite>vpc</cite> and <cite>vpc_id</cite> as delegation sets can only be used for public zones.</li>
 <li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to destroy all records (possibly managed outside of Terraform) in the zone when destroying the zone.</li>
@@ -669,7 +669,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.route53.ZoneAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">ZoneAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>vpc_id=None</em>, <em>vpc_region=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ZoneAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.route53.</code><code class="descname">ZoneAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>vpc_id=None</em>, <em>vpc_region=None</em>, <em>zone_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.ZoneAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Route53 Hosted Zone VPC association. VPC associations can only be made on private zones.</p>
 <p>&gt; <strong>NOTE:</strong> Unless explicit association ordering is required (e.g. a separate cross-account association authorization), usage of this resource is not recommended. Use the <cite>vpc</cite> configuration blocks available within the [<cite>aws_route53_zone</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>) instead.</p>
 <p>&gt; <strong>NOTE:</strong> Terraform provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the [<cite>aws_route53_zone</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/route53_zone.html">https://www.terraform.io/docs/providers/aws/r/route53_zone.html</a>) via <cite>vpc</cite> configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use the generic Terraform resource [lifecycle configuration block](<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#lifecycle">https://www.terraform.io/docs/configuration/resources.html#lifecycle</a>) with <cite>ignore_changes</cite> in the <cite>aws_route53_zone</cite> resource to manage additional associations via this resource.</p>
@@ -678,8 +678,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC to associate with the private hosted zone.</li>
 <li><strong>vpc_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC’s region. Defaults to the region of the AWS provider.</li>
 <li><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private hosted zone to associate.</li>

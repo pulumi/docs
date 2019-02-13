@@ -2,7 +2,7 @@
 <span id="lambda"></span><h1><a class="reference internal" href="#lambda">lambda</a><a class="headerlink" href="#module-pulumi_aws.lambda_" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.lambda_.Alias">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>function_name=None</em>, <em>function_version=None</em>, <em>name=None</em>, <em>routing_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Alias" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>function_name=None</em>, <em>function_version=None</em>, <em>name=None</em>, <em>routing_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Lambda function alias. Creates an alias that points to the specified Lambda function version.</p>
 <p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 For information about function aliases, see [CreateAlias][2] and [AliasRoutingConfiguration][3] in the API docs.</p>
@@ -11,8 +11,8 @@ For information about function aliases, see [CreateAlias][2] and [AliasRoutingCo
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the alias.</li>
 <li><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function ARN of the Lambda function for which you want to create an alias.</li>
 <li><strong>function_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Lambda function version for which you are creating the alias. Pattern: <cite>($LATEST|[0-9]+)</cite>.</li>
@@ -107,7 +107,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.EventSourceMapping">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">EventSourceMapping</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>batch_size=None</em>, <em>enabled=None</em>, <em>event_source_arn=None</em>, <em>function_name=None</em>, <em>starting_position=None</em>, <em>starting_position_timestamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">EventSourceMapping</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>batch_size=None</em>, <em>enabled=None</em>, <em>event_source_arn=None</em>, <em>function_name=None</em>, <em>starting_position=None</em>, <em>starting_position_timestamp=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.EventSourceMapping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS</p>
 <p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
@@ -116,8 +116,8 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>batch_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <cite>100</cite> for DynamoDB and Kinesis, <cite>10</cite> for SQS.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the mapping will be enabled on creation. Defaults to <cite>true</cite>.</li>
 <li><strong>event_source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The event source ARN - can either be a Kinesis or DynamoDB stream.</li>
@@ -243,16 +243,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.Function">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>dead_letter_config=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>code=None</em>, <em>name=None</em>, <em>handler=None</em>, <em>kms_key_arn=None</em>, <em>layers=None</em>, <em>memory_size=None</em>, <em>publish=None</em>, <em>reserved_concurrent_executions=None</em>, <em>role=None</em>, <em>runtime=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>tags=None</em>, <em>timeout=None</em>, <em>tracing_config=None</em>, <em>vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dead_letter_config=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>code=None</em>, <em>name=None</em>, <em>handler=None</em>, <em>kms_key_arn=None</em>, <em>layers=None</em>, <em>memory_size=None</em>, <em>publish=None</em>, <em>reserved_concurrent_executions=None</em>, <em>role=None</em>, <em>runtime=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>tags=None</em>, <em>timeout=None</em>, <em>tracing_config=None</em>, <em>vpc_config=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS. The Lambda Function itself includes source code and runtime configuration.</p>
 <p>For information about Lambda and how to use it, see [What is AWS Lambda?][1]</p>
+<p>## Specifying the Deployment Package</p>
+<p>AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which <cite>runtime</cite> is in use.
+See [Runtimes][6] for the valid values of <cite>runtime</cite>. The expected structure of the deployment package can be found in
+[the AWS Lambda documentation for each runtime][8].</p>
+<p>Once you have created your deployment package you can specify it either directly as a local file (using the <cite>filename</cite> argument) or
+indirectly via Amazon S3 (using the <cite>s3_bucket</cite>, <cite>s3_key</cite> and <cite>s3_object_version</cite> arguments). When providing the deployment
+package via S3 it may be useful to use the <cite>aws_s3_bucket_object</cite> resource to upload it.</p>
+<p>For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
+large files efficiently.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>dead_letter_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested block to configure the function’s <em>dead letter queue</em>. See details below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what your Lambda Function does.</li>
 <li><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Lambda environment’s configuration settings. Fields documented below.</li>
@@ -634,16 +643,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.LayerVersion">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">LayerVersion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>compatible_runtimes=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">LayerVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatible_runtimes=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</p>
 <p>For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]</p>
+<p>&gt; <strong>NOTE:</strong> The attribute values for <cite>arn</cite> and <cite>layer_arn</cite> will be swapped in version 2.0.0 of the Terraform AWS Provider.</p>
+<p>## Specifying the Deployment Package</p>
+<p>AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which <cite>compatible_runtimes</cite> this layer specifies.
+See [Runtimes][2] for the valid values of <cite>compatible_runtimes</cite>.</p>
+<p>Once you have created your deployment package you can specify it either directly as a local file (using the <cite>filename</cite> argument) or
+indirectly via Amazon S3 (using the <cite>s3_bucket</cite>, <cite>s3_key</cite> and <cite>s3_object_version</cite> arguments). When providing the deployment
+package via S3 it may be useful to use the <cite>aws_s3_bucket_object</cite> resource to upload it.</p>
+<p>For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
+large files efficiently.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>compatible_runtimes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of [Runtimes][2] this layer is compatible with. Up to 5 runtimes can be specified.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of what your Lambda Layer does.</li>
 <li><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3_</cite>-prefixed options cannot be used.</li>
@@ -784,7 +802,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.Permission">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Permission</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>event_source_token=None</em>, <em>function=None</em>, <em>principal=None</em>, <em>qualifier=None</em>, <em>source_account=None</em>, <em>source_arn=None</em>, <em>statement_id=None</em>, <em>statement_id_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Permission" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">Permission</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>event_source_token=None</em>, <em>function=None</em>, <em>principal=None</em>, <em>qualifier=None</em>, <em>source_account=None</em>, <em>source_arn=None</em>, <em>statement_id=None</em>, <em>statement_id_prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.Permission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -792,8 +810,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS Lambda action you want to allow in this statement. (e.g. <cite>lambda:InvokeFunction</cite>)</li>
 <li><strong>event_source_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Event Source Token to validate.  Used with [Alexa Skills][1].</li>
 <li><strong>function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Lambda function whose resource policy you are updating</li>

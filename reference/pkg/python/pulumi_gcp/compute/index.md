@@ -2,7 +2,7 @@
 <span id="compute"></span><h1>compute<a class="headerlink" href="#module-pulumi_gcp.compute" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.compute.Address">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Address</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address=None</em>, <em>address_type=None</em>, <em>description=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>network_tier=None</em>, <em>project=None</em>, <em>region=None</em>, <em>subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Address" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Address</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address=None</em>, <em>address_type=None</em>, <em>description=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>network_tier=None</em>, <em>project=None</em>, <em>region=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents an Address resource.</p>
 <p>Each virtual machine instance has an ephemeral internal IP address and,
 optionally, an external IP address. To communicate between instances on
@@ -42,8 +42,8 @@ static.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP of the created resource.</li>
 </ul>
 </td>
@@ -121,7 +121,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.AttachedDisk">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">AttachedDisk</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>device_name=None</em>, <em>disk=None</em>, <em>instance=None</em>, <em>mode=None</em>, <em>project=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AttachedDisk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">AttachedDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_name=None</em>, <em>disk=None</em>, <em>instance=None</em>, <em>mode=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AttachedDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Persistent disks can be attached to a compute instance using [the <cite>attached_disk</cite>
 section within the compute instance configuration](<a class="reference external" href="https://www.terraform.io/docs/providers/google/r/compute_instance.html#attached_disk">https://www.terraform.io/docs/providers/google/r/compute_instance.html#attached_disk</a>).
 However there may be situations where managing the attached disks via the compute
@@ -145,8 +145,8 @@ numbers of disks using the <cite>count</cite> variable.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -200,7 +200,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Autoscalar">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Autoscalar</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>autoscaling_policy=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>target=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Autoscalar</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling_policy=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>target=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents an Autoscaler resource.</p>
 <p>Autoscalers allow you to automatically scale virtual machine instances in
 managed instance groups according to an autoscaling policy that you
@@ -232,8 +232,8 @@ define.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -293,7 +293,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.BackendBucket">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendBucket</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket_name=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendBucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendBucket</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket_name=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Backend buckets allow you to use Google Cloud Storage buckets with HTTP(S)
 load balancing.</p>
 <p>An HTTP(S) load balancer can direct traffic to specified URLs to a
@@ -327,8 +327,8 @@ a virtual machine instance.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -396,7 +396,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.BackendService">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendService</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backends=None</em>, <em>cdn_policy=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>health_checks=None</em>, <em>iap=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>security_policy=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">BackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backends=None</em>, <em>cdn_policy=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>custom_request_headers=None</em>, <em>description=None</em>, <em>enable_cdn=None</em>, <em>health_checks=None</em>, <em>iap=None</em>, <em>name=None</em>, <em>port_name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>security_policy=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.BackendService" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Backend Service defines a group of virtual machines that will serve traffic for load balancing. For more information
 see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">https://cloud.google.com/compute/docs/load-balancing/http/backend-service</a>)
 and the [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/backendServices">https://cloud.google.com/compute/docs/reference/latest/backendServices</a>).</p>
@@ -406,8 +406,8 @@ and the [API](<a class="reference external" href="https://cloud.google.com/compu
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of backends that serve this BackendService. Structure is documented below.</li>
 <li><strong>cdn_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cloud CDN configuration for this BackendService. Structure is documented below.</li>
 <li><strong>connection_draining_timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time for which instance will be drained (not accept new connections,
@@ -598,7 +598,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Disk">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Disk</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>disk_encryption_key_raw=None</em>, <em>image=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_image_encryption_key=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Disk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Disk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>disk_encryption_key_raw=None</em>, <em>image=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_image_encryption_key=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Persistent disks are durable storage devices that function similarly to
 the physical disks in a desktop or a server. Compute Engine manages the
 hardware behind these devices to ensure data redundancy and optimize
@@ -642,8 +642,8 @@ state as plain-text.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -719,7 +719,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Firewall">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allows=None</em>, <em>denies=None</em>, <em>description=None</em>, <em>destination_ranges=None</em>, <em>direction=None</em>, <em>disabled=None</em>, <em>enable_logging=None</em>, <em>name=None</em>, <em>network=None</em>, <em>priority=None</em>, <em>project=None</em>, <em>source_ranges=None</em>, <em>source_service_accounts=None</em>, <em>source_tags=None</em>, <em>target_service_accounts=None</em>, <em>target_tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Firewall" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allows=None</em>, <em>denies=None</em>, <em>description=None</em>, <em>destination_ranges=None</em>, <em>direction=None</em>, <em>disabled=None</em>, <em>enable_logging=None</em>, <em>name=None</em>, <em>network=None</em>, <em>priority=None</em>, <em>project=None</em>, <em>source_ranges=None</em>, <em>source_service_accounts=None</em>, <em>source_tags=None</em>, <em>target_service_accounts=None</em>, <em>target_tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Each network has its own firewall controlling access to and from the
 instances.</p>
 <p>All traffic to instances, even from other instances, is blocked by the
@@ -757,8 +757,8 @@ you need.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -837,7 +837,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.ForwardingRule">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ForwardingRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_service=None</em>, <em>description=None</em>, <em>ip_address=None</em>, <em>ip_protocol=None</em>, <em>ip_version=None</em>, <em>labels=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_tier=None</em>, <em>port_range=None</em>, <em>ports=None</em>, <em>project=None</em>, <em>region=None</em>, <em>service_label=None</em>, <em>subnetwork=None</em>, <em>target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ForwardingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_service=None</em>, <em>description=None</em>, <em>ip_address=None</em>, <em>ip_protocol=None</em>, <em>ip_version=None</em>, <em>labels=None</em>, <em>load_balancing_scheme=None</em>, <em>name=None</em>, <em>network=None</em>, <em>network_tier=None</em>, <em>port_range=None</em>, <em>ports=None</em>, <em>project=None</em>, <em>region=None</em>, <em>service_label=None</em>, <em>subnetwork=None</em>, <em>target=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>A ForwardingRule resource. A ForwardingRule resource specifies which pool
 of target virtual machines to forward a packet to if it matches the given
 [IPAddress, IPProtocol, portRange] tuple.</p>
@@ -868,8 +868,8 @@ of target virtual machines to forward a packet to if it matches the given
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -1806,7 +1806,7 @@ VM instances contained in this subnetwork. Structure is documented below.</p>
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GlobalAddress">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GlobalAddress</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address_type=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>network=None</em>, <em>prefix_length=None</em>, <em>project=None</em>, <em>purpose=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GlobalAddress</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_type=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>network=None</em>, <em>prefix_length=None</em>, <em>project=None</em>, <em>purpose=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Global Address resource. Global addresses are used for
 HTTP(S) load balancing.</p>
 <p>To get more information about GlobalAddress, see:</p>
@@ -1836,8 +1836,8 @@ HTTP(S) load balancing.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -1909,7 +1909,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.GlobalForwardingRule">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GlobalForwardingRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>ip_address=None</em>, <em>ip_protocol=None</em>, <em>ip_version=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>port_range=None</em>, <em>project=None</em>, <em>target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">GlobalForwardingRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>ip_address=None</em>, <em>ip_protocol=None</em>, <em>ip_version=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>port_range=None</em>, <em>project=None</em>, <em>target=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.GlobalForwardingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Global Forwarding Rule within GCE. This binds an ip and port to a target HTTP(s) proxy. For more
 information see [the official
 documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/global-forwarding-rules">https://cloud.google.com/compute/docs/load-balancing/http/global-forwarding-rules</a>) and
@@ -1919,8 +1919,8 @@ documentation](<a class="reference external" href="https://cloud.google.com/comp
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Textual description field.</li>
 <li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The static IP. (if not set, an ephemeral IP is
 used). This should be the literal IP address to be used, not the <cite>self_link</cite>
@@ -2074,7 +2074,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.HealthCheck">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HealthCheck</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>check_interval_sec=None</em>, <em>description=None</em>, <em>healthy_threshold=None</em>, <em>http_health_check=None</em>, <em>https_health_check=None</em>, <em>name=None</em>, <em>project=None</em>, <em>ssl_health_check=None</em>, <em>tcp_health_check=None</em>, <em>timeout_sec=None</em>, <em>unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HealthCheck</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>check_interval_sec=None</em>, <em>description=None</em>, <em>healthy_threshold=None</em>, <em>http_health_check=None</em>, <em>https_health_check=None</em>, <em>name=None</em>, <em>project=None</em>, <em>ssl_health_check=None</em>, <em>tcp_health_check=None</em>, <em>timeout_sec=None</em>, <em>unhealthy_threshold=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>Health Checks determine whether instances are responsive and able to do work.
 They are an important part of a comprehensive load balancing configuration,
 as they enable monitoring instances behind load balancers.</p>
@@ -2112,8 +2112,8 @@ healthy again and can receive new connections.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -2187,7 +2187,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.HttpHealthCheck">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HttpHealthCheck</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>check_interval_sec=None</em>, <em>description=None</em>, <em>healthy_threshold=None</em>, <em>host=None</em>, <em>name=None</em>, <em>port=None</em>, <em>project=None</em>, <em>request_path=None</em>, <em>timeout_sec=None</em>, <em>unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HttpHealthCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HttpHealthCheck</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>check_interval_sec=None</em>, <em>description=None</em>, <em>healthy_threshold=None</em>, <em>host=None</em>, <em>name=None</em>, <em>port=None</em>, <em>project=None</em>, <em>request_path=None</em>, <em>timeout_sec=None</em>, <em>unhealthy_threshold=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HttpHealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>An HttpHealthCheck resource. This resource defines a template for how
 individual VMs should be checked for health, via HTTP.</p>
 <p>&gt; <strong>Note:</strong> google_compute_http_health_check is a legacy health check.
@@ -2222,8 +2222,8 @@ which still require the legacy version.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -2296,7 +2296,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.HttpsHealthCheck">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HttpsHealthCheck</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>check_interval_sec=None</em>, <em>description=None</em>, <em>healthy_threshold=None</em>, <em>host=None</em>, <em>name=None</em>, <em>port=None</em>, <em>project=None</em>, <em>request_path=None</em>, <em>timeout_sec=None</em>, <em>unhealthy_threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HttpsHealthCheck" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">HttpsHealthCheck</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>check_interval_sec=None</em>, <em>description=None</em>, <em>healthy_threshold=None</em>, <em>host=None</em>, <em>name=None</em>, <em>port=None</em>, <em>project=None</em>, <em>request_path=None</em>, <em>timeout_sec=None</em>, <em>unhealthy_threshold=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.HttpsHealthCheck" title="Permalink to this definition">¶</a></dt>
 <dd><p>An HttpsHealthCheck resource. This resource defines a template for how
 individual VMs should be checked for health, via HTTPS.</p>
 <p>&gt; <strong>Note:</strong> google_compute_https_health_check is a legacy health check.
@@ -2331,8 +2331,8 @@ which still require the legacy version.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -2405,7 +2405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Image">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>create_timeout=None</em>, <em>description=None</em>, <em>family=None</em>, <em>labels=None</em>, <em>licenses=None</em>, <em>name=None</em>, <em>project=None</em>, <em>raw_disk=None</em>, <em>source_disk=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>create_timeout=None</em>, <em>description=None</em>, <em>family=None</em>, <em>labels=None</em>, <em>licenses=None</em>, <em>name=None</em>, <em>project=None</em>, <em>raw_disk=None</em>, <em>source_disk=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a bootable VM image resource for Google Compute Engine from an existing
 tarball. For more information see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/images">https://cloud.google.com/compute/docs/images</a>) and
 [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/images">https://cloud.google.com/compute/docs/reference/latest/images</a>).</p>
@@ -2414,8 +2414,8 @@ tarball. For more information see [the official documentation](<a class="referen
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>create_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Configurable timeout in minutes for creating images. Default is 4 minutes.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the image to be created</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the image family to which this image belongs.</li>
@@ -2550,7 +2550,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disk=None</em>, <em>can_ip_forward=None</em>, <em>create_timeout=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>guest_accelerators=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>scheduling=None</em>, <em>scratch_disks=None</em>, <em>service_account=None</em>, <em>tags=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disk=None</em>, <em>can_ip_forward=None</em>, <em>create_timeout=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>guest_accelerators=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>scheduling=None</em>, <em>scratch_disks=None</em>, <em>service_account=None</em>, <em>tags=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance resource within GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instances">https://cloud.google.com/compute/docs/instances</a>)
 and
@@ -2560,8 +2560,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_stopping_for_update</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, allows Terraform to stop the instance to update its properties.
 If you try to update a property that requires stopping the instance without setting this field, the update will fail.</li>
 <li><strong>attached_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of disks to attach to the instance. Structure is documented below.</li>
@@ -2834,7 +2834,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceFromTemplate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disk=None</em>, <em>can_ip_forward=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>guest_accelerators=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>scheduling=None</em>, <em>scratch_disks=None</em>, <em>service_account=None</em>, <em>source_instance_template=None</em>, <em>tags=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceFromTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_stopping_for_update=None</em>, <em>attached_disks=None</em>, <em>boot_disk=None</em>, <em>can_ip_forward=None</em>, <em>deletion_protection=None</em>, <em>description=None</em>, <em>guest_accelerators=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>scheduling=None</em>, <em>scratch_disks=None</em>, <em>service_account=None</em>, <em>source_instance_template=None</em>, <em>tags=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance resource within GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instances">https://cloud.google.com/compute/docs/instances</a>)
 and
@@ -2847,8 +2847,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -2944,7 +2944,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceGroup">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>instances=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>network=None</em>, <em>project=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>instances=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>network=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups</a>)
 and [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">https://cloud.google.com/compute/docs/reference/latest/instanceGroups</a>)</p>
@@ -2953,8 +2953,8 @@ and [API](<a class="reference external" href="https://cloud.google.com/compute/d
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional textual description of the instance
 group.</li>
 <li><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instances in the group. They should be given
@@ -3085,7 +3085,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceGroupManager">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceGroupManager</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_healing_policies=None</em>, <em>base_instance_name=None</em>, <em>description=None</em>, <em>instance_template=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>project=None</em>, <em>rolling_update_policy=None</em>, <em>target_pools=None</em>, <em>target_size=None</em>, <em>update_strategy=None</em>, <em>versions=None</em>, <em>wait_for_instances=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceGroupManager</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_healing_policies=None</em>, <em>base_instance_name=None</em>, <em>description=None</em>, <em>instance_template=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>project=None</em>, <em>rolling_update_policy=None</em>, <em>target_pools=None</em>, <em>target_size=None</em>, <em>update_strategy=None</em>, <em>versions=None</em>, <em>wait_for_instances=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceGroupManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google Compute Engine Instance Group Manager API creates and manages pools
 of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/manager">https://cloud.google.com/compute/docs/instance-groups/manager</a>)
@@ -3096,8 +3096,8 @@ and [API](<a class="reference external" href="https://cloud.google.com/compute/d
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups</a>).
 This property is in beta, and should be used with the terraform-provider-google-beta provider.
@@ -3336,7 +3336,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InstanceTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceTemplate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>can_ip_forward=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>instance_description=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>region=None</em>, <em>schedulings=None</em>, <em>service_account=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InstanceTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>can_ip_forward=None</em>, <em>description=None</em>, <em>disks=None</em>, <em>guest_accelerators=None</em>, <em>instance_description=None</em>, <em>labels=None</em>, <em>machine_type=None</em>, <em>metadata=None</em>, <em>metadata_startup_script=None</em>, <em>min_cpu_platform=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>project=None</em>, <em>region=None</em>, <em>schedulings=None</em>, <em>service_account=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InstanceTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VM instance template resource within GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-templates">https://cloud.google.com/compute/docs/instance-templates</a>)
 and
@@ -3346,8 +3346,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>can_ip_forward</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</li>
@@ -3581,7 +3581,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.InterconnectAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InterconnectAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>interconnect=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InterconnectAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">InterconnectAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>interconnect=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.InterconnectAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents an InterconnectAttachment (VLAN attachment) resource. For more
 information, see Creating VLAN Attachments.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3589,8 +3589,8 @@ information, see Creating VLAN Attachments.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -3659,7 +3659,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Network">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_create_subnetworks=None</em>, <em>description=None</em>, <em>ipv4_range=None</em>, <em>name=None</em>, <em>project=None</em>, <em>routing_mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Network" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_subnetworks=None</em>, <em>description=None</em>, <em>ipv4_range=None</em>, <em>name=None</em>, <em>project=None</em>, <em>routing_mode=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a network within GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/vpc">https://cloud.google.com/compute/docs/vpc</a>)
 and
@@ -3669,8 +3669,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_create_subnetworks</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to true, this network will be
 created in auto subnet mode, and Google will create a subnet for each region
 automatically. If set to false, a custom subnetted network will be created that
@@ -3792,7 +3792,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.NetworkPeering">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NetworkPeering</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_create_routes=None</em>, <em>name=None</em>, <em>network=None</em>, <em>peer_network=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">NetworkPeering</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_create_routes=None</em>, <em>name=None</em>, <em>network=None</em>, <em>peer_network=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.NetworkPeering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a network peering within GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/vpc/vpc-peering">https://cloud.google.com/compute/docs/vpc/vpc-peering</a>)
 and
@@ -3804,8 +3804,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_create_routes</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <cite>true</cite>, the routes between the two networks will
 be created and managed automatically. Defaults to <cite>true</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the peering.</li>
@@ -3895,7 +3895,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.ProjectMetadata">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectMetadata</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadata" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectMetadata</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>metadata=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages metadata common to all instances for a project in GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/storing-retrieving-metadata">https://cloud.google.com/compute/docs/storing-retrieving-metadata</a>)
 and
@@ -3908,8 +3908,8 @@ google_compute_project_metadata_item.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A series of key value pairs. Changing this resource
 updates the GCE state.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
@@ -3975,7 +3975,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.ProjectMetadataItem">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectMetadataItem</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>key=None</em>, <em>project=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadataItem" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">ProjectMetadataItem</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key=None</em>, <em>project=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.ProjectMetadataItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a single key/value pair on metadata common to all instances for
 a project in GCE. Using <cite>google_compute_project_metadata_item</cite> lets you
 manage a single key/value setting in Terraform rather than the entire
@@ -3985,8 +3985,8 @@ project metadata map.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metadata key to set.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>
@@ -4057,7 +4057,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionAutoscaler">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionAutoscaler</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>autoscaling_policy=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionAutoscaler" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionAutoscaler</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>autoscaling_policy=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>target=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionAutoscaler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents an Autoscaler resource.</p>
 <p>Autoscalers allow you to automatically scale virtual machine instances in
 managed instance groups according to an autoscaling policy that you
@@ -4089,8 +4089,8 @@ define.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -4150,7 +4150,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionBackendService">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionBackendService</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backends=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>description=None</em>, <em>health_checks=None</em>, <em>name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionBackendService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backends=None</em>, <em>connection_draining_timeout_sec=None</em>, <em>description=None</em>, <em>health_checks=None</em>, <em>name=None</em>, <em>project=None</em>, <em>protocol=None</em>, <em>region=None</em>, <em>session_affinity=None</em>, <em>timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionBackendService" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Region Backend Service defines a regionally-scoped group of virtual machines that will serve traffic for load balancing.
 For more information see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/internal/">https://cloud.google.com/compute/docs/load-balancing/internal/</a>)
 and [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionBackendServices">https://cloud.google.com/compute/docs/reference/latest/regionBackendServices</a>).</p>
@@ -4163,8 +4163,8 @@ and [API](<a class="reference external" href="https://cloud.google.com/compute/d
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backends</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of backends that serve this BackendService.
 Structure is documented below.</li>
 <li><strong>connection_draining_timeout_sec</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time for which instance will be drained
@@ -4314,7 +4314,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionDisk">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionDisk</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_zones=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionDisk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disk_encryption_key=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>replica_zones=None</em>, <em>size=None</em>, <em>snapshot=None</em>, <em>source_snapshot_encryption_key=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Persistent disks are durable storage devices that function similarly to
 the physical disks in a desktop or a server. Compute Engine manages the
 hardware behind these devices to ensure data redundancy and optimize
@@ -4358,8 +4358,8 @@ state as plain-text.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -4433,7 +4433,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RegionInstanceGroupManager">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionInstanceGroupManager</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_healing_policies=None</em>, <em>base_instance_name=None</em>, <em>description=None</em>, <em>distribution_policy_zones=None</em>, <em>instance_template=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>project=None</em>, <em>region=None</em>, <em>rolling_update_policy=None</em>, <em>target_pools=None</em>, <em>target_size=None</em>, <em>update_strategy=None</em>, <em>versions=None</em>, <em>wait_for_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RegionInstanceGroupManager</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_healing_policies=None</em>, <em>base_instance_name=None</em>, <em>description=None</em>, <em>distribution_policy_zones=None</em>, <em>instance_template=None</em>, <em>name=None</em>, <em>named_ports=None</em>, <em>project=None</em>, <em>region=None</em>, <em>rolling_update_policy=None</em>, <em>target_pools=None</em>, <em>target_size=None</em>, <em>update_strategy=None</em>, <em>versions=None</em>, <em>wait_for_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RegionInstanceGroupManager" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google Compute Engine Regional Instance Group Manager API creates and manages pools
 of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups">https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups</a>)
@@ -4444,8 +4444,8 @@ and [API](<a class="reference external" href="https://cloud.google.com/compute/d
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_healing_policies</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups">https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups</a>).
 This property is in beta, and should be used with the terraform-provider-google-beta provider.
@@ -4695,7 +4695,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Route">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>dest_range=None</em>, <em>name=None</em>, <em>network=None</em>, <em>next_hop_gateway=None</em>, <em>next_hop_instance=None</em>, <em>next_hop_instance_zone=None</em>, <em>next_hop_ip=None</em>, <em>next_hop_vpn_tunnel=None</em>, <em>priority=None</em>, <em>project=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>dest_range=None</em>, <em>name=None</em>, <em>network=None</em>, <em>next_hop_gateway=None</em>, <em>next_hop_instance=None</em>, <em>next_hop_instance_zone=None</em>, <em>next_hop_ip=None</em>, <em>next_hop_vpn_tunnel=None</em>, <em>priority=None</em>, <em>project=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Route resource.</p>
 <p>A route is a rule that specifies how certain packets should be handled by
 the virtual network. Routes are associated with virtual machines by tag,
@@ -4741,8 +4741,8 @@ nextHopGateway, nextHopInstance, nextHopIp, or nextHopVpnTunnel.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -4830,7 +4830,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Router">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Router</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bgp=None</em>, <em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Router" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Router</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bgp=None</em>, <em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Router resource.</p>
 <p>To get more information about Router, see:</p>
 <ul class="simple">
@@ -4859,8 +4859,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -4929,7 +4929,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RouterInterface">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RouterInterface</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ip_range=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em>, <em>vpn_tunnel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RouterInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_range=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em>, <em>vpn_tunnel=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Cloud Router interface. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/cloudrouter">https://cloud.google.com/compute/docs/cloudrouter</a>)
 and
@@ -4939,8 +4939,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address and range of the interface. The IP range must be
 in the RFC3927 link-local IP space. Changing this forces a new interface to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the interface, required by GCE. Changing
@@ -5044,15 +5044,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RouterNat">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RouterNat</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>icmp_idle_timeout_sec=None</em>, <em>min_ports_per_vm=None</em>, <em>name=None</em>, <em>nat_ip_allocate_option=None</em>, <em>nat_ips=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em>, <em>source_subnetwork_ip_ranges_to_nat=None</em>, <em>subnetworks=None</em>, <em>tcp_established_idle_timeout_sec=None</em>, <em>tcp_transitory_idle_timeout_sec=None</em>, <em>udp_idle_timeout_sec=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterNat" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RouterNat</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>icmp_idle_timeout_sec=None</em>, <em>min_ports_per_vm=None</em>, <em>name=None</em>, <em>nat_ip_allocate_option=None</em>, <em>nat_ips=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em>, <em>source_subnetwork_ip_ranges_to_nat=None</em>, <em>subnetworks=None</em>, <em>tcp_established_idle_timeout_sec=None</em>, <em>tcp_transitory_idle_timeout_sec=None</em>, <em>udp_idle_timeout_sec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterNat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a RouterNat resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -5113,7 +5113,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.RouterPeer">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RouterPeer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>advertised_route_priority=None</em>, <em>interface=None</em>, <em>name=None</em>, <em>peer_asn=None</em>, <em>peer_ip_address=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">RouterPeer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>advertised_route_priority=None</em>, <em>interface=None</em>, <em>name=None</em>, <em>peer_asn=None</em>, <em>peer_ip_address=None</em>, <em>project=None</em>, <em>region=None</em>, <em>router=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterPeer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Cloud Router BGP peer. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/cloudrouter">https://cloud.google.com/compute/docs/cloudrouter</a>)
 and
@@ -5123,8 +5123,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>advertised_route_priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of routes advertised to this BGP peer.
 Changing this forces a new peer to be created.</li>
 <li><strong>interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the interface the BGP peer is associated with.
@@ -5252,7 +5252,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SSLCertificate">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SSLCertificate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>private_key=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SSLCertificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>private_key=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>An SslCertificate resource, used for HTTPS load balancing. This resource
 provides a mechanism to upload an SSL key and certificate to
 the load balancer to serve secure connections from the user.</p>
@@ -5283,8 +5283,8 @@ the load balancer to serve secure connections from the user.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -5362,7 +5362,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SSLPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SSLPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>custom_features=None</em>, <em>description=None</em>, <em>min_tls_version=None</em>, <em>name=None</em>, <em>profile=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SSLPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SSLPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>custom_features=None</em>, <em>description=None</em>, <em>min_tls_version=None</em>, <em>name=None</em>, <em>profile=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SSLPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a SSL policy. SSL policies give you the ability to control the
 features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
 <p>To get more information about SslPolicy, see:</p>
@@ -5392,8 +5392,8 @@ features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -5462,7 +5462,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SecurityPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SecurityPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SecurityPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SecurityPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information
 see the [official documentation](<a class="reference external" href="https://cloud.google.com/armor/docs/configure-security-policies">https://cloud.google.com/armor/docs/configure-security-policies</a>)
 and the [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies">https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies</a>).</p>
@@ -5471,8 +5471,8 @@ and the [API](<a class="reference external" href="https://cloud.google.com/compu
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description of this security policy. Max size is 2048.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security policy.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it
@@ -5566,7 +5566,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SharedVPCHostProject">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SharedVPCHostProject</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCHostProject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SharedVPCHostProject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCHostProject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables the Google Compute Engine
 [Shared VPC](<a class="reference external" href="https://cloud.google.com/compute/docs/shared-vpc">https://cloud.google.com/compute/docs/shared-vpc</a>)
 feature for a project, assigning it as a Shared VPC host project.</p>
@@ -5578,8 +5578,8 @@ where the Shared VPC feature is referred to by its former name “XPN”.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project that will serve as a Shared VPC host project</li>
 </ul>
 </td>
@@ -5634,7 +5634,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SharedVPCServiceProject">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SharedVPCServiceProject</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>host_project=None</em>, <em>service_project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCServiceProject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SharedVPCServiceProject</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host_project=None</em>, <em>service_project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SharedVPCServiceProject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables the Google Compute Engine
 [Shared VPC](<a class="reference external" href="https://cloud.google.com/compute/docs/shared-vpc">https://cloud.google.com/compute/docs/shared-vpc</a>)
 feature for a project, assigning it as a Shared VPC service project associated
@@ -5647,8 +5647,8 @@ where the Shared VPC feature is referred to by its former name “XPN”.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>host_project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a host project to associate.</li>
 <li><strong>service_project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project that will serve as a Shared VPC service project.</li>
 </ul>
@@ -5710,7 +5710,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Snapshot">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>snapshot_encryption_key=None</em>, <em>snapshot_encryption_key_raw=None</em>, <em>source_disk=None</em>, <em>source_disk_encryption_key=None</em>, <em>source_disk_encryption_key_raw=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Snapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>snapshot_encryption_key=None</em>, <em>snapshot_encryption_key_raw=None</em>, <em>source_disk=None</em>, <em>source_disk_encryption_key=None</em>, <em>source_disk_encryption_key_raw=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Persistent Disk Snapshot resource.</p>
 <p>Use snapshots to back up data from your persistent disks. Snapshots are
 different from public images and custom images, which are used primarily
@@ -5738,8 +5738,8 @@ created a full image of the disk.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -5812,7 +5812,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.Subnetwork">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Subnetwork</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>enable_flow_logs=None</em>, <em>ip_cidr_range=None</em>, <em>name=None</em>, <em>network=None</em>, <em>private_ip_google_access=None</em>, <em>project=None</em>, <em>region=None</em>, <em>secondary_ip_ranges=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">Subnetwork</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>enable_flow_logs=None</em>, <em>ip_cidr_range=None</em>, <em>name=None</em>, <em>network=None</em>, <em>private_ip_google_access=None</em>, <em>project=None</em>, <em>region=None</em>, <em>secondary_ip_ranges=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>A VPC network is a virtual version of the traditional physical networks
 that exist within and between physical data centers. A VPC network
 provides connectivity for your Compute Engine virtual machine (VM)
@@ -5860,8 +5860,8 @@ of the network, even entire subnets, using firewall rules.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -5933,7 +5933,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMBinding">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMBinding</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>members=None</em>, <em>project=None</em>, <em>region=None</em>, <em>role=None</em>, <em>subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>project=None</em>, <em>region=None</em>, <em>role=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>&gt; <strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
 See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
 <p>Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:</p>
@@ -5949,8 +5949,8 @@ See [Provider Versions](<a class="reference external" href="https://terraform.io
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -6052,7 +6052,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMMember">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMMember</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>member=None</em>, <em>project=None</em>, <em>region=None</em>, <em>role=None</em>, <em>subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>project=None</em>, <em>region=None</em>, <em>role=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>&gt; <strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
 See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
 <p>Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:</p>
@@ -6068,8 +6068,8 @@ See [Provider Versions](<a class="reference external" href="https://terraform.io
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -6171,7 +6171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.SubnetworkIAMPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>region=None</em>, <em>subnetwork=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">SubnetworkIAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>region=None</em>, <em>subnetwork=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.SubnetworkIAMPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>&gt; <strong>Warning:</strong> These resources are in beta, and should be used with the terraform-provider-google-beta provider.
 See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
 <p>Three different resources help you manage your IAM policy for GCE subnetwork. Each of these resources serves a different use case:</p>
@@ -6187,8 +6187,8 @@ See [Provider Versions](<a class="reference external" href="https://terraform.io
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
 a <cite>google_iam_policy</cite> data source.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
@@ -6276,7 +6276,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.TargetHttpProxy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetHttpProxy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>url_map=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpProxy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetHttpProxy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>url_map=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpProxy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a TargetHttpProxy resource, which is used by one or more global
 forwarding rule to route incoming HTTP requests to a URL map.</p>
 <p>To get more information about TargetHttpProxy, see:</p>
@@ -6306,8 +6306,8 @@ forwarding rule to route incoming HTTP requests to a URL map.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -6374,7 +6374,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.TargetHttpsProxy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetHttpsProxy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>quic_override=None</em>, <em>ssl_certificates=None</em>, <em>ssl_policy=None</em>, <em>url_map=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpsProxy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetHttpsProxy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>quic_override=None</em>, <em>ssl_certificates=None</em>, <em>ssl_policy=None</em>, <em>url_map=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpsProxy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a TargetHttpsProxy resource, which is used by one or more
 global forwarding rule to route incoming HTTPS requests to a URL map.</p>
 <p>To get more information about TargetHttpsProxy, see:</p>
@@ -6404,8 +6404,8 @@ global forwarding rule to route incoming HTTPS requests to a URL map.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -6475,7 +6475,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.TargetPool">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backup_pool=None</em>, <em>description=None</em>, <em>failover_ratio=None</em>, <em>health_checks=None</em>, <em>instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>session_affinity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backup_pool=None</em>, <em>description=None</em>, <em>failover_ratio=None</em>, <em>health_checks=None</em>, <em>instances=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>session_affinity=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Target Pool within GCE. This is a collection of instances used as
 target of a network load balancer (Forwarding Rule). For more information see
 [the official
@@ -6486,8 +6486,8 @@ and [API](<a class="reference external" href="https://cloud.google.com/compute/d
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backup_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL to the backup target pool. Must also set
 failover_ratio.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Textual description field.</li>
@@ -6628,7 +6628,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.TargetSSLProxy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetSSLProxy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_service=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>proxy_header=None</em>, <em>ssl_certificates=None</em>, <em>ssl_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetSSLProxy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetSSLProxy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_service=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>proxy_header=None</em>, <em>ssl_certificates=None</em>, <em>ssl_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetSSLProxy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a TargetSslProxy resource, which is used by one or more
 global forwarding rule to route incoming SSL requests to a backend
 service.</p>
@@ -6659,8 +6659,8 @@ service.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -6730,7 +6730,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.TargetTCPProxy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetTCPProxy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_service=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>proxy_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetTCPProxy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">TargetTCPProxy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_service=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>proxy_header=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.TargetTCPProxy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a TargetTcpProxy resource, which is used by one or more
 global forwarding rule to route incoming TCP requests to a Backend
 service.</p>
@@ -6761,8 +6761,8 @@ service.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -6830,7 +6830,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.URLMap">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">URLMap</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_service=None</em>, <em>description=None</em>, <em>host_rules=None</em>, <em>name=None</em>, <em>path_matchers=None</em>, <em>project=None</em>, <em>tests=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">URLMap</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_service=None</em>, <em>description=None</em>, <em>host_rules=None</em>, <em>name=None</em>, <em>path_matchers=None</em>, <em>project=None</em>, <em>tests=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.URLMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a URL Map resource within GCE. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/url-map">https://cloud.google.com/compute/docs/load-balancing/http/url-map</a>)
 and
@@ -6840,8 +6840,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The backend service or backend bucket to use when none of the given rules match.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</li>
 <li><strong>host_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of host rules. Multiple blocks of this type are permitted. Structure is documented below.</li>
@@ -6960,7 +6960,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.VPNGateway">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">VPNGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.VPNGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">VPNGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>network=None</em>, <em>project=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.VPNGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a VPN gateway running in GCP. This virtual device is managed
 by Google, but used only by you.</p>
 <p>To get more information about VpnGateway, see:</p>
@@ -6982,8 +6982,8 @@ by Google, but used only by you.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -7051,7 +7051,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.compute.VPNTunnel">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">VPNTunnel</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>ike_version=None</em>, <em>labels=None</em>, <em>local_traffic_selectors=None</em>, <em>name=None</em>, <em>peer_ip=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remote_traffic_selectors=None</em>, <em>router=None</em>, <em>shared_secret=None</em>, <em>target_vpn_gateway=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.compute.</code><code class="descname">VPNTunnel</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>ike_version=None</em>, <em>labels=None</em>, <em>local_traffic_selectors=None</em>, <em>name=None</em>, <em>peer_ip=None</em>, <em>project=None</em>, <em>region=None</em>, <em>remote_traffic_selectors=None</em>, <em>router=None</em>, <em>shared_secret=None</em>, <em>target_vpn_gateway=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel" title="Permalink to this definition">¶</a></dt>
 <dd><p>VPN tunnel resource.</p>
 <p>To get more information about VpnTunnel, see:</p>
 <ul class="simple">
@@ -7084,8 +7084,8 @@ state as plain-text.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -7214,11 +7214,6 @@ and
 <dd><p>Get a Compute Instance Group within GCE.
 For more information, see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups</a>)
 and [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">https://cloud.google.com/compute/docs/reference/latest/instanceGroups</a>)</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
-data “google_compute_instance_group” “all” {</p>
-<blockquote>
-<div>name = “instance-group-name”
-zone = “us-central1-a”</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -7246,28 +7241,7 @@ zone = “us-central1-a”</div></blockquote>
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_region_instance_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_region_instance_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Compute Region Instance Group within GCE.
 For more information, see [the official documentation](<a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups">https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups</a>) and [API](<a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups">https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups</a>).</p>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a>`
-data “google_compute_region_instance_group” “group” {</p>
-<blockquote>
-<div>name = “instance-group-name”</div></blockquote>
 <p>The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:</p>
-<p><a href="#id5"><span class="problematic" id="id6">``</span></a>`
-resource “google_compute_region_instance_group_manager” “foo” {</p>
-<blockquote>
-<div>name = “some_name”
-…
-base_instance_name = “foo”
-…
-instance_template = “${google_compute_instance_template.foo.self_link}”
-target_pools = [“${google_compute_target_pool.foo.self_link}”]
-…</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>data “google_compute_region_instance_group” “data_source” {</dt>
-<dd>self_link = “${google_compute_region_instance_group_manager.foo.instance_group}”</dd>
-</dl>
-<p>}</p>
-<p><a href="#id7"><span class="problematic" id="id8">``</span></a><a href="#id9"><span class="problematic" id="id10">`</span></a></p>
 </dd></dl>
 
 <dl class="function">
@@ -7275,16 +7249,6 @@ target_pools = [“${google_compute_target_pool.foo.self_link}”]
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_regions</code><span class="sig-paren">(</span><em>project=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute regions for a given project.
 See more about [regions and regions](<a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">https://cloud.google.com/compute/docs/regions-zones/</a>) in the upstream docs.</p>
-<p><a href="#id11"><span class="problematic" id="id12">``</span></a>`
-data “google_compute_regions” “available” {}</p>
-<dl class="docutils">
-<dt>resource “google_compute_subnetwork” “cluster” {</dt>
-<dd>count = “${length(data.google_compute_regions.available.names)}”
-name          = “my-network”
-ip_cidr_range = “10.36.${count.index}.0/24”
-network       = “my-network”
-region        = “${data.google_compute_regions.available.names[count.index]}”</dd>
-</dl>
 </dd></dl>
 
 <dl class="function">
@@ -7313,18 +7277,6 @@ region        = “${data.google_compute_regions.available.names[count.index]}�
 <code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_zones</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute zones in a region for a given project.
 See more about [regions and zones](<a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/regions-zones">https://cloud.google.com/compute/docs/regions-zones/regions-zones</a>) in the upstream docs.</p>
-<p><a href="#id13"><span class="problematic" id="id14">``</span></a>`
-data “google_compute_zones” “available” {}</p>
-<dl class="docutils">
-<dt>resource “google_compute_instance_group_manager” “foo” {</dt>
-<dd><p class="first">count = “${length(data.google_compute_zones.available.names)}”</p>
-<p class="last">name               = “terraform-test-${count.index}”
-instance_template  = “${google_compute_instance_template.foobar.self_link}”
-base_instance_name = “foobar-${count.index}”
-zone               = “${data.google_compute_zones.available.names[count.index]}”
-target_size        = 1</p>
-</dd>
-</dl>
 </dd></dl>
 
 </div>

@@ -2,15 +2,15 @@
 <span id="budgets"></span><h1>budgets<a class="headerlink" href="#module-pulumi_aws.budgets" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.budgets.Budget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.budgets.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.budgets.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>budget_type=None</em>, <em>cost_filters=None</em>, <em>cost_types=None</em>, <em>limit_amount=None</em>, <em>limit_unit=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>time_period_end=None</em>, <em>time_period_start=None</em>, <em>time_unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.budgets.Budget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the target account for budget. Will use current user’s account_id by default if omitted.</li>
 <li><strong>budget_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether this budget tracks monetary cost or usage.</li>
 <li><strong>cost_filters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of CostFilters key/value pairs to apply to the budget.</li>

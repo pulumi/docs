@@ -2,7 +2,7 @@
 <span id="redshift"></span><h1>redshift<a class="headerlink" href="#module-pulumi_aws.redshift" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.redshift.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_version_upgrade=None</em>, <em>automated_snapshot_retention_period=None</em>, <em>availability_zone=None</em>, <em>bucket_name=None</em>, <em>cluster_identifier=None</em>, <em>cluster_parameter_group_name=None</em>, <em>cluster_public_key=None</em>, <em>cluster_revision_number=None</em>, <em>cluster_security_groups=None</em>, <em>cluster_subnet_group_name=None</em>, <em>cluster_type=None</em>, <em>cluster_version=None</em>, <em>database_name=None</em>, <em>elastic_ip=None</em>, <em>enable_logging=None</em>, <em>encrypted=None</em>, <em>endpoint=None</em>, <em>enhanced_vpc_routing=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>logging=None</em>, <em>master_password=None</em>, <em>master_username=None</em>, <em>node_type=None</em>, <em>number_of_nodes=None</em>, <em>owner_account=None</em>, <em>port=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>s3_key_prefix=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_cluster_identifier=None</em>, <em>snapshot_copy=None</em>, <em>snapshot_identifier=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_version_upgrade=None</em>, <em>automated_snapshot_retention_period=None</em>, <em>availability_zone=None</em>, <em>bucket_name=None</em>, <em>cluster_identifier=None</em>, <em>cluster_parameter_group_name=None</em>, <em>cluster_public_key=None</em>, <em>cluster_revision_number=None</em>, <em>cluster_security_groups=None</em>, <em>cluster_subnet_group_name=None</em>, <em>cluster_type=None</em>, <em>cluster_version=None</em>, <em>database_name=None</em>, <em>elastic_ip=None</em>, <em>enable_logging=None</em>, <em>encrypted=None</em>, <em>endpoint=None</em>, <em>enhanced_vpc_routing=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>logging=None</em>, <em>master_password=None</em>, <em>master_username=None</em>, <em>node_type=None</em>, <em>number_of_nodes=None</em>, <em>owner_account=None</em>, <em>port=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>s3_key_prefix=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_cluster_identifier=None</em>, <em>snapshot_copy=None</em>, <em>snapshot_identifier=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift Cluster Resource.</p>
 <p>&gt; <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
@@ -11,8 +11,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true</li>
 <li><strong>automated_snapshot_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.</li>
@@ -346,15 +346,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.EventSubscription">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">EventSubscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enabled=None</em>, <em>event_categories=None</em>, <em>name=None</em>, <em>severity=None</em>, <em>sns_topic_arn=None</em>, <em>source_ids=None</em>, <em>source_type=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.EventSubscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">EventSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>event_categories=None</em>, <em>name=None</em>, <em>severity=None</em>, <em>sns_topic_arn=None</em>, <em>source_ids=None</em>, <em>source_type=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.EventSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift event subscription resource.</p>
+<p>## Attributes</p>
+<p>The following additional atttributes are provided:</p>
+<ul class="simple">
+<li><cite>id</cite> - The name of the Redshift event notification subscription</li>
+<li><cite>customer_aws_id</cite> - The AWS customer account associated with the Redshift event notification subscription</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</li>
 <li><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html">https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html</a> or run <cite>aws redshift describe-event-categories</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift event subscription.</li>
@@ -650,15 +656,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift Cluster parameter group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Redshift parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift parameter.</li>
@@ -734,15 +740,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.SecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>ingress=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>ingress=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift security group. Defaults to “Managed by Terraform”.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift security group.</li>
@@ -811,7 +817,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.SnapshotCopyGrant">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">SnapshotCopyGrant</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>kms_key_id=None</em>, <em>snapshot_copy_grant_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">SnapshotCopyGrant</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>kms_key_id=None</em>, <em>snapshot_copy_grant_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.</p>
 <p>Note that the grant must exist in the destination region, and not in the region of the cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -819,8 +825,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.</li>
 <li><strong>snapshot_copy_grant_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -889,15 +895,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.redshift.SubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (Amazon VPC) when creating Amazon Redshift subnet group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Redshift Subnet group. Defaults to “Managed by Terraform”.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Redshift Subnet group.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of VPC subnet IDs.</li>

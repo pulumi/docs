@@ -2,7 +2,7 @@
 <span id="redis"></span><h1>redis<a class="headerlink" href="#module-pulumi_gcp.redis" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.redis.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.redis.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>alternative_location_id=None</em>, <em>authorized_network=None</em>, <em>display_name=None</em>, <em>labels=None</em>, <em>location_id=None</em>, <em>memory_size_gb=None</em>, <em>name=None</em>, <em>project=None</em>, <em>redis_configs=None</em>, <em>redis_version=None</em>, <em>region=None</em>, <em>reserved_ip_range=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.redis.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alternative_location_id=None</em>, <em>authorized_network=None</em>, <em>display_name=None</em>, <em>labels=None</em>, <em>location_id=None</em>, <em>memory_size_gb=None</em>, <em>name=None</em>, <em>project=None</em>, <em>redis_configs=None</em>, <em>redis_version=None</em>, <em>region=None</em>, <em>reserved_ip_range=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.redis.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Google Cloud Redis instance.</p>
 <p>To get more information about Instance, see:</p>
 <ul class="simple">
@@ -31,8 +31,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

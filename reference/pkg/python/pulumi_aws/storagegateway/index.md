@@ -2,7 +2,7 @@
 <span id="storagegateway"></span><h1>storagegateway<a class="headerlink" href="#module-pulumi_aws.storagegateway" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.Cache">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Cache" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">Cache</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Cache" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway cache.</p>
 <p>&gt; <strong>NOTE:</strong> The Storage Gateway API provides no method to remove a cache disk. Destroying this Terraform resource does not perform any Storage Gateway actions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Local disk identifier. For example, <cite>pci-0000:03:00.0-scsi-0:0:0:0</cite>.</li>
 <li><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</li>
 </ul>
@@ -73,17 +73,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.CachesIscsiVolume">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">CachesIscsiVolume</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>gateway_arn=None</em>, <em>network_interface_id=None</em>, <em>snapshot_id=None</em>, <em>source_volume_arn=None</em>, <em>target_name=None</em>, <em>volume_size_in_bytes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.CachesIscsiVolume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">CachesIscsiVolume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>gateway_arn=None</em>, <em>network_interface_id=None</em>, <em>snapshot_id=None</em>, <em>source_volume_arn=None</em>, <em>target_name=None</em>, <em>volume_size_in_bytes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.CachesIscsiVolume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway cached iSCSI volume.</p>
 <p>&gt; <strong>NOTE:</strong> The gateway must have cache added (e.g. via the [<cite>aws_storagegateway_cache</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>) resource) before creating volumes otherwise the Storage Gateway API will return an error.</p>
 <p>&gt; <strong>NOTE:</strong> The gateway must have an upload buffer added (e.g. via the [<cite>aws_storagegateway_upload_buffer</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html</a>) resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as <cite>UPLOAD BUFFER NOT CONFIGURED</cite>.</p>
+<p>## Example Usage</p>
+<p>&gt; <strong>NOTE:</strong> These examples are referencing the [<cite>aws_storagegateway_cache</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>) resource <cite>gateway_arn</cite> attribute to ensure Terraform properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via <cite>depends_on = [“aws_storagegateway_cache.example”]</cite>) to ensure proper ordering.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted.</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot ID of the snapshot to restore as the new cached volume. e.g. <cite>snap-1122aabb</cite>.</li>
@@ -215,7 +217,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.Gateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">Gateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>activation_key=None</em>, <em>gateway_ip_address=None</em>, <em>gateway_name=None</em>, <em>gateway_timezone=None</em>, <em>gateway_type=None</em>, <em>medium_changer_type=None</em>, <em>smb_active_directory_settings=None</em>, <em>smb_guest_password=None</em>, <em>tape_drive_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">Gateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>activation_key=None</em>, <em>gateway_ip_address=None</em>, <em>gateway_name=None</em>, <em>gateway_timezone=None</em>, <em>gateway_type=None</em>, <em>medium_changer_type=None</em>, <em>smb_active_directory_settings=None</em>, <em>smb_guest_password=None</em>, <em>tape_drive_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.</p>
 <p>&gt; NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving <cite>The specified gateway is not connected</cite> errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](<a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html">https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -223,8 +225,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>activation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Gateway activation key during resource creation. Conflicts with <cite>gateway_ip_address</cite>. Additional information is available in the [Storage Gateway User Guide](<a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html</a>).</li>
 <li><strong>gateway_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Gateway IP address to retrieve activation key during resource creation. Conflicts with <cite>activation_key</cite>. Gateway must be accessible on port 80 from where Terraform is running. Additional information is available in the [Storage Gateway User Guide](<a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html">https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html</a>).</li>
 <li><strong>gateway_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the gateway.</li>
@@ -359,15 +361,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.NfsFileShare">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">NfsFileShare</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>client_lists=None</em>, <em>default_storage_class=None</em>, <em>gateway_arn=None</em>, <em>guess_mime_type_enabled=None</em>, <em>kms_encrypted=None</em>, <em>kms_key_arn=None</em>, <em>location_arn=None</em>, <em>nfs_file_share_defaults=None</em>, <em>object_acl=None</em>, <em>read_only=None</em>, <em>requester_pays=None</em>, <em>role_arn=None</em>, <em>squash=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">NfsFileShare</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>client_lists=None</em>, <em>default_storage_class=None</em>, <em>gateway_arn=None</em>, <em>guess_mime_type_enabled=None</em>, <em>kms_encrypted=None</em>, <em>kms_key_arn=None</em>, <em>location_arn=None</em>, <em>nfs_file_share_defaults=None</em>, <em>object_acl=None</em>, <em>read_only=None</em>, <em>requester_pays=None</em>, <em>role_arn=None</em>, <em>squash=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway NFS File Share.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>client_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to <cite>[“0.0.0.0/0”]</cite> to not limit access. Minimum 1 item. Maximum 100 items.</li>
 <li><strong>default_storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <cite>S3_STANDARD</cite>. Valid values: <cite>S3_STANDARD</cite>, <cite>S3_STANDARD_IA</cite>, <cite>S3_ONEZONE_IA</cite>.</li>
 <li><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the file gateway.</li>
@@ -518,15 +520,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.SmbFileShare">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">SmbFileShare</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>authentication=None</em>, <em>default_storage_class=None</em>, <em>gateway_arn=None</em>, <em>guess_mime_type_enabled=None</em>, <em>invalid_user_lists=None</em>, <em>kms_encrypted=None</em>, <em>kms_key_arn=None</em>, <em>location_arn=None</em>, <em>object_acl=None</em>, <em>read_only=None</em>, <em>requester_pays=None</em>, <em>role_arn=None</em>, <em>valid_user_lists=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">SmbFileShare</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication=None</em>, <em>default_storage_class=None</em>, <em>gateway_arn=None</em>, <em>guess_mime_type_enabled=None</em>, <em>invalid_user_lists=None</em>, <em>kms_encrypted=None</em>, <em>kms_key_arn=None</em>, <em>location_arn=None</em>, <em>object_acl=None</em>, <em>read_only=None</em>, <em>requester_pays=None</em>, <em>role_arn=None</em>, <em>valid_user_lists=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway SMB File Share.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>authentication</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authentication method that users use to access the file share. Defaults to <cite>ActiveDirectory</cite>. Valid values: <cite>ActiveDirectory</cite>, <cite>GuestAccess</cite>.</li>
 <li><strong>default_storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <cite>S3_STANDARD</cite>. Valid values: <cite>S3_STANDARD</cite>, <cite>S3_STANDARD_IA</cite>, <cite>S3_ONEZONE_IA</cite>.</li>
 <li><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the file gateway.</li>
@@ -677,7 +679,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.UploadBuffer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">UploadBuffer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.UploadBuffer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">UploadBuffer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.UploadBuffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway upload buffer.</p>
 <p>&gt; <strong>NOTE:</strong> The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this Terraform resource does not perform any Storage Gateway actions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -685,8 +687,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Local disk identifier. For example, <cite>pci-0000:03:00.0-scsi-0:0:0:0</cite>.</li>
 <li><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</li>
 </ul>
@@ -748,7 +750,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.storagegateway.WorkingStorage">
-<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">WorkingStorage</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.WorkingStorage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">WorkingStorage</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disk_id=None</em>, <em>gateway_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.WorkingStorage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway working storage.</p>
 <p>&gt; <strong>NOTE:</strong> The Storage Gateway API provides no method to remove a working storage disk. Destroying this Terraform resource does not perform any Storage Gateway actions.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -756,8 +758,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Local disk identifier. For example, <cite>pci-0000:03:00.0-scsi-0:0:0:0</cite>.</li>
 <li><strong>gateway_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the gateway.</li>
 </ul>

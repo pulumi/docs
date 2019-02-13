@@ -2,7 +2,7 @@
 <span id="lightsail"></span><h1>lightsail<a class="headerlink" href="#module-pulumi_aws.lightsail" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.lightsail.Domain">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a domain resource for the specified domain (e.g., example.com).
 You cannot register a new domain name using Lightsail. You must register
 a domain name using Amazon Route 53 or another domain name registrar.
@@ -14,8 +14,8 @@ this parameter to manage the DNS records for that domain.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail domain to manage</li>
 </ul>
 </td>
@@ -76,18 +76,94 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lightsail Instance. Amazon Lightsail is a service to provide easy virtual private servers
 with custom software already setup. See [What is Amazon Lightsail?](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail</a>)
 for more information.</p>
 <p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
+<p>## Availability Zones</p>
+<p>Lightsail currently supports the following Availability Zones (e.g. <cite>us-east-1a</cite>):</p>
+<ul class="simple">
+<li><cite>ap-northeast-1{a,c,d}</cite></li>
+<li><cite>ap-northeast-2{a,c}</cite></li>
+<li><cite>ap-south-1{a,b}</cite></li>
+<li><cite>ap-southeast-1{a,b,c}</cite></li>
+<li><cite>ap-southeast-2{a,b,c}</cite></li>
+<li><cite>ca-central-1{a,b}</cite></li>
+<li><cite>eu-central-1{a,b,c}</cite></li>
+<li><cite>eu-west-1{a,b,c}</cite></li>
+<li><cite>eu-west-2{a,b,c}</cite></li>
+<li><cite>eu-west-3{a,b,c}</cite></li>
+<li><cite>us-east-1{a,b,c,d,e,f}</cite></li>
+<li><cite>us-east-2{a,b,c}</cite></li>
+<li><cite>us-west-2{a,b,c}</cite></li>
+</ul>
+<p>## Blueprints</p>
+<p>Lightsail currently supports the following Blueprint IDs:</p>
+<p>### OS Only</p>
+<ul class="simple">
+<li><cite>amazon_linux_2018_03_0_2</cite></li>
+<li><cite>centos_7_1805_01</cite></li>
+<li><cite>debian_8_7</cite></li>
+<li><cite>debian_9_5</cite></li>
+<li><cite>freebsd_11_1</cite></li>
+<li><cite>opensuse_42_2</cite></li>
+<li><cite>ubuntu_16_04_2</cite></li>
+<li><cite>ubuntu_18_04</cite></li>
+</ul>
+<p>### Apps and OS</p>
+<ul class="simple">
+<li><cite>drupal_8_5_6</cite></li>
+<li><cite>gitlab_11_1_4_1</cite></li>
+<li><cite>joomla_3_8_11</cite></li>
+<li><cite>lamp_5_6_37_2</cite></li>
+<li><cite>lamp_7_1_20_1</cite></li>
+<li><cite>magento_2_2_5</cite></li>
+<li><cite>mean_4_0_1</cite></li>
+<li><cite>nginx_1_14_0_1</cite></li>
+<li><cite>nodejs_10_8_0</cite></li>
+<li><cite>plesk_ubuntu_17_8_11_1</cite></li>
+<li><cite>redmine_3_4_6</cite></li>
+<li><cite>wordpress_4_9_8</cite></li>
+<li><cite>wordpress_multisite_4_9_8</cite></li>
+</ul>
+<p>## Bundles</p>
+<p>Lightsail currently supports the following Bundle IDs (e.g. an instance in <cite>ap-northeast-1</cite> would use <cite>small_2_0</cite>):</p>
+<p>### Prefix</p>
+<p>A Bundle ID starts with one of the below size prefixes:</p>
+<ul class="simple">
+<li><cite>nano_</cite></li>
+<li><cite>micro_</cite></li>
+<li><cite>small_</cite></li>
+<li><cite>medium_</cite></li>
+<li><cite>large_</cite></li>
+<li><cite>xlarge_</cite></li>
+<li><cite>2xlarge_</cite></li>
+</ul>
+<p>### Suffix</p>
+<p>A Bundle ID ends with one of the following suffixes depending on Availability Zone:</p>
+<ul class="simple">
+<li>ap-northeast-1: <cite>2_0</cite></li>
+<li>ap-northeast-2: <cite>2_0</cite></li>
+<li>ap-south-1: <cite>2_1</cite></li>
+<li>ap-southeast-1: <cite>2_0</cite></li>
+<li>ap-southeast-2: <cite>2_2</cite></li>
+<li>ca-central-1: <cite>2_0</cite></li>
+<li>eu-central-1: <cite>2_0</cite></li>
+<li>eu-west-1: <cite>2_0</cite></li>
+<li>eu-west-2: <cite>2_0</cite></li>
+<li>eu-west-3: <cite>2_0</cite></li>
+<li>us-east-1: <cite>2_0</cite></li>
+<li>us-east-2: <cite>2_0</cite></li>
+<li>us-west-2: <cite>2_0</cite></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create your
 instance (see list below)</li>
 <li><strong>blueprint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for a virtual private server image
@@ -194,7 +270,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.KeyPair">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lightsail Key Pair, for use with Lightsail Instances. These key pairs
 are separate from EC2 Key Pairs, and must be created or imported for use with
 Lightsail.</p>
@@ -204,8 +280,8 @@ Lightsail.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by Terraform</li>
 </ul>
@@ -323,7 +399,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.StaticIp">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allocates a static IP address.</p>
 <p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -331,8 +407,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the allocated static IP</li>
 </ul>
 </td>
@@ -405,7 +481,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.StaticIpAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIpAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIpAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a static IP address attachment - relationship between a Lightsail static IP &amp; Lightsail instance.</p>
 <p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -413,8 +489,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail instance to attach the IP to</li>
 <li><strong>static_ip_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the allocated static IP</li>
 </ul>

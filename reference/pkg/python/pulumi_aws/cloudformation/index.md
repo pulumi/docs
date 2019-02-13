@@ -98,15 +98,15 @@
 
 <dl class="class">
 <dt id="pulumi_aws.cloudformation.Stack">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>capabilities=None</em>, <em>disable_rollback=None</em>, <em>iam_role_arn=None</em>, <em>name=None</em>, <em>notification_arns=None</em>, <em>on_failure=None</em>, <em>parameters=None</em>, <em>policy_body=None</em>, <em>policy_url=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>template_url=None</em>, <em>timeout_in_minutes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capabilities=None</em>, <em>disable_rollback=None</em>, <em>iam_role_arn=None</em>, <em>name=None</em>, <em>notification_arns=None</em>, <em>on_failure=None</em>, <em>parameters=None</em>, <em>policy_body=None</em>, <em>policy_url=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>template_url=None</em>, <em>timeout_in_minutes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudFormation Stack resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of capabilities.
 Valid values: <cite>CAPABILITY_IAM</cite> or <cite>CAPABILITY_NAMED_IAM</cite></li>
 <li><strong>disable_rollback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to disable rollback of the stack if stack creation failed.
@@ -265,7 +265,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The CloudFormation Export data source allows access to stack
 exports specified in the [Output](<a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html</a>) section of the Cloudformation Template using the optional Export Property.</p>
 <blockquote>
-<div>-&gt; Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.</div></blockquote>
+<div>&gt; Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

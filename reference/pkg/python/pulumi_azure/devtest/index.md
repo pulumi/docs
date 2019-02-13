@@ -68,15 +68,15 @@
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.Lab">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">Lab</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_type=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Lab" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">Lab</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Lab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Dev Test Lab.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.</li>
@@ -195,15 +195,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.LinuxVirtualMachine">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">LinuxVirtualMachine</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_claim=None</em>, <em>disallow_public_ip_address=None</em>, <em>gallery_image_reference=None</em>, <em>inbound_nat_rules=None</em>, <em>lab_name=None</em>, <em>lab_subnet_name=None</em>, <em>lab_virtual_network_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>ssh_key=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">LinuxVirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_claim=None</em>, <em>disallow_public_ip_address=None</em>, <em>gallery_image_reference=None</em>, <em>inbound_nat_rules=None</em>, <em>lab_name=None</em>, <em>lab_subnet_name=None</em>, <em>lab_virtual_network_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>ssh_key=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.LinuxVirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Linux Virtual Machine within a Dev Test Lab.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_claim</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can this Virtual Machine be claimed by users? Defaults to <cite>true</cite>.</li>
 <li><strong>disallow_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.</li>
 <li><strong>gallery_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>gallery_image_reference</cite> block as defined below.</li>
@@ -382,15 +382,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>evaluator_type=None</em>, <em>fact_data=None</em>, <em>lab_name=None</em>, <em>name=None</em>, <em>policy_set_name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>evaluator_type=None</em>, <em>fact_data=None</em>, <em>lab_name=None</em>, <em>name=None</em>, <em>policy_set_name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>threshold=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Policy within a Dev Test Policy Set.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Policy.</li>
 <li><strong>evaluator_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Evaluation Type used for this Policy. Possible values include: ‘AllowedValuesPolicy’, ‘MaxValuePolicy’. Changing this forces a new resource to be created.</li>
 <li><strong>fact_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Fact Data for this Policy.</li>
@@ -501,15 +501,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.VirtualNetwork">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">VirtualNetwork</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>lab_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnet=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">VirtualNetwork</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>lab_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnet=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Network within a Dev Test Lab.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the Virtual Network.</li>
 <li><strong>lab_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Lab in which the Virtual Network should be created. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Dev Test Virtual Network. Changing this forces a new resource to be created.</li>
@@ -605,15 +605,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.devtest.WindowsVirtualMachine">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">WindowsVirtualMachine</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_claim=None</em>, <em>disallow_public_ip_address=None</em>, <em>gallery_image_reference=None</em>, <em>inbound_nat_rules=None</em>, <em>lab_name=None</em>, <em>lab_subnet_name=None</em>, <em>lab_virtual_network_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devtest.</code><code class="descname">WindowsVirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_claim=None</em>, <em>disallow_public_ip_address=None</em>, <em>gallery_image_reference=None</em>, <em>inbound_nat_rules=None</em>, <em>lab_name=None</em>, <em>lab_subnet_name=None</em>, <em>lab_virtual_network_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>password=None</em>, <em>resource_group_name=None</em>, <em>size=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devtest.WindowsVirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Windows Virtual Machine within a Dev Test Lab.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_claim</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Can this Virtual Machine be claimed by users? Defaults to <cite>true</cite>.</li>
 <li><strong>disallow_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machine be created without a Public IP Address? Changing this forces a new resource to be created.</li>
 <li><strong>gallery_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>gallery_image_reference</cite> block as defined below.</li>

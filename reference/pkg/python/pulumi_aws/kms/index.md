@@ -2,7 +2,7 @@
 <span id="kms"></span><h1>kms<a class="headerlink" href="#module-pulumi_aws.kms" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.kms.Alias">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>target_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Alias" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>target_key_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence Terraform too) allows you to create as many aliases as
 the [account limits](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">http://docs.aws.amazon.com/kms/latest/developerguide/limits.html</a>) allow you.</p>
@@ -11,8 +11,8 @@ the [account limits](<a class="reference external" href="http://docs.aws.amazon.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates an unique alias beginning with the specified prefix.
 The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <cite>name</cite>.</li>
@@ -185,15 +185,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.Grant">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Grant</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>constraints=None</em>, <em>grant_creation_tokens=None</em>, <em>grantee_principal=None</em>, <em>key_id=None</em>, <em>name=None</em>, <em>operations=None</em>, <em>retire_on_delete=None</em>, <em>retiring_principal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Grant</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>constraints=None</em>, <em>grant_creation_tokens=None</em>, <em>grantee_principal=None</em>, <em>key_id=None</em>, <em>name=None</em>, <em>operations=None</em>, <em>retire_on_delete=None</em>, <em>retiring_principal=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html</a>).</li>
 <li><strong>grant_creation_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of grant tokens to be used when creating the grant. See [Grant Tokens](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token</a>) for more information about grant tokens.
 * <cite>retire_on_delete</cite> -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
@@ -301,15 +301,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.Key">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Key</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>deletion_window_in_days=None</em>, <em>description=None</em>, <em>enable_key_rotation=None</em>, <em>is_enabled=None</em>, <em>key_usage=None</em>, <em>policy=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Key</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deletion_window_in_days=None</em>, <em>description=None</em>, <em>enable_key_rotation=None</em>, <em>is_enabled=None</em>, <em>key_usage=None</em>, <em>policy=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a KMS customer master key.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in AWS console.</li>

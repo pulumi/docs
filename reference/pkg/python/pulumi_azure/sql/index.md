@@ -2,15 +2,15 @@
 <span id="sql"></span><h1>sql<a class="headerlink" href="#module-pulumi_azure.sql" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.sql.ActiveDirectoryAdministrator">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ActiveDirectoryAdministrator</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>login=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ActiveDirectoryAdministrator</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>login=None</em>, <em>object_id=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tenant_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ActiveDirectoryAdministrator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a user or group as the AD administrator for an Azure SQL server</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The login name of the principal to set as the server administrator</li>
 <li><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the principal to set as the server administrator</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group for the SQL server. Changing this forces a new resource to be created.</li>
@@ -93,15 +93,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.Database">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>collation=None</em>, <em>create_mode=None</em>, <em>edition=None</em>, <em>elastic_pool_name=None</em>, <em>import_=None</em>, <em>location=None</em>, <em>max_size_bytes=None</em>, <em>name=None</em>, <em>requested_service_objective_id=None</em>, <em>requested_service_objective_name=None</em>, <em>resource_group_name=None</em>, <em>restore_point_in_time=None</em>, <em>server_name=None</em>, <em>source_database_deletion_date=None</em>, <em>source_database_id=None</em>, <em>tags=None</em>, <em>threat_detection_policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Database</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the collation. Applies only if <cite>create_mode</cite> is <cite>Default</cite>.  Azure default is <cite>SQL_LATIN1_GENERAL_CP1_CI_AS</cite>. Changing this forces a new resource to be created.</li>
 <li><strong>create_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of database to create. Defaults to <cite>Default</cite>. See below for the accepted values/</li>
 <li><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The edition of the database to be created. Applies only if <cite>create_mode</cite> is <cite>Default</cite>. Valid values are: <cite>Basic</cite>, <cite>Standard</cite>, <cite>Premium</cite>, or <cite>DataWarehouse</cite>. Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</li>
@@ -111,8 +111,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>max_size_bytes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum size that the database can grow to. Applies only if <cite>create_mode</cite> is <cite>Default</cite>.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database.</li>
 <li><strong>requested_service_objective_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use <cite>requested_service_objective_id</cite> or <cite>requested_service_objective_name</cite> to set the performance level for the database.
-Valid values are: <cite>S0</cite>, <cite>S1</cite>, <cite>S2</cite>, <cite>S3</cite>, <cite>P1</cite>, <cite>P2</cite>, <cite>P4</cite>, <cite>P6</cite>, <cite>P11</cite> and <cite>ElasticPool</cite>.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</li>
-<li><strong>requested_service_objective_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use <cite>requested_service_objective_name</cite> or <cite>requested_service_objective_id</cite> to set the performance level for the database.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</li>
+Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</li>
+<li><strong>requested_service_objective_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use <cite>requested_service_objective_name</cite> or <cite>requested_service_objective_id</cite> to set the performance level for the database. Valid values are: <cite>S0</cite>, <cite>S1</cite>, <cite>S2</cite>, <cite>S3</cite>, <cite>P1</cite>, <cite>P2</cite>, <cite>P4</cite>, <cite>P6</cite>, <cite>P11</cite> and <cite>ElasticPool</cite>.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.</li>
 <li><strong>restore_point_in_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The point in time for the restore. Only applies if <cite>create_mode</cite> is <cite>PointInTimeRestore</cite> e.g. 2013-11-08T22:00:40Z</li>
 <li><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL Server on which to create the database.</li>
@@ -189,13 +189,13 @@ Valid values are: <cite>S0</cite>, <cite>S1</cite>, <cite>S2</cite>, <cite>S3</c
 <dt id="pulumi_azure.sql.Database.requested_service_objective_id">
 <code class="descname">requested_service_objective_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.Database.requested_service_objective_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use <cite>requested_service_objective_id</cite> or <cite>requested_service_objective_name</cite> to set the performance level for the database.
-Valid values are: <cite>S0</cite>, <cite>S1</cite>, <cite>S2</cite>, <cite>S3</cite>, <cite>P1</cite>, <cite>P2</cite>, <cite>P4</cite>, <cite>P6</cite>, <cite>P11</cite> and <cite>ElasticPool</cite>.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</p>
+Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.sql.Database.requested_service_objective_name">
 <code class="descname">requested_service_objective_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.sql.Database.requested_service_objective_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use <cite>requested_service_objective_name</cite> or <cite>requested_service_objective_id</cite> to set the performance level for the database.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</p>
+<dd><p>Use <cite>requested_service_objective_name</cite> or <cite>requested_service_objective_id</cite> to set the performance level for the database. Valid values are: <cite>S0</cite>, <cite>S1</cite>, <cite>S2</cite>, <cite>S3</cite>, <cite>P1</cite>, <cite>P2</cite>, <cite>P4</cite>, <cite>P6</cite>, <cite>P11</cite> and <cite>ElasticPool</cite>.  Please see [Azure SQL Database Service Tiers](<a class="reference external" href="https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/">https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/</a>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -282,7 +282,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.ElasticPool">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ElasticPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>db_dtu_max=None</em>, <em>db_dtu_min=None</em>, <em>dtu=None</em>, <em>edition=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_size=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ElasticPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">ElasticPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_dtu_max=None</em>, <em>db_dtu_min=None</em>, <em>dtu=None</em>, <em>edition=None</em>, <em>location=None</em>, <em>name=None</em>, <em>pool_size=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.ElasticPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Elastic Pool.</p>
 <p>&gt; <strong>NOTE:</strong> -  This version of the <cite>Elasticpool</cite> resource is being <strong>deprecated</strong> and should no longer be used. Please use the azurerm_mssql_elasticpool version instead.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -290,8 +290,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>db_dtu_max</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum DTU which will be guaranteed to all databases in the elastic pool to be created.</li>
 <li><strong>db_dtu_min</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimum DTU which will be guaranteed to all databases in the elastic pool to be created.</li>
 <li><strong>dtu</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The total shared DTU for the elastic pool. Valid values depend on the <cite>edition</cite> which has been defined. Refer to [Azure SQL Database Service Tiers](<a class="reference external" href="https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus">https://docs.microsoft.com/en-gb/azure/sql-database/sql-database-service-tiers#elastic-pool-service-tiers-and-performance-in-edtus</a>) for valid combinations.</li>
@@ -415,15 +415,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.FirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">FirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.FirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure SQL Firewall Rule</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>end_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ending IP address to allow through the firewall for this rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the firewall rule.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
@@ -508,7 +508,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.SqlServer">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">SqlServer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">SqlServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>administrator_login=None</em>, <em>administrator_login_password=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>version=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.SqlServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a SQL Azure Database Server.</p>
 <p>&gt; <strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
@@ -517,8 +517,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>administrator_login</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrator login name for the new server. Changing this forces a new resource to be created.</li>
 <li><strong>administrator_login_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password associated with the <cite>administrator_login</cite> user. Needs to comply with Azure’s [Password Policy](<a class="reference external" href="https://msdn.microsoft.com/library/ms161959.aspx">https://msdn.microsoft.com/library/ms161959.aspx</a>)</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
@@ -621,15 +621,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.sql.VirtualNetworkRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.sql.</code><code class="descname">VirtualNetworkRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ignore_missing_vnet_service_endpoint=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>server_name=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.sql.VirtualNetworkRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ignore_missing_vnet_service_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create the virtual network rule before the subnet has the virtual network service endpoint enabled. The default value is false.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SQL virtual network rule. Changing this forces a new resource to be created. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group where the SQL server resides. Changing this forces a new resource to be created.</li>

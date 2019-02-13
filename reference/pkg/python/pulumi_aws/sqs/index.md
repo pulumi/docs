@@ -26,15 +26,15 @@
 
 <dl class="class">
 <dt id="pulumi_aws.sqs.Queue">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>content_based_deduplication=None</em>, <em>delay_seconds=None</em>, <em>fifo_queue=None</em>, <em>kms_data_key_reuse_period_seconds=None</em>, <em>kms_master_key_id=None</em>, <em>max_message_size=None</em>, <em>message_retention_seconds=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>receive_wait_time_seconds=None</em>, <em>redrive_policy=None</em>, <em>tags=None</em>, <em>visibility_timeout_seconds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.Queue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">Queue</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>content_based_deduplication=None</em>, <em>delay_seconds=None</em>, <em>fifo_queue=None</em>, <em>kms_data_key_reuse_period_seconds=None</em>, <em>kms_master_key_id=None</em>, <em>max_message_size=None</em>, <em>message_retention_seconds=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>receive_wait_time_seconds=None</em>, <em>redrive_policy=None</em>, <em>tags=None</em>, <em>visibility_timeout_seconds=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.Queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Queue resource with the given unique name, props, and options.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>content_based_deduplication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](<a class="reference external" href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing">http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing</a>)</li>
 <li><strong>delay_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</li>
 <li><strong>fifo_queue</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean designating a FIFO queue. If not set, it defaults to <cite>false</cite> making it standard.</li>
@@ -186,7 +186,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.sqs.QueuePolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">QueuePolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>policy=None</em>, <em>queue_url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.QueuePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.sqs.</code><code class="descname">QueuePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy=None</em>, <em>queue_url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.QueuePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -194,8 +194,8 @@ while referencing ARN of the queue within the policy.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON policy for the SQS queue. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</li>
 <li><strong>queue_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the SQS Queue to which to attach the policy</li>
 </ul>

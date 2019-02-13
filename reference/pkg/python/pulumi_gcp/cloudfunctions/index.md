@@ -2,7 +2,7 @@
 <span id="cloudfunctions"></span><h1>cloudfunctions<a class="headerlink" href="#module-pulumi_gcp.cloudfunctions" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.Function">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>retry_on_failure=None</em>, <em>runtime=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">Function</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_memory_mb=None</em>, <em>description=None</em>, <em>entry_point=None</em>, <em>environment_variables=None</em>, <em>event_trigger=None</em>, <em>https_trigger_url=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>retry_on_failure=None</em>, <em>runtime=None</em>, <em>source_archive_bucket=None</em>, <em>source_archive_object=None</em>, <em>timeout=None</em>, <em>trigger_bucket=None</em>, <em>trigger_http=None</em>, <em>trigger_topic=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Cloud Function. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/functions/docs/">https://cloud.google.com/functions/docs/</a>)
 and
@@ -12,8 +12,8 @@ and
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>available_memory_mb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the function.</li>
 <li><strong>entry_point</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.</li>

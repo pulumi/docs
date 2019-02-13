@@ -2,7 +2,7 @@
 <span id="licensemanager"></span><h1>licensemanager<a class="headerlink" href="#module-pulumi_aws.licensemanager" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.licensemanager.Association">
-<em class="property">class </em><code class="descclassname">pulumi_aws.licensemanager.</code><code class="descname">Association</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>license_configuration_arn=None</em>, <em>resource_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.Association" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.licensemanager.</code><code class="descname">Association</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>license_configuration_arn=None</em>, <em>resource_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.Association" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a License Manager association.</p>
 <p>&gt; <strong>Note:</strong> License configurations can also be associated with launch templates by specifying the <cite>license_specifications</cite> block for an <cite>aws_launch_template</cite>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>license_configuration_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the license configuration.</li>
 <li><strong>resource_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of the resource associated with the license configuration.</li>
 </ul>
@@ -73,16 +73,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.licensemanager.LicenseConfiguration">
-<em class="property">class </em><code class="descclassname">pulumi_aws.licensemanager.</code><code class="descname">LicenseConfiguration</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>license_count=None</em>, <em>license_count_hard_limit=None</em>, <em>license_counting_type=None</em>, <em>license_rules=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.LicenseConfiguration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.licensemanager.</code><code class="descname">LicenseConfiguration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>license_count=None</em>, <em>license_count_hard_limit=None</em>, <em>license_counting_type=None</em>, <em>license_rules=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.licensemanager.LicenseConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a License Manager license configuration resource.</p>
 <p>&gt; <strong>Note:</strong> Removing the <cite>license_count</cite> attribute is not supported by the License Manager API - use <cite>terraform taint aws_licensemanager_license_configuration.&lt;id&gt;</cite> to recreate the resource instead.</p>
+<p>## Rules</p>
+<p>License rules should be in the format of <cite>#RuleType=RuleValue</cite>. Supported rule types:</p>
+<ul class="simple">
+<li><cite>minimumVcpus</cite> - Resource must have minimum vCPU count in order to use the license. Default: 1</li>
+<li><cite>maximumVcpus</cite> - Resource must have maximum vCPU count in order to use the license. Default: unbounded, limit: 10000</li>
+<li><cite>minimumCores</cite> - Resource must have minimum core count in order to use the license. Default: 1</li>
+<li><cite>maximumCores</cite> - Resource must have maximum core count in order to use the license. Default: unbounded, limit: 10000</li>
+<li><cite>minimumSockets</cite> - Resource must have minimum socket count in order to use the license. Default: 1</li>
+<li><cite>maximumSockets</cite> - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000</li>
+<li><cite>allowedTenancy</cite> - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of <cite>EC2-Default</cite>, <cite>EC2-DedicatedHost</cite>, <cite>EC2-DedicatedInstance</cite></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the license configuration.</li>
 <li><strong>license_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of licenses managed by the license configuration.</li>
 <li><strong>license_count_hard_limit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sets the number of available licenses as a hard limit.</li>

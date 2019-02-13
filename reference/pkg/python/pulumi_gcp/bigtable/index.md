@@ -2,7 +2,7 @@
 <span id="bigtable"></span><h1>bigtable<a class="headerlink" href="#module-pulumi_gcp.bigtable" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.bigtable.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster=None</em>, <em>cluster_id=None</em>, <em>display_name=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>num_nodes=None</em>, <em>project=None</em>, <em>storage_type=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster=None</em>, <em>cluster_id=None</em>, <em>display_name=None</em>, <em>instance_type=None</em>, <em>name=None</em>, <em>num_nodes=None</em>, <em>project=None</em>, <em>storage_type=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Google Bigtable instance. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/bigtable/">https://cloud.google.com/bigtable/</a>) and
 [API](<a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">https://cloud.google.com/bigtable/docs/go/reference</a>).</p>
@@ -11,8 +11,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cluster</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of cluster configuration options. Either <cite>cluster</cite> or <cite>cluster_id</cite> must be used. Only one cluster may be specified. See structure below.</li>
 <li><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Cloud Bigtable cluster.</li>
 <li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable display name of the Bigtable instance. Defaults to the instance <cite>name</cite>.</li>
@@ -125,7 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.bigtable.Table">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>instance_name=None</em>, <em>name=None</em>, <em>project=None</em>, <em>split_keys=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.bigtable.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance_name=None</em>, <em>name=None</em>, <em>project=None</em>, <em>split_keys=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.bigtable.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Google Bigtable table inside an instance. For more information see
 [the official documentation](<a class="reference external" href="https://cloud.google.com/bigtable/">https://cloud.google.com/bigtable/</a>) and
 [API](<a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">https://cloud.google.com/bigtable/docs/go/reference</a>).</p>
@@ -134,8 +134,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Bigtable instance.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the table.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it

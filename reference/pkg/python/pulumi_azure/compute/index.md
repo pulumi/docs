@@ -2,15 +2,15 @@
 <span id="compute"></span><h1>compute<a class="headerlink" href="#module-pulumi_azure.compute" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.compute.AvailabilitySet">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">AvailabilitySet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>managed=None</em>, <em>name=None</em>, <em>platform_fault_domain_count=None</em>, <em>platform_update_domain_count=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">AvailabilitySet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>managed=None</em>, <em>name=None</em>, <em>platform_fault_domain_count=None</em>, <em>platform_update_domain_count=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.AvailabilitySet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an availability set for virtual machines.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>managed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the availability set is managed or not. Possible values are <cite>true</cite> (to specify aligned) or <cite>false</cite> (to specify classic). Default is <cite>false</cite>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the availability set. Changing this forces a new resource to be created.</li>
@@ -107,17 +107,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.DataDiskAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">DataDiskAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>caching=None</em>, <em>create_option=None</em>, <em>lun=None</em>, <em>managed_disk_id=None</em>, <em>virtual_machine_id=None</em>, <em>write_accelerator_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DataDiskAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">DataDiskAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>caching=None</em>, <em>create_option=None</em>, <em>lun=None</em>, <em>managed_disk_id=None</em>, <em>virtual_machine_id=None</em>, <em>write_accelerator_enabled=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DataDiskAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages attaching a Disk to a Virtual Machine.</p>
 <p>&gt; <strong>NOTE:</strong> Data Disks can be attached either directly on the <cite>azurerm_virtual_machine</cite> resource, or using the <cite>azurerm_virtual_machine_data_disk_attachment</cite> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
-<p>-&gt; <strong>Please Note:</strong> only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the <cite>storage_data_disk</cite> block in the <cite>azurerm_virtual_machine</cite> resource.</p>
+<p>&gt; <strong>Please Note:</strong> only Managed Disks are supported via this separate resource, Unmanaged Disks can be attached using the <cite>storage_data_disk</cite> block in the <cite>azurerm_virtual_machine</cite> resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>caching</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the caching requirements for this Data Disk. Possible values include <cite>None</cite>, <cite>ReadOnly</cite> and <cite>ReadWrite</cite>.</li>
 <li><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Create Option of the Data Disk, such as <cite>Empty</cite> or <cite>Attach</cite>. Defaults to <cite>Attach</cite>. Changing this forces a new resource to be created.</li>
 <li><strong>lun</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The Logical Unit Number of the Data Disk, which needs to be unique within the Virtual Machine. Changing this forces a new resource to be created.</li>
@@ -207,18 +207,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Extension">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Extension</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_upgrade_minor_version=None</em>, <em>location=None</em>, <em>name=None</em>, <em>protected_settings=None</em>, <em>publisher=None</em>, <em>resource_group_name=None</em>, <em>settings=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>type_handler_version=None</em>, <em>virtual_machine_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Extension</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_upgrade_minor_version=None</em>, <em>location=None</em>, <em>name=None</em>, <em>protected_settings=None</em>, <em>publisher=None</em>, <em>resource_group_name=None</em>, <em>settings=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>type_handler_version=None</em>, <em>virtual_machine_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Machine Extension to provide post deployment configuration
 and run automated tasks.</p>
 <p>&gt; <strong>NOTE:</strong> Custom Script Extensions for Linux &amp; Windows require that the <cite>commandToExecute</cite> returns a <cite>0</cite> exit code to be classified as successfully deployed. You can achieve this by appending <cite>exit 0</cite> to the end of your <cite>commandToExecute</cite>.</p>
-<p>-&gt; <strong>NOTE:</strong> Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.</p>
+<p>&gt; <strong>NOTE:</strong> Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_upgrade_minor_version</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the platform deploys
 the latest minor version update to the <cite>type_handler_version</cite> specified.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the extension is created. Changing
@@ -647,15 +647,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Image">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>data_disks=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_disk=None</em>, <em>resource_group_name=None</em>, <em>source_virtual_machine_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>data_disks=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_disk=None</em>, <em>resource_group_name=None</em>, <em>source_virtual_machine_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a custom virtual machine image that can be used to create virtual machines.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>data_disk</cite> elements as defined below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.</li>
@@ -758,15 +758,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.ManagedDisk">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">ManagedDisk</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>create_option=None</em>, <em>disk_size_gb=None</em>, <em>encryption_settings=None</em>, <em>image_reference_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_type=None</em>, <em>tags=None</em>, <em>zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">ManagedDisk</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>create_option=None</em>, <em>disk_size_gb=None</em>, <em>encryption_settings=None</em>, <em>image_reference_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_type=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a managed disk.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method to use when creating the managed disk. Possible values include:</li>
 <li><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes.
 If <cite>create_option</cite> is <cite>Copy</cite> or <cite>FromImage</cite>, then the value must be equal to or greater than the source’s size.</li>
@@ -917,7 +917,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.ScaleSet">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">ScaleSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>automatic_os_upgrade=None</em>, <em>boot_diagnostics=None</em>, <em>eviction_policy=None</em>, <em>extensions=None</em>, <em>health_probe_id=None</em>, <em>identity=None</em>, <em>license_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profiles=None</em>, <em>os_profile=None</em>, <em>os_profile_linux_config=None</em>, <em>os_profile_secrets=None</em>, <em>os_profile_windows_config=None</em>, <em>overprovision=None</em>, <em>plan=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rolling_upgrade_policy=None</em>, <em>single_placement_group=None</em>, <em>sku=None</em>, <em>storage_profile_data_disks=None</em>, <em>storage_profile_image_reference=None</em>, <em>storage_profile_os_disk=None</em>, <em>tags=None</em>, <em>upgrade_policy_mode=None</em>, <em>zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">ScaleSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>automatic_os_upgrade=None</em>, <em>boot_diagnostics=None</em>, <em>eviction_policy=None</em>, <em>extensions=None</em>, <em>health_probe_id=None</em>, <em>identity=None</em>, <em>license_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profiles=None</em>, <em>os_profile=None</em>, <em>os_profile_linux_config=None</em>, <em>os_profile_secrets=None</em>, <em>os_profile_windows_config=None</em>, <em>overprovision=None</em>, <em>plan=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rolling_upgrade_policy=None</em>, <em>single_placement_group=None</em>, <em>sku=None</em>, <em>storage_profile_data_disks=None</em>, <em>storage_profile_image_reference=None</em>, <em>storage_profile_os_disk=None</em>, <em>tags=None</em>, <em>upgrade_policy_mode=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.ScaleSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a virtual machine scale set.</p>
 <p>&gt; <strong>Note:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
@@ -926,8 +926,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>automatic_os_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when <cite>upgrade_policy_mode</cite> is set to <cite>Rolling</cite>. Defaults to <cite>false</cite>.</li>
 <li><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A boot diagnostics profile block as referenced below.</li>
 <li><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are <cite>Deallocate</cite> and <cite>Delete</cite>.</li>
@@ -1158,16 +1158,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.SharedImage">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">SharedImage</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>eula=None</em>, <em>gallery_name=None</em>, <em>identifier=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>privacy_statement_uri=None</em>, <em>release_note_uri=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">SharedImage</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>eula=None</em>, <em>gallery_name=None</em>, <em>identifier=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>privacy_statement_uri=None</em>, <em>release_note_uri=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image within a Shared Image Gallery.</p>
-<p>-&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
+<p>&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this Shared Image.</li>
 <li><strong>eula</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End User Licence Agreement for the Shared Image.</li>
 <li><strong>gallery_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.</li>
@@ -1286,16 +1286,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.SharedImageGallery">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">SharedImageGallery</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">SharedImageGallery</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Shared Image Gallery.</p>
-<p>-&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
+<p>&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for this Shared Image Gallery.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Shared Image Gallery. Changing this forces a new resource to be created.</li>
@@ -1378,16 +1378,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.SharedImageVersion">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">SharedImageVersion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>exclude_from_latest=None</em>, <em>gallery_name=None</em>, <em>image_name=None</em>, <em>location=None</em>, <em>managed_image_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_regions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">SharedImageVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>exclude_from_latest=None</em>, <em>gallery_name=None</em>, <em>image_name=None</em>, <em>location=None</em>, <em>managed_image_id=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>target_regions=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Version of a Shared Image within a Shared Image Gallery.</p>
-<p>-&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
+<p>&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>exclude_from_latest</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Image Version be excluded from the <cite>latest</cite> filter? If set to <cite>true</cite> this Image Version won’t be returned for the <cite>latest</cite> version. Defaults to <cite>false</cite>.</li>
 <li><strong>gallery_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Shared Image Gallery in which the Shared Image exists. Changing this forces a new resource to be created.</li>
 <li><strong>image_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Shared Image within the Shared Image Gallery in which this Version should be created. Changing this forces a new resource to be created.</li>
@@ -1498,15 +1498,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.Snapshot">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>create_option=None</em>, <em>disk_size_gb=None</em>, <em>encryption_settings=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Snapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>create_option=None</em>, <em>disk_size_gb=None</em>, <em>encryption_settings=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>source_resource_id=None</em>, <em>source_uri=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Disk Snapshot.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates how the snapshot is to be created. Possible values are <cite>Copy</cite> or <cite>Import</cite>. Changing this forces a new resource to be created.</li>
 <li><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the Snapshotted Disk in GB.</li>
 </ul>
@@ -1618,7 +1618,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.VirtualMachine">
-<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_set_id=None</em>, <em>boot_diagnostics=None</em>, <em>delete_data_disks_on_termination=None</em>, <em>delete_os_disk_on_termination=None</em>, <em>identity=None</em>, <em>license_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_interface_ids=None</em>, <em>os_profile=None</em>, <em>os_profile_linux_config=None</em>, <em>os_profile_secrets=None</em>, <em>os_profile_windows_config=None</em>, <em>plan=None</em>, <em>primary_network_interface_id=None</em>, <em>resource_group_name=None</em>, <em>storage_data_disks=None</em>, <em>storage_image_reference=None</em>, <em>storage_os_disk=None</em>, <em>tags=None</em>, <em>vm_size=None</em>, <em>zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_set_id=None</em>, <em>boot_diagnostics=None</em>, <em>delete_data_disks_on_termination=None</em>, <em>delete_os_disk_on_termination=None</em>, <em>identity=None</em>, <em>license_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_interface_ids=None</em>, <em>os_profile=None</em>, <em>os_profile_linux_config=None</em>, <em>os_profile_secrets=None</em>, <em>os_profile_windows_config=None</em>, <em>plan=None</em>, <em>primary_network_interface_id=None</em>, <em>resource_group_name=None</em>, <em>storage_data_disks=None</em>, <em>storage_image_reference=None</em>, <em>storage_os_disk=None</em>, <em>tags=None</em>, <em>vm_size=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Machine.</p>
 <p>&gt; <strong>NOTE:</strong> Data Disks can be attached either directly on the <cite>azurerm_virtual_machine</cite> resource, or using the <cite>azurerm_virtual_machine_data_disk_attachment</cite> resource - but the two cannot be used together. If both are used against the same Virtual Machine, spurious changes will occur.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1626,8 +1626,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</li>
 <li><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>boot_diagnostics</cite> block.</li>
 <li><strong>delete_data_disks_on_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Data Disks (either the Managed Disks / VHD Blobs) be deleted when the Virtual Machine is destroyed? Defaults to <cite>false</cite>.</li>
@@ -1849,21 +1849,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.get_shared_image">
 <code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image</code><span class="sig-paren">(</span><em>gallery_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image within a Shared Image Gallery.</p>
-<p>-&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
+<p>&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image_gallery">
 <code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image_gallery</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image Gallery.</p>
-<p>-&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
+<p>&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image_version">
 <code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image_version</code><span class="sig-paren">(</span><em>gallery_name=None</em>, <em>image_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.</p>
-<p>-&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
+<p>&gt; <strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including [how to register for the Public Preview here](<a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/</a>).</p>
 </dd></dl>
 
 <dl class="function">

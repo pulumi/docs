@@ -2,15 +2,15 @@
 <span id="operationalinsights"></span><h1>operationalinsights<a class="headerlink" href="#module-pulumi_azure.operationalinsights" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.AnalyticsSolution">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsSolution</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>plan=None</em>, <em>resource_group_name=None</em>, <em>solution_name=None</em>, <em>workspace_name=None</em>, <em>workspace_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsSolution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>plan=None</em>, <em>resource_group_name=None</em>, <em>solution_name=None</em>, <em>workspace_name=None</em>, <em>workspace_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Solution.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>plan</cite> block as documented below.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Log Analytics solution is created. Changing this forces a new resource to be created. Note: The solution and it’s related workspace can only exist in the same resource group.</li>
@@ -100,15 +100,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspace</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>retention_in_days=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Log Analytics (formally Operational Insights) Workspace.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Log Analytics Workspace. Workspace name should include 4-63 letters, digits or ‘-‘. The ‘-‘ shouldn’t be the first or the last symbol. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Log Analytics workspace is created. Changing this forces a new resource to be created.</li>
@@ -222,18 +222,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService">
-<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspaceLinkedService</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>linked_service_name=None</em>, <em>linked_service_properties=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>workspace_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.operationalinsights.</code><code class="descname">AnalyticsWorkspaceLinkedService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>linked_service_name=None</em>, <em>linked_service_properties=None</em>, <em>resource_group_name=None</em>, <em>resource_id=None</em>, <em>tags=None</em>, <em>workspace_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Links a Log Analytics (formally Operational Insights) Workspace to another resource. The (currently) only linkable service is an Azure Automation Account.</p>
+<p>&gt; <strong>NOTE:</strong> This resource has been deprecated in favour of the <cite>azurerm_log_analytics_linked_service</cite> resource and will be removed in the next major version of the AzureRM Provider. The new resource shares the same fields as this one, and information on migrating across can be found in this guide.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>linked_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the type of linkedServices resource to connect to the Log Analytics Workspace specified in <cite>workspace_name</cite>. Currently it defaults to and only supports <cite>automation</cite> as a value. Changing this forces a new resource to be created.</li>
-<li><strong>linked_service_properties</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>linked_service_properties</cite> block as defined below.</li>
+<li><strong>linked_service_properties</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <cite>linked_service_properties</cite> block as defined below.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.</li>
+<li><strong>resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource id of the resource that will be linked to the workspace. This field has been deprecated in favour of the top-level <cite>resource_id</cite> field and will be removed in v2.0 of the AzureRM Provider.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>workspace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the Log Analytics Workspace that will contain the linkedServices resource. Changing this forces a new resource to be created.</li>
 </ul>
@@ -263,6 +265,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which the Log Analytics Linked Service is created. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.resource_id">
+<code class="descname">resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.operationalinsights.AnalyticsWorkspaceLinkedService.resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource id of the resource that will be linked to the workspace. This field has been deprecated in favour of the top-level <cite>resource_id</cite> field and will be removed in v2.0 of the AzureRM Provider.</p>
 </dd></dl>
 
 <dl class="attribute">

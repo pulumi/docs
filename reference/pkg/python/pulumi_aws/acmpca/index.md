@@ -2,7 +2,7 @@
 <span id="acmpca"></span><h1>acmpca<a class="headerlink" href="#module-pulumi_aws.acmpca" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.acmpca.CertificateAuthority">
-<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">CertificateAuthority</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_authority_configuration=None</em>, <em>enabled=None</em>, <em>revocation_configuration=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">CertificateAuthority</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_authority_configuration=None</em>, <em>enabled=None</em>, <em>revocation_configuration=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
 <p>&gt; <strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <cite>PENDING_CERTIFICATE</cite> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <cite>certificate_signing_request</cite> attribute and import the signed certificate outside of Terraform. Terraform can support another resource to manage that workflow automatically in the future.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -10,8 +10,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_authority_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing algorithms and certificate subject information. Defined below.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <cite>false</cite>.</li>
 <li><strong>revocation_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing revocation configuration. Defined below.</li>

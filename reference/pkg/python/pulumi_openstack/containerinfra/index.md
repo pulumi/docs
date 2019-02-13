@@ -2,15 +2,120 @@
 <span id="containerinfra"></span><h1>containerinfra<a class="headerlink" href="#module-pulumi_openstack.containerinfra" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster_template_id=None</em>, <em>create_timeout=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_template_id=None</em>, <em>create_timeout=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Magnum cluster resource within OpenStack.</p>
+<p>## Argument reference</p>
+<p>The following arguments are supported:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><cite>region</cite> - (Optional) The region in which to obtain the V1 Container Infra</dt>
+<dd>client. A Container Infra client is needed to create a cluster. If omitted,
+the <cite>region</cite> argument of the provider is used. Changing this creates a new
+cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>name</cite> - (Required) The name of the cluster. Changing this updates the name</dt>
+<dd>of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>project_id</cite> - (Optional) The project of the cluster. Required if admin wants</dt>
+<dd>to create a cluster in another project. Changing this creates a new
+cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>user_id</cite> - (Optional) The user of the cluster. Required if admin wants to</dt>
+<dd>create a cluster template for another user. Changing this creates a new
+cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>cluster_template_id</cite> - (Required) The UUID of the V1 Container Infra cluster</dt>
+<dd>template. Changing this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>create_timeout</cite> - (Optional) The timeout (in minutes) for creating the</dt>
+<dd>cluster. Changing this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>discovery_url</cite> - (Optional) The URL used for cluster node discovery.</dt>
+<dd>Changing this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>docker_volume_size</cite> - (Optional) The size (in GB) of the Docker volume.</dt>
+<dd>Changing this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>flavor</cite> - (Optional) The flavor for the nodes of the cluster. Can be set via</dt>
+<dd>the <cite>OS_MAGNUM_FLAVOR</cite> environment variable. Changing this creates a new
+cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>master_flavor</cite> - (Optional) The flavor for the master nodes. Can be set via</dt>
+<dd>the <cite>OS_MAGNUM_MASTER_FLAVOR</cite> environment variable. Changing this creates a
+new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>keypair</cite> - (Optional) The name of the Compute service SSH keypair. Changing</dt>
+<dd>this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>labels</cite> - (Optional) The list of key value pairs representing additional</dt>
+<dd>properties of the cluster. Changing this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>master_count</cite> - (Optional) The number of master nodes for the cluster.</dt>
+<dd>Changing this creates a new cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>node_count</cite> - (Optional) The number of nodes for the cluster. Changing this</dt>
+<dd>creates a new cluster.</dd>
+</dl>
+</li>
+</ul>
+<p>## Attributes reference</p>
+<p>The following attributes are exported:</p>
+<ul class="simple">
+<li><cite>region</cite> - See Argument Reference above.</li>
+<li><cite>name</cite> - See Argument Reference above.</li>
+<li><cite>project_id</cite> - See Argument Reference above.</li>
+<li><cite>created_at</cite> - The time at which cluster was created.</li>
+<li><cite>updated_at</cite> - The time at which cluster was created.</li>
+<li><cite>api_address</cite> - COE API address.</li>
+<li><cite>coe_version</cite> - COE software version.</li>
+<li><cite>cluster_template_id</cite> - See Argument Reference above.</li>
+<li><cite>container_version</cite> - Container software version.</li>
+<li><cite>create_timeout</cite> - See Argument Reference above.</li>
+<li><cite>discovery_url</cite> - See Argument Reference above.</li>
+<li><cite>docker_volume_size</cite> - See Argument Reference above.</li>
+<li><cite>flavor</cite> - See Argument Reference above.</li>
+<li><cite>master_flavor</cite> - See Argument Reference above.</li>
+<li><cite>keypair</cite> - See Argument Reference above.</li>
+<li><cite>labels</cite> - See Argument Reference above.</li>
+<li><cite>master_count</cite> - See Argument Reference above.</li>
+<li><cite>node_count</cite> - See Argument Reference above.</li>
+<li><cite>master_addresses</cite> - IP addresses of the master node of the cluster.</li>
+<li><cite>node_addresses</cite> - IP addresses of the node of the cluster.</li>
+<li><cite>stack_id</cite> - UUID of the Orchestration service stack.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -70,15 +175,231 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">ClusterTemplate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">ClusterTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>volume_driver=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Magnum cluster template resource within OpenStack.</p>
+<p>## Argument reference</p>
+<p>The following arguments are supported:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><cite>region</cite> - (Optional) The region in which to obtain the V1 Container Infra</dt>
+<dd>client. A Container Infra client is needed to create a cluster template. If
+omitted,the <cite>region</cite> argument of the provider is used. Changing this
+creates a new cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>name</cite> - (Required) The name of the cluster template. Changing this updates</dt>
+<dd>the name of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>project_id</cite> - (Optional) The project of the cluster template. Required if</dt>
+<dd>admin wants to create a cluster template in another project. Changing this
+creates a new cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>user_id</cite> - (Optional) The user of the cluster template. Required if admin</dt>
+<dd>wants to create a cluster template for another user. Changing this creates
+a new cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>apiserver_port</cite> - (Optional) The API server port for the Container</dt>
+<dd>Orchestration Engine for this cluster template. Changing this updates the
+API server port of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>coe</cite> - (Required) The Container Orchestration Engine for this cluster</dt>
+<dd>template. Changing this updates the engine of the existing cluster
+template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>cluster_distro</cite> - (Optional) The distro for the cluster (fedora-atomic,</dt>
+<dd>coreos, etc.). Changing this updates the cluster distro of the existing
+cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>dns_nameserver</cite> - (Optional) Address of the DNS nameserver that is used in</dt>
+<dd>nodes of the cluster. Changing this updates the DNS nameserver of the
+existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>docker_storage_driver</cite> - (Optional) Docker storage driver. Changing this</dt>
+<dd>updates the Docker storage driver of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>docker_volume_size</cite> - (Optional) The size (in GB) of the Docker volume.</dt>
+<dd>Changing this updates the Docker volume size of the existing cluster
+template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>external_network_id</cite> - (Optional) The ID of the external network that will</dt>
+<dd>be used for the cluster. Changing this updates the external network ID of
+the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>fixed_network</cite> - (Optional) The fixed network that will be attached to the</dt>
+<dd>cluster. Changing this updates the fixed network of the existing cluster
+template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>fixed_subnet</cite> - (Optional) The fixed subnet that will be attached to the</dt>
+<dd>cluster. Changing this updates the fixed subnet of the existing cluster
+template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>flavor</cite> - (Optional) The flavor for the nodes of the cluster. Can be set via</dt>
+<dd>the <cite>OS_MAGNUM_FLAVOR</cite> environment variable. Changing this updates the
+flavor of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>master_flavor</cite> - (Optional) The flavor for the master nodes. Can be set via</dt>
+<dd>the <cite>OS_MAGNUM_MASTER_FLAVOR</cite> environment variable. Changing this updates
+the master flavor of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>floating_ip_enabled</cite> - (Optional) Indicates whether created cluster should</dt>
+<dd>create floating IP for every node or not. Changing this updates the
+floating IP enabled attribute of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>http_proxy</cite> - (Optional) The address of a proxy for receiving all HTTP</dt>
+<dd>requests and relay them. Changing this updates the HTTP proxy address of
+the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>https_proxy</cite> - (Optional) The address of a proxy for receiving all HTTPS</dt>
+<dd>requests and relay them. Changing this updates the HTTPS proxy address of
+the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>image</cite> - (Required) The reference to an image that is used for nodes of the</dt>
+<dd>cluster. Can be set via the <cite>OS_MAGNUM_IMAGE</cite> environment variable.
+Changing this updates the image attribute of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>insecure_registry</cite> - (Optional) The insecure registry URL for the cluster</dt>
+<dd>template. Changing this updates the insecure registry attribute of the
+existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>keypair_id</cite> - (Optional) The name of the Compute service SSH keypair.</dt>
+<dd>Changing this updates the keypair of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>labels</cite> - (Optional) The list of key value pairs representing additional</dt>
+<dd>properties of the cluster template. Changing this updates the labels of the
+existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>master_lb_enabled</cite> - (Optional) Indicates whether created cluster should</dt>
+<dd>has a loadbalancer for master nodes or not. Changing this updates the
+attribute of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>network_driver</cite> - (Optional) The name of the driver for the container</dt>
+<dd>network. Changing this updates the network driver of the existing cluster
+template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>no_proxy</cite> - (Optional) A comma-separated list of IP addresses that shouldn’t</dt>
+<dd>be used in the cluster. Changing this updates the no proxy list of the
+existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>public</cite> - (Optional) Indicates whether cluster template should be public.</dt>
+<dd>Changing this updates the public attribute of the existing cluster
+template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>registry_enabled</cite> - (Optional) Indicates whether Docker registry is enabled</dt>
+<dd>in the cluster. Changing this updates the registry enabled attribute of the
+existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>server_type</cite> - (Optional) The server type for the cluster template. Changing</dt>
+<dd>this updates the server type of the existing cluster template.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>tls_disabled</cite> - (Optional) Indicates whether the TLS should be disabled in</dt>
+<dd>the cluster. Changing this updates the attribute of the existing cluster.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><cite>volume_driver</cite> - (Optional) The name of the driver that is used for the</dt>
+<dd>volumes of the cluster nodes. Changing this updates the volume driver of
+the existing cluster template.</dd>
+</dl>
+</li>
+</ul>
+<p>## Attributes reference</p>
+<p>The following attributes are exported:</p>
+<ul class="simple">
+<li><cite>region</cite> - See Argument Reference above.</li>
+<li><cite>name</cite> - See Argument Reference above.</li>
+<li><cite>project_id</cite> - See Argument Reference above.</li>
+<li><cite>created_at</cite> - The time at which cluster template was created.</li>
+<li><cite>updated_at</cite> - The time at which cluster template was created.</li>
+<li><cite>apiserver_port</cite> - See Argument Reference above.</li>
+<li><cite>coe</cite> - See Argument Reference above.</li>
+<li><cite>cluster_distro</cite> - See Argument Reference above.</li>
+<li><cite>dns_nameserver</cite> - See Argument Reference above.</li>
+<li><cite>docker_storage_driver</cite> - See Argument Reference above.</li>
+<li><cite>docker_volume_size</cite> - See Argument Reference above.</li>
+<li><cite>external_network_id</cite> - See Argument Reference above.</li>
+<li><cite>fixed_network</cite> - See Argument Reference above.</li>
+<li><cite>fixed_subnet</cite> - See Argument Reference above.</li>
+<li><cite>flavor</cite> - See Argument Reference above.</li>
+<li><cite>master_flavor</cite> - See Argument Reference above.</li>
+<li><cite>floating_ip_enabled</cite> - See Argument Reference above.</li>
+<li><cite>http_proxy</cite> - See Argument Reference above.</li>
+<li><cite>https_proxy</cite> - See Argument Reference above.</li>
+<li><cite>image</cite> - See Argument Reference above.</li>
+<li><cite>insecure_registry</cite> - See Argument Reference above.</li>
+<li><cite>keypair_id</cite> - See Argument Reference above.</li>
+<li><cite>labels</cite> - See Argument Reference above.</li>
+<li><cite>links</cite> - A list containing associated cluster template links.</li>
+<li><cite>master_lb_enabled</cite> - See Argument Reference above.</li>
+<li><cite>network_driver</cite> - See Argument Reference above.</li>
+<li><cite>no_proxy</cite> - See Argument Reference above.</li>
+<li><cite>public</cite> - See Argument Reference above.</li>
+<li><cite>registry_enabled</cite> - See Argument Reference above.</li>
+<li><cite>server_type</cite> - See Argument Reference above.</li>
+<li><cite>tls_disabled</cite> - See Argument Reference above.</li>
+<li><cite>volume_driver</cite> - See Argument Reference above.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
