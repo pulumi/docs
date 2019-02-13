@@ -147,7 +147,7 @@ Outputs are a key part of how Pulumi tracks dependencies between resources.  Bec
 
 In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
 
-The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updatred until all their dependencies are available and up to date.  
+The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.  
 
 #### Apply {#apply}
 
