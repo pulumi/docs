@@ -2,17 +2,17 @@
 <span id="iam"></span><h1>iam<a class="headerlink" href="#module-pulumi_aws.iam" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.iam.AccessKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccessKey</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>pgp_key=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccessKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>pgp_key=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccessKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a
-keybase username in the form <cite>keybase:some_person_that_exists</cite>.</li>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user to associate with this access key.</li>
 </ul>
 </td>
@@ -22,9 +22,10 @@ keybase username in the form <cite>keybase:some_person_that_exists</cite>.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.AccessKey.encrypted_secret">
 <code class="descname">encrypted_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.encrypted_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>The encrypted secret, base64 encoded.
-&gt; <strong>NOTE:</strong> The encrypted secret may be decrypted using the command line,
-for example: <cite>terraform output encrypted_secret | base64 –decode | keybase pgp decrypt</cite>.</p>
+<dd><p>The encrypted secret, base64 encoded.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The encrypted secret may be decrypted using the command line,
+for example: <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">output</span> <span class="pre">encrypted_secret</span> <span class="pre">|</span> <span class="pre">base64</span> <span class="pre">--decode</span> <span class="pre">|</span> <span class="pre">keybase</span> <span class="pre">pgp</span> <span class="pre">decrypt</span></code>.</div></blockquote>
 </dd></dl>
 
 <dl class="attribute">
@@ -38,14 +39,14 @@ the secret</p>
 <dt id="pulumi_aws.iam.AccessKey.pgp_key">
 <code class="descname">pgp_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.pgp_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Either a base-64 encoded PGP public key, or a
-keybase username in the form <cite>keybase:some_person_that_exists</cite>.</p>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.AccessKey.secret">
 <code class="descname">secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secret access key. Note that this will be written
-to the state file. Please supply a <cite>pgp_key</cite> instead, which will prevent the
+to the state file. Please supply a <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> instead, which will prevent the
 secret from being stored in plain text</p>
 </dd></dl>
 
@@ -53,8 +54,8 @@ secret from being stored in plain text</p>
 <dt id="pulumi_aws.iam.AccessKey.ses_smtp_password">
 <code class="descname">ses_smtp_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccessKey.ses_smtp_password" title="Permalink to this definition">¶</a></dt>
 <dd><p>The secret access key converted into an SES SMTP
-password by applying [AWS’s documented conversion
-algorithm](<a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert</a>).</p>
+password by applying <a class="reference external" href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert">AWS’s documented conversion
+algorithm</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -112,16 +113,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.AccountAlias">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccountAlias</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_alias=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccountAlias" title="Permalink to this definition">¶</a></dt>
-<dd><p>-&gt; <strong>Note:</strong> There is only a single account alias per AWS account.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccountAlias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_alias=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccountAlias" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><strong>Note:</strong> There is only a single account alias per AWS account.</div></blockquote>
 <p>Manages the account alias for the AWS Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account alias</li>
 </ul>
 </td>
@@ -176,18 +178,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.AccountPasswordPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccountPasswordPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_users_to_change_password=None</em>, <em>hard_expiry=None</em>, <em>max_password_age=None</em>, <em>minimum_password_length=None</em>, <em>password_reuse_prevention=None</em>, <em>require_lowercase_characters=None</em>, <em>require_numbers=None</em>, <em>require_symbols=None</em>, <em>require_uppercase_characters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccountPasswordPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>-&gt; <strong>Note:</strong> There is only a single policy allowed per AWS account. An existing policy will be lost when using this resource as an effect of this limitation.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">AccountPasswordPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_users_to_change_password=None</em>, <em>hard_expiry=None</em>, <em>max_password_age=None</em>, <em>minimum_password_length=None</em>, <em>password_reuse_prevention=None</em>, <em>require_lowercase_characters=None</em>, <em>require_numbers=None</em>, <em>require_symbols=None</em>, <em>require_uppercase_characters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.AccountPasswordPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><strong>Note:</strong> There is only a single policy allowed per AWS account. An existing policy will be lost when using this resource as an effect of this limitation.</div></blockquote>
 <p>Manages Password Policy for the AWS Account.
-See more about [Account Password Policy](<a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html</a>)
+See more about <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_passwords_account-policy.html">Account Password Policy</a>
 in the official AWS docs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_users_to_change_password</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow users to change their own password</li>
 <li><strong>hard_expiry</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)</li>
@@ -213,8 +216,8 @@ in the official AWS docs.</p>
 <dt id="pulumi_aws.iam.AccountPasswordPolicy.expire_passwords">
 <code class="descname">expire_passwords</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.AccountPasswordPolicy.expire_passwords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether passwords in the account expire.
-Returns <cite>true</cite> if <cite>max_password_age</cite> contains a value greater than <cite>0</cite>.
-Returns <cite>false</cite> if it is <cite>0</cite> or _not <a href="#id11"><span class="problematic" id="id12">present_</span></a>.</p>
+Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">max_password_age</span></code> contains a value greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>.
+Returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if it is <code class="docutils literal notranslate"><span class="pre">0</span></code> or <em>not present</em>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -549,16 +552,17 @@ was created.</p>
 
 <dl class="class">
 <dt id="pulumi_aws.iam.Group">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <cite>=,.&#64;-_.</cite>. Group names are not distinguished by case. For example, you cannot create groups named both “ADMINS” and “admins”.</li>
+<li><strong>resource*name</strong> (<em>str</em>) – <p>The name of the resource.</p>
+</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <cite>=,.&#64;-*.</cite>. Group names are not distinguished by case. For example, you cannot create groups named both “ADMINS” and “admins”.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the group.</li>
 </ul>
 </td>
@@ -574,7 +578,7 @@ was created.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Group.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Group.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The group’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <cite>=,.&#64;-_.</cite>. Group names are not distinguished by case. For example, you cannot create groups named both “ADMINS” and “admins”.</p>
+<dd><p>The group’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <code class="docutils literal notranslate"><span class="pre">=,.&#64;-_.</span></code>. Group names are not distinguished by case. For example, you cannot create groups named both “ADMINS” and “admins”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -631,21 +635,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GroupMembership">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GroupMembership</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>group=None</em>, <em>name=None</em>, <em>users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupMembership" title="Permalink to this definition">¶</a></dt>
-<dd><p>&gt; <strong>WARNING:</strong> Multiple aws_iam_group_membership resources with the same group name will produce inconsistent behavior!</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GroupMembership</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>group=None</em>, <em>name=None</em>, <em>users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupMembership" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><strong>WARNING:</strong> Multiple aws_iam_group_membership resources with the same group name will produce inconsistent behavior!</div></blockquote>
 <p>Provides a top level resource to manage IAM Group membership for IAM Users. For
 more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 [IAM Users][2]</p>
-<p>&gt; <strong>Note:</strong> <cite>aws_iam_group_membership</cite> will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
-[<cite>aws_iam_user_group_membership</cite> resource][3].</p>
+<blockquote>
+<div><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">aws_iam_group_membership</span></code> will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
+[<code class="docutils literal notranslate"><span class="pre">aws_iam_user_group_membership</span></code> resource][3].</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Group name to attach the list of <cite>users</cite> to</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Group name to attach the list of <code class="docutils literal notranslate"><span class="pre">users</span></code> to</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify the Group Membership</li>
 <li><strong>users</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IAM User names to associate with the Group</li>
 </ul>
@@ -656,7 +662,7 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GroupMembership.group">
 <code class="descname">group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GroupMembership.group" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IAM Group name to attach the list of <cite>users</cite> to</p>
+<dd><p>The IAM Group name to attach the list of <code class="docutils literal notranslate"><span class="pre">users</span></code> to</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -713,21 +719,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GroupPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GroupPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>group=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GroupPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>group=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM policy attached to a group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM group to attach to the policy.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, Terraform will
 assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>)</li>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a></li>
 </ul>
 </td>
 </tr>
@@ -750,13 +756,13 @@ assign a random, unique name.</p>
 <dt id="pulumi_aws.iam.GroupPolicy.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</p>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.GroupPolicy.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.GroupPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>)</p>
+<dd><p>The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a></p>
 </dd></dl>
 
 <dl class="method">
@@ -801,16 +807,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.GroupPolicyAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GroupPolicyAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>group=None</em>, <em>policy_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicyAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">GroupPolicyAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>group=None</em>, <em>policy_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.GroupPolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Managed IAM Policy to an IAM group</p>
-<p>&gt; <strong>NOTE:</strong> The usage of this resource conflicts with the <cite>aws_iam_policy_attachment</cite> resource and will permanently show a difference if both are defined.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">aws_iam_policy_attachment</span></code> resource and will permanently show a difference if both are defined.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group the policy should be applied to</li>
 <li><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</li>
 </ul>
@@ -872,22 +879,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.InstanceProfile">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">InstanceProfile</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>role=None</em>, <em>roles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.InstanceProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">InstanceProfile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>role=None</em>, <em>roles=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.InstanceProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM instance profile.</p>
-<p>&gt; <strong>NOTE:</strong> Either <cite>role</cite> or <cite>roles</cite> (<strong>deprecated</strong>) must be specified.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Either <code class="docutils literal notranslate"><span class="pre">role</span></code> or <code class="docutils literal notranslate"><span class="pre">roles</span></code> (<strong>deprecated</strong>) must be specified.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The profile’s name. If omitted, Terraform will assign a random, unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the profile.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role name to include in the profile.</li>
-<li><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <cite>Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1</cite>, then you must contact AWS support and ask for a limit increase.
-WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](<a class="reference external" href="https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017">https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017</a>), as &gt;= 2 roles are not possible. See [issue #11575](<a class="reference external" href="https://github.com/hashicorp/terraform/issues/11575">https://github.com/hashicorp/terraform/issues/11575</a>).</li>
+<li><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <code class="docutils literal notranslate"><span class="pre">Cannot</span> <span class="pre">exceed</span> <span class="pre">quota</span> <span class="pre">for</span> <span class="pre">InstanceSessionsPerInstanceProfile:</span> <span class="pre">1</span></code>, then you must contact AWS support and ask for a limit increase.
+WARNING: This is deprecated since <a class="reference external" href="https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017">version 0.9.3 (April 12, 2017)</a>, as &gt;= 2 roles are not possible. See <a class="reference external" href="https://github.com/hashicorp/terraform/issues/11575">issue #11575</a>.</li>
 </ul>
 </td>
 </tr>
@@ -914,7 +922,7 @@ WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](<a class="ref
 <dl class="attribute">
 <dt id="pulumi_aws.iam.InstanceProfile.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.InstanceProfile.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -932,8 +940,8 @@ WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](<a class="ref
 <dl class="attribute">
 <dt id="pulumi_aws.iam.InstanceProfile.roles">
 <code class="descname">roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.InstanceProfile.roles" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <cite>Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1</cite>, then you must contact AWS support and ask for a limit increase.
-WARNING: This is deprecated since [version 0.9.3 (April 12, 2017)](<a class="reference external" href="https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017">https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017</a>), as &gt;= 2 roles are not possible. See [issue #11575](<a class="reference external" href="https://github.com/hashicorp/terraform/issues/11575">https://github.com/hashicorp/terraform/issues/11575</a>).</p>
+<dd><p>A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to <code class="docutils literal notranslate"><span class="pre">Cannot</span> <span class="pre">exceed</span> <span class="pre">quota</span> <span class="pre">for</span> <span class="pre">InstanceSessionsPerInstanceProfile:</span> <span class="pre">1</span></code>, then you must contact AWS support and ask for a limit increase.
+WARNING: This is deprecated since <a class="reference external" href="https://github.com/hashicorp/terraform/blob/master/CHANGELOG.md#093-april-12-2017">version 0.9.3 (April 12, 2017)</a>, as &gt;= 2 roles are not possible. See <a class="reference external" href="https://github.com/hashicorp/terraform/issues/11575">issue #11575</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -984,18 +992,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.OpenIdConnectProvider">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">OpenIdConnectProvider</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>client_id_lists=None</em>, <em>thumbprint_lists=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.OpenIdConnectProvider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">OpenIdConnectProvider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>client_id_lists=None</em>, <em>thumbprint_lists=None</em>, <em>url=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.OpenIdConnectProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM OpenID Connect provider.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>client_id_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that’s sent as the client_id parameter on OAuth requests.)</li>
 <li><strong>thumbprint_lists</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider’s server certificate(s).</li>
-<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the identity provider. Corresponds to the _iss_ claim.</li>
+<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the identity provider. Corresponds to the <em>iss</em> claim.</li>
 </ul>
 </td>
 </tr>
@@ -1022,7 +1030,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.OpenIdConnectProvider.url">
 <code class="descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.OpenIdConnectProvider.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The URL of the identity provider. Corresponds to the _iss_ claim.</p>
+<dd><p>The URL of the identity provider. Corresponds to the <em>iss</em> claim.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1067,21 +1075,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>policy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the IAM policy.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, Terraform will assign a random, unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the policy.
-See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html</a>) for more information.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>)</li>
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a></p>
+</li>
 </ul>
 </td>
 </tr>
@@ -1108,20 +1117,20 @@ See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazo
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Policy.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Policy.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Policy.path">
 <code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Policy.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path in which to create the policy.
-See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html</a>) for more information.</p>
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Policy.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Policy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>)</p>
+<dd><p>The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a></p>
 </dd></dl>
 
 <dl class="method">
@@ -1166,17 +1175,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.PolicyAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">PolicyAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>groups=None</em>, <em>name=None</em>, <em>policy_arn=None</em>, <em>roles=None</em>, <em>users=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.PolicyAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">PolicyAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>groups=None</em>, <em>name=None</em>, <em>policy_arn=None</em>, <em>roles=None</em>, <em>users=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.PolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)</p>
-<p>!&gt; <strong>WARNING:</strong> The aws_iam_policy_attachment resource creates <strong>exclusive</strong> attachments of IAM policies. Across the entire AWS account, all of the users/roles/groups to which a single policy is attached must be declared by a single aws_iam_policy_attachment resource. This means that even any users/roles/groups that have the attached policy via any other mechanism (including other Terraform resources) will have that attached policy revoked by this resource. Consider <cite>aws_iam_role_policy_attachment</cite>, <cite>aws_iam_user_policy_attachment</cite>, or <cite>aws_iam_group_policy_attachment</cite> instead. These resources do not enforce exclusive attachment of an IAM policy.</p>
-<p>&gt; <strong>NOTE:</strong> The usage of this resource conflicts with the <cite>aws_iam_group_policy_attachment</cite>, <cite>aws_iam_role_policy_attachment</cite>, and <cite>aws_iam_user_policy_attachment</cite> resources and will permanently show a difference if both are defined.</p>
+<p>!&gt; <strong>WARNING:</strong> The aws_iam_policy_attachment resource creates <strong>exclusive</strong> attachments of IAM policies. Across the entire AWS account, all of the users/roles/groups to which a single policy is attached must be declared by a single aws_iam_policy_attachment resource. This means that even any users/roles/groups that have the attached policy via any other mechanism (including other Terraform resources) will have that attached policy revoked by this resource. Consider <code class="docutils literal notranslate"><span class="pre">aws_iam_role_policy_attachment</span></code>, <code class="docutils literal notranslate"><span class="pre">aws_iam_user_policy_attachment</span></code>, or <code class="docutils literal notranslate"><span class="pre">aws_iam_group_policy_attachment</span></code> instead. These resources do not enforce exclusive attachment of an IAM policy.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">aws_iam_group_policy_attachment</span></code>, <code class="docutils literal notranslate"><span class="pre">aws_iam_role_policy_attachment</span></code>, and <code class="docutils literal notranslate"><span class="pre">aws_iam_user_policy_attachment</span></code> resources and will permanently show a difference if both are defined.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The group(s) the policy should be applied to</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attachment. This cannot be an empty string.</li>
 <li><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</li>
@@ -1259,23 +1269,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.Role">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>assume_role_policy=None</em>, <em>description=None</em>, <em>force_detach_policies=None</em>, <em>max_session_duration=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Role" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>assume_role_policy=None</em>, <em>description=None</em>, <em>force_detach_policies=None</em>, <em>max_session_duration=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM role.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>assume_role_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy that grants an entity permission to assume the role.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the role.</li>
-<li><strong>force_detach_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies to force detaching any policies the role has before destroying it. Defaults to <cite>false</cite>.</li>
+<li><strong>force_detach_policies</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies to force detaching any policies the role has before destroying it. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>max_session_duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role. If omitted, Terraform will assign a random, unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
-<li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the role.
-See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html</a>) for more information.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The path to the role.
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
+</li>
 <li><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the role.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the IAM role</li>
 </ul>
@@ -1310,7 +1321,7 @@ See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazo
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Role.force_detach_policies">
 <code class="descname">force_detach_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Role.force_detach_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies to force detaching any policies the role has before destroying it. Defaults to <cite>false</cite>.</p>
+<dd><p>Specifies to force detaching any policies the role has before destroying it. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1328,14 +1339,14 @@ See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazo
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Role.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Role.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.Role.path">
 <code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.Role.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The path to the role.
-See [IAM Identifiers](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html</a>) for more information.</p>
+See <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html">IAM Identifiers</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1398,20 +1409,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.RolePolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">RolePolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">RolePolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM role policy.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role policy. If omitted, Terraform will
 assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>)</li>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a></p>
+</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role to attach to the policy.</li>
 </ul>
 </td>
@@ -1429,13 +1441,13 @@ assign a random, unique name.</p>
 <dt id="pulumi_aws.iam.RolePolicy.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.RolePolicy.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</p>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.RolePolicy.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.RolePolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>)</p>
+<dd><p>The policy document. This is a JSON formatted string. For more information about building IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1486,16 +1498,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.RolePolicyAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">RolePolicyAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>policy_arn=None</em>, <em>role=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicyAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">RolePolicyAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_arn=None</em>, <em>role=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.RolePolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Managed IAM Policy to an IAM role</p>
-<p>&gt; <strong>NOTE:</strong> The usage of this resource conflicts with the <cite>aws_iam_policy_attachment</cite> resource and will permanently show a difference if both are defined.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">aws_iam_policy_attachment</span></code> resource and will permanently show a difference if both are defined.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role the policy should be applied to</li>
 </ul>
@@ -1557,15 +1570,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.SamlProvider">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">SamlProvider</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>saml_metadata_document=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SamlProvider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">SamlProvider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>saml_metadata_document=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SamlProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM SAML provider.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the provider to create.</li>
 <li><strong>saml_metadata_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An XML document generated by an identity provider that supports SAML 2.0.</li>
 </ul>
@@ -1594,7 +1607,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.SamlProvider.valid_until">
 <code class="descname">valid_until</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.SamlProvider.valid_until" title="Permalink to this definition">¶</a></dt>
-<dd><p>The expiration date and time for the SAML provider in RFC1123 format, e.g. <cite>Mon, 02 Jan 2006 15:04:05 MST</cite>.</p>
+<dd><p>The expiration date and time for the SAML provider in RFC1123 format, e.g. <code class="docutils literal notranslate"><span class="pre">Mon,</span> <span class="pre">02</span> <span class="pre">Jan</span> <span class="pre">2006</span> <span class="pre">15:04:05</span> <span class="pre">MST</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1639,7 +1652,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.ServerCertificate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">ServerCertificate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>arn=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>private_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServerCertificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">ServerCertificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>arn=None</em>, <em>certificate_body=None</em>, <em>certificate_chain=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path=None</em>, <em>private_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServerCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM Server Certificate resource to upload Server Certificates.
 Certs uploaded to IAM can easily work with other AWS services such as:</p>
 <ul class="simple">
@@ -1650,15 +1663,16 @@ Certs uploaded to IAM can easily work with other AWS services such as:</p>
 </ul>
 <p>For information about server certificates in IAM, see [Managing Server
 Certificates][2] in AWS Documentation.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the private key will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the server certificate.</li>
 <li><strong>certificate_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the public key certificate in
 PEM-encoded format.</li>
@@ -1668,10 +1682,10 @@ of the chain.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Server Certificate. Do not include the
 path in this value. If omitted, Terraform will assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</li>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
-AWS CloudFront, the path must be in format <cite>/cloudfront/your_path_here</cite>.
+AWS CloudFront, the path must be in format <code class="docutils literal notranslate"><span class="pre">/cloudfront/your_path_here</span></code>.
 See [IAM Identifiers][1] for more details on IAM Paths.</li>
 <li><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the private key in PEM-encoded format.</li>
 </ul>
@@ -1711,7 +1725,7 @@ path in this value. If omitted, Terraform will assign a random, unique name.</p>
 <dt id="pulumi_aws.iam.ServerCertificate.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.ServerCertificate.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</p>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1719,7 +1733,7 @@ prefix. Conflicts with <cite>name</cite>.</p>
 <code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.ServerCertificate.path" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM path for the server certificate.  If it is not
 included, it defaults to a slash (/). If this certificate is for use with
-AWS CloudFront, the path must be in format <cite>/cloudfront/your_path_here</cite>.
+AWS CloudFront, the path must be in format <code class="docutils literal notranslate"><span class="pre">/cloudfront/your_path_here</span></code>.
 See [IAM Identifiers][1] for more details on IAM Paths.</p>
 </dd></dl>
 
@@ -1771,16 +1785,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.ServiceLinkedRole">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">ServiceLinkedRole</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>aws_service_name=None</em>, <em>custom_suffix=None</em>, <em>description=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServiceLinkedRole" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an [IAM service-linked role](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html</a>).</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">ServiceLinkedRole</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aws_service_name=None</em>, <em>custom_suffix=None</em>, <em>description=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.ServiceLinkedRole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">IAM service-linked role</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>aws_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS service to which this role is attached. You use a string similar to a URL but without the <cite>http://</cite> in front. For example: <cite>elasticbeanstalk.amazonaws.com</cite>. To find the full list of services that support service-linked roles, check [the docs](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</a>).</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>aws_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS service to which this role is attached. You use a string similar to a URL but without the <code class="docutils literal notranslate"><span class="pre">http://</span></code> in front. For example: <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.amazonaws.com</span></code>. To find the full list of services that support service-linked roles, check <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">the docs</a>.</li>
 <li><strong>custom_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional string appended to the role name. Not all AWS services support custom suffixes.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the role.</li>
 </ul>
@@ -1797,7 +1811,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.ServiceLinkedRole.aws_service_name">
 <code class="descname">aws_service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.ServiceLinkedRole.aws_service_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The AWS service to which this role is attached. You use a string similar to a URL but without the <cite>http://</cite> in front. For example: <cite>elasticbeanstalk.amazonaws.com</cite>. To find the full list of services that support service-linked roles, check [the docs](<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</a>).</p>
+<dd><p>The AWS service to which this role is attached. You use a string similar to a URL but without the <code class="docutils literal notranslate"><span class="pre">http://</span></code> in front. For example: <code class="docutils literal notranslate"><span class="pre">elasticbeanstalk.amazonaws.com</span></code>. To find the full list of services that support service-linked roles, check <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">the docs</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1878,18 +1892,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.SshKey">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>encoding=None</em>, <em>public_key=None</em>, <em>status=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SshKey" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">SshKey</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>encoding=None</em>, <em>public_key=None</em>, <em>status=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uploads an SSH public key and associates it with the specified IAM user.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use <cite>SSH</cite>. To retrieve the public key in PEM format, use <cite>PEM</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use <code class="docutils literal notranslate"><span class="pre">SSH</span></code>. To retrieve the public key in PEM format, use <code class="docutils literal notranslate"><span class="pre">PEM</span></code>.</li>
 <li><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.</li>
-<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is <cite>active</cite>.</li>
+<li><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is <code class="docutils literal notranslate"><span class="pre">active</span></code>.</li>
 <li><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IAM user to associate the SSH public key with.</li>
 </ul>
 </td>
@@ -1899,7 +1913,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.SshKey.encoding">
 <code class="descname">encoding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.SshKey.encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use <cite>SSH</cite>. To retrieve the public key in PEM format, use <cite>PEM</cite>.</p>
+<dd><p>Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use <code class="docutils literal notranslate"><span class="pre">SSH</span></code>. To retrieve the public key in PEM format, use <code class="docutils literal notranslate"><span class="pre">PEM</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1923,7 +1937,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.SshKey.status">
 <code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.SshKey.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is <cite>active</cite>.</p>
+<dd><p>The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is <code class="docutils literal notranslate"><span class="pre">active</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1974,19 +1988,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.User">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">User</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.User" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">User</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>force_destroy=None</em>, <em>name=None</em>, <em>path=None</em>, <em>permissions_boundary=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM user.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When destroying this user, destroy even if it
-has non-Terraform-managed IAM access keys, login profile or MFA devices. Without <cite>force_destroy</cite>
+has non-Terraform-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
 a user with non-Terraform-managed access keys and login profile will fail to be destroyed.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <cite>=,.&#64;-_.</cite>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <code class="docutils literal notranslate"><span class="pre">=,.&#64;-_.</span></code>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</li>
 <li><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path in which to create the user.</li>
 <li><strong>permissions_boundary</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy that is used to set the permissions boundary for the user.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the IAM user</li>
@@ -2005,14 +2019,14 @@ a user with non-Terraform-managed access keys and login profile will fail to be 
 <dt id="pulumi_aws.iam.User.force_destroy">
 <code class="descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.User.force_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>When destroying this user, destroy even if it
-has non-Terraform-managed IAM access keys, login profile or MFA devices. Without <cite>force_destroy</cite>
+has non-Terraform-managed IAM access keys, login profile or MFA devices. Without <code class="docutils literal notranslate"><span class="pre">force_destroy</span></code>
 a user with non-Terraform-managed access keys and login profile will fail to be destroyed.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.User.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.User.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <cite>=,.&#64;-_.</cite>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</p>
+<dd><p>The user’s name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: <code class="docutils literal notranslate"><span class="pre">=,.&#64;-_.</span></code>. User names are not distinguished by case. For example, you cannot create users named both “TESTUSER” and “testuser”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2081,19 +2095,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.UserGroupMembership">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserGroupMembership</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>groups=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserGroupMembership" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserGroupMembership</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>groups=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserGroupMembership" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for adding an [IAM User][2] to [IAM Groups][1]. This
 resource can be used multiple times with the same user for non-overlapping
 groups.</p>
 <p>To exclusively manage the users in a group, see the
-[<cite>aws_iam_group_membership</cite> resource][3].</p>
+[<code class="docutils literal notranslate"><span class="pre">aws_iam_group_membership</span></code> resource][3].</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of [IAM Groups][1] to add the user to</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the [IAM User][2] to add to groups</li>
 </ul>
@@ -2155,7 +2169,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.UserLoginProfile">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserLoginProfile</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>password_length=None</em>, <em>password_reset_required=None</em>, <em>pgp_key=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserLoginProfile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>password_length=None</em>, <em>password_reset_required=None</em>, <em>pgp_key=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides one-time creation of a IAM user login profile, and uses PGP to
 encrypt the password for safe transport to the user. PGP keys can be
 obtained from Keybase.</p>
@@ -2164,14 +2178,14 @@ obtained from Keybase.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>password_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The length of the generated
 password.</li>
 <li><strong>password_reset_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the
 user should be forced to reset the generated password on first login.</li>
 <li><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a
-keybase username in the form <cite>keybase:username</cite>.</li>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>.</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user’s name.</li>
 </ul>
 </td>
@@ -2209,7 +2223,7 @@ user should be forced to reset the generated password on first login.</p>
 <dt id="pulumi_aws.iam.UserLoginProfile.pgp_key">
 <code class="descname">pgp_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserLoginProfile.pgp_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Either a base-64 encoded PGP public key, or a
-keybase username in the form <cite>keybase:username</cite>.</p>
+keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:username</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2260,18 +2274,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.UserPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>policy=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IAM policy attached to a user.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy. If omitted, Terraform will assign a random, unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
+</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM user to which to attach this policy.</li>
 </ul>
 </td>
@@ -2287,13 +2302,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserPolicy.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserPolicy.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.iam.UserPolicy.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iam.UserPolicy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</p>
+<dd><p>The policy document. This is a JSON formatted string. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2344,16 +2359,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.iam.UserPolicyAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserPolicyAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>policy_arn=None</em>, <em>user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicyAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.iam.</code><code class="descname">UserPolicyAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_arn=None</em>, <em>user=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.UserPolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Managed IAM Policy to an IAM user</p>
-<p>&gt; <strong>NOTE:</strong> The usage of this resource conflicts with the <cite>aws_iam_policy_attachment</cite> resource and will permanently show a difference if both are defined.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The usage of this resource conflicts with the <code class="docutils literal notranslate"><span class="pre">aws_iam_policy_attachment</span></code> resource and will permanently show a difference if both are defined.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>policy_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the policy you want to apply</li>
 <li><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user the policy should be applied to</li>
 </ul>
@@ -2449,84 +2465,24 @@ IAM policy.</p>
 <dd><p>Generates an IAM policy document in JSON format.</p>
 <p>This is a data source which can be used to construct a JSON representation of
 an IAM policy document, for use with resources which expect policy documents,
-such as the <cite>aws_iam_policy</cite> resource.</p>
-<p>-&gt; For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>hcl
-data “aws_iam_policy_document” “example” {</p>
+such as the <code class="docutils literal notranslate"><span class="pre">aws_iam_policy</span></code> resource.</p>
 <blockquote>
-<div><dl class="docutils">
-<dt>statement {</dt>
-<dd><p class="first">sid = “1”</p>
-<dl class="docutils">
-<dt>actions = [</dt>
-<dd>“s3:ListAllMyBuckets”,
-“s3:GetBucketLocation”,</dd>
-</dl>
-<p>]</p>
-<dl class="docutils">
-<dt>resources = [</dt>
-<dd>“arn:aws:s3:::<a href="#id5"><span class="problematic" id="id6">*</span></a>”,</dd>
-</dl>
-<p class="last">]</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>statement {</dt>
-<dd><dl class="first docutils">
-<dt>actions = [</dt>
-<dd>“s3:ListBucket”,</dd>
-</dl>
-<p>]</p>
-<dl class="docutils">
-<dt>resources = [</dt>
-<dd>“arn:aws:s3:::${var.s3_bucket_name}”,</dd>
-</dl>
-<p>]</p>
-<dl class="docutils">
-<dt>condition {</dt>
-<dd><p class="first">test     = “StringLike”
-variable = “s3:prefix”</p>
-<dl class="docutils">
-<dt>values = [</dt>
-<dd>“”,
-“home/”,
-“home/&amp;{aws:username}/”,</dd>
-</dl>
-<p class="last">]</p>
-</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>statement {</dt>
-<dd><dl class="first docutils">
-<dt>actions = [</dt>
-<dd>“s3:<a href="#id7"><span class="problematic" id="id8">*</span></a>”,</dd>
-</dl>
-<p>]</p>
-<dl class="docutils">
-<dt>resources = [</dt>
-<dd>“arn:aws:s3:::${var.s3_bucket_name}/home/&amp;{aws:username}”,
-“arn:aws:s3:::${var.s3_bucket_name}/home/&amp;{aws:username}/<a href="#id9"><span class="problematic" id="id10">*</span></a>”,</dd>
-</dl>
-<p class="last">]</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_iam_policy” “example” {</dt>
-<dd>name   = “example_policy”
-path   = “/”
-policy = “${data.aws_iam_policy_document.example.json}”</dd>
-</dl>
+<div>For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</div></blockquote>
 <p>Using this data source to generate policy documents is <em>optional</em>. It is also
 valid to use literal JSON strings within your configuration, or to use the
-<cite>file</cite> interpolation function to read a raw JSON policy document from a file.</p>
+<code class="docutils literal notranslate"><span class="pre">file</span></code> interpolation function to read a raw JSON policy document from a file.</p>
+<p>The IAM policy document format allows context variables to be interpolated
+into various strings within a statement. The native IAM policy document format
+uses <code class="docutils literal notranslate"><span class="pre">${...}</span></code>-style syntax that is in conflict with Terraform’s interpolation
+syntax, so this data source instead uses <code class="docutils literal notranslate"><span class="pre">&amp;{...}</span></code> syntax for interpolations that
+should be processed by AWS rather than by Terraform.</p>
+<p>In order to define wildcard principal (a.k.a. anonymous user) use <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;*&quot;</span></code> and
+<code class="docutils literal notranslate"><span class="pre">identifiers</span> <span class="pre">=</span> <span class="pre">[&quot;*&quot;]</span></code>. In that case the rendered json will contain <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">&quot;*&quot;</span></code>.
+Note, that even though the <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html">IAM Documentation</a>
+states that <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">&quot;*&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">{&quot;AWS&quot;:</span> <span class="pre">&quot;*&quot;}</span></code> are equivalent,
+those principals have different behavior for IAM Role Trust Policy. Therefore
+Terraform will normalize the principal field only in above-mentioned case and principals
+like <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;AWS&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">identifiers</span> <span class="pre">=</span> <span class="pre">[&quot;*&quot;]</span></code> will be rendered as <code class="docutils literal notranslate"><span class="pre">&quot;Principal&quot;:</span> <span class="pre">{&quot;AWS&quot;:</span> <span class="pre">&quot;*&quot;}</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -2541,6 +2497,8 @@ properties without having to hard code ARNs as input.</p>
 <dt id="pulumi_aws.iam.get_server_certificate">
 <code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_server_certificate</code><span class="sig-paren">(</span><em>latest=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_server_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to lookup information about IAM Server Certificates.</p>
+<p>The terraform import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
+It will not retrieve the private key which is not available through the AWS API.</p>
 </dd></dl>
 
 <dl class="function">

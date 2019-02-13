@@ -2,21 +2,21 @@
 <span id="search"></span><h1>search<a class="headerlink" href="#module-pulumi_azure.search" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.search.Service">
-<em class="property">class </em><code class="descclassname">pulumi_azure.search.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>partition_count=None</em>, <em>replica_count=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.search.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.search.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>partition_count=None</em>, <em>replica_count=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.search.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to manage an Azure Search Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Search Service. Changing this forces a new resource to be created.</li>
-<li><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <cite>sku</cite> is <cite>standard</cite>. Changing this forces a new resource to be created.</li>
-<li><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default is 1. Valid values include 1 through 12. Valid only when <cite>sku</cite> is <cite>standard</cite>. Changing this forces a new resource to be created.</li>
+<li><strong>partition_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</li>
+<li><strong>replica_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Search Service. Changing this forces a new resource to be created.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <cite>free</cite> and <cite>standard</cite>. <cite>standard2</cite> and <cite>standard3</cite> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <cite>free</cite> provisions the service in shared clusters. <cite>standard</cite> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid values are <code class="docutils literal notranslate"><span class="pre">free</span></code> and <code class="docutils literal notranslate"><span class="pre">standard</span></code>. <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <code class="docutils literal notranslate"><span class="pre">free</span></code> provisions the service in shared clusters. <code class="docutils literal notranslate"><span class="pre">standard</span></code> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource. Changing this forces a new resource to be created.</li>
 </ul>
 </td>
@@ -38,7 +38,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.partition_count">
 <code class="descname">partition_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.partition_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <cite>sku</cite> is <cite>standard</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Default is 1. Valid values include 1, 2, 3, 4, 6, or 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -50,7 +50,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.replica_count">
 <code class="descname">replica_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.replica_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Default is 1. Valid values include 1 through 12. Valid only when <cite>sku</cite> is <cite>standard</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Default is 1. Valid values include 1 through 12. Valid only when <code class="docutils literal notranslate"><span class="pre">sku</span></code> is <code class="docutils literal notranslate"><span class="pre">standard</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -68,7 +68,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.search.Service.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.search.Service.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>Valid values are <cite>free</cite> and <cite>standard</cite>. <cite>standard2</cite> and <cite>standard3</cite> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <cite>free</cite> provisions the service in shared clusters. <cite>standard</cite> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</p>
+<dd><p>Valid values are <code class="docutils literal notranslate"><span class="pre">free</span></code> and <code class="docutils literal notranslate"><span class="pre">standard</span></code>. <code class="docutils literal notranslate"><span class="pre">standard2</span></code> and <code class="docutils literal notranslate"><span class="pre">standard3</span></code> are also valid, but can only be used when it’s enabled on the backend by Microsoft support. <code class="docutils literal notranslate"><span class="pre">free</span></code> provisions the service in shared clusters. <code class="docutils literal notranslate"><span class="pre">standard</span></code> provisions the service in dedicated clusters.  Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">

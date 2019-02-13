@@ -2,21 +2,21 @@
 <span id="datalake"></span><h1>datalake<a class="headerlink" href="#module-pulumi_azure.datalake" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.datalake.AnalyticsAccount">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsAccount</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsAccount</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_store_account_name=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Data Lake Analytics Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_store_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the data lake store to use by default. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Analytics Account. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Lake Analytics Account.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monthly commitment tier for Data Lake Analytics Account. Accepted values are <cite>Consumption</cite>, <cite>Commitment_100000AUHours</cite>, <cite>Commitment_10000AUHours</cite>, <cite>Commitment_1000AUHours</cite>, <cite>Commitment_100AUHours</cite>, <cite>Commitment_500000AUHours</cite>, <cite>Commitment_50000AUHours</cite>, <cite>Commitment_5000AUHours</cite>, or <cite>Commitment_500AUHours</cite>.</li>
+<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monthly commitment tier for Data Lake Analytics Account. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_50000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_5000AUHours</span></code>, or <code class="docutils literal notranslate"><span class="pre">Commitment_500AUHours</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -55,7 +55,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.AnalyticsAccount.tier">
 <code class="descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsAccount.tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The monthly commitment tier for Data Lake Analytics Account. Accepted values are <cite>Consumption</cite>, <cite>Commitment_100000AUHours</cite>, <cite>Commitment_10000AUHours</cite>, <cite>Commitment_1000AUHours</cite>, <cite>Commitment_100AUHours</cite>, <cite>Commitment_500000AUHours</cite>, <cite>Commitment_50000AUHours</cite>, <cite>Commitment_5000AUHours</cite>, or <cite>Commitment_500AUHours</cite>.</p>
+<dd><p>The monthly commitment tier for Data Lake Analytics Account. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_50000AUHours</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_5000AUHours</span></code>, or <code class="docutils literal notranslate"><span class="pre">Commitment_500AUHours</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -100,15 +100,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.AnalyticsFirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">AnalyticsFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.AnalyticsFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Analytics Firewall Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Analytics for which the Firewall Rule should take effect.</li>
 <li><strong>end_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End IP Address for the firewall rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Analytics. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>
@@ -196,7 +196,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.GetStoreResult.encryption_state">
 <code class="descname">encryption_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.GetStoreResult.encryption_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>the Encryption State of this Data Lake Store Account, such as <cite>Enabled</cite> or <cite>Disabled</cite>.</p>
+<dd><p>the Encryption State of this Data Lake Store Account, such as <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -214,7 +214,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.GetStoreResult.firewall_state">
 <code class="descname">firewall_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.GetStoreResult.firewall_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>the state of the firewall, such as <cite>Enabled</cite> or <cite>Disabled</cite>.</p>
+<dd><p>the state of the firewall, such as <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -239,24 +239,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.Store">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">Store</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">Store</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>encryption_state=None</em>, <em>encryption_type=None</em>, <em>firewall_allow_azure_ips=None</em>, <em>firewall_state=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.Store" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Azure Data Lake Store.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>encryption_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Is Encryption enabled on this Data Lake Store Account? Possible values are <cite>Enabled</cite> or <cite>Disabled</cite>. Defaults to <cite>Enabled</cite>.</li>
-<li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Encryption Type used for this Data Lake Store Account. Currently can be set to <cite>SystemManaged</cite> when <cite>encryption_state</cite> is <cite>Enabled</cite> - and must be a blank string when it’s Disabled.</li>
-<li><strong>firewall_allow_azure_ips</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – are Azure Service IP’s allowed through the firewall? Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>. Defaults to <cite>Enabled.</cite></li>
-<li><strong>firewall_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the state of the Firewall. Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>. Defaults to <cite>Enabled.</cite></li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>encryption_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Is Encryption enabled on this Data Lake Store Account? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.</li>
+<li><strong>encryption_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Encryption Type used for this Data Lake Store Account. Currently can be set to <code class="docutils literal notranslate"><span class="pre">ServiceManaged</span></code> when <code class="docutils literal notranslate"><span class="pre">encryption_state</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> - and must be a blank string when it’s Disabled.</li>
+<li><strong>firewall_allow_azure_ips</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – are Azure Service IP’s allowed through the firewall? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled.</span></code></li>
+<li><strong>firewall_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the state of the Firewall. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled.</span></code></li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Data Lake Store.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monthly commitment tier for Data Lake Store. Accepted values are <cite>Consumption</cite>, <cite>Commitment_1TB</cite>, <cite>Commitment_10TB</cite>, <cite>Commitment_100TB</cite>, <cite>Commitment_500TB</cite>, <cite>Commitment_1PB</cite> or <cite>Commitment_5PB</cite>.</li>
+<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monthly commitment tier for Data Lake Store. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1PB</span></code> or <code class="docutils literal notranslate"><span class="pre">Commitment_5PB</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -265,13 +265,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.encryption_state">
 <code class="descname">encryption_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.encryption_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Is Encryption enabled on this Data Lake Store Account? Possible values are <cite>Enabled</cite> or <cite>Disabled</cite>. Defaults to <cite>Enabled</cite>.</p>
+<dd><p>Is Encryption enabled on this Data Lake Store Account? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.encryption_type">
 <code class="descname">encryption_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.encryption_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Encryption Type used for this Data Lake Store Account. Currently can be set to <cite>SystemManaged</cite> when <cite>encryption_state</cite> is <cite>Enabled</cite> - and must be a blank string when it’s Disabled.</p>
+<dd><p>The Encryption Type used for this Data Lake Store Account. Currently can be set to <code class="docutils literal notranslate"><span class="pre">ServiceManaged</span></code> when <code class="docutils literal notranslate"><span class="pre">encryption_state</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> - and must be a blank string when it’s Disabled.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -283,13 +283,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.firewall_allow_azure_ips">
 <code class="descname">firewall_allow_azure_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.firewall_allow_azure_ips" title="Permalink to this definition">¶</a></dt>
-<dd><p>are Azure Service IP’s allowed through the firewall? Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>. Defaults to <cite>Enabled.</cite></p>
+<dd><p>are Azure Service IP’s allowed through the firewall? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled.</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.firewall_state">
 <code class="descname">firewall_state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.firewall_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>the state of the Firewall. Possible values are <cite>Enabled</cite> and <cite>Disabled</cite>. Defaults to <cite>Enabled.</cite></p>
+<dd><p>the state of the Firewall. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Enabled.</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -319,7 +319,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.datalake.Store.tier">
 <code class="descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.datalake.Store.tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The monthly commitment tier for Data Lake Store. Accepted values are <cite>Consumption</cite>, <cite>Commitment_1TB</cite>, <cite>Commitment_10TB</cite>, <cite>Commitment_100TB</cite>, <cite>Commitment_500TB</cite>, <cite>Commitment_1PB</cite> or <cite>Commitment_5PB</cite>.</p>
+<dd><p>The monthly commitment tier for Data Lake Store. Accepted values are <code class="docutils literal notranslate"><span class="pre">Consumption</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_10TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_100TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_500TB</span></code>, <code class="docutils literal notranslate"><span class="pre">Commitment_1PB</span></code> or <code class="docutils literal notranslate"><span class="pre">Commitment_5PB</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -364,17 +364,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.StoreFile">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFile</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>local_file_path=None</em>, <em>remote_file_path=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Store File.</p>
-<p>&gt; <strong>Note:</strong> If you want to change the data in the remote file without changing the <cite>local_file_path</cite>, then 
-taint the resource so the <cite>azurerm_data_lake_store_file</cite> gets recreated with the new data.</p>
+<blockquote>
+<div><strong>Note:</strong> If you want to change the data in the remote file without changing the <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>, then 
+taint the resource so the <code class="docutils literal notranslate"><span class="pre">azurerm_data_lake_store_file</span></code> gets recreated with the new data.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store for which the File should created.</li>
 <li><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the local file to be added to the Data Lake Store.</li>
 <li><strong>remote_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path created for the file on the Data Lake Store.</li>
@@ -443,15 +444,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.datalake.StoreFirewallRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFirewallRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.datalake.</code><code class="descname">StoreFirewallRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_name=None</em>, <em>end_ip_address=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>start_ip_address=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.datalake.StoreFirewallRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Azure Data Lake Store Firewall Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store for which the Firewall Rule should take effect.</li>
 <li><strong>end_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End IP Address for the firewall rule.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Data Lake Store. Changing this forces a new resource to be created. Has to be between 3 to 24 characters.</li>

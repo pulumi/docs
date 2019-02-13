@@ -2,20 +2,17 @@
 <span id="binaryauthorization"></span><h1>binaryauthorization<a class="headerlink" href="#module-pulumi_gcp.binaryauthorization" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.Attestor">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.binaryauthorization.</code><code class="descname">Attestor</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attestation_authority_note=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.binaryauthorization.</code><code class="descname">Attestor</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attestation_authority_note=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Attestor" title="Permalink to this definition">¶</a></dt>
 <dd><p>An attestor that attests to container image artifacts.</p>
-<p>&gt; <strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
+<blockquote>
+<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
+See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
 <p>To get more information about Attestor, see:</p>
 <ul class="simple">
-<li>[API documentation](<a class="reference external" href="https://cloud.google.com/binary-authorization/docs/reference/rest/">https://cloud.google.com/binary-authorization/docs/reference/rest/</a>)</li>
-<li><dl class="first docutils">
-<dt>How-to Guides</dt>
-<dd><ul class="first last">
-<li>[Official Documentation](<a class="reference external" href="https://cloud.google.com/binary-authorization/">https://cloud.google.com/binary-authorization/</a>)</li>
+<li><a class="reference external" href="https://cloud.google.com/binary-authorization/docs/reference/rest/">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
 <table class="docutils field-list" frame="void" rules="none">
@@ -23,8 +20,8 @@ See [Provider Versions](<a class="reference external" href="https://terraform.io
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -76,20 +73,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.binaryauthorization.Policy">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.binaryauthorization.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admission_whitelist_patterns=None</em>, <em>cluster_admission_rules=None</em>, <em>default_admission_rule=None</em>, <em>description=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.binaryauthorization.</code><code class="descname">Policy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admission_whitelist_patterns=None</em>, <em>cluster_admission_rules=None</em>, <em>default_admission_rule=None</em>, <em>description=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.binaryauthorization.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A policy for container image binary authorization.</p>
-<p>&gt; <strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
+<blockquote>
+<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
+See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
 <p>To get more information about Policy, see:</p>
 <ul class="simple">
-<li>[API documentation](<a class="reference external" href="https://cloud.google.com/binary-authorization/docs/reference/rest/">https://cloud.google.com/binary-authorization/docs/reference/rest/</a>)</li>
-<li><dl class="first docutils">
-<dt>How-to Guides</dt>
-<dd><ul class="first last">
-<li>[Official Documentation](<a class="reference external" href="https://cloud.google.com/binary-authorization/">https://cloud.google.com/binary-authorization/</a>)</li>
+<li><a class="reference external" href="https://cloud.google.com/binary-authorization/docs/reference/rest/">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/binary-authorization/">Official Documentation</a></li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
 <table class="docutils field-list" frame="void" rules="none">
@@ -97,8 +91,8 @@ See [Provider Versions](<a class="reference external" href="https://terraform.io
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

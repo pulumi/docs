@@ -2,42 +2,42 @@
 <span id="neptune"></span><h1>neptune<a class="headerlink" href="#module-pulumi_aws.neptune" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.neptune.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>availability_zones=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_identifier_prefix=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_arn=None</em>, <em>neptune_cluster_parameter_group_name=None</em>, <em>neptune_subnet_group_name=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>replication_source_identifier=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zones=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_identifier_prefix=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_arn=None</em>, <em>neptune_cluster_parameter_group_name=None</em>, <em>neptune_subnet_group_name=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>replication_source_identifier=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Neptune Cluster Resource. A Cluster Resource defines attributes that are
 applied to the entire cluster of Neptune Cluster Instances.</p>
 <p>Changes to a Neptune Cluster can occur when you manually change a
-parameter, such as <cite>backup_retention_period</cite>, and are reflected in the next maintenance
+parameter, such as <code class="docutils literal notranslate"><span class="pre">backup_retention_period</span></code>, and are reflected in the next maintenance
 window. Because of this, Terraform may report a difference in its planning
 phase because a modification has not yet taken place. You can use the
-<cite>apply_immediately</cite> flag to instruct the service to apply the change immediately
+<code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change immediately
 (see documentation below).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <cite>false</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.</li>
-<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Default <cite>1</cite></li>
+<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</li>
-<li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <cite>cluster_identifer</cite>.</li>
-<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this Neptune cluster. Defaults to <cite>neptune</cite>.</li>
+<li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version.</li>
 <li><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</li>
 <li><strong>iam_database_authentication_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</li>
 <li><strong>iam_roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A List of ARNs for the IAM roles to associate to the Neptune Cluster.</li>
-<li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <cite>kms_key_arn</cite>, <cite>storage_encrypted</cite> needs to be set to true.</li>
+<li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.</li>
 <li><strong>neptune_cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A cluster parameter group to associate with the cluster.</li>
 <li><strong>neptune_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A Neptune subnet group to associate with this Neptune instance.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the Neptune accepts connections. Default is <cite>8182</cite>.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the Neptune accepts connections. Default is <code class="docutils literal notranslate"><span class="pre">8182</span></code>.</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30</li>
 <li><strong>replication_source_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.</li>
-<li><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from <cite>final_snapshot_identifier</cite>. Default is <cite>false</cite>.</li>
+<li><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.</li>
-<li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Neptune cluster is encrypted. The default is <cite>false</cite> if not specified.</li>
+<li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the Neptune cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> if not specified.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Neptune cluster.</li>
 <li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to associate with the Cluster</li>
 </ul>
@@ -48,7 +48,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <cite>false</cite>.</p>
+<dd><p>Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -66,7 +66,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.backup_retention_period">
 <code class="descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.backup_retention_period" title="Permalink to this definition">¶</a></dt>
-<dd><p>The days to retain backups for. Default <cite>1</cite></p>
+<dd><p>The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -78,7 +78,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.cluster_identifier_prefix">
 <code class="descname">cluster_identifier_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.cluster_identifier_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <cite>cluster_identifer</cite>.</p>
+<dd><p>Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -102,7 +102,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.engine">
 <code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database engine to be used for this Neptune cluster. Defaults to <cite>neptune</cite>.</p>
+<dd><p>The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -138,7 +138,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.kms_key_arn">
 <code class="descname">kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.kms_key_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN for the KMS encryption key. When specifying <cite>kms_key_arn</cite>, <cite>storage_encrypted</cite> needs to be set to true.</p>
+<dd><p>The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -156,7 +156,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.port">
 <code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.port" title="Permalink to this definition">¶</a></dt>
-<dd><p>The port on which the Neptune accepts connections. Default is <cite>8182</cite>.</p>
+<dd><p>The port on which the Neptune accepts connections. Default is <code class="docutils literal notranslate"><span class="pre">8182</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -186,7 +186,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.skip_final_snapshot">
 <code class="descname">skip_final_snapshot</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.skip_final_snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from <cite>final_snapshot_identifier</cite>. Default is <cite>false</cite>.</p>
+<dd><p>Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -198,7 +198,7 @@ phase because a modification has not yet taken place. You can use the
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.Cluster.storage_encrypted">
 <code class="descname">storage_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.storage_encrypted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the Neptune cluster is encrypted. The default is <cite>false</cite> if not specified.</p>
+<dd><p>Specifies whether the Neptune cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> if not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -255,35 +255,35 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.neptune.ClusterInstance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ClusterInstance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>neptune_parameter_group_name=None</em>, <em>neptune_subnet_group_name=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>promotion_tier=None</em>, <em>publicly_accessible=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ClusterInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>neptune_parameter_group_name=None</em>, <em>neptune_subnet_group_name=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>promotion_tier=None</em>, <em>publicly_accessible=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Cluster Instance Resource defines attributes that are specific to a single instance in a Neptune Cluster.</p>
 <p>You can simply add neptune instances and Neptune manages the replication. You can use the [count][1]
-meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various <cite>instance_class</cite> sizes.</p>
+meta-parameter to make multiple instances and join them all to the same Neptune Cluster, or you may specify different Cluster Instance resources with various <code class="docutils literal notranslate"><span class="pre">instance_class</span></code> sizes.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any instance modifications
-are applied immediately, or during the next maintenance window. Default is`false`.</li>
-<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is <cite>true</cite>.</li>
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the neptune instance is created in.</li>
-<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the [<cite>aws_neptune_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>) in which to launch this instance.</li>
-<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the neptune instance. Defaults to <cite>neptune</cite>. Valid Values: <cite>neptune</cite>.</li>
+<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``aws_neptune_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>&gt;`_ in which to launch this instance.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the neptune instance. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The neptune engine version.</li>
 <li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the neptune instance, if omitted, Terraform will assign a random, unique identifier.</li>
-<li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <cite>identifer</cite>.</li>
+<li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance class to use.</li>
 <li><strong>neptune_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune parameter group to associate with this instance.</li>
-<li><strong>neptune_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A subnet group to associate with this neptune instance. <strong>NOTE:</strong> This must match the <cite>neptune_subnet_group_name</cite> of the attached [<cite>aws_neptune_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>).</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections. Defaults to <cite>8182</cite>.</li>
+<li><strong>neptune_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A subnet group to associate with this neptune instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">neptune_subnet_group_name</span></code> of the attached <cite>``aws_neptune_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>&gt;`_.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections. Defaults to <code class="docutils literal notranslate"><span class="pre">8182</span></code>.</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled. Eg: “04:00-09:00”</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
 Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
 <li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
-<li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible. Default is <cite>false</cite>.</li>
+<li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the instance.</li>
 </ul>
 </td>
@@ -293,14 +293,14 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The hostname of the instance. See also <cite>endpoint</cite> and <cite>port</cite>.</p>
+<dd><p>The hostname of the instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.apply_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether any instance modifications
-are applied immediately, or during the next maintenance window. Default is`false`.</p>
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -312,7 +312,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.auto_minor_version_upgrade">
 <code class="descname">auto_minor_version_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.auto_minor_version_upgrade" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is <cite>true</cite>.</p>
+<dd><p>Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -324,7 +324,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.cluster_identifier">
 <code class="descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.cluster_identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of the [<cite>aws_neptune_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>) in which to launch this instance.</p>
+<dd><p>The identifier of the <cite>``aws_neptune_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>&gt;`_ in which to launch this instance.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -336,13 +336,13 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection endpoint in <cite>address:port</cite> format.</p>
+<dd><p>The connection endpoint in <code class="docutils literal notranslate"><span class="pre">address:port</span></code> format.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.engine">
 <code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database engine to be used for the neptune instance. Defaults to <cite>neptune</cite>. Valid Values: <cite>neptune</cite>.</p>
+<dd><p>The name of the database engine to be used for the neptune instance. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -360,7 +360,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.identifier_prefix">
 <code class="descname">identifier_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.identifier_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique identifier beginning with the specified prefix. Conflicts with <cite>identifer</cite>.</p>
+<dd><p>Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -384,13 +384,13 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.neptune_subnet_group_name">
 <code class="descname">neptune_subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.neptune_subnet_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A subnet group to associate with this neptune instance. <strong>NOTE:</strong> This must match the <cite>neptune_subnet_group_name</cite> of the attached [<cite>aws_neptune_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>).</p>
+<dd><p>A subnet group to associate with this neptune instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">neptune_subnet_group_name</span></code> of the attached <cite>``aws_neptune_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html">https://www.terraform.io/docs/providers/aws/r/neptune_cluster.html</a>&gt;`_.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.port">
 <code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.port" title="Permalink to this definition">¶</a></dt>
-<dd><p>The port on which the DB accepts connections. Defaults to <cite>8182</cite>.</p>
+<dd><p>The port on which the DB accepts connections. Defaults to <code class="docutils literal notranslate"><span class="pre">8182</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -415,7 +415,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.publicly_accessible">
 <code class="descname">publicly_accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.publicly_accessible" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bool to control if instance is publicly accessible. Default is <cite>false</cite>.</p>
+<dd><p>Bool to control if instance is publicly accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -433,7 +433,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterInstance.writer">
 <code class="descname">writer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterInstance.writer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean indicating if this instance is writable. <cite>False</cite> indicates this instance is a read replica.</p>
+<dd><p>Boolean indicating if this instance is writable. <code class="docutils literal notranslate"><span class="pre">False</span></code> indicates this instance is a read replica.</p>
 </dd></dl>
 
 <dl class="method">
@@ -478,19 +478,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.neptune.ClusterParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ClusterParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>parameters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ClusterParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Neptune Cluster Parameter Group</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the neptune cluster parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the neptune cluster parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune parameter.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of neptune parameters to apply.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -525,7 +525,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.ClusterParameterGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.ClusterParameterGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -582,15 +582,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.neptune.ClusterSnapshot">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ClusterSnapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ClusterSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Neptune database cluster snapshot.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>db_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Cluster Identifier from which to take the snapshot.</li>
 <li><strong>db_cluster_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</li>
 </ul>
@@ -718,22 +718,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.neptune.EventSubscription">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">EventSubscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enabled=None</em>, <em>event_categories=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>sns_topic_arn=None</em>, <em>source_ids=None</em>, <em>source_type=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a EventSubscription resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">EventSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>event_categories=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>sns_topic_arn=None</em>, <em>source_ids=None</em>, <em>source_type=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>The following additional atttributes are provided:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code> - The name of the Neptune event notification subscription.</li>
+<li><code class="docutils literal notranslate"><span class="pre">arn</span></code> - The Amazon Resource Name of the Neptune event notification subscription.</li>
+<li><code class="docutils literal notranslate"><span class="pre">customer_aws_id</span></code> - The AWS customer account associated with the Neptune event notification subscription.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</li>
-<li><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a <cite>source_type</cite> that you want to subscribe to. Run <cite>aws neptune describe-event-categories</cite> to find all the event categories.</li>
+<li><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> that you want to subscribe to. Run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">neptune</span> <span class="pre">describe-event-categories</span></code> to find all the event categories.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. By default generated by Terraform.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>sns_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic to send events to.</li>
-<li><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <cite>source_type</cite> must also be specified.</li>
-<li><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <cite>db-instance</cite>, <cite>db-security-group</cite>, <cite>db-parameter-group</cite>, <cite>db-snapshot</cite>, <cite>db-cluster</cite> or <cite>db-cluster-snapshot</cite>. If not set, all sources will be subscribed to.</li>
+<li><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> must also be specified.</li>
+<li><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -749,7 +754,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.EventSubscription.event_categories">
 <code class="descname">event_categories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.event_categories" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of event categories for a <cite>source_type</cite> that you want to subscribe to. Run <cite>aws neptune describe-event-categories</cite> to find all the event categories.</p>
+<dd><p>A list of event categories for a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> that you want to subscribe to. Run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">neptune</span> <span class="pre">describe-event-categories</span></code> to find all the event categories.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -761,7 +766,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.EventSubscription.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Neptune event subscription. Conflicts with <cite>name</cite>.</p>
+<dd><p>The name of the Neptune event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -773,13 +778,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.EventSubscription.source_ids">
 <code class="descname">source_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.source_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <cite>source_type</cite> must also be specified.</p>
+<dd><p>A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a <code class="docutils literal notranslate"><span class="pre">source_type</span></code> must also be specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.EventSubscription.source_type">
 <code class="descname">source_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.EventSubscription.source_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of source that will be generating the events. Valid options are <cite>db-instance</cite>, <cite>db-security-group</cite>, <cite>db-parameter-group</cite>, <cite>db-snapshot</cite>, <cite>db-cluster</cite> or <cite>db-cluster-snapshot</cite>. If not set, all sources will be subscribed to.</p>
+<dd><p>The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -830,15 +835,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.neptune.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Neptune Parameter Group</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the Neptune parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the Neptune parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Neptune parameter.</li>
@@ -927,18 +932,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.neptune.SubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.neptune.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Neptune subnet group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the neptune subnet group. Defaults to “Managed by Terraform”.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the neptune subnet group. If omitted, Terraform will assign a random, unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -967,7 +972,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.neptune.SubnetGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.SubnetGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

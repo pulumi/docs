@@ -2,18 +2,18 @@
 <span id="pulumi-random"></span><h1>Pulumi Random<a class="headerlink" href="#module-pulumi_random" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_random.Provider">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">Provider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the random package. By default, resources use package-wide configuration
-settings, however an explicit <cite>Provider</cite> instance may be created and passed during resource
+settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">https://pulumi.io/reference/programming-model.html#providers</a>) for more information.</p>
+<a class="reference external" href="https://pulumi.io/reference/programming-model.html#providers">documentation</a> for more information.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -61,15 +61,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_random.RandomId">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomId</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>byte_length=None</em>, <em>keepers=None</em>, <em>prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomId" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <cite>random_id</cite> generates random numbers that are intended to be
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomId</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>byte_length=None</em>, <em>keepers=None</em>, <em>prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomId" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">random_id</span></code> generates random numbers that are intended to be
 used as unique identifiers for other resources.</p>
 <p>This resource <em>does</em> use a cryptographic random number generator in order
 to minimize the chance of collisions, making the results of this resource
 when a 16-byte identifier is requested of equivalent uniqueness to a
 type-4 UUID.</p>
 <p>This resource can be used in conjunction with resources that have
-the <cite>create_before_destroy</cite> lifecycle flag set to avoid conflicts with
+the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -77,8 +77,8 @@ exist concurrently.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>byte_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of random bytes to produce. The
 minimum value is 1, which produces eight bits of randomness.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
@@ -101,7 +101,7 @@ base64 encoded.</li>
 <dl class="attribute">
 <dt id="pulumi_random.RandomId.b64_url">
 <code class="descname">b64_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomId.b64_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters <cite>_</cite> and <cite>-</cite>.</p>
+<dd><p>The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters <code class="docutils literal notranslate"><span class="pre">_</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -181,10 +181,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_random.RandomInteger">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomInteger</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>keepers=None</em>, <em>max=None</em>, <em>min=None</em>, <em>seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomInteger" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <cite>random_integer</cite> generates random values from a given range, described by the <cite>min</cite> and <cite>max</cite> attributes of a given resource.</p>
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomInteger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>keepers=None</em>, <em>max=None</em>, <em>min=None</em>, <em>seed=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomInteger" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">random_integer</span></code> generates random values from a given range, described by the <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> attributes of a given resource.</p>
 <p>This resource can be used in conjunction with resources that have
-the <cite>create_before_destroy</cite> lifecycle flag set, to avoid conflicts with
+the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -192,8 +192,8 @@ exist concurrently.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
@@ -279,11 +279,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_random.RandomPet">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomPet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>keepers=None</em>, <em>length=None</em>, <em>prefix=None</em>, <em>separator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPet" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <cite>random_pet</cite> generates random pet names that are intended to be
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomPet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>keepers=None</em>, <em>length=None</em>, <em>prefix=None</em>, <em>separator=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomPet" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">random_pet</span></code> generates random pet names that are intended to be
 used as unique identifiers for other resources.</p>
 <p>This resource can be used in conjunction with resources that have
-the <cite>create_before_destroy</cite> lifecycle flag set, to avoid conflicts with
+the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -291,8 +291,8 @@ exist concurrently.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
@@ -372,22 +372,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_random.RandomShuffle">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomShuffle</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>inputs=None</em>, <em>keepers=None</em>, <em>result_count=None</em>, <em>seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <cite>random_shuffle</cite> generates a random permutation of a list
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomShuffle</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>inputs=None</em>, <em>keepers=None</em>, <em>result_count=None</em>, <em>seed=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">random_shuffle</span></code> generates a random permutation of a list
 of strings given as an argument.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>inputs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of strings to shuffle.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
 <li><strong>result_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of results to return. Defaults to
-the number of items in the <cite>input</cite> list. If fewer items are requested,
+the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</li>
@@ -419,14 +419,14 @@ the main provider documentation for more information.</p>
 <dl class="attribute">
 <dt id="pulumi_random.RandomShuffle.results">
 <code class="descname">results</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.results" title="Permalink to this definition">¶</a></dt>
-<dd><p>Random permutation of the list of strings given in <cite>input</cite>.</p>
+<dd><p>Random permutation of the list of strings given in <code class="docutils literal notranslate"><span class="pre">input</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_random.RandomShuffle.result_count">
 <code class="descname">result_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_random.RandomShuffle.result_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of results to return. Defaults to
-the number of items in the <cite>input</cite> list. If fewer items are requested,
+the number of items in the <code class="docutils literal notranslate"><span class="pre">input</span></code> list. If fewer items are requested,
 some elements will be excluded from the result. If more items are requested,
 items will be repeated in the result but not more frequently than the number
 of items in the input list.</p>
@@ -485,8 +485,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_random.RandomString">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomString</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>keepers=None</em>, <em>length=None</em>, <em>lower=None</em>, <em>min_lower=None</em>, <em>min_numeric=None</em>, <em>min_special=None</em>, <em>min_upper=None</em>, <em>number=None</em>, <em>override_special=None</em>, <em>special=None</em>, <em>upper=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomString" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <cite>random_string</cite> generates a random permutation of alphanumeric
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomString</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>keepers=None</em>, <em>length=None</em>, <em>lower=None</em>, <em>min_lower=None</em>, <em>min_numeric=None</em>, <em>min_special=None</em>, <em>min_upper=None</em>, <em>number=None</em>, <em>override_special=None</em>, <em>special=None</em>, <em>upper=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomString" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">random_string</span></code> generates a random permutation of alphanumeric
 characters and optionally special characters.</p>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -494,8 +494,8 @@ characters and optionally special characters.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.</li>
@@ -512,12 +512,13 @@ in random string.</li>
 characters in random string.</li>
 <li><strong>number</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include numeric characters in random
 string.</li>
-<li><strong>override_special</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Supply your own list of special characters to
+<li><strong>override*special</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Supply your own list of special characters to
 use for string generation.  This overrides characters list in the special
 argument.  The special argument must still be set to true for any overwritten
-characters to be used in generation.</li>
+characters to be used in generation.</p>
+</li>
 <li><strong>special</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include special characters in random
-string. These are ‘!&#64;#$%&amp;*()-_=+[]{}&lt;&gt;:?’</li>
+string. These are ‘!&#64;#$%&amp;*()-<a href="#id3"><span class="problematic" id="id4">*</span></a>=+[]{}&lt;&gt;:?’</li>
 <li><strong>upper</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (default true) Include uppercase alphabet characters
 in random string.</li>
 </ul>
@@ -652,18 +653,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_random.RandomUuid">
-<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomUuid</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>keepers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomUuid" title="Permalink to this definition">¶</a></dt>
-<dd><p>The resource <cite>random_uuid</cite> generates random uuid string that is intended to be
+<em class="property">class </em><code class="descclassname">pulumi_random.</code><code class="descname">RandomUuid</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>keepers=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomUuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource <code class="docutils literal notranslate"><span class="pre">random_uuid</span></code> generates random uuid string that is intended to be
 used as unique identifiers for other resources.</p>
-<p>This resource uses the <cite>hashicorp/go-uuid</cite> to generate a UUID-formatted string
+<p>This resource uses the <code class="docutils literal notranslate"><span class="pre">hashicorp/go-uuid</span></code> to generate a UUID-formatted string
 for use with services needed a unique string identifier.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>keepers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Arbitrary map of values that, when changed, will
 trigger a new uuid to be generated. See
 the main provider documentation for more information.</li>

@@ -11,6 +11,7 @@
 <li class="toctree-l1"><a class="reference internal" href="appsync/">appsync</a></li>
 <li class="toctree-l1"><a class="reference internal" href="athena/">athena</a></li>
 <li class="toctree-l1"><a class="reference internal" href="autoscaling/">autoscaling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backup/">backup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="batch/">batch</a></li>
 <li class="toctree-l1"><a class="reference internal" href="budgets/">budgets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cfg/">cfg</a></li>
@@ -36,6 +37,7 @@
 <li class="toctree-l1"><a class="reference internal" href="dynamodb/">dynamodb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ebs/">ebs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ec2/">ec2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ec2clientvpn/">ec2clientvpn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ec2transitgateway/">ec2transitgateway</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ecr/">ecr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ecs/">ecs</a></li>
@@ -69,6 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="organizations/">organizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pinpoint/">pinpoint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pricing/">pricing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ram/">ram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rds/">rds</a></li>
 <li class="toctree-l1"><a class="reference internal" href="redshift/">redshift</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resourcegroups/">resourcegroups</a></li>
@@ -90,6 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="transfer/">transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="waf/">waf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wafregional/">wafregional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worklink/">worklink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workspaces/">workspaces</a></li>
 </ul>
 </div>

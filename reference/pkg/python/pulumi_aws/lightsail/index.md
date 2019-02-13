@@ -2,20 +2,21 @@
 <span id="lightsail"></span><h1>lightsail<a class="headerlink" href="#module-pulumi_aws.lightsail" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.lightsail.Domain">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Domain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a domain resource for the specified domain (e.g., example.com).
 You cannot register a new domain name using Lightsail. You must register
 a domain name using Amazon Route 53 or another domain name registrar.
 If you have already registered your domain, you can enter its name in
 this parameter to manage the DNS records for that domain.</p>
-<p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
+<blockquote>
+<div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail domain to manage</li>
 </ul>
 </td>
@@ -76,25 +77,95 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>blueprint_id=None</em>, <em>bundle_id=None</em>, <em>key_pair_name=None</em>, <em>name=None</em>, <em>user_data=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lightsail Instance. Amazon Lightsail is a service to provide easy virtual private servers
-with custom software already setup. See [What is Amazon Lightsail?](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail</a>)
+with custom software already setup. See <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail">What is Amazon Lightsail?</a>
 for more information.</p>
-<p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
+<blockquote>
+<div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
+<p>Lightsail currently supports the following Availability Zones (e.g. <code class="docutils literal notranslate"><span class="pre">us-east-1a</span></code>):</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ap-northeast-1{a,c,d}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ap-northeast-2{a,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ap-south-1{a,b}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ap-southeast-1{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ap-southeast-2{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ca-central-1{a,b}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">eu-central-1{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">eu-west-1{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">eu-west-2{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">eu-west-3{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">us-east-1{a,b,c,d,e,f}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">us-east-2{a,b,c}</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">us-west-2{a,b,c}</span></code></li>
+</ul>
+<p>Lightsail currently supports the following Blueprint IDs:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">amazon_linux_2018_03_0_2</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">centos_7_1805_01</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">debian_8_7</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">debian_9_5</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">freebsd_11_1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">opensuse_42_2</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ubuntu_16_04_2</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ubuntu_18_04</span></code></li>
+</ul>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">drupal_8_5_6</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">gitlab_11_1_4_1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">joomla_3_8_11</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">lamp_5_6_37_2</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">lamp_7_1_20_1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">magento_2_2_5</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">mean_4_0_1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">nginx_1_14_0_1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">nodejs_10_8_0</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">plesk_ubuntu_17_8_11_1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">redmine_3_4_6</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">wordpress_4_9_8</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">wordpress_multisite_4_9_8</span></code></li>
+</ul>
+<p>Lightsail currently supports the following Bundle IDs (e.g. an instance in <code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code> would use <code class="docutils literal notranslate"><span class="pre">small_2_0</span></code>):</p>
+<p>A Bundle ID starts with one of the below size prefixes:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">nano_</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">micro_</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">small_</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">medium_</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">large_</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">xlarge_</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">2xlarge_</span></code></li>
+</ul>
+<p>A Bundle ID ends with one of the following suffixes depending on Availability Zone:</p>
+<ul class="simple">
+<li>ap-northeast-1: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>ap-northeast-2: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>ap-south-1: <code class="docutils literal notranslate"><span class="pre">2_1</span></code></li>
+<li>ap-southeast-1: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>ap-southeast-2: <code class="docutils literal notranslate"><span class="pre">2_2</span></code></li>
+<li>ca-central-1: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>eu-central-1: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>eu-west-1: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>eu-west-2: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>eu-west-3: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>us-east-1: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>us-east-2: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+<li>us-west-2: <code class="docutils literal notranslate"><span class="pre">2_0</span></code></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create your
 instance (see list below)</li>
 <li><strong>blueprint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for a virtual private server image
 (see list below)</li>
 <li><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bundle of specification information (see list below)</li>
 <li><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your key pair. Created in the
-Lightsail console (cannot use <cite>aws_key_pair</cite> at this time)</li>
+Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> at this time)</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance</li>
 <li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – launch script to configure server with additional user data</li>
 </ul>
@@ -105,12 +176,14 @@ Lightsail console (cannot use <cite>aws_key_pair</cite> at this time)</li>
 <dl class="attribute">
 <dt id="pulumi_aws.lightsail.Instance.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN of the Lightsail instance (matches <cite>id</cite>).
-* <cite>availability_zone</cite>
-* <cite>blueprint_id</cite>
-* <cite>bundle_id</cite>
-* <cite>key_pair_name</cite>
-* <cite>user_data</cite></p>
+<dd><p>The ARN of the Lightsail instance (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>).</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">blueprint_id</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">bundle_id</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">key_pair_name</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">user_data</span></code></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -137,7 +210,7 @@ instance (see list below)</p>
 <dt id="pulumi_aws.lightsail.Instance.key_pair_name">
 <code class="descname">key_pair_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.key_pair_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of your key pair. Created in the
-Lightsail console (cannot use <cite>aws_key_pair</cite> at this time)</p>
+Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> at this time)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -194,18 +267,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.KeyPair">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>pgp_key=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lightsail Key Pair, for use with Lightsail Instances. These key pairs
 are separate from EC2 Key Pairs, and must be created or imported for use with
 Lightsail.</p>
-<p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
+<blockquote>
+<div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by Terraform</li>
 </ul>
@@ -243,8 +317,8 @@ private key</p>
 <dt id="pulumi_aws.lightsail.KeyPair.encrypted_private_key">
 <code class="descname">encrypted_private_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair.encrypted_private_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>the private key material, base 64 encoded and
-encrypted with the given <cite>pgp_key</cite>. This is only populated when creating a new
-key and <cite>pgp_key</cite> is supplied</p>
+encrypted with the given <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code>. This is only populated when creating a new
+key and <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is supplied</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -271,7 +345,7 @@ key material. Only used when creating a new key pair</p>
 <dt id="pulumi_aws.lightsail.KeyPair.private_key">
 <code class="descname">private_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.KeyPair.private_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>the private key, base64 encoded. This is only populated
-when creating a new key, and when no <cite>pgp_key</cite> is provided</p>
+when creating a new key, and when no <code class="docutils literal notranslate"><span class="pre">pgp_key</span></code> is provided</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -323,16 +397,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.StaticIp">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allocates a static IP address.</p>
-<p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
+<blockquote>
+<div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the allocated static IP</li>
 </ul>
 </td>
@@ -405,16 +480,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lightsail.StaticIpAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIpAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lightsail.</code><code class="descname">StaticIpAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance_name=None</em>, <em>static_ip_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lightsail.StaticIpAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a static IP address attachment - relationship between a Lightsail static IP &amp; Lightsail instance.</p>
-<p>&gt; <strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see [“Regions and Availability Zones in Amazon Lightsail”](<a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail</a>) for more details</p>
+<blockquote>
+<div><strong>Note:</strong> Lightsail is currently only supported in a limited number of AWS Regions, please see <a class="reference external" href="https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail">“Regions and Availability Zones in Amazon Lightsail”</a> for more details</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail instance to attach the IP to</li>
 <li><strong>static_ip_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the allocated static IP</li>
 </ul>

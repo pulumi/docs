@@ -2,20 +2,20 @@
 <span id="cognitive"></span><h1>cognitive<a class="headerlink" href="#module-pulumi_azure.cognitive" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.cognitive.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.cognitive.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cognitive.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.cognitive.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cognitive.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Cognitive Services Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of Cognitive Service Account that should be created. Possible values are <cite>Academic</cite>, <cite>Bing.Autosuggest</cite>, <cite>Bing.Autosuggest.v7</cite>, <cite>Bing.CustomSearch</cite>, <cite>Bing.Search</cite>, <cite>Bing.Search.v7</cite>, <cite>Bing.Speech</cite>, <cite>Bing.SpellCheck</cite>, <cite>Bing.SpellCheck.v7</cite>, <cite>ComputerVision</cite>, <cite>ContentModerator</cite>, <cite>CustomSpeech</cite>, <cite>Emotion</cite>, <cite>Face</cite>, <cite>LUIS</cite>, <cite>Recommendations</cite>, <cite>SpeakerRecognition</cite>, <cite>Speech</cite>, <cite>SpeechServices</cite>, <cite>SpeechTranslation</cite>, <cite>TextAnalytics</cite>, <cite>TextTranslation</cite> and <cite>WebLM</cite>. Changing this forces a new resource to be created.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of Cognitive Service Account that should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Academic</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Autosuggest</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Autosuggest.v7</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.CustomSearch</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Search</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Search.v7</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Speech</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.SpellCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.SpellCheck.v7</span></code>, <code class="docutils literal notranslate"><span class="pre">ComputerVision</span></code>, <code class="docutils literal notranslate"><span class="pre">ContentModerator</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomSpeech</span></code>, <code class="docutils literal notranslate"><span class="pre">Emotion</span></code>, <code class="docutils literal notranslate"><span class="pre">Face</span></code>, <code class="docutils literal notranslate"><span class="pre">LUIS</span></code>, <code class="docutils literal notranslate"><span class="pre">Recommendations</span></code>, <code class="docutils literal notranslate"><span class="pre">SpeakerRecognition</span></code>, <code class="docutils literal notranslate"><span class="pre">Speech</span></code>, <code class="docutils literal notranslate"><span class="pre">SpeechServices</span></code>, <code class="docutils literal notranslate"><span class="pre">SpeechTranslation</span></code>, <code class="docutils literal notranslate"><span class="pre">TextAnalytics</span></code>, <code class="docutils literal notranslate"><span class="pre">TextTranslation</span></code> and <code class="docutils literal notranslate"><span class="pre">WebLM</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Cognitive Service Account. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Cognitive Service Account is created. Changing this forces a new resource to be created.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>sku</cite> block as defined below.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -31,7 +31,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.cognitive.Account.kind">
 <code class="descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cognitive.Account.kind" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the type of Cognitive Service Account that should be created. Possible values are <cite>Academic</cite>, <cite>Bing.Autosuggest</cite>, <cite>Bing.Autosuggest.v7</cite>, <cite>Bing.CustomSearch</cite>, <cite>Bing.Search</cite>, <cite>Bing.Search.v7</cite>, <cite>Bing.Speech</cite>, <cite>Bing.SpellCheck</cite>, <cite>Bing.SpellCheck.v7</cite>, <cite>ComputerVision</cite>, <cite>ContentModerator</cite>, <cite>CustomSpeech</cite>, <cite>Emotion</cite>, <cite>Face</cite>, <cite>LUIS</cite>, <cite>Recommendations</cite>, <cite>SpeakerRecognition</cite>, <cite>Speech</cite>, <cite>SpeechServices</cite>, <cite>SpeechTranslation</cite>, <cite>TextAnalytics</cite>, <cite>TextTranslation</cite> and <cite>WebLM</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the type of Cognitive Service Account that should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Academic</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Autosuggest</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Autosuggest.v7</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.CustomSearch</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Search</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Search.v7</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.Speech</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.SpellCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">Bing.SpellCheck.v7</span></code>, <code class="docutils literal notranslate"><span class="pre">ComputerVision</span></code>, <code class="docutils literal notranslate"><span class="pre">ContentModerator</span></code>, <code class="docutils literal notranslate"><span class="pre">CustomSpeech</span></code>, <code class="docutils literal notranslate"><span class="pre">Emotion</span></code>, <code class="docutils literal notranslate"><span class="pre">Face</span></code>, <code class="docutils literal notranslate"><span class="pre">LUIS</span></code>, <code class="docutils literal notranslate"><span class="pre">Recommendations</span></code>, <code class="docutils literal notranslate"><span class="pre">SpeakerRecognition</span></code>, <code class="docutils literal notranslate"><span class="pre">Speech</span></code>, <code class="docutils literal notranslate"><span class="pre">SpeechServices</span></code>, <code class="docutils literal notranslate"><span class="pre">SpeechTranslation</span></code>, <code class="docutils literal notranslate"><span class="pre">TextAnalytics</span></code>, <code class="docutils literal notranslate"><span class="pre">TextTranslation</span></code> and <code class="docutils literal notranslate"><span class="pre">WebLM</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -47,15 +47,27 @@
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.cognitive.Account.primary_access_key">
+<code class="descname">primary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cognitive.Account.primary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>A primary access key which can be used to connect to the Cognitive Service Account.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.cognitive.Account.resource_group_name">
 <code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cognitive.Account.resource_group_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the resource group in which the Cognitive Service Account is created. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.cognitive.Account.secondary_access_key">
+<code class="descname">secondary_access_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cognitive.Account.secondary_access_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The secondary access key which can be used to connect to the Cognitive Service Account.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.cognitive.Account.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cognitive.Account.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>sku</cite> block as defined below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">

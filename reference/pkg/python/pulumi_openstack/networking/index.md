@@ -7,17 +7,18 @@
 that can be used for load balancers.
 These are similar to Nova (compute) floating IP resources,
 but only compute floating IPs can be used with compute instances.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] address: The actual/specific floating IP to obtain. By default,</p>
+<blockquote>
+<div>non-admin users are not able to specify a floating IP, so you must either be
+an admin user or have had a custom policy or role applied to your OpenStack
+user or project.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description for the floating IP.</li>
 <li><strong>fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.</li>
@@ -28,7 +29,7 @@ associate with this floating IP.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.</li>
@@ -85,7 +86,7 @@ associate with this floating IP.</p>
 <dd><p>The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).</p>
 </dd></dl>
 
@@ -162,24 +163,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>floating_ip=None</em>, <em>port_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a floating IP to a port. This is useful for situations
 where you have a pre-allocated floating IP or are unable to use the
-<cite>openstack_networking_floatingip_v2</cite> resource to create a floating IP.</p>
+<code class="docutils literal notranslate"><span class="pre">openstack_networking_floatingip_v2</span></code> resource to create a floating IP.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] floating_ip: IP Address of an existing floating IP.
+:param pulumi.Input[str] port_id: ID of an existing port with at least one IP address to</p>
+<blockquote>
+<div>associate with this floating IP.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>floating_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP Address of an existing floating IP.</li>
-<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an existing port with at least one IP address to
-associate with this floating IP.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
-floating IP (which may or may not have a different address).</li>
-</ul>
-</td>
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
+floating IP (which may or may not have a different address).</td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +201,7 @@ associate with this floating IP.</p>
 <dd><p>The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
 another networking resource, such as a load balancer. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 floating IP (which may or may not have a different address).</p>
 </dd></dl>
 
@@ -414,8 +413,10 @@ The structure is described below.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.GetSubnetPoolResult.address_scope_id">
 <code class="descname">address_scope_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.GetSubnetPoolResult.address_scope_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>See Argument Reference above.
-* <cite>ip_version</cite> -The IP protocol version.</p>
+<dd><p>See Argument Reference above.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> -The IP protocol version.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -556,16 +557,17 @@ The structure is described below.</p>
 <dt id="pulumi_openstack.networking.Network">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Network</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>external=None</em>, <em>name=None</em>, <em>region=None</em>, <em>segments=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron network resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] admin_state_up: The administrative state of the network.</p>
+<blockquote>
+<div>Acceptable values are “true” and “false”. Changing this value updates the
+state of the existing network.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrative state of the network.
-Acceptable values are “true” and “false”. Changing this value updates the
-state of the existing network.</li>
 <li><strong>availability_zone_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An availability zone is used to make
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
@@ -579,7 +581,7 @@ false. Changing this updates the external attribute of the existing network.</li
 the existing network.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 network.</li>
 <li><strong>segments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of one or more provider segment objects.</li>
 <li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the network resource can be accessed
@@ -590,7 +592,7 @@ existing network.</li>
 create a network for another tenant. Changing this creates a new network.</li>
 <li><strong>transparent_vlan</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
-false. Changing this updates the <cite>transparent_vlan</cite> attribute of the existing
+false. Changing this updates the <code class="docutils literal notranslate"><span class="pre">transparent_vlan</span></code> attribute of the existing
 network.</li>
 <li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
 </ul>
@@ -642,7 +644,7 @@ the existing network.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 network.</p>
 </dd></dl>
 
@@ -678,7 +680,7 @@ create a network for another tenant. Changing this creates a new network.</p>
 <code class="descname">transparent_vlan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.transparent_vlan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
-false. Changing this updates the <cite>transparent_vlan</cite> attribute of the existing
+false. Changing this updates the <code class="docutils literal notranslate"><span class="pre">transparent_vlan</span></code> attribute of the existing
 network.</p>
 </dd></dl>
 
@@ -732,21 +734,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Port">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Port</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>allowed_address_pairs=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>extra_dhcp_options=None</em>, <em>fixed_ips=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_fixed_ip=None</em>, <em>no_security_groups=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 port resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the port</p>
+<blockquote>
+<div>(must be “true” or “false” if provided). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing port.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the port
-(must be “true” or “false” if provided). Changing this updates the
-<cite>admin_state_up</cite> of an existing port.</li>
 <li><strong>allowed_address_pairs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable description of the floating IP. Changing
-this updates the <cite>description</cite> of an existing port.</li>
+this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing port.</li>
 <li><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the device attached to the port. Changing this
 creates a new port.</li>
 <li><strong>device_owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device owner of the Port. Changing this creates
@@ -759,20 +762,20 @@ this port. The structure is described below.</li>
 <li><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify a specific MAC address for the port. Changing
 this creates a new port.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the port. Changing this
-updates the <cite>name</cite> of an existing port.</li>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</li>
 <li><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network to attach the port to. Changing
 this creates a new port.</li>
 <li><strong>no_fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create a port with no fixed
-IP address. This will also remove any fixed IPs previously set on a port. <cite>true</cite>
+IP address. This will also remove any fixed IPs previously set on a port. <code class="docutils literal notranslate"><span class="pre">true</span></code>
 is the only valid value for this argument.</li>
 <li><strong>no_security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to
-<cite>true</cite>, then no security groups are applied to the port. If set to <cite>false</cite> and
-no <cite>security_group_ids</cite> are specified, then the Port will yield to the default
+<code class="docutils literal notranslate"><span class="pre">true</span></code>, then no security groups are applied to the port. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> and
+no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the Port will yield to the default
 behavior of the Networking service, which is to usually apply the “default”
 security group.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 port.</li>
 <li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list
 of security group IDs to apply to the port. The security groups must be
@@ -792,7 +795,7 @@ to create a port for another tenant. Changing this creates a new port.</li>
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.admin_state_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Administrative up/down status for the port
 (must be “true” or “false” if provided). Changing this updates the
-<cite>admin_state_up</cite> of an existing port.</p>
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing port.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -821,7 +824,7 @@ below.</p>
 <dt id="pulumi_openstack.networking.Port.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Human-readable description of the floating IP. Changing
-this updates the <cite>description</cite> of an existing port.</p>
+this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing port.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -864,7 +867,7 @@ this creates a new port.</p>
 <dt id="pulumi_openstack.networking.Port.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the port. Changing this
-updates the <cite>name</cite> of an existing port.</p>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -878,7 +881,7 @@ this creates a new port.</p>
 <dt id="pulumi_openstack.networking.Port.no_fixed_ip">
 <code class="descname">no_fixed_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.no_fixed_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a port with no fixed
-IP address. This will also remove any fixed IPs previously set on a port. <cite>true</cite>
+IP address. This will also remove any fixed IPs previously set on a port. <code class="docutils literal notranslate"><span class="pre">true</span></code>
 is the only valid value for this argument.</p>
 </dd></dl>
 
@@ -886,8 +889,8 @@ is the only valid value for this argument.</p>
 <dt id="pulumi_openstack.networking.Port.no_security_groups">
 <code class="descname">no_security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.no_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>If set to
-<cite>true</cite>, then no security groups are applied to the port. If set to <cite>false</cite> and
-no <cite>security_group_ids</cite> are specified, then the Port will yield to the default
+<code class="docutils literal notranslate"><span class="pre">true</span></code>, then no security groups are applied to the port. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code> and
+no <code class="docutils literal notranslate"><span class="pre">security_group_ids</span></code> are specified, then the Port will yield to the default
 behavior of the Networking service, which is to usually apply the “default”
 security group.</p>
 </dd></dl>
@@ -897,7 +900,7 @@ security group.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 port.</p>
 </dd></dl>
 
@@ -973,16 +976,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Router">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Router</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>availability_zone_hints=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>external_fixed_ips=None</em>, <em>external_gateway=None</em>, <em>external_network_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em>, <em>vendor_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 router resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the router</p>
+<blockquote>
+<div>(must be “true” or “false” if provided). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing router.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the router
-(must be “true” or “false” if provided). Changing this updates the
-<cite>admin_state_up</cite> of an existing router.</li>
 <li><strong>availability_zone_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An availability zone is used to make 
 network resources highly available. Used for resources with high availability so that they are scheduled on different availability zones. Changing
 this creates a new router.</li>
@@ -991,10 +995,10 @@ this creates a new router.</li>
 distributed router. The default policy setting in Neutron restricts
 usage of this property to administrative users only.</li>
 <li><strong>enable_snat</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Source NAT for the router. Valid values are
-“true” or “false”. An <cite>external_network_id</cite> has to be set in order to
-set this property. Changing this updates the <cite>enable_snat</cite> of the router.</li>
+“true” or “false”. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code> has to be set in order to
+set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.</li>
 <li><strong>external_fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An external fixed IP for the router. This
-can be repeated. The structure is described below. An <cite>external_network_id</cite>
+can be repeated. The structure is described below. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code>
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.</li>
 <li><strong>external_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The
@@ -1007,10 +1011,10 @@ for the router. A router with an external gateway is required if any
 compute instances or load balancers will be using floating IPs. Changing
 this updates the external gateway of the router.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the router. Changing this
-updates the <cite>name</cite> of an existing router.</li>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing router.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 router.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the router.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the floating IP. Required if admin wants
@@ -1028,7 +1032,7 @@ Supported options are described below.</li>
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.admin_state_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Administrative up/down status for the router
 (must be “true” or “false” if provided). Changing this updates the
-<cite>admin_state_up</cite> of an existing router.</p>
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing router.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1057,15 +1061,15 @@ usage of this property to administrative users only.</p>
 <dt id="pulumi_openstack.networking.Router.enable_snat">
 <code class="descname">enable_snat</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.enable_snat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable Source NAT for the router. Valid values are
-“true” or “false”. An <cite>external_network_id</cite> has to be set in order to
-set this property. Changing this updates the <cite>enable_snat</cite> of the router.</p>
+“true” or “false”. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code> has to be set in order to
+set this property. Changing this updates the <code class="docutils literal notranslate"><span class="pre">enable_snat</span></code> of the router.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Router.external_fixed_ips">
 <code class="descname">external_fixed_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.external_fixed_ips" title="Permalink to this definition">¶</a></dt>
 <dd><p>An external fixed IP for the router. This
-can be repeated. The structure is described below. An <cite>external_network_id</cite>
+can be repeated. The structure is described below. An <code class="docutils literal notranslate"><span class="pre">external_network_id</span></code>
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.</p>
 </dd></dl>
@@ -1093,7 +1097,7 @@ this updates the external gateway of the router.</p>
 <dt id="pulumi_openstack.networking.Router.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the router. Changing this
-updates the <cite>name</cite> of an existing router.</p>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing router.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1101,7 +1105,7 @@ updates the <cite>name</cite> of an existing router.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Router.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 router.</p>
 </dd></dl>
 
@@ -1175,18 +1179,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.RouterInterface">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">RouterInterface</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 router interface resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] port_id: ID of the port this interface connects to. Changing</p>
+<blockquote>
+<div>this creates a new router interface.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the port this interface connects to. Changing
-this creates a new router interface.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 router interface.</li>
 <li><strong>router_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the router this interface belongs to. Changing
 this creates a new router interface.</li>
@@ -1209,7 +1214,7 @@ this creates a new router interface.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RouterInterface.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to create a router. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 router interface.</p>
 </dd></dl>
 
@@ -1271,20 +1276,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.RouterRoute">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">RouterRoute</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>router_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing entry on a OpenStack V2 router.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] destination_cidr: CIDR block to match on the packet’s destination IP. Changing</p>
+<blockquote>
+<div>this creates a new routing entry.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>destination_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR block to match on the packet’s destination IP. Changing
-this creates a new routing entry.</li>
 <li><strong>next_hop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of the next hop gateway.  Changing
 this creates a new routing entry.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 routing entry.</li>
 <li><strong>router_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.</li>
@@ -1312,7 +1318,7 @@ this creates a new routing entry.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.RouterRoute.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 routing entry.</p>
 </dd></dl>
 
@@ -1369,21 +1375,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V2 neutron security group resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[bool] delete_default_rules: Whether or not to delete the default</p>
+<blockquote>
+<div>egress security rules. This is <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. See the below note
+for more information.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>delete_default_rules</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to delete the default
-egress security rules. This is <cite>false</cite> by default. See the below note
-for more information.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the security group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the security group.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 security group.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the security group.</li>
 <li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the security group. Required if admin
@@ -1398,7 +1405,7 @@ security group.</li>
 <dt id="pulumi_openstack.networking.SecGroup.delete_default_rules">
 <code class="descname">delete_default_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroup.delete_default_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether or not to delete the default
-egress security rules. This is <cite>false</cite> by default. See the below note
+egress security rules. This is <code class="docutils literal notranslate"><span class="pre">false</span></code> by default. See the below note
 for more information.</p>
 </dd></dl>
 
@@ -1419,7 +1426,7 @@ for more information.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroup.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 security group.</p>
 </dd></dl>
 
@@ -1483,49 +1490,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description: A description of the rule. Changing this creates a new security group rule.
+:param pulumi.Input[str] direction: The direction of the rule, valid values are <strong>ingress</strong></p>
+<blockquote>
+<div>or <strong>egress</strong>. Changing this creates a new security group rule.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the rule. Changing this creates a new security group rule.</li>
-<li><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction of the rule, valid values are __ingress__
-or __egress__. Changing this creates a new security group rule.</li>
-<li><strong>ethertype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The layer 3 protocol type, valid values are __IPv4__
-or __IPv6__. Changing this creates a new security group rule.</li>
+<li><strong>ethertype</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The layer 3 protocol type, valid values are <strong>IPv4</strong>
+or <strong>IPv6</strong>. Changing this creates a new security group rule.</li>
 <li><strong>port_range_max</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.</li>
 <li><strong>port_range_min</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.</li>
-<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
-* __tcp__
-* __udp__
-* __icmp__
-* __ah__
-* __dccp__
-* __egp__
-* __esp__
-* __gre__
-* __igmp__
-* __ipv6-<a href="#id1"><span class="problematic" id="id2">encap__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id3">frag__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id4">icmp__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id5">nonxt__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id6">opts__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id7">route__</span></a>
-* __ospf__
-* __pgm__
-* __rsvp__
-* __sctp__
-* __udplite__
-* __vrrp__</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 security group rule.</li>
 <li><strong>remote_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
@@ -1552,15 +1549,15 @@ security group rule.</li>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroupRule.direction">
 <code class="descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.direction" title="Permalink to this definition">¶</a></dt>
-<dd><p>The direction of the rule, valid values are __ingress__
-or __egress__. Changing this creates a new security group rule.</p>
+<dd><p>The direction of the rule, valid values are <strong>ingress</strong>
+or <strong>egress</strong>. Changing this creates a new security group rule.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroupRule.ethertype">
 <code class="descname">ethertype</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.ethertype" title="Permalink to this definition">¶</a></dt>
-<dd><p>The layer 3 protocol type, valid values are __IPv4__
-or __IPv6__. Changing this creates a new security group rule.</p>
+<dd><p>The layer 3 protocol type, valid values are <strong>IPv4</strong>
+or <strong>IPv6</strong>. Changing this creates a new security group rule.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1582,28 +1579,30 @@ security group rule.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.SecGroupRule.protocol">
 <code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
-* __tcp__
-* __udp__
-* __icmp__
-* __ah__
-* __dccp__
-* __egp__
-* __esp__
-* __gre__
-* __igmp__
-* __ipv6-<a href="#id1"><span class="problematic" id="id8">encap__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id9">frag__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id10">icmp__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id11">nonxt__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id12">opts__</span></a>
-* __ipv6-<a href="#id1"><span class="problematic" id="id13">route__</span></a>
-* __ospf__
-* __pgm__
-* __rsvp__
-* __sctp__
-* __udplite__
-* __vrrp__</p>
+<dd><p>The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.</p>
+<ul class="simple">
+<li><strong>tcp</strong></li>
+<li><strong>udp</strong></li>
+<li><strong>icmp</strong></li>
+<li><strong>ah</strong></li>
+<li><strong>dccp</strong></li>
+<li><strong>egp</strong></li>
+<li><strong>esp</strong></li>
+<li><strong>gre</strong></li>
+<li><strong>igmp</strong></li>
+<li><strong>ipv6-encap</strong></li>
+<li><strong>ipv6-frag</strong></li>
+<li><strong>ipv6-icmp</strong></li>
+<li><strong>ipv6-nonxt</strong></li>
+<li><strong>ipv6-opts</strong></li>
+<li><strong>ipv6-route</strong></li>
+<li><strong>ospf</strong></li>
+<li><strong>pgm</strong></li>
+<li><strong>rsvp</strong></li>
+<li><strong>sctp</strong></li>
+<li><strong>udplite</strong></li>
+<li><strong>vrrp</strong></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1611,7 +1610,7 @@ security group rule.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SecGroupRule.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 security group rule.</p>
 </dd></dl>
 
@@ -1690,16 +1689,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Subnet">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocation_pools=None</em>, <em>cidr=None</em>, <em>description=None</em>, <em>dns_nameservers=None</em>, <em>enable_dhcp=None</em>, <em>gateway_ip=None</em>, <em>host_routes=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>no_gateway=None</em>, <em>region=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnet resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[list] allocation_pools: An array of sub-ranges of CIDR available for</p>
+<blockquote>
+<div>dynamic allocation to ports. The allocation_pool object structure is
+documented below. Changing this creates a new subnet.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocation_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of sub-ranges of CIDR available for
-dynamic allocation to ports. The allocation_pool object structure is
-documented below. Changing this creates a new subnet.</li>
 <li><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
 subnet pool.</li>
@@ -1712,8 +1712,8 @@ subnet.</li>
 Acceptable values are “true” and “false”. Changing this value enables or
 disables the DHCP capabilities of the existing subnet. Defaults to true.</li>
 <li><strong>gateway_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default gateway used by devices in this subnet.
-Leaving this blank and not setting <cite>no_gateway</cite> will cause a default
-gateway of <cite>.1</cite> to be used. Changing this updates the gateway IP of the
+Leaving this blank and not setting <code class="docutils literal notranslate"><span class="pre">no_gateway</span></code> will cause a default
+gateway of <code class="docutils literal notranslate"><span class="pre">.1</span></code> to be used. Changing this updates the gateway IP of the
 existing subnet.</li>
 <li><strong>host_routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
@@ -1722,9 +1722,9 @@ for the existing subnet.</li>
 <li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – IP version, either 4 (default) or 6. Changing this creates a
 new subnet.</li>
 <li><strong>ipv6_address_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 address mode. Valid values are
-<cite>dhcpv6-stateful</cite>, <cite>dhcpv6-stateless</cite>, or <cite>slaac</cite>.</li>
+<code class="docutils literal notranslate"><span class="pre">dhcpv6-stateful</span></code>, <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateless</span></code>, or <code class="docutils literal notranslate"><span class="pre">slaac</span></code>.</li>
 <li><strong>ipv6_ra_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 Router Advertisement mode. Valid values
-are <cite>dhcpv6-stateful</cite>, <cite>dhcpv6-stateless</cite>, or <cite>slaac</cite>.</li>
+are <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateful</span></code>, <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateless</span></code>, or <code class="docutils literal notranslate"><span class="pre">slaac</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnet. Changing this updates the name of
 the existing subnet.</li>
 <li><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of the parent network. Changing this
@@ -1733,7 +1733,7 @@ creates a new subnet.</li>
 this removes or adds a default gateway IP of the existing subnet.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 subnet.</li>
 <li><strong>subnetpool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnetpool associated with the subnet.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of string tags for the subnet.</li>
@@ -1788,8 +1788,8 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.</p>
 <dt id="pulumi_openstack.networking.Subnet.gateway_ip">
 <code class="descname">gateway_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.gateway_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default gateway used by devices in this subnet.
-Leaving this blank and not setting <cite>no_gateway</cite> will cause a default
-gateway of <cite>.1</cite> to be used. Changing this updates the gateway IP of the
+Leaving this blank and not setting <code class="docutils literal notranslate"><span class="pre">no_gateway</span></code> will cause a default
+gateway of <code class="docutils literal notranslate"><span class="pre">.1</span></code> to be used. Changing this updates the gateway IP of the
 existing subnet.</p>
 </dd></dl>
 
@@ -1813,14 +1813,14 @@ new subnet.</p>
 <dt id="pulumi_openstack.networking.Subnet.ipv6_address_mode">
 <code class="descname">ipv6_address_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.ipv6_address_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IPv6 address mode. Valid values are
-<cite>dhcpv6-stateful</cite>, <cite>dhcpv6-stateless</cite>, or <cite>slaac</cite>.</p>
+<code class="docutils literal notranslate"><span class="pre">dhcpv6-stateful</span></code>, <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateless</span></code>, or <code class="docutils literal notranslate"><span class="pre">slaac</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.ipv6_ra_mode">
 <code class="descname">ipv6_ra_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.ipv6_ra_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IPv6 Router Advertisement mode. Valid values
-are <cite>dhcpv6-stateful</cite>, <cite>dhcpv6-stateless</cite>, or <cite>slaac</cite>.</p>
+are <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateful</span></code>, <code class="docutils literal notranslate"><span class="pre">dhcpv6-stateless</span></code>, or <code class="docutils literal notranslate"><span class="pre">slaac</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1849,7 +1849,7 @@ this removes or adds a default gateway IP of the existing subnet.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 subnet.</p>
 </dd></dl>
 
@@ -1922,16 +1922,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.SubnetPool">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SubnetPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address_scope_id=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>prefixes=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Neutron subnetpool resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] address_scope_id: The Neutron address scope to assign to the</p>
+<blockquote>
+<div>subnetpool. Changing this updates the address scope id of the existing
+subnetpool.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>address_scope_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Neutron address scope to assign to the
-subnetpool. Changing this updates the address scope id of the existing
-subnetpool.</li>
 <li><strong>default_prefixlen</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the prefix to allocate when the cidr
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
@@ -1963,7 +1964,7 @@ of the existing subnetpool.</li>
 create a subnetpool for another project. Changing this creates a new subnetpool.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 subnetpool.</li>
 <li><strong>shared</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
@@ -2073,7 +2074,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SubnetPool.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 subnetpool.</p>
 </dd></dl>
 
@@ -2153,20 +2154,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.SubnetRoute">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">SubnetRoute</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination_cidr=None</em>, <em>next_hop=None</em>, <em>region=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing entry on a OpenStack V2 subnet.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] destination_cidr: CIDR block to match on the packet’s destination IP. Changing</p>
+<blockquote>
+<div>this creates a new routing entry.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>destination_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR block to match on the packet’s destination IP. Changing
-this creates a new routing entry.</li>
 <li><strong>next_hop</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of the next hop gateway.  Changing
 this creates a new routing entry.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 routing entry.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the subnet this routing entry belongs to. Changing
 this creates a new routing entry.</li>
@@ -2194,7 +2196,7 @@ this creates a new routing entry.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.SubnetRoute.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 routing entry.</p>
 </dd></dl>
 
@@ -2249,24 +2251,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.networking.Trunk">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.networking.</code><code class="descname">Trunk</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_state_up=None</em>, <em>name=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>sub_ports=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.Trunk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a networking V2 trunk resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the trunk</p>
+<blockquote>
+<div>(must be “true” or “false” if provided). Changing this updates the
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing trunk.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the trunk
-(must be “true” or “false” if provided). Changing this updates the
-<cite>admin_state_up</cite> of an existing trunk.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the port. Changing this
-updates the <cite>name</cite> of an existing port.</li>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</li>
 <li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the port to be used as the parent port of the
 trunk. This is the port that should be used as the compute instance network
 port. Changing this creates a new trunk.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 trunk.</li>
 <li><strong>sub_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.</li>
@@ -2284,14 +2287,14 @@ The structure of each subport is described below.</li>
 <code class="descname">admin_state_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.admin_state_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Administrative up/down status for the trunk
 (must be “true” or “false” if provided). Changing this updates the
-<cite>admin_state_up</cite> of an existing trunk.</p>
+<code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing trunk.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Trunk.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the port. Changing this
-updates the <cite>name</cite> of an existing port.</p>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2307,7 +2310,7 @@ port. Changing this creates a new trunk.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 trunk.</p>
 </dd></dl>
 

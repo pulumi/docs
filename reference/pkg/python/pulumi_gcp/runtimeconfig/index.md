@@ -2,18 +2,18 @@
 <span id="runtimeconfig"></span><h1>runtimeconfig<a class="headerlink" href="#module-pulumi_gcp.runtimeconfig" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.runtimeconfig.Config">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.runtimeconfig.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Config" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.runtimeconfig.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RuntimeConfig resource in Google Cloud. For more information, see the
-[official documentation](<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">https://cloud.google.com/deployment-manager/runtime-configurator/</a>),
+<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
-[JSON API](<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/</a>).</p>
+<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description to associate with the runtime
 config.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the runtime config.</li>
@@ -86,18 +86,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.runtimeconfig.Variavble">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.runtimeconfig.</code><code class="descname">Variavble</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>project=None</em>, <em>text=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.runtimeconfig.</code><code class="descname">Variavble</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>parent=None</em>, <em>project=None</em>, <em>text=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RuntimeConfig variable in Google Cloud. For more information, see the
-[official documentation](<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">https://cloud.google.com/deployment-manager/runtime-configurator/</a>),
+<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/">official documentation</a>,
 or the
-[JSON API](<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/</a>).</p>
+<a class="reference external" href="https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/">JSON API</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. “prod-variables/hostname”).</li>
 <li><strong>parent</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the RuntimeConfig resource containing this

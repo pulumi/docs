@@ -362,16 +362,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.apps.v1.StatefulSet">
 <em class="property">class </em><code class="descclassname">pulumi_kubernetes.apps.v1.</code><code class="descname">StatefulSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apps.v1.StatefulSet" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>StatefulSet represents a set of pods with consistent identities. Identities are defined as:</dt>
-<dd><ul class="first last simple">
+<dd><p>StatefulSet represents a set of pods with consistent identities. Identities are defined as:</p>
+<ul class="simple">
 <li>Network: A single stable DNS and hostname.</li>
-<li>Storage: As many VolumeClaims as requested.</li>
+<li>Storage: As many VolumeClaims as requested.
+The StatefulSet guarantees that a given network identity will always map to the same storage
+identity.</li>
 </ul>
-</dd>
-</dl>
-<p>The StatefulSet guarantees that a given network identity will always map to the same storage
-identity.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.apps.v1.StatefulSet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.apps.v1.StatefulSet.translate_output_property" title="Permalink to this definition">¶</a></dt>

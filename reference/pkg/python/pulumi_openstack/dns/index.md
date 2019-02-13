@@ -19,7 +19,7 @@
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.GetDnsZoneResult.masters">
 <code class="descname">masters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.GetDnsZoneResult.masters" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of master DNS servers. When <cite>type</cite> is  <cite>SECONDARY</cite>.</p>
+<dd><p>An array of master DNS servers. When <code class="docutils literal notranslate"><span class="pre">type</span></code> is  <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -76,19 +76,20 @@
 <dt id="pulumi_openstack.dns.RecordSet">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">RecordSet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>records=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.RecordSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS record set in the OpenStack DNS Service.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description: A description of the  record set.
+:param pulumi.Input[str] name: The name of the record set. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.</p>
+<blockquote>
+<div>Changing this creates a new DNS  record set.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the  record set.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the record set. Note the <cite>.</cite> at the end of the name.
-Changing this creates a new DNS  record set.</li>
 <li><strong>records</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of DNS records.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 DNS client.
-If omitted, the <cite>region</cite> argument of the provider is used.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS  record set.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time to live (TTL) of the record set.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of record set. Examples: “A”, “MX”.
@@ -111,7 +112,7 @@ Changing this creates a new DNS  record set.</li>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.RecordSet.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the record set. Note the <cite>.</cite> at the end of the name.
+<dd><p>The name of the record set. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
@@ -125,7 +126,7 @@ Changing this creates a new DNS  record set.</p>
 <dt id="pulumi_openstack.dns.RecordSet.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.RecordSet.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 DNS client.
-If omitted, the <cite>region</cite> argument of the provider is used.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS  record set.</p>
 </dd></dl>
 
@@ -200,27 +201,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.dns.Zone">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.dns.</code><code class="descname">Zone</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attributes=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>region=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DNS zone in the OpenStack DNS Service.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[dict] attributes: Attributes for the DNS Service scheduler.</p>
+<blockquote>
+<div>Changing this creates a new zone.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Attributes for the DNS Service scheduler.
-Changing this creates a new zone.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the zone.</li>
 <li><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email contact for the zone record.</li>
-<li><strong>masters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of master DNS servers. For when <cite>type</cite> is
-<cite>SECONDARY</cite>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the zone. Note the <cite>.</cite> at the end of the name.
+<li><strong>masters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of master DNS servers. For when <code class="docutils literal notranslate"><span class="pre">type</span></code> is
+<code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the zone. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.
 Changing this creates a new DNS zone.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 Keypairs are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS zone.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time to live (TTL) of the zone.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of zone. Can either be <cite>PRIMARY</cite> or <cite>SECONDARY</cite>.
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of zone. Can either be <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.
 Changing this creates a new zone.</li>
 <li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options. Changing this creates a
 new zone.</li>
@@ -251,14 +253,14 @@ Changing this creates a new zone.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.Zone.masters">
 <code class="descname">masters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.masters" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of master DNS servers. For when <cite>type</cite> is
-<cite>SECONDARY</cite>.</p>
+<dd><p>An array of master DNS servers. For when <code class="docutils literal notranslate"><span class="pre">type</span></code> is
+<code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.Zone.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the zone. Note the <cite>.</cite> at the end of the name.
+<dd><p>The name of the zone. Note the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end of the name.
 Changing this creates a new DNS zone.</p>
 </dd></dl>
 
@@ -267,7 +269,7 @@ Changing this creates a new DNS zone.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 Keypairs are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new DNS zone.</p>
 </dd></dl>
 
@@ -280,7 +282,7 @@ Changing this creates a new DNS zone.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.dns.Zone.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.dns.Zone.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of zone. Can either be <cite>PRIMARY</cite> or <cite>SECONDARY</cite>.
+<dd><p>The type of zone. Can either be <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.
 Changing this creates a new zone.</p>
 </dd></dl>
 

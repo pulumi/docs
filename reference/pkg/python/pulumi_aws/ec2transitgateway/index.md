@@ -158,15 +158,15 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.Route">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr_block=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.</li>
 <li><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Attachment.</li>
 <li><strong>transit_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Route Table.</li>
@@ -235,15 +235,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.RouteTable">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway Route Table.</li>
 <li><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway.</li>
 </ul>
@@ -317,15 +317,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.RouteTableAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTableAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table association.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Attachment.</li>
 <li><strong>transit_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Route Table.</li>
 </ul>
@@ -399,15 +399,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.RouteTablePropagation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTablePropagation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">RouteTablePropagation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>transit_gateway_attachment_id=None</em>, <em>transit_gateway_route_table_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.RouteTablePropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway Route Table propagation.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>transit_gateway_attachment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Attachment.</li>
 <li><strong>transit_gateway_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway Route Table.</li>
 </ul>
@@ -481,23 +481,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">TransitGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>amazon_side_asn=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">TransitGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>auto_accept_shared_attachments=None</em>, <em>default_route_table_association=None</em>, <em>default_route_table_propagation=None</em>, <em>description=None</em>, <em>dns_support=None</em>, <em>tags=None</em>, <em>vpn_ecmp_support=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>amazon_side_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is <cite>64512</cite> to <cite>65534</cite> for 16-bit ASNs and <cite>4200000000</cite> to <cite>4294967294</cite> for 32-bit ASNs. Default value: <cite>64512</cite>.</li>
-<li><strong>auto_accept_shared_attachments</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether resource attachment requests are automatically accepted. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>disable</cite>.</li>
-<li><strong>default_route_table_association</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether resource attachments are automatically associated with the default association route table. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</li>
-<li><strong>default_route_table_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>amazon_side_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is <code class="docutils literal notranslate"><span class="pre">64512</span></code> to <code class="docutils literal notranslate"><span class="pre">65534</span></code> for 16-bit ASNs and <code class="docutils literal notranslate"><span class="pre">4200000000</span></code> to <code class="docutils literal notranslate"><span class="pre">4294967294</span></code> for 32-bit ASNs. Default value: <code class="docutils literal notranslate"><span class="pre">64512</span></code>.</li>
+<li><strong>auto_accept_shared_attachments</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether resource attachment requests are automatically accepted. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">disable</span></code>.</li>
+<li><strong>default_route_table_association</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether resource attachments are automatically associated with the default association route table. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</li>
+<li><strong>default_route_table_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the EC2 Transit Gateway.</li>
-<li><strong>dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether DNS support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</li>
+<li><strong>dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway.</li>
-<li><strong>vpn_ecmp_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</li>
+<li><strong>vpn_ecmp_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -506,7 +506,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.amazon_side_asn">
 <code class="descname">amazon_side_asn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.amazon_side_asn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is <cite>64512</cite> to <cite>65534</cite> for 16-bit ASNs and <cite>4200000000</cite> to <cite>4294967294</cite> for 32-bit ASNs. Default value: <cite>64512</cite>.</p>
+<dd><p>Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is <code class="docutils literal notranslate"><span class="pre">64512</span></code> to <code class="docutils literal notranslate"><span class="pre">65534</span></code> for 16-bit ASNs and <code class="docutils literal notranslate"><span class="pre">4200000000</span></code> to <code class="docutils literal notranslate"><span class="pre">4294967294</span></code> for 32-bit ASNs. Default value: <code class="docutils literal notranslate"><span class="pre">64512</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -524,19 +524,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.auto_accept_shared_attachments">
 <code class="descname">auto_accept_shared_attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.auto_accept_shared_attachments" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether resource attachment requests are automatically accepted. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>disable</cite>.</p>
+<dd><p>Whether resource attachment requests are automatically accepted. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">disable</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.default_route_table_association">
 <code class="descname">default_route_table_association</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.default_route_table_association" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether resource attachments are automatically associated with the default association route table. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</p>
+<dd><p>Whether resource attachments are automatically associated with the default association route table. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.default_route_table_propagation">
 <code class="descname">default_route_table_propagation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.default_route_table_propagation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</p>
+<dd><p>Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -548,7 +548,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.dns_support">
 <code class="descname">dns_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.dns_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether DNS support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</p>
+<dd><p>Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -572,7 +572,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.TransitGateway.vpn_ecmp_support">
 <code class="descname">vpn_ecmp_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.TransitGateway.vpn_ecmp_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</p>
+<dd><p>Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -617,21 +617,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">VpcAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dns_support=None</em>, <em>ipv6_support=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>transit_gateway_default_route_table_association=None</em>, <em>transit_gateway_default_route_table_propagation=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether DNS support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</li>
-<li><strong>ipv6_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether IPv6 support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>disable</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</li>
+<li><strong>ipv6_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether IPv6 support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">disable</span></code>.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Identifiers of EC2 Subnets.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value tags for the EC2 Transit Gateway VPC Attachment.</li>
-<li><strong>transit_gateway_default_route_table_association</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <cite>true</cite>.</li>
-<li><strong>transit_gateway_default_route_table_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <cite>true</cite>.</li>
+<li><strong>transit_gateway_default_route_table_association</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>transit_gateway_default_route_table_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 Transit Gateway.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of EC2 VPC.</li>
 </ul>
@@ -642,13 +642,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment.dns_support">
 <code class="descname">dns_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment.dns_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether DNS support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>enable</cite>.</p>
+<dd><p>Whether DNS support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">enable</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment.ipv6_support">
 <code class="descname">ipv6_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment.ipv6_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether IPv6 support is enabled. Valid values: <cite>disable</cite>, <cite>enable</cite>. Default value: <cite>disable</cite>.</p>
+<dd><p>Whether IPv6 support is enabled. Valid values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">enable</span></code>. Default value: <code class="docutils literal notranslate"><span class="pre">disable</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -666,13 +666,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment.transit_gateway_default_route_table_association">
 <code class="descname">transit_gateway_default_route_table_association</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment.transit_gateway_default_route_table_association" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <cite>true</cite>.</p>
+<dd><p>Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2transitgateway.VpcAttachment.transit_gateway_default_route_table_propagation">
 <code class="descname">transit_gateway_default_route_table_propagation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2transitgateway.VpcAttachment.transit_gateway_default_route_table_propagation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <cite>true</cite>.</p>
+<dd><p>Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

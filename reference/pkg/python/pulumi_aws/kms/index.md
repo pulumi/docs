@@ -2,20 +2,20 @@
 <span id="kms"></span><h1>kms<a class="headerlink" href="#module-pulumi_aws.kms" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.kms.Alias">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>target_key_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Alias" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Alias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>target_key_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence Terraform too) allows you to create as many aliases as
-the [account limits](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">http://docs.aws.amazon.com/kms/latest/developerguide/limits.html</a>) allow you.</p>
+the <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates an unique alias beginning with the specified prefix.
-The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <cite>name</cite>.</li>
+The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>target_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier for the key for which the alias is for, can be either an ARN or key_id.</li>
 </ul>
 </td>
@@ -38,7 +38,7 @@ The name must start with the word “alias” followed by a forward slash (alias
 <dt id="pulumi_aws.kms.Alias.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Alias.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an unique alias beginning with the specified prefix.
-The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <cite>name</cite>.</p>
+The name must start with the word “alias” followed by a forward slash (alias/).  Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -172,7 +172,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.kms.GetSecretsResult.plaintext">
 <code class="descname">plaintext</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.GetSecretsResult.plaintext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Map containing each <cite>secret</cite> <cite>name</cite> as the key with its decrypted plaintext value</p>
+<dd><p>Map containing each <code class="docutils literal notranslate"><span class="pre">secret</span></code> <code class="docutils literal notranslate"><span class="pre">name</span></code> as the key with its decrypted plaintext value</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -185,23 +185,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.Grant">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Grant</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>constraints=None</em>, <em>grant_creation_tokens=None</em>, <em>grantee_principal=None</em>, <em>key_id=None</em>, <em>name=None</em>, <em>operations=None</em>, <em>retire_on_delete=None</em>, <em>retiring_principal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Grant</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>constraints=None</em>, <em>grant_creation_tokens=None</em>, <em>grantee_principal=None</em>, <em>key_id=None</em>, <em>name=None</em>, <em>operations=None</em>, <em>retire_on_delete=None</em>, <em>retiring_principal=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html</a>).</li>
-<li><strong>grant_creation_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of grant tokens to be used when creating the grant. See [Grant Tokens](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token</a>) for more information about grant tokens.
-* <cite>retire_on_delete</cite> -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
-See [RetireGrant](<a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html</a>) for more information.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>constraints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.</li>
+<li><strong>grant_creation_tokens</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>grantee_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, terraform’s state may not always be refreshed to reflect what is true in AWS.</li>
 <li><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</li>
-<li><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <cite>Decrypt, Encrypt, GenerateDataKey, GenerateDataKeyWithoutPlaintext, ReEncryptFrom, ReEncryptTo, CreateGrant, RetireGrant, DescribeKey</cite></li>
+<li><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></li>
 </ul>
 </td>
 </tr>
@@ -212,15 +220,17 @@ See [RetireGrant](<a class="reference external" href="https://docs.aws.amazon.co
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.constraints">
 <code class="descname">constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.constraints" title="Permalink to this definition">¶</a></dt>
-<dd><p>A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html</a>).</p>
+<dd><p>A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.grant_creation_tokens">
 <code class="descname">grant_creation_tokens</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.grant_creation_tokens" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of grant tokens to be used when creating the grant. See [Grant Tokens](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token</a>) for more information about grant tokens.
-* <cite>retire_on_delete</cite> -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
-See [RetireGrant](<a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html</a>) for more information.</p>
+<dd><p>A list of grant tokens to be used when creating the grant. See <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a> for more information about grant tokens.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">retire_on_delete</span></code> -(Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants.
+See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html">RetireGrant</a> for more information.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -232,7 +242,7 @@ See [RetireGrant](<a class="reference external" href="https://docs.aws.amazon.co
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.grant_token">
 <code class="descname">grant_token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.grant_token" title="Permalink to this definition">¶</a></dt>
-<dd><p>The grant token for the created grant. For more information, see [Grant Tokens](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token</a>).</p>
+<dd><p>The grant token for the created grant. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant Tokens</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -256,7 +266,7 @@ See [RetireGrant](<a class="reference external" href="https://docs.aws.amazon.co
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.operations">
 <code class="descname">operations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.operations" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of operations that the grant permits. The permitted values are: <cite>Decrypt, Encrypt, GenerateDataKey, GenerateDataKeyWithoutPlaintext, ReEncryptFrom, ReEncryptTo, CreateGrant, RetireGrant, DescribeKey</cite></p>
+<dd><p>A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -301,24 +311,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kms.Key">
-<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Key</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>deletion_window_in_days=None</em>, <em>description=None</em>, <em>enable_key_rotation=None</em>, <em>is_enabled=None</em>, <em>key_usage=None</em>, <em>policy=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.kms.</code><code class="descname">Key</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>deletion_window_in_days=None</em>, <em>description=None</em>, <em>enable_key_rotation=None</em>, <em>is_enabled=None</em>, <em>key_usage=None</em>, <em>policy=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a KMS customer master key.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>deletion_window_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Duration in days after which the key is deleted
 after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the key as viewed in AWS console.</li>
-<li><strong>enable_key_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether [key rotation](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html</a>)
+<li><strong>enable_key_rotation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">key rotation</a>
 is enabled. Defaults to false.</li>
 <li><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</li>
 <li><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key.
 Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are supported.</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
 </ul>
 </td>
@@ -347,7 +357,7 @@ after destruction of the resource, must be between 7 and 30 days. Defaults to 30
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Key.enable_key_rotation">
 <code class="descname">enable_key_rotation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.enable_key_rotation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether [key rotation](<a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html</a>)
+<dd><p>Specifies whether <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html">key rotation</a>
 is enabled. Defaults to false.</p>
 </dd></dl>
 
@@ -373,7 +383,7 @@ Defaults to ENCRYPT_DECRYPT, and only symmetric encryption and decryption are su
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Key.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A valid policy JSON document. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</p>
+<dd><p>A valid policy JSON document. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -435,8 +445,9 @@ without having to hard code the ARN as input.</p>
 <code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_cipher_text</code><span class="sig-paren">(</span><em>context=None</em>, <em>key_id=None</em>, <em>plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_cipher_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>The KMS ciphertext data source allows you to encrypt plaintext into ciphertext
 by using an AWS KMS customer master key.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -451,12 +462,13 @@ without having to hard code the ARN as input.</p>
 <dl class="function">
 <dt id="pulumi_aws.kms.get_secret">
 <code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>__has_dynamic_attributes=None</em>, <em>secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>!&gt; <strong>WARNING:</strong> This data source is deprecated and will be removed in the next major version. You can migrate existing configurations to the [<cite>aws_kms_secrets</cite> data source](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>) following instructions available in the [Version 2 Upgrade Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret</a>).</p>
+<dd><p>!&gt; <strong>WARNING:</strong> This data source is deprecated and will be removed in the next major version. You can migrate existing configurations to the <cite>``aws_kms_secrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
 <p>The KMS secret data source allows you to use data encrypted with the AWS KMS
 service within your resource definitions.</p>
-<p>&gt; <strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your
+<blockquote>
+<div><strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your
 resource definitions but does not take care of protecting that data in the
-logging output, plan output or state output.</p>
+logging output, plan output or state output.</div></blockquote>
 <p>Please take care to secure your secret data outside of resource definitions.</p>
 </dd></dl>
 
@@ -464,7 +476,8 @@ logging output, plan output or state output.</p>
 <dt id="pulumi_aws.kms.get_secrets">
 <code class="descclassname">pulumi_aws.kms.</code><code class="descname">get_secrets</code><span class="sig-paren">(</span><em>secrets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decrypt multiple secrets from data encrypted with the AWS KMS service.</p>
-<p>&gt; <strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your resource definitions but does not take care of protecting that data in all Terraform logging and state output. Please take care to secure your secret data beyond just the Terraform configuration.</p>
+<blockquote>
+<div><strong>NOTE</strong>: Using this data provider will allow you to conceal secret data within your resource definitions but does not take care of protecting that data in all Terraform logging and state output. Please take care to secure your secret data beyond just the Terraform configuration.</div></blockquote>
 </dd></dl>
 
 </div>

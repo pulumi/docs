@@ -2,22 +2,23 @@
 <span id="cloudhsmv2"></span><h1>cloudhsmv2<a class="headerlink" href="#module-pulumi_aws.cloudhsmv2" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudhsmv2.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudhsmv2.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>hsm_type=None</em>, <em>source_backup_identifier=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudhsmv2.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>hsm_type=None</em>, <em>source_backup_identifier=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudHSM v2 cluster.</p>
 <p>For information about CloudHSM v2, see the
 [AWS CloudHSM User Guide][1] and the [Amazon
 CloudHSM API Reference][2].</p>
-<p>&gt; <strong>NOTE:</strong> CloudHSM can take up to several minutes to be set up.
+<blockquote>
+<div><strong>NOTE:</strong> CloudHSM can take up to several minutes to be set up.
 Practically no single attribute can be updated except TAGS.
 If you need to delete a cluster, you have to remove its HSM modules first.
-To initialize cluster you have to sign CSR and upload it.</p>
+To initialize cluster you have to sign CSR and upload it.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>hsm_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of HSM module in the cluster. Currently, only hsm1.medium is supported.</li>
 <li><strong>source_backup_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of Cloud HSM v2 cluster backup to be restored.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of subnets in which cluster will operate.</li>
@@ -30,12 +31,14 @@ To initialize cluster you have to sign CSR and upload it.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudhsmv2.Cluster.cluster_certificates">
 <code class="descname">cluster_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Cluster.cluster_certificates" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of cluster certificates.
-* <cite>cluster_certificates.0.cluster_certificate</cite> - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster’s owner.
-* <cite>cluster_certificates.0.cluster_csr</cite> - The certificate signing request (CSR). Available only in UNINITIALIZED state.
-* <cite>cluster_certificates.0.aws_hardware_certificate</cite> - The HSM hardware certificate issued (signed) by AWS CloudHSM.
-* <cite>cluster_certificates.0.hsm_certificate</cite> - The HSM certificate issued (signed) by the HSM hardware.
-* <cite>cluster_certificates.0.manufacturer_hardware_certificate</cite> - The HSM hardware certificate issued (signed) by the hardware manufacturer.</p>
+<dd><p>The list of cluster certificates.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.cluster_certificate</span></code> - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster’s owner.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.cluster_csr</span></code> - The certificate signing request (CSR). Available only in UNINITIALIZED state.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.aws_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by AWS CloudHSM.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.hsm_certificate</span></code> - The HSM certificate issued (signed) by the HSM hardware.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.manufacturer_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by the hardware manufacturer.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -133,13 +136,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cloudhsmv2.GetClusterResult.cluster_certificates">
 <code class="descname">cluster_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudhsmv2.GetClusterResult.cluster_certificates" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of cluster certificates.
-* <cite>cluster_certificates.0.cluster_certificate</cite> - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster’s owner.
-* <cite>cluster_certificates.0.cluster_csr</cite> - The certificate signing request (CSR). Available only in UNINITIALIZED state.
-* <cite>cluster_certificates.0.aws_hardware_certificate</cite> - The HSM hardware certificate issued (signed) by AWS CloudHSM.
-* <cite>cluster_certificates.0.hsm_certificate</cite> - The HSM certificate issued (signed) by the HSM hardware.
-* <cite>cluster_certificates.0.manufacturer_hardware_certificate</cite> - The HSM hardware certificate issued (signed) by the hardware manufacturer.
-The number of available cluster certificates may vary depending on state of the cluster.</p>
+<dd><p>The list of cluster certificates.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.cluster_certificate</span></code> - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster’s owner.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.cluster_csr</span></code> - The certificate signing request (CSR). Available only in UNINITIALIZED state.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.aws_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by AWS CloudHSM.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.hsm_certificate</span></code> - The HSM certificate issued (signed) by the HSM hardware.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cluster_certificates.0.manufacturer_hardware_certificate</span></code> - The HSM hardware certificate issued (signed) by the hardware manufacturer.
+The number of available cluster certificates may vary depending on state of the cluster.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -170,15 +175,15 @@ The number of available cluster certificates may vary depending on state of the 
 
 <dl class="class">
 <dt id="pulumi_aws.cloudhsmv2.Hsm">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudhsmv2.</code><code class="descname">Hsm</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>cluster_id=None</em>, <em>ip_address=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Hsm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudhsmv2.</code><code class="descname">Hsm</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>cluster_id=None</em>, <em>ip_address=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Hsm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an HSM module in Amazon CloudHSM v2 cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.</li>
 <li><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of Cloud HSM v2 cluster to which HSM will be added.</li>
 <li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of HSM module. Must be within the CIDR of selected subnet.</li>

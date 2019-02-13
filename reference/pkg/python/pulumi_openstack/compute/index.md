@@ -4,20 +4,11 @@
 <dt id="pulumi_openstack.compute.Flavor">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Flavor</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disk=None</em>, <em>ephemeral=None</em>, <em>extra_specs=None</em>, <em>is_public=None</em>, <em>name=None</em>, <em>ram=None</em>, <em>region=None</em>, <em>rx_tx_factor=None</em>, <em>swap=None</em>, <em>vcpus=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 flavor resource within OpenStack.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>disk</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of disk space in gigabytes to use for the root
-(/) partition. Changing this creates a new flavor.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[int] disk: The amount of disk space in gigabytes to use for the root</p>
+<blockquote>
+<div>(/) partition. Changing this creates a new flavor.</div></blockquote>
 <p>:param pulumi.Input[int] ephemeral
 :param pulumi.Input[dict] extra_specs: Key/Value pairs of metadata for the flavor.
 :param pulumi.Input[bool] is_public: Whether the flavor is public. Changing this creates</p>
@@ -34,7 +25,7 @@ flavor.</li>
 creates a new flavor.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 Flavors are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new flavor.</li>
 <li><strong>rx_tx_factor</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – RX/TX bandwith factor. The default is 1. Changing
 this creates a new flavor.</li>
@@ -86,7 +77,7 @@ creates a new flavor.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Flavor.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 Flavors are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new flavor.</p>
 </dd></dl>
 
@@ -155,24 +146,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.FlavorAccess">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FlavorAccess</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>flavor_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a project access for flavor V2 resource within OpenStack.</p>
-<p>Note: You _must_ have admin privileges in your OpenStack cloud to use
+<p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<p>—</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] flavor_id: The UUID of flavor to use. Changing this creates a new flavor access.
+:param pulumi.Input[str] region: The region in which to obtain the V2 Compute client.</p>
+<blockquote>
+<div>If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new flavor access.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>flavor_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of flavor to use. Changing this creates a new flavor access.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
-If omitted, the <cite>region</cite> argument of the provider is used.
-Changing this creates a new flavor access.</li>
-<li><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of tenant which is allowed to use the flavor.
-Changing this creates a new flavor access.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of tenant which is allowed to use the flavor.
+Changing this creates a new flavor access.</td>
 </tr>
 </tbody>
 </table>
@@ -186,7 +174,7 @@ Changing this creates a new flavor access.</li>
 <dt id="pulumi_openstack.compute.FlavorAccess.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FlavorAccess.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
-If omitted, the <cite>region</cite> argument of the provider is used.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new flavor access.</p>
 </dd></dl>
 
@@ -244,24 +232,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 that can be used for compute instances.</p>
 <p>Please note that managing floating IPs through the OpenStack Compute API has
 been deprecated. Unless you are using an older OpenStack environment, it is
-recommended to use the <cite>openstack_networking_floatingip_v2</cite>
+recommended to use the <code class="docutils literal notranslate"><span class="pre">openstack_networking_floatingip_v2</span></code>
 resource instead, which uses the OpenStack Networking API.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] pool: The name of the pool from which to obtain the floating</p>
+<blockquote>
+<div>IP. Changing this creates a new floating IP.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a floating IP that can be used with
-a compute instance. If omitted, the <cite>region</cite> argument of the provider
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
 is used. Changing this creates a new floating IP (which may or may not
-have a different address).</li>
-</ul>
-</td>
+have a different address).</td>
 </tr>
 </tbody>
 </table>
@@ -295,7 +281,7 @@ IP. Changing this creates a new floating IP.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FloatingIp.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a floating IP that can be used with
-a compute instance. If omitted, the <cite>region</cite> argument of the provider
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
 is used. Changing this creates a new floating IP (which may or may not
 have a different address).</p>
 </dd></dl>
@@ -344,27 +330,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.FloatingIpAssociate">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>fixed_ip=None</em>, <em>floating_ip=None</em>, <em>instance_id=None</em>, <em>region=None</em>, <em>wait_until_associated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associate a floating IP to an instance. This can be used instead of the
-<cite>floating_ip</cite> options in <cite>openstack_compute_instance_v2</cite>.</p>
+<code class="docutils literal notranslate"><span class="pre">floating_ip</span></code> options in <code class="docutils literal notranslate"><span class="pre">openstack_compute_instance_v2</span></code>.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] fixed_ip: The specific IP address to direct traffic to.
+:param pulumi.Input[str] floating_ip: The floating IP to associate.
+:param pulumi.Input[str] instance_id: The instance to associte the floating IP with.
+:param pulumi.Input[str] region: The region in which to obtain the V2 Compute client.</p>
+<blockquote>
+<div>Keypairs are associated with accounts, but a Compute client is needed to
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
+Changing this creates a new floatingip_associate.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The specific IP address to direct traffic to.</li>
-<li><strong>floating_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The floating IP to associate.</li>
-<li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance to associte the floating IP with.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
-Keypairs are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
-Changing this creates a new floatingip_associate.</li>
-<li><strong>wait_until_associated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – In cases where the OpenStack environment
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>wait_until_associated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – In cases where the OpenStack environment
 does not automatically wait until the association has finished, set this
 option to have Terraform poll the instance until the floating IP has been
-associated. Defaults to false.</li>
-</ul>
-</td>
+associated. Defaults to false.</td>
 </tr>
 </tbody>
 </table>
@@ -391,7 +375,7 @@ associated. Defaults to false.</li>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 Keypairs are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new floatingip_associate.</p>
 </dd></dl>
 
@@ -502,15 +486,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.Instance">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access_ip_v4=None</em>, <em>access_ip_v6=None</em>, <em>admin_pass=None</em>, <em>availability_zone=None</em>, <em>block_devices=None</em>, <em>config_drive=None</em>, <em>flavor_id=None</em>, <em>flavor_name=None</em>, <em>force_delete=None</em>, <em>image_id=None</em>, <em>image_name=None</em>, <em>key_pair=None</em>, <em>metadata=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>personalities=None</em>, <em>power_state=None</em>, <em>region=None</em>, <em>scheduler_hints=None</em>, <em>security_groups=None</em>, <em>stop_before_destroy=None</em>, <em>user_data=None</em>, <em>vendor_options=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 VM instance resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] access_ip_v4: The first detected Fixed IPv4 address <em>or</em> the</p>
+<blockquote>
+<div>Floating IP.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>access_ip_v4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv4 address _or_ the
-Floating IP.</li>
 <li><strong>access_ip_v6</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first detected Fixed IPv6 address.</li>
 <li><strong>admin_pass</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The administrative password to assign to the server.
 Changing this changes the root password on the existing server.</li>
@@ -520,7 +505,7 @@ the server. Changing this creates a new server.</li>
 structure is documented below. Changing this creates a new server.
 You can specify multiple block devices which will create an instance with
 multiple disks. This configuration is very flexible, so please see the
-following [reference](<a class="reference external" href="http://docs.openstack.org/developer/nova/block_device_mapping.html">http://docs.openstack.org/developer/nova/block_device_mapping.html</a>)
+following <a class="reference external" href="http://docs.openstack.org/developer/nova/block_device_mapping.html">reference</a>
 for more information.</li>
 <li><strong>config_drive</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use the config_drive feature to
 configure the instance. Changing this creates a new server.</li>
@@ -531,10 +516,10 @@ desired flavor for the server. Changing this resizes the existing server.</li>
 <li><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to force the OpenStack instance to be
 forcefully deleted. This is useful for environments that have reclaim / soft
 deletion enabled.</li>
-<li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Required if <cite>image_name</cite> is empty and not booting
+<li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Required if <code class="docutils literal notranslate"><span class="pre">image_name</span></code> is empty and not booting
 from a volume. Do not specify if booting from a volume.) The image ID of
 the desired image for the server. Changing this creates a new server.</li>
-<li><strong>image_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Required if <cite>image_id</cite> is empty and not booting
+<li><strong>image_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional; Required if <code class="docutils literal notranslate"><span class="pre">image_id</span></code> is empty and not booting
 from a volume. Do not specify if booting from a volume.) The name of the
 desired image for the server. Changing this creates a new server.</li>
 <li><strong>key_pair</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a key pair to put on the server. The key
@@ -554,7 +539,7 @@ are supported values. <em>Note</em>: If the initial power_state is the shutoff
 the VM will be stopped immediately after build and the provisioners like
 remote-exec or files are not supported.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the server instance. If
-omitted, the <cite>region</cite> argument of the provider is used. Changing this
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new server.</li>
 <li><strong>scheduler_hints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Provide the Nova scheduler with hints on how
 the instance should be launched. The available hints are described below.</li>
@@ -578,7 +563,7 @@ Supported options are described below.</li>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.access_ip_v4">
 <code class="descname">access_ip_v4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.access_ip_v4" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first detected Fixed IPv4 address _or_ the
+<dd><p>The first detected Fixed IPv4 address <em>or</em> the
 Floating IP.</p>
 </dd></dl>
 
@@ -616,7 +601,7 @@ the server. Changing this creates a new server.</p>
 structure is documented below. Changing this creates a new server.
 You can specify multiple block devices which will create an instance with
 multiple disks. This configuration is very flexible, so please see the
-following [reference](<a class="reference external" href="http://docs.openstack.org/developer/nova/block_device_mapping.html">http://docs.openstack.org/developer/nova/block_device_mapping.html</a>)
+following <a class="reference external" href="http://docs.openstack.org/developer/nova/block_device_mapping.html">reference</a>
 for more information.</p>
 </dd></dl>
 
@@ -652,7 +637,7 @@ deletion enabled.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.image_id">
 <code class="descname">image_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.image_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional; Required if <cite>image_name</cite> is empty and not booting
+<dd><p>(Optional; Required if <code class="docutils literal notranslate"><span class="pre">image_name</span></code> is empty and not booting
 from a volume. Do not specify if booting from a volume.) The image ID of
 the desired image for the server. Changing this creates a new server.</p>
 </dd></dl>
@@ -660,7 +645,7 @@ the desired image for the server. Changing this creates a new server.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.Instance.image_name">
 <code class="descname">image_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.image_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional; Required if <cite>image_id</cite> is empty and not booting
+<dd><p>(Optional; Required if <code class="docutils literal notranslate"><span class="pre">image_id</span></code> is empty and not booting
 from a volume. Do not specify if booting from a volume.) The name of the
 desired image for the server. Changing this creates a new server.</p>
 </dd></dl>
@@ -715,7 +700,7 @@ remote-exec or files are not supported.</p>
 <dt id="pulumi_openstack.compute.Instance.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Instance.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to create the server instance. If
-omitted, the <cite>region</cite> argument of the provider is used. Changing this
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new server.</p>
 </dd></dl>
 
@@ -803,22 +788,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">InterfaceAttach</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>fixed_ip=None</em>, <em>instance_id=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] fixed_ip: An IP address to assosciate with the port.</p>
+<blockquote>
+<div><em>NOTE</em>: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An IP address to assosciate with the port.
-_NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Instance to attach the Port or Network to.</li>
 <li><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network to attach to an Instance. A port will be created automatically.
-_NOTE_: This option and <cite>port_id</cite> are mutually exclusive.</li>
+<em>NOTE</em>: This option and <code class="docutils literal notranslate"><span class="pre">port_id</span></code> are mutually exclusive.</li>
 <li><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Port to attach to an Instance.
-_NOTE_: This option and <cite>network_id</cite> are mutually exclusive.</li>
+<em>NOTE</em>: This option and <code class="docutils literal notranslate"><span class="pre">network_id</span></code> are mutually exclusive.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the interface attachment.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new attachment.</li>
 </ul>
 </td>
@@ -829,7 +815,7 @@ creates a new attachment.</li>
 <dt id="pulumi_openstack.compute.InterfaceAttach.fixed_ip">
 <code class="descname">fixed_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.fixed_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>An IP address to assosciate with the port.
-_NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.</p>
+<em>NOTE</em>: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -842,21 +828,21 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
 <dt id="pulumi_openstack.compute.InterfaceAttach.network_id">
 <code class="descname">network_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.network_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Network to attach to an Instance. A port will be created automatically.
-_NOTE_: This option and <cite>port_id</cite> are mutually exclusive.</p>
+<em>NOTE</em>: This option and <code class="docutils literal notranslate"><span class="pre">port_id</span></code> are mutually exclusive.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.InterfaceAttach.port_id">
 <code class="descname">port_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.port_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Port to attach to an Instance.
-_NOTE_: This option and <cite>network_id</cite> are mutually exclusive.</p>
+<em>NOTE</em>: This option and <code class="docutils literal notranslate"><span class="pre">network_id</span></code> are mutually exclusive.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.InterfaceAttach.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to create the interface attachment.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new attachment.</p>
 </dd></dl>
 
@@ -904,20 +890,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.Keypair">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">Keypair</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>region=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Keypair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 keypair resource within OpenStack.</p>
-<p>&gt; <strong>Important Security Notice</strong> The private key generated by this resource will
+<blockquote>
+<div><strong>Important Security Notice</strong> The private key generated by this resource will
 be stored <em>unencrypted</em> in your Terraform state file. <strong>Use of this resource
 for production deployments is *not* recommended</strong>. Instead, generate
 a private key file outside of Terraform and distribute it securely
-to the system where Terraform will be run.</p>
+to the system where Terraform will be run.</div></blockquote>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] name: A unique name for the keypair. Changing this creates a new</p>
+<blockquote>
+<div>keypair.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the keypair. Changing this creates a new
-keypair.</li>
 <li><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A pregenerated OpenSSH-formatted public key.
 Changing this creates a new keypair. If a public key is not specified, then
 a public/private key pair will be automatically generated. If a pair is
@@ -925,7 +913,7 @@ created, then destroying this resource means you will lose access to that
 keypair forever.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 Keypairs are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new keypair.</li>
 <li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
 </ul>
@@ -967,7 +955,7 @@ keypair forever.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.Keypair.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 Keypairs are associated with accounts, but a Compute client is needed to
-create one. If omitted, the <cite>region</cite> argument of the provider is used.
+create one. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.
 Changing this creates a new keypair.</p>
 </dd></dl>
 
@@ -1023,23 +1011,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a V2 security group resource within OpenStack.</p>
 <p>Please note that managing security groups through the OpenStack Compute API
 has been deprecated. Unless you are using an older OpenStack environment, it is
-recommended to use the <cite>openstack_networking_secgroup_v2</cite>
-and <cite>openstack_networking_secgroup_rule_v2</cite>
+recommended to use the <code class="docutils literal notranslate"><span class="pre">openstack_networking_secgroup_v2</span></code>
+and <code class="docutils literal notranslate"><span class="pre">openstack_networking_secgroup_rule_v2</span></code>
 resources instead, which uses the OpenStack Networking API.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description: A description for the security group. Changing this</p>
+<blockquote>
+<div>updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing security group.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the security group. Changing this
-updates the <cite>description</cite> of an existing security group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the security group. Changing this
-updates the <cite>name</cite> of an existing security group.</li>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing security group.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 security group.</li>
 <li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -1054,14 +1043,14 @@ may be used.</li>
 <dt id="pulumi_openstack.compute.SecGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.SecGroup.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A description for the security group. Changing this
-updates the <cite>description</cite> of an existing security group.</p>
+updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing security group.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.SecGroup.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.SecGroup.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for the security group. Changing this
-updates the <cite>name</cite> of an existing security group.</p>
+updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing security group.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1069,7 +1058,7 @@ updates the <cite>name</cite> of an existing security group.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.SecGroup.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a new
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
 security group.</p>
 </dd></dl>
 
@@ -1126,20 +1115,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.ServerGroup">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">ServerGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>policies=None</em>, <em>region=None</em>, <em>value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Server Group resource within OpenStack.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] name: A unique name for the server group. Changing this creates</p>
+<blockquote>
+<div>a new server group.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the server group. Changing this creates
-a new server group.</li>
 <li><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing
 this creates a new server group.</li>
 <li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
 </ul>
@@ -1172,7 +1162,7 @@ Changing this creates a new server group.</p>
 <dt id="pulumi_openstack.compute.ServerGroup.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.ServerGroup.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing
 this creates a new server group.</p>
 </dd></dl>
 
@@ -1227,24 +1217,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_openstack.compute.</code><code class="descname">VolumeAttach</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>device=None</em>, <em>instance_id=None</em>, <em>multiattach=None</em>, <em>region=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] device: The device of the volume attachment (ex: <code class="docutils literal notranslate"><span class="pre">/dev/vdc</span></code>).</p>
+<blockquote>
+<div><em>NOTE</em>: Being able to specify a device is dependent upon the hypervisor in
+use. There is a chance that the device specified in Terraform will not be
+the same device the hypervisor chose. If this happens, Terraform will wish
+to update the device upon subsequent applying which will cause the volume
+to be detached and reattached indefinitely. Please use with caution.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>device</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device of the volume attachment (ex: <cite>/dev/vdc</cite>).
-_NOTE_: Being able to specify a device is dependent upon the hypervisor in
-use. There is a chance that the device specified in Terraform will not be
-the same device the hypervisor chose. If this happens, Terraform will wish
-to update the device upon subsequent applying which will cause the volume
-to be detached and reattached indefinitely. Please use with caution.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Instance to attach the Volume to.</li>
 <li><strong>multiattach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable attachment of multiattach-capable volumes.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a volume attachment. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a
 new volume attachment.</li>
 <li><strong>volume_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Volume to attach to an Instance.</li>
 </ul>
@@ -1255,8 +1246,8 @@ new volume attachment.</li>
 <dl class="attribute">
 <dt id="pulumi_openstack.compute.VolumeAttach.device">
 <code class="descname">device</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.device" title="Permalink to this definition">¶</a></dt>
-<dd><p>The device of the volume attachment (ex: <cite>/dev/vdc</cite>).
-_NOTE_: Being able to specify a device is dependent upon the hypervisor in
+<dd><p>The device of the volume attachment (ex: <code class="docutils literal notranslate"><span class="pre">/dev/vdc</span></code>).
+<em>NOTE</em>: Being able to specify a device is dependent upon the hypervisor in
 use. There is a chance that the device specified in Terraform will not be
 the same device the hypervisor chose. If this happens, Terraform will wish
 to update the device upon subsequent applying which will cause the volume
@@ -1280,7 +1271,7 @@ to be detached and reattached indefinitely. Please use with caution.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a volume attachment. If omitted, the
-<cite>region</cite> argument of the provider is used. Changing this creates a
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a
 new volume attachment.</p>
 </dd></dl>
 
