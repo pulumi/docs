@@ -2,15 +2,15 @@
 <span id="directoryservice"></span><h1>directoryservice<a class="headerlink" href="#module-pulumi_aws.directoryservice" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">ConditionalForwader</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">ConditionalForwader</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>directory_id=None</em>, <em>dns_ips=None</em>, <em>remote_domain_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>directory_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of directory.</li>
 <li><strong>dns_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of forwarder IP addresses.</li>
 <li><strong>remote_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified domain name of the remote domain for which forwarders will be used.</li>
@@ -79,28 +79,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.directoryservice.Directory">
-<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">Directory</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.directoryservice.</code><code class="descname">Directory</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alias=None</em>, <em>connect_settings=None</em>, <em>description=None</em>, <em>edition=None</em>, <em>enable_sso=None</em>, <em>name=None</em>, <em>password=None</em>, <em>short_name=None</em>, <em>size=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpc_settings=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.Directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Simple or Managed Microsoft directory in AWS Directory Service.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias for the directory (must be unique amongst all aliases in AWS). Required for <cite>enable_sso</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The alias for the directory (must be unique amongst all aliases in AWS). Required for <code class="docutils literal notranslate"><span class="pre">enable_sso</span></code>.</li>
 <li><strong>connect_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Connector related information about the directory. Fields documented below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A textual description for the directory.</li>
-<li><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MicrosoftAD edition (<cite>Standard</cite> or <cite>Enterprise</cite>). Defaults to <cite>Enterprise</cite> (applies to MicrosoftAD type only).</li>
-<li><strong>enable_sso</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable single-sign on for the directory. Requires <cite>alias</cite>. Defaults to <cite>false</cite>.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name for the directory, such as <cite>corp.example.com</cite></li>
+<li><strong>edition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The MicrosoftAD edition (<code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>). Defaults to <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code> (applies to MicrosoftAD type only).</li>
+<li><strong>enable_sso</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable single-sign on for the directory. Requires <code class="docutils literal notranslate"><span class="pre">alias</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully qualified name for the directory, such as <code class="docutils literal notranslate"><span class="pre">corp.example.com</span></code></li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the directory administrator or connector user.</li>
-<li><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the directory, such as <cite>CORP</cite>.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the directory (<cite>Small</cite> or <cite>Large</cite> are accepted values).</li>
+<li><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the directory, such as <code class="docutils literal notranslate"><span class="pre">CORP</span></code>.</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The size of the directory (<code class="docutils literal notranslate"><span class="pre">Small</span></code> or <code class="docutils literal notranslate"><span class="pre">Large</span></code> are accepted values).</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory type (<cite>SimpleAD</cite>, <cite>ADConnector</cite> or <cite>MicrosoftAD</cite> are accepted values). Defaults to <cite>SimpleAD</cite>.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> are accepted values). Defaults to <code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>.</li>
 <li><strong>vpc_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – VPC related information about the directory. Fields documented below.</li>
 </ul>
 </td>
@@ -110,13 +111,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.access_url">
 <code class="descname">access_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.access_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>The access URL for the directory, such as <cite>http://alias.awsapps.com</cite>.</p>
+<dd><p>The access URL for the directory, such as <code class="docutils literal notranslate"><span class="pre">http://alias.awsapps.com</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.alias">
 <code class="descname">alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>The alias for the directory (must be unique amongst all aliases in AWS). Required for <cite>enable_sso</cite>.</p>
+<dd><p>The alias for the directory (must be unique amongst all aliases in AWS). Required for <code class="docutils literal notranslate"><span class="pre">enable_sso</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -140,19 +141,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.edition">
 <code class="descname">edition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.edition" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MicrosoftAD edition (<cite>Standard</cite> or <cite>Enterprise</cite>). Defaults to <cite>Enterprise</cite> (applies to MicrosoftAD type only).</p>
+<dd><p>The MicrosoftAD edition (<code class="docutils literal notranslate"><span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code>). Defaults to <code class="docutils literal notranslate"><span class="pre">Enterprise</span></code> (applies to MicrosoftAD type only).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.enable_sso">
 <code class="descname">enable_sso</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.enable_sso" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to enable single-sign on for the directory. Requires <cite>alias</cite>. Defaults to <cite>false</cite>.</p>
+<dd><p>Whether to enable single-sign on for the directory. Requires <code class="docutils literal notranslate"><span class="pre">alias</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The fully qualified name for the directory, such as <cite>corp.example.com</cite></p>
+<dd><p>The fully qualified name for the directory, such as <code class="docutils literal notranslate"><span class="pre">corp.example.com</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -164,19 +165,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.security_group_id">
 <code class="descname">security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.security_group_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the security group created by the directory (<cite>SimpleAD</cite> or <cite>MicrosoftAD</cite> only).</p>
+<dd><p>The ID of the security group created by the directory (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> only).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.short_name">
 <code class="descname">short_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.short_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The short name of the directory, such as <cite>CORP</cite>.</p>
+<dd><p>The short name of the directory, such as <code class="docutils literal notranslate"><span class="pre">CORP</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.size">
 <code class="descname">size</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>The size of the directory (<cite>Small</cite> or <cite>Large</cite> are accepted values).</p>
+<dd><p>The size of the directory (<code class="docutils literal notranslate"><span class="pre">Small</span></code> or <code class="docutils literal notranslate"><span class="pre">Large</span></code> are accepted values).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -188,7 +189,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The directory type (<cite>SimpleAD</cite>, <cite>ADConnector</cite> or <cite>MicrosoftAD</cite> are accepted values). Defaults to <cite>SimpleAD</cite>.</p>
+<dd><p>The directory type (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>, <code class="docutils literal notranslate"><span class="pre">ADConnector</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> are accepted values). Defaults to <code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

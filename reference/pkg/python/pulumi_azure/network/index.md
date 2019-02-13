@@ -2,38 +2,154 @@
 <span id="network"></span><h1>network<a class="headerlink" href="#module-pulumi_azure.network" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.network.ApplicationGateway">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>authentication_certificates=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>disabled_ssl_protocols=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ApplicationGateway resource with the given unique name, props, and options.</p>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_certificates=None</em>, <em>backend_address_pools=None</em>, <em>backend_http_settings=None</em>, <em>custom_error_configurations=None</em>, <em>disabled_ssl_protocols=None</em>, <em>enable_http2=None</em>, <em>frontend_ip_configurations=None</em>, <em>frontend_ports=None</em>, <em>gateway_ip_configurations=None</em>, <em>http_listeners=None</em>, <em>location=None</em>, <em>name=None</em>, <em>probes=None</em>, <em>request_routing_rules=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>ssl_certificates=None</em>, <em>tags=None</em>, <em>url_path_maps=None</em>, <em>waf_configuration=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Application Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>authentication_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</li>
+<li><strong>backend_address_pools</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">backend_address_pool</span></code> blocks as defined below.</li>
+<li><strong>backend_http_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">backend_http_settings</span></code> blocks as defined below.</li>
+<li><strong>custom_error_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</li>
+<li><strong>disabled_ssl_protocols</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] authentication_certificates
-:param pulumi.Input[list] backend_address_pools
-:param pulumi.Input[list] backend_http_settings
-:param pulumi.Input[list] disabled_ssl_protocols
-:param pulumi.Input[list] frontend_ip_configurations
-:param pulumi.Input[list] frontend_ports
-:param pulumi.Input[list] gateway_ip_configurations
-:param pulumi.Input[list] http_listeners
-:param pulumi.Input[str] location
-:param pulumi.Input[str] name
-:param pulumi.Input[list] probes
-:param pulumi.Input[list] request_routing_rules
-:param pulumi.Input[str] resource_group_name
-:param pulumi.Input[dict] sku
-:param pulumi.Input[list] ssl_certificates
-:param pulumi.Input[dict] tags
-:param pulumi.Input[list] url_path_maps
-:param pulumi.Input[dict] waf_configuration</p>
+<p>:param pulumi.Input[bool] enable_http2
+:param pulumi.Input[list] frontend_ip_configurations: One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.
+:param pulumi.Input[list] frontend_ports: One or more <code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> blocks as defined below.
+:param pulumi.Input[list] gateway_ip_configurations: One or more <code class="docutils literal notranslate"><span class="pre">gateway_ip_configuration</span></code> blocks as defined below.
+:param pulumi.Input[list] http_listeners: One or more <code class="docutils literal notranslate"><span class="pre">http_listener</span></code> blocks as defined below.
+:param pulumi.Input[str] location: The Azure region where the Application Gateway should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[str] name: The name of the Application Gateway. Changing this forces a new resource to be created.
+:param pulumi.Input[list] probes: One or more <code class="docutils literal notranslate"><span class="pre">probe</span></code> blocks as defined below.
+:param pulumi.Input[list] request_routing_rules: One or more <code class="docutils literal notranslate"><span class="pre">request_routing_rule</span></code> blocks as defined below.
+:param pulumi.Input[str] resource_group_name: The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.
+:param pulumi.Input[dict] sku: A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.
+:param pulumi.Input[list] ssl_certificates: One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.
+:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
+:param pulumi.Input[list] url_path_maps: One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.
+:param pulumi.Input[dict] waf_configuration: A <code class="docutils literal notranslate"><span class="pre">waf_configuration</span></code> block as defined below.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.authentication_certificates">
+<code class="descname">authentication_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.authentication_certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.backend_address_pools">
+<code class="descname">backend_address_pools</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.backend_address_pools" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">backend_address_pool</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.backend_http_settings">
+<code class="descname">backend_http_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.backend_http_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">backend_http_settings</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.custom_error_configurations">
+<code class="descname">custom_error_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.custom_error_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.disabled_ssl_protocols">
+<code class="descname">disabled_ssl_protocols</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.disabled_ssl_protocols" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.frontend_ip_configurations">
+<code class="descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.frontend_ports">
+<code class="descname">frontend_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.frontend_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.gateway_ip_configurations">
+<code class="descname">gateway_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.gateway_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">gateway_ip_configuration</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.http_listeners">
+<code class="descname">http_listeners</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.http_listeners" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">http_listener</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Azure region where the Application Gateway should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Application Gateway. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.probes">
+<code class="descname">probes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.probes" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">probe</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.request_routing_rules">
+<code class="descname">request_routing_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.request_routing_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">request_routing_rule</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to the Application Gateway should exist. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.sku">
+<code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.ssl_certificates">
+<code class="descname">ssl_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.ssl_certificates" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.url_path_maps">
+<code class="descname">url_path_maps</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.url_path_maps" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.ApplicationGateway.waf_configuration">
+<code class="descname">waf_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.waf_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">waf_configuration</span></code> block as defined below.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_azure.network.ApplicationGateway.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -76,15 +192,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.ApplicationSecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationSecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationSecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ApplicationSecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ApplicationSecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage an Application Security Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Security Group. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Application Security Group.</li>
@@ -160,23 +276,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.ExpressRouteCircuit">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ExpressRouteCircuit</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_classic_operations=None</em>, <em>bandwidth_in_mbps=None</em>, <em>location=None</em>, <em>name=None</em>, <em>peering_location=None</em>, <em>resource_group_name=None</em>, <em>service_provider_name=None</em>, <em>sku=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ExpressRouteCircuit</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_classic_operations=None</em>, <em>bandwidth_in_mbps=None</em>, <em>location=None</em>, <em>name=None</em>, <em>peering_location=None</em>, <em>resource_group_name=None</em>, <em>service_provider_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an ExpressRoute circuit.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allow_classic_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the circuit to interact with classic (RDFE) resources. The default value is <cite>false</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>allow_classic_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the circuit to interact with classic (RDFE) resources. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>bandwidth_in_mbps</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The bandwidth in Mbps of the circuit being created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ExpressRoute circuit. Changing this forces a new resource to be created.</li>
 <li><strong>peering_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the peering location and <strong>not</strong> the Azure resource location.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.</li>
 <li><strong>service_provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ExpressRoute Service Provider.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>sku</cite> block for the ExpressRoute circuit as documented below.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block for the ExpressRoute circuit as documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -186,7 +302,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuit.allow_classic_operations">
 <code class="descname">allow_classic_operations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuit.allow_classic_operations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allow the circuit to interact with classic (RDFE) resources. The default value is <cite>false</cite>.</p>
+<dd><p>Allow the circuit to interact with classic (RDFE) resources. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -240,7 +356,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuit.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuit.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>sku</cite> block for the ExpressRoute circuit as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block for the ExpressRoute circuit as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -291,15 +407,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.ExpressRouteCircuitAuthorization">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ExpressRouteCircuitAuthorization</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>express_route_circuit_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitAuthorization" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ExpressRouteCircuitAuthorization</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>express_route_circuit_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitAuthorization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an ExpressRoute Circuit Authorization.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>express_route_circuit_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Express Route Circuit in which to create the Authorization.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.</li>
@@ -384,23 +500,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ExpressRouteCircuitPeering</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>express_route_circuit_name=None</em>, <em>microsoft_peering_config=None</em>, <em>peer_asn=None</em>, <em>peering_type=None</em>, <em>primary_peer_address_prefix=None</em>, <em>resource_group_name=None</em>, <em>secondary_peer_address_prefix=None</em>, <em>shared_key=None</em>, <em>vlan_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">ExpressRouteCircuitPeering</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>express_route_circuit_name=None</em>, <em>microsoft_peering_config=None</em>, <em>peer_asn=None</em>, <em>peering_type=None</em>, <em>primary_peer_address_prefix=None</em>, <em>resource_group_name=None</em>, <em>secondary_peer_address_prefix=None</em>, <em>shared_key=None</em>, <em>vlan_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an ExpressRoute Circuit Peering.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>express_route_circuit_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ExpressRoute Circuit in which to create the Peering.</li>
-<li><strong>microsoft_peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>microsoft_peering_config</cite> block as defined below. Required when <cite>peering_type</cite> is set to <cite>MicrosoftPeering</cite>.</li>
+<li><strong>microsoft_peering_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">microsoft_peering_config</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">peering_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">MicrosoftPeering</span></code>.</li>
 <li><strong>peer_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The Either a 16-bit or a 32-bit ASN. Can either be public or private..</li>
-<li><strong>peering_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the ExpressRoute Circuit Peering. Acceptable values include <cite>AzurePrivatePeering</cite>, <cite>AzurePublicPeering</cite> and <cite>MicrosoftPeering</cite>. Changing this forces a new resource to be created.</li>
-<li><strong>primary_peer_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A <cite>/30</cite> subnet for the primary link.</li>
+<li><strong>peering_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the ExpressRoute Circuit Peering. Acceptable values include <code class="docutils literal notranslate"><span class="pre">AzurePrivatePeering</span></code>, <code class="docutils literal notranslate"><span class="pre">AzurePublicPeering</span></code> and <code class="docutils literal notranslate"><span class="pre">MicrosoftPeering</span></code>. Changing this forces a new resource to be created.</li>
+<li><strong>primary_peer_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">/30</span></code> subnet for the primary link.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Express Route Circuit Peering. Changing this forces a new resource to be created.</li>
-<li><strong>secondary_peer_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A <cite>/30</cite> subnet for the secondary link.</li>
+<li><strong>secondary_peer_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">/30</span></code> subnet for the secondary link.</li>
 <li><strong>shared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The shared key. Can be a maximum of 25 characters.</li>
 <li><strong>vlan_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – A valid VLAN ID to establish this peering on.</li>
 </ul>
@@ -423,7 +539,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering.microsoft_peering_config">
 <code class="descname">microsoft_peering_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering.microsoft_peering_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>microsoft_peering_config</cite> block as defined below. Required when <cite>peering_type</cite> is set to <cite>MicrosoftPeering</cite>.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">microsoft_peering_config</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">peering_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">MicrosoftPeering</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -435,7 +551,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering.peering_type">
 <code class="descname">peering_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering.peering_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the ExpressRoute Circuit Peering. Acceptable values include <cite>AzurePrivatePeering</cite>, <cite>AzurePublicPeering</cite> and <cite>MicrosoftPeering</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>The type of the ExpressRoute Circuit Peering. Acceptable values include <code class="docutils literal notranslate"><span class="pre">AzurePrivatePeering</span></code>, <code class="docutils literal notranslate"><span class="pre">AzurePublicPeering</span></code> and <code class="docutils literal notranslate"><span class="pre">MicrosoftPeering</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -447,7 +563,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering.primary_peer_address_prefix">
 <code class="descname">primary_peer_address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering.primary_peer_address_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>/30</cite> subnet for the primary link.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">/30</span></code> subnet for the primary link.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -466,7 +582,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering.secondary_peer_address_prefix">
 <code class="descname">secondary_peer_address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering.secondary_peer_address_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>/30</cite> subnet for the secondary link.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">/30</span></code> subnet for the secondary link.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -523,16 +639,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.Firewall">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ip_configuration=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Firewall" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Firewall</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_configuration=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Firewall.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>ip_configuration</cite> block as documented below.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>ip_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Firewall. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</li>
@@ -545,7 +661,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.Firewall.ip_configuration">
 <code class="descname">ip_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Firewall.ip_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>ip_configuration</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -614,21 +730,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">FirewallApplicationRuleCollection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>azure_firewall_name=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">FirewallApplicationRuleCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>azure_firewall_name=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application Rule Collection within an Azure Firewall.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the action the rule will apply to matching traffic. Possible values are <cite>Allow</cite> and <cite>Deny</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the action the rule will apply to matching traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</li>
 <li><strong>azure_firewall_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the priority of the rule collection. Possible values are between <cite>100</cite> - <cite>65000</cite>.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the priority of the rule collection. Possible values are between <code class="docutils literal notranslate"><span class="pre">100</span></code> - <code class="docutils literal notranslate"><span class="pre">65000</span></code>.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.</li>
-<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>rule</cite> blocks as defined below.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</li>
 </ul>
 </td>
 </tr>
@@ -637,7 +753,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection.action" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the action the rule will apply to matching traffic. Possible values are <cite>Allow</cite> and <cite>Deny</cite>.</p>
+<dd><p>Specifies the action the rule will apply to matching traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -655,7 +771,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection.priority">
 <code class="descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection.priority" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the priority of the rule collection. Possible values are between <cite>100</cite> - <cite>65000</cite>.</p>
+<dd><p>Specifies the priority of the rule collection. Possible values are between <code class="docutils literal notranslate"><span class="pre">100</span></code> - <code class="docutils literal notranslate"><span class="pre">65000</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -667,7 +783,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection.rules">
 <code class="descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>rule</cite> blocks as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="method">
@@ -712,21 +828,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.FirewallNetworkRuleCollection">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">FirewallNetworkRuleCollection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action=None</em>, <em>azure_firewall_name=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">FirewallNetworkRuleCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action=None</em>, <em>azure_firewall_name=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>resource_group_name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Network Rule Collection within an Azure Firewall.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the action the rule will apply to matching traffic. Possible values are <cite>Allow</cite> and <cite>Deny</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the action the rule will apply to matching traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</li>
 <li><strong>azure_firewall_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Firewall in which the Network Rule Collection should be created. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Network Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</li>
-<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the priority of the rule collection. Possible values are between <cite>100</cite> - <cite>65000</cite>.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the priority of the rule collection. Possible values are between <code class="docutils literal notranslate"><span class="pre">100</span></code> - <code class="docutils literal notranslate"><span class="pre">65000</span></code>.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.</li>
-<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>rule</cite> blocks as defined below.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</li>
 </ul>
 </td>
 </tr>
@@ -735,7 +851,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNetworkRuleCollection.action">
 <code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection.action" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the action the rule will apply to matching traffic. Possible values are <cite>Allow</cite> and <cite>Deny</cite>.</p>
+<dd><p>Specifies the action the rule will apply to matching traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -753,7 +869,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNetworkRuleCollection.priority">
 <code class="descname">priority</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection.priority" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the priority of the rule collection. Possible values are between <cite>100</cite> - <cite>65000</cite>.</p>
+<dd><p>Specifies the priority of the rule collection. Possible values are between <code class="docutils literal notranslate"><span class="pre">100</span></code> - <code class="docutils literal notranslate"><span class="pre">65000</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -765,7 +881,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNetworkRuleCollection.rules">
 <code class="descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>rule</cite> blocks as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="method">
@@ -869,7 +985,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetNetworkInterfaceResult.ip_configurations">
 <code class="descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetNetworkInterfaceResult.ip_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>ip_configuration</cite> blocks as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -935,7 +1051,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetNetworkSecurityGroupResult.security_rules">
 <code class="descname">security_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetNetworkSecurityGroupResult.security_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>security_rule</cite> blocks as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">security_rule</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -983,7 +1099,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetPublicIPResult.ip_version">
 <code class="descname">ip_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIPResult.ip_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IP version being used, for example <cite>IPv4</cite> or <cite>IPv6</cite>.</p>
+<dd><p>The IP version being used, for example <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1007,7 +1123,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetPublicIPsResult.public_ips">
 <code class="descname">public_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetPublicIPsResult.public_ips" title="Permalink to this definition">¶</a></dt>
-<dd><p>A List of <cite>public_ips</cite> blocks as defined below filtered by the criteria above.</p>
+<dd><p>A List of <code class="docutils literal notranslate"><span class="pre">public_ips</span></code> blocks as defined below filtered by the criteria above.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1031,7 +1147,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetRouteTableResult.routes">
 <code class="descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetRouteTableResult.routes" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>route</cite> blocks as documented below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">route</span></code> blocks as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1106,7 +1222,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (<em>forced tunneling</em>). Refer to the
-[Azure documentation on forced tunneling](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm">https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm</a>).</p>
+<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm">Azure documentation on forced tunneling</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1119,7 +1235,7 @@ for this Virtual Network Gateway.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetVirtualNetworkGatewayResult.ip_configurations">
 <code class="descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult.ip_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or two <cite>ip_configuration</cite> blocks documented below.</p>
+<dd><p>One or two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1149,7 +1265,7 @@ for this Virtual Network Gateway.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.GetVirtualNetworkGatewayResult.vpn_client_configurations">
 <code class="descname">vpn_client_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetVirtualNetworkGatewayResult.vpn_client_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>vpn_client_configuration</cite> block which is documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">vpn_client_configuration</span></code> block which is documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1204,18 +1320,18 @@ for this Virtual Network Gateway.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.network.LocalNetworkGateway">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">LocalNetworkGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address_spaces=None</em>, <em>bgp_settings=None</em>, <em>gateway_address=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.LocalNetworkGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">LocalNetworkGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_spaces=None</em>, <em>bgp_settings=None</em>, <em>gateway_address=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.LocalNetworkGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a local network gateway connection over which specific connections can be configured.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_spaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of string CIDRs representing the
 address spaces the gateway exposes.</li>
-<li><strong>bgp_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>bgp_settings</cite> block as defined below containing the
+<li><strong>bgp_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">bgp_settings</span></code> block as defined below containing the
 Local Network Gateway’s BGP speaker settings.</li>
 <li><strong>gateway_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the gateway to which to
 connect.</li>
@@ -1241,7 +1357,7 @@ address spaces the gateway exposes.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.LocalNetworkGateway.bgp_settings">
 <code class="descname">bgp_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.LocalNetworkGateway.bgp_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>bgp_settings</cite> block as defined below containing the
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">bgp_settings</span></code> block as defined below containing the
 Local Network Gateway’s BGP speaker settings.</p>
 </dd></dl>
 
@@ -1321,19 +1437,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkInterface">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterface</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>applied_dns_servers=None</em>, <em>dns_servers=None</em>, <em>enable_accelerated_networking=None</em>, <em>enable_ip_forwarding=None</em>, <em>internal_dns_name_label=None</em>, <em>internal_fqdn=None</em>, <em>ip_configurations=None</em>, <em>location=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_security_group_id=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>applied_dns_servers=None</em>, <em>dns_servers=None</em>, <em>enable_accelerated_networking=None</em>, <em>enable_ip_forwarding=None</em>, <em>internal_dns_name_label=None</em>, <em>internal_fqdn=None</em>, <em>ip_configurations=None</em>, <em>location=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_security_group_id=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>virtual_machine_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Network Interface located in a Virtual Network, usually attached to a Virtual Machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>applied_dns_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set</li>
 <li><strong>dns_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DNS servers IP addresses to use for this NIC, overrides the VNet-level server list</li>
-<li><strong>enable_accelerated_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance sizes are supported. Refer to [Create a Virtual Machine with Accelerated Networking](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli">https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli</a>). Defaults to <cite>false</cite>.</li>
-<li><strong>enable_ip_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables IP Forwarding on the NIC. Defaults to <cite>false</cite>.</li>
+<li><strong>enable_accelerated_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance sizes are supported. Refer to <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli">Create a Virtual Machine with Accelerated Networking</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>enable_ip_forwarding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables IP Forwarding on the NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>internal_dns_name_label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Relative DNS name for this NIC used for internal communications between VMs in the same VNet</li>
 </ul>
 </td>
@@ -1341,7 +1457,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <p>:param pulumi.Input[str] internal_fqdn
-:param pulumi.Input[list] ip_configurations: One or more <cite>ip_configuration</cite> associated with this NIC as documented below.
+:param pulumi.Input[list] ip_configurations: One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> associated with this NIC as documented below.
 :param pulumi.Input[str] location: The location/region where the network interface is created. Changing this forces a new resource to be created.
 :param pulumi.Input[str] mac_address: The media access control (MAC) address of the network interface.
 :param pulumi.Input[str] name: The name of the network interface. Changing this forces a new resource to be created.
@@ -1364,13 +1480,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterface.enable_accelerated_networking">
 <code class="descname">enable_accelerated_networking</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterface.enable_accelerated_networking" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance sizes are supported. Refer to [Create a Virtual Machine with Accelerated Networking](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli">https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli</a>). Defaults to <cite>false</cite>.</p>
+<dd><p>Enables Azure Accelerated Networking using SR-IOV. Only certain VM instance sizes are supported. Refer to <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-network/create-vm-accelerated-networking-cli">Create a Virtual Machine with Accelerated Networking</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterface.enable_ip_forwarding">
 <code class="descname">enable_ip_forwarding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterface.enable_ip_forwarding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enables IP Forwarding on the NIC. Defaults to <cite>false</cite>.</p>
+<dd><p>Enables IP Forwarding on the NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1382,7 +1498,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterface.ip_configurations">
 <code class="descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterface.ip_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>ip_configuration</cite> associated with this NIC as documented below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> associated with this NIC as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1481,15 +1597,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_address_pool_id=None</em>, <em>ip_configuration_name=None</em>, <em>network_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_address_pool_id=None</em>, <em>ip_configuration_name=None</em>, <em>network_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the association between a Network Interface and a Application Gateway’s Backend Address Pool.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backend_address_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Application Gateway’s Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.</li>
 <li><strong>ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Interface. Changing this forces a new resource to be created.</li>
@@ -1557,16 +1673,93 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation">
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceApplicationSecurityGroupAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_security_group_id=None</em>, <em>ip_configuration_name=None</em>, <em>network_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages the association between a Network Interface and a Application Security Group.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>application_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Application Security Group which this Network Interface which should be connected to. Changing this forces a new resource to be created.</li>
+<li><strong>ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the IP Configuration within the Network Interface which should be connected to the Application Security Group. Changing this forces a new resource to be created.</li>
+<li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Interface. Changing this forces a new resource to be created.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.application_security_group_id">
+<code class="descname">application_security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.application_security_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Application Security Group which this Network Interface which should be connected to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.ip_configuration_name">
+<code class="descname">ip_configuration_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.ip_configuration_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Name of the IP Configuration within the Network Interface which should be connected to the Application Security Group. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.network_interface_id">
+<code class="descname">network_interface_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.network_interface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Network Interface. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceApplicationSecurityGroupAssociation.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.network.NetworkInterfaceBackendAddressPoolAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceBackendAddressPoolAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>backend_address_pool_id=None</em>, <em>ip_configuration_name=None</em>, <em>network_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceBackendAddressPoolAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceBackendAddressPoolAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>backend_address_pool_id=None</em>, <em>ip_configuration_name=None</em>, <em>network_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceBackendAddressPoolAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the association between a Network Interface and a Load Balancer’s Backend Address Pool.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>backend_address_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.</li>
 <li><strong>ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Interface. Changing this forces a new resource to be created.</li>
@@ -1635,15 +1828,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkInterfaceNatRuleAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceNatRuleAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ip_configuration_name=None</em>, <em>nat_rule_id=None</em>, <em>network_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceNatRuleAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkInterfaceNatRuleAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ip_configuration_name=None</em>, <em>nat_rule_id=None</em>, <em>network_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkInterfaceNatRuleAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the association between a Network Interface and a Load Balancer’s NAT Rule.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the IP Configuration within the Network Interface which should be connected to the NAT Rule. Changing this forces a new resource to be created.</li>
 <li><strong>nat_rule_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer NAT Rule which this Network Interface which should be connected to. Changing this forces a new resource to be created.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Interface. Changing this forces a new resource to be created.</li>
@@ -1712,22 +1905,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkSecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkSecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>security_rules=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkSecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>security_rules=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a network security group that contains a list of network security rules.  Network security groups enable inbound or outbound traffic to be enabled or denied.</p>
-<p>&gt; <strong>NOTE on Network Security Groups and Network Security Rules:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Network Security Groups and Network Security Rules:</strong> Terraform currently
 provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
-At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</p>
+At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the network security group. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the network security group. Changing this forces a new resource to be created.</li>
-<li><strong>security_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>security_rule</cite> blocks as defined below.</li>
+<li><strong>security_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">security_rule</span></code> blocks as defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -1755,7 +1949,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityGroup.security_rules">
 <code class="descname">security_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityGroup.security_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>security_rule</cite> blocks as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">security_rule</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1806,36 +2000,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkSecurityRule">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkSecurityRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>access=None</em>, <em>description=None</em>, <em>destination_address_prefix=None</em>, <em>destination_address_prefixes=None</em>, <em>destination_application_security_group_ids=None</em>, <em>destination_port_range=None</em>, <em>destination_port_ranges=None</em>, <em>direction=None</em>, <em>name=None</em>, <em>network_security_group_name=None</em>, <em>priority=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>source_address_prefix=None</em>, <em>source_address_prefixes=None</em>, <em>source_application_security_group_ids=None</em>, <em>source_port_range=None</em>, <em>source_port_ranges=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkSecurityRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>access=None</em>, <em>description=None</em>, <em>destination_address_prefix=None</em>, <em>destination_address_prefixes=None</em>, <em>destination_application_security_group_ids=None</em>, <em>destination_port_range=None</em>, <em>destination_port_ranges=None</em>, <em>direction=None</em>, <em>name=None</em>, <em>network_security_group_name=None</em>, <em>priority=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>source_address_prefix=None</em>, <em>source_address_prefixes=None</em>, <em>source_application_security_group_ids=None</em>, <em>source_port_range=None</em>, <em>source_port_ranges=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Network Security Rule.</p>
-<p>&gt; <strong>NOTE on Network Security Groups and Network Security Rules:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Network Security Groups and Network Security Rules:</strong> Terraform currently
 provides both a standalone Network Security Rule resource, and allows for Network Security Rules to be defined in-line within the Network Security Group resource.
-At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</p>
+At this time you cannot use a Network Security Group with in-line Network Security Rules in conjunction with any Network Security Rule resources. Doing so will cause a conflict of rule settings and will overwrite rules.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>access</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether network traffic is allowed or denied. Possible values are <cite>Allow</cite> and <cite>Deny</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>access</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether network traffic is allowed or denied. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for this rule. Restricted to 140 characters.</li>
-<li><strong>destination_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <cite>destination_address_prefixes</cite> is not specified.</li>
-<li><strong>destination_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination address prefixes. Tags may not be used. This is required if <cite>destination_address_prefix</cite> is not specified.</li>
+<li><strong>destination_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefixes</span></code> is not specified.</li>
+<li><strong>destination_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefix</span></code> is not specified.</li>
 <li><strong>destination_application_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A List of destination Application Security Group ID’s</li>
-<li><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination Port or Range. Integer or range between <cite>0</cite> and <cite>65535</cite> or <cite>*</cite> to match any. This is required if <cite>destination_port_ranges</cite> is not specified.</li>
-<li><strong>destination_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination ports or port ranges. This is required if <cite>destination_port_range</cite> is not specified.</li>
-<li><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are <cite>Inbound</cite> and <cite>Outbound</cite>.</li>
+<li><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <cite>*``to match any. This is required if`</cite>destination_port_ranges<a href="#id2"><span class="problematic" id="id3">``</span></a>is not specified.</li>
+<li><strong>destination_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination ports or port ranges. This is required if``destination_port_range<a href="#id4"><span class="problematic" id="id5">``</span></a>is not specified.</li>
+<li><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are``Inbound<code class="docutils literal notranslate"><span class="pre">and</span></code>Outbound<a href="#id6"><span class="problematic" id="id7">``</span></a>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security rule. This needs to be unique across all Rules in the Network Security Group. Changing this forces a new resource to be created.</li>
 <li><strong>network_security_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Security Group that we want to attach the rule to. Changing this forces a new resource to be created.</li>
 <li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.</li>
-<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network protocol this rule applies to. Possible values include <cite>Tcp</cite>, <cite>Udp</cite> or <cite>*</cite> (which matches both).</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network protocol this rule applies to. Possible values include``Tcp<code class="docutils literal notranslate"><span class="pre">,</span></code>Udp<code class="docutils literal notranslate"><span class="pre">or</span></code><a href="#id8"><span class="problematic" id="id9">*</span></a>` (which matches both).</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Network Security Rule. Changing this forces a new resource to be created.</li>
-<li><strong>source_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <cite>source_address_prefixes</cite> is not specified.</li>
-<li><strong>source_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of source address prefixes. Tags may not be used. This is required if <cite>source_address_prefix</cite> is not specified.</li>
+<li><strong>source_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefixes</span></code> is not specified.</li>
+<li><strong>source_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of source address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefix</span></code> is not specified.</li>
 <li><strong>source_application_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A List of source Application Security Group ID’s</li>
-<li><strong>source_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Source Port or Range. Integer or range between <cite>0</cite> and <cite>65535</cite> or <cite>*</cite> to match any. This is required if <cite>source_port_ranges</cite> is not specified.</li>
-<li><strong>source_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of source ports or port ranges. This is required if <cite>source_port_range</cite> is not specified.</li>
+<li><strong>source_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Source Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> to match any. This is required if <code class="docutils literal notranslate"><span class="pre">source_port_ranges</span></code> is not specified.</li>
+<li><strong>source_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of source ports or port ranges. This is required if <code class="docutils literal notranslate"><span class="pre">source_port_range</span></code> is not specified.</li>
 </ul>
 </td>
 </tr>
@@ -1844,7 +2039,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.access">
 <code class="descname">access</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.access" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether network traffic is allowed or denied. Possible values are <cite>Allow</cite> and <cite>Deny</cite>.</p>
+<dd><p>Specifies whether network traffic is allowed or denied. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1856,13 +2051,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.destination_address_prefix">
 <code class="descname">destination_address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.destination_address_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <cite>destination_address_prefixes</cite> is not specified.</p>
+<dd><p>CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefixes</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.destination_address_prefixes">
 <code class="descname">destination_address_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.destination_address_prefixes" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of destination address prefixes. Tags may not be used. This is required if <cite>destination_address_prefix</cite> is not specified.</p>
+<dd><p>List of destination address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefix</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1874,19 +2069,19 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.destination_port_range">
 <code class="descname">destination_port_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.destination_port_range" title="Permalink to this definition">¶</a></dt>
-<dd><p>Destination Port or Range. Integer or range between <cite>0</cite> and <cite>65535</cite> or <cite>*</cite> to match any. This is required if <cite>destination_port_ranges</cite> is not specified.</p>
+<dd><p>Destination Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> to match any. This is required if <code class="docutils literal notranslate"><span class="pre">destination_port_ranges</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.destination_port_ranges">
 <code class="descname">destination_port_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.destination_port_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of destination ports or port ranges. This is required if <cite>destination_port_range</cite> is not specified.</p>
+<dd><p>List of destination ports or port ranges. This is required if <code class="docutils literal notranslate"><span class="pre">destination_port_range</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.direction">
 <code class="descname">direction</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.direction" title="Permalink to this definition">¶</a></dt>
-<dd><p>The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are <cite>Inbound</cite> and <cite>Outbound</cite>.</p>
+<dd><p>The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are <code class="docutils literal notranslate"><span class="pre">Inbound</span></code> and <code class="docutils literal notranslate"><span class="pre">Outbound</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1910,7 +2105,7 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.protocol">
 <code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>Network protocol this rule applies to. Possible values include <cite>Tcp</cite>, <cite>Udp</cite> or <cite>*</cite> (which matches both).</p>
+<dd><p>Network protocol this rule applies to. Possible values include <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> (which matches both).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1922,13 +2117,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.source_address_prefix">
 <code class="descname">source_address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.source_address_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <cite>source_address_prefixes</cite> is not specified.</p>
+<dd><p>CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefixes</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.source_address_prefixes">
 <code class="descname">source_address_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.source_address_prefixes" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of source address prefixes. Tags may not be used. This is required if <cite>source_address_prefix</cite> is not specified.</p>
+<dd><p>List of source address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefix</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1940,13 +2135,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.source_port_range">
 <code class="descname">source_port_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.source_port_range" title="Permalink to this definition">¶</a></dt>
-<dd><p>Source Port or Range. Integer or range between <cite>0</cite> and <cite>65535</cite> or <cite>*</cite> to match any. This is required if <cite>source_port_ranges</cite> is not specified.</p>
+<dd><p>Source Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> to match any. This is required if <code class="docutils literal notranslate"><span class="pre">source_port_ranges</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkSecurityRule.source_port_ranges">
 <code class="descname">source_port_ranges</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkSecurityRule.source_port_ranges" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of source ports or port ranges. This is required if <cite>source_port_range</cite> is not specified.</p>
+<dd><p>List of source ports or port ranges. This is required if <code class="docutils literal notranslate"><span class="pre">source_port_range</span></code> is not specified.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1991,15 +2186,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.NetworkWatcher">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkWatcher</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcher" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">NetworkWatcher</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.NetworkWatcher" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Network Watcher.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Watcher. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Network Watcher. Changing this forces a new resource to be created.</li>
@@ -2075,23 +2270,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.PacketCapture">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">PacketCapture</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>filters=None</em>, <em>maximum_bytes_per_packet=None</em>, <em>maximum_bytes_per_session=None</em>, <em>maximum_capture_duration=None</em>, <em>name=None</em>, <em>network_watcher_name=None</em>, <em>resource_group_name=None</em>, <em>storage_location=None</em>, <em>target_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PacketCapture" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">PacketCapture</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>filters=None</em>, <em>maximum_bytes_per_packet=None</em>, <em>maximum_bytes_per_session=None</em>, <em>maximum_capture_duration=None</em>, <em>name=None</em>, <em>network_watcher_name=None</em>, <em>resource_group_name=None</em>, <em>storage_location=None</em>, <em>target_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PacketCapture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures Packet Capturing against a Virtual Machine using a Network Watcher.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>filter</cite> blocks as defined below. Changing this forces a new resource to be created.</li>
-<li><strong>maximum_bytes_per_packet</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of bytes captured per packet. The remaining bytes are truncated. Defaults to <cite>0</cite> (Entire Packet Captured). Changing this forces a new resource to be created.</li>
-<li><strong>maximum_bytes_per_session</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum size of the capture in Bytes. Defaults to <cite>1073741824</cite> (1GB). Changing this forces a new resource to be created.</li>
-<li><strong>maximum_capture_duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum duration of the capture session in seconds. Defaults to <cite>18000</cite> (5 hours). Changing this forces a new resource to be created.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">filter</span></code> blocks as defined below. Changing this forces a new resource to be created.</li>
+<li><strong>maximum_bytes_per_packet</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of bytes captured per packet. The remaining bytes are truncated. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code> (Entire Packet Captured). Changing this forces a new resource to be created.</li>
+<li><strong>maximum_bytes_per_session</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum size of the capture in Bytes. Defaults to <code class="docutils literal notranslate"><span class="pre">1073741824</span></code> (1GB). Changing this forces a new resource to be created.</li>
+<li><strong>maximum_capture_duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum duration of the capture session in seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">18000</span></code> (5 hours). Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for this Packet Capture. Changing this forces a new resource to be created.</li>
 <li><strong>network_watcher_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Watcher. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.</li>
-<li><strong>storage_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>storage_location</cite> block as defined below. Changing this forces a new resource to be created.</li>
+<li><strong>storage_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">storage_location</span></code> block as defined below. Changing this forces a new resource to be created.</li>
 <li><strong>target_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Resource to capture packets from. Changing this forces a new resource to be created.</li>
 </ul>
 </td>
@@ -2101,25 +2296,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.PacketCapture.filters">
 <code class="descname">filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.filters" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>filter</cite> blocks as defined below. Changing this forces a new resource to be created.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">filter</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.PacketCapture.maximum_bytes_per_packet">
 <code class="descname">maximum_bytes_per_packet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.maximum_bytes_per_packet" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of bytes captured per packet. The remaining bytes are truncated. Defaults to <cite>0</cite> (Entire Packet Captured). Changing this forces a new resource to be created.</p>
+<dd><p>The number of bytes captured per packet. The remaining bytes are truncated. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code> (Entire Packet Captured). Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.PacketCapture.maximum_bytes_per_session">
 <code class="descname">maximum_bytes_per_session</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.maximum_bytes_per_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Maximum size of the capture in Bytes. Defaults to <cite>1073741824</cite> (1GB). Changing this forces a new resource to be created.</p>
+<dd><p>Maximum size of the capture in Bytes. Defaults to <code class="docutils literal notranslate"><span class="pre">1073741824</span></code> (1GB). Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.PacketCapture.maximum_capture_duration">
 <code class="descname">maximum_capture_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.maximum_capture_duration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The maximum duration of the capture session in seconds. Defaults to <cite>18000</cite> (5 hours). Changing this forces a new resource to be created.</p>
+<dd><p>The maximum duration of the capture session in seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">18000</span></code> (5 hours). Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2143,7 +2338,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.PacketCapture.storage_location">
 <code class="descname">storage_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.storage_location" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>storage_location</cite> block as defined below. Changing this forces a new resource to be created.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_location</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2194,16 +2389,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.PublicIp">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">PublicIp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocation_method=None</em>, <em>domain_name_label=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>ip_version=None</em>, <em>location=None</em>, <em>name=None</em>, <em>public_ip_address_allocation=None</em>, <em>resource_group_name=None</em>, <em>reverse_fqdn=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PublicIp" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">PublicIp</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_method=None</em>, <em>domain_name_label=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>ip_version=None</em>, <em>location=None</em>, <em>name=None</em>, <em>public_ip_address_allocation=None</em>, <em>resource_group_name=None</em>, <em>reverse_fqdn=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.PublicIp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage a Public IP Address.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocation_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the allocation method for this IP address. Possible values are <cite>Static</cite> or <cite>Dynamic</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>allocation_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the allocation method for this IP address. Possible values are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</li>
 <li><strong>domain_name_label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Label for the Domain Name. Will be used to make up the FQDN.  If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.</li>
 <li><strong>idle_timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the timeout for the TCP idle connection. The value can be set between 4 and 30 minutes.</li>
 <li><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP Version to use, IPv6 or IPv4.</li>
@@ -2225,7 +2420,7 @@ new resource to be created.</li>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>reverse_fqdn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU of the Public IP. Accepted values are <cite>Basic</cite> and <cite>Standard</cite>. Defaults to <cite>Basic</cite>.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU of the Public IP. Accepted values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A collection containing the availability zone to allocate the Public IP in.</li>
 </ul>
@@ -2236,7 +2431,7 @@ new resource to be created.</li>
 <dl class="attribute">
 <dt id="pulumi_azure.network.PublicIp.allocation_method">
 <code class="descname">allocation_method</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PublicIp.allocation_method" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the allocation method for this IP address. Possible values are <cite>Static</cite> or <cite>Dynamic</cite>.</p>
+<dd><p>Defines the allocation method for this IP address. Possible values are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2298,7 +2493,7 @@ create the public ip.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.PublicIp.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PublicIp.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU of the Public IP. Accepted values are <cite>Basic</cite> and <cite>Standard</cite>. Defaults to <cite>Basic</cite>.</p>
+<dd><p>The SKU of the Public IP. Accepted values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2355,19 +2550,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.Route">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address_prefix=None</em>, <em>name=None</em>, <em>next_hop_in_ip_address=None</em>, <em>next_hop_type=None</em>, <em>resource_group_name=None</em>, <em>route_table_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_prefix=None</em>, <em>name=None</em>, <em>next_hop_in_ip_address=None</em>, <em>next_hop_type=None</em>, <em>resource_group_name=None</em>, <em>route_table_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Route within a Route Table.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination CIDR to which the route applies, such as <cite>10.1.0.0/16</cite></li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination CIDR to which the route applies, such as <code class="docutils literal notranslate"><span class="pre">10.1.0.0/16</span></code></li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route. Changing this forces a new resource to be created.</li>
-<li><strong>next_hop_in_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is <cite>VirtualAppliance</cite>.</li>
-<li><strong>next_hop_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of Azure hop the packet should be sent to. Possible values are <cite>VirtualNetworkGateway</cite>, <cite>VnetLocal</cite>, <cite>Internet</cite>, <cite>VirtualAppliance</cite> and <cite>None</cite></li>
+<li><strong>next_hop_in_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is <code class="docutils literal notranslate"><span class="pre">VirtualAppliance</span></code>.</li>
+<li><strong>next_hop_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of Azure hop the packet should be sent to. Possible values are <code class="docutils literal notranslate"><span class="pre">VirtualNetworkGateway</span></code>, <code class="docutils literal notranslate"><span class="pre">VnetLocal</span></code>, <code class="docutils literal notranslate"><span class="pre">Internet</span></code>, <code class="docutils literal notranslate"><span class="pre">VirtualAppliance</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the route. Changing this forces a new resource to be created.</li>
 <li><strong>route_table_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route table within which create the route. Changing this forces a new resource to be created.</li>
 </ul>
@@ -2378,7 +2573,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.Route.address_prefix">
 <code class="descname">address_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Route.address_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The destination CIDR to which the route applies, such as <cite>10.1.0.0/16</cite></p>
+<dd><p>The destination CIDR to which the route applies, such as <code class="docutils literal notranslate"><span class="pre">10.1.0.0/16</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2390,13 +2585,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.Route.next_hop_in_ip_address">
 <code class="descname">next_hop_in_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Route.next_hop_in_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is <cite>VirtualAppliance</cite>.</p>
+<dd><p>Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is <code class="docutils literal notranslate"><span class="pre">VirtualAppliance</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.Route.next_hop_type">
 <code class="descname">next_hop_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Route.next_hop_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of Azure hop the packet should be sent to. Possible values are <cite>VirtualNetworkGateway</cite>, <cite>VnetLocal</cite>, <cite>Internet</cite>, <cite>VirtualAppliance</cite> and <cite>None</cite></p>
+<dd><p>The type of Azure hop the packet should be sent to. Possible values are <code class="docutils literal notranslate"><span class="pre">VirtualNetworkGateway</span></code>, <code class="docutils literal notranslate"><span class="pre">VnetLocal</span></code>, <code class="docutils literal notranslate"><span class="pre">Internet</span></code>, <code class="docutils literal notranslate"><span class="pre">VirtualAppliance</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2453,20 +2648,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.RouteTable">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>disable_bgp_route_propagation=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>routes=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.RouteTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>disable_bgp_route_propagation=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>routes=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.RouteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Route Table</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>disable_bgp_route_propagation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the route table. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the route table. Changing this forces a new resource to be created.</li>
-<li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times to define multiple routes. Each <cite>route</cite> block supports fields documented below.</li>
+<li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times to define multiple routes. Each <code class="docutils literal notranslate"><span class="pre">route</span></code> block supports fields documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -2500,7 +2695,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.RouteTable.routes">
 <code class="descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.RouteTable.routes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Can be specified multiple times to define multiple routes. Each <cite>route</cite> block supports fields documented below.</p>
+<dd><p>Can be specified multiple times to define multiple routes. Each <code class="docutils literal notranslate"><span class="pre">route</span></code> block supports fields documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2557,26 +2752,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.Subnet">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address_prefix=None</em>, <em>delegations=None</em>, <em>ip_configurations=None</em>, <em>name=None</em>, <em>network_security_group_id=None</em>, <em>resource_group_name=None</em>, <em>route_table_id=None</em>, <em>service_endpoints=None</em>, <em>virtual_network_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_prefix=None</em>, <em>delegations=None</em>, <em>ip_configurations=None</em>, <em>name=None</em>, <em>network_security_group_id=None</em>, <em>resource_group_name=None</em>, <em>route_table_id=None</em>, <em>service_endpoints=None</em>, <em>virtual_network_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a subnet. Subnets represent network segments within the IP space defined by the virtual network.</p>
-<p>&gt; <strong>NOTE on Virtual Networks and Subnet’s:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Virtual Networks and Subnet’s:</strong> Terraform currently
 provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
-At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet’s.</p>
+At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet’s.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The address prefix to use for the subnet.</li>
-<li><strong>delegations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <cite>delegation</cite> blocks as defined below.</li>
+<li><strong>delegations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">delegation</span></code> blocks as defined below.</li>
 <li><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The collection of IP Configurations with IPs within this subnet.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnet. Changing this forces a new resource to be created.</li>
 <li><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group to associate with the subnet.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the subnet. Changing this forces a new resource to be created.</li>
 <li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Route Table to associate with the subnet.</li>
-<li><strong>service_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of Service endpoints to associate with the subnet. Possible values include: <cite>Microsoft.AzureActiveDirectory</cite>, <cite>Microsoft.AzureCosmosDB</cite>, <cite>Microsoft.EventHub</cite>, <cite>Microsoft.KeyVault</cite>, <cite>Microsoft.ServiceBus</cite>, <cite>Microsoft.Sql</cite> and <cite>Microsoft.Storage</cite>.</li>
+<li><strong>service_endpoints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of Service endpoints to associate with the subnet. Possible values include: <code class="docutils literal notranslate"><span class="pre">Microsoft.AzureActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.AzureCosmosDB</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.EventHub</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.KeyVault</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ServiceBus</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Storage</span></code>.</li>
 <li><strong>virtual_network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual network to which to attach the subnet. Changing this forces a new resource to be created.</li>
 </ul>
 </td>
@@ -2592,7 +2788,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 <dl class="attribute">
 <dt id="pulumi_azure.network.Subnet.delegations">
 <code class="descname">delegations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Subnet.delegations" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>delegation</cite> blocks as defined below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">delegation</span></code> blocks as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2628,7 +2824,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 <dl class="attribute">
 <dt id="pulumi_azure.network.Subnet.service_endpoints">
 <code class="descname">service_endpoints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Subnet.service_endpoints" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of Service endpoints to associate with the subnet. Possible values include: <cite>Microsoft.AzureActiveDirectory</cite>, <cite>Microsoft.AzureCosmosDB</cite>, <cite>Microsoft.EventHub</cite>, <cite>Microsoft.KeyVault</cite>, <cite>Microsoft.ServiceBus</cite>, <cite>Microsoft.Sql</cite> and <cite>Microsoft.Storage</cite>.</p>
+<dd><p>The list of Service endpoints to associate with the subnet. Possible values include: <code class="docutils literal notranslate"><span class="pre">Microsoft.AzureActiveDirectory</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.AzureCosmosDB</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.EventHub</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.KeyVault</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ServiceBus</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Storage</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2679,16 +2875,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.SubnetNetworkSecurityGroupAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">SubnetNetworkSecurityGroupAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>network_security_group_id=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.SubnetNetworkSecurityGroupAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">SubnetNetworkSecurityGroupAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network_security_group_id=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.SubnetNetworkSecurityGroupAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a Network Security Group with a Subnet within a Virtual Network.</p>
-<p>-&gt; <strong>NOTE:</strong> Subnet <cite>&lt;-&gt;</cite> Network Security Group associations currently need to be configured on both this resource and using the <cite>network_security_group_id</cite> field on the <cite>azurerm_subnet</cite> resource. The next major version of the AzureRM Provider (2.0) will remove the <cite>network_security_group_id</cite> field from the <cite>azurerm_subnet</cite> resource such that this resource is used to link resources in future.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Subnet <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> Network Security Group associations currently need to be configured on both this resource and using the <code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> field on the <code class="docutils literal notranslate"><span class="pre">azurerm_subnet</span></code> resource. The next major version of the AzureRM Provider (2.0) will remove the <code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> field from the <code class="docutils literal notranslate"><span class="pre">azurerm_subnet</span></code> resource such that this resource is used to link resources in future.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group which should be associated with the Subnet. Changing this forces a new resource to be created.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet. Changing this forces a new resource to be created.</li>
 </ul>
@@ -2750,16 +2947,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.SubnetRouteTableAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">SubnetRouteTableAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.SubnetRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">SubnetRouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.SubnetRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates a Route Table with a Subnet within a Virtual Network.</p>
-<p>-&gt; <strong>NOTE:</strong> Subnet <cite>&lt;-&gt;</cite> Route Table associations currently need to be configured on both this resource and using the <cite>route_table_id</cite> field on the <cite>azurerm_subnet</cite> resource. The next major version of the AzureRM Provider (2.0) will remove the <cite>route_table_id</cite> field from the <cite>azurerm_subnet</cite> resource such that this resource is used to link resources in future.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Subnet <code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> Route Table associations currently need to be configured on both this resource and using the <code class="docutils literal notranslate"><span class="pre">route_table_id</span></code> field on the <code class="docutils literal notranslate"><span class="pre">azurerm_subnet</span></code> resource. The next major version of the AzureRM Provider (2.0) will remove the <code class="docutils literal notranslate"><span class="pre">route_table_id</span></code> field from the <code class="docutils literal notranslate"><span class="pre">azurerm_subnet</span></code> resource such that this resource is used to link resources in future.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Route Table which should be associated with the Subnet. Changing this forces a new resource to be created.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Subnet. Changing this forces a new resource to be created.</li>
 </ul>
@@ -2821,22 +3019,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetwork">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetwork</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>address_spaces=None</em>, <em>dns_servers=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnets=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetwork</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>address_spaces=None</em>, <em>ddos_protection_plan=None</em>, <em>dns_servers=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>subnets=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a virtual network including any configured subnets. Each subnet can
 optionally be configured with a security group to be associated with the subnet.</p>
-<p>&gt; <strong>NOTE on Virtual Networks and Subnet’s:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Virtual Networks and Subnet’s:</strong> Terraform currently
 provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
-At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet’s.</p>
+At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet’s.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address_spaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
 a new resource to be created.</li>
+<li><strong>ddos_protection_plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ddos_protection_plan</span></code> block as documented below.</li>
 <li><strong>dns_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IP addresses of DNS servers</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location/region where the virtual network is
 created. Changing this forces a new resource to be created.</li>
@@ -2845,7 +3045,7 @@ new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the virtual network.</li>
 <li><strong>subnets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times to define multiple
-subnets. Each <cite>subnet</cite> block supports fields documented below.</li>
+subnets. Each <code class="docutils literal notranslate"><span class="pre">subnet</span></code> block supports fields documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -2858,6 +3058,12 @@ subnets. Each <cite>subnet</cite> block supports fields documented below.</li>
 <dd><p>The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
 a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.VirtualNetwork.ddos_protection_plan">
+<code class="descname">ddos_protection_plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork.ddos_protection_plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">ddos_protection_plan</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2891,7 +3097,7 @@ create the virtual network.</p>
 <dt id="pulumi_azure.network.VirtualNetwork.subnets">
 <code class="descname">subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork.subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Can be specified multiple times to define multiple
-subnets. Each <cite>subnet</cite> block supports fields documented below.</p>
+subnets. Each <code class="docutils literal notranslate"><span class="pre">subnet</span></code> block supports fields documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2942,20 +3148,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetworkGateway">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetworkGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>active_active=None</em>, <em>bgp_settings=None</em>, <em>default_local_network_gateway_id=None</em>, <em>enable_bgp=None</em>, <em>ip_configurations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpn_client_configuration=None</em>, <em>vpn_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetworkGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>active_active=None</em>, <em>bgp_settings=None</em>, <em>default_local_network_gateway_id=None</em>, <em>enable_bgp=None</em>, <em>ip_configurations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>vpn_client_configuration=None</em>, <em>vpn_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Virtual Network Gateway to establish secure, cross-premises connectivity.</p>
-<p>-&gt; <strong>Note:</strong> Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)</p>
+<blockquote>
+<div><strong>Note:</strong> Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>active_active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <cite>true</cite>, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a <cite>HighPerformance</cite> or an
-<cite>UltraPerformance</cite> sku. If <cite>false</cite>, an active-standby gateway will be created.
-Defaults to <cite>false</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>active_active</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, an active-active Virtual Network Gateway
+will be created. An active-active gateway requires a <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code> or an
+<code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code> sku. If <code class="docutils literal notranslate"><span class="pre">false</span></code>, an active-standby gateway will be created.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -2966,18 +3173,18 @@ Defaults to <cite>false</cite>.</li>
 <blockquote>
 <div>through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (<em>forced tunneling</em>). Refer to the
-[Azure documentation on forced tunneling](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm">https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm</a>).
+<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm">Azure documentation on forced tunneling</a>.
 If not specified, forced tunneling is disabled.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <cite>true</cite>, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to <cite>false</cite>.</li>
-<li><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <cite>ip_configuration</cite> blocks documented below.
-An active-standby gateway requires exactly one <cite>ip_configuration</cite> block whereas
-an active-active gateway requires exactly two <cite>ip_configuration</cite> blocks.</li>
+<li><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) will be enabled
+for this Virtual Network Gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks documented below.
+An active-standby gateway requires exactly one <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block whereas
+an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Virtual Network Gateway. Changing the name
@@ -2986,19 +3193,19 @@ forces a new resource to be created.</li>
 create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.</li>
 <li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configuration of the size and capacity of the virtual network
-gateway. Valid options are <cite>Basic</cite>, <cite>Standard</cite>, <cite>HighPerformance</cite>, <cite>UltraPerformance</cite>,
-<cite>ErGw1AZ</cite>, <cite>ErGw2AZ</cite>, <cite>ErGw3AZ</cite>, <cite>VpnGw1</cite>, <cite>VpnGw2</cite> and <cite>VpnGw3</cite>
-and depend on the <cite>type</cite> and <cite>vpn_type</cite> arguments.
-A <cite>PolicyBased</cite> gateway only supports the <cite>Basic</cite> sku. Further, the <cite>UltraPerformance</cite>
-sku is only supported by an <cite>ExpressRoute</cite> gateway.</li>
+gateway. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code>, <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code> and <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>
+and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> arguments.
+A <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code> gateway only supports the <code class="docutils literal notranslate"><span class="pre">Basic</span></code> sku. Further, the <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>
+sku is only supported by an <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> gateway.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the Virtual Network Gateway. Valid options are
-<cite>Vpn</cite> or <cite>ExpressRoute</cite>. Changing the type forces a new resource to be created.</li>
-<li><strong>vpn_client_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>vpn_client_configuration</cite> block which
+<code class="docutils literal notranslate"><span class="pre">Vpn</span></code> or <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code>. Changing the type forces a new resource to be created.</li>
+<li><strong>vpn_client_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">vpn_client_configuration</span></code> block which
 is documented below. In this block the Virtual Network Gateway can be configured
 to accept IPSec point-to-site connections.</li>
 <li><strong>vpn_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The routing type of the Virtual Network Gateway. Valid
-options are <cite>RouteBased</cite> or <cite>PolicyBased</cite>. Defaults to <cite>RouteBased</cite>.</li>
+options are <code class="docutils literal notranslate"><span class="pre">RouteBased</span></code> or <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">RouteBased</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -3007,10 +3214,10 @@ options are <cite>RouteBased</cite> or <cite>PolicyBased</cite>. Defaults to <ci
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.active_active">
 <code class="descname">active_active</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.active_active" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a <cite>HighPerformance</cite> or an
-<cite>UltraPerformance</cite> sku. If <cite>false</cite>, an active-standby gateway will be created.
-Defaults to <cite>false</cite>.</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, an active-active Virtual Network Gateway
+will be created. An active-active gateway requires a <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code> or an
+<code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code> sku. If <code class="docutils literal notranslate"><span class="pre">false</span></code>, an active-standby gateway will be created.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3019,23 +3226,23 @@ Defaults to <cite>false</cite>.</p>
 <dd><p>The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
 gateway is created will be routed (<em>forced tunneling</em>). Refer to the
-[Azure documentation on forced tunneling](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm">https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm</a>).
+<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm">Azure documentation on forced tunneling</a>.
 If not specified, forced tunneling is disabled.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.enable_bgp">
 <code class="descname">enable_bgp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.enable_bgp" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to <cite>false</cite>.</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) will be enabled
+for this Virtual Network Gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.ip_configurations">
 <code class="descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.ip_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or two <cite>ip_configuration</cite> blocks documented below.
-An active-standby gateway requires exactly one <cite>ip_configuration</cite> block whereas
-an active-active gateway requires exactly two <cite>ip_configuration</cite> blocks.</p>
+<dd><p>One or two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks documented below.
+An active-standby gateway requires exactly one <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block whereas
+an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3064,11 +3271,11 @@ a new resource to be created.</p>
 <dt id="pulumi_azure.network.VirtualNetworkGateway.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configuration of the size and capacity of the virtual network
-gateway. Valid options are <cite>Basic</cite>, <cite>Standard</cite>, <cite>HighPerformance</cite>, <cite>UltraPerformance</cite>,
-<cite>ErGw1AZ</cite>, <cite>ErGw2AZ</cite>, <cite>ErGw3AZ</cite>, <cite>VpnGw1</cite>, <cite>VpnGw2</cite> and <cite>VpnGw3</cite>
-and depend on the <cite>type</cite> and <cite>vpn_type</cite> arguments.
-A <cite>PolicyBased</cite> gateway only supports the <cite>Basic</cite> sku. Further, the <cite>UltraPerformance</cite>
-sku is only supported by an <cite>ExpressRoute</cite> gateway.</p>
+gateway. Valid options are <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">HighPerformance</span></code>, <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ErGw1AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw2AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">ErGw3AZ</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw1</span></code>, <code class="docutils literal notranslate"><span class="pre">VpnGw2</span></code> and <code class="docutils literal notranslate"><span class="pre">VpnGw3</span></code>
+and depend on the <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">vpn_type</span></code> arguments.
+A <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code> gateway only supports the <code class="docutils literal notranslate"><span class="pre">Basic</span></code> sku. Further, the <code class="docutils literal notranslate"><span class="pre">UltraPerformance</span></code>
+sku is only supported by an <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> gateway.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3081,13 +3288,13 @@ sku is only supported by an <cite>ExpressRoute</cite> gateway.</p>
 <dt id="pulumi_azure.network.VirtualNetworkGateway.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the Virtual Network Gateway. Valid options are
-<cite>Vpn</cite> or <cite>ExpressRoute</cite>. Changing the type forces a new resource to be created.</p>
+<code class="docutils literal notranslate"><span class="pre">Vpn</span></code> or <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code>. Changing the type forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.vpn_client_configuration">
 <code class="descname">vpn_client_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.vpn_client_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>vpn_client_configuration</cite> block which
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">vpn_client_configuration</span></code> block which
 is documented below. In this block the Virtual Network Gateway can be configured
 to accept IPSec point-to-site connections.</p>
 </dd></dl>
@@ -3096,7 +3303,7 @@ to accept IPSec point-to-site connections.</p>
 <dt id="pulumi_azure.network.VirtualNetworkGateway.vpn_type">
 <code class="descname">vpn_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.vpn_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The routing type of the Virtual Network Gateway. Valid
-options are <cite>RouteBased</cite> or <cite>PolicyBased</cite>. Defaults to <cite>RouteBased</cite>.</p>
+options are <code class="docutils literal notranslate"><span class="pre">RouteBased</span></code> or <code class="docutils literal notranslate"><span class="pre">PolicyBased</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">RouteBased</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3141,51 +3348,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetworkGatewayConnection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>authorization_key=None</em>, <em>enable_bgp=None</em>, <em>express_route_circuit_id=None</em>, <em>ipsec_policy=None</em>, <em>local_network_gateway_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>peer_virtual_network_gateway_id=None</em>, <em>resource_group_name=None</em>, <em>routing_weight=None</em>, <em>shared_key=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>use_policy_based_traffic_selectors=None</em>, <em>virtual_network_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetworkGatewayConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authorization_key=None</em>, <em>enable_bgp=None</em>, <em>express_route_circuit_id=None</em>, <em>ipsec_policy=None</em>, <em>local_network_gateway_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>peer_virtual_network_gateway_id=None</em>, <em>resource_group_name=None</em>, <em>routing_weight=None</em>, <em>shared_key=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>use_policy_based_traffic_selectors=None</em>, <em>virtual_network_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a connection in an existing Virtual Network Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>authorization_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.</li>
-<li><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <cite>true</cite>, BGP (Border Gateway Protocol) is enabled
-for this connection. Defaults to <cite>false</cite>.</li>
+<li><strong>enable_bgp</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) is enabled
+for this connection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>express_route_circuit_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Express Route Circuit
-when creating an ExpressRoute connection (i.e. when <cite>type</cite> is <cite>ExpressRoute</cite>).
+when creating an ExpressRoute connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code>).
 The Express Route Circuit can be in the same or in a different subscription.</li>
-<li><strong>ipsec_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>ipsec_policy</cite> block which is documented below.
+<li><strong>ipsec_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">ipsec_policy</span></code> block which is documented below.
 Only a single policy can be defined for a connection. For details on
-custom policies refer to [the relevant section in the Azure documentation](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell">https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell</a>).</li>
+custom policies refer to <a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell">the relevant section in the Azure documentation</a>.</li>
 <li><strong>local_network_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the local network gateway
-when creating Site-to-Site connection (i.e. when <cite>type</cite> is <cite>IPsec</cite>).</li>
+when creating Site-to-Site connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">IPsec</span></code>).</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location/region where the connection is
 located. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the connection. Changing the name forces a
 new resource to be created.</li>
 <li><strong>peer_virtual_network_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the peer virtual
-network gateway when creating a VNet-to-VNet connection (i.e. when <cite>type</cite>
-is <cite>Vnet2Vnet</cite>). The peer Virtual Network Gateway can be in the same or
+network gateway when creating a VNet-to-VNet connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code>
+is <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span></code>). The peer Virtual Network Gateway can be in the same or
 in a different subscription.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.</li>
-<li><strong>routing_weight</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The routing weight. Defaults to <cite>10</cite>.</li>
+<li><strong>routing_weight</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The routing weight. Defaults to <code class="docutils literal notranslate"><span class="pre">10</span></code>.</li>
 <li><strong>shared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The shared IPSec key. A key must be provided if a
 Site-to-Site or VNet-to-VNet connection is created whereas ExpressRoute
 connections do not need a shared key.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of connection. Valid options are <cite>IPsec</cite>
-(Site-to-Site), <cite>ExpressRoute</cite> (ExpressRoute), and <cite>Vnet2Vnet</cite> (VNet-to-VNet).
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of connection. Valid options are <code class="docutils literal notranslate"><span class="pre">IPsec</span></code>
+(Site-to-Site), <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> (ExpressRoute), and <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span></code> (VNet-to-VNet).
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.</li>
-<li><strong>use_policy_based_traffic_selectors</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <cite>true</cite>, policy-based traffic
+<li><strong>use_policy_based_traffic_selectors</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
-selectors requires an <cite>ipsec_policy</cite> block. Defaults to <cite>false</cite>.</li>
+selectors requires an <code class="docutils literal notranslate"><span class="pre">ipsec_policy</span></code> block. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>virtual_network_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.</li>
@@ -3205,31 +3412,31 @@ ExpressRoute connection.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.enable_bgp">
 <code class="descname">enable_bgp</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.enable_bgp" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, BGP (Border Gateway Protocol) is enabled
-for this connection. Defaults to <cite>false</cite>.</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, BGP (Border Gateway Protocol) is enabled
+for this connection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.express_route_circuit_id">
 <code class="descname">express_route_circuit_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.express_route_circuit_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the Express Route Circuit
-when creating an ExpressRoute connection (i.e. when <cite>type</cite> is <cite>ExpressRoute</cite>).
+when creating an ExpressRoute connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code>).
 The Express Route Circuit can be in the same or in a different subscription.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.ipsec_policy">
 <code class="descname">ipsec_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.ipsec_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>ipsec_policy</cite> block which is documented below.
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">ipsec_policy</span></code> block which is documented below.
 Only a single policy can be defined for a connection. For details on
-custom policies refer to [the relevant section in the Azure documentation](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell">https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell</a>).</p>
+custom policies refer to <a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell">the relevant section in the Azure documentation</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.local_network_gateway_id">
 <code class="descname">local_network_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.local_network_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the local network gateway
-when creating Site-to-Site connection (i.e. when <cite>type</cite> is <cite>IPsec</cite>).</p>
+when creating Site-to-Site connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">IPsec</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3250,8 +3457,8 @@ new resource to be created.</p>
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.peer_virtual_network_gateway_id">
 <code class="descname">peer_virtual_network_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.peer_virtual_network_gateway_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the peer virtual
-network gateway when creating a VNet-to-VNet connection (i.e. when <cite>type</cite>
-is <cite>Vnet2Vnet</cite>). The peer Virtual Network Gateway can be in the same or
+network gateway when creating a VNet-to-VNet connection (i.e. when <code class="docutils literal notranslate"><span class="pre">type</span></code>
+is <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span></code>). The peer Virtual Network Gateway can be in the same or
 in a different subscription.</p>
 </dd></dl>
 
@@ -3265,7 +3472,7 @@ create the connection Changing the name forces a new resource to be created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.routing_weight">
 <code class="descname">routing_weight</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.routing_weight" title="Permalink to this definition">¶</a></dt>
-<dd><p>The routing weight. Defaults to <cite>10</cite>.</p>
+<dd><p>The routing weight. Defaults to <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3285,8 +3492,8 @@ connections do not need a shared key.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of connection. Valid options are <cite>IPsec</cite>
-(Site-to-Site), <cite>ExpressRoute</cite> (ExpressRoute), and <cite>Vnet2Vnet</cite> (VNet-to-VNet).
+<dd><p>The type of connection. Valid options are <code class="docutils literal notranslate"><span class="pre">IPsec</span></code>
+(Site-to-Site), <code class="docutils literal notranslate"><span class="pre">ExpressRoute</span></code> (ExpressRoute), and <code class="docutils literal notranslate"><span class="pre">Vnet2Vnet</span></code> (VNet-to-VNet).
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.</p>
@@ -3295,9 +3502,9 @@ to be created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.use_policy_based_traffic_selectors">
 <code class="descname">use_policy_based_traffic_selectors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGatewayConnection.use_policy_based_traffic_selectors" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, policy-based traffic
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
-selectors requires an <cite>ipsec_policy</cite> block. Defaults to <cite>false</cite>.</p>
+selectors requires an <code class="docutils literal notranslate"><span class="pre">ipsec_policy</span></code> block. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3350,16 +3557,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.network.VirtualNetworkPeering">
-<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetworkPeering</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_forwarded_traffic=None</em>, <em>allow_gateway_transit=None</em>, <em>allow_virtual_network_access=None</em>, <em>name=None</em>, <em>remote_virtual_network_id=None</em>, <em>resource_group_name=None</em>, <em>use_remote_gateways=None</em>, <em>virtual_network_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkPeering" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.network.</code><code class="descname">VirtualNetworkPeering</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_forwarded_traffic=None</em>, <em>allow_gateway_transit=None</em>, <em>allow_virtual_network_access=None</em>, <em>name=None</em>, <em>remote_virtual_network_id=None</em>, <em>resource_group_name=None</em>, <em>use_remote_gateways=None</em>, <em>virtual_network_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkPeering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a virtual network peering which allows resources to access other
 resources in the linked virtual network.</p>
+<p>Virtual Network peerings cannot be created, updated or deleted concurrently.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_forwarded_traffic</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if forwarded traffic from  VMs
 in the remote virtual network is allowed. Defaults to false.</li>
 <li><strong>allow_gateway_transit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls gatewayLinks can be used in the
@@ -3375,11 +3583,11 @@ remote virtual network.  Changing this forces a new resource to be created.</li>
 create the virtual network. Changing this forces a new resource to be
 created.</li>
 <li><strong>use_remote_gateways</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if remote gateways can be used on
-the local virtual network. If the flag is set to <cite>true</cite>, and
-<cite>allow_gateway_transit</cite> on the remote peering is also <cite>true</cite>, virtual network will
+the local virtual network. If the flag is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">allow_gateway_transit</span></code> on the remote peering is also <code class="docutils literal notranslate"><span class="pre">true</span></code>, virtual network will
 use gateways of remote virtual network for transit. Only one peering can
-have this flag set to <cite>true</cite>. This flag cannot be set if virtual network
-already has a gateway. Defaults to <cite>false</cite>.</li>
+have this flag set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This flag cannot be set if virtual network
+already has a gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>virtual_network_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual network. Changing
 this forces a new resource to be created.</li>
 </ul>
@@ -3435,11 +3643,11 @@ created.</p>
 <dt id="pulumi_azure.network.VirtualNetworkPeering.use_remote_gateways">
 <code class="descname">use_remote_gateways</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkPeering.use_remote_gateways" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controls if remote gateways can be used on
-the local virtual network. If the flag is set to <cite>true</cite>, and
-<cite>allow_gateway_transit</cite> on the remote peering is also <cite>true</cite>, virtual network will
+the local virtual network. If the flag is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">allow_gateway_transit</span></code> on the remote peering is also <code class="docutils literal notranslate"><span class="pre">true</span></code>, virtual network will
 use gateways of remote virtual network for transit. Only one peering can
-have this flag set to <cite>true</cite>. This flag cannot be set if virtual network
-already has a gateway. Defaults to <cite>false</cite>.</p>
+have this flag set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. This flag cannot be set if virtual network
+already has a gateway. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

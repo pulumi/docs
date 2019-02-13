@@ -2,18 +2,19 @@
 <span id="datasync"></span><h1>datasync<a class="headerlink" href="#module-pulumi_aws.datasync" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.datasync.Agent">
-<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">Agent</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>activation_key=None</em>, <em>ip_address=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Agent" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">Agent</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>activation_key=None</em>, <em>ip_address=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Agent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS DataSync Agent deployed on premises.</p>
-<p>&gt; <strong>NOTE:</strong> One of <cite>activation_key</cite> or <cite>ip_address</cite> must be provided for resource creation (agent activation). Neither is required for resource import. If using <cite>ip_address</cite>, Terraform must be able to make an HTTP (port 80) GET request to the specified IP address from where it is running. The agent will turn off that HTTP server after activation.</p>
+<blockquote>
+<div><strong>NOTE:</strong> One of <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> or <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> must be provided for resource creation (agent activation). Neither is required for resource import. If using <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>, Terraform must be able to make an HTTP (port 80) GET request to the specified IP address from where it is running. The agent will turn off that HTTP server after activation.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>activation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DataSync Agent activation key during resource creation. Conflicts with <cite>ip_address</cite>. If an <cite>ip_address</cite> is provided instead, Terraform will retrieve the <cite>activation_key</cite> as part of the resource creation.</li>
-<li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with <cite>activation_key</cite>. DataSync Agent must be accessible on port 80 from where Terraform is running.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>activation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DataSync Agent activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>. If an <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> is provided instead, Terraform will retrieve the <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> as part of the resource creation.</li>
+<li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. DataSync Agent must be accessible on port 80 from where Terraform is running.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DataSync Agent.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Agent.</li>
 </ul>
@@ -24,7 +25,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.Agent.activation_key">
 <code class="descname">activation_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.Agent.activation_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>DataSync Agent activation key during resource creation. Conflicts with <cite>ip_address</cite>. If an <cite>ip_address</cite> is provided instead, Terraform will retrieve the <cite>activation_key</cite> as part of the resource creation.</p>
+<dd><p>DataSync Agent activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>. If an <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> is provided instead, Terraform will retrieve the <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> as part of the resource creation.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -36,7 +37,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.Agent.ip_address">
 <code class="descname">ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.Agent.ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with <cite>activation_key</cite>. DataSync Agent must be accessible on port 80 from where Terraform is running.</p>
+<dd><p>DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with <code class="docutils literal notranslate"><span class="pre">activation_key</span></code>. DataSync Agent must be accessible on port 80 from where Terraform is running.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -93,19 +94,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.datasync.EfsLocation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">EfsLocation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ec2_config=None</em>, <em>efs_file_system_arn=None</em>, <em>subdirectory=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.EfsLocation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">EfsLocation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ec2_config=None</em>, <em>efs_file_system_arn=None</em>, <em>subdirectory=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.EfsLocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS DataSync EFS Location.</p>
-<p>&gt; <strong>NOTE:</strong> The EFS File System must have a mounted EFS Mount Target before creating this resource.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The EFS File System must have a mounted EFS Mount Target before creating this resource.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ec2_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing EC2 configurations for connecting to the EFS File System.</li>
 <li><strong>efs_file_system_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of EFS File System.</li>
-<li><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Default <cite>/</cite>.</li>
+<li><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Default <code class="docutils literal notranslate"><span class="pre">/</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value pairs of resource tags to assign to the DataSync Location.</li>
 </ul>
 </td>
@@ -133,7 +135,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.datasync.EfsLocation.subdirectory">
 <code class="descname">subdirectory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.datasync.EfsLocation.subdirectory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Subdirectory to perform actions as source or destination. Default <cite>/</cite>.</p>
+<dd><p>Subdirectory to perform actions as source or destination. Default <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -184,16 +186,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.datasync.NfsLocation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">NfsLocation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>on_prem_config=None</em>, <em>server_hostname=None</em>, <em>subdirectory=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">NfsLocation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>on_prem_config=None</em>, <em>server_hostname=None</em>, <em>subdirectory=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.NfsLocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an NFS Location within AWS DataSync.</p>
-<p>&gt; <strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</p>
+<blockquote>
+<div><strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>on_prem_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing information for connecting to the NFS File System.</li>
 <li><strong>server_hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.</li>
 <li><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subdirectory to perform actions as source or destination. Should be exported by the NFS server.</li>
@@ -275,15 +278,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.datasync.S3Location">
-<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">S3Location</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>s3_bucket_arn=None</em>, <em>s3_config=None</em>, <em>subdirectory=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.S3Location" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">S3Location</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>s3_bucket_arn=None</em>, <em>s3_config=None</em>, <em>subdirectory=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.S3Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an S3 Location within AWS DataSync.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>s3_bucket_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the S3 Bucket.</li>
 <li><strong>s3_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block containing information for connecting to S3.</li>
 <li><strong>subdirectory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Prefix to perform actions as source or destination.</li>
@@ -365,15 +368,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.datasync.Task">
-<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">Task</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cloudwatch_log_group_arn=None</em>, <em>destination_location_arn=None</em>, <em>name=None</em>, <em>options=None</em>, <em>source_location_arn=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Task" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.datasync.</code><code class="descname">Task</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cloudwatch_log_group_arn=None</em>, <em>destination_location_arn=None</em>, <em>name=None</em>, <em>options=None</em>, <em>source_location_arn=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this Terraform resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cloudwatch_log_group_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.</li>
 <li><strong>destination_location_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of destination DataSync Location.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DataSync Task.</li>

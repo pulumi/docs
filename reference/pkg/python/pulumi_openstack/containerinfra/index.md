@@ -4,19 +4,9 @@
 <dt id="pulumi_openstack.containerinfra.Cluster">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster_template_id=None</em>, <em>create_timeout=None</em>, <em>discovery_url=None</em>, <em>docker_volume_size=None</em>, <em>flavor=None</em>, <em>keypair=None</em>, <em>labels=None</em>, <em>master_count=None</em>, <em>master_flavor=None</em>, <em>name=None</em>, <em>node_count=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Magnum cluster resource within OpenStack.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] cluster_template_id
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] cluster_template_id
 :param pulumi.Input[int] create_timeout
 :param pulumi.Input[str] discovery_url
 :param pulumi.Input[int] docker_volume_size
@@ -72,19 +62,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">ClusterTemplate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apiserver_port=None</em>, <em>cluster_distro=None</em>, <em>coe=None</em>, <em>dns_nameserver=None</em>, <em>docker_storage_driver=None</em>, <em>docker_volume_size=None</em>, <em>external_network_id=None</em>, <em>fixed_network=None</em>, <em>fixed_subnet=None</em>, <em>flavor=None</em>, <em>floating_ip_enabled=None</em>, <em>http_proxy=None</em>, <em>https_proxy=None</em>, <em>image=None</em>, <em>insecure_registry=None</em>, <em>keypair_id=None</em>, <em>labels=None</em>, <em>master_flavor=None</em>, <em>master_lb_enabled=None</em>, <em>name=None</em>, <em>network_driver=None</em>, <em>no_proxy=None</em>, <em>public=None</em>, <em>region=None</em>, <em>registry_enabled=None</em>, <em>server_type=None</em>, <em>tls_disabled=None</em>, <em>volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 Magnum cluster template resource within OpenStack.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] apiserver_port
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[int] apiserver_port
 :param pulumi.Input[str] cluster_distro
 :param pulumi.Input[str] coe
 :param pulumi.Input[str] dns_nameserver

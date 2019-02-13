@@ -2,28 +2,28 @@
 <span id="opsworks"></span><h1>opsworks<a class="headerlink" href="#module-pulumi_aws.opsworks" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.opsworks.Application">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_sources=None</em>, <em>auto_bundle_on_deploy=None</em>, <em>aws_flow_ruby_settings=None</em>, <em>data_source_arn=None</em>, <em>data_source_database_name=None</em>, <em>data_source_type=None</em>, <em>description=None</em>, <em>document_root=None</em>, <em>domains=None</em>, <em>enable_ssl=None</em>, <em>environments=None</em>, <em>name=None</em>, <em>rails_env=None</em>, <em>short_name=None</em>, <em>ssl_configurations=None</em>, <em>stack_id=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_sources=None</em>, <em>auto_bundle_on_deploy=None</em>, <em>aws_flow_ruby_settings=None</em>, <em>data_source_arn=None</em>, <em>data_source_database_name=None</em>, <em>data_source_type=None</em>, <em>description=None</em>, <em>document_root=None</em>, <em>domains=None</em>, <em>enable_ssl=None</em>, <em>environments=None</em>, <em>name=None</em>, <em>rails_env=None</em>, <em>short_name=None</em>, <em>ssl_configurations=None</em>, <em>stack_id=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks application resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – SCM configuration of the app as described below.</li>
-<li><strong>auto_bundle_on_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Run bundle install when deploying for application of type <cite>rails</cite>.</li>
+<li><strong>auto_bundle_on_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Run bundle install when deploying for application of type <code class="docutils literal notranslate"><span class="pre">rails</span></code>.</li>
 <li><strong>aws_flow_ruby_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify activity and workflow workers for your app using the aws-flow gem.</li>
 <li><strong>data_source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source’s ARN.</li>
 <li><strong>data_source_database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database name.</li>
-<li><strong>data_source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source’s type one of <cite>AutoSelectOpsworksMysqlInstance</cite>, <cite>OpsworksMysqlInstance</cite>, or <cite>RdsDbInstance</cite>.</li>
+<li><strong>data_source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The data source’s type one of <code class="docutils literal notranslate"><span class="pre">AutoSelectOpsworksMysqlInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OpsworksMysqlInstance</span></code>, or <code class="docutils literal notranslate"><span class="pre">RdsDbInstance</span></code>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the app.</li>
-<li><strong>document_root</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subfolder for the document root for application of type <cite>rails</cite>.</li>
+<li><strong>document_root</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subfolder for the document root for application of type <code class="docutils literal notranslate"><span class="pre">rails</span></code>.</li>
 <li><strong>domains</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual host alias.</li>
-<li><strong>enable_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable SSL for the app. This must be set in order to let <cite>ssl_configuration.private_key</cite>, <cite>ssl_configuration.certificate</cite> and <cite>ssl_configuration.chain</cite> take effect.</li>
+<li><strong>enable_ssl</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable SSL for the app. This must be set in order to let <code class="docutils literal notranslate"><span class="pre">ssl_configuration.private_key</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl_configuration.certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">ssl_configuration.chain</span></code> take effect.</li>
 <li><strong>environments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Object to define environment variables.  Object is described below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the application.</li>
-<li><strong>rails_env</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Rails environment for application of type <cite>rails</cite>.</li>
+<li><strong>rails_env</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Rails environment for application of type <code class="docutils literal notranslate"><span class="pre">rails</span></code>.</li>
 <li><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.</li>
 <li><strong>ssl_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The SSL configuration of the app. Object is described below.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the application will belong to.</li>
@@ -42,7 +42,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.auto_bundle_on_deploy">
 <code class="descname">auto_bundle_on_deploy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.auto_bundle_on_deploy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run bundle install when deploying for application of type <cite>rails</cite>.</p>
+<dd><p>Run bundle install when deploying for application of type <code class="docutils literal notranslate"><span class="pre">rails</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -66,7 +66,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.data_source_type">
 <code class="descname">data_source_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.data_source_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data source’s type one of <cite>AutoSelectOpsworksMysqlInstance</cite>, <cite>OpsworksMysqlInstance</cite>, or <cite>RdsDbInstance</cite>.</p>
+<dd><p>The data source’s type one of <code class="docutils literal notranslate"><span class="pre">AutoSelectOpsworksMysqlInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OpsworksMysqlInstance</span></code>, or <code class="docutils literal notranslate"><span class="pre">RdsDbInstance</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -78,7 +78,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.document_root">
 <code class="descname">document_root</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.document_root" title="Permalink to this definition">¶</a></dt>
-<dd><p>Subfolder for the document root for application of type <cite>rails</cite>.</p>
+<dd><p>Subfolder for the document root for application of type <code class="docutils literal notranslate"><span class="pre">rails</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -90,7 +90,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.enable_ssl">
 <code class="descname">enable_ssl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.enable_ssl" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to enable SSL for the app. This must be set in order to let <cite>ssl_configuration.private_key</cite>, <cite>ssl_configuration.certificate</cite> and <cite>ssl_configuration.chain</cite> take effect.</p>
+<dd><p>Whether to enable SSL for the app. This must be set in order to let <code class="docutils literal notranslate"><span class="pre">ssl_configuration.private_key</span></code>, <code class="docutils literal notranslate"><span class="pre">ssl_configuration.certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">ssl_configuration.chain</span></code> take effect.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -108,7 +108,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.rails_env">
 <code class="descname">rails_env</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.rails_env" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Rails environment for application of type <cite>rails</cite>.</p>
+<dd><p>The name of the Rails environment for application of type <code class="docutils literal notranslate"><span class="pre">rails</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -177,15 +177,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.CustomLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">CustomLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>short_name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">CustomLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>short_name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks custom layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -203,7 +203,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -257,7 +257,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.CustomLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -350,15 +350,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.GangliaLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">GangliaLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>password=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>url=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">GangliaLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>password=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>url=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Ganglia layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -376,7 +376,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -432,7 +432,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.GangliaLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -537,15 +537,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.HaproxyLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">HaproxyLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>healthcheck_method=None</em>, <em>healthcheck_url=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>stats_enabled=None</em>, <em>stats_password=None</em>, <em>stats_url=None</em>, <em>stats_user=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">HaproxyLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>healthcheck_method=None</em>, <em>healthcheck_url=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>stats_enabled=None</em>, <em>stats_password=None</em>, <em>stats_url=None</em>, <em>stats_user=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks haproxy layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -563,7 +563,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[str] healthcheck_method: HTTP method to use for instance healthchecks. Defaults to “OPTIONS”.
 :param pulumi.Input[str] healthcheck_url: URL path to use for instance healthchecks. Defaults to “/”.
@@ -622,7 +622,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.HaproxyLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -745,19 +745,67 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>agent_version=None</em>, <em>ami_id=None</em>, <em>architecture=None</em>, <em>auto_scaling_type=None</em>, <em>availability_zone=None</em>, <em>created_at=None</em>, <em>delete_ebs=None</em>, <em>delete_eip=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ecs_cluster_arn=None</em>, <em>elastic_ip=None</em>, <em>ephemeral_block_devices=None</em>, <em>hostname=None</em>, <em>infrastructure_class=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_profile_arn=None</em>, <em>instance_type=None</em>, <em>last_service_error_id=None</em>, <em>layer_ids=None</em>, <em>os=None</em>, <em>platform=None</em>, <em>private_dns=None</em>, <em>private_ip=None</em>, <em>public_dns=None</em>, <em>public_ip=None</em>, <em>registered_by=None</em>, <em>reported_agent_version=None</em>, <em>reported_os_family=None</em>, <em>reported_os_name=None</em>, <em>reported_os_version=None</em>, <em>root_block_devices=None</em>, <em>root_device_type=None</em>, <em>root_device_volume_id=None</em>, <em>security_group_ids=None</em>, <em>ssh_host_dsa_key_fingerprint=None</em>, <em>ssh_host_rsa_key_fingerprint=None</em>, <em>ssh_key_name=None</em>, <em>stack_id=None</em>, <em>state=None</em>, <em>status=None</em>, <em>subnet_id=None</em>, <em>tenancy=None</em>, <em>virtualization_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>agent_version=None</em>, <em>ami_id=None</em>, <em>architecture=None</em>, <em>auto_scaling_type=None</em>, <em>availability_zone=None</em>, <em>created_at=None</em>, <em>delete_ebs=None</em>, <em>delete_eip=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ecs_cluster_arn=None</em>, <em>elastic_ip=None</em>, <em>ephemeral_block_devices=None</em>, <em>hostname=None</em>, <em>infrastructure_class=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_profile_arn=None</em>, <em>instance_type=None</em>, <em>last_service_error_id=None</em>, <em>layer_ids=None</em>, <em>os=None</em>, <em>platform=None</em>, <em>private_dns=None</em>, <em>private_ip=None</em>, <em>public_dns=None</em>, <em>public_ip=None</em>, <em>registered_by=None</em>, <em>reported_agent_version=None</em>, <em>reported_os_family=None</em>, <em>reported_os_name=None</em>, <em>reported_os_version=None</em>, <em>root_block_devices=None</em>, <em>root_device_type=None</em>, <em>root_device_volume_id=None</em>, <em>security_group_ids=None</em>, <em>ssh_host_dsa_key_fingerprint=None</em>, <em>ssh_host_rsa_key_fingerprint=None</em>, <em>ssh_key_name=None</em>, <em>stack_id=None</em>, <em>state=None</em>, <em>status=None</em>, <em>subnet_id=None</em>, <em>tenancy=None</em>, <em>virtualization_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks instance resource.</p>
+<p>Each of the <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> attributes controls a portion of the AWS
+Instance’s “Block Device Mapping”. It’s a good idea to familiarize yourself with <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS’s Block Device
+Mapping docs</a>
+to understand the implications of using these attributes.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">root_block_device</span></code> mapping supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> - (Optional) The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</li>
+<li><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code class="docutils literal notranslate"><span class="pre">iops</span></code> - (Optional) The amount of provisioned
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">delete_on_termination</span></code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</li>
+</ul>
+<p>Modifying any of the <code class="docutils literal notranslate"><span class="pre">root_block_device</span></code> settings requires resource
+replacement.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - The name of the device to mount.</li>
+<li><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> - (Optional) The Snapshot ID to mount.</li>
+<li><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> - (Optional) The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</li>
+<li><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code class="docutils literal notranslate"><span class="pre">iops</span></code> - (Optional) The amount of provisioned
+<a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">delete_on_termination</span></code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</li>
+</ul>
+<p>Modifying any <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> currently requires resource replacement.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">ephemeral_block_device</span></code> supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - The name of the block device to mount on the instance.</li>
+<li><code class="docutils literal notranslate"><span class="pre">virtual_name</span></code> - The <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>)</li>
+</ul>
+<p>Each AWS Instance type has a different set of Instance Store block devices
+available for attachment. AWS <a class="reference external" href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes">publishes a
+list</a>
+of which ephemeral devices are available on each type. The devices are always
+identified by the <code class="docutils literal notranslate"><span class="pre">virtual_name</span></code> in the format <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral{0..N}&quot;</span></code>.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Currently, changes to <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> configuration of <em>existing</em>
+resources cannot be automatically detected by Terraform. After making updates
+to block device configuration, resource recreation can be manually triggered by
+using the <cite>``taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>agent_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS OpsWorks agent to install.  Defaults to <cite>“INHERIT”</cite>.</li>
-<li><strong>ami_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.  If an AMI is specified, <cite>os</cite> must be <cite>“Custom”</cite>.</li>
-<li><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Machine architecture for created instances.  Can be either <cite>“x86_64”</cite> (the default) or <cite>“i386”</cite></li>
-<li><strong>auto_scaling_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates load-based or time-based instances.  If set, can be either: <cite>“load”</cite> or <cite>“timer”</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>agent_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS OpsWorks agent to install.  Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;INHERIT&quot;</span></code>.</li>
+<li><strong>ami_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.  If an AMI is specified, <code class="docutils literal notranslate"><span class="pre">os</span></code> must be <code class="docutils literal notranslate"><span class="pre">&quot;Custom&quot;</span></code>.</li>
+<li><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Machine architecture for created instances.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;x86_64&quot;</span></code> (the default) or <code class="docutils literal notranslate"><span class="pre">&quot;i386&quot;</span></code></li>
+<li><strong>auto_scaling_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates load-based or time-based instances.  If set, can be either: <code class="docutils literal notranslate"><span class="pre">&quot;load&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;timer&quot;</span></code>.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the availability zone where instances will be created
 by default.</li>
 </ul>
@@ -793,7 +841,7 @@ by default.</li>
 </tbody>
 </table>
 <p>:param pulumi.Input[str] infrastructure_class
-:param pulumi.Input[bool] install_updates_on_boot: Controls where to install OS and package updates when the instance boots.  Defaults to <cite>true</cite>.
+:param pulumi.Input[bool] install_updates_on_boot: Controls where to install OS and package updates when the instance boots.  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
 :param pulumi.Input[str] instance_profile_arn
 :param pulumi.Input[str] instance_type: The type of instance to start
 :param pulumi.Input[str] last_service_error_id
@@ -830,7 +878,7 @@ is only available if you’ve enabled DNS hostnames for your VPC</li>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>root_device_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the type of root device instances will have by default.  Can be either <cite>“ebs”</cite> or <cite>“instance-store”</cite></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>root_device_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the type of root device instances will have by default.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;ebs&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;instance-store&quot;</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -840,35 +888,35 @@ is only available if you’ve enabled DNS hostnames for your VPC</li>
 :param pulumi.Input[str] ssh_host_rsa_key_fingerprint
 :param pulumi.Input[str] ssh_key_name: Name of the SSH keypair that instances will have by default.
 :param pulumi.Input[str] stack_id: The id of the stack the instance will belong to.
-:param pulumi.Input[str] state: The desired state of the instance.  Can be either <cite>“running”</cite> or <cite>“stopped”</cite>.
+:param pulumi.Input[str] state: The desired state of the instance.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;running&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;stopped&quot;</span></code>.
 :param pulumi.Input[str] status
 :param pulumi.Input[str] subnet_id: Subnet ID to attach to
-:param pulumi.Input[str] tenancy: Instance tenancy to use. Can be one of <cite>“default”</cite>, <cite>“dedicated”</cite> or <cite>“host”</cite>
+:param pulumi.Input[str] tenancy: Instance tenancy to use. Can be one of <code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;host&quot;</span></code>
 :param pulumi.Input[str] virtualization_type: Keyword to choose what virtualization mode created instances</p>
 <blockquote>
-<div>will use. Can be either <cite>“paravirtual”</cite> or <cite>“hvm”</cite>.</div></blockquote>
+<div>will use. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;paravirtual&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;hvm&quot;</span></code>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.agent_version">
 <code class="descname">agent_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.agent_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The AWS OpsWorks agent to install.  Defaults to <cite>“INHERIT”</cite>.</p>
+<dd><p>The AWS OpsWorks agent to install.  Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;INHERIT&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.ami_id">
 <code class="descname">ami_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.ami_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The AMI to use for the instance.  If an AMI is specified, <cite>os</cite> must be <cite>“Custom”</cite>.</p>
+<dd><p>The AMI to use for the instance.  If an AMI is specified, <code class="docutils literal notranslate"><span class="pre">os</span></code> must be <code class="docutils literal notranslate"><span class="pre">&quot;Custom&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.architecture">
 <code class="descname">architecture</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.architecture" title="Permalink to this definition">¶</a></dt>
-<dd><p>Machine architecture for created instances.  Can be either <cite>“x86_64”</cite> (the default) or <cite>“i386”</cite></p>
+<dd><p>Machine architecture for created instances.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;x86_64&quot;</span></code> (the default) or <code class="docutils literal notranslate"><span class="pre">&quot;i386&quot;</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.auto_scaling_type">
 <code class="descname">auto_scaling_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.auto_scaling_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates load-based or time-based instances.  If set, can be either: <cite>“load”</cite> or <cite>“timer”</cite>.</p>
+<dd><p>Creates load-based or time-based instances.  If set, can be either: <code class="docutils literal notranslate"><span class="pre">&quot;load&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;timer&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -913,7 +961,7 @@ instance.  See Block Devices below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.install_updates_on_boot">
 <code class="descname">install_updates_on_boot</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.install_updates_on_boot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Controls where to install OS and package updates when the instance boots.  Defaults to <cite>true</cite>.</p>
+<dd><p>Controls where to install OS and package updates when the instance boots.  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -971,7 +1019,7 @@ device of the instance. See Block Devices below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.root_device_type">
 <code class="descname">root_device_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.root_device_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the type of root device instances will have by default.  Can be either <cite>“ebs”</cite> or <cite>“instance-store”</cite></p>
+<dd><p>Name of the type of root device instances will have by default.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;ebs&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;instance-store&quot;</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -995,7 +1043,7 @@ device of the instance. See Block Devices below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.state">
 <code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>The desired state of the instance.  Can be either <cite>“running”</cite> or <cite>“stopped”</cite>.</p>
+<dd><p>The desired state of the instance.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;running&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;stopped&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1007,14 +1055,14 @@ device of the instance. See Block Devices below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.tenancy">
 <code class="descname">tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.tenancy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instance tenancy to use. Can be one of <cite>“default”</cite>, <cite>“dedicated”</cite> or <cite>“host”</cite></p>
+<dd><p>Instance tenancy to use. Can be one of <code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;host&quot;</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.virtualization_type">
 <code class="descname">virtualization_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.virtualization_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Keyword to choose what virtualization mode created instances
-will use. Can be either <cite>“paravirtual”</cite> or <cite>“hvm”</cite>.</p>
+will use. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;paravirtual&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;hvm&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1059,15 +1107,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.JavaAppLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">JavaAppLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_server=None</em>, <em>app_server_version=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>jvm_options=None</em>, <em>jvm_type=None</em>, <em>jvm_version=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">JavaAppLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_server=None</em>, <em>app_server_version=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>jvm_options=None</em>, <em>jvm_type=None</em>, <em>jvm_version=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Java application layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_server</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword for the application container to use. Defaults to “tomcat”.</li>
 <li><strong>app_server_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the selected application container to use. Defaults to “7”.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
@@ -1087,12 +1135,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 :param pulumi.Input[str] jvm_options: Options to set for the JVM.
-:param pulumi.Input[str] jvm_type: Keyword for the type of JVM to use. Defaults to <cite>openjdk</cite>.
+:param pulumi.Input[str] jvm_type: Keyword for the type of JVM to use. Defaults to <code class="docutils literal notranslate"><span class="pre">openjdk</span></code>.
 :param pulumi.Input[str] jvm_version: Version of JVM to use. Defaults to “7”.
 :param pulumi.Input[str] name: A human-readable name for the layer.
 :param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
@@ -1155,7 +1203,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1185,7 +1233,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.jvm_type">
 <code class="descname">jvm_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.jvm_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Keyword for the type of JVM to use. Defaults to <cite>openjdk</cite>.</p>
+<dd><p>Keyword for the type of JVM to use. Defaults to <code class="docutils literal notranslate"><span class="pre">openjdk</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1260,15 +1308,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.MemcachedLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">MemcachedLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocated_memory=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">MemcachedLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_memory=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks memcached layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocated_memory</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
@@ -1287,7 +1335,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -1346,7 +1394,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MemcachedLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1433,17 +1481,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.MysqlLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">MysqlLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>root_password=None</em>, <em>root_password_on_all_instances=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">MysqlLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>root_password=None</em>, <em>root_password_on_all_instances=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks MySQL layer resource.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the root password will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the root password will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -1461,7 +1510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -1516,7 +1565,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MysqlLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1615,15 +1664,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">NodejsAppLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>nodejs_version=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">NodejsAppLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>nodejs_version=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks NodeJS application layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -1641,7 +1690,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -1695,7 +1744,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1788,18 +1837,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.Permission">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Permission</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_ssh=None</em>, <em>allow_sudo=None</em>, <em>level=None</em>, <em>stack_id=None</em>, <em>user_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Permission" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Permission</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_ssh=None</em>, <em>allow_sudo=None</em>, <em>level=None</em>, <em>stack_id=None</em>, <em>user_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Permission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks permission resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_ssh</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is allowed to use SSH to communicate with the instance</li>
 <li><strong>allow_sudo</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is allowed to use sudo to elevate privileges</li>
-<li><strong>level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The users permission level. Mus be one of <cite>deny</cite>, <cite>show</cite>, <cite>deploy</cite>, <cite>manage</cite>, <cite>iam_only</cite></li>
+<li><strong>level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The users permission level. Mus be one of <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">show</span></code>, <code class="docutils literal notranslate"><span class="pre">deploy</span></code>, <code class="docutils literal notranslate"><span class="pre">manage</span></code>, <code class="docutils literal notranslate"><span class="pre">iam_only</span></code></li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The stack to set the permissions for</li>
 <li><strong>user_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user’s IAM ARN to set permissions for</li>
 </ul>
@@ -1822,7 +1871,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Permission.level">
 <code class="descname">level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Permission.level" title="Permalink to this definition">¶</a></dt>
-<dd><p>The users permission level. Mus be one of <cite>deny</cite>, <cite>show</cite>, <cite>deploy</cite>, <cite>manage</cite>, <cite>iam_only</cite></p>
+<dd><p>The users permission level. Mus be one of <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">show</span></code>, <code class="docutils literal notranslate"><span class="pre">deploy</span></code>, <code class="docutils literal notranslate"><span class="pre">manage</span></code>, <code class="docutils literal notranslate"><span class="pre">iam_only</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1879,15 +1928,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.PhpAppLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">PhpAppLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">PhpAppLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks PHP application layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -1905,7 +1954,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -1958,7 +2007,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.PhpAppLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2045,15 +2094,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.RailsAppLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">RailsAppLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>app_server=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>bundler_version=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>manage_bundler=None</em>, <em>name=None</em>, <em>passenger_version=None</em>, <em>ruby_version=None</em>, <em>rubygems_version=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">RailsAppLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>app_server=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>bundler_version=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>manage_bundler=None</em>, <em>name=None</em>, <em>passenger_version=None</em>, <em>ruby_version=None</em>, <em>rubygems_version=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Ruby on Rails application layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>app_server</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword for the app server to use. Defaults to “apache_passenger”.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
@@ -2073,7 +2122,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -2142,7 +2191,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.RailsAppLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2253,21 +2302,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.RdsDbInstance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">RdsDbInstance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>db_password=None</em>, <em>db_user=None</em>, <em>rds_db_instance_arn=None</em>, <em>stack_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RdsDbInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">RdsDbInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_password=None</em>, <em>db_user=None</em>, <em>rds_db_instance_arn=None</em>, <em>stack_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RdsDbInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks RDS DB Instance resource.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>db_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A db password</li>
 <li><strong>db_user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A db username</li>
 <li><strong>rds_db_instance_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The db instance to register for this stack. Changing this will force a new resource.</li>
-<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The stack to register a db inatance for. Changing this will force a new resource.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The stack to register a db instance for. Changing this will force a new resource.</li>
 </ul>
 </td>
 </tr>
@@ -2294,7 +2344,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.RdsDbInstance.stack_id">
 <code class="descname">stack_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RdsDbInstance.stack_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The stack to register a db inatance for. Changing this will force a new resource.</p>
+<dd><p>The stack to register a db instance for. Changing this will force a new resource.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2339,32 +2389,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.Stack">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>agent_version=None</em>, <em>berkshelf_version=None</em>, <em>color=None</em>, <em>configuration_manager_name=None</em>, <em>configuration_manager_version=None</em>, <em>custom_cookbooks_sources=None</em>, <em>custom_json=None</em>, <em>default_availability_zone=None</em>, <em>default_instance_profile_arn=None</em>, <em>default_os=None</em>, <em>default_root_device_type=None</em>, <em>default_ssh_key_name=None</em>, <em>default_subnet_id=None</em>, <em>hostname_theme=None</em>, <em>manage_berkshelf=None</em>, <em>name=None</em>, <em>region=None</em>, <em>service_role_arn=None</em>, <em>tags=None</em>, <em>use_custom_cookbooks=None</em>, <em>use_opsworks_security_groups=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>agent_version=None</em>, <em>berkshelf_version=None</em>, <em>color=None</em>, <em>configuration_manager_name=None</em>, <em>configuration_manager_version=None</em>, <em>custom_cookbooks_sources=None</em>, <em>custom_json=None</em>, <em>default_availability_zone=None</em>, <em>default_instance_profile_arn=None</em>, <em>default_os=None</em>, <em>default_root_device_type=None</em>, <em>default_ssh_key_name=None</em>, <em>default_subnet_id=None</em>, <em>hostname_theme=None</em>, <em>manage_berkshelf=None</em>, <em>name=None</em>, <em>region=None</em>, <em>service_role_arn=None</em>, <em>tags=None</em>, <em>use_custom_cookbooks=None</em>, <em>use_opsworks_security_groups=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks stack resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>agent_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <cite>“LATEST”</cite>, OpsWorks will automatically install the latest version.</li>
-<li><strong>berkshelf_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If <cite>manage_berkshelf</cite> is enabled, the version of Berkshelf to use.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>agent_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">&quot;LATEST&quot;</span></code>, OpsWorks will automatically install the latest version.</li>
+<li><strong>berkshelf_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">manage_berkshelf</span></code> is enabled, the version of Berkshelf to use.</li>
 <li><strong>color</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Color to paint next to the stack’s resources in the OpsWorks console.</li>
 <li><strong>configuration_manager_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the configuration manager to use. Defaults to “Chef”.</li>
 <li><strong>configuration_manager_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the configuration manager to use. Defaults to “11.4”.</li>
-<li><strong>custom_cookbooks_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – When <cite>use_custom_cookbooks</cite> is set, provide this sub-object as
+<li><strong>custom_cookbooks_sources</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">use_custom_cookbooks</span></code> is set, provide this sub-object as
 described below.</li>
 <li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the entire stack.</li>
 <li><strong>default_availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the availability zone where instances will be created
-by default. This is required unless you set <cite>vpc_id</cite>.</li>
+by default. This is required unless you set <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code>.</li>
 <li><strong>default_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM Instance Profile that created instances
 will have by default.</li>
 <li><strong>default_os</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of OS that will be installed on instances by default.</li>
 <li><strong>default_root_device_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the type of root device instances will have by default.</li>
 <li><strong>default_ssh_key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SSH keypair that instances will have by default.</li>
 <li><strong>default_subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the subnet in which instances will be created by default. Mandatory
-if <cite>vpc_id</cite> is set, and forbidden if it isn’t.</li>
+if <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> is set, and forbidden if it isn’t.</li>
 <li><strong>hostname_theme</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword representing the naming scheme that will be used for instance hostnames
 within this stack.</li>
 <li><strong>manage_berkshelf</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value controlling whether Opsworks will run Berkshelf for this stack.</li>
@@ -2385,13 +2435,13 @@ security groups apply to created instances.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Stack.agent_version">
 <code class="descname">agent_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Stack.agent_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set to <cite>“LATEST”</cite>, OpsWorks will automatically install the latest version.</p>
+<dd><p>If set to <code class="docutils literal notranslate"><span class="pre">&quot;LATEST&quot;</span></code>, OpsWorks will automatically install the latest version.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Stack.berkshelf_version">
 <code class="descname">berkshelf_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Stack.berkshelf_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>manage_berkshelf</cite> is enabled, the version of Berkshelf to use.</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">manage_berkshelf</span></code> is enabled, the version of Berkshelf to use.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2415,7 +2465,7 @@ security groups apply to created instances.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Stack.custom_cookbooks_sources">
 <code class="descname">custom_cookbooks_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Stack.custom_cookbooks_sources" title="Permalink to this definition">¶</a></dt>
-<dd><p>When <cite>use_custom_cookbooks</cite> is set, provide this sub-object as
+<dd><p>When <code class="docutils literal notranslate"><span class="pre">use_custom_cookbooks</span></code> is set, provide this sub-object as
 described below.</p>
 </dd></dl>
 
@@ -2429,7 +2479,7 @@ described below.</p>
 <dt id="pulumi_aws.opsworks.Stack.default_availability_zone">
 <code class="descname">default_availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Stack.default_availability_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the availability zone where instances will be created
-by default. This is required unless you set <cite>vpc_id</cite>.</p>
+by default. This is required unless you set <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2461,7 +2511,7 @@ will have by default.</p>
 <dt id="pulumi_aws.opsworks.Stack.default_subnet_id">
 <code class="descname">default_subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Stack.default_subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Id of the subnet in which instances will be created by default. Mandatory
-if <cite>vpc_id</cite> is set, and forbidden if it isn’t.</p>
+if <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> is set, and forbidden if it isn’t.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2563,15 +2613,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.StaticWebLayer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">StaticWebLayer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">StaticWebLayer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_assign_elastic_ips=None</em>, <em>auto_assign_public_ips=None</em>, <em>auto_healing=None</em>, <em>custom_configure_recipes=None</em>, <em>custom_deploy_recipes=None</em>, <em>custom_instance_profile_arn=None</em>, <em>custom_json=None</em>, <em>custom_security_group_ids=None</em>, <em>custom_setup_recipes=None</em>, <em>custom_shutdown_recipes=None</em>, <em>custom_undeploy_recipes=None</em>, <em>drain_elb_on_shutdown=None</em>, <em>ebs_volumes=None</em>, <em>elastic_load_balancer=None</em>, <em>install_updates_on_boot=None</em>, <em>instance_shutdown_timeout=None</em>, <em>name=None</em>, <em>stack_id=None</em>, <em>system_packages=None</em>, <em>use_ebs_optimized_instances=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks static web server layer resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -2589,7 +2639,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[list] custom_shutdown_recipes
 :param pulumi.Input[list] custom_undeploy_recipes
 :param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
+:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
 :param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
 :param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
 :param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
@@ -2636,7 +2686,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.StaticWebLayer.ebs_volumes">
 <code class="descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>ebs_volume</cite> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2723,15 +2773,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.UserProfile">
-<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">UserProfile</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_self_management=None</em>, <em>ssh_public_key=None</em>, <em>ssh_username=None</em>, <em>user_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.UserProfile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.opsworks.</code><code class="descname">UserProfile</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_self_management=None</em>, <em>ssh_public_key=None</em>, <em>ssh_username=None</em>, <em>user_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.UserProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks User Profile resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_self_management</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether users can specify their own SSH public key through the My Settings page</li>
 <li><strong>ssh_public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The users public key</li>
 <li><strong>ssh_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ssh username, with witch this user wants to log in</li>

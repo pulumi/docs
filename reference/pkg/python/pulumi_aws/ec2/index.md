@@ -2,35 +2,35 @@
 <span id="ec2"></span><h1>ec2<a class="headerlink" href="#module-pulumi_aws.ec2" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ec2.Ami">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Ami</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>architecture=None</em>, <em>description=None</em>, <em>ebs_block_devices=None</em>, <em>ena_support=None</em>, <em>ephemeral_block_devices=None</em>, <em>image_location=None</em>, <em>kernel_id=None</em>, <em>name=None</em>, <em>ramdisk_id=None</em>, <em>root_device_name=None</em>, <em>sriov_net_support=None</em>, <em>tags=None</em>, <em>virtualization_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Ami" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Ami</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>architecture=None</em>, <em>description=None</em>, <em>ebs_block_devices=None</em>, <em>ena_support=None</em>, <em>ephemeral_block_devices=None</em>, <em>image_location=None</em>, <em>kernel_id=None</em>, <em>name=None</em>, <em>ramdisk_id=None</em>, <em>root_device_name=None</em>, <em>sriov_net_support=None</em>, <em>tags=None</em>, <em>virtualization_type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Ami" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AMI resource allows the creation and management of a completely-custom
 <em>Amazon Machine Image</em> (AMI).</p>
 <p>If you just want to duplicate an existing AMI, possibly copying it to another
-region, it’s better to use <cite>aws_ami_copy</cite> instead.</p>
+region, it’s better to use <code class="docutils literal notranslate"><span class="pre">aws_ami_copy</span></code> instead.</p>
 <p>If you just want to share an existing AMI with another AWS account,
-it’s better to use <cite>aws_ami_launch_permission</cite> instead.</p>
+it’s better to use <code class="docutils literal notranslate"><span class="pre">aws_ami_launch_permission</span></code> instead.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>architecture</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Machine architecture for created instances. Defaults to “x86_64”.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A longer, human-readable description for the AMI.</li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.</li>
-<li><strong>ena_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether enhanced networking with ENA is enabled. Defaults to <cite>false</cite>.</li>
+<li><strong>ena_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</li>
 <li><strong>image_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path to an S3 object containing an image manifest, e.g. created
-by the <cite>ec2-upload-bundle</cite> command in the EC2 command line tools.</li>
+by the <code class="docutils literal notranslate"><span class="pre">ec2-upload-bundle</span></code> command in the EC2 command line tools.</li>
 <li><strong>kernel_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A region-unique name for the AMI.</li>
 <li><strong>ramdisk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of an initrd image (ARI) that will be used when booting the
 created instances.</li>
-<li><strong>root_device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the root device (for example, <cite>/dev/sda1</cite>, or <cite>/dev/xvda</cite>).</li>
+<li><strong>root_device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the root device (for example, <code class="docutils literal notranslate"><span class="pre">/dev/sda1</span></code>, or <code class="docutils literal notranslate"><span class="pre">/dev/xvda</span></code>).</li>
 <li><strong>sriov_net_support</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When set to “simple” (the default), enables enhanced networking
 for created instances. No other value is supported at this time.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -64,7 +64,7 @@ attached to created instances. The structure of this block is described below.</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Ami.ena_support">
 <code class="descname">ena_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.ena_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <cite>false</cite>.</p>
+<dd><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -78,7 +78,7 @@ should be attached to created instances. The structure of this block is describe
 <dt id="pulumi_aws.ec2.Ami.image_location">
 <code class="descname">image_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.image_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to an S3 object containing an image manifest, e.g. created
-by the <cite>ec2-upload-bundle</cite> command in the EC2 command line tools.</p>
+by the <code class="docutils literal notranslate"><span class="pre">ec2-upload-bundle</span></code> command in the EC2 command line tools.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -104,7 +104,7 @@ created instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Ami.root_device_name">
 <code class="descname">root_device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Ami.root_device_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the root device (for example, <cite>/dev/sda1</cite>, or <cite>/dev/xvda</cite>).</p>
+<dd><p>The name of the root device (for example, <code class="docutils literal notranslate"><span class="pre">/dev/sda1</span></code>, or <code class="docutils literal notranslate"><span class="pre">/dev/xvda</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -176,7 +176,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AmiCopy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">AmiCopy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>ebs_block_devices=None</em>, <em>encrypted=None</em>, <em>ephemeral_block_devices=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>source_ami_id=None</em>, <em>source_ami_region=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">AmiCopy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>ebs_block_devices=None</em>, <em>encrypted=None</em>, <em>ephemeral_block_devices=None</em>, <em>kms_key_id=None</em>, <em>name=None</em>, <em>source_ami_id=None</em>, <em>source_ami_region=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The “AMI copy” resource allows duplication of an Amazon Machine Image (AMI),
 including cross-region copies.</p>
 <p>If the source AMI has associated EBS snapshots, those will also be duplicated
@@ -190,18 +190,18 @@ block until the new AMI is available for use on new instances.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A longer, human-readable description for the AMI.</li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.</li>
-<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <cite>false</cite></li>
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
 <li><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The full ARN of the KMS Key to use when encrypting the snapshots of an image during a copy operation. If not specified, then the default AWS KMS Key will be used</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A region-unique name for the AMI.</li>
 <li><strong>source_ami_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the AMI to copy. This id must be valid in the region
-given by <cite>source_ami_region</cite>.</li>
+given by <code class="docutils literal notranslate"><span class="pre">source_ami_region</span></code>.</li>
 <li><strong>source_ami_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region from which the AMI will be copied. This may be the
 same as the AWS provider region in order to create a copy within the same region.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -232,13 +232,13 @@ attached to created instances. The structure of this block is described below.</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.ena_support">
 <code class="descname">ena_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.ena_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <cite>false</cite>.</p>
+<dd><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.encrypted">
 <code class="descname">encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.encrypted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <cite>false</cite></p>
+<dd><p>Specifies whether the destination snapshots of the copied image should be encrypted. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -252,7 +252,7 @@ should be attached to created instances. The structure of this block is describe
 <dt id="pulumi_aws.ec2.AmiCopy.image_location">
 <code class="descname">image_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.image_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to an S3 object containing an image manifest, e.g. created
-by the <cite>ec2-upload-bundle</cite> command in the EC2 command line tools.</p>
+by the <code class="docutils literal notranslate"><span class="pre">ec2-upload-bundle</span></code> command in the EC2 command line tools.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -284,14 +284,14 @@ created instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.root_device_name">
 <code class="descname">root_device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.root_device_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the root device (for example, <cite>/dev/sda1</cite>, or <cite>/dev/xvda</cite>).</p>
+<dd><p>The name of the root device (for example, <code class="docutils literal notranslate"><span class="pre">/dev/sda1</span></code>, or <code class="docutils literal notranslate"><span class="pre">/dev/xvda</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiCopy.source_ami_id">
 <code class="descname">source_ami_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiCopy.source_ami_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id of the AMI to copy. This id must be valid in the region
-given by <cite>source_ami_region</cite>.</p>
+given by <code class="docutils literal notranslate"><span class="pre">source_ami_region</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -364,7 +364,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AmiFromInstance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">AmiFromInstance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>ebs_block_devices=None</em>, <em>ephemeral_block_devices=None</em>, <em>name=None</em>, <em>snapshot_without_reboot=None</em>, <em>source_instance_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">AmiFromInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>ebs_block_devices=None</em>, <em>ephemeral_block_devices=None</em>, <em>name=None</em>, <em>snapshot_without_reboot=None</em>, <em>source_instance_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>The “AMI from instance” resource allows the creation of an Amazon Machine
 Image (AMI) modelled after an existing EBS-backed EC2 instance.</p>
 <p>The created AMI will refer to implicitly-created snapshots of the instance’s
@@ -384,8 +384,8 @@ to produce a fresh snapshot.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A longer, human-readable description for the AMI.</li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.</li>
@@ -425,7 +425,7 @@ attached to created instances. The structure of this block is described below.</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiFromInstance.ena_support">
 <code class="descname">ena_support</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.ena_support" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <cite>false</cite>.</p>
+<dd><p>Specifies whether enhanced networking with ENA is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -439,7 +439,7 @@ should be attached to created instances. The structure of this block is describe
 <dt id="pulumi_aws.ec2.AmiFromInstance.image_location">
 <code class="descname">image_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.image_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to an S3 object containing an image manifest, e.g. created
-by the <cite>ec2-upload-bundle</cite> command in the EC2 command line tools.</p>
+by the <code class="docutils literal notranslate"><span class="pre">ec2-upload-bundle</span></code> command in the EC2 command line tools.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -465,7 +465,7 @@ created instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.AmiFromInstance.root_device_name">
 <code class="descname">root_device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.AmiFromInstance.root_device_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the root device (for example, <cite>/dev/sda1</cite>, or <cite>/dev/xvda</cite>).</p>
+<dd><p>The name of the root device (for example, <code class="docutils literal notranslate"><span class="pre">/dev/sda1</span></code>, or <code class="docutils literal notranslate"><span class="pre">/dev/xvda</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -546,15 +546,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.AmiLaunchPermission">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">AmiLaunchPermission</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_id=None</em>, <em>image_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">AmiLaunchPermission</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>image_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.AmiLaunchPermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds launch permission to Amazon Machine Image (AMI) from another AWS account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An AWS Account ID to add launch permissions.</li>
 <li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A region-unique name for the AMI.</li>
 </ul>
@@ -616,26 +616,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.CapacityReservation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">CapacityReservation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>ebs_optimized=None</em>, <em>end_date=None</em>, <em>end_date_type=None</em>, <em>ephemeral_storage=None</em>, <em>instance_count=None</em>, <em>instance_match_criteria=None</em>, <em>instance_platform=None</em>, <em>instance_type=None</em>, <em>tags=None</em>, <em>tenancy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">CapacityReservation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>ebs_optimized=None</em>, <em>end_date=None</em>, <em>end_date_type=None</em>, <em>ephemeral_storage=None</em>, <em>instance_count=None</em>, <em>instance_match_criteria=None</em>, <em>instance_platform=None</em>, <em>instance_type=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create the Capacity Reservation.</li>
 <li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the Capacity Reservation supports EBS-optimized instances.</li>
-<li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) (<cite>YYYY-MM-DDTHH:MM:SSZ</cite>)</li>
-<li><strong>end_date_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the way in which the Capacity Reservation ends. Specify either <cite>unlimited</cite> or <cite>limited</cite>.</li>
+<li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</li>
+<li><strong>end_date_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the way in which the Capacity Reservation ends. Specify either <code class="docutils literal notranslate"><span class="pre">unlimited</span></code> or <code class="docutils literal notranslate"><span class="pre">limited</span></code>.</li>
 <li><strong>ephemeral_storage</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.</li>
 <li><strong>instance_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of instances for which to reserve capacity.</li>
-<li><strong>instance_match_criteria</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <cite>open</cite> or <cite>targeted</cite>.</li>
-<li><strong>instance_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of operating system for which to reserve capacity. Valid options are <cite>Linux/UNIX</cite>, <cite>Red Hat Enterprise Linux</cite>, <cite>SUSE Linux</cite>, <cite>Windows</cite>, <cite>Windows with SQL Server</cite>, <cite>Windows with SQL Server Enterprise</cite>, <cite>Windows with SQL Server Standard</cite> or <cite>Windows with SQL Server Web</cite>.</li>
+<li><strong>instance_match_criteria</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.</li>
+<li><strong>instance_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type for which to reserve capacity.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the tenancy of the Capacity Reservation. Specify either <cite>default</cite> or <cite>dedicated</cite>.</li>
+<li><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates the tenancy of the Capacity Reservation. Specify either <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -656,13 +656,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.end_date">
 <code class="descname">end_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.end_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) (<cite>YYYY-MM-DDTHH:MM:SSZ</cite>)</p>
+<dd><p>The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 time string</a> (<code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDTHH:MM:SSZ</span></code>)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.end_date_type">
 <code class="descname">end_date_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.end_date_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates the way in which the Capacity Reservation ends. Specify either <cite>unlimited</cite> or <cite>limited</cite>.</p>
+<dd><p>Indicates the way in which the Capacity Reservation ends. Specify either <code class="docutils literal notranslate"><span class="pre">unlimited</span></code> or <code class="docutils literal notranslate"><span class="pre">limited</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -680,13 +680,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.instance_match_criteria">
 <code class="descname">instance_match_criteria</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.instance_match_criteria" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <cite>open</cite> or <cite>targeted</cite>.</p>
+<dd><p>Indicates the type of instance launches that the Capacity Reservation accepts. Specify either <code class="docutils literal notranslate"><span class="pre">open</span></code> or <code class="docutils literal notranslate"><span class="pre">targeted</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.instance_platform">
 <code class="descname">instance_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.instance_platform" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of operating system for which to reserve capacity. Valid options are <cite>Linux/UNIX</cite>, <cite>Red Hat Enterprise Linux</cite>, <cite>SUSE Linux</cite>, <cite>Windows</cite>, <cite>Windows with SQL Server</cite>, <cite>Windows with SQL Server Enterprise</cite>, <cite>Windows with SQL Server Standard</cite> or <cite>Windows with SQL Server Web</cite>.</p>
+<dd><p>The type of operating system for which to reserve capacity. Valid options are <code class="docutils literal notranslate"><span class="pre">Linux/UNIX</span></code>, <code class="docutils literal notranslate"><span class="pre">Red</span> <span class="pre">Hat</span> <span class="pre">Enterprise</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span> <span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Enterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Standard</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">with</span> <span class="pre">SQL</span> <span class="pre">Server</span> <span class="pre">Web</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -704,7 +704,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.CapacityReservation.tenancy">
 <code class="descname">tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.CapacityReservation.tenancy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates the tenancy of the Capacity Reservation. Specify either <cite>default</cite> or <cite>dedicated</cite>.</p>
+<dd><p>Indicates the tenancy of the Capacity Reservation. Specify either <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -749,15 +749,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.CustomerGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">CustomerGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bgp_asn=None</em>, <em>ip_address=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">CustomerGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bgp_asn=None</em>, <em>ip_address=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.CustomerGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bgp_asn</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The gateway’s Border Gateway Protocol (BGP) Autonomous System Number (ASN).</li>
 <li><strong>ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP address of the gateway’s Internet-routable external interface.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Tags to apply to the gateway.</li>
@@ -835,14 +835,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultNetworkAcl</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_network_acl_id=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultNetworkAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_network_acl_id=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the default AWS Network ACL. VPC Only.</p>
 <p>Each VPC created in AWS comes with a Default Network ACL that can be managed, but not
 destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
 of when using it. Please read this document in its entirety before using this
 resource.</p>
-<p>The <cite>aws_default_network_acl</cite> behaves differently from normal resources, in that
-Terraform does not _create_ this resource, but instead attempts to “adopt” it
+<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_network_acl</span></code> behaves differently from normal resources, in that
+Terraform does not <em>create</em> this resource, but instead attempts to “adopt” it
 into management. We can do this because each VPC created has a Default Network
 ACL that cannot be destroyed, and is created with a known set of default rules.</p>
 <p>When Terraform first adopts the Default Network ACL, it <strong>immediately removes all
@@ -852,7 +852,7 @@ configuration are created.</p>
 <p>This resource treats its inline rules as absolute; only the rules defined
 inline are created, and any additions/removals external to this resource will
 result in diffs being shown. For these reasons, this resource is incompatible with the
-<cite>aws_network_acl_rule</cite> resource.</p>
+<code class="docutils literal notranslate"><span class="pre">aws_network_acl_rule</span></code> resource.</p>
 <p>For more information about Network ACLs, see the AWS Documentation on
 [Network ACLs][aws-network-acls].</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -860,10 +860,10 @@ result in diffs being shown. For these reasons, this resource is incompatible wi
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Network ACL ID to manage. This
-attribute is exported from <cite>aws_vpc</cite>, or manually found via the AWS Console.</li>
+attribute is exported from <code class="docutils literal notranslate"><span class="pre">aws_vpc</span></code>, or manually found via the AWS Console.</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an egress rule. Parameters defined below.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an ingress rule. Parameters defined below.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subnet IDs to apply the ACL to. See the
@@ -878,7 +878,7 @@ notes below on managing Subnets in the Default Network ACL</li>
 <dt id="pulumi_aws.ec2.DefaultNetworkAcl.default_network_acl_id">
 <code class="descname">default_network_acl_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultNetworkAcl.default_network_acl_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Network ACL ID to manage. This
-attribute is exported from <cite>aws_vpc</cite>, or manually found via the AWS Console.</p>
+attribute is exported from <code class="docutils literal notranslate"><span class="pre">aws_vpc</span></code>, or manually found via the AWS Console.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -960,16 +960,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultRouteTable">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultRouteTable</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_route_table_id=None</em>, <em>propagating_vgws=None</em>, <em>routes=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultRouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_route_table_id=None</em>, <em>propagating_vgws=None</em>, <em>routes=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultRouteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a Default VPC Routing Table.</p>
 <p>Each VPC created in AWS comes with a Default Route Table that can be managed, but not
 destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
 of when using it. Please read this document in its entirety before using this
-resource. It is recommended you <strong>do not</strong> use both <cite>aws_default_route_table</cite> to
-manage the default route table <strong>and</strong> use the <cite>aws_main_route_table_association</cite>,
+resource. It is recommended you <strong>do not</strong> use both <code class="docutils literal notranslate"><span class="pre">aws_default_route_table</span></code> to
+manage the default route table <strong>and</strong> use the <code class="docutils literal notranslate"><span class="pre">aws_main_route_table_association</span></code>,
 due to possible conflict in routes.</p>
-<p>The <cite>aws_default_route_table</cite> behaves differently from normal resources, in that
-Terraform does not _create_ this resource, but instead attempts to “adopt” it
+<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_route_table</span></code> behaves differently from normal resources, in that
+Terraform does not <em>create</em> this resource, but instead attempts to “adopt” it
 into management. We can do this because each VPC created has a Default Route
 Table that cannot be destroyed, and is created with a single route.</p>
 <p>When Terraform first adopts the Default Route Table, it <strong>immediately removes all
@@ -980,18 +980,19 @@ configuration present in the Default Route Table.</p>
 [Route Tables][aws-route-tables].</p>
 <p>For more information about managing normal Route Tables in Terraform, see our
 documentation on [aws_route_table][tf-route-tables].</p>
-<p>&gt; <strong>NOTE on Route Tables and Routes:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Route Tables and Routes:</strong> Terraform currently
 provides both a standalone Route resource and a Route Table resource with routes
 defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
-a conflict of rule settings and will overwrite routes.</p>
+a conflict of rule settings and will overwrite routes.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Default Routing Table.</li>
 <li><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</li>
 <li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of route objects. Their keys are documented below.</li>
@@ -1073,15 +1074,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultSecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>revoke_rules_on_delete=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultSecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>revoke_rules_on_delete=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the default AWS Security Group.</p>
 <p>For EC2 Classic accounts, each region comes with a Default Security Group.
 Additionally, each VPC created in AWS comes with a Default Security Group that can be managed, but not
 destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
 of when using it. Please read this document in its entirety before using this
 resource.</p>
-<p>The <cite>aws_default_security_group</cite> behaves differently from normal resources, in that
-Terraform does not _create_ this resource, but instead “adopts” it
+<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_security_group</span></code> behaves differently from normal resources, in that
+Terraform does not <em>create</em> this resource, but instead “adopts” it
 into management. We can do this because these default security groups cannot be
 destroyed, and are created with a known set of default ingress/egress rules.</p>
 <p>When Terraform first adopts the Default Security Group, it <strong>immediately removes all
@@ -1091,16 +1092,25 @@ configuration are created.</p>
 <p>This resource treats its inline rules as absolute; only the rules defined
 inline are created, and any additions/removals external to this resource will
 result in diff shown. For these reasons, this resource is incompatible with the
-<cite>aws_security_group_rule</cite> resource.</p>
+<code class="docutils literal notranslate"><span class="pre">aws_security_group_rule</span></code> resource.</p>
 <p>For more information about Default Security Groups, see the AWS Documentation on
 [Default Security Groups][aws-default-security-groups].</p>
+<p>With the exceptions mentioned above, <code class="docutils literal notranslate"><span class="pre">aws_default_security_group</span></code> should
+identical behavior to <code class="docutils literal notranslate"><span class="pre">aws_security_group</span></code>. Please consult <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/security_group.html">AWS_SECURITY_GROUP</a>
+for further usage documentation.</p>
+<p>Each AWS VPC (or region, if using EC2 Classic) comes with a Default Security
+Group that cannot be deleted. The <code class="docutils literal notranslate"><span class="pre">aws_default_security_group</span></code> allows you to
+manage this Security Group, but Terraform cannot destroy it. Removing this resource
+from your configuration will remove it from your statefile and management, but
+will not destroy the Security Group. All ingress or egress rules will be left as
+they are at the time of removal. You can resume managing them via the AWS Console.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
@@ -1112,9 +1122,9 @@ ingress rule. Each ingress block supports fields documented below.</li>
 </table>
 <p>:param pulumi.Input[bool] revoke_rules_on_delete
 :param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] vpc_id: The VPC ID. <a href="#id1"><span class="problematic" id="id2">**</span></a>Note that changing</p>
+:param pulumi.Input[str] vpc_id: The VPC ID. <a href="#id2"><span class="problematic" id="id3">**</span></a>Note that changing</p>
 <blockquote>
-<div>the <cite>vpc_id</cite> will _not_ restore any default security group rules that were
+<div>the <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> will <em>not</em> restore any default security group rules that were
 modified, added, or removed.** It will be left in its current state</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.egress">
@@ -1152,7 +1162,7 @@ ingress rule. Each ingress block supports fields documented below.</p>
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.vpc_id">
 <code class="descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.vpc_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC ID. <strong>Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
+the ``vpc_id`` will *not* restore any default security group rules that were
 modified, added, or removed.</strong> It will be left in its current state</p>
 </dd></dl>
 
@@ -1198,19 +1208,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultSubnet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultSubnet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>map_public_ip_on_launch=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage a [default AWS VPC subnet](<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics">http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics</a>)
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultSubnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>map_public_ip_on_launch=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultSubnet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to manage a <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics">default AWS VPC subnet</a>
 in the current region.</p>
-<p>The <cite>aws_default_subnet</cite> behaves differently from normal resources, in that
-Terraform does not _create_ this resource, but instead “adopts” it
+<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_subnet</span></code> behaves differently from normal resources, in that
+Terraform does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
@@ -1309,22 +1319,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultVpc">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultVpc</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enable_classiclink=None</em>, <em>enable_classiclink_dns_support=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage the [default AWS VPC](<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html">http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html</a>)
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultVpc</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enable_classiclink=None</em>, <em>enable_classiclink_dns_support=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to manage the <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html">default AWS VPC</a>
 in the current region.</p>
 <p>For AWS accounts created after 2013-12-04, each region comes with a Default VPC.
 <strong>This is an advanced resource</strong>, and has special caveats to be aware of when
 using it. Please read this document in its entirety before using this resource.</p>
-<p>The <cite>aws_default_vpc</cite> behaves differently from normal resources, in that
-Terraform does not _create_ this resource, but instead “adopts” it
+<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_vpc</span></code> behaves differently from normal resources, in that
+Terraform does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the [ClassicLink documentation][1] for more information. Defaults false.</li>
@@ -1417,7 +1427,7 @@ See the [ClassicLink documentation][1] for more information. Defaults false.</p>
 <code class="descname">main_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.main_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the main route table associated with
 this VPC. Note that you can change a VPC’s main route table by using an
-[<cite>aws_main_route_table_association</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>)</p>
+<cite>``aws_main_route_table_association`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>&gt;`_</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1474,24 +1484,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultVpcDhcpOptions</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage the [default AWS DHCP Options Set](<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS">http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS</a>)
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">DefaultVpcDhcpOptions</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to manage the <a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS">default AWS DHCP Options Set</a>
 in the current region.</p>
 <p>Each AWS region comes with a default set of DHCP options.
 <strong>This is an advanced resource</strong>, and has special caveats to be aware of when
 using it. Please read this document in its entirety before using this resource.</p>
-<p>The <cite>aws_default_vpc_dhcp_options</cite> behaves differently from normal resources, in that
-Terraform does not _create_ this resource, but instead “adopts” it
+<p>The <code class="docutils literal notranslate"><span class="pre">aws_default_vpc_dhcp_options</span></code> behaves differently from normal resources, in that
+Terraform does not <em>create</em> this resource, but instead “adopts” it
 into management.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</li>
-<li><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](<a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">http://www.ietf.org/rfc/rfc2132.txt</a>).</li>
+<li><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -1507,7 +1517,7 @@ into management.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_node_type">
 <code class="descname">netbios_node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpcDhcpOptions.netbios_node_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](<a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">http://www.ietf.org/rfc/rfc2132.txt</a>).</p>
+<dd><p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1564,7 +1574,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">EgressOnlyInternetGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">EgressOnlyInternetGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>[IPv6 only] Creates an egress-only Internet gateway for your VPC.
 An egress-only Internet gateway is used to enable outbound communication
 over IPv6 from instances in your VPC to the Internet, and prevents hosts
@@ -1574,8 +1584,8 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</li>
 </ul>
 </td>
@@ -1630,23 +1640,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.Eip">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Eip</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>associate_with_private_ip=None</em>, <em>instance=None</em>, <em>network_interface=None</em>, <em>public_ipv4_pool=None</em>, <em>tags=None</em>, <em>vpc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Eip</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>associate_with_private_ip=None</em>, <em>instance=None</em>, <em>network_interface=None</em>, <em>public_ipv4_pool=None</em>, <em>tags=None</em>, <em>vpc=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Eip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic IP resource.</p>
-<p>&gt; <strong>Note:</strong> EIP may require IGW to exist prior to association. Use <cite>depends_on</cite> to set an explicit dependency on the IGW.</p>
-<p>&gt; <strong>Note:</strong> Do not use <cite>network_interface</cite> to associate the EIP to <cite>aws_lb</cite> or <cite>aws_nat_gateway</cite> resources. Instead use the <cite>allocation_id</cite> available in those resources to allow AWS to manage the association, otherwise you will see <cite>AuthFailure</cite> errors.</p>
+<blockquote>
+<div><p><strong>Note:</strong> EIP may require IGW to exist prior to association. Use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> to set an explicit dependency on the IGW.</p>
+<p><strong>Note:</strong> Do not use <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> to associate the EIP to <code class="docutils literal notranslate"><span class="pre">aws_lb</span></code> or <code class="docutils literal notranslate"><span class="pre">aws_nat_gateway</span></code> resources. Instead use the <code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> available in those resources to allow AWS to manage the association, otherwise you will see <code class="docutils literal notranslate"><span class="pre">AuthFailure</span></code> errors.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>associate_with_private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.</li>
 <li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 instance ID.</li>
 <li><strong>network_interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network interface ID to associate with.</li>
-<li><strong>public_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 IPv4 address pool identifier or <cite>amazon</cite>. This option is only available for VPC EIPs.</li>
+<li><strong>public_ipv4_pool</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EC2 IPv4 address pool identifier or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>. This option is only available for VPC EIPs.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean if the EIP is in a VPC or not.</li>
 </ul>
@@ -1689,7 +1701,7 @@ the Elastic IP address is associated with the primary private IP address.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Eip.public_ipv4_pool">
 <code class="descname">public_ipv4_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Eip.public_ipv4_pool" title="Permalink to this definition">¶</a></dt>
-<dd><p>EC2 IPv4 address pool identifier or <cite>amazon</cite>. This option is only available for VPC EIPs.</p>
+<dd><p>EC2 IPv4 address pool identifier or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>. This option is only available for VPC EIPs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1746,22 +1758,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.EipAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">EipAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocation_id=None</em>, <em>allow_reassociation=None</em>, <em>instance_id=None</em>, <em>network_interface_id=None</em>, <em>private_ip_address=None</em>, <em>public_ip=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EipAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">EipAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_id=None</em>, <em>allow_reassociation=None</em>, <em>instance_id=None</em>, <em>network_interface_id=None</em>, <em>private_ip_address=None</em>, <em>public_ip=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EipAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS EIP Association as a top level resource, to associate and
 disassociate Elastic IPs from AWS Instances and Network Interfaces.</p>
-<p>&gt; <strong>NOTE:</strong> Do not use this resource to associate an EIP to <cite>aws_lb</cite> or <cite>aws_nat_gateway</cite> resources. Instead use the <cite>allocation_id</cite> available in those resources to allow AWS to manage the association, otherwise you will see <cite>AuthFailure</cite> errors.</p>
-<p>&gt; <strong>NOTE:</strong> <cite>aws_eip_association</cite> is useful in scenarios where EIPs are either
+<blockquote>
+<div><p><strong>NOTE:</strong> Do not use this resource to associate an EIP to <code class="docutils literal notranslate"><span class="pre">aws_lb</span></code> or <code class="docutils literal notranslate"><span class="pre">aws_nat_gateway</span></code> resources. Instead use the <code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> available in those resources to allow AWS to manage the association, otherwise you will see <code class="docutils literal notranslate"><span class="pre">AuthFailure</span></code> errors.</p>
+<p><strong>NOTE:</strong> <code class="docutils literal notranslate"><span class="pre">aws_eip_association</span></code> is useful in scenarios where EIPs are either
 pre-existing or distributed to customers or users and therefore cannot be changed.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The allocation ID. This is required for EC2-VPC.</li>
 <li><strong>allow_reassociation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow an Elastic IP to
-be re-associated. Defaults to <cite>true</cite> in VPC.</li>
+be re-associated. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> in VPC.</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the instance. This is required for
 EC2-Classic. For EC2-VPC, you can specify either the instance ID or the
 network interface ID, but not both. The operation fails if you specify an
@@ -1789,7 +1803,7 @@ address.</li>
 <dt id="pulumi_aws.ec2.EipAssociation.allow_reassociation">
 <code class="descname">allow_reassociation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EipAssociation.allow_reassociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to allow an Elastic IP to
-be re-associated. Defaults to <cite>true</cite> in VPC.</p>
+be re-associated. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code> in VPC.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1866,25 +1880,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.Fleet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Fleet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>excess_capacity_termination_policy=None</em>, <em>launch_template_config=None</em>, <em>on_demand_options=None</em>, <em>replace_unhealthy_instances=None</em>, <em>spot_options=None</em>, <em>tags=None</em>, <em>target_capacity_specification=None</em>, <em>terminate_instances=None</em>, <em>terminate_instances_with_expiration=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Fleet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Fleet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>excess_capacity_termination_policy=None</em>, <em>launch_template_config=None</em>, <em>on_demand_options=None</em>, <em>replace_unhealthy_instances=None</em>, <em>spot_options=None</em>, <em>tags=None</em>, <em>target_capacity_specification=None</em>, <em>terminate_instances=None</em>, <em>terminate_instances_with_expiration=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage EC2 Fleets.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: <cite>no-termination</cite>, <cite>termination</cite>. Defaults to <cite>termination</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>, <code class="docutils literal notranslate"><span class="pre">termination</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">termination</span></code>.</li>
 <li><strong>launch_template_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing EC2 Launch Template configurations. Defined below.</li>
 <li><strong>on_demand_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing On-Demand configurations. Defined below.</li>
-<li><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether EC2 Fleet should replace unhealthy instances. Defaults to <cite>false</cite>.</li>
+<li><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether EC2 Fleet should replace unhealthy instances. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>spot_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing Spot configurations. Defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.</li>
 <li><strong>target_capacity_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing target capacity configurations. Defined below.</li>
-<li><strong>terminate_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to <cite>false</cite>.</li>
-<li><strong>terminate_instances_with_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether running instances should be terminated when the EC2 Fleet expires. Defaults to <cite>false</cite>.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: <cite>maintain</cite>, <cite>request</cite>. Defaults to <cite>maintain</cite>.</li>
+<li><strong>terminate_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>terminate_instances_with_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether running instances should be terminated when the EC2 Fleet expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">request</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">maintain</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -1893,7 +1907,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.excess_capacity_termination_policy">
 <code class="descname">excess_capacity_termination_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.excess_capacity_termination_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: <cite>no-termination</cite>, <cite>termination</cite>. Defaults to <cite>termination</cite>.</p>
+<dd><p>Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: <code class="docutils literal notranslate"><span class="pre">no-termination</span></code>, <code class="docutils literal notranslate"><span class="pre">termination</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">termination</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1911,7 +1925,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.replace_unhealthy_instances">
 <code class="descname">replace_unhealthy_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.replace_unhealthy_instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether EC2 Fleet should replace unhealthy instances. Defaults to <cite>false</cite>.</p>
+<dd><p>Whether EC2 Fleet should replace unhealthy instances. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1935,19 +1949,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.terminate_instances">
 <code class="descname">terminate_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.terminate_instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to <cite>false</cite>.</p>
+<dd><p>Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.terminate_instances_with_expiration">
 <code class="descname">terminate_instances_with_expiration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.terminate_instances_with_expiration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether running instances should be terminated when the EC2 Fleet expires. Defaults to <cite>false</cite>.</p>
+<dd><p>Whether running instances should be terminated when the EC2 Fleet expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Fleet.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Fleet.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: <cite>maintain</cite>, <cite>request</cite>. Defaults to <cite>maintain</cite>.</p>
+<dd><p>The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: <code class="docutils literal notranslate"><span class="pre">maintain</span></code>, <code class="docutils literal notranslate"><span class="pre">request</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">maintain</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1992,7 +2006,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.FlowLog">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">FlowLog</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>eni_id=None</em>, <em>iam_role_arn=None</em>, <em>log_destination=None</em>, <em>log_destination_type=None</em>, <em>log_group_name=None</em>, <em>subnet_id=None</em>, <em>traffic_type=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">FlowLog</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>eni_id=None</em>, <em>iam_role_arn=None</em>, <em>log_destination=None</em>, <em>log_destination_type=None</em>, <em>log_group_name=None</em>, <em>subnet_id=None</em>, <em>traffic_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.FlowLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2000,15 +2014,15 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>eni_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Elastic Network Interface ID to attach to</li>
 <li><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that’s used to post flow logs to a CloudWatch Logs log group</li>
 <li><strong>log_destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the logging destination.</li>
-<li><strong>log_destination_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the logging destination. Valid values: <cite>cloud-watch-logs</cite>, <cite>s3</cite>. Default: <cite>cloud-watch-logs</cite>.</li>
-<li><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <cite>log_destination</cite> instead. The name of the CloudWatch log group.</li>
+<li><strong>log_destination_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the logging destination. Valid values: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>.</li>
+<li><strong>log_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</li>
-<li><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <cite>ACCEPT</cite>,`REJECT`, <cite>ALL</cite>.</li>
+<li><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – VPC ID to attach to</li>
 </ul>
 </td>
@@ -2036,13 +2050,13 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.FlowLog.log_destination_type">
 <code class="descname">log_destination_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.log_destination_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the logging destination. Valid values: <cite>cloud-watch-logs</cite>, <cite>s3</cite>. Default: <cite>cloud-watch-logs</cite>.</p>
+<dd><p>The type of the logging destination. Valid values: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>, <code class="docutils literal notranslate"><span class="pre">s3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">cloud-watch-logs</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.FlowLog.log_group_name">
 <code class="descname">log_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.log_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Deprecated:</em> Use <cite>log_destination</cite> instead. The name of the CloudWatch log group.</p>
+<dd><p><em>Deprecated:</em> Use <code class="docutils literal notranslate"><span class="pre">log_destination</span></code> instead. The name of the CloudWatch log group.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2054,7 +2068,7 @@ interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucke
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.FlowLog.traffic_type">
 <code class="descname">traffic_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.FlowLog.traffic_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of traffic to capture. Valid values: <cite>ACCEPT</cite>,`REJECT`, <cite>ALL</cite>.</p>
+<dd><p>The type of traffic to capture. Valid values: <code class="docutils literal notranslate"><span class="pre">ACCEPT</span></code>,<code class="docutils literal notranslate"><span class="pre">REJECT</span></code>, <code class="docutils literal notranslate"><span class="pre">ALL</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2196,8 +2210,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="descname">password_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.password_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
-This attribute is only exported if <cite>get_password_data</cite> is true.
-See [GetPasswordData](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html</a>) for more information.</p>
+This attribute is only exported if <code class="docutils literal notranslate"><span class="pre">get_password_data</span></code> is true.
+See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2230,7 +2244,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.public_ip">
 <code class="descname">public_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.public_ip" title="Permalink to this definition">¶</a></dt>
-<dd><p>The public IP address assigned to the Instance, if applicable. <strong>NOTE</strong>: If you are using an [<cite>aws_eip</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/eip.html">https://www.terraform.io/docs/providers/aws/r/eip.html</a>) with your instance, you should refer to the EIP’s address directly and not use <cite>public_ip</cite>, as this field will change after the EIP is attached.</p>
+<dd><p>The public IP address assigned to the Instance, if applicable. <strong>NOTE</strong>: If you are using an <cite>``aws_eip`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/eip.html">https://www.terraform.io/docs/providers/aws/r/eip.html</a>&gt;`_ with your instance, you should refer to the EIP’s address directly and not use <code class="docutils literal notranslate"><span class="pre">public_ip</span></code>, as this field will change after the EIP is attached.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2266,7 +2280,7 @@ is only available if you’ve enabled DNS hostnames for your VPC.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetInstanceResult.tenancy">
 <code class="descname">tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetInstanceResult.tenancy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The tenancy of the instance: <cite>dedicated</cite>, <cite>default</cite>, <cite>host</cite>.</p>
+<dd><p>The tenancy of the instance: <code class="docutils literal notranslate"><span class="pre">dedicated</span></code>, <code class="docutils literal notranslate"><span class="pre">default</span></code>, <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2483,14 +2497,14 @@ Specification below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.disable_api_termination">
 <code class="descname">disable_api_termination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.disable_api_termination" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.ebs_optimized">
 <code class="descname">ebs_optimized</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.ebs_optimized" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, the launched EC2 instance will be EBS-optimized.</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the launched EC2 instance will be EBS-optimized.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2516,8 +2530,8 @@ below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.instance_initiated_shutdown_behavior">
 <code class="descname">instance_initiated_shutdown_behavior</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.instance_initiated_shutdown_behavior" title="Permalink to this definition">¶</a></dt>
-<dd><p>Shutdown behavior for the instance. Can be <cite>stop</cite> or <cite>terminate</cite>.
-(Default: <cite>stop</cite>).</p>
+<dd><p>Shutdown behavior for the instance. Can be <code class="docutils literal notranslate"><span class="pre">stop</span></code> or <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.
+(Default: <code class="docutils literal notranslate"><span class="pre">stop</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2580,7 +2594,7 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.GetLaunchTemplateResult.security_group_names">
 <code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetLaunchTemplateResult.security_group_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of security group names to associate with. If you are creating Instances in a VPC, use
-<cite>vpc_security_group_ids</cite> instead.</p>
+<code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2869,7 +2883,7 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.GetSecurityGroupsResult.vpc_ids">
 <code class="descname">vpc_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetSecurityGroupsResult.vpc_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC IDs of the matched security groups. The data source’s tag or filter <em>will span VPCs</em>
-unless the <cite>vpc-id</cite> filter is also used.</p>
+unless the <code class="docutils literal notranslate"><span class="pre">vpc-id</span></code> filter is also used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2929,7 +2943,7 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.domain_name">
 <code class="descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.domain_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The suffix domain name to used when resolving non Fully Qualified Domain Names. e.g. the <cite>search</cite> value in the <cite>/etc/resolv.conf</cite> file.</p>
+<dd><p>The suffix domain name to used when resolving non Fully Qualified Domain Names. e.g. the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2947,7 +2961,7 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcDhcpOptionsResult.netbios_node_type">
 <code class="descname">netbios_node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcDhcpOptionsResult.netbios_node_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see [RFC 2132](<a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">http://www.ietf.org/rfc/rfc2132.txt</a>).</p>
+<dd><p>The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2983,61 +2997,61 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.cidr_blocks">
 <code class="descname">cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.cidr_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.dns_entries">
 <code class="descname">dns_entries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.dns_entries" title="Permalink to this definition">¶</a></dt>
-<dd><p>The DNS entries for the VPC Endpoint. Applicable for endpoints of type <cite>Interface</cite>. DNS blocks are documented below.</p>
+<dd><p>The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. DNS blocks are documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.network_interface_ids">
 <code class="descname">network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.network_interface_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document associated with the VPC Endpoint. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>The policy document associated with the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.prefix_list_id">
 <code class="descname">prefix_list_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.prefix_list_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The prefix list ID of the exposed AWS service. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>The prefix list ID of the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.private_dns_enabled">
 <code class="descname">private_dns_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.private_dns_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the VPC is associated with a private hosted zone - <cite>true</cite> or <cite>false</cite>. Applicable for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>Whether or not the VPC is associated with a private hosted zone - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.route_table_ids">
 <code class="descname">route_table_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.route_table_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.security_group_ids">
 <code class="descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.security_group_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more security groups associated with the network interfaces. Applicable for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>One or more security groups associated with the network interfaces. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.subnet_ids">
 <code class="descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.subnet_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointResult.vpc_endpoint_type">
 <code class="descname">vpc_endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointResult.vpc_endpoint_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The VPC Endpoint type, <cite>Gateway</cite> or <cite>Interface</cite>.</p>
+<dd><p>The VPC Endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3049,7 +3063,7 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.acceptance_required">
 <code class="descname">acceptance_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.acceptance_required" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <cite>true</cite> or <cite>false</cite>.</p>
+<dd><p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3067,7 +3081,7 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.owner">
 <code class="descname">owner</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.owner" title="Permalink to this definition">¶</a></dt>
-<dd><p>The AWS account ID of the service owner or <cite>amazon</cite>.</p>
+<dd><p>The AWS account ID of the service owner or <code class="docutils literal notranslate"><span class="pre">amazon</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3079,13 +3093,13 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.service_type">
 <code class="descname">service_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.service_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service type, <cite>Gateway</cite> or <cite>Interface</cite>.</p>
+<dd><p>The service type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetVpcEndpointServiceResult.vpc_endpoint_policy_supported">
 <code class="descname">vpc_endpoint_policy_supported</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcEndpointServiceResult.vpc_endpoint_policy_supported" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not the service supports endpoint policies - <cite>true</cite> or <cite>false</cite>.</p>
+<dd><p>Whether or not the service supports endpoint policies - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3148,7 +3162,7 @@ unless the <cite>vpc-id</cite> filter is also used.</p>
 <dt id="pulumi_aws.ec2.GetVpcResult.instance_tenancy">
 <code class="descname">instance_tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetVpcResult.instance_tenancy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The allowed tenancy of instances launched into the
-selected VPC. May be any of <cite>“default”</cite>, <cite>“dedicated”</cite>, or <cite>“host”</cite>.</p>
+selected VPC. May be any of <code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;host&quot;</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3209,44 +3223,55 @@ selected VPC. May be any of <cite>“default”</cite>, <cite>“dedicated”</c
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ami=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>cpu_core_count=None</em>, <em>cpu_threads_per_core=None</em>, <em>credit_specification=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>get_password_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_type=None</em>, <em>ipv6_address_count=None</em>, <em>ipv6_addresses=None</em>, <em>key_name=None</em>, <em>monitoring=None</em>, <em>network_interfaces=None</em>, <em>placement_group=None</em>, <em>private_ip=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>volume_tags=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ami=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>cpu_core_count=None</em>, <em>cpu_threads_per_core=None</em>, <em>credit_specification=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>get_password_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_type=None</em>, <em>ipv6_address_count=None</em>, <em>ipv6_addresses=None</em>, <em>key_name=None</em>, <em>monitoring=None</em>, <em>network_interfaces=None</em>, <em>placement_group=None</em>, <em>private_ip=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>volume_tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 instance resource. This allows instances to be created, updated,
-and deleted. Instances also support [provisioning](<a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">https://www.terraform.io/docs/provisioners/index.html</a>).</p>
+and deleted. Instances also support <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ami</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.</li>
 <li><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.  Boolean value.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ to start the instance in.</li>
 <li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Sets the number of CPU cores for an instance. This option is 
 only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values</a>) - specifying this option for unsupported instance types will return an error from the EC2 API.</li>
-<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html</a>) for more information.</li>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</li>
+<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</li>
 <li><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit Specification below for more details.</li>
-<li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</li>
+<li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
+</li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.</li>
 <li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html</a>) of the AWS User Guide for more information.</li>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">EBS Optimized section</a> of the AWS User Guide for more information.</li>
 <li><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</li>
-<li><strong>get_password_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <cite>password_data</cite> attribute. See [GetPasswordData](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html</a>) for more information.</li>
+<li><strong>get_password_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <code class="docutils literal notranslate"><span class="pre">password_data</span></code> attribute. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
+</li>
 <li><strong>host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.</li>
 <li><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](<a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions</a>), notably <cite>iam:PassRole</cite>.
-* <cite>ipv6_address_count</cite>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
+launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shutdown behavior for the
-instance. Amazon defaults this to <cite>stop</cite> for EBS-backed instances and
-<cite>terminate</cite> for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior</a>) for more information.</li>
+instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
+<code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
+instances. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</li>
 </ul>
 </td>
@@ -3255,7 +3280,7 @@ instances. See [Shutdown Behavior](<a class="reference external" href="https://d
 </table>
 <p>:param pulumi.Input[int] ipv6_address_count
 :param pulumi.Input[list] ipv6_addresses: Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-:param pulumi.Input[str] key_name: The key name of the Key Pair to use for the instance; which can be managed using the <cite>aws_key_pair</cite> resource.
+:param pulumi.Input[str] key_name: The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.
 :param pulumi.Input[bool] monitoring: If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 :param pulumi.Input[list] network_interfaces: Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 :param pulumi.Input[str] placement_group: The Placement Group to start the instance in.
@@ -3275,8 +3300,8 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Subnet ID to launch in.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</li>
-<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <cite>user_data_base64</cite> instead.</li>
-<li><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <cite>user_data</cite> to pass base64-encoded binary data directly. Use this instead of <cite>user_data</cite> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</li>
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</li>
+<li><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</li>
 <li><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</li>
 <li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</li>
 </ul>
@@ -3313,13 +3338,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <code class="descname">cpu_core_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.cpu_core_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the number of CPU cores for an instance. This option is 
 only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values</a>) - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.cpu_threads_per_core">
 <code class="descname">cpu_threads_per_core</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.cpu_threads_per_core" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html</a>) for more information.</p>
+<dd><p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3331,8 +3356,8 @@ only supported on creation of instance type that support CPU Options
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.disable_api_termination">
 <code class="descname">disable_api_termination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.disable_api_termination" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</p>
+<dd><p>If true, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3349,7 +3374,7 @@ instance.  See Block Devices below for details.</p>
 Note that if this is not set on an instance type that is optimized by default then
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html</a>) of the AWS User Guide for more information.</p>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">EBS Optimized section</a> of the AWS User Guide for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3362,7 +3387,7 @@ See the [EBS Optimized section](<a class="reference external" href="https://docs
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.get_password_data">
 <code class="descname">get_password_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.get_password_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <cite>password_data</cite> attribute. See [GetPasswordData](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html</a>) for more information.</p>
+<dd><p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <code class="docutils literal notranslate"><span class="pre">password_data</span></code> attribute. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3375,17 +3400,19 @@ See the [EBS Optimized section](<a class="reference external" href="https://docs
 <dt id="pulumi_aws.ec2.Instance.iam_instance_profile">
 <code class="descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](<a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions</a>), notably <cite>iam:PassRole</cite>.
-* <cite>ipv6_address_count</cite>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p>
+launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.instance_initiated_shutdown_behavior">
 <code class="descname">instance_initiated_shutdown_behavior</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.instance_initiated_shutdown_behavior" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shutdown behavior for the
-instance. Amazon defaults this to <cite>stop</cite> for EBS-backed instances and
-<cite>terminate</cite> for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior</a>) for more information.</p>
+instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
+<code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
+instances. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3403,7 +3430,7 @@ instances. See [Shutdown Behavior](<a class="reference external" href="https://d
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.key_name">
 <code class="descname">key_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.key_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The key name of the Key Pair to use for the instance; which can be managed using the <cite>aws_key_pair</cite> resource.</p>
+<dd><p>The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3429,9 +3456,9 @@ instances. See [Shutdown Behavior](<a class="reference external" href="https://d
 <code class="descname">password_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.password_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
-This attribute is only exported if <cite>get_password_data</cite> is true.
+This attribute is only exported if <code class="docutils literal notranslate"><span class="pre">get_password_data</span></code> is true.
 Note that this encrypted value will be stored in the state file, as with all exported attributes.
-See [GetPasswordData](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html</a>) for more information.</p>
+See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3471,7 +3498,7 @@ is only available if you’ve enabled DNS hostnames for your VPC</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.public_ip">
 <code class="descname">public_ip</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.public_ip" title="Permalink to this definition">¶</a></dt>
-<dd><p>The public IP address assigned to the instance, if applicable. <strong>NOTE</strong>: If you are using an [<cite>aws_eip</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/eip.html">https://www.terraform.io/docs/providers/aws/r/eip.html</a>) with your instance, you should refer to the EIP’s address directly and not use <cite>public_ip</cite>, as this field will change after the EIP is attached.</p>
+<dd><p>The public IP address assigned to the instance, if applicable. <strong>NOTE</strong>: If you are using an <cite>``aws_eip`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/eip.html">https://www.terraform.io/docs/providers/aws/r/eip.html</a>&gt;`_ with your instance, you should refer to the EIP’s address directly and not use <code class="docutils literal notranslate"><span class="pre">public_ip</span></code>, as this field will change after the EIP is attached.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3515,13 +3542,13 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.user_data">
 <code class="descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.user_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <cite>user_data_base64</cite> instead.</p>
+<dd><p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.Instance.user_data_base64">
 <code class="descname">user_data_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Instance.user_data_base64" title="Permalink to this definition">¶</a></dt>
-<dd><p>Can be used instead of <cite>user_data</cite> to pass base64-encoded binary data directly. Use this instead of <cite>user_data</cite> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
+<dd><p>Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3578,15 +3605,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.InternetGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">InternetGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">InternetGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.InternetGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC Internet Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</li>
 </ul>
@@ -3654,10 +3681,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.KeyPair">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>key_name=None</em>, <em>key_name_prefix=None</em>, <em>public_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an [EC2 key pair](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html</a>) resource. A key pair is used to control login access to EC2 instances.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">KeyPair</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>key_name=None</em>, <em>key_name_prefix=None</em>, <em>public_key=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.KeyPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">EC2 key pair</a> resource. A key pair is used to control login access to EC2 instances.</p>
 <p>Currently this resource requires an existing user-supplied key pair. This key pair’s public key will be registered with AWS to allow logging-in to EC2 instances.</p>
-<p>When importing an existing key pair the public key material may be in any format supported by AWS. Supported formats (per the [AWS documentation](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws</a>)) are:</p>
+<p>When importing an existing key pair the public key material may be in any format supported by AWS. Supported formats (per the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws">AWS documentation</a>) are:</p>
 <ul class="simple">
 <li>OpenSSH public key format (the format in ~/.ssh/authorized_keys)</li>
 <li>Base64 encoded DER format</li>
@@ -3668,10 +3695,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the key pair.</li>
-<li><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>key_name</cite>.</li>
+<li><strong>key_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</li>
 <li><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key material.</li>
 </ul>
 </td>
@@ -3693,7 +3720,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.KeyPair.key_name_prefix">
 <code class="descname">key_name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.KeyPair.key_name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>key_name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">key_name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3744,15 +3771,64 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.LaunchConfiguration">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchConfiguration</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>associate_public_ip_address=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>enable_monitoring=None</em>, <em>ephemeral_block_devices=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>placement_tenancy=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>spot_price=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>vpc_classic_link_id=None</em>, <em>vpc_classic_link_security_groups=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchConfiguration</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>associate_public_ip_address=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>enable_monitoring=None</em>, <em>ephemeral_block_devices=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_type=None</em>, <em>key_name=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>placement_tenancy=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>spot_price=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>vpc_classic_link_id=None</em>, <em>vpc_classic_link_security_groups=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a new launch configuration, used for autoscaling groups.</p>
+<p>Each of the <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> attributes controls a portion of the AWS
+Launch Configuration’s “Block Device Mapping”. It’s a good idea to familiarize yourself with <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS’s Block Device
+Mapping docs</a>
+to understand the implications of using these attributes.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">root_block_device</span></code> mapping supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> - (Optional) The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</li>
+<li><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code class="docutils literal notranslate"><span class="pre">iops</span></code> - (Optional) The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">delete_on_termination</span></code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</li>
+</ul>
+<p>Modifying any of the <code class="docutils literal notranslate"><span class="pre">root_block_device</span></code> settings requires resource
+replacement.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - (Required) The name of the device to mount.</li>
+<li><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> - (Optional) The Snapshot ID to mount.</li>
+<li><code class="docutils literal notranslate"><span class="pre">volume_type</span></code> - (Optional) The type of volume. Can be <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gp2&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>. (Default: <code class="docutils literal notranslate"><span class="pre">&quot;standard&quot;</span></code>).</li>
+<li><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code class="docutils literal notranslate"><span class="pre">iops</span></code> - (Optional) The amount of provisioned
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">delete_on_termination</span></code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</li>
+<li><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> - (Optional) Whether the volume should be encrypted or not. Do not use this option if you are using <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> as the encrypted flag will be determined by the snapshot. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</li>
+</ul>
+<p>Modifying any <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> currently requires resource replacement.</p>
+<p>Each <code class="docutils literal notranslate"><span class="pre">ephemeral_block_device</span></code> supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - The name of the block device to mount on the instance.</li>
+<li><code class="docutils literal notranslate"><span class="pre">virtual_name</span></code> - The <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral0&quot;</span></code>)</li>
+</ul>
+<p>Each AWS Instance type has a different set of Instance Store block devices
+available for attachment. AWS <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes">publishes a
+list</a>
+of which ephemeral devices are available on each type. The devices are always
+identified by the <code class="docutils literal notranslate"><span class="pre">virtual_name</span></code> in the format <code class="docutils literal notranslate"><span class="pre">&quot;ephemeral{0..N}&quot;</span></code>.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Changes to <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> configuration of <em>existing</em> resources
+cannot currently be detected by Terraform. After updating to block device
+configuration, resource recreation can be manually triggered by using the
+<cite>``taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.</li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.</li>
@@ -3768,18 +3844,18 @@ with launched instances.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch configuration. If you leave
 this blank, Terraform will auto-generate a unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</li>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>placement_tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance. Valid values are
-<cite>“default”</cite> or <cite>“dedicated”</cite>, see [AWS’s Create Launch Configuration](<a class="reference external" href="http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html">http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html</a>)
+<code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code>, see <a class="reference external" href="http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html">AWS’s Create Launch Configuration</a>
 for more details</li>
 <li><strong>root_block_device</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize details about the root block
 device of the instance. See Block Devices below for details.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of associated security group IDS.</li>
 <li><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum price to use for reserving spot instances.</li>
-<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <cite>user_data_base64</cite> instead.</li>
-<li><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <cite>user_data</cite> to pass base64-encoded binary data directly. Use this instead of <cite>user_data</cite> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</li>
-<li><strong>vpc_classic_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. <cite>vpc-2730681a</cite>)</li>
-<li><strong>vpc_classic_link_security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. <cite>sg-46ae3d11</cite>).</li>
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</li>
+<li><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</li>
+<li><strong>vpc_classic_link_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. <code class="docutils literal notranslate"><span class="pre">vpc-2730681a</span></code>)</li>
+<li><strong>vpc_classic_link_security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. <code class="docutils literal notranslate"><span class="pre">sg-46ae3d11</span></code>).</li>
 </ul>
 </td>
 </tr>
@@ -3853,14 +3929,14 @@ this blank, Terraform will auto-generate a unique name.</p>
 <dt id="pulumi_aws.ec2.LaunchConfiguration.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</p>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.placement_tenancy">
 <code class="descname">placement_tenancy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.placement_tenancy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The tenancy of the instance. Valid values are
-<cite>“default”</cite> or <cite>“dedicated”</cite>, see [AWS’s Create Launch Configuration](<a class="reference external" href="http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html">http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html</a>)
+<code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code>, see <a class="reference external" href="http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html">AWS’s Create Launch Configuration</a>
 for more details</p>
 </dd></dl>
 
@@ -3886,25 +3962,25 @@ device of the instance. See Block Devices below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.user_data">
 <code class="descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.user_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <cite>user_data_base64</cite> instead.</p>
+<dd><p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.user_data_base64">
 <code class="descname">user_data_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.user_data_base64" title="Permalink to this definition">¶</a></dt>
-<dd><p>Can be used instead of <cite>user_data</cite> to pass base64-encoded binary data directly. Use this instead of <cite>user_data</cite> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
+<dd><p>Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.vpc_classic_link_id">
 <code class="descname">vpc_classic_link_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.vpc_classic_link_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. <cite>vpc-2730681a</cite>)</p>
+<dd><p>The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. <code class="docutils literal notranslate"><span class="pre">vpc-2730681a</span></code>)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchConfiguration.vpc_classic_link_security_groups">
 <code class="descname">vpc_classic_link_security_groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchConfiguration.vpc_classic_link_security_groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. <cite>sg-46ae3d11</cite>).</p>
+<dd><p>The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. <code class="docutils literal notranslate"><span class="pre">sg-46ae3d11</span></code>).</p>
 </dd></dl>
 
 <dl class="method">
@@ -3949,47 +4025,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.LaunchTemplate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchTemplate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>block_device_mappings=None</em>, <em>capacity_reservation_specification=None</em>, <em>credit_specification=None</em>, <em>description=None</em>, <em>disable_api_termination=None</em>, <em>ebs_optimized=None</em>, <em>elastic_gpu_specifications=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_market_options=None</em>, <em>instance_type=None</em>, <em>kernel_id=None</em>, <em>key_name=None</em>, <em>license_specifications=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>placement=None</em>, <em>ram_disk_id=None</em>, <em>security_group_names=None</em>, <em>tag_specifications=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">LaunchTemplate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>block_device_mappings=None</em>, <em>capacity_reservation_specification=None</em>, <em>credit_specification=None</em>, <em>description=None</em>, <em>disable_api_termination=None</em>, <em>ebs_optimized=None</em>, <em>elastic_gpu_specifications=None</em>, <em>iam_instance_profile=None</em>, <em>image_id=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_market_options=None</em>, <em>instance_type=None</em>, <em>kernel_id=None</em>, <em>key_name=None</em>, <em>license_specifications=None</em>, <em>monitoring=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>network_interfaces=None</em>, <em>placement=None</em>, <em>ram_disk_id=None</em>, <em>security_group_names=None</em>, <em>tag_specifications=None</em>, <em>tags=None</em>, <em>user_data=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>block_device_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.</li>
 <li><strong>capacity_reservation_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.</li>
 <li><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit
 Specification below for more details.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the launch template.</li>
-<li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If <cite>true</cite>, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</li>
-<li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If <cite>true</cite>, the launched EC2 instance will be EBS-optimized.</li>
+<li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
+</li>
+<li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the launched EC2 instance will be EBS-optimized.</li>
 <li><strong>elastic_gpu_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.</li>
 <li><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.</li>
 <li><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI from which to launch the instance.</li>
-<li><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shutdown behavior for the instance. Can be <cite>stop</cite> or <cite>terminate</cite>.
-(Default: <cite>stop</cite>).</li>
+<li><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shutdown behavior for the instance. Can be <code class="docutils literal notranslate"><span class="pre">stop</span></code> or <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.
+(Default: <code class="docutils literal notranslate"><span class="pre">stop</span></code>).</li>
 <li><strong>instance_market_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The market (purchasing) option for the instance. See Market Options
 below for details.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the instance.</li>
 <li><strong>kernel_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kernel ID.</li>
 <li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name to use for the instance.</li>
-<li><strong>license_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of license specifications to associate with. See License Specifications below for more details.</li>
+<li><strong>license_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of license specifications to associate with. See License Specification below for more details.</li>
 <li><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The monitoring option for the instance. See Monitoring below for more details.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the launch template. If you leave this blank, Terraform will auto-generate a unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.</li>
 <li><strong>placement</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The placement of the instance. See Placement below for more details.</li>
 <li><strong>ram_disk_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the RAM disk.</li>
 <li><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group names to associate with. If you are creating Instances in a VPC, use
-<cite>vpc_security_group_ids</cite> instead.</li>
-<li><strong>tag_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags to apply to the resources during launch. See Tags below for more details.</li>
+<code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> instead.</li>
+<li><strong>tag_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags to apply to the resources during launch. See Tag Specifications below for more details.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the launch template.</li>
 <li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-encoded user data to provide when launching the instance.</li>
 <li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</li>
@@ -4039,14 +4116,14 @@ Specification below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.disable_api_termination">
 <code class="descname">disable_api_termination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.disable_api_termination" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.ebs_optimized">
 <code class="descname">ebs_optimized</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.ebs_optimized" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <cite>true</cite>, the launched EC2 instance will be EBS-optimized.</p>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the launched EC2 instance will be EBS-optimized.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4072,8 +4149,8 @@ below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.instance_initiated_shutdown_behavior">
 <code class="descname">instance_initiated_shutdown_behavior</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.instance_initiated_shutdown_behavior" title="Permalink to this definition">¶</a></dt>
-<dd><p>Shutdown behavior for the instance. Can be <cite>stop</cite> or <cite>terminate</cite>.
-(Default: <cite>stop</cite>).</p>
+<dd><p>Shutdown behavior for the instance. Can be <code class="docutils literal notranslate"><span class="pre">stop</span></code> or <code class="docutils literal notranslate"><span class="pre">terminate</span></code>.
+(Default: <code class="docutils literal notranslate"><span class="pre">stop</span></code>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4110,7 +4187,7 @@ below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.license_specifications">
 <code class="descname">license_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.license_specifications" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of license specifications to associate with. See License Specifications below for more details.</p>
+<dd><p>A list of license specifications to associate with. See License Specification below for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4128,7 +4205,7 @@ below for details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4154,13 +4231,13 @@ Interfaces below for more details.</p>
 <dt id="pulumi_aws.ec2.LaunchTemplate.security_group_names">
 <code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.security_group_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of security group names to associate with. If you are creating Instances in a VPC, use
-<cite>vpc_security_group_ids</cite> instead.</p>
+<code class="docutils literal notranslate"><span class="pre">vpc_security_group_ids</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.LaunchTemplate.tag_specifications">
 <code class="descname">tag_specifications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.LaunchTemplate.tag_specifications" title="Permalink to this definition">¶</a></dt>
-<dd><p>The tags to apply to the resources during launch. See Tags below for more details.</p>
+<dd><p>The tags to apply to the resources during launch. See Tag Specifications below for more details.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4223,15 +4300,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.MainRouteTableAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">MainRouteTableAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>route_table_id=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">MainRouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>route_table_id=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for managing the main routing table of a VPC.</p>
+<p>On VPC creation, the AWS API always creates an initial Main Route Table. This
+resource records the ID of that Route Table under <code class="docutils literal notranslate"><span class="pre">original_route_table_id</span></code>.
+The “Delete” action for a <code class="docutils literal notranslate"><span class="pre">main_route_table_association</span></code> consists of resetting
+this original table as the Main Route Table for the VPC. You’ll see this
+additional Route Table in the AWS console; it must remain intact in order for
+the <code class="docutils literal notranslate"><span class="pre">main_route_table_association</span></code> delete to work properly.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Route Table to set as the new
 main route table for the target VPC</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC whose main route table should be set</li>
@@ -4243,7 +4326,7 @@ main route table for the target VPC</li>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.MainRouteTableAssociation.original_route_table_id">
 <code class="descname">original_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.MainRouteTableAssociation.original_route_table_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Used internally, see __Notes__ below</p>
+<dd><p>Used internally, see <strong>Notes</strong> below</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4301,15 +4384,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NatGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NatGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocation_id=None</em>, <em>subnet_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NatGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NatGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_id=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NatGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC NAT Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Allocation ID of the Elastic IP address for the gateway.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Subnet ID of the subnet in which to place the gateway.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -4396,25 +4479,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkAcl">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAcl</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_id=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>subnet_id=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an network ACL resource. You might set up network ACLs with rules similar
 to your security groups in order to add an additional layer of security to your VPC.</p>
-<p>&gt; <strong>NOTE on Network ACLs and Network ACL Rules:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Network ACLs and Network ACL Rules:</strong> Terraform currently
 provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
 defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
+a conflict of rule settings and will overwrite rules.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an egress rule. Parameters defined below.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies an ingress rule. Parameters defined below.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Subnet. This
-attribute is deprecated, please use the <cite>subnet_ids</cite> attribute instead</li>
+attribute is deprecated, please use the <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attribute instead</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subnet IDs to apply the ACL to</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated VPC.</li>
@@ -4445,7 +4529,7 @@ attribute is deprecated, please use the <cite>subnet_ids</cite> attribute instea
 <dt id="pulumi_aws.ec2.NetworkAcl.subnet_id">
 <code class="descname">subnet_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAcl.subnet_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the associated Subnet. This
-attribute is deprecated, please use the <cite>subnet_ids</cite> attribute instead</p>
+attribute is deprecated, please use the <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attribute instead</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4508,29 +4592,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkAclRule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAclRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cidr_block=None</em>, <em>egress=None</em>, <em>from_port=None</em>, <em>icmp_code=None</em>, <em>icmp_type=None</em>, <em>ipv6_cidr_block=None</em>, <em>network_acl_id=None</em>, <em>protocol=None</em>, <em>rule_action=None</em>, <em>rule_number=None</em>, <em>to_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkAclRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_block=None</em>, <em>egress=None</em>, <em>from_port=None</em>, <em>icmp_code=None</em>, <em>icmp_type=None</em>, <em>ipv6_cidr_block=None</em>, <em>network_acl_id=None</em>, <em>protocol=None</em>, <em>rule_action=None</em>, <em>rule_number=None</em>, <em>to_port=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an entry (a rule) in a network ACL with the specified rule number.</p>
-<p>&gt; <strong>NOTE on Network ACLs and Network ACL Rules:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Network ACLs and Network ACL Rules:</strong> Terraform currently
 provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
 defined in-line. At this time you cannot use a Network ACL with in-line rules
 in conjunction with any Network ACL Rule resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
+a conflict of rule settings and will overwrite rules.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).</li>
-<li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <cite>false</cite>.</li>
+<li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The from port to match.</li>
 <li><strong>icmp_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1</li>
 <li><strong>icmp_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1</li>
 <li><strong>ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPv6 CIDR block to allow or deny.</li>
 <li><strong>network_acl_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network ACL.</li>
 <li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. A value of -1 means all protocols.</li>
-<li><strong>rule_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <cite>allow</cite> | <cite>deny</cite></li>
+<li><strong>rule_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <code class="docutils literal notranslate"><span class="pre">allow</span></code> | <code class="docutils literal notranslate"><span class="pre">deny</span></code></li>
 <li><strong>rule_number</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.</li>
 <li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The to port to match.</li>
 </ul>
@@ -4547,7 +4632,7 @@ a conflict of rule settings and will overwrite rules.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAclRule.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule.egress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <cite>false</cite>.</p>
+<dd><p>Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4589,7 +4674,7 @@ a conflict of rule settings and will overwrite rules.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkAclRule.rule_action">
 <code class="descname">rule_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkAclRule.rule_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <cite>allow</cite> | <cite>deny</cite></p>
+<dd><p>Indicates whether to allow or deny the traffic that matches the rule. Accepted values: <code class="docutils literal notranslate"><span class="pre">allow</span></code> | <code class="docutils literal notranslate"><span class="pre">deny</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4646,15 +4731,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkInterface">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterface</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attachments=None</em>, <em>description=None</em>, <em>private_ip=None</em>, <em>private_ips=None</em>, <em>private_ips_count=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterface</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attachments=None</em>, <em>description=None</em>, <em>private_ip=None</em>, <em>private_ips=None</em>, <em>private_ips_count=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic network interface (ENI) resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Block to define the attachment of the ENI. Documented below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the network interface.</li>
 </ul>
@@ -4759,15 +4844,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkInterfaceAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterfaceAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>device_index=None</em>, <em>instance_id=None</em>, <em>network_interface_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterfaceAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_index=None</em>, <em>instance_id=None</em>, <em>network_interface_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attach an Elastic network interface (ENI) resource with EC2 instance.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>device_index</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Network interface index (int).</li>
 <li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance ID to attach.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ENI ID to attach.</li>
@@ -4848,25 +4933,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterfaceSecurityGroupAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>network_interface_id=None</em>, <em>security_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">NetworkInterfaceSecurityGroupAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>network_interface_id=None</em>, <em>security_group_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterfaceSecurityGroupAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource attaches a security group to an Elastic Network Interface (ENI).
 It can be used to attach a security group to any existing ENI, be it a
 secondary ENI or one attached as the primary interface on an instance.</p>
-<p>&gt; <strong>NOTE on instances, interfaces, and security groups:</strong> Terraform currently
-provides the capability to assign security groups via the [<cite>aws_instance</cite>][1]
-and the [<cite>aws_network_interface</cite>][2] resources. Using this resource in
+<blockquote>
+<div><strong>NOTE on instances, interfaces, and security groups:</strong> Terraform currently
+provides the capability to assign security groups via the <cite>``aws_instance`</cite> &lt;/docs/providers/aws/d/instance.html&gt;`_
+and the <cite>``aws_network_interface`</cite> &lt;/docs/providers/aws/r/network_interface.html&gt;`_ resources. Using this resource in
 conjunction with security groups provided in-line in those resources will cause
 conflicts, and will lead to spurious diffs and undefined behavior - please use
-one or the other.</p>
-<p>[1]: /docs/providers/aws/d/instance.html
-[2]: /docs/providers/aws/r/network_interface.html</p>
+one or the other.</div></blockquote>
+<p>There are no outputs for this resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>network_interface_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network interface to attach to.</li>
 <li><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the security group.</li>
 </ul>
@@ -4928,147 +5013,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.PeeringConnectionOptions">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">PeeringConnectionOptions</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>accepter=None</em>, <em>requester=None</em>, <em>vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">PeeringConnectionOptions</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accepter=None</em>, <em>requester=None</em>, <em>vpc_peering_connection_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PeeringConnectionOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage VPC peering connection options.</p>
-<p>&gt; <strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> Terraform provides
+<blockquote>
+<div><strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> Terraform provides
 both a standalone VPC Peering Connection Options and a VPC Peering Connection
-resource with <cite>accepter</cite> and <cite>requester</cite> attributes. Do not manage options for the same VPC peering
+resource with <code class="docutils literal notranslate"><span class="pre">accepter</span></code> and <code class="docutils literal notranslate"><span class="pre">requester</span></code> attributes. Do not manage options for the same VPC peering
 connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
 Doing so will cause a conflict of options and will overwrite the options.
 Using a VPC Peering Connection Options resource decouples management of the connection options from
-management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</p>
+management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</div></blockquote>
 <p>Basic usage:</p>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a>hcl
-resource “aws_vpc” “foo” {</p>
-<blockquote>
-<div>cidr_block = “10.0.0.0/16”</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc” “bar” {</dt>
-<dd>cidr_block = “10.1.0.0/16”</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc_peering_connection” “foo” {</dt>
-<dd>vpc_id      = “${aws_vpc.foo.id}”
-peer_vpc_id = “${aws_vpc.bar.id}”
-auto_accept = true</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc_peering_connection_options” “foo” {</dt>
-<dd><p class="first">vpc_peering_connection_id = “${aws_vpc_peering_connection.foo.id}”</p>
-<dl class="docutils">
-<dt>accepter {</dt>
-<dd>allow_remote_vpc_dns_resolution = true</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>requester {</dt>
-<dd>allow_vpc_to_remote_classic_link = true
-allow_classic_link_to_remote_vpc = true</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
 <p>Basic cross-account usage:</p>
-<p><a href="#id7"><span class="problematic" id="id8">``</span></a><a href="#id9"><span class="problematic" id="id10">`</span></a>hcl
-provider “aws” {</p>
-<blockquote>
-<div><p>alias = “requester”</p>
-<p># Requester’s credentials.</p>
-</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>provider “aws” {</dt>
-<dd><p class="first">alias = “accepter”</p>
-<p class="last"># Accepter’s credentials.</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc” “main” {</dt>
-<dd><p class="first">provider = “aws.requester”</p>
-<p>cidr_block = “10.0.0.0/16”</p>
-<p class="last">enable_dns_support   = true
-enable_dns_hostnames = true</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc” “peer” {</dt>
-<dd><p class="first">provider = “aws.accepter”</p>
-<p>cidr_block = “10.1.0.0/16”</p>
-<p class="last">enable_dns_support   = true
-enable_dns_hostnames = true</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>data “aws_caller_identity” “peer” {</dt>
-<dd>provider = “aws.accepter”</dd>
-</dl>
-<p>}</p>
-<p># Requester’s side of the connection.
-resource “aws_vpc_peering_connection” “peer” {</p>
-<blockquote>
-<div><p>provider = “aws.requester”</p>
-<p>vpc_id        = “${aws_vpc.main.id}”
-peer_vpc_id   = “${aws_vpc.peer.id}”
-peer_owner_id = “${data.aws_caller_identity.peer.account_id}”
-auto_accept   = false</p>
-<dl class="docutils">
-<dt>tags = {</dt>
-<dd>Side = “Requester”</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
-<p># Accepter’s side of the connection.
-resource “aws_vpc_peering_connection_accepter” “peer” {</p>
-<blockquote>
-<div><p>provider = “aws.accepter”</p>
-<p>vpc_peering_connection_id = “${aws_vpc_peering_connection.peer.id}”
-auto_accept               = true</p>
-<dl class="docutils">
-<dt>tags = {</dt>
-<dd>Side = “Accepter”</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc_peering_connection_options” “requester” {</dt>
-<dd><p class="first">provider = “aws.requester”</p>
-<p># As options can’t be set until the connection has been accepted
-# create an explicit dependency on the accepter.
-vpc_peering_connection_id = “${aws_vpc_peering_connection_accepter.peer.id}”</p>
-<dl class="docutils">
-<dt>requester {</dt>
-<dd>allow_remote_vpc_dns_resolution = true</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “aws_vpc_peering_connection_options” “accepter” {</dt>
-<dd><p class="first">provider = “aws.accepter”</p>
-<p>vpc_peering_connection_id = “${aws_vpc_peering_connection_accepter.peer.id}”</p>
-<dl class="docutils">
-<dt>accepter {</dt>
-<dd>allow_remote_vpc_dns_resolution = true</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</li>
@@ -5145,16 +5108,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.PlacementGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">PlacementGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">PlacementGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>strategy=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.PlacementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 placement group. Read more about placement groups
-in [AWS Docs](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html</a>).</p>
+in <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">AWS Docs</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the placement group.</li>
 <li><strong>strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The placement strategy.</li>
 </ul>
@@ -5216,15 +5179,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.ProxyProtocolPolicy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">ProxyProtocolPolicy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>instance_ports=None</em>, <em>load_balancer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">ProxyProtocolPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>instance_ports=None</em>, <em>load_balancer=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.ProxyProtocolPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>instance_ports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of instance ports to which the policy
 should be applied. This can be specified if the protocol is SSL or TCP.</li>
 <li><strong>load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The load balancer to which the policy
@@ -5290,20 +5253,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.Route">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Route" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Route</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a routing table entry (a route) in a VPC routing table.</p>
-<p>&gt; <strong>NOTE on Route Tables and Routes:</strong> Terraform currently
+<blockquote>
+<div><strong>NOTE on Route Tables and Routes:</strong> Terraform currently
 provides both a standalone Route resource and a Route Table resource with routes
 defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
-a conflict of rule settings and will overwrite rules.</p>
+a conflict of rule settings and will overwrite rules.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination CIDR block.</li>
 <li><strong>destination_ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination IPv6 CIDR block.</li>
 <li><strong>egress_only_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of a VPC Egress Only Internet Gateway.</li>
@@ -5421,31 +5385,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.RouteTable">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>propagating_vgws=None</em>, <em>routes=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">RouteTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>propagating_vgws=None</em>, <em>routes=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC routing table.</p>
-<p>&gt; <strong>NOTE on Route Tables and Routes:</strong> Terraform currently
+<blockquote>
+<div><p><strong>NOTE on Route Tables and Routes:</strong> Terraform currently
 provides both a standalone Route resource and a Route Table resource with routes
 defined in-line. At this time you cannot use a Route Table with in-line routes
 in conjunction with any Route resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
-<p>&gt; <strong>NOTE on `gateway_id` and `nat_gateway_id`:</strong> The AWS API is very forgiving with these two
-attributes and the <cite>aws_route_table</cite> resource can be created with a NAT ID specified as a Gateway ID attribute.
-This _will_ lead to a permanent diff between your configuration and statefile, as the API returns the correct
-parameters in the returned route table. If you’re experiencing constant diffs in your <cite>aws_route_table</cite> resources,
+<p><strong>NOTE on ``gateway_id`` and ``nat_gateway_id``:</strong> The AWS API is very forgiving with these two
+attributes and the <code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> resource can be created with a NAT ID specified as a Gateway ID attribute.
+This <em>will</em> lead to a permanent diff between your configuration and statefile, as the API returns the correct
+parameters in the returned route table. If you’re experiencing constant diffs in your <code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> resources,
 the first thing to check is whether or not you’re specifying a NAT ID instead of a Gateway ID, or vice-versa.</p>
-<p>&gt; <strong>NOTE on `propagating_vgws` and the `aws_vpn_gateway_route_propagation` resource:</strong>
-If the <cite>propagating_vgws</cite> argument is present, it’s not supported to _also_
-define route propagations using <cite>aws_vpn_gateway_route_propagation</cite>, since
+<p><strong>NOTE on ``propagating_vgws`` and the ``aws_vpn_gateway_route_propagation`` resource:</strong>
+If the <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code> argument is present, it’s not supported to <em>also</em>
+define route propagations using <code class="docutils literal notranslate"><span class="pre">aws_vpn_gateway_route_propagation</span></code>, since
 this resource will delete any propagating gateways not explicitly listed in
-<cite>propagating_vgws</cite>. Omit this argument when defining route propagation using
+<code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code>. Omit this argument when defining route propagation using
 the separate resource.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>propagating_vgws</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual gateways for propagation.</li>
 <li><strong>routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of route objects. Their keys are documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -5527,15 +5493,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.RouteTableAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">RouteTableAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">RouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.RouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an association between a subnet and routing table.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the routing table to associate with.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subnet ID to create an association.</li>
 </ul>
@@ -5597,26 +5563,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>revoke_rules_on_delete=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>egress=None</em>, <em>ingress=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>revoke_rules_on_delete=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a security group resource.</p>
-<p>&gt; <strong>NOTE on Security Groups and Security Group Rules:</strong> Terraform currently
-provides both a standalone Security Group Rule resource (a single <cite>ingress</cite> or
-<cite>egress</cite> rule), and a Security Group resource with <cite>ingress</cite> and <cite>egress</cite> rules
+<blockquote>
+<div><p><strong>NOTE on Security Groups and Security Group Rules:</strong> Terraform currently
+provides both a standalone Security Group Rule resource (a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
+<code class="docutils literal notranslate"><span class="pre">egress</span></code> rule), and a Security Group resource with <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules
 defined in-line. At this time you cannot use a Security Group with in-line rules
 in conjunction with any Security Group Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
-<p>&gt; <strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html</a>).</p>
+<p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group description. Defaults to
-“Managed by Terraform”. Cannot be “”. __NOTE__: This field maps to the AWS
-<cite>GroupDescription</cite> attribute, for which there is no Update API. If you’d like
-to classify your security groups in a way that can be updated, use <cite>tags</cite>.</li>
+“Managed by Terraform”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</li>
 <li><strong>egress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
@@ -5624,14 +5592,14 @@ ingress rule. Each ingress block supports fields documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security group. If omitted, Terraform will
 assign a random, unique name</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</li>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>revoke_rules_on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Instruct Terraform to revoke all of the
 Security Groups attached ingress and egress rules before deleting the rule
 itself. This is normally not needed, however certain AWS services such as
 Elastic Map Reduce may automatically add required rules to security groups used
 with the service, and those rules may contain a cyclic dependency that prevent
 the security groups from being destroyed without removing the dependency first.
-Default <cite>false</cite></li>
+Default <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</li>
 </ul>
@@ -5649,9 +5617,9 @@ Default <cite>false</cite></li>
 <dt id="pulumi_aws.ec2.SecurityGroup.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>The security group description. Defaults to
-“Managed by Terraform”. Cannot be “”. __NOTE__: This field maps to the AWS
-<cite>GroupDescription</cite> attribute, for which there is no Update API. If you’d like
-to classify your security groups in a way that can be updated, use <cite>tags</cite>.</p>
+“Managed by Terraform”. Cannot be “”. <strong>NOTE</strong>: This field maps to the AWS
+<code class="docutils literal notranslate"><span class="pre">GroupDescription</span></code> attribute, for which there is no Update API. If you’d like
+to classify your security groups in a way that can be updated, use <code class="docutils literal notranslate"><span class="pre">tags</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5679,7 +5647,7 @@ assign a random, unique name</p>
 <dt id="pulumi_aws.ec2.SecurityGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique name beginning with the specified
-prefix. Conflicts with <cite>name</cite>.</p>
+prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5697,7 +5665,7 @@ itself. This is normally not needed, however certain AWS services such as
 Elastic Map Reduce may automatically add required rules to security groups used
 with the service, and those rules may contain a cyclic dependency that prevent
 the security groups from being destroyed without removing the dependency first.
-Default <cite>false</cite></p>
+Default <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5754,39 +5722,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SecurityGroupRule">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SecurityGroupRule</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cidr_blocks=None</em>, <em>description=None</em>, <em>from_port=None</em>, <em>ipv6_cidr_blocks=None</em>, <em>prefix_list_ids=None</em>, <em>protocol=None</em>, <em>security_group_id=None</em>, <em>self=None</em>, <em>source_security_group_id=None</em>, <em>to_port=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a security group rule resource. Represents a single <cite>ingress</cite> or
-<cite>egress</cite> group rule, which can be added to external Security Groups.</p>
-<p>&gt; <strong>NOTE on Security Groups and Security Group Rules:</strong> Terraform currently
-provides both a standalone Security Group Rule resource (a single <cite>ingress</cite> or
-<cite>egress</cite> rule), and a Security Group resource with <cite>ingress</cite> and <cite>egress</cite> rules
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SecurityGroupRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_blocks=None</em>, <em>description=None</em>, <em>from_port=None</em>, <em>ipv6_cidr_blocks=None</em>, <em>prefix_list_ids=None</em>, <em>protocol=None</em>, <em>security_group_id=None</em>, <em>self=None</em>, <em>source_security_group_id=None</em>, <em>to_port=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a security group rule resource. Represents a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
+<code class="docutils literal notranslate"><span class="pre">egress</span></code> group rule, which can be added to external Security Groups.</p>
+<blockquote>
+<div><p><strong>NOTE on Security Groups and Security Group Rules:</strong> Terraform currently
+provides both a standalone Security Group Rule resource (a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or
+<code class="docutils literal notranslate"><span class="pre">egress</span></code> rule), and a Security Group resource with <code class="docutils literal notranslate"><span class="pre">ingress</span></code> and <code class="docutils literal notranslate"><span class="pre">egress</span></code> rules
 defined in-line. At this time you cannot use a Security Group with in-line rules
 in conjunction with any Security Group Rule resources. Doing so will cause
 a conflict of rule settings and will overwrite rules.</p>
-<p>&gt; <strong>NOTE:</strong> Setting <cite>protocol = “all”</cite> or <cite>protocol = -1</cite> with <cite>from_port</cite> and <cite>to_port</cite> will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by Terraform and may generate warnings in the future.</p>
-<p>&gt; <strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](<a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html</a>).</p>
+<p><strong>NOTE:</strong> Setting <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">&quot;all&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">protocol</span> <span class="pre">=</span> <span class="pre">-1</span></code> with <code class="docutils literal notranslate"><span class="pre">from_port</span></code> and <code class="docutils literal notranslate"><span class="pre">to_port</span></code> will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by Terraform and may generate warnings in the future.</p>
+<p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a class="reference external" href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of CIDR blocks. Cannot be specified with <cite>source_security_group_id</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the rule.</li>
 <li><strong>from_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The start port (or ICMP type number if protocol is “icmp”).</li>
 <li><strong>ipv6_cidr_blocks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of IPv6 CIDR blocks.</li>
 <li><strong>prefix_list_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with <cite>egress</cite>.</li>
-<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. If not icmp, tcp, udp, or all use the [protocol number](<a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</a>)</li>
+Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></li>
 <li><strong>security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group to apply this rule to.</li>
 <li><strong>self</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the security group itself will be added as
 a source to this ingress rule.</li>
 <li><strong>source_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security group id to allow access to/from,
-depending on the <cite>type</cite>. Cannot be specified with <cite>cidr_blocks</cite>.</li>
+depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code>.</li>
 <li><strong>to_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The end port (or ICMP code if protocol is “icmp”).</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of rule being created. Valid options are <cite>ingress</cite> (inbound)
-or <cite>egress</cite> (outbound).</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of rule being created. Valid options are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> (inbound)
+or <code class="docutils literal notranslate"><span class="pre">egress</span></code> (outbound).</li>
 </ul>
 </td>
 </tr>
@@ -5795,7 +5765,7 @@ or <cite>egress</cite> (outbound).</li>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.cidr_blocks">
 <code class="descname">cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.cidr_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of CIDR blocks. Cannot be specified with <cite>source_security_group_id</cite>.</p>
+<dd><p>List of CIDR blocks. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">source_security_group_id</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5820,13 +5790,13 @@ or <cite>egress</cite> (outbound).</li>
 <dt id="pulumi_aws.ec2.SecurityGroupRule.prefix_list_ids">
 <code class="descname">prefix_list_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.prefix_list_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with <cite>egress</cite>.</p>
+Only valid with <code class="docutils literal notranslate"><span class="pre">egress</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.protocol">
 <code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.protocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The protocol. If not icmp, tcp, udp, or all use the [protocol number](<a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</a>)</p>
+<dd><p>The protocol. If not icmp, tcp, udp, or all use the <a class="reference external" href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">protocol number</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5846,7 +5816,7 @@ a source to this ingress rule.</p>
 <dt id="pulumi_aws.ec2.SecurityGroupRule.source_security_group_id">
 <code class="descname">source_security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.source_security_group_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The security group id to allow access to/from,
-depending on the <cite>type</cite>. Cannot be specified with <cite>cidr_blocks</cite>.</p>
+depending on the <code class="docutils literal notranslate"><span class="pre">type</span></code>. Cannot be specified with <code class="docutils literal notranslate"><span class="pre">cidr_blocks</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5858,8 +5828,8 @@ depending on the <cite>type</cite>. Cannot be specified with <cite>cidr_blocks</
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SecurityGroupRule.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SecurityGroupRule.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of rule being created. Valid options are <cite>ingress</cite> (inbound)
-or <cite>egress</cite> (outbound).</p>
+<dd><p>The type of rule being created. Valid options are <code class="docutils literal notranslate"><span class="pre">ingress</span></code> (inbound)
+or <code class="docutils literal notranslate"><span class="pre">egress</span></code> (outbound).</p>
 </dd></dl>
 
 <dl class="method">
@@ -5904,15 +5874,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SnapshotCreateVolumePermission">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SnapshotCreateVolumePermission</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>account_id=None</em>, <em>snapshot_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SnapshotCreateVolumePermission</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>snapshot_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SnapshotCreateVolumePermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds permission to create volumes off of a given EBS Snapshot.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An AWS Account ID to add create volume permissions</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A snapshot ID</li>
 </ul>
@@ -5974,8 +5944,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SpotDatafeedSubscription">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotDatafeedSubscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>bucket=None</em>, <em>prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotDatafeedSubscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>-&gt; <strong>Note:</strong> There is only a single subscription allowed per account.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotDatafeedSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>bucket=None</em>, <em>prefix=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotDatafeedSubscription" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><strong>Note:</strong> There is only a single subscription allowed per account.</div></blockquote>
 <p>To help you understand the charges for your Spot instances, Amazon EC2 provides a data feed that describes your Spot instance usage and pricing.
 This data feed is sent to an Amazon S3 bucket that you specify when you subscribe to the data feed.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -5983,8 +5954,8 @@ This data feed is sent to an Amazon S3 bucket that you specify when you subscrib
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon S3 bucket in which to store the Spot instance data feed.</li>
 <li><strong>prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Path of folder inside bucket to place spot pricing data.</li>
 </ul>
@@ -6046,7 +6017,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SpotFleetRequest">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotFleetRequest</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocation_strategy=None</em>, <em>excess_capacity_termination_policy=None</em>, <em>fleet_type=None</em>, <em>iam_fleet_role=None</em>, <em>instance_interruption_behaviour=None</em>, <em>instance_pools_to_use_count=None</em>, <em>launch_specifications=None</em>, <em>load_balancers=None</em>, <em>replace_unhealthy_instances=None</em>, <em>spot_price=None</em>, <em>target_capacity=None</em>, <em>target_group_arns=None</em>, <em>terminate_instances_with_expiration=None</em>, <em>valid_from=None</em>, <em>valid_until=None</em>, <em>wait_for_fulfillment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotFleetRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocation_strategy=None</em>, <em>excess_capacity_termination_policy=None</em>, <em>fleet_type=None</em>, <em>iam_fleet_role=None</em>, <em>instance_interruption_behaviour=None</em>, <em>instance_pools_to_use_count=None</em>, <em>launch_specifications=None</em>, <em>load_balancers=None</em>, <em>replace_unhealthy_instances=None</em>, <em>spot_price=None</em>, <em>target_capacity=None</em>, <em>target_group_arns=None</em>, <em>terminate_instances_with_expiration=None</em>, <em>valid_from=None</em>, <em>valid_until=None</em>, <em>wait_for_fulfillment=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -6054,41 +6025,42 @@ instances to be requested on the Spot market.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocation_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
-<cite>lowestPrice</cite>.</li>
+<code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</li>
 <li><strong>excess_capacity_termination_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.</li>
 <li><strong>fleet_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of fleet request. Indicates whether the Spot Fleet only requests the target
-capacity or also attempts to maintain it. Default is <cite>maintain</cite>.</li>
+capacity or also attempts to maintain it. Default is <code class="docutils literal notranslate"><span class="pre">maintain</span></code>.</li>
 <li><strong>iam_fleet_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Grants the Spot fleet permission to terminate
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.</li>
 <li><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
-<cite>terminate</cite>.</li>
+<code class="docutils literal notranslate"><span class="pre">terminate</span></code>.</li>
 <li><strong>instance_pools_to_use_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of Spot pools across which to allocate your target Spot capacity.
-Valid only when <cite>allocation_strategy</cite> is set to <cite>lowestPrice</cite>. Spot Fleet selects
+Valid only when <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.</li>
 <li><strong>launch_specifications</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types.</li>
 <li><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the Spot fleet.</li>
-<li><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <cite>false</cite>.</li>
+<li><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum bid price per unit hour.</li>
 <li><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.</li>
-<li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <cite>aws_alb_target_group</cite> ARNs, for use with Application Load Balancing.</li>
+<li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</li>
 <li><strong>terminate_instances_with_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.</li>
-<li><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</li>
-<li><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The end date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.</li>
+<li><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</li>
+<li><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
+</li>
 <li><strong>wait_for_fulfillment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, Terraform will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.</li>
@@ -6102,7 +6074,7 @@ timeout of 10m is reached.</li>
 <code class="descname">allocation_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.allocation_strategy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
-<cite>lowestPrice</cite>.</p>
+<code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6117,7 +6089,7 @@ request is decreased below the current size of the Spot fleet.</p>
 <dt id="pulumi_aws.ec2.SpotFleetRequest.fleet_type">
 <code class="descname">fleet_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.fleet_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of fleet request. Indicates whether the Spot Fleet only requests the target
-capacity or also attempts to maintain it. Default is <cite>maintain</cite>.</p>
+capacity or also attempts to maintain it. Default is <code class="docutils literal notranslate"><span class="pre">maintain</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6134,14 +6106,14 @@ terminateInstancesWithExpiration.</p>
 <code class="descname">instance_interruption_behaviour</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.instance_interruption_behaviour" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
-<cite>terminate</cite>.</p>
+<code class="docutils literal notranslate"><span class="pre">terminate</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.instance_pools_to_use_count">
 <code class="descname">instance_pools_to_use_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.instance_pools_to_use_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of Spot pools across which to allocate your target Spot capacity.
-Valid only when <cite>allocation_strategy</cite> is set to <cite>lowestPrice</cite>. Spot Fleet selects
+Valid only when <code class="docutils literal notranslate"><span class="pre">allocation_strategy</span></code> is set to <code class="docutils literal notranslate"><span class="pre">lowestPrice</span></code>. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.</p>
 </dd></dl>
@@ -6163,7 +6135,7 @@ across different markets and instance types.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.replace_unhealthy_instances">
 <code class="descname">replace_unhealthy_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.replace_unhealthy_instances" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether Spot fleet should replace unhealthy instances. Default <cite>false</cite>.</p>
+<dd><p>Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6189,7 +6161,7 @@ important to your application workload, such as vCPUs, memory, or I/O.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.target_group_arns">
 <code class="descname">target_group_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.target_group_arns" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of <cite>aws_alb_target_group</cite> ARNs, for use with Application Load Balancing.</p>
+<dd><p>A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6202,13 +6174,13 @@ instances should be terminated when the Spot fleet request expires.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.valid_from">
 <code class="descname">valid_from</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.valid_from" title="Permalink to this definition">¶</a></dt>
-<dd><p>The start date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</p>
+<dd><p>The start date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.valid_until">
 <code class="descname">valid_until</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.valid_until" title="Permalink to this definition">¶</a></dt>
-<dd><p>The end date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
+<dd><p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. Defaults to 24 hours.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6261,64 +6233,81 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotInstanceRequest</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>ami=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>block_duration_minutes=None</em>, <em>cpu_core_count=None</em>, <em>cpu_threads_per_core=None</em>, <em>credit_specification=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>get_password_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_interruption_behaviour=None</em>, <em>instance_type=None</em>, <em>ipv6_address_count=None</em>, <em>ipv6_addresses=None</em>, <em>key_name=None</em>, <em>launch_group=None</em>, <em>monitoring=None</em>, <em>network_interfaces=None</em>, <em>placement_group=None</em>, <em>private_ip=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>spot_price=None</em>, <em>spot_type=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>valid_from=None</em>, <em>valid_until=None</em>, <em>volume_tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>wait_for_fulfillment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">SpotInstanceRequest</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ami=None</em>, <em>associate_public_ip_address=None</em>, <em>availability_zone=None</em>, <em>block_duration_minutes=None</em>, <em>cpu_core_count=None</em>, <em>cpu_threads_per_core=None</em>, <em>credit_specification=None</em>, <em>disable_api_termination=None</em>, <em>ebs_block_devices=None</em>, <em>ebs_optimized=None</em>, <em>ephemeral_block_devices=None</em>, <em>get_password_data=None</em>, <em>host_id=None</em>, <em>iam_instance_profile=None</em>, <em>instance_initiated_shutdown_behavior=None</em>, <em>instance_interruption_behaviour=None</em>, <em>instance_type=None</em>, <em>ipv6_address_count=None</em>, <em>ipv6_addresses=None</em>, <em>key_name=None</em>, <em>launch_group=None</em>, <em>monitoring=None</em>, <em>network_interfaces=None</em>, <em>placement_group=None</em>, <em>private_ip=None</em>, <em>root_block_device=None</em>, <em>security_groups=None</em>, <em>source_dest_check=None</em>, <em>spot_price=None</em>, <em>spot_type=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>tenancy=None</em>, <em>user_data=None</em>, <em>user_data_base64=None</em>, <em>valid_from=None</em>, <em>valid_until=None</em>, <em>volume_tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>wait_for_fulfillment=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Spot Instance Request resource. This allows instances to be
 requested on the spot market.</p>
-<p>By default Terraform creates Spot Instance Requests with a <cite>persistent</cite> type,
+<p>By default Terraform creates Spot Instance Requests with a <code class="docutils literal notranslate"><span class="pre">persistent</span></code> type,
 which means that for the duration of their lifetime, AWS will launch an
 instance with the configured details if and when the spot market will accept
 the requested price.</p>
 <p>On destruction, Terraform will make an attempt to terminate the associated Spot
 Instance if there is one present.</p>
-<p>Spot Instances requests with a <cite>one-time</cite> type will close the spot request
+<p>Spot Instances requests with a <code class="docutils literal notranslate"><span class="pre">one-time</span></code> type will close the spot request
 when the instance is terminated either by the request being below the current spot
 price availability or by a user.</p>
-<p>&gt; <strong>NOTE:</strong> Because their behavior depends on the live status of the spot
+<blockquote>
+<div><strong>NOTE:</strong> Because their behavior depends on the live status of the spot
 market, Spot Instance Requests have a unique lifecycle that makes them behave
-differently than other Terraform resources. Most importantly: there is __no
-<a href="#id11"><span class="problematic" id="id12">guarantee__</span></a> that a Spot Instance exists to fulfill the request at any given
-point in time. See the [AWS Spot Instance
-documentation](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html</a>)
-for more information.</p>
+differently than other Terraform resources. Most importantly: there is <strong>no
+guarantee</strong> that a Spot Instance exists to fulfill the request at any given
+point in time. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">AWS Spot Instance
+documentation</a>
+for more information.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>ami</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AMI to use for the instance.</li>
 <li><strong>associate_public_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Associate a public ip address with an instance in a VPC.  Boolean value.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ to start the instance in.</li>
 <li><strong>block_duration_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
 Note that you can’t specify an Availability Zone group or a launch group if you specify a duration.</li>
-<li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Sets the number of CPU cores for an instance. This option is 
+<li><strong>cpu_core_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – <p>Sets the number of CPU cores for an instance. This option is 
 only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values</a>) - specifying this option for unsupported instance types will return an error from the EC2 API.</li>
-<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html</a>) for more information.</li>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
+</li>
+<li><strong>cpu_threads_per_core</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – <p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</p>
+</li>
 <li><strong>credit_specification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize the credit specification of the instance. See Credit Specification below for more details.</li>
-<li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</li>
+<li><strong>disable_api_termination</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
+</li>
 <li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.</li>
-<li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will be EBS-optimized.
+<li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html</a>) of the AWS User Guide for more information.</li>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">EBS Optimized section</a> of the AWS User Guide for more information.</p>
+</li>
 <li><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize Ephemeral (also known as
 “Instance Store”) volumes on the instance. See Block Devices below for details.</li>
-<li><strong>get_password_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <cite>password_data</cite> attribute. See [GetPasswordData](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html</a>) for more information.</li>
+<li><strong>get_password_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <code class="docutils literal notranslate"><span class="pre">password_data</span></code> attribute. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
+</li>
 <li><strong>host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.</li>
-<li><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](<a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions</a>), notably <cite>iam:PassRole</cite>.
-* <cite>ipv6_address_count</cite>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
-<li><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Shutdown behavior for the
-instance. Amazon defaults this to <cite>stop</cite> for EBS-backed instances and
-<cite>terminate</cite> for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior</a>) for more information.</li>
-<li><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <cite>terminate</cite> as this is the current AWS behaviour.</li>
+<li><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The IAM Instance Profile to
+launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instance_initiated_shutdown_behavior</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Shutdown behavior for the
+instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
+<code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
+instances. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</p>
+</li>
+<li><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <code class="docutils literal notranslate"><span class="pre">terminate</span></code> as this is the current AWS behaviour.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</li>
 </ul>
 </td>
@@ -6327,7 +6316,7 @@ instances. See [Shutdown Behavior](<a class="reference external" href="https://d
 </table>
 <p>:param pulumi.Input[int] ipv6_address_count
 :param pulumi.Input[list] ipv6_addresses: Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-:param pulumi.Input[str] key_name: The key name of the Key Pair to use for the instance; which can be managed using the <cite>aws_key_pair</cite> resource.
+:param pulumi.Input[str] key_name: The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.
 :param pulumi.Input[str] launch_group: A launch group is a group of spot instances that launch together and terminate together.</p>
 <blockquote>
 <div>If left empty instances are launched and terminated individually.</div></blockquote>
@@ -6347,15 +6336,17 @@ device of the instance. See Block Devices below for details.</li>
 <li><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.</li>
 <li><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum price to request on the spot market.</li>
-<li><strong>spot_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <cite>one-time</cite>, after
+<li><strong>spot_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">one-time</span></code>, after
 the instance is terminated, the spot request will be closed.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Subnet ID to launch in.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.</li>
-<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <cite>user_data_base64</cite> instead.</li>
-<li><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <cite>user_data</cite> to pass base64-encoded binary data directly. Use this instead of <cite>user_data</cite> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</li>
-<li><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The start date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</li>
-<li><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The end date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.</li>
+<li><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</li>
+<li><strong>user_data_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</li>
+<li><strong>valid_from</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The start date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</p>
+</li>
+<li><strong>valid_until</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.</p>
+</li>
 <li><strong>volume_tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the devices created by the instance at launch time.</li>
 <li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group IDs to associate with.</li>
 <li><strong>wait_for_fulfillment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set, Terraform will
@@ -6397,13 +6388,13 @@ Note that you can’t specify an Availability Zone group or a launch group if yo
 <code class="descname">cpu_core_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.cpu_core_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the number of CPU cores for an instance. This option is 
 only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values</a>) - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values">CPU Cores and Threads Per CPU Core Per Instance Type</a> - specifying this option for unsupported instance types will return an error from the EC2 API.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.cpu_threads_per_core">
 <code class="descname">cpu_threads_per_core</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.cpu_threads_per_core" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html</a>) for more information.</p>
+<dd><p>If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU Options</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6415,8 +6406,8 @@ only supported on creation of instance type that support CPU Options
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.disable_api_termination">
 <code class="descname">disable_api_termination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.disable_api_termination" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, enables [EC2 Instance
-Termination Protection](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination</a>)</p>
+<dd><p>If true, enables <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination">EC2 Instance
+Termination Protection</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6433,7 +6424,7 @@ instance.  See Block Devices below for details.</p>
 Note that if this is not set on an instance type that is optimized by default then
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html</a>) of the AWS User Guide for more information.</p>
+See the <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html">EBS Optimized section</a> of the AWS User Guide for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6446,7 +6437,7 @@ See the [EBS Optimized section](<a class="reference external" href="https://docs
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.get_password_data">
 <code class="descname">get_password_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.get_password_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <cite>password_data</cite> attribute. See [GetPasswordData](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html</a>) for more information.</p>
+<dd><p>If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the <code class="docutils literal notranslate"><span class="pre">password_data</span></code> attribute. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html">GetPasswordData</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6459,23 +6450,25 @@ See the [EBS Optimized section](<a class="reference external" href="https://docs
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.iam_instance_profile">
 <code class="descname">iam_instance_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.iam_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](<a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions</a>), notably <cite>iam:PassRole</cite>.
-* <cite>ipv6_address_count</cite>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</p>
+launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions">EC2 documentation</a>, notably <code class="docutils literal notranslate"><span class="pre">iam:PassRole</span></code>.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">ipv6_address_count</span></code>- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.instance_initiated_shutdown_behavior">
 <code class="descname">instance_initiated_shutdown_behavior</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.instance_initiated_shutdown_behavior" title="Permalink to this definition">¶</a></dt>
 <dd><p>Shutdown behavior for the
-instance. Amazon defaults this to <cite>stop</cite> for EBS-backed instances and
-<cite>terminate</cite> for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior</a>) for more information.</p>
+instance. Amazon defaults this to <code class="docutils literal notranslate"><span class="pre">stop</span></code> for EBS-backed instances and
+<code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
+instances. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.instance_interruption_behaviour">
 <code class="descname">instance_interruption_behaviour</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.instance_interruption_behaviour" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <cite>terminate</cite> as this is the current AWS behaviour.</p>
+<dd><p>Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <code class="docutils literal notranslate"><span class="pre">terminate</span></code> as this is the current AWS behaviour.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6493,7 +6486,7 @@ instances. See [Shutdown Behavior](<a class="reference external" href="https://d
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.key_name">
 <code class="descname">key_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.key_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The key name of the Key Pair to use for the instance; which can be managed using the <cite>aws_key_pair</cite> resource.</p>
+<dd><p>The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6572,12 +6565,14 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.spot_bid_status">
 <code class="descname">spot_bid_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.spot_bid_status" title="Permalink to this definition">¶</a></dt>
-<dd><p>The current [bid
-status](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html</a>)
-of the Spot Instance Request.
-* <cite>spot_request_state</cite> The current [request
-state](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status</a>)
+<dd><p>The current <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html">bid
+status</a>
 of the Spot Instance Request.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">spot_request_state</span></code> The current <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#creating-spot-request-status">request
+state</a>
+of the Spot Instance Request.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6596,7 +6591,7 @@ the Spot Instance request.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.spot_type">
 <code class="descname">spot_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.spot_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set to <cite>one-time</cite>, after
+<dd><p>If set to <code class="docutils literal notranslate"><span class="pre">one-time</span></code>, after
 the instance is terminated, the spot request will be closed.</p>
 </dd></dl>
 
@@ -6621,25 +6616,25 @@ the instance is terminated, the spot request will be closed.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.user_data">
 <code class="descname">user_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.user_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <cite>user_data_base64</cite> instead.</p>
+<dd><p>The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see <code class="docutils literal notranslate"><span class="pre">user_data_base64</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.user_data_base64">
 <code class="descname">user_data_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.user_data_base64" title="Permalink to this definition">¶</a></dt>
-<dd><p>Can be used instead of <cite>user_data</cite> to pass base64-encoded binary data directly. Use this instead of <cite>user_data</cite> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
+<dd><p>Can be used instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> to pass base64-encoded binary data directly. Use this instead of <code class="docutils literal notranslate"><span class="pre">user_data</span></code> whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.valid_from">
 <code class="descname">valid_from</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.valid_from" title="Permalink to this definition">¶</a></dt>
-<dd><p>The start date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</p>
+<dd><p>The start date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotInstanceRequest.valid_until">
 <code class="descname">valid_until</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotInstanceRequest.valid_until" title="Permalink to this definition">¶</a></dt>
-<dd><p>The end date and time of the request, in UTC [RFC3339](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.</p>
+<dd><p>The end date and time of the request, in UTC <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339</a> format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6704,18 +6699,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.Subnet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>assign_ipv6_address_on_creation=None</em>, <em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>ipv6_cidr_block=None</em>, <em>map_public_ip_on_launch=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Subnet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>assign_ipv6_address_on_creation=None</em>, <em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>ipv6_cidr_block=None</em>, <em>map_public_ip_on_launch=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an VPC subnet resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>assign_ipv6_address_on_creation</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
 that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is <cite>false</cite></li>
+assigned an IPv6 address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the subnet.</li>
 <li><strong>availability_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ ID of the subnet.</li>
 <li><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the subnet.</li>
@@ -6723,7 +6718,7 @@ assigned an IPv6 address. Default is <cite>false</cite></li>
 in CIDR notation. The subnet size must use a /64 prefix length.</li>
 <li><strong>map_public_ip_on_launch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
 that instances launched into the subnet should be assigned
-a public IP address. Default is <cite>false</cite>.</li>
+a public IP address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID.</li>
 </ul>
@@ -6742,7 +6737,7 @@ a public IP address. Default is <cite>false</cite>.</li>
 <code class="descname">assign_ipv6_address_on_creation</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.assign_ipv6_address_on_creation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify true to indicate
 that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is <cite>false</cite></p>
+assigned an IPv6 address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6781,7 +6776,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.</p>
 <code class="descname">map_public_ip_on_launch</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Subnet.map_public_ip_on_launch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify true to indicate
 that instances launched into the subnet should be assigned
-a public IP address. Default is <cite>false</cite>.</p>
+a public IP address. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6844,20 +6839,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VolumeAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>device_name=None</em>, <em>force_detach=None</em>, <em>instance_id=None</em>, <em>skip_destroy=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VolumeAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>device_name=None</em>, <em>force_detach=None</em>, <em>instance_id=None</em>, <em>skip_destroy=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS EBS Volume Attachment as a top level resource, to attach and
 detach volumes from AWS Instances.</p>
-<p>&gt; <strong>NOTE on EBS block devices:</strong> If you use <cite>ebs_block_device</cite> on an <cite>aws_instance</cite>, Terraform will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <cite>ebs_block_device</cite> cannot be mixed with external <cite>aws_ebs_volume</cite> + <cite>aws_ebs_volume_attachment</cite> resources for a given instance.</p>
+<blockquote>
+<div><strong>NOTE on EBS block devices:</strong> If you use <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> on an <code class="docutils literal notranslate"><span class="pre">aws_instance</span></code>, Terraform will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <code class="docutils literal notranslate"><span class="pre">ebs_block_device</span></code> cannot be mixed with external <code class="docutils literal notranslate"><span class="pre">aws_ebs_volume</span></code> + <code class="docutils literal notranslate"><span class="pre">aws_ebs_volume_attachment</span></code> resources for a given instance.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The device name to expose to the instance (for
-example, <cite>/dev/sdh</cite> or <cite>xvdh</cite>)</li>
-<li><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <cite>true</cite> if you want to force the
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>)</li>
+<li><strong>force_detach</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
 [Detaching an Amazon EBS Volume from an Instance][1] for more information.</li>
@@ -6877,13 +6873,13 @@ means attached.</li>
 <dt id="pulumi_aws.ec2.VolumeAttachment.device_name">
 <code class="descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.device_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The device name to expose to the instance (for
-example, <cite>/dev/sdh</cite> or <cite>xvdh</cite>)</p>
+example, <code class="docutils literal notranslate"><span class="pre">/dev/sdh</span></code> or <code class="docutils literal notranslate"><span class="pre">xvdh</span></code>)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VolumeAttachment.force_detach">
 <code class="descname">force_detach</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VolumeAttachment.force_detach" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set to <cite>true</cite> if you want to force the
+<dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in <strong>data loss</strong>. See
 [Detaching an Amazon EBS Volume from an Instance][1] for more information.</p>
@@ -6953,18 +6949,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.Vpc">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Vpc</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>assign_generated_ipv6_cidr_block=None</em>, <em>cidr_block=None</em>, <em>enable_classiclink=None</em>, <em>enable_classiclink_dns_support=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>instance_tenancy=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Vpc" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">Vpc</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>assign_generated_ipv6_cidr_block=None</em>, <em>cidr_block=None</em>, <em>enable_classiclink=None</em>, <em>enable_classiclink_dns_support=None</em>, <em>enable_dns_hostnames=None</em>, <em>enable_dns_support=None</em>, <em>instance_tenancy=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.Vpc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an VPC resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>assign_generated_ipv6_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Requests an Amazon-provided IPv6 CIDR
 block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or
-the size of the CIDR block. Default is <cite>false</cite>.</li>
+the size of the CIDR block. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for the VPC.</li>
 <li><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
@@ -6991,7 +6987,7 @@ Only valid in regions and accounts that support EC2 Classic.</li>
 <code class="descname">assign_generated_ipv6_cidr_block</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.assign_generated_ipv6_cidr_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>Requests an Amazon-provided IPv6 CIDR
 block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or
-the size of the CIDR block. Default is <cite>false</cite>.</p>
+the size of the CIDR block. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7068,7 +7064,7 @@ Only valid in regions and accounts that support EC2 Classic.</p>
 <code class="descname">main_route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.Vpc.main_route_table_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ID of the main route table associated with
 this VPC. Note that you can change a VPC’s main route table by using an
-[<cite>aws_main_route_table_association</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>).</p>
+<cite>``aws_main_route_table_association`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html">https://www.terraform.io/docs/providers/aws/r/main_route_table_assoc.html</a>&gt;`_.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7125,23 +7121,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcDhcpOptions</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_name=None</em>, <em>domain_name_servers=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>ntp_servers=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a VPC DHCP Options resource.
-* <cite>domain_name_servers</cite>, <cite>netbios_name_servers</cite>, <cite>ntp_servers</cite> are limited by AWS to maximum four servers only.
-* To actually use the DHCP Options Set you need to associate it to a VPC using [<cite>aws_vpc_dhcp_options_association</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html">https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html</a>).
-* If you delete a DHCP Options Set, all VPCs using it will be associated to AWS’s <cite>default</cite> DHCP Option Set.
-* In most cases unless you’re configuring your own DNS you’ll want to set <cite>domain_name_servers</cite> to <cite>AmazonProvidedDNS</cite>.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcDhcpOptions</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>domain_name=None</em>, <em>domain_name_servers=None</em>, <em>netbios_name_servers=None</em>, <em>netbios_node_type=None</em>, <em>ntp_servers=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a VPC DHCP Options resource.</p>
+<ul class="simple">
+<li>Notice that all arguments are optional but you have to specify at least one argument.</li>
+<li><code class="docutils literal notranslate"><span class="pre">domain_name_servers</span></code>, <code class="docutils literal notranslate"><span class="pre">netbios_name_servers</span></code>, <code class="docutils literal notranslate"><span class="pre">ntp_servers</span></code> are limited by AWS to maximum four servers only.</li>
+<li>To actually use the DHCP Options Set you need to associate it to a VPC using <cite>``aws_vpc_dhcp_options_association`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html">https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html</a>&gt;`_.</li>
+<li>If you delete a DHCP Options Set, all VPCs using it will be associated to AWS’s <code class="docutils literal notranslate"><span class="pre">default</span></code> DHCP Option Set.</li>
+<li>In most cases unless you’re configuring your own DNS you’ll want to set <code class="docutils literal notranslate"><span class="pre">domain_name_servers</span></code> to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <cite>search</cite> value in the <cite>/etc/resolv.conf</cite> file.</li>
-<li><strong>domain_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of name servers to configure in <cite>/etc/resolv.conf</cite>. If you want to use the default AWS nameservers you should set this to <cite>AmazonProvidedDNS</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.</li>
+<li><strong>domain_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of name servers to configure in <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code>. If you want to use the default AWS nameservers you should set this to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.</li>
 <li><strong>netbios_name_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NETBIOS name servers.</li>
-<li><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](<a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">http://www.ietf.org/rfc/rfc2132.txt</a>).</li>
+<li><strong>netbios_node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
+</li>
 <li><strong>ntp_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of NTP servers to configure.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -7152,13 +7152,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.domain_name">
 <code class="descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.domain_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <cite>search</cite> value in the <cite>/etc/resolv.conf</cite> file.</p>
+<dd><p>the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the <code class="docutils literal notranslate"><span class="pre">search</span></code> value in the <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code> file.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.domain_name_servers">
 <code class="descname">domain_name_servers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.domain_name_servers" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of name servers to configure in <cite>/etc/resolv.conf</cite>. If you want to use the default AWS nameservers you should set this to <cite>AmazonProvidedDNS</cite>.</p>
+<dd><p>List of name servers to configure in <code class="docutils literal notranslate"><span class="pre">/etc/resolv.conf</span></code>. If you want to use the default AWS nameservers you should set this to <code class="docutils literal notranslate"><span class="pre">AmazonProvidedDNS</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7170,7 +7170,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcDhcpOptions.netbios_node_type">
 <code class="descname">netbios_node_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptions.netbios_node_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](<a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">http://www.ietf.org/rfc/rfc2132.txt</a>).</p>
+<dd><p>The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see <a class="reference external" href="http://www.ietf.org/rfc/rfc2132.txt">RFC 2132</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7233,16 +7233,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcDhcpOptionsAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcDhcpOptionsAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>dhcp_options_id=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptionsAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a VPC DHCP Options Association resource.
-* Removing the DHCP Options Association automatically sets AWS’s <cite>default</cite> DHCP Options Set to the VPC.</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcDhcpOptionsAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>dhcp_options_id=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcDhcpOptionsAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a VPC DHCP Options Association resource.</p>
+<ul class="simple">
+<li>You can only associate one DHCP Options Set to a given VPC ID.</li>
+<li>Removing the DHCP Options Association automatically sets AWS’s <code class="docutils literal notranslate"><span class="pre">default</span></code> DHCP Options Set to the VPC.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>dhcp_options_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the DHCP Options Set to associate to the VPC.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC to which we would like to associate a DHCP Options Set.</li>
 </ul>
@@ -7304,30 +7307,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpoint">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpoint</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auto_accept=None</em>, <em>policy=None</em>, <em>private_dns_enabled=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>subnet_ids=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>auto_accept=None</em>, <em>policy=None</em>, <em>private_dns_enabled=None</em>, <em>route_table_ids=None</em>, <em>security_group_ids=None</em>, <em>service_name=None</em>, <em>subnet_ids=None</em>, <em>vpc_endpoint_type=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint resource.</p>
-<p>&gt; <strong>NOTE on VPC Endpoints and VPC Endpoint Associations:</strong> Terraform provides both standalone VPC Endpoint Associations for
-Route Tables - (an association between a VPC endpoint and a single <cite>route_table_id</cite>) and
-Subnets - (an association between a VPC endpoint and a single <cite>subnet_id</cite>) and
-a VPC Endpoint resource with <cite>route_table_ids</cite> and <cite>subnet_ids</cite> attributes.
+<blockquote>
+<div><strong>NOTE on VPC Endpoints and VPC Endpoint Associations:</strong> Terraform provides both standalone VPC Endpoint Associations for
+Route Tables - (an association between a VPC endpoint and a single <code class="docutils literal notranslate"><span class="pre">route_table_id</span></code>) and
+Subnets - (an association between a VPC endpoint and a single <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>) and
+a VPC Endpoint resource with <code class="docutils literal notranslate"><span class="pre">route_table_ids</span></code> and <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code> attributes.
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
-Doing so will cause a conflict of associations and will overwrite the association.</p>
+Doing so will cause a conflict of associations and will overwrite the association.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).</li>
-<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <cite>Gateway</cite>. Defaults to full access. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</li>
-<li><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <cite>Interface</cite>.
-Defaults to <cite>false</cite>.</li>
-<li><strong>route_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more route table IDs. Applicable for endpoints of type <cite>Gateway</cite>.</li>
-<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups to associate with the network interface. Required for endpoints of type <cite>Interface</cite>.</li>
-<li><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name, in the form <cite>com.amazonaws.region.service</cite> for AWS services.</li>
-<li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <cite>Interface</cite>.</li>
-<li><strong>vpc_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC endpoint type, <cite>Gateway</cite> or <cite>Interface</cite>. Defaults to <cite>Gateway</cite>.</li>
+<li><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>. Defaults to full access. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</li>
+<li><strong>private_dns_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>route_table_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more route table IDs. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</li>
+<li><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name, in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.region.service</span></code> for AWS services.</li>
+<li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</li>
+<li><strong>vpc_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC in which the endpoint will be used.</li>
 </ul>
 </td>
@@ -7343,56 +7347,56 @@ Defaults to <cite>false</cite>.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.cidr_blocks">
 <code class="descname">cidr_blocks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.cidr_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.dns_entries">
 <code class="descname">dns_entries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.dns_entries" title="Permalink to this definition">¶</a></dt>
-<dd><p>The DNS entries for the VPC Endpoint. Applicable for endpoints of type <cite>Interface</cite>. DNS blocks are documented below.</p>
+<dd><p>The DNS entries for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. DNS blocks are documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.network_interface_ids">
 <code class="descname">network_interface_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.network_interface_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.policy">
 <code class="descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <cite>Gateway</cite>. Defaults to full access. For more information about building AWS IAM policy documents with Terraform, see the [AWS IAM Policy Document Guide](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html</a>).</p>
+<dd><p>A policy to attach to the endpoint that controls access to the service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>. Defaults to full access. For more information about building AWS IAM policy documents with Terraform, see the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/iam-policy-documents.html">AWS IAM Policy Document Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.prefix_list_id">
 <code class="descname">prefix_list_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.prefix_list_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The prefix list ID of the exposed AWS service. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>The prefix list ID of the exposed AWS service. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.private_dns_enabled">
 <code class="descname">private_dns_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.private_dns_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <cite>Interface</cite>.
-Defaults to <cite>false</cite>.</p>
+<dd><p>Whether or not to associate a private hosted zone with the specified VPC. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.route_table_ids">
 <code class="descname">route_table_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.route_table_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more route table IDs. Applicable for endpoints of type <cite>Gateway</cite>.</p>
+<dd><p>One or more route table IDs. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.security_group_ids">
 <code class="descname">security_group_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.security_group_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of one or more security groups to associate with the network interface. Required for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>The ID of one or more security groups to associate with the network interface. Required for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.service_name">
 <code class="descname">service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.service_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service name, in the form <cite>com.amazonaws.region.service</cite> for AWS services.</p>
+<dd><p>The service name, in the form <code class="docutils literal notranslate"><span class="pre">com.amazonaws.region.service</span></code> for AWS services.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7404,13 +7408,13 @@ Defaults to <cite>false</cite>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.subnet_ids">
 <code class="descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.subnet_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <cite>Interface</cite>.</p>
+<dd><p>The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpoint.vpc_endpoint_type">
 <code class="descname">vpc_endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpoint.vpc_endpoint_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The VPC endpoint type, <cite>Gateway</cite> or <cite>Interface</cite>. Defaults to <cite>Gateway</cite>.</p>
+<dd><p>The VPC endpoint type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Gateway</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7461,7 +7465,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointConnectionNotification">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointConnectionNotification</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>connection_events=None</em>, <em>connection_notification_arn=None</em>, <em>vpc_endpoint_id=None</em>, <em>vpc_endpoint_service_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointConnectionNotification</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>connection_events=None</em>, <em>connection_notification_arn=None</em>, <em>vpc_endpoint_id=None</em>, <em>vpc_endpoint_service_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint connection notification resource.
 Connection notifications notify subscribers of VPC Endpoint events.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -7469,9 +7473,9 @@ Connection notifications notify subscribers of VPC Endpoint events.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>connection_events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more endpoint [events](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters</a>) for which to receive notifications.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>connection_events</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more endpoint <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters">events</a> for which to receive notifications.</li>
 <li><strong>connection_notification_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic for the notifications.</li>
 <li><strong>vpc_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC Endpoint to receive notifications for.</li>
 <li><strong>vpc_endpoint_service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC Endpoint Service to receive notifications for.</li>
@@ -7483,7 +7487,7 @@ Connection notifications notify subscribers of VPC Endpoint events.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointConnectionNotification.connection_events">
 <code class="descname">connection_events</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointConnectionNotification.connection_events" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more endpoint [events](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters</a>) for which to receive notifications.</p>
+<dd><p>One or more endpoint <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters">events</a> for which to receive notifications.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7558,15 +7562,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointRouteTableAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointRouteTableAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>route_table_id=None</em>, <em>vpc_endpoint_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointRouteTableAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>route_table_id=None</em>, <em>vpc_endpoint_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointRouteTableAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a VPC Endpoint Route Table Association</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the EC2 Route Table to be associated with the VPC Endpoint.</li>
 <li><strong>vpc_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.</li>
 </ul>
@@ -7628,22 +7632,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointService">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointService</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>acceptance_required=None</em>, <em>allowed_principals=None</em>, <em>network_load_balancer_arns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointService</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>acceptance_required=None</em>, <em>allowed_principals=None</em>, <em>network_load_balancer_arns=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VPC Endpoint Service resource.
-Service consumers can create an _Interface_ VPC Endpoint to connect to the service.</p>
-<p>&gt; <strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> Terraform provides
+Service consumers can create an <em>Interface</em> VPC Endpoint to connect to the service.</p>
+<blockquote>
+<div><strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> Terraform provides
 both a standalone VPC Endpoint Service Allowed Principal resource
-and a VPC Endpoint Service resource with an <cite>allowed_principals</cite> attribute. Do not use the same principal ARN in both
+and a VPC Endpoint Service resource with an <code class="docutils literal notranslate"><span class="pre">allowed_principals</span></code> attribute. Do not use the same principal ARN in both
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
-and will overwrite the association.</p>
+and will overwrite the association.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>acceptance_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <cite>true</cite> or <cite>false</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>acceptance_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>allowed_principals</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more principals allowed to discover the endpoint service.</li>
 <li><strong>network_load_balancer_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARNs of one or more Network Load Balancers for the endpoint service.</li>
 </ul>
@@ -7654,7 +7659,7 @@ and will overwrite the association.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointService.acceptance_required">
 <code class="descname">acceptance_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.acceptance_required" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <cite>true</cite> or <cite>false</cite>.</p>
+<dd><p>Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7696,7 +7701,7 @@ and will overwrite the association.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcEndpointService.service_type">
 <code class="descname">service_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointService.service_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service type, <cite>Gateway</cite> or <cite>Interface</cite>.</p>
+<dd><p>The service type, <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> or <code class="docutils literal notranslate"><span class="pre">Interface</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7747,20 +7752,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointServiceAllowedPrinciple</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>principal_arn=None</em>, <em>vpc_endpoint_service_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointServiceAllowedPrinciple</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>principal_arn=None</em>, <em>vpc_endpoint_service_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointServiceAllowedPrinciple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to allow a principal to discover a VPC endpoint service.</p>
-<p>&gt; <strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> Terraform provides
+<blockquote>
+<div><strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> Terraform provides
 both a standalone VPC Endpoint Service Allowed Principal resource
-and a VPC Endpoint Service resource with an <cite>allowed_principals</cite> attribute. Do not use the same principal ARN in both
+and a VPC Endpoint Service resource with an <code class="docutils literal notranslate"><span class="pre">allowed_principals</span></code> attribute. Do not use the same principal ARN in both
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
-and will overwrite the association.</p>
+and will overwrite the association.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>principal_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the principal to allow permissions.</li>
 <li><strong>vpc_endpoint_service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC endpoint service to allow permission.</li>
 </ul>
@@ -7822,20 +7828,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcEndpointSubnetAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointSubnetAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>subnet_id=None</em>, <em>vpc_endpoint_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointSubnetAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcEndpointSubnetAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>subnet_id=None</em>, <em>vpc_endpoint_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcEndpointSubnetAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create an association between a VPC endpoint and a subnet.</p>
-<p>&gt; <strong>NOTE on VPC Endpoints and VPC Endpoint Subnet Associations:</strong> Terraform provides
+<blockquote>
+<div><strong>NOTE on VPC Endpoints and VPC Endpoint Subnet Associations:</strong> Terraform provides
 both a standalone VPC Endpoint Subnet Association (an association between a VPC endpoint
-and a single <cite>subnet_id</cite>) and a VPC Endpoint resource with a <cite>subnet_ids</cite>
+and a single <code class="docutils literal notranslate"><span class="pre">subnet_id</span></code>) and a VPC Endpoint resource with a <code class="docutils literal notranslate"><span class="pre">subnet_ids</span></code>
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
-Association resource. Doing so will cause a conflict of associations and will overwrite the association.</p>
+Association resource. Doing so will cause a conflict of associations and will overwrite the association.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the subnet to be associated with the VPC endpoint.</li>
 <li><strong>vpc_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC endpoint with which the subnet will be associated.</li>
 </ul>
@@ -7897,17 +7904,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcIpv4CidrBlockAssociation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcIpv4CidrBlockAssociation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cidr_block=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcIpv4CidrBlockAssociation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcIpv4CidrBlockAssociation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cidr_block=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcIpv4CidrBlockAssociation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to associate additional IPv4 CIDR blocks with a VPC.</p>
 <p>When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
-The <cite>aws_vpc_ipv4_cidr_block_association</cite> resource allows further IPv4 CIDR blocks to be added to the VPC.</p>
+The <code class="docutils literal notranslate"><span class="pre">aws_vpc_ipv4_cidr_block_association</span></code> resource allows further IPv4 CIDR blocks to be added to the VPC.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional IPv4 CIDR block to associate with the VPC.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC to make the association with.</li>
 </ul>
@@ -7969,33 +7976,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcPeeringConnection">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>accepter=None</em>, <em>auto_accept=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>requester=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accepter=None</em>, <em>auto_accept=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>requester=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a VPC peering connection.</p>
-<p>&gt; <strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> Terraform provides
+<blockquote>
+<div><p><strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> Terraform provides
 both a standalone VPC Peering Connection Options and a VPC Peering Connection
-resource with <cite>accepter</cite> and <cite>requester</cite> attributes. Do not manage options for the same VPC peering
+resource with <code class="docutils literal notranslate"><span class="pre">accepter</span></code> and <code class="docutils literal notranslate"><span class="pre">requester</span></code> attributes. Do not manage options for the same VPC peering
 connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
 Doing so will cause a conflict of options and will overwrite the options.
 Using a VPC Peering Connection Options resource decouples management of the connection options from
 management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</p>
-<p>-&gt; <strong>Note:</strong> For cross-account (requester’s AWS account differs from the accepter’s AWS account) or inter-region
-VPC Peering Connections use the <cite>aws_vpc_peering_connection</cite> resource to manage the requester’s side of the
-connection and use the <cite>aws_vpc_peering_connection_accepter</cite> resource to manage the accepter’s side of the connection.</p>
+<p><strong>Note:</strong> For cross-account (requester’s AWS account differs from the accepter’s AWS account) or inter-region
+VPC Peering Connections use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection</span></code> resource to manage the requester’s side of the
+connection and use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> resource to manage the accepter’s side of the connection.</p>
+</div></blockquote>
+<p>If both VPCs are not in the same AWS account do not enable the <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> attribute.
+The accepter can manage its side of the connection using the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> resource
+or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that accepts
 the peering connection (a maximum of one).</li>
 <li><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Accept the peering (both VPCs need to be in the same AWS account).</li>
 <li><strong>peer_owner_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider][1] is currently connected to.</li>
-<li><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the accepter VPC of the [VPC Peering Connection]. <cite>auto_accept</cite> must be <cite>false</cite>,
-and use the <cite>aws_vpc_peering_connection_accepter</cite> to manage the accepter side.</li>
+<li><strong>peer_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the accepter VPC of the [VPC Peering Connection]. <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> must be <code class="docutils literal notranslate"><span class="pre">false</span></code>,
+and use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> to manage the accepter side.</li>
 <li><strong>peer_vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC with which you are creating the VPC Peering Connection.</li>
 <li><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A optional configuration block that allows for [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options to be set for the VPC that requests
@@ -8037,8 +8049,8 @@ Defaults to the account ID the [AWS provider][1] is currently connected to.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnection.peer_region">
 <code class="descname">peer_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnection.peer_region" title="Permalink to this definition">¶</a></dt>
-<dd><p>The region of the accepter VPC of the [VPC Peering Connection]. <cite>auto_accept</cite> must be <cite>false</cite>,
-and use the <cite>aws_vpc_peering_connection_accepter</cite> to manage the accepter side.</p>
+<dd><p>The region of the accepter VPC of the [VPC Peering Connection]. <code class="docutils literal notranslate"><span class="pre">auto_accept</span></code> must be <code class="docutils literal notranslate"><span class="pre">false</span></code>,
+and use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> to manage the accepter side.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8109,24 +8121,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcPeeringConnectionAccepter</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>accepter=None</em>, <em>auto_accept=None</em>, <em>requester=None</em>, <em>tags=None</em>, <em>vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpcPeeringConnectionAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>accepter=None</em>, <em>auto_accept=None</em>, <em>requester=None</em>, <em>tags=None</em>, <em>vpc_peering_connection_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage the accepter’s side of a VPC Peering Connection.</p>
 <p>When a cross-account (requester’s AWS account differs from the accepter’s AWS account) or an inter-region
 VPC Peering Connection is created, a VPC Peering Connection resource is automatically created in the
 accepter’s account.
-The requester can use the <cite>aws_vpc_peering_connection</cite> resource to manage its side of the connection
-and the accepter can use the <cite>aws_vpc_peering_connection_accepter</cite> resource to “adopt” its side of the
+The requester can use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection</span></code> resource to manage its side of the connection
+and the accepter can use the <code class="docutils literal notranslate"><span class="pre">aws_vpc_peering_connection_accepter</span></code> resource to “adopt” its side of the
 connection into management.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>accepter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the accepter VPC.</li>
-<li><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to accept the peering request. Defaults to <cite>false</cite>.</li>
+<li><strong>auto_accept</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to accept the peering request. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>requester</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration block that describes [VPC Peering Connection]
 (<a class="reference external" href="http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide">http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide</a>) options set for the requester VPC.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -8152,7 +8164,7 @@ connection into management.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpcPeeringConnectionAccepter.auto_accept">
 <code class="descname">auto_accept</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpcPeeringConnectionAccepter.auto_accept" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not to accept the peering request. Defaults to <cite>false</cite>.</p>
+<dd><p>Whether or not to accept the peering request. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -8240,19 +8252,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpnConnection">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnConnection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>customer_gateway_configuration=None</em>, <em>customer_gateway_id=None</em>, <em>routes=None</em>, <em>static_routes_only=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>tunnel1_inside_cidr=None</em>, <em>tunnel1_preshared_key=None</em>, <em>tunnel2_inside_cidr=None</em>, <em>tunnel2_preshared_key=None</em>, <em>type=None</em>, <em>vgw_telemetries=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnConnection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>customer_gateway_configuration=None</em>, <em>customer_gateway_id=None</em>, <em>routes=None</em>, <em>static_routes_only=None</em>, <em>tags=None</em>, <em>transit_gateway_id=None</em>, <em>tunnel1_inside_cidr=None</em>, <em>tunnel1_preshared_key=None</em>, <em>tunnel2_inside_cidr=None</em>, <em>tunnel2_preshared_key=None</em>, <em>type=None</em>, <em>vgw_telemetries=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EC2 VPN connection. These objects can be connected to customer gateways, and allow you to establish tunnels between your network and Amazon.</p>
-<p>&gt; <strong>Note:</strong> All arguments including <cite>tunnel1_preshared_key</cite> and <cite>tunnel2_preshared_key</cite> will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
-<p>&gt; <strong>Note:</strong> The CIDR blocks in the arguments <cite>tunnel1_inside_cidr</cite> and <cite>tunnel2_inside_cidr</cite> must have a prefix of /30 and be a part of a specific range.
-[Read more about this in the AWS documentation](<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html">https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html</a>).</p>
+<blockquote>
+<div><p><strong>Note:</strong> All arguments including <code class="docutils literal notranslate"><span class="pre">tunnel1_preshared_key</span></code> and <code class="docutils literal notranslate"><span class="pre">tunnel2_preshared_key</span></code> will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p><strong>Note:</strong> The CIDR blocks in the arguments <code class="docutils literal notranslate"><span class="pre">tunnel1_inside_cidr</span></code> and <code class="docutils literal notranslate"><span class="pre">tunnel2_inside_cidr</span></code> must have a prefix of /30 and be a part of a specific range.
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html">Read more about this in the AWS documentation</a>.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>customer_gateway_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration information for the VPN connection’s customer gateway (in the native XML format).</li>
 <li><strong>customer_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the customer gateway.</li>
 </ul>
@@ -8439,15 +8453,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpnConnectionRoute">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnConnectionRoute</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination_cidr_block=None</em>, <em>vpn_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnConnectionRoute</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination_cidr_block=None</em>, <em>vpn_connection_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnConnectionRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a static route between a VPN connection and a customer gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination_cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block associated with the local subnet of the customer network.</li>
 <li><strong>vpn_connection_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPN connection.</li>
 </ul>
@@ -8509,15 +8523,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpnGateway">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnGateway</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>amazon_side_asn=None</em>, <em>availability_zone=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnGateway</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>amazon_side_asn=None</em>, <em>availability_zone=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a VPC VPN Gateway.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>amazon_side_asn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don’t specify an ASN, the virtual private gateway is created with the default ASN.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone for the virtual private gateway.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -8593,19 +8607,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpnGatewayAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnGatewayAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>vpc_id=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnGatewayAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>vpc_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Virtual Private Gateway attachment resource, allowing for an existing
 hardware VPN gateway to be attached and/or detached from a VPC.</p>
-<p>-&gt; <strong>Note:</strong> The <cite>aws_vpn_gateway</cite>
+<blockquote>
+<div><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">aws_vpn_gateway</span></code>
 resource can also automatically attach the Virtual Private Gateway it creates
-to an existing VPC by setting the <cite>vpc_id</cite> attribute accordingly.</p>
+to an existing VPC by setting the <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> attribute accordingly.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC.</li>
 <li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Private Gateway.</li>
 </ul>
@@ -8667,20 +8682,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.VpnGatewayRoutePropagation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnGatewayRoutePropagation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>route_table_id=None</em>, <em>vpn_gateway_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2.</code><code class="descname">VpnGatewayRoutePropagation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>route_table_id=None</em>, <em>vpn_gateway_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Requests automatic route propagation between a VPN gateway and a route table.</p>
-<p>&gt; <strong>Note:</strong> This resource should not be used with a route table that has
-the <cite>propagating_vgws</cite> argument set. If that argument is set, any route
-propagation not explicitly listed in its value will be removed.</p>
+<blockquote>
+<div><strong>Note:</strong> This resource should not be used with a route table that has
+the <code class="docutils literal notranslate"><span class="pre">propagating_vgws</span></code> argument set. If that argument is set, any route
+propagation not explicitly listed in its value will be removed.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the <cite>aws_route_table</cite> to propagate routes into.</li>
-<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the <cite>aws_vpn_gateway</cite> to propagate routes from.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>route_table_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the <code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> to propagate routes into.</li>
+<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the <code class="docutils literal notranslate"><span class="pre">aws_vpn_gateway</span></code> to propagate routes from.</li>
 </ul>
 </td>
 </tr>
@@ -8689,13 +8705,13 @@ propagation not explicitly listed in its value will be removed.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGatewayRoutePropagation.route_table_id">
 <code class="descname">route_table_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation.route_table_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the <cite>aws_route_table</cite> to propagate routes into.</p>
+<dd><p>The id of the <code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> to propagate routes into.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnGatewayRoutePropagation.vpn_gateway_id">
 <code class="descname">vpn_gateway_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnGatewayRoutePropagation.vpn_gateway_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The id of the <cite>aws_vpn_gateway</cite> to propagate routes from.</p>
+<dd><p>The id of the <code class="docutils literal notranslate"><span class="pre">aws_vpn_gateway</span></code> to propagate routes from.</p>
 </dd></dl>
 
 <dl class="method">
@@ -8751,19 +8767,21 @@ resources.</p>
 <dd><p>Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
 e.g. to allow easier migration from another management solution
 or to make it easier for an operator to connect through bastion host(s).</p>
-<p>-&gt; <strong>Note:</strong> It’s a best practice to expose instance details via [outputs](<a class="reference external" href="https://www.terraform.io/docs/configuration/outputs.html">https://www.terraform.io/docs/configuration/outputs.html</a>)
-and [remote state](<a class="reference external" href="https://www.terraform.io/docs/state/remote.html">https://www.terraform.io/docs/state/remote.html</a>) and
-<strong>use [`terraform_remote_state`](https://www.terraform.io/docs/providers/terraform/d/remote_state.html)
+<blockquote>
+<div><p><strong>Note:</strong> It’s a best practice to expose instance details via <a class="reference external" href="https://www.terraform.io/docs/configuration/outputs.html">outputs</a>
+and <a class="reference external" href="https://www.terraform.io/docs/state/remote.html">remote state</a> and
+<strong>use ```terraform_remote_state`` &lt;https://www.terraform.io/docs/providers/terraform/d/remote_state.html&gt;`_
 data source instead</strong> if you manage referenced instances via Terraform.</p>
-<p>&gt; <strong>Note:</strong> It’s strongly discouraged to use this data source for querying ephemeral
+<p><strong>Note:</strong> It’s strongly discouraged to use this data source for querying ephemeral
 instances (e.g. managed via autoscaling group), as the output may change at any time
-and you’d need to re-run <cite>apply</cite> every time an instance comes up or dies.</p>
+and you’d need to re-run <code class="docutils literal notranslate"><span class="pre">apply</span></code> every time an instance comes up or dies.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_internet_gateway">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_internet_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>internet_gateway_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_internet_gateway</cite> provides details about a specific Internet Gateway.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_internet_gateway</span></code> provides details about a specific Internet Gateway.</p>
 </dd></dl>
 
 <dl class="function">
@@ -8793,7 +8811,7 @@ and you’d need to re-run <cite>apply</cite> every time an instance comes up or
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route</code><span class="sig-paren">(</span><em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_route</cite> provides details about a specific Route.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_route</span></code> provides details about a specific Route.</p>
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.</p>
@@ -8802,7 +8820,7 @@ connection associated with a CIDR value.</p>
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route_table">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route_table</code><span class="sig-paren">(</span><em>filters=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_table" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_route_table</cite> provides details about a specific Route Table.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> provides details about a specific Route Table.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.</p>
@@ -8817,7 +8835,7 @@ the Route Table.</p>
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_security_group">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_group</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_group" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_security_group</cite> provides details about a specific Security Group.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_security_group</span></code> provides details about a specific Security Group.</p>
 <p>This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.</p>
@@ -8833,7 +8851,7 @@ outside of Terraform.</p>
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_subnet">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>default_for_az=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ipv6_cidr_block=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_subnet</cite> provides details about a specific VPC subnet.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_subnet</span></code> provides details about a specific VPC subnet.</p>
 <p>This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
 VPC that the subnet belongs to.</p>
@@ -8842,14 +8860,14 @@ VPC that the subnet belongs to.</p>
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_subnet_ids">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_subnet_ids</cite> provides a list of ids for a vpc_id</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_subnet_ids</span></code> provides a list of ids for a vpc_id</p>
 <p>This resource can be useful for getting back a list of subnet ids for a vpc.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc</code><span class="sig-paren">(</span><em>cidr_block=None</em>, <em>default=None</em>, <em>dhcp_options_id=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>aws_vpc</cite> provides details about a specific VPC.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">aws_vpc</span></code> provides details about a specific VPC.</p>
 <p>This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
 VPC.</p>
@@ -8886,7 +8904,7 @@ a specific VPC peering connection.</p>
 <dt id="pulumi_aws.ec2.get_vpcs">
 <code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpcs</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
-<p>The following example retrieves a list of VPC Ids with a custom tag of <cite>service</cite> set to a value of “production”.</p>
+<p>The following example retrieves a list of VPC Ids with a custom tag of <code class="docutils literal notranslate"><span class="pre">service</span></code> set to a value of “production”.</p>
 </dd></dl>
 
 <dl class="function">

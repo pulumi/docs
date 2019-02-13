@@ -202,25 +202,26 @@
 <dt id="pulumi_openstack.identity.Project">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Project resource within OpenStack Keystone.</p>
-<p>Note: You _must_ have admin privileges in your OpenStack cloud to use
+<p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description: A description of the project.
+:param pulumi.Input[str] domain_id: The domain this project belongs to.
+:param pulumi.Input[bool] enabled: Whether the project is enabled or disabled. Valid</p>
+<blockquote>
+<div>values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</li>
-<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this project belongs to.</li>
-<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the project is enabled or disabled. Valid
-values are <cite>true</cite> and <cite>false</cite>.</li>
 <li><strong>is_domain</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this project is a domain. Valid values
-are <cite>true</cite> and <cite>false</cite>.</li>
+are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project.</li>
 <li><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The parent of this project.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new User.</li>
 </ul>
 </td>
@@ -243,14 +244,14 @@ creates a new User.</li>
 <dt id="pulumi_openstack.identity.Project.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.Project.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the project is enabled or disabled. Valid
-values are <cite>true</cite> and <cite>false</cite>.</p>
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.Project.is_domain">
 <code class="descname">is_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.Project.is_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether this project is a domain. Valid values
-are <cite>true</cite> and <cite>false</cite>.</p>
+are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -269,7 +270,7 @@ are <cite>true</cite> and <cite>false</cite>.</p>
 <dt id="pulumi_openstack.identity.Project.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.Project.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V3 Keystone client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new User.</p>
 </dd></dl>
 
@@ -317,25 +318,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.identity.Role">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Role resource within OpenStack Keystone.</p>
-<p>Note: You _must_ have admin privileges in your OpenStack cloud to use
+<p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain the role belongs to.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role.</li>
-<li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
-creates a new Role.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] domain_id: The domain the role belongs to.
+:param pulumi.Input[str] name: The name of the role.
+:param pulumi.Input[str] region: The region in which to obtain the V3 Keystone client.</p>
+<blockquote>
+<div>If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new Role.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.Role.domain_id">
 <code class="descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.Role.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -352,7 +344,7 @@ creates a new Role.</li>
 <dt id="pulumi_openstack.identity.Role.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.Role.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V3 Keystone client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new Role.</p>
 </dd></dl>
 
@@ -400,25 +392,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.identity.RoleAssignment">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">RoleAssignment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>domain_id=None</em>, <em>group_id=None</em>, <em>project_id=None</em>, <em>role_id=None</em>, <em>user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 Role assignment within OpenStack Keystone.</p>
-<p>Note: You _must_ have admin privileges in your OpenStack cloud to use
+<p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to assign the role in.</li>
-<li><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group to assign the role to.</li>
-<li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project to assign the role in.</li>
-<li><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role to assign.</li>
-<li><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user to assign the role to.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] domain_id: The domain to assign the role in.
+:param pulumi.Input[str] group_id: The group to assign the role to.
+:param pulumi.Input[str] project_id: The project to assign the role in.
+:param pulumi.Input[str] role_id: The role to assign.
+:param pulumi.Input[str] user_id: The user to assign the role to.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.RoleAssignment.domain_id">
 <code class="descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -493,37 +475,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.identity.User">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.identity.</code><code class="descname">User</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_project_id=None</em>, <em>description=None</em>, <em>domain_id=None</em>, <em>enabled=None</em>, <em>extra=None</em>, <em>ignore_change_password_upon_first_use=None</em>, <em>ignore_lockout_failure_attempts=None</em>, <em>ignore_password_expiry=None</em>, <em>multi_factor_auth_enabled=None</em>, <em>multi_factor_auth_rules=None</em>, <em>name=None</em>, <em>password=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 User resource within OpenStack Keystone.</p>
-<p>Note: You _must_ have admin privileges in your OpenStack cloud to use
+<p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] default_project_id: The default project this user belongs to.
+:param pulumi.Input[str] description: A description of the user.
+:param pulumi.Input[str] domain_id: The domain this user belongs to.
+:param pulumi.Input[bool] enabled: Whether the user is enabled or disabled. Valid</p>
+<blockquote>
+<div>values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>default_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default project this user belongs to.</li>
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the user.</li>
-<li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this user belongs to.</li>
-<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is enabled or disabled. Valid
-values are <cite>true</cite> and <cite>false</cite>.</li>
 <li><strong>extra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Free-form key/value pairs of extra information.</li>
 <li><strong>ignore_change_password_upon_first_use</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – User will not have to
-change their password upon first use. Valid values are <cite>true</cite> and <cite>false</cite>.</li>
+change their password upon first use. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>ignore_lockout_failure_attempts</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – User will not have a failure
-lockout placed on their account. Valid values are <cite>true</cite> and <cite>false</cite>.</li>
+lockout placed on their account. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>ignore_password_expiry</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – User’s password will not expire.
-Valid values are <cite>true</cite> and <cite>false</cite>.</li>
+Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>multi_factor_auth_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable multi-factor
-authentication. Valid values are <cite>true</cite> and <cite>false</cite>.</li>
+authentication. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>multi_factor_auth_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A multi-factor authentication rule.
 The structure is documented below. Please see the
-[Ocata release notes](<a class="reference external" href="https://docs.openstack.org/releasenotes/keystone/ocata.html">https://docs.openstack.org/releasenotes/keystone/ocata.html</a>)
+<a class="reference external" href="https://docs.openstack.org/releasenotes/keystone/ocata.html">Ocata release notes</a>
 for more information on how to use mulit-factor rules.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the user.</li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the user.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new User.</li>
 </ul>
 </td>
@@ -552,7 +535,7 @@ creates a new User.</li>
 <dt id="pulumi_openstack.identity.User.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the user is enabled or disabled. Valid
-values are <cite>true</cite> and <cite>false</cite>.</p>
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -565,28 +548,28 @@ values are <cite>true</cite> and <cite>false</cite>.</p>
 <dt id="pulumi_openstack.identity.User.ignore_change_password_upon_first_use">
 <code class="descname">ignore_change_password_upon_first_use</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.ignore_change_password_upon_first_use" title="Permalink to this definition">¶</a></dt>
 <dd><p>User will not have to
-change their password upon first use. Valid values are <cite>true</cite> and <cite>false</cite>.</p>
+change their password upon first use. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.User.ignore_lockout_failure_attempts">
 <code class="descname">ignore_lockout_failure_attempts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.ignore_lockout_failure_attempts" title="Permalink to this definition">¶</a></dt>
 <dd><p>User will not have a failure
-lockout placed on their account. Valid values are <cite>true</cite> and <cite>false</cite>.</p>
+lockout placed on their account. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.User.ignore_password_expiry">
 <code class="descname">ignore_password_expiry</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.ignore_password_expiry" title="Permalink to this definition">¶</a></dt>
 <dd><p>User’s password will not expire.
-Valid values are <cite>true</cite> and <cite>false</cite>.</p>
+Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.User.multi_factor_auth_enabled">
 <code class="descname">multi_factor_auth_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.multi_factor_auth_enabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to enable multi-factor
-authentication. Valid values are <cite>true</cite> and <cite>false</cite>.</p>
+authentication. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -594,7 +577,7 @@ authentication. Valid values are <cite>true</cite> and <cite>false</cite>.</p>
 <code class="descname">multi_factor_auth_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.multi_factor_auth_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A multi-factor authentication rule.
 The structure is documented below. Please see the
-[Ocata release notes](<a class="reference external" href="https://docs.openstack.org/releasenotes/keystone/ocata.html">https://docs.openstack.org/releasenotes/keystone/ocata.html</a>)
+<a class="reference external" href="https://docs.openstack.org/releasenotes/keystone/ocata.html">Ocata release notes</a>
 for more information on how to use mulit-factor rules.</p>
 </dd></dl>
 
@@ -614,7 +597,7 @@ for more information on how to use mulit-factor rules.</p>
 <dt id="pulumi_openstack.identity.User.region">
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.User.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V3 Keystone client.
-If omitted, the <cite>region</cite> argument of the provider is used. Changing this
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
 creates a new User.</p>
 </dd></dl>
 

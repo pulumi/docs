@@ -7,13 +7,13 @@
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.GetExportResult.exporting_stack_id">
 <code class="descname">exporting_stack_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult.exporting_stack_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The exporting_stack_id (AWS ARNs) equivalent <cite>ExportingStackId</cite> from [list-exports](<a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html</a>)</p>
+<dd><p>The exporting_stack_id (AWS ARNs) equivalent <code class="docutils literal notranslate"><span class="pre">ExportingStackId</span></code> from <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">list-exports</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.GetExportResult.value">
 <code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetExportResult.value" title="Permalink to this definition">¶</a></dt>
-<dd><p>The value from Cloudformation export identified by the export name found from [list-exports](<a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html</a>)</p>
+<dd><p>The value from Cloudformation export identified by the export name found from <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html">list-exports</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -85,7 +85,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.GetStackResult.timeout_in_minutes">
 <code class="descname">timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.GetStackResult.timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
-<dd><p>The amount of time that can pass before the stack status becomes <cite>CREATE_FAILED</cite></p>
+<dd><p>The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -98,33 +98,33 @@
 
 <dl class="class">
 <dt id="pulumi_aws.cloudformation.Stack">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>capabilities=None</em>, <em>disable_rollback=None</em>, <em>iam_role_arn=None</em>, <em>name=None</em>, <em>notification_arns=None</em>, <em>on_failure=None</em>, <em>parameters=None</em>, <em>policy_body=None</em>, <em>policy_url=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>template_url=None</em>, <em>timeout_in_minutes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">Stack</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capabilities=None</em>, <em>disable_rollback=None</em>, <em>iam_role_arn=None</em>, <em>name=None</em>, <em>notification_arns=None</em>, <em>on_failure=None</em>, <em>parameters=None</em>, <em>policy_body=None</em>, <em>policy_url=None</em>, <em>tags=None</em>, <em>template_body=None</em>, <em>template_url=None</em>, <em>timeout_in_minutes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudFormation Stack resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of capabilities.
-Valid values: <cite>CAPABILITY_IAM</cite> or <cite>CAPABILITY_NAMED_IAM</cite></li>
+Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code></li>
 <li><strong>disable_rollback</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to disable rollback of the stack if stack creation failed.
-Conflicts with <cite>on_failure</cite>.</li>
+Conflicts with <code class="docutils literal notranslate"><span class="pre">on_failure</span></code>.</li>
 <li><strong>iam_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don’t specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Stack name.</li>
 <li><strong>notification_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of SNS topic ARNs to publish stack related events.</li>
 <li><strong>on_failure</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Action to be taken if stack creation fails. This must be
-one of: <cite>DO_NOTHING</cite>, <cite>ROLLBACK</cite>, or <cite>DELETE</cite>. Conflicts with <cite>disable_rollback</cite>.</li>
+one of: <code class="docutils literal notranslate"><span class="pre">DO_NOTHING</span></code>, <code class="docutils literal notranslate"><span class="pre">ROLLBACK</span></code>, or <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">disable_rollback</span></code>.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Parameter structures that specify input parameters for the stack.</li>
 <li><strong>policy_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Structure containing the stack policy body.
-Conflicts w/ <cite>policy_url</cite>.</li>
+Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy_url</span></code>.</li>
 <li><strong>policy_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of a file containing the stack policy.
-Conflicts w/ <cite>policy_body</cite>.</li>
+Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy_body</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A list of tags to associate with this stack.</li>
 <li><strong>template_body</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Structure containing the template body (max size: 51,200 bytes).</li>
 <li><strong>template_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of a file containing the template body (max size: 460,800 bytes).</li>
-<li><strong>timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time that can pass before the stack status becomes <cite>CREATE_FAILED</cite>.</li>
+<li><strong>timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -134,14 +134,14 @@ Conflicts w/ <cite>policy_body</cite>.</li>
 <dt id="pulumi_aws.cloudformation.Stack.capabilities">
 <code class="descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of capabilities.
-Valid values: <cite>CAPABILITY_IAM</cite> or <cite>CAPABILITY_NAMED_IAM</cite></p>
+Valid values: <code class="docutils literal notranslate"><span class="pre">CAPABILITY_IAM</span></code> or <code class="docutils literal notranslate"><span class="pre">CAPABILITY_NAMED_IAM</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.Stack.disable_rollback">
 <code class="descname">disable_rollback</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.disable_rollback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set to true to disable rollback of the stack if stack creation failed.
-Conflicts with <cite>on_failure</cite>.</p>
+Conflicts with <code class="docutils literal notranslate"><span class="pre">on_failure</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -166,7 +166,7 @@ Conflicts with <cite>on_failure</cite>.</p>
 <dt id="pulumi_aws.cloudformation.Stack.on_failure">
 <code class="descname">on_failure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.on_failure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Action to be taken if stack creation fails. This must be
-one of: <cite>DO_NOTHING</cite>, <cite>ROLLBACK</cite>, or <cite>DELETE</cite>. Conflicts with <cite>disable_rollback</cite>.</p>
+one of: <code class="docutils literal notranslate"><span class="pre">DO_NOTHING</span></code>, <code class="docutils literal notranslate"><span class="pre">ROLLBACK</span></code>, or <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">disable_rollback</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -185,14 +185,14 @@ one of: <cite>DO_NOTHING</cite>, <cite>ROLLBACK</cite>, or <cite>DELETE</cite>. 
 <dt id="pulumi_aws.cloudformation.Stack.policy_body">
 <code class="descname">policy_body</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.policy_body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure containing the stack policy body.
-Conflicts w/ <cite>policy_url</cite>.</p>
+Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy_url</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.Stack.policy_url">
 <code class="descname">policy_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.policy_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Location of a file containing the stack policy.
-Conflicts w/ <cite>policy_body</cite>.</p>
+Conflicts w/ <code class="docutils literal notranslate"><span class="pre">policy_body</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -216,7 +216,7 @@ Conflicts w/ <cite>policy_body</cite>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudformation.Stack.timeout_in_minutes">
 <code class="descname">timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudformation.Stack.timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
-<dd><p>The amount of time that can pass before the stack status becomes <cite>CREATE_FAILED</cite>.</p>
+<dd><p>The amount of time that can pass before the stack status becomes <code class="docutils literal notranslate"><span class="pre">CREATE_FAILED</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -263,9 +263,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudformation.get_export">
 <code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_export</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Export data source allows access to stack
-exports specified in the [Output](<a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html</a>) section of the Cloudformation Template using the optional Export Property.</p>
+exports specified in the <a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Output</a> section of the Cloudformation Template using the optional Export Property.</p>
 <blockquote>
-<div>-&gt; Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.</div></blockquote>
+<div>Note: If you are trying to use a value from a Cloudformation Stack in the same Terraform run please use normal interpolation or Cloudformation Outputs.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

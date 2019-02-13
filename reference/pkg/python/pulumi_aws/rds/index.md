@@ -2,47 +2,49 @@
 <span id="rds"></span><h1>rds<a class="headerlink" href="#module-pulumi_aws.rds" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.rds.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>availability_zones=None</em>, <em>backtrack_window=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_identifier_prefix=None</em>, <em>cluster_members=None</em>, <em>database_name=None</em>, <em>db_cluster_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>deletion_protection=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>engine=None</em>, <em>engine_mode=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>global_cluster_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>master_password=None</em>, <em>master_username=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>replication_source_identifier=None</em>, <em>s3_import=None</em>, <em>scaling_configuration=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>source_region=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Cluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a [RDS Aurora Cluster][2]. To manage cluster instances that inherit configuration from the cluster (when not running the cluster in <cite>serverless</cite> engine mode), see the [<cite>aws_rds_cluster_instance</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>). To manage non-Aurora databases (e.g. MySQL, PostgreSQL, SQL Server, etc.), see the [<cite>aws_db_instance</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_instance.html">https://www.terraform.io/docs/providers/aws/r/db_instance.html</a>).</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>availability_zones=None</em>, <em>backtrack_window=None</em>, <em>backup_retention_period=None</em>, <em>cluster_identifier=None</em>, <em>cluster_identifier_prefix=None</em>, <em>cluster_members=None</em>, <em>database_name=None</em>, <em>db_cluster_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>deletion_protection=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>engine=None</em>, <em>engine_mode=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>global_cluster_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>master_password=None</em>, <em>master_username=None</em>, <em>port=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>replication_source_identifier=None</em>, <em>s3_import=None</em>, <em>scaling_configuration=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>source_region=None</em>, <em>storage_encrypted=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a [RDS Aurora Cluster][2]. To manage cluster instances that inherit configuration from the cluster (when not running the cluster in <code class="docutils literal notranslate"><span class="pre">serverless</span></code> engine mode), see the <cite>``aws_rds_cluster_instance`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>&gt;`_. To manage non-Aurora databases (e.g. MySQL, PostgreSQL, SQL Server, etc.), see the <cite>``aws_db_instance`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_instance.html">https://www.terraform.io/docs/providers/aws/r/db_instance.html</a>&gt;`_.</p>
 <p>For information on the difference between the available Aurora MySQL engines
-see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html</a>)
+see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
 in the Amazon RDS User Guide.</p>
 <p>Changes to a RDS Cluster can occur when you manually change a
-parameter, such as <cite>port</cite>, and are reflected in the next maintenance
+parameter, such as <code class="docutils literal notranslate"><span class="pre">port</span></code>, and are reflected in the next maintenance
 window. Because of this, Terraform may report a difference in its planning
 phase because a modification has not yet taken place. You can use the
-<cite>apply_immediately</cite> flag to instruct the service to apply the change immediately
+<code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change immediately
 (see documentation below).</p>
-<p>&gt; <strong>Note:</strong> using <cite>apply_immediately</cite> can result in a
+<blockquote>
+<div><p><strong>Note:</strong> using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a
 brief downtime as the server reboots. See the AWS Docs on [RDS Maintenance][4]
 for more information.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
-<cite>false</cite>. See [Amazon RDS Documentation for more information.](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html</a>)</li>
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones that
 instances in the DB cluster can be created in</li>
-<li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The target backtrack window, in seconds. Only available for <cite>aurora</cite> engine currently. To disable backtracking, set this value to <cite>0</cite>. Defaults to <cite>0</cite>. Must be between <cite>0</cite> and <cite>259200</cite> (72 hours)</li>
-<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Default <cite>1</cite></li>
+<li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</li>
+<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</li>
-<li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <cite>cluster_identifer</cite>.</li>
+<li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</li>
 <li><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of RDS Instances that are a part of this cluster</li>
 <li><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints][5]</li>
 <li><strong>db_cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A cluster parameter group to associate with the cluster.</li>
-<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <cite>db_subnet_group_name</cite> specified on every [<cite>aws_rds_cluster_instance</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>) in the cluster.</li>
-<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <cite>true</cite>. The default is <cite>false</cite>.</li>
+<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">db_subnet_group_name</span></code> specified on every <cite>``aws_rds_cluster_instance`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>&gt;`_ in the cluster.</li>
+<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <cite>audit</cite>, <cite>error</cite>, <cite>general</cite>, <cite>slowquery</cite>.</li>
-<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <cite>aurora</cite>. Valid Values: <cite>aurora</cite>, <cite>aurora-mysql</cite>, <cite>aurora-postgresql</cite></li>
-<li><strong>engine_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine mode. Valid values: <cite>global</cite>, <cite>parallelquery</cite>, <cite>provisioned</cite>, <cite>serverless</cite>. Defaults to: <cite>provisioned</cite>. See the [RDS User Guide](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html</a>) for limitations when using <cite>serverless</cite>.</li>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code></li>
+<li><strong>engine_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version. Updating this argument results in an outage.</li>
 <li><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -55,7 +57,7 @@ made.</li>
 <p>:param pulumi.Input[str] global_cluster_identifier
 :param pulumi.Input[bool] iam_database_authentication_enabled: Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation][6] for availability and limitations.
 :param pulumi.Input[list] iam_roles: A List of ARNs for the IAM roles to associate to the RDS Cluster.
-:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key. When specifying <cite>kms_key_id</cite>, <cite>storage_encrypted</cite> needs to be set to true.
+:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.
 :param pulumi.Input[str] master_password: Password for the master DB user. Note that this may</p>
 <blockquote>
 <div>show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]</div></blockquote>
@@ -76,11 +78,11 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
 </tbody>
 </table>
 <p>:param pulumi.Input[dict] s3_import
-:param pulumi.Input[dict] scaling_configuration: Nested attribute with scaling properties. Only valid when <cite>engine_mode</cite> is set to <cite>serverless</cite>. More details below.
-:param pulumi.Input[bool] skip_final_snapshot: Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <cite>final_snapshot_identifier</cite>. Default is <cite>false</cite>.
+:param pulumi.Input[dict] scaling_configuration: Nested attribute with scaling properties. Only valid when <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. More details below.
+:param pulumi.Input[bool] skip_final_snapshot: Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
 :param pulumi.Input[str] snapshot_identifier: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 :param pulumi.Input[str] source_region: The source region for an encrypted replica DB cluster.
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <cite>false</cite> for <cite>provisioned</cite> <cite>engine_mode</cite> and <cite>true</cite> for <cite>serverless</cite> <cite>engine_mode</cite>.
+:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">provisioned</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">serverless</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code>.
 :param pulumi.Input[dict] tags: A mapping of tags to assign to the DB cluster.
 :param pulumi.Input[list] vpc_security_group_ids: List of VPC security groups to associate</p>
 <blockquote>
@@ -90,7 +92,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
-<cite>false</cite>. See [Amazon RDS Documentation for more information.](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html</a>)</p>
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -109,13 +111,13 @@ instances in the DB cluster can be created in</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.backtrack_window">
 <code class="descname">backtrack_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.backtrack_window" title="Permalink to this definition">¶</a></dt>
-<dd><p>The target backtrack window, in seconds. Only available for <cite>aurora</cite> engine currently. To disable backtracking, set this value to <cite>0</cite>. Defaults to <cite>0</cite>. Must be between <cite>0</cite> and <cite>259200</cite> (72 hours)</p>
+<dd><p>The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.backup_retention_period">
 <code class="descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.backup_retention_period" title="Permalink to this definition">¶</a></dt>
-<dd><p>The days to retain backups for. Default <cite>1</cite></p>
+<dd><p>The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -127,7 +129,7 @@ instances in the DB cluster can be created in</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.cluster_identifier_prefix">
 <code class="descname">cluster_identifier_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.cluster_identifier_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <cite>cluster_identifer</cite>.</p>
+<dd><p>Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -157,20 +159,20 @@ instances in the DB cluster can be created in</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.db_subnet_group_name">
 <code class="descname">db_subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.db_subnet_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <cite>db_subnet_group_name</cite> specified on every [<cite>aws_rds_cluster_instance</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>) in the cluster.</p>
+<dd><p>A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">db_subnet_group_name</span></code> specified on every <cite>``aws_rds_cluster_instance`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster_instance.html</a>&gt;`_ in the cluster.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.deletion_protection">
 <code class="descname">deletion_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.deletion_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <cite>true</cite>. The default is <cite>false</cite>.</p>
+<dd><p>If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.enabled_cloudwatch_logs_exports">
 <code class="descname">enabled_cloudwatch_logs_exports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.enabled_cloudwatch_logs_exports" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of log types to export to cloudwatch. If omitted, no logs will be exported.
-The following log types are supported: <cite>audit</cite>, <cite>error</cite>, <cite>general</cite>, <cite>slowquery</cite>.</p>
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -182,13 +184,13 @@ The following log types are supported: <cite>audit</cite>, <cite>error</cite>, <
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.engine">
 <code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database engine to be used for this DB cluster. Defaults to <cite>aurora</cite>. Valid Values: <cite>aurora</cite>, <cite>aurora-mysql</cite>, <cite>aurora-postgresql</cite></p>
+<dd><p>The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.engine_mode">
 <code class="descname">engine_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.engine_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The database engine mode. Valid values: <cite>global</cite>, <cite>parallelquery</cite>, <cite>provisioned</cite>, <cite>serverless</cite>. Defaults to: <cite>provisioned</cite>. See the [RDS User Guide](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html</a>) for limitations when using <cite>serverless</cite>.</p>
+<dd><p>The database engine mode. Valid values: <code class="docutils literal notranslate"><span class="pre">global</span></code>, <code class="docutils literal notranslate"><span class="pre">parallelquery</span></code>, <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>, <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. Defaults to: <code class="docutils literal notranslate"><span class="pre">provisioned</span></code>. See the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html">RDS User Guide</a> for limitations when using <code class="docutils literal notranslate"><span class="pre">serverless</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -226,7 +228,7 @@ made.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.kms_key_id">
 <code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.kms_key_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN for the KMS encryption key. When specifying <cite>kms_key_id</cite>, <cite>storage_encrypted</cite> needs to be set to true.</p>
+<dd><p>The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">storage_encrypted</span></code> needs to be set to true.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -277,13 +279,13 @@ load-balanced across replicas</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.scaling_configuration">
 <code class="descname">scaling_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.scaling_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nested attribute with scaling properties. Only valid when <cite>engine_mode</cite> is set to <cite>serverless</cite>. More details below.</p>
+<dd><p>Nested attribute with scaling properties. Only valid when <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">serverless</span></code>. More details below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.skip_final_snapshot">
 <code class="descname">skip_final_snapshot</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.skip_final_snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <cite>final_snapshot_identifier</cite>. Default is <cite>false</cite>.</p>
+<dd><p>Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -301,7 +303,7 @@ load-balanced across replicas</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Cluster.storage_encrypted">
 <code class="descname">storage_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Cluster.storage_encrypted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the DB cluster is encrypted. The default is <cite>false</cite> for <cite>provisioned</cite> <cite>engine_mode</cite> and <cite>true</cite> for <cite>serverless</cite> <cite>engine_mode</cite>.</p>
+<dd><p>Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code> for <code class="docutils literal notranslate"><span class="pre">provisioned</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code> and <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">serverless</span></code> <code class="docutils literal notranslate"><span class="pre">engine_mode</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -359,7 +361,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.ClusterEndpoint">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterEndpoint</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cluster_endpoint_identifier=None</em>, <em>cluster_identifier=None</em>, <em>custom_endpoint_type=None</em>, <em>excluded_members=None</em>, <em>static_members=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterEndpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cluster_endpoint_identifier=None</em>, <em>cluster_identifier=None</em>, <em>custom_endpoint_type=None</em>, <em>excluded_members=None</em>, <em>static_members=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS Aurora Cluster Endpoint.
 You can refer to the [User Guide][1].</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -367,13 +369,13 @@ You can refer to the [User Guide][1].</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cluster_endpoint_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier to use for the new endpoint. This parameter is stored as a lowercase string.</li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier.</li>
 <li><strong>custom_endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the endpoint. One of: READER , ANY .</li>
-<li><strong>excluded_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <cite>static_members</cite>.</li>
-<li><strong>static_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <cite>excluded_members</cite>.</li>
+<li><strong>excluded_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <code class="docutils literal notranslate"><span class="pre">static_members</span></code>.</li>
+<li><strong>static_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <code class="docutils literal notranslate"><span class="pre">excluded_members</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -412,13 +414,13 @@ You can refer to the [User Guide][1].</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterEndpoint.excluded_members">
 <code class="descname">excluded_members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint.excluded_members" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <cite>static_members</cite>.</p>
+<dd><p>List of DB instance identifiers that aren’t part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with <code class="docutils literal notranslate"><span class="pre">static_members</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterEndpoint.static_members">
 <code class="descname">static_members</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint.static_members" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <cite>excluded_members</cite>.</p>
+<dd><p>List of DB instance identifiers that are part of the custom endpoint group. Conflicts with <code class="docutils literal notranslate"><span class="pre">excluded_members</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -463,7 +465,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.ClusterInstance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterInstance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>performance_insights_enabled=None</em>, <em>performance_insights_kms_key_id=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>promotion_tier=None</em>, <em>publicly_accessible=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_parameter_group_name=None</em>, <em>db_subnet_group_name=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>performance_insights_enabled=None</em>, <em>performance_insights_kms_key_id=None</em>, <em>preferred_backup_window=None</em>, <em>preferred_maintenance_window=None</em>, <em>promotion_tier=None</em>, <em>publicly_accessible=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS Cluster Resource Instance. A Cluster Instance Resource defines
 attributes that are specific to a single instance in a [RDS Cluster][3],
 specifically running Amazon Aurora.</p>
@@ -472,60 +474,59 @@ not designate a primary and subsequent replicas. Instead, you simply add RDS
 Instances and Aurora manages the replication. You can use the [count][5]
 meta-parameter to make multiple instances and join them all to the same RDS
 Cluster, or you may specify different Cluster Instance resources with various
-<cite>instance_class</cite> sizes.</p>
+<code class="docutils literal notranslate"><span class="pre">instance_class</span></code> sizes.</p>
 <p>For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.</p>
-<p>&gt; <strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the [<cite>prevent_destroy</cite> lifecycle behavior](<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy">https://www.terraform.io/docs/configuration/resources.html#prevent_destroy</a>) to your Terraform resource configuration if you desire protection from accidental deletion.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the <cite>``prevent_destroy`</cite> lifecycle behavior &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#prevent_destroy">https://www.terraform.io/docs/configuration/resources.html#prevent_destroy</a>&gt;`_ to your Terraform resource configuration if you desire protection from accidental deletion.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.</li>
-<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <cite>true</cite>.</li>
-<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See [docs](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html</a>) about the details.</li>
-<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the [<cite>aws_rds_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>) in which to launch this instance.</li>
-<li><strong>copy_tags_to_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default <cite>false</cite>.</li>
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</li>
+<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``aws_rds_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>&gt;`_ in which to launch this instance.</li>
+<li><strong>copy_tags_to_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>db_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter group to associate with this instance.</li>
-<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <cite>db_subnet_group_name</cite> of the attached [<cite>aws_rds_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>).</li>
-<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the RDS instance. Defaults to <cite>aurora</cite>. Valid Values: <cite>aurora</cite>, <cite>aurora-mysql</cite>, <cite>aurora-postgresql</cite>.
+<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">db_subnet_group_name</span></code> of the attached <cite>``aws_rds_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>&gt;`_.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the database engine to be used for the RDS instance. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code>.
 For information on the difference between the available Aurora MySQL engines
-see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html</a>)
-in the Amazon RDS User Guide.</li>
+see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
+in the Amazon RDS User Guide.</p>
+</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version.</li>
 <li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the RDS instance, if omitted, Terraform will assign a random, unique identifier.</li>
-<li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <cite>identifer</cite>.</li>
+<li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances][4]. Aurora currently
-supports the below instance classes. Please see [AWS Documentation][7] for complete details.
-- db.t2.small
-- db.t2.medium
-- db.r3.large
-- db.r3.xlarge
-- db.r3.2xlarge
-- db.r3.4xlarge
-- db.r3.8xlarge
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge</li>
+supports the below instance classes. Please see [AWS Documentation][7] for complete details.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</li>
 <li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that permits RDS to send
-enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](<a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html</a>)
+enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</li>
 <li><strong>performance_insights_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether Performance Insights is enabled or not.</li>
-<li><strong>performance_insights_kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS key to encrypt Performance Insights data. When specifying <cite>performance_insights_kms_key_id</cite>, <cite>performance_insights_enabled</cite> needs to be set to true.</li>
+<li><strong>performance_insights_kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS key to encrypt Performance Insights data. When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true.</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled.
 Eg: “04:00-09:00”</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
 Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
 <li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible.
-Default <cite>false</cite>. See the documentation on [Creating DB Instances][6] for more
+Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the instance.</li>
 </ul>
@@ -537,7 +538,7 @@ details on controlling this property.</li>
 <dt id="pulumi_aws.rds.ClusterInstance.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.apply_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether any database modifications
-are applied immediately, or during the next maintenance window. Default is`false`.</p>
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -549,25 +550,25 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.auto_minor_version_upgrade">
 <code class="descname">auto_minor_version_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.auto_minor_version_upgrade" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <cite>true</cite>.</p>
+<dd><p>Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.availability_zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>The EC2 Availability Zone that the DB instance is created in. See [docs](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html</a>) about the details.</p>
+<dd><p>The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.cluster_identifier">
 <code class="descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.cluster_identifier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The identifier of the [<cite>aws_rds_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>) in which to launch this instance.</p>
+<dd><p>The identifier of the <cite>``aws_rds_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>&gt;`_ in which to launch this instance.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.copy_tags_to_snapshot">
 <code class="descname">copy_tags_to_snapshot</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.copy_tags_to_snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default <cite>false</cite>.</p>
+<dd><p>Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -579,7 +580,7 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.db_subnet_group_name">
 <code class="descname">db_subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.db_subnet_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <cite>db_subnet_group_name</cite> of the attached [<cite>aws_rds_cluster</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>).</p>
+<dd><p>A DB subnet group to associate with this DB instance. <strong>NOTE:</strong> This must match the <code class="docutils literal notranslate"><span class="pre">db_subnet_group_name</span></code> of the attached <cite>``aws_rds_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html</a>&gt;`_.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -597,9 +598,9 @@ are applied immediately, or during the next maintenance window. Default is`false
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.engine">
 <code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database engine to be used for the RDS instance. Defaults to <cite>aurora</cite>. Valid Values: <cite>aurora</cite>, <cite>aurora-mysql</cite>, <cite>aurora-postgresql</cite>.
+<dd><p>The name of the database engine to be used for the RDS instance. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code>.
 For information on the difference between the available Aurora MySQL engines
-see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html</a>)
+see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
 in the Amazon RDS User Guide.</p>
 </dd></dl>
 
@@ -618,7 +619,7 @@ in the Amazon RDS User Guide.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.identifier_prefix">
 <code class="descname">identifier_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.identifier_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique identifier beginning with the specified prefix. Conflicts with <cite>identifer</cite>.</p>
+<dd><p>Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -626,20 +627,22 @@ in the Amazon RDS User Guide.</p>
 <code class="descname">instance_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.instance_class" title="Permalink to this definition">¶</a></dt>
 <dd><p>The instance class to use. For details on CPU
 and memory, see [Scaling Aurora DB Instances][4]. Aurora currently
-supports the below instance classes. Please see [AWS Documentation][7] for complete details.
-- db.t2.small
-- db.t2.medium
-- db.r3.large
-- db.r3.xlarge
-- db.r3.2xlarge
-- db.r3.4xlarge
-- db.r3.8xlarge
-- db.r4.large
-- db.r4.xlarge
-- db.r4.2xlarge
-- db.r4.4xlarge
-- db.r4.8xlarge
-- db.r4.16xlarge</p>
+supports the below instance classes. Please see [AWS Documentation][7] for complete details.</p>
+<ul class="simple">
+<li>db.t2.small</li>
+<li>db.t2.medium</li>
+<li>db.r3.large</li>
+<li>db.r3.xlarge</li>
+<li>db.r3.2xlarge</li>
+<li>db.r3.4xlarge</li>
+<li>db.r3.8xlarge</li>
+<li>db.r4.large</li>
+<li>db.r4.xlarge</li>
+<li>db.r4.2xlarge</li>
+<li>db.r4.4xlarge</li>
+<li>db.r4.8xlarge</li>
+<li>db.r4.16xlarge</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -658,7 +661,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 <dt id="pulumi_aws.rds.ClusterInstance.monitoring_role_arn">
 <code class="descname">monitoring_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.monitoring_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN for the IAM role that permits RDS to send
-enhanced monitoring metrics to CloudWatch Logs. You can find more information on the [AWS Documentation](<a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html</a>)
+enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
 </dd></dl>
 
@@ -671,7 +674,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.performance_insights_kms_key_id">
 <code class="descname">performance_insights_kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.performance_insights_kms_key_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN for the KMS key to encrypt Performance Insights data. When specifying <cite>performance_insights_kms_key_id</cite>, <cite>performance_insights_enabled</cite> needs to be set to true.</p>
+<dd><p>The ARN for the KMS key to encrypt Performance Insights data. When specifying <code class="docutils literal notranslate"><span class="pre">performance_insights_kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">performance_insights_enabled</span></code> needs to be set to true.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -704,7 +707,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p>
 <dt id="pulumi_aws.rds.ClusterInstance.publicly_accessible">
 <code class="descname">publicly_accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.publicly_accessible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bool to control if instance is publicly accessible.
-Default <cite>false</cite>. See the documentation on [Creating DB Instances][6] for more
+Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.</p>
 </dd></dl>
 
@@ -723,7 +726,7 @@ details on controlling this property.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterInstance.writer">
 <code class="descname">writer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance.writer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean indicating if this instance is writable. <cite>False</cite> indicates this instance is a read replica.</p>
+<dd><p>Boolean indicating if this instance is writable. <code class="docutils literal notranslate"><span class="pre">False</span></code> indicates this instance is a read replica.</p>
 </dd></dl>
 
 <dl class="method">
@@ -768,22 +771,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.ClusterParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>parameters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an RDS DB cluster parameter group resource. Documentation of the available parameters for various Aurora engines can be found at:
-* [Aurora MySQL Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html</a>)
-* [Aurora PostgreSQL Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html</a>)</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an RDS DB cluster parameter group resource. Documentation of the available parameters for various Aurora engines can be found at:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">Aurora MySQL Parameters</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">Aurora PostgreSQL Parameters</a></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB cluster parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the DB cluster parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
-<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [<cite>aws rds describe-db-cluster-parameters</cite>](<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>) after initial creation of the group.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -817,13 +822,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterParameterGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ClusterParameterGroup.parameters">
 <code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ClusterParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [<cite>aws rds describe-db-cluster-parameters</cite>](<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>) after initial creation of the group.</p>
+<dd><p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-cluster-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html</a>&gt;`_ after initial creation of the group.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -874,15 +879,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.ClusterSnapshot">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterSnapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the [<cite>aws_db_snapshot</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_snapshot.html</a>).</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ClusterSnapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the <cite>``aws_db_snapshot`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_snapshot.html</a>&gt;`_.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>db_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Cluster Identifier from which to take the snapshot.</li>
 <li><strong>db_cluster_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</li>
 </ul>
@@ -1010,22 +1015,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.EventSubscription">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">EventSubscription</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>enabled=None</em>, <em>event_categories=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>sns_topic=None</em>, <em>source_ids=None</em>, <em>source_type=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.EventSubscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">EventSubscription</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>enabled=None</em>, <em>event_categories=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>sns_topic=None</em>, <em>source_ids=None</em>, <em>source_type=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.EventSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DB event subscription resource.</p>
+<p>The following additional atttributes are provided:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code> - The name of the RDS event notification subscription</li>
+<li><code class="docutils literal notranslate"><span class="pre">arn</span></code> - The Amazon Resource Name of the RDS event notification subscription</li>
+<li><code class="docutils literal notranslate"><span class="pre">customer_aws_id</span></code> - The AWS customer account associated with the RDS event notification subscription</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable the subscription. Defaults to true.</li>
-<li><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html</a> or run <cite>aws rds describe-event-categories</cite>.</li>
+<li><strong>event_categories</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html</a> or run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">rds</span> <span class="pre">describe-event-categories</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB event subscription. By default generated by Terraform.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB event subscription. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>sns_topic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SNS topic to send events to.</li>
 <li><strong>source_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.</li>
-<li><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <cite>db-instance</cite>, <cite>db-security-group</cite>, <cite>db-parameter-group</cite>, <cite>db-snapshot</cite>, <cite>db-cluster</cite> or <cite>db-cluster-snapshot</cite>. If not set, all sources will be subscribed to.</li>
+<li><strong>source_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -1041,7 +1052,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.EventSubscription.event_categories">
 <code class="descname">event_categories</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.EventSubscription.event_categories" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html</a> or run <cite>aws rds describe-event-categories</cite>.</p>
+<dd><p>A list of event categories for a SourceType that you want to subscribe to. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html</a> or run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">rds</span> <span class="pre">describe-event-categories</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1053,7 +1064,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.EventSubscription.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.EventSubscription.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the DB event subscription. Conflicts with <cite>name</cite>.</p>
+<dd><p>The name of the DB event subscription. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1071,7 +1082,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.EventSubscription.source_type">
 <code class="descname">source_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.EventSubscription.source_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of source that will be generating the events. Valid options are <cite>db-instance</cite>, <cite>db-security-group</cite>, <cite>db-parameter-group</cite>, <cite>db-snapshot</cite>, <cite>db-cluster</cite> or <cite>db-cluster-snapshot</cite>. If not set, all sources will be subscribed to.</p>
+<dd><p>The type of source that will be generating the events. Valid options are <code class="docutils literal notranslate"><span class="pre">db-instance</span></code>, <code class="docutils literal notranslate"><span class="pre">db-security-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-parameter-group</span></code>, <code class="docutils literal notranslate"><span class="pre">db-snapshot</span></code>, <code class="docutils literal notranslate"><span class="pre">db-cluster</span></code> or <code class="docutils literal notranslate"><span class="pre">db-cluster-snapshot</span></code>. If not set, all sources will be subscribed to.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1241,7 +1252,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetInstanceResult.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GetInstanceResult.address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The hostname of the RDS instance. See also <cite>endpoint</cite> and <cite>port</cite>.</p>
+<dd><p>The hostname of the RDS instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1331,7 +1342,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GetInstanceResult.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GetInstanceResult.endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection endpoint in <cite>address:port</cite> format.</p>
+<dd><p>The connection endpoint in <code class="docutils literal notranslate"><span class="pre">address:port</span></code> format.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1572,20 +1583,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.GlobalCluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GlobalCluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>database_name=None</em>, <em>deletion_protection=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>global_cluster_identifier=None</em>, <em>storage_encrypted=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">GlobalCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>database_name=None</em>, <em>deletion_protection=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>global_cluster_identifier=None</em>, <em>storage_encrypted=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.</p>
-<p>More information about Aurora global databases can be found in the [Aurora User Guide](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating</a>).</p>
-<p>&gt; <strong>NOTE:</strong> RDS only supports the <cite>aurora</cite> engine (MySQL 5.6 compatible) for Global Clusters at this time.</p>
+<p>More information about Aurora global databases can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating">Aurora User Guide</a>.</p>
+<blockquote>
+<div><strong>NOTE:</strong> RDS only supports the <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine (MySQL 5.6 compatible) for Global Clusters at this time.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for an automatically created database on cluster creation.</li>
-<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <cite>true</cite>. The default is <cite>false</cite>.</li>
-<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <cite>aurora</cite>. Defaults to <cite>aurora</cite>.</li>
+<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine version of the Aurora global database.</li>
 </ul>
 </td>
@@ -1593,7 +1605,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <p>:param pulumi.Input[str] global_cluster_identifier
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <cite>false</cite>.</p>
+:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GlobalCluster.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.arn" title="Permalink to this definition">¶</a></dt>
@@ -1609,13 +1621,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GlobalCluster.deletion_protection">
 <code class="descname">deletion_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.deletion_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <cite>true</cite>. The default is <cite>false</cite>.</p>
+<dd><p>If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GlobalCluster.engine">
 <code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the database engine to be used for this DB cluster. Valid values: <cite>aurora</cite>. Defaults to <cite>aurora</cite>.</p>
+<dd><p>Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1633,7 +1645,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GlobalCluster.storage_encrypted">
 <code class="descname">storage_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.storage_encrypted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the DB cluster is encrypted. The default is <cite>false</cite>.</p>
+<dd><p>Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1678,77 +1690,85 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocated_storage=None</em>, <em>allow_major_version_upgrade=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>backup_retention_period=None</em>, <em>backup_window=None</em>, <em>character_set_name=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_subnet_group_name=None</em>, <em>deletion_protection=None</em>, <em>domain=None</em>, <em>domain_iam_role_name=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>maintenance_window=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>multi_az=None</em>, <em>name=None</em>, <em>option_group_name=None</em>, <em>parameter_group_name=None</em>, <em>password=None</em>, <em>port=None</em>, <em>publicly_accessible=None</em>, <em>replicate_source_db=None</em>, <em>s3_import=None</em>, <em>security_group_names=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>username=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_storage=None</em>, <em>allow_major_version_upgrade=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>backup_retention_period=None</em>, <em>backup_window=None</em>, <em>character_set_name=None</em>, <em>copy_tags_to_snapshot=None</em>, <em>db_subnet_group_name=None</em>, <em>deletion_protection=None</em>, <em>domain=None</em>, <em>domain_iam_role_name=None</em>, <em>enabled_cloudwatch_logs_exports=None</em>, <em>engine=None</em>, <em>engine_version=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_database_authentication_enabled=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>license_model=None</em>, <em>maintenance_window=None</em>, <em>monitoring_interval=None</em>, <em>monitoring_role_arn=None</em>, <em>multi_az=None</em>, <em>name=None</em>, <em>option_group_name=None</em>, <em>parameter_group_name=None</em>, <em>password=None</em>, <em>port=None</em>, <em>publicly_accessible=None</em>, <em>replicate_source_db=None</em>, <em>s3_import=None</em>, <em>security_group_names=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_identifier=None</em>, <em>storage_encrypted=None</em>, <em>storage_type=None</em>, <em>tags=None</em>, <em>timezone=None</em>, <em>username=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS instance resource.  A DB instance is an isolated database
 environment in the cloud.  A DB instance can contain multiple user-created
 databases.</p>
 <p>Changes to a DB instance can occur when you manually change a parameter, such as
-<cite>allocated_storage</cite>, and are reflected in the next maintenance window. Because
+<code class="docutils literal notranslate"><span class="pre">allocated_storage</span></code>, and are reflected in the next maintenance window. Because
 of this, Terraform may report a difference in its planning phase because a
-modification has not yet taken place. You can use the <cite>apply_immediately</cite> flag
+modification has not yet taken place. You can use the <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag
 to instruct the service to apply the change immediately (see documentation
 below).</p>
-<p>When upgrading the major version of an engine, <cite>allow_major_version_upgrade</cite>
-must be set to <cite>true</cite>.</p>
-<p>&gt; <strong>Note:</strong> using <cite>apply_immediately</cite> can result in a brief downtime as the
+<p>When upgrading the major version of an engine, <code class="docutils literal notranslate"><span class="pre">allow_major_version_upgrade</span></code>
+must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<blockquote>
+<div><p><strong>Note:</strong> using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as the
 server reboots. See the AWS Docs on [RDS Maintenance][2] for more information.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the username and password will be stored in
-the raw state as plain-text. [Read more about sensitive data in
-state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<p><strong>Note:</strong> All arguments including the username and password will be stored in
+the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in
+state</a>.</p>
+</div></blockquote>
+<p>Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
+and Burstable Performance. For more information please read the AWS RDS documentation
+about <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class Types</a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (Required unless a <cite>snapshot_identifier</cite> or
-<cite>replicate_source_db</cite> is provided) The allocated storage in gibibytes.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or
+<code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code> is provided) The allocated storage in gibibytes.</li>
 <li><strong>allow_major_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that major version
 upgrades are allowed. Changing this parameter does not result in an outage and
 the change is asynchronously applied as soon as possible.</li>
-<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-<cite>false</cite>. See [Amazon RDS Documentation for more
-information.](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html</a>)
-for more information.</li>
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more
+information.</a>
+for more information.</p>
+</li>
 <li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades
 will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the RDS instance.</li>
 <li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Must be
-between <cite>0</cite> and <cite>35</cite>. When creating a Read Replica the value must be greater than <cite>0</cite>. [See Read Replica][1].</li>
+between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. When creating a Read Replica the value must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>. [See Read Replica][1].</li>
 <li><strong>backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which
 automated backups are created if they are enabled. Example: “09:46-10:16”. Must
-not overlap with <cite>maintenance_window</cite>.</li>
+not overlap with <code class="docutils literal notranslate"><span class="pre">maintenance_window</span></code>.</li>
 <li><strong>character_set_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The character set name to use for DB
-encoding in Oracle instances. This can’t be changed. See [Oracle Character Sets
+encoding in Oracle instances. This can’t be changed. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">Oracle Character Sets
 Supported in Amazon
-RDS](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html</a>)
+RDS</a>
 for more information.</li>
-<li><strong>copy_tags_to_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Copy all Instance <cite>tags</cite> to snapshots. Default is <cite>false</cite>.</li>
-<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of [DB subnet group](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html</a>). DB instance will
+<li><strong>copy_tags_to_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Copy all Instance <code class="docutils literal notranslate"><span class="pre">tags</span></code> to snapshots. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">DB subnet group</a>. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
-be created in the <cite>default</cite> VPC, or in EC2 Classic, if available. When working
+be created in the <code class="docutils literal notranslate"><span class="pre">default</span></code> VPC, or in EC2 Classic, if available. When working
 with read replicas, it needs to be specified only if the source database
-specifies an instance in another AWS Region. See [DBSubnetGroupName in API
-action CreateDBInstanceReadReplica](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html</a>)
+specifies an instance in another AWS Region. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">DBSubnetGroupName in API
+action CreateDBInstanceReadReplica</a>
 for additional read replica contraints.</li>
-<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <cite>true</cite>. The default is <cite>false</cite>.</li>
+<li><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Directory Service Active Directory domain to create the instance in.</li>
 <li><strong>domain_iam_role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the IAM role to be used when making API calls to the Directory Service.</li>
-<li><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <cite>engine</cite>): <cite>alert</cite>, <cite>audit</cite>, <cite>error</cite>, <cite>general</cite>, <cite>listener</cite>, <cite>slowquery</cite>, <cite>trace</cite>, <cite>postgresql</cite> (PostgreSQL), <cite>upgrade</cite> (PostgreSQL).</li>
-<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <cite>snapshot_identifier</cite> or <cite>replicate_source_db</cite>
-is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html</a>).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)’s</a> engine’.
+<li><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <code class="docutils literal notranslate"><span class="pre">engine</span></code>): <code class="docutils literal notranslate"><span class="pre">alert</span></code>, <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">listener</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>, <code class="docutils literal notranslate"><span class="pre">trace</span></code>, <code class="docutils literal notranslate"><span class="pre">postgresql</span></code> (PostgreSQL), <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> (PostgreSQL).</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
+is provided) The database engine to use.  For supported values, see the Engine parameter in <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">API action CreateDBInstance</a>.
+Note that for Amazon Aurora instances the engine must match the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>’s engine’.
 For information on the difference between the available Aurora MySQL engines
-see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html</a>)
-in the Amazon RDS User Guide.</li>
-<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The engine version to use. If <cite>auto_minor_version_upgrade</cite>
-is enabled, you can provide a prefix of the version such as <cite>5.7</cite> (for <cite>5.7.10</cite>) and
-this attribute will ignore differences in the patch version automatically (e.g. <cite>5.7.17</cite>).
-For supported values, see the EngineVersion parameter in [API action CreateDBInstance](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html</a>).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)’s</a> engine version’.</li>
+see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
+in the Amazon RDS User Guide.</p>
+</li>
+<li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The engine version to use. If <code class="docutils literal notranslate"><span class="pre">auto_minor_version_upgrade</span></code>
+is enabled, you can provide a prefix of the version such as <code class="docutils literal notranslate"><span class="pre">5.7</span></code> (for <code class="docutils literal notranslate"><span class="pre">5.7.10</span></code>) and
+this attribute will ignore differences in the patch version automatically (e.g. <code class="docutils literal notranslate"><span class="pre">5.7.17</span></code>).
+For supported values, see the EngineVersion parameter in <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">API action CreateDBInstance</a>.
+Note that for Amazon Aurora instances the engine version must match the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>’s engine version’.</p>
+</li>
 <li><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
 when this DB instance is deleted. If omitted, no final snapshot will be made.</li>
 <li><strong>iam_database_authentication_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether or
@@ -1757,7 +1777,7 @@ accounts is enabled.</li>
 <li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the RDS instance,
 if omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique
-identifier beginning with the specified prefix. Conflicts with <cite>identifer</cite>.</li>
+identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type of the RDS instance.</li>
 <li><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of provisioned IOPS. Setting this implies a
 storage_type of “io1”.</li>
@@ -1766,64 +1786,66 @@ encrypted replica, set this to the destination KMS ARN.</li>
 <li><strong>license_model</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional, but required for some DB engines, i.e. Oracle
 SE1) License model information for this DB instance.</li>
 <li><strong>maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
-Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”. See [RDS
+Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow">RDS
 Maintenance Window
-docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
+docs</a>
 for more information.</li>
 <li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, between points
 when Enhanced Monitoring metrics are collected for the DB instance. To disable
 collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.</li>
-<li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the IAM role that permits RDS
+<li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN for the IAM role that permits RDS
 to send enhanced monitoring metrics to CloudWatch Logs. You can find more
-information on the [AWS
-Documentation](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html</a>)
-what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</li>
+information on the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS
+Documentation</a>
+what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
+</li>
 <li><strong>multi_az</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the RDS instance is multi-AZ</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](<a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html">http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html</a>) for more details on what applies for those engines.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html">AWS documentation</a> for more details on what applies for those engines.</p>
+</li>
 <li><strong>option_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DB option group to associate.</li>
 <li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DB parameter group to
 associate.</li>
-<li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <cite>snapshot_identifier</cite> or <cite>replicate_source_db</cite>
+<li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly
-accessible. Default is <cite>false</cite>.</li>
+accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>replicate_source_db</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-<cite>identifier</cite> of another Amazon RDS Database to replicate. Note that if you are
+<code class="docutils literal notranslate"><span class="pre">identifier</span></code> of another Amazon RDS Database to replicate. Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
-specify a <cite>kms_key_id</cite>. See [DB Instance Replication][1] and [Working with
-PostgreSQL and MySQL Read Replicas](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html</a>)
+specify a <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>. See [DB Instance Replication][1] and <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with
+PostgreSQL and MySQL Read Replicas</a>
 for more information on using Replication.</li>
-<li><strong>s3_import</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](<a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html</a>)</li>
+<li><strong>s3_import</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Restore from a Percona Xtrabackup in S3.  See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an Amazon RDS MySQL DB Instance</a></li>
 <li><strong>security_group_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DB Security Groups to
-associate. Only used for [DB Instances on the _EC2-<a href="#id1"><span class="problematic" id="id2">Classic_</span></a>
-Platform](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC</a>).</li>
+associate. Only used for <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC">DB Instances on the *EC2-Classic*
+Platform</a>.</li>
 <li><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final DB snapshot is
 created before the DB instance is deleted. If true is specified, no DBSnapshot
 is created. If false is specified, a DB snapshot is created before the DB
-instance is deleted, using the value from <cite>final_snapshot_identifier</cite>. Default
-is <cite>false</cite>.</li>
+instance is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default
+is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this
 database from a snapshot. This correlates to the snapshot ID you’d find in the
 RDS console, e.g: rds:production-2015-06-26-06-05.</li>
 <li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB instance is
 encrypted. Note that if you are creating a cross-region read replica this field
-is ignored and you should instead declare <cite>kms_key_id</cite> with a valid ARN. The
-default is <cite>false</cite> if not specified.</li>
+is ignored and you should instead declare <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> with a valid ARN. The
+default is <code class="docutils literal notranslate"><span class="pre">false</span></code> if not specified.</li>
 <li><strong>storage_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of “standard” (magnetic), “gp2” (general
-purpose SSD), or “io1” (provisioned IOPS SSD). The default is “io1” if <cite>iops</cite> is
+purpose SSD), or “io1” (provisioned IOPS SSD). The default is “io1” if <code class="docutils literal notranslate"><span class="pre">iops</span></code> is
 specified, “standard” if not. Note that this behaviour is different from the AWS
 web console, where the default is “gp2”.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time zone of the DB instance. <cite>timezone</cite> is currently
-only supported by Microsoft SQL Server. The <cite>timezone</cite> can only be set on
-creation. See [MSSQL User
-Guide](<a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone</a>)
+<li><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time zone of the DB instance. <code class="docutils literal notranslate"><span class="pre">timezone</span></code> is currently
+only supported by Microsoft SQL Server. The <code class="docutils literal notranslate"><span class="pre">timezone</span></code> can only be set on
+creation. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">MSSQL User
+Guide</a>
 for more information.</li>
-<li><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <cite>snapshot_identifier</cite> or <cite>replicate_source_db</cite>
+<li><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Username for the master DB user.</li>
 <li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to
 associate.</li>
@@ -1835,14 +1857,14 @@ associate.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The hostname of the RDS instance. See also <cite>endpoint</cite> and <cite>port</cite>.</p>
+<dd><p>The hostname of the RDS instance. See also <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> and <code class="docutils literal notranslate"><span class="pre">port</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.allocated_storage">
 <code class="descname">allocated_storage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.allocated_storage" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Required unless a <cite>snapshot_identifier</cite> or
-<cite>replicate_source_db</cite> is provided) The allocated storage in gibibytes.</p>
+<dd><p>(Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or
+<code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code> is provided) The allocated storage in gibibytes.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1858,8 +1880,8 @@ the change is asynchronously applied as soon as possible.</p>
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.apply_immediately" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether any database modifications
 are applied immediately, or during the next maintenance window. Default is
-<cite>false</cite>. See [Amazon RDS Documentation for more
-information.](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html</a>)
+<code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more
+information.</a>
 for more information.</p>
 </dd></dl>
 
@@ -1887,7 +1909,7 @@ Defaults to true.</p>
 <dt id="pulumi_aws.rds.Instance.backup_retention_period">
 <code class="descname">backup_retention_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.backup_retention_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The days to retain backups for. Must be
-between <cite>0</cite> and <cite>35</cite>. When creating a Read Replica the value must be greater than <cite>0</cite>. [See Read Replica][1].</p>
+between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. When creating a Read Replica the value must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>. [See Read Replica][1].</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1895,7 +1917,7 @@ between <cite>0</cite> and <cite>35</cite>. When creating a Read Replica the val
 <code class="descname">backup_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.backup_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>The daily time range (in UTC) during which
 automated backups are created if they are enabled. Example: “09:46-10:16”. Must
-not overlap with <cite>maintenance_window</cite>.</p>
+not overlap with <code class="docutils literal notranslate"><span class="pre">maintenance_window</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1909,34 +1931,34 @@ DB instance.</p>
 <dt id="pulumi_aws.rds.Instance.character_set_name">
 <code class="descname">character_set_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.character_set_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The character set name to use for DB
-encoding in Oracle instances. This can’t be changed. See [Oracle Character Sets
+encoding in Oracle instances. This can’t be changed. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">Oracle Character Sets
 Supported in Amazon
-RDS](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html</a>)
+RDS</a>
 for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.copy_tags_to_snapshot">
 <code class="descname">copy_tags_to_snapshot</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.copy_tags_to_snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copy all Instance <cite>tags</cite> to snapshots. Default is <cite>false</cite>.</p>
+<dd><p>Copy all Instance <code class="docutils literal notranslate"><span class="pre">tags</span></code> to snapshots. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.db_subnet_group_name">
 <code class="descname">db_subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.db_subnet_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of [DB subnet group](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html</a>). DB instance will
+<dd><p>Name of <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">DB subnet group</a>. DB instance will
 be created in the VPC associated with the DB subnet group. If unspecified, will
-be created in the <cite>default</cite> VPC, or in EC2 Classic, if available. When working
+be created in the <code class="docutils literal notranslate"><span class="pre">default</span></code> VPC, or in EC2 Classic, if available. When working
 with read replicas, it needs to be specified only if the source database
-specifies an instance in another AWS Region. See [DBSubnetGroupName in API
-action CreateDBInstanceReadReplica](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html</a>)
+specifies an instance in another AWS Region. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">DBSubnetGroupName in API
+action CreateDBInstanceReadReplica</a>
 for additional read replica contraints.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.deletion_protection">
 <code class="descname">deletion_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.deletion_protection" title="Permalink to this definition">¶</a></dt>
-<dd><p>If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <cite>true</cite>. The default is <cite>false</cite>.</p>
+<dd><p>If the DB instance should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1954,34 +1976,34 @@ for additional read replica contraints.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.enabled_cloudwatch_logs_exports">
 <code class="descname">enabled_cloudwatch_logs_exports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.enabled_cloudwatch_logs_exports" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <cite>engine</cite>): <cite>alert</cite>, <cite>audit</cite>, <cite>error</cite>, <cite>general</cite>, <cite>listener</cite>, <cite>slowquery</cite>, <cite>trace</cite>, <cite>postgresql</cite> (PostgreSQL), <cite>upgrade</cite> (PostgreSQL).</p>
+<dd><p>List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <code class="docutils literal notranslate"><span class="pre">engine</span></code>): <code class="docutils literal notranslate"><span class="pre">alert</span></code>, <code class="docutils literal notranslate"><span class="pre">audit</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">general</span></code>, <code class="docutils literal notranslate"><span class="pre">listener</span></code>, <code class="docutils literal notranslate"><span class="pre">slowquery</span></code>, <code class="docutils literal notranslate"><span class="pre">trace</span></code>, <code class="docutils literal notranslate"><span class="pre">postgresql</span></code> (PostgreSQL), <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> (PostgreSQL).</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.endpoint">
 <code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The connection endpoint in <cite>address:port</cite> format.</p>
+<dd><p>The connection endpoint in <code class="docutils literal notranslate"><span class="pre">address:port</span></code> format.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.engine">
 <code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Required unless a <cite>snapshot_identifier</cite> or <cite>replicate_source_db</cite>
-is provided) The database engine to use.  For supported values, see the Engine parameter in [API action CreateDBInstance](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html</a>).
-Note that for Amazon Aurora instances the engine must match the [DB cluster](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)’s</a> engine’.
+<dd><p>(Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
+is provided) The database engine to use.  For supported values, see the Engine parameter in <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">API action CreateDBInstance</a>.
+Note that for Amazon Aurora instances the engine must match the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>’s engine’.
 For information on the difference between the available Aurora MySQL engines
-see [Comparison between Aurora MySQL 1 and Aurora MySQL 2](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html</a>)
+see <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
 in the Amazon RDS User Guide.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.engine_version">
 <code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.engine_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The engine version to use. If <cite>auto_minor_version_upgrade</cite>
-is enabled, you can provide a prefix of the version such as <cite>5.7</cite> (for <cite>5.7.10</cite>) and
-this attribute will ignore differences in the patch version automatically (e.g. <cite>5.7.17</cite>).
-For supported values, see the EngineVersion parameter in [API action CreateDBInstance](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html</a>).
-Note that for Amazon Aurora instances the engine version must match the [DB cluster](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)'s">https://www.terraform.io/docs/providers/aws/r/rds_cluster.html)’s</a> engine version’.</p>
+<dd><p>The engine version to use. If <code class="docutils literal notranslate"><span class="pre">auto_minor_version_upgrade</span></code>
+is enabled, you can provide a prefix of the version such as <code class="docutils literal notranslate"><span class="pre">5.7</span></code> (for <code class="docutils literal notranslate"><span class="pre">5.7.10</span></code>) and
+this attribute will ignore differences in the patch version automatically (e.g. <code class="docutils literal notranslate"><span class="pre">5.7.17</span></code>).
+For supported values, see the EngineVersion parameter in <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">API action CreateDBInstance</a>.
+Note that for Amazon Aurora instances the engine version must match the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>’s engine version’.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2017,7 +2039,7 @@ if omitted, Terraform will assign a random, unique identifier.</p>
 <dt id="pulumi_aws.rds.Instance.identifier_prefix">
 <code class="descname">identifier_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.identifier_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique
-identifier beginning with the specified prefix. Conflicts with <cite>identifer</cite>.</p>
+identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2051,9 +2073,9 @@ SE1) License model information for this DB instance.</p>
 <dt id="pulumi_aws.rds.Instance.maintenance_window">
 <code class="descname">maintenance_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.maintenance_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>The window to perform maintenance in.
-Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”. See [RDS
+Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow">RDS
 Maintenance Window
-docs](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow)
+docs</a>
 for more information.</p>
 </dd></dl>
 
@@ -2071,8 +2093,8 @@ Values: 0, 1, 5, 10, 15, 30, 60.</p>
 <code class="descname">monitoring_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.monitoring_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN for the IAM role that permits RDS
 to send enhanced monitoring metrics to CloudWatch Logs. You can find more
-information on the [AWS
-Documentation](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html</a>)
+information on the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS
+Documentation</a>
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
 </dd></dl>
 
@@ -2085,7 +2107,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](<a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html">http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html</a>) for more details on what applies for those engines.</p>
+<dd><p>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the <a class="reference external" href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html">AWS documentation</a> for more details on what applies for those engines.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2104,7 +2126,7 @@ associate.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.password">
 <code class="descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.password" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Required unless a <cite>snapshot_identifier</cite> or <cite>replicate_source_db</cite>
+<dd><p>(Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.</p>
 </dd></dl>
@@ -2119,7 +2141,7 @@ logs, and it will be stored in the state file.</p>
 <dt id="pulumi_aws.rds.Instance.publicly_accessible">
 <code class="descname">publicly_accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.publicly_accessible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bool to control if instance is publicly
-accessible. Default is <cite>false</cite>.</p>
+accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2127,10 +2149,10 @@ accessible. Default is <cite>false</cite>.</p>
 <code class="descname">replicate_source_db</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.replicate_source_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies that this resource is a Replicate
 database, and to use this value as the source database. This correlates to the
-<cite>identifier</cite> of another Amazon RDS Database to replicate. Note that if you are
+<code class="docutils literal notranslate"><span class="pre">identifier</span></code> of another Amazon RDS Database to replicate. Note that if you are
 creating a cross-region replica of an encrypted database you will also need to
-specify a <cite>kms_key_id</cite>. See [DB Instance Replication][1] and [Working with
-PostgreSQL and MySQL Read Replicas](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html</a>)
+specify a <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>. See [DB Instance Replication][1] and <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with
+PostgreSQL and MySQL Read Replicas</a>
 for more information on using Replication.</p>
 </dd></dl>
 
@@ -2143,15 +2165,15 @@ for more information on using Replication.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.s3_import">
 <code class="descname">s3_import</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.s3_import" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](<a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html</a>)</p>
+<dd><p>Restore from a Percona Xtrabackup in S3.  See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an Amazon RDS MySQL DB Instance</a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.security_group_names">
 <code class="descname">security_group_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.security_group_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of DB Security Groups to
-associate. Only used for [DB Instances on the _EC2-<a href="#id3"><span class="problematic" id="id4">Classic_</span></a>
-Platform](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC</a>).</p>
+associate. Only used for <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC">DB Instances on the *EC2-Classic*
+Platform</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2160,8 +2182,8 @@ Platform](<a class="reference external" href="https://docs.aws.amazon.com/Amazon
 <dd><p>Determines whether a final DB snapshot is
 created before the DB instance is deleted. If true is specified, no DBSnapshot
 is created. If false is specified, a DB snapshot is created before the DB
-instance is deleted, using the value from <cite>final_snapshot_identifier</cite>. Default
-is <cite>false</cite>.</p>
+instance is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default
+is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2183,15 +2205,15 @@ RDS console, e.g: rds:production-2015-06-26-06-05.</p>
 <code class="descname">storage_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.storage_encrypted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether the DB instance is
 encrypted. Note that if you are creating a cross-region read replica this field
-is ignored and you should instead declare <cite>kms_key_id</cite> with a valid ARN. The
-default is <cite>false</cite> if not specified.</p>
+is ignored and you should instead declare <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> with a valid ARN. The
+default is <code class="docutils literal notranslate"><span class="pre">false</span></code> if not specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.storage_type">
 <code class="descname">storage_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.storage_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>One of “standard” (magnetic), “gp2” (general
-purpose SSD), or “io1” (provisioned IOPS SSD). The default is “io1” if <cite>iops</cite> is
+purpose SSD), or “io1” (provisioned IOPS SSD). The default is “io1” if <code class="docutils literal notranslate"><span class="pre">iops</span></code> is
 specified, “standard” if not. Note that this behaviour is different from the AWS
 web console, where the default is “gp2”.</p>
 </dd></dl>
@@ -2205,17 +2227,17 @@ web console, where the default is “gp2”.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.timezone">
 <code class="descname">timezone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.timezone" title="Permalink to this definition">¶</a></dt>
-<dd><p>Time zone of the DB instance. <cite>timezone</cite> is currently
-only supported by Microsoft SQL Server. The <cite>timezone</cite> can only be set on
-creation. See [MSSQL User
-Guide](<a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone</a>)
+<dd><p>Time zone of the DB instance. <code class="docutils literal notranslate"><span class="pre">timezone</span></code> is currently
+only supported by Microsoft SQL Server. The <code class="docutils literal notranslate"><span class="pre">timezone</span></code> can only be set on
+creation. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">MSSQL User
+Guide</a>
 for more information.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.Instance.username">
 <code class="descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.username" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Required unless a <cite>snapshot_identifier</cite> or <cite>replicate_source_db</cite>
+<dd><p>(Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Username for the master DB user.</p>
 </dd></dl>
 
@@ -2268,23 +2290,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.OptionGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">OptionGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>engine_name=None</em>, <em>major_engine_version=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>options=None</em>, <em>option_group_description=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.OptionGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an RDS DB option group resource. Documentation of the available options for various RDS engines can be found at:
-* [MariaDB Options](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Options.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Options.html</a>)
-* [Microsoft SQL Server Options](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.html</a>)
-* [MySQL Options](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html</a>)
-* [Oracle Options](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html</a>)</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">OptionGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>engine_name=None</em>, <em>major_engine_version=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>options=None</em>, <em>option_group_description=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.OptionGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an RDS DB option group resource. Documentation of the available options for various RDS engines can be found at:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Options.html">MariaDB Options</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.html">Microsoft SQL Server Options</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">MySQL Options</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">Oracle Options</a></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>engine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the engine that this option group should be associated with.</li>
 <li><strong>major_engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the major version of the engine that this option group should be associated with.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the setting.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>. Must be lowercase, to match as it is stored in AWS.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Must be lowercase, to match as it is stored in AWS.</li>
 <li><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Options to apply.</li>
 <li><strong>option_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the option group. Defaults to “Managed by Terraform”.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -2320,7 +2344,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.OptionGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.OptionGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>. Must be lowercase, to match as it is stored in AWS.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>. Must be lowercase, to match as it is stored in AWS.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2383,25 +2407,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>parameters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an RDS DB parameter group resource .Documentation of the available parameters for various RDS engines can be found at:
-* [Aurora MySQL Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html</a>)
-* [Aurora PostgreSQL Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html</a>)
-* [MariaDB Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Parameters.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Parameters.html</a>)
-* [Oracle Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet</a>)
-* [PostgreSQL Parameters](<a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters</a>)</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>family=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>parameters=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an RDS DB parameter group resource .Documentation of the available parameters for various RDS engines can be found at:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">Aurora MySQL Parameters</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">Aurora PostgreSQL Parameters</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Parameters.html">MariaDB Parameters</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet">Oracle Parameters</a></li>
+<li><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters">PostgreSQL Parameters</a></li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB parameter group. Defaults to “Managed by Terraform”.</li>
 <li><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The family of the DB parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB parameter.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
-<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [<cite>aws rds describe-db-parameters</cite>](<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>) after initial creation of the group.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -2435,13 +2461,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ParameterGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.rds.ParameterGroup.parameters">
 <code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.ParameterGroup.parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [<cite>aws rds describe-db-parameters</cite>](<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>) after initial creation of the group.</p>
+<dd><p>A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via <cite>``aws rds describe-db-parameters`</cite> &lt;<a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html">https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html</a>&gt;`_ after initial creation of the group.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2492,18 +2518,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.SecurityGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>ingress=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SecurityGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">SecurityGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>ingress=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS security group resource. This is only for DB instances in the
 EC2-Classic Platform. For instances inside a VPC, use the
-[<cite>aws_db_instance.vpc_security_group_ids</cite>](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids</a>)
+<cite>``aws_db_instance.vpc_security_group_ids`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids</a>&gt;`_
 attribute instead.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB security group. Defaults to “Managed by Terraform”.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of ingress rules.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB security group.</li>
@@ -2585,15 +2611,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.Snapshot">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>db_instance_identifier=None</em>, <em>db_snapshot_identifier=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Snapshot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the [<cite>aws_db_cluster_snapshot</cite> resource](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html</a>).</p>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>db_instance_identifier=None</em>, <em>db_snapshot_identifier=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the <cite>``aws_db_cluster_snapshot`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html</a>&gt;`_.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>db_instance_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DB Instance Identifier from which to take the snapshot.</li>
 <li><strong>db_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Identifier for the snapshot.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags</li>
@@ -2752,18 +2778,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.rds.SubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.rds.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS DB subnet group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the DB subnet group. Defaults to “Managed by Terraform”.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the DB subnet group. If omitted, Terraform will assign a random, unique name.</li>
-<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -2792,7 +2818,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.SubnetGroup.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup.name_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <cite>name</cite>.</p>
+<dd><p>Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2857,8 +2883,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.get_cluster_snapshot">
 <code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_cluster_snapshot</code><span class="sig-paren">(</span><em>db_cluster_identifier=None</em>, <em>db_cluster_snapshot_identifier=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>most_recent=None</em>, <em>snapshot_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.</p>
-<p>&gt; <strong>NOTE:</strong> This data source does not apply to snapshots created on DB Instances. 
-See the [<cite>aws_db_snapshot</cite> data source](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_snapshot.html</a>) for DB Instance snapshots.</p>
+<blockquote>
+<div><strong>NOTE:</strong> This data source does not apply to snapshots created on DB Instances. 
+See the <cite>``aws_db_snapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_snapshot.html</a>&gt;`_ for DB Instance snapshots.</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2871,8 +2898,9 @@ See the [<cite>aws_db_snapshot</cite> data source](<a class="reference external"
 <dt id="pulumi_aws.rds.get_snapshot">
 <code class="descclassname">pulumi_aws.rds.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>db_instance_identifier=None</em>, <em>db_snapshot_identifier=None</em>, <em>include_public=None</em>, <em>include_shared=None</em>, <em>most_recent=None</em>, <em>snapshot_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a DB Snapshot for use when provisioning DB instances</p>
-<p>&gt; <strong>NOTE:</strong> This data source does not apply to snapshots created on Aurora DB clusters.
-See the [<cite>aws_db_cluster_snapshot</cite> data source](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html</a>) for DB Cluster snapshots.</p>
+<blockquote>
+<div><strong>NOTE:</strong> This data source does not apply to snapshots created on Aurora DB clusters.
+See the <cite>``aws_db_cluster_snapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html</a>&gt;`_ for DB Cluster snapshots.</div></blockquote>
 </dd></dl>
 
 </div>

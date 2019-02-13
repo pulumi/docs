@@ -2,20 +2,21 @@
 <span id="dms"></span><h1>dms<a class="headerlink" href="#module-pulumi_aws.dms" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.dms.Certificate">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_id=None</em>, <em>certificate_pem=None</em>, <em>certificate_wallet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.Certificate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">Certificate</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_id=None</em>, <em>certificate_pem=None</em>, <em>certificate_wallet=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) certificate resource. DMS certificates can be created, deleted, and imported.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the PEM encoded certificate will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate identifier.</li>
-<li><strong>certificate_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the .pem X.509 certificate file for the certificate. Either <cite>certificate_pem</cite> or <cite>certificate_wallet</cite> must be set.</li>
-<li><strong>certificate_wallet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the Oracle Wallet certificate for use with SSL. Either <cite>certificate_pem</cite> or <cite>certificate_wallet</cite> must be set.</li>
+<li><strong>certificate_pem</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the .pem X.509 certificate file for the certificate. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</li>
+<li><strong>certificate_wallet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The contents of the Oracle Wallet certificate for use with SSL. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</li>
 </ul>
 </td>
 </tr>
@@ -36,13 +37,13 @@
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Certificate.certificate_pem">
 <code class="descname">certificate_pem</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Certificate.certificate_pem" title="Permalink to this definition">¶</a></dt>
-<dd><p>The contents of the .pem X.509 certificate file for the certificate. Either <cite>certificate_pem</cite> or <cite>certificate_wallet</cite> must be set.</p>
+<dd><p>The contents of the .pem X.509 certificate file for the certificate. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Certificate.certificate_wallet">
 <code class="descname">certificate_wallet</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Certificate.certificate_wallet" title="Permalink to this definition">¶</a></dt>
-<dd><p>The contents of the Oracle Wallet certificate for use with SSL. Either <cite>certificate_pem</cite> or <cite>certificate_wallet</cite> must be set.</p>
+<dd><p>The contents of the Oracle Wallet certificate for use with SSL. Either <code class="docutils literal notranslate"><span class="pre">certificate_pem</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate_wallet</span></code> must be set.</p>
 </dd></dl>
 
 <dl class="method">
@@ -87,31 +88,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dms.Endpoint">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_arn=None</em>, <em>database_name=None</em>, <em>endpoint_id=None</em>, <em>endpoint_type=None</em>, <em>engine_name=None</em>, <em>extra_connection_attributes=None</em>, <em>kms_key_arn=None</em>, <em>mongodb_settings=None</em>, <em>password=None</em>, <em>port=None</em>, <em>s3_settings=None</em>, <em>server_name=None</em>, <em>service_access_role=None</em>, <em>ssl_mode=None</em>, <em>tags=None</em>, <em>username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.Endpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>database_name=None</em>, <em>endpoint_id=None</em>, <em>endpoint_type=None</em>, <em>engine_name=None</em>, <em>extra_connection_attributes=None</em>, <em>kms_key_arn=None</em>, <em>mongodb_settings=None</em>, <em>password=None</em>, <em>port=None</em>, <em>s3_settings=None</em>, <em>server_name=None</em>, <em>service_access_role=None</em>, <em>ssl_mode=None</em>, <em>tags=None</em>, <em>username=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) endpoint resource. DMS endpoints can be created, updated, deleted, and imported.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the password will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the password will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the certificate.</li>
 <li><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the endpoint database.</li>
 <li><strong>endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database endpoint identifier.</li>
-<li><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of endpoint. Can be one of <cite>source | target</cite>.</li>
-<li><strong>engine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of engine for the endpoint. Can be one of <cite>mysql | oracle | postgres | mariadb | aurora | redshift | sybase | sqlserver | dynamodb | mongodb | s3 | azuredb</cite>.</li>
-<li><strong>extra_connection_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](<a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html">http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html</a>).</li>
-<li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <cite>kms_key_arn</cite>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</li>
-<li><strong>mongodb_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for the source MongoDB endpoint. Available settings are <cite>auth_type</cite> (default: <cite>PASSWORD</cite>), <cite>auth_mechanism</cite> (default: <cite>DEFAULT</cite>), <cite>nesting_level</cite> (default: <cite>NONE</cite>), <cite>extract_doc_id</cite> (default: <cite>false</cite>), <cite>docs_to_investigate</cite> (default: <cite>1000</cite>) and <cite>auth_source</cite> (default: <cite>admin</cite>). For more details, see [Using MongoDB as a Source for AWS DMS](<a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html</a>).</li>
+<li><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">|</span> <span class="pre">target</span></code>.</li>
+<li><strong>engine_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of engine for the endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">mysql</span> <span class="pre">|</span> <span class="pre">oracle</span> <span class="pre">|</span> <span class="pre">postgres</span> <span class="pre">|</span> <span class="pre">mariadb</span> <span class="pre">|</span> <span class="pre">aurora</span> <span class="pre">|</span> <span class="pre">redshift</span> <span class="pre">|</span> <span class="pre">sybase</span> <span class="pre">|</span> <span class="pre">sqlserver</span> <span class="pre">|</span> <span class="pre">dynamodb</span> <span class="pre">|</span> <span class="pre">mongodb</span> <span class="pre">|</span> <span class="pre">s3</span> <span class="pre">|</span> <span class="pre">azuredb</span></code>.</li>
+<li><strong>extra_connection_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Additional attributes associated with the connection. For available attributes see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html">Using Extra Connection Attributes with AWS Database Migration Service</a>.</li>
+<li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</li>
+<li><strong>mongodb_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for the source MongoDB endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">PASSWORD</span></code>), <code class="docutils literal notranslate"><span class="pre">auth_mechanism</span></code> (default: <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>), <code class="docutils literal notranslate"><span class="pre">nesting_level</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>), <code class="docutils literal notranslate"><span class="pre">extract_doc_id</span></code> (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>), <code class="docutils literal notranslate"><span class="pre">docs_to_investigate</span></code> (default: <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and <code class="docutils literal notranslate"><span class="pre">auth_source</span></code> (default: <code class="docutils literal notranslate"><span class="pre">admin</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">Using MongoDB as a Source for AWS DMS</a>.</li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to be used to login to the endpoint database.</li>
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port used by the endpoint database.</li>
-<li><strong>s3_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for the target S3 endpoint. Available settings are <cite>service_access_role_arn</cite>, <cite>external_table_definition</cite>, <cite>csv_row_delimiter</cite> (default: <cite>n</cite>), <cite>csv_delimiter</cite> (default: <cite>,</cite>), <cite>bucket_folder</cite>, <cite>bucket_name</cite> and <cite>compression_type</cite> (default: <cite>NONE</cite>). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](<a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html</a>).</li>
+<li><strong>s3_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for the target S3 endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">service_access_role_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">external_table_definition</span></code>, <code class="docutils literal notranslate"><span class="pre">csv_row_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">\n</span></code>), <code class="docutils literal notranslate"><span class="pre">csv_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">,</span></code>), <code class="docutils literal notranslate"><span class="pre">bucket_folder</span></code>, <code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> and <code class="docutils literal notranslate"><span class="pre">compression_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">Using Amazon S3 as a Target for AWS Database Migration Service</a>.</li>
 <li><strong>server_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host name of the server.</li>
 <li><strong>service_access_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.</li>
-<li><strong>ssl_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SSL mode to use for the connection. Can be one of <cite>none | require | verify-ca | verify-full</cite></li>
+<li><strong>ssl_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SSL mode to use for the connection. Can be one of <code class="docutils literal notranslate"><span class="pre">none</span> <span class="pre">|</span> <span class="pre">require</span> <span class="pre">|</span> <span class="pre">verify-ca</span> <span class="pre">|</span> <span class="pre">verify-full</span></code></li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user name to be used to login to the endpoint database.</li>
 </ul>
@@ -146,31 +148,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.endpoint_type">
 <code class="descname">endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.endpoint_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of endpoint. Can be one of <cite>source | target</cite>.</p>
+<dd><p>The type of endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">|</span> <span class="pre">target</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.engine_name">
 <code class="descname">engine_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.engine_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of engine for the endpoint. Can be one of <cite>mysql | oracle | postgres | mariadb | aurora | redshift | sybase | sqlserver | dynamodb | mongodb | s3 | azuredb</cite>.</p>
+<dd><p>The type of engine for the endpoint. Can be one of <code class="docutils literal notranslate"><span class="pre">mysql</span> <span class="pre">|</span> <span class="pre">oracle</span> <span class="pre">|</span> <span class="pre">postgres</span> <span class="pre">|</span> <span class="pre">mariadb</span> <span class="pre">|</span> <span class="pre">aurora</span> <span class="pre">|</span> <span class="pre">redshift</span> <span class="pre">|</span> <span class="pre">sybase</span> <span class="pre">|</span> <span class="pre">sqlserver</span> <span class="pre">|</span> <span class="pre">dynamodb</span> <span class="pre">|</span> <span class="pre">mongodb</span> <span class="pre">|</span> <span class="pre">s3</span> <span class="pre">|</span> <span class="pre">azuredb</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.extra_connection_attributes">
 <code class="descname">extra_connection_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.extra_connection_attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](<a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html">http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html</a>).</p>
+<dd><p>Additional attributes associated with the connection. For available attributes see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html">Using Extra Connection Attributes with AWS Database Migration Service</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.kms_key_arn">
 <code class="descname">kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.kms_key_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <cite>kms_key_arn</cite>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p>
+<dd><p>The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.mongodb_settings">
 <code class="descname">mongodb_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.mongodb_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Settings for the source MongoDB endpoint. Available settings are <cite>auth_type</cite> (default: <cite>PASSWORD</cite>), <cite>auth_mechanism</cite> (default: <cite>DEFAULT</cite>), <cite>nesting_level</cite> (default: <cite>NONE</cite>), <cite>extract_doc_id</cite> (default: <cite>false</cite>), <cite>docs_to_investigate</cite> (default: <cite>1000</cite>) and <cite>auth_source</cite> (default: <cite>admin</cite>). For more details, see [Using MongoDB as a Source for AWS DMS](<a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html</a>).</p>
+<dd><p>Settings for the source MongoDB endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">auth_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">PASSWORD</span></code>), <code class="docutils literal notranslate"><span class="pre">auth_mechanism</span></code> (default: <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>), <code class="docutils literal notranslate"><span class="pre">nesting_level</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>), <code class="docutils literal notranslate"><span class="pre">extract_doc_id</span></code> (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>), <code class="docutils literal notranslate"><span class="pre">docs_to_investigate</span></code> (default: <code class="docutils literal notranslate"><span class="pre">1000</span></code>) and <code class="docutils literal notranslate"><span class="pre">auth_source</span></code> (default: <code class="docutils literal notranslate"><span class="pre">admin</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html">Using MongoDB as a Source for AWS DMS</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -188,7 +190,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.s3_settings">
 <code class="descname">s3_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.s3_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Settings for the target S3 endpoint. Available settings are <cite>service_access_role_arn</cite>, <cite>external_table_definition</cite>, <cite>csv_row_delimiter</cite> (default: <cite>n</cite>), <cite>csv_delimiter</cite> (default: <cite>,</cite>), <cite>bucket_folder</cite>, <cite>bucket_name</cite> and <cite>compression_type</cite> (default: <cite>NONE</cite>). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](<a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html</a>).</p>
+<dd><p>Settings for the target S3 endpoint. Available settings are <code class="docutils literal notranslate"><span class="pre">service_access_role_arn</span></code>, <code class="docutils literal notranslate"><span class="pre">external_table_definition</span></code>, <code class="docutils literal notranslate"><span class="pre">csv_row_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">\n</span></code>), <code class="docutils literal notranslate"><span class="pre">csv_delimiter</span></code> (default: <code class="docutils literal notranslate"><span class="pre">,</span></code>), <code class="docutils literal notranslate"><span class="pre">bucket_folder</span></code>, <code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> and <code class="docutils literal notranslate"><span class="pre">compression_type</span></code> (default: <code class="docutils literal notranslate"><span class="pre">NONE</span></code>). For more details, see <a class="reference external" href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html">Using Amazon S3 as a Target for AWS Database Migration Service</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -206,7 +208,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.Endpoint.ssl_mode">
 <code class="descname">ssl_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.Endpoint.ssl_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SSL mode to use for the connection. Can be one of <cite>none | require | verify-ca | verify-full</cite></p>
+<dd><p>The SSL mode to use for the connection. Can be one of <code class="docutils literal notranslate"><span class="pre">none</span> <span class="pre">|</span> <span class="pre">require</span> <span class="pre">|</span> <span class="pre">verify-ca</span> <span class="pre">|</span> <span class="pre">verify-full</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -263,25 +265,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dms.ReplicationInstance">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">ReplicationInstance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allocated_storage=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>engine_version=None</em>, <em>kms_key_arn=None</em>, <em>multi_az=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>replication_instance_class=None</em>, <em>replication_instance_id=None</em>, <em>replication_subnet_group_id=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">ReplicationInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_storage=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>engine_version=None</em>, <em>kms_key_arn=None</em>, <em>multi_az=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>replication_instance_class=None</em>, <em>replication_instance_id=None</em>, <em>replication_subnet_group_id=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) replication instance resource. DMS replication instances can be created, updated, deleted, and imported.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of storage (in gigabytes) to be initially allocated for the replication instance.</li>
 <li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.</li>
 <li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the replication instance will be created in.</li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The engine version number of the replication instance.</li>
-<li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <cite>kms_key_arn</cite>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</li>
-<li><strong>multi_az</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the replication instance is a multi-az deployment. You cannot set the <cite>availability_zone</cite> parameter if the <cite>multi_az</cite> parameter is set to <cite>true</cite>.</li>
+<li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</li>
+<li><strong>multi_az</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the replication instance is a multi-az deployment. You cannot set the <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> parameter if the <code class="docutils literal notranslate"><span class="pre">multi_az</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.</li>
-<li><strong>replication_instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <cite>dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge</cite></li>
+<li><strong>replication_instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <code class="docutils literal notranslate"><span class="pre">dms.t2.micro</span> <span class="pre">|</span> <span class="pre">dms.t2.small</span> <span class="pre">|</span> <span class="pre">dms.t2.medium</span> <span class="pre">|</span> <span class="pre">dms.t2.large</span> <span class="pre">|</span> <span class="pre">dms.c4.large</span> <span class="pre">|</span> <span class="pre">dms.c4.xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.2xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.4xlarge</span></code></li>
 <li><strong>replication_instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The replication instance identifier. This parameter is stored as a lowercase string.</li>
 <li><strong>replication_subnet_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A subnet group to associate with the replication instance.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -324,13 +326,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationInstance.kms_key_arn">
 <code class="descname">kms_key_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance.kms_key_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <cite>kms_key_arn</cite>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p>
+<dd><p>The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for <code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code>, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationInstance.multi_az">
 <code class="descname">multi_az</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance.multi_az" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies if the replication instance is a multi-az deployment. You cannot set the <cite>availability_zone</cite> parameter if the <cite>multi_az</cite> parameter is set to <cite>true</cite>.</p>
+<dd><p>Specifies if the replication instance is a multi-az deployment. You cannot set the <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> parameter if the <code class="docutils literal notranslate"><span class="pre">multi_az</span></code> parameter is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -354,7 +356,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationInstance.replication_instance_class">
 <code class="descname">replication_instance_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationInstance.replication_instance_class" title="Permalink to this definition">¶</a></dt>
-<dd><p>The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <cite>dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge</cite></p>
+<dd><p>The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of <code class="docutils literal notranslate"><span class="pre">dms.t2.micro</span> <span class="pre">|</span> <span class="pre">dms.t2.small</span> <span class="pre">|</span> <span class="pre">dms.t2.medium</span> <span class="pre">|</span> <span class="pre">dms.t2.large</span> <span class="pre">|</span> <span class="pre">dms.c4.large</span> <span class="pre">|</span> <span class="pre">dms.c4.xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.2xlarge</span> <span class="pre">|</span> <span class="pre">dms.c4.4xlarge</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -435,15 +437,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dms.ReplicationSubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">ReplicationSubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>replication_subnet_group_description=None</em>, <em>replication_subnet_group_id=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationSubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">ReplicationSubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>replication_subnet_group_description=None</em>, <em>replication_subnet_group_id=None</em>, <em>subnet_ids=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationSubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) replication subnet group resource. DMS replication subnet groups can be created, updated, deleted, and imported.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>replication_subnet_group_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the subnet group.</li>
 <li><strong>replication_subnet_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the replication subnet group. This value is stored as a lowercase string.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the EC2 subnet IDs for the subnet group.</li>
@@ -525,22 +527,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dms.ReplicationTask">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">ReplicationTask</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cdc_start_time=None</em>, <em>migration_type=None</em>, <em>replication_instance_arn=None</em>, <em>replication_task_id=None</em>, <em>replication_task_settings=None</em>, <em>source_endpoint_arn=None</em>, <em>table_mappings=None</em>, <em>tags=None</em>, <em>target_endpoint_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dms.</code><code class="descname">ReplicationTask</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>cdc_start_time=None</em>, <em>migration_type=None</em>, <em>replication_instance_arn=None</em>, <em>replication_task_id=None</em>, <em>replication_task_settings=None</em>, <em>source_endpoint_arn=None</em>, <em>table_mappings=None</em>, <em>tags=None</em>, <em>target_endpoint_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DMS (Data Migration Service) replication task resource. DMS replication tasks can be created, updated, deleted, and imported.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>cdc_start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.</li>
-<li><strong>migration_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The migration type. Can be one of <cite>full-load | cdc | full-load-and-cdc</cite>.</li>
+<li><strong>migration_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The migration type. Can be one of <code class="docutils literal notranslate"><span class="pre">full-load</span> <span class="pre">|</span> <span class="pre">cdc</span> <span class="pre">|</span> <span class="pre">full-load-and-cdc</span></code>.</li>
 <li><strong>replication_instance_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the replication instance.</li>
 <li><strong>replication_task_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The replication task identifier.</li>
-<li><strong>replication_task_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](<a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html">http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html</a>).</li>
+<li><strong>replication_task_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An escaped JSON string that contains the task settings. For a complete list of task settings, see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html">Task Settings for AWS Database Migration Service Tasks</a>.</li>
 <li><strong>source_endpoint_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.</li>
-<li><strong>table_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](<a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html">http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html</a>)</li>
+<li><strong>table_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An escaped JSON string that contains the table mappings. For information on table mapping see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html">Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data</a></li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>target_endpoint_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.</li>
 </ul>
@@ -557,7 +559,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationTask.migration_type">
 <code class="descname">migration_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask.migration_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The migration type. Can be one of <cite>full-load | cdc | full-load-and-cdc</cite>.</p>
+<dd><p>The migration type. Can be one of <code class="docutils literal notranslate"><span class="pre">full-load</span> <span class="pre">|</span> <span class="pre">cdc</span> <span class="pre">|</span> <span class="pre">full-load-and-cdc</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -581,7 +583,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationTask.replication_task_settings">
 <code class="descname">replication_task_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask.replication_task_settings" title="Permalink to this definition">¶</a></dt>
-<dd><p>An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](<a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html">http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html</a>).</p>
+<dd><p>An escaped JSON string that contains the task settings. For a complete list of task settings, see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html">Task Settings for AWS Database Migration Service Tasks</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -593,7 +595,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.dms.ReplicationTask.table_mappings">
 <code class="descname">table_mappings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dms.ReplicationTask.table_mappings" title="Permalink to this definition">¶</a></dt>
-<dd><p>An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](<a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html">http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html</a>)</p>
+<dd><p>An escaped JSON string that contains the table mappings. For information on table mapping see <a class="reference external" href="http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html">Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data</a></p>
 </dd></dl>
 
 <dl class="attribute">

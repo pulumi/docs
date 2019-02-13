@@ -2,21 +2,22 @@
 <span id="acmpca"></span><h1>acmpca<a class="headerlink" href="#module-pulumi_aws.acmpca" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.acmpca.CertificateAuthority">
-<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">CertificateAuthority</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_authority_configuration=None</em>, <em>enabled=None</em>, <em>revocation_configuration=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.acmpca.</code><code class="descname">CertificateAuthority</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_authority_configuration=None</em>, <em>enabled=None</em>, <em>revocation_configuration=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
-<p>&gt; <strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <cite>PENDING_CERTIFICATE</cite> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <cite>certificate_signing_request</cite> attribute and import the signed certificate outside of Terraform. Terraform can support another resource to manage that workflow automatically in the future.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code class="docutils literal notranslate"><span class="pre">PENDING_CERTIFICATE</span></code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code class="docutils literal notranslate"><span class="pre">certificate_signing_request</span></code> attribute and import the signed certificate outside of Terraform. Terraform can support another resource to manage that workflow automatically in the future.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_authority_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing algorithms and certificate subject information. Defined below.</li>
-<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <cite>false</cite>.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>revocation_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument containing revocation configuration. Defined below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a key-value map of user-defined tags that are attached to the certificate authority.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the certificate authority. Currently, this must be <cite>SUBORDINATE</cite>.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the certificate authority. Currently, this must be <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -55,7 +56,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <cite>false</cite>.</p>
+<dd><p>Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -97,7 +98,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.CertificateAuthority.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.CertificateAuthority.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the certificate authority. Currently, this must be <cite>SUBORDINATE</cite>.</p>
+<dd><p>The type of the certificate authority. Currently, this must be <code class="docutils literal notranslate"><span class="pre">SUBORDINATE</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -177,12 +178,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.acmpca.GetCertificateAuthorityResult.revocation_configurations">
 <code class="descname">revocation_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.acmpca.GetCertificateAuthorityResult.revocation_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nested attribute containing revocation configuration.
-* <cite>revocation_configuration.0.crl_configuration</cite> - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
-* <cite>revocation_configuration.0.crl_configuration.0.custom_cname</cite> - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.
-* <cite>revocation_configuration.0.crl_configuration.0.enabled</cite> - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
-* <cite>revocation_configuration.0.crl_configuration.0.expiration_in_days</cite> - Number of days until a certificate expires.
-* <cite>revocation_configuration.0.crl_configuration.0.s3_bucket_name</cite> - Name of the S3 bucket that contains the CRL.</p>
+<dd><p>Nested attribute containing revocation configuration.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">revocation_configuration.0.crl_configuration</span></code> - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.</li>
+<li><code class="docutils literal notranslate"><span class="pre">revocation_configuration.0.crl_configuration.0.custom_cname</span></code> - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.</li>
+<li><code class="docutils literal notranslate"><span class="pre">revocation_configuration.0.crl_configuration.0.enabled</span></code> - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.</li>
+<li><code class="docutils literal notranslate"><span class="pre">revocation_configuration.0.crl_configuration.0.expiration_in_days</span></code> - Number of days until a certificate expires.</li>
+<li><code class="docutils literal notranslate"><span class="pre">revocation_configuration.0.crl_configuration.0.s3_bucket_name</span></code> - Name of the S3 bucket that contains the CRL.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">

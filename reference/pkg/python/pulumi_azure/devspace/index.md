@@ -2,22 +2,22 @@
 <span id="devspace"></span><h1>devspace<a class="headerlink" href="#module-pulumi_azure.devspace" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.devspace.Controller">
-<em class="property">class </em><code class="descclassname">pulumi_azure.devspace.</code><code class="descname">Controller</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>host_suffix=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>target_container_host_credentials_base64=None</em>, <em>target_container_host_resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.devspace.</code><code class="descname">Controller</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>host_suffix=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>target_container_host_credentials_base64=None</em>, <em>target_container_host_resource_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.devspace.Controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a DevSpace Controller.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>host_suffix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The host suffix for the DevSpace Controller. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported location where the DevSpace Controller should exist. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the DevSpace Controller. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group under which the DevSpace Controller resource has to be created. Changing this forces a new resource to be created.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>sku</cite> block as documented below. Changing this forces a new resource to be created.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below. Changing this forces a new resource to be created.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
-<li><strong>target_container_host_credentials_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64 encoding of <cite>kube_config_raw</cite> of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</li>
+<li><strong>target_container_host_credentials_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64 encoding of <code class="docutils literal notranslate"><span class="pre">kube_config_raw</span></code> of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</li>
 <li><strong>target_container_host_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource id of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</li>
 </ul>
 </td>
@@ -57,7 +57,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.devspace.Controller.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devspace.Controller.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>sku</cite> block as documented below. Changing this forces a new resource to be created.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -69,7 +69,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.devspace.Controller.target_container_host_credentials_base64">
 <code class="descname">target_container_host_credentials_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.devspace.Controller.target_container_host_credentials_base64" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base64 encoding of <cite>kube_config_raw</cite> of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</p>
+<dd><p>Base64 encoding of <code class="docutils literal notranslate"><span class="pre">kube_config_raw</span></code> of Azure Kubernetes Service cluster. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">

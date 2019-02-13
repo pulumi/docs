@@ -372,14 +372,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>DEPRECATED - This group version of StatefulSet is deprecated by apps/v1/StatefulSet. See the
 release notes for more information. StatefulSet represents a set of pods with consistent
 identities. Identities are defined as:</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li>Network: A single stable DNS and hostname.</li>
-<li>Storage: As many VolumeClaims as requested.</li>
+<li>Storage: As many VolumeClaims as requested.
+The StatefulSet guarantees that a given network identity will always map to the same storage
+identity.</li>
 </ul>
-</div></blockquote>
-<p>The StatefulSet guarantees that a given network identity will always map to the same storage
-identity.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.apps.v1beta2.StatefulSet.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.apps.v1beta2.StatefulSet.translate_output_property" title="Permalink to this definition">¶</a></dt>

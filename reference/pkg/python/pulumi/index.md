@@ -321,9 +321,9 @@ of the program is a preview or not.</p>
 <em class="property">class </em><code class="descclassname">pulumi.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Config is a bag of related configuration state.  Each bag contains any number of configuration variables, indexed by
 simple keys, and each has a name that uniquely identifies it; two bags with different names do not share values for
-variables that otherwise share the same key.  For example, a bag whose name is <cite>pulumi:foo</cite>, with keys <cite>a</cite>, <cite>b</cite>,
-and <cite>c</cite>, is entirely separate from a bag whose name is <cite>pulumi:bar</cite> with the same simple key names.  Each key has a
-fully qualified names, such as <cite>pulumi:foo:a</cite>, …, and <cite>pulumi:bar:a</cite>, respectively.</p>
+variables that otherwise share the same key.  For example, a bag whose name is <code class="docutils literal notranslate"><span class="pre">pulumi:foo</span></code>, with keys <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">c</span></code>, is entirely separate from a bag whose name is <code class="docutils literal notranslate"><span class="pre">pulumi:bar</span></code> with the same simple key names.  Each key has a
+fully qualified names, such as <code class="docutils literal notranslate"><span class="pre">pulumi:foo:a</span></code>, …, and <code class="docutils literal notranslate"><span class="pre">pulumi:bar:a</span></code>, respectively.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -659,7 +659,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
-<p>‘func’ can return other Outputs.  This can be handy if you have a Output&lt;SomeVal&gt;
+<p>‘func’ can return other Outputs.  This can be handy if you have a Output<span class="raw-html-m2r"><SomeVal></span>
 and you want to get a transitive dependency of it.</p>
 <p>This function will be called during execution of a ‘pulumi update’ request.  It may not run
 during ‘pulumi preview’ (as the values of resources are of course may not be known then).</p>
@@ -703,7 +703,7 @@ given the type.</p>
 <em class="property">static </em><code class="descname">all</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[List[T]]<a class="headerlink" href="#pulumi.Output.all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an Output of Lists from a List of Inputs.</p>
 <p>This function can be used to combine multiple, separate Inputs into a single
-Output which can then be used as the target of <cite>apply</cite>. Resource dependencies
+Output which can then be used as the target of <code class="docutils literal notranslate"><span class="pre">apply</span></code>. Resource dependencies
 are preserved in the returned Output.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

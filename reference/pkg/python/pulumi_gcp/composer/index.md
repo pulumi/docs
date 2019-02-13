@@ -2,46 +2,42 @@
 <span id="composer"></span><h1>composer<a class="headerlink" href="#module-pulumi_gcp.composer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.composer.Environment">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.composer.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.Environment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.composer.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>config=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.Environment" title="Permalink to this definition">¶</a></dt>
 <dd><p>An environment for running orchestration tasks.</p>
 <p>Environments run Apache Airflow software on Google infrastructure.</p>
 <p>To get more information about Environments, see:</p>
 <ul class="simple">
-<li>[API documentation](<a class="reference external" href="https://cloud.google.com/composer/docs/reference/rest/">https://cloud.google.com/composer/docs/reference/rest/</a>)</li>
-<li><dl class="first docutils">
-<dt>How-to Guides</dt>
-<dd><ul class="first last">
-<li>[Official Documentation](<a class="reference external" href="https://cloud.google.com/composer/docs">https://cloud.google.com/composer/docs</a>)</li>
-<li>[Configuring Shared VPC for Composer Environments](<a class="reference external" href="https://cloud.google.com/composer/docs/how-to/managing/configuring-shared-vpc">https://cloud.google.com/composer/docs/how-to/managing/configuring-shared-vpc</a>)</li>
+<li><a class="reference external" href="https://cloud.google.com/composer/docs/reference/rest/">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/composer/docs">Official Documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/composer/docs/how-to/managing/configuring-shared-vpc">Configuring Shared VPC for Composer Environments</a></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li>[Apache Airflow Documentation](<a class="reference external" href="http://airflow.apache.org/">http://airflow.apache.org/</a>)</li>
+<li><a class="reference external" href="http://airflow.apache.org/">Apache Airflow Documentation</a></li>
 </ul>
-<dl class="docutils">
-<dt>&gt; <strong>Warning:</strong> We <strong>STRONGLY</strong> recommend  you read the [GCP guides](<a class="reference external" href="https://cloud.google.com/composer/docs/how-to">https://cloud.google.com/composer/docs/how-to</a>)</dt>
-<dd><p class="first">as the Environment resource requires a long deployment process and involves several layers of GCP infrastructure, 
-including a Kubernetes Engine cluster, Cloud Storage, and Compute networking resources. Due to limitations of the API,
-Terraform will not be able to automatically find or manage many of these underlying resources. In particular:
-* It can take up to one hour to create or update an environment resource. In addition, GCP may only detect some</p>
 <blockquote>
-<div>errors in configuration when they are used (e.g. ~40-50 minutes into the creation process), and is prone to limited
-error reporting. If you encounter confusing or uninformative errors, please verify your configuration is valid 
-against GCP Cloud Composer before filing bugs against the Terraform provider.</div></blockquote>
-<ul class="last simple">
-<li><strong>Environments create Google Cloud Storage buckets that do not get cleaned up automatically</strong> on environment 
-deletion. [More about Composer’s use of Cloud Storage](<a class="reference external" href="https://cloud.google.com/composer/docs/concepts/cloud-storage">https://cloud.google.com/composer/docs/concepts/cloud-storage</a>).</li>
-</ul>
-</dd>
+<div><dl class="docutils">
+<dt><strong>Warning:</strong> We <strong>STRONGLY</strong> recommend  you read the <a class="reference external" href="https://cloud.google.com/composer/docs/how-to">GCP guides</a></dt>
+<dd>as the Environment resource requires a long deployment process and involves several layers of GCP infrastructure, 
+including a Kubernetes Engine cluster, Cloud Storage, and Compute networking resources. Due to limitations of the API,
+Terraform will not be able to automatically find or manage many of these underlying resources. In particular:</dd>
 </dl>
+<ul class="simple">
+<li>It can take up to one hour to create or update an environment resource. In addition, GCP may only detect some 
+errors in configuration when they are used (e.g. ~40-50 minutes into the creation process), and is prone to limited
+error reporting. If you encounter confusing or uninformative errors, please verify your configuration is valid 
+against GCP Cloud Composer before filing bugs against the Terraform provider.</li>
+<li><strong>Environments create Google Cloud Storage buckets that do not get cleaned up automatically</strong> on environment 
+deletion. <a class="reference external" href="https://cloud.google.com/composer/docs/concepts/cloud-storage">More about Composer’s use of Cloud Storage</a>.</li>
+</ul>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>
