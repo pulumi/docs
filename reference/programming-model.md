@@ -55,15 +55,15 @@ In Pulumi, you can group multiple resources in a [component](#components). A com
 
 ## Programs {#programs}
 
-Pulumi programs are authored in general purpose programming languages such as [JavaScript](javascript.html) or [Python](python.html). You can use any packages supported by the languages package manager, as well as [Pulumi packages](pkg/). 
+Pulumi programs are authored in general purpose programming languages such as [JavaScript](javascript.html) or [Python](python.html). You can use any packages supported by the language's package manager, as well as [Pulumi packages](pkg/). 
 
 When `pulumi update` is run, your Pulumi program is run and the Pulumi CLI determines the desired state of application resources. A Pulumi program can reference artifacts that have already been published (such as S3 objects or pre-built Docker images) or it can define application resources itself so that everything is versioned together. For example, if your program uses `cloud.Service` with a `build` step, or defines a Lambda for an S3 trigger, you're defining application code that is implicitly deployed during the `pulumi update`.
 
 A Pulumi program is contained within a [project](project.html). In JavaScript, the `main` property of `package.json` defines the entry point for the Pulumi program. 
 
-## @pulumi/pulumi Package {#pulumipulumi}
+## Pulumi SDK {#pulumipulumi}
 
-The [@pulumi/pulumi] package is the core library for working with the Pulumi planning engine. This package defines the following:
+The [@pulumi/pulumi] package is the core library for working with the Pulumi engine. This package defines the following kinds of resources which can be deployed with Pulumi:
 - Resources ([pulumi.Resource])
 - External cloud platform resources ([pulumi.CustomResource])
 - Components defined entirely in JavaScript ([pulumi.ComponentResource])
@@ -75,7 +75,7 @@ This package also provides the following helpers:
 - [pulumi.log] for logging deployment information
 - [pulumi.runtime.serializeFunction] for turning JavaScript callbacks into data which can be [used as application code](#runtime).
 
-## Creating resources {#resources}
+## Resources {#resources}
 
 A resource is created with the following:
 
@@ -101,14 +101,26 @@ All resources have a [`name`](#names), which must be unique in the Pulumi progra
 
 The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typicaly be either raw values or [outputs from other resources](#outputs). 
 
-All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi. 
-- `dependsOn` - Optionally provide a list of explicit resource dependencies to add to the implicit dependencies from inputs to the resource.  Default is `[]`.
-- `protect` - Optionally mark a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  Default is false.
-- `parent` - Optional parent for the resource. See [Components](#components).  Default is to parent to the implicitly-created `Stack` resource that is root resource for all Pulumi stacks.
-- `provider` - Pptional provider for the resource. See [Providers](#providers).  Default is to use the ambient provider specified by Pulumi configuration.
-- `deleteBeforeReplace` - Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scare resources behind the scenes.  Default is `false`.
+### Resource options {#resourceoptions}
 
-## Resource names {#names}
+All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi. 
+
+###### `dependsOn`
+Optionally provides a list of explicit resource dependencies to add to the implicit dependencies from inputs to the resource.  Every resource referenced directly or indirectly by an `Output` passed in to the resource constructor will implicitly be included, so this is only needed when the dependency is on something that is not already an input to the resource.  The default is `[]`.
+
+###### `protect`
+Optionally marks a resource as protected. A protected resource cannot be deleted directly: first you must set `protect: false` and run `pulumi update`. Then, the resource can be deleted, either by removing the line of code or by running `pulumi destroy`.  The default is to inherit this value from the parent resource, and `false` for resources without a parent.
+
+###### `parent`
+Optional parent for the resource. See [Components](#components).  The default is to parent to the implicitly-created `Stack` resource that is a root resource for all Pulumi stacks.
+
+###### `provider`
+Optional provider for the resource. See [Providers](#providers).  The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
+
+###### `deleteBeforeReplace`
+Optionally specify that replacements of the resource will delete the existing resource before creating it's replacement.  This will lead to downtime during the replacement, but may be necessary for some resources that manage scarce resources behind the scenes.  The default is `false`.
+
+### Resource names {#names}
 
 Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in two ways:
 1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
@@ -139,9 +151,9 @@ This random postfix is added by default for two reasons.  First, it ensures that
 
 In cases where the two proprties above are not required, and where it would be useful to be able to precisely specify the name, it is typically possible to provide a `name: ` argument to the resource inputs to specify an explicit cloud-provider name.  For resources that may need to be replaced, this will often require also specifying `deleteBeforeReplace: true` in the resources's `ResourceOptions`.
 
-## Resource outputs {#outputs}
+## Outputs {#outputs}
 
-Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
+Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, they are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
 1. An eventually available value of the output
 2. The dependency on the source(s) of the output value
 
@@ -175,7 +187,7 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 })
 ```
 
-The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
+The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
 > Note: The `Output` itself cannot be used directly in string concatenation or other operations, as it is not itself the value of the output.  To transform the value of the output (when it becomes available), the `apply` method should be used instead.
 
@@ -325,7 +337,7 @@ const url2: Output<string> = pulumi.interpolate `http://${hostname}:${port}/`;
 
 ## Stack output {#stack-outputs}
 
-A [stack output](stack.html#outputs) is a value that can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
+A [stack output](stack.html#outputs) is a value exported from a stack. A stack's outputs can be easily retrieved from the Pulumi CLI and is displayed on pulumi.com. To export values from a stack, use the following definition in the top-level of the entry point for your project:
 
 {% include langchoose.html %}
 
@@ -394,7 +406,7 @@ $ pulumi stack output --json
 }
 ```
 
-## Using configuration values {#config}
+## Config {#config}
 
 To access configuration values that have been set with `pulumi config set`, use the following:
 
@@ -426,7 +438,7 @@ fmt.Printf("Hello, %s!", name);
 
 Config values can be retrieved using [config.get] or [config.require].  Using `get` will return `undefined` if the configuration value was not provided, and `require` will raise an exception with a helpful error message to prevent the deployment from continuing.
 
-Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumer] will convert the string value to a number and return a `Number`value instead of a string.  It will raise an exception if the value cannot be parsed as a number. 
+Configuration values are always stored as strings, but can be parsed as richly typed values.  For example, [config.getNumber] will convert the string value to a number and return a `Number` value instead of a string.  It will raise an exception if the value cannot be parsed as a number. 
 
 For richer structured data, the [config.getObject] method can be used to parse JSON values.  For example, following `pulumi config set data '{"active": true, "nums": [1,2,3]}'`, a program can read the `data` config into a rich object with:
 
@@ -463,7 +475,7 @@ console.log(`Active: ${data.active}`);
 
 ## Components {#components}
 
-A Pulumi **component** is a logical group of resources which contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program. 
+A Pulumi **component** is a logical group of resources that contains other components and physical cloud resources. A Pulumi stack is itself a component that contains all top-level components and resources in a program. 
 
 To create a new component, either in a top-level program or in a library, create a subclass of [pulumi.ComponentResource]. Components provide a way to create reusable abstractions made up of other resources.
 

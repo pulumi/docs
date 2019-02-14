@@ -80,7 +80,7 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## View stack outputs {#outputs}
 
-When you use module exports in your Pulumi program, they become stack outputs. Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
+When you use top-level exports in your Pulumi [program](/reference/programming-model.html#programs), they become [stack outputs](/reference/programming-model.html#stack-outputs). Stack outputs can be viewed via `pulumi stack output` and are shown on the stack information page on pulumi.com.
 
 **JavaScript code**
 ```js
