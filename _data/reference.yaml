@@ -135,20 +135,20 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/docker/index.html
       - title: eks
         path: /reference/pkg/nodejs/@pulumi/eks/index.html
+      - title: f5bigip
+        path: /reference/pkg/nodejs/@pulumi/f5bigip/index.html
       - title: gcp
         path: /reference/pkg/nodejs/@pulumi/gcp/index.html
       - title: kubernetes
         path: /reference/pkg/nodejs/@pulumi/kubernetes/index.html
       - title: openstack
         path: /reference/pkg/nodejs/@pulumi/openstack/index.html
+      - title: packet
+        path: /reference/pkg/nodejs/@pulumi/packet/index.html
       - title: random
         path: /reference/pkg/nodejs/@pulumi/random/index.html
       - title: vsphere
         path: /reference/pkg/nodejs/@pulumi/vsphere/index.html
-      - title: f5bigip
-        path: /reference/pkg/nodejs/@pulumi/f5bigip/index.html
-      - title: packet
-        path: /reference/pkg/nodejs/@pulumi/packet/index.html
     - title: Python
       path: /reference/pkg/python/index
       sidenav_disable_prefix_selection: true
@@ -159,20 +159,20 @@ toc:
         path: /reference/pkg/python/pulumi_aws/index.html
       - title: pulumi_azure
         path: /reference/pkg/python/pulumi_azure/index.html
+      - title: pulumi_f5bigip
+        path: /reference/pkg/python/pulumi_f5bigip/index.html 
       - title: pulumi_gcp
         path: /reference/pkg/python/pulumi_gcp/index.html
       - title: pulumi_kubernetes
         path: /reference/pkg/python/pulumi_kubernetes/index.html
-      - title: pulumi_random
-        path: /reference/pkg/python/pulumi_random/index.html 
       - title: pulumi_openstack
         path: /reference/pkg/python/pulumi_openstack/index.html 
-      # - title: pulumi_vsphere
-      #   path: /reference/pkg/python/pulumi_vsphere/index.html 
-      - title: pulumi_f5bigip
-        path: /reference/pkg/python/pulumi_f5bigip/index.html 
       # - title: pulumi_packet
       #   path: /reference/pkg/python/pulumi_packet/index.html 
+      - title: pulumi_random
+        path: /reference/pkg/python/pulumi_random/index.html 
+      # - title: pulumi_vsphere
+      #   path: /reference/pkg/python/pulumi_vsphere/index.html 
 - title: FAQ
   path: /reference/faq
   toplevel: true

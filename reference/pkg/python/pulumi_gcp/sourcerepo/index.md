@@ -2,17 +2,17 @@
 <span id="sourcerepo"></span><h1>sourcerepo<a class="headerlink" href="#module-pulumi_gcp.sourcerepo" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.sourcerepo.Repository">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.sourcerepo.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sourcerepo.Repository" title="Permalink to this definition">¶</a></dt>
-<dd><p>For more information, see [the official
-documentation](<a class="reference external" href="https://cloud.google.com/source-repositories/">https://cloud.google.com/source-repositories/</a>) and
-[API](<a class="reference external" href="https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos">https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos</a>)</p>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.sourcerepo.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sourcerepo.Repository" title="Permalink to this definition">¶</a></dt>
+<dd><p>For more information, see <a class="reference external" href="https://cloud.google.com/source-repositories/">the official
+documentation</a> and
+<a class="reference external" href="https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos">API</a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the repository that will be created.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>

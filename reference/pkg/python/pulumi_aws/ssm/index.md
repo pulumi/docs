@@ -2,17 +2,17 @@
 <span id="ssm"></span><h1>ssm<a class="headerlink" href="#module-pulumi_aws.ssm" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ssm.Activation">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Activation</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>expiration_date=None</em>, <em>iam_role=None</em>, <em>name=None</em>, <em>registration_limit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Activation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Activation</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>expiration_date=None</em>, <em>iam_role=None</em>, <em>name=None</em>, <em>registration_limit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Activation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the resource that you want to register.</li>
-<li><strong>expiration_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A timestamp in [RFC3339 format](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) by which this activation request should expire. The default value is 24 hours from resource creation time.</li>
+<li><strong>expiration_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.</li>
 <li><strong>iam_role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM Role to attach to the managed instance.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default name of the registered managed instance.</li>
 <li><strong>registration_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of managed instances you want to register. The default value is 1 instance.</li>
@@ -36,7 +36,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Activation.expiration_date">
 <code class="descname">expiration_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Activation.expiration_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>A timestamp in [RFC3339 format](<a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">https://tools.ietf.org/html/rfc3339#section-5.8</a>) by which this activation request should expire. The default value is 24 hours from resource creation time.</p>
+<dd><p>A timestamp in <a class="reference external" href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> by which this activation request should expire. The default value is 24 hours from resource creation time.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -111,18 +111,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Association">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Association</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>association_name=None</em>, <em>document_version=None</em>, <em>instance_id=None</em>, <em>name=None</em>, <em>output_location=None</em>, <em>parameters=None</em>, <em>schedule_expression=None</em>, <em>targets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Association</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>association_name=None</em>, <em>document_version=None</em>, <em>instance_id=None</em>, <em>name=None</em>, <em>output_location=None</em>, <em>parameters=None</em>, <em>schedule_expression=None</em>, <em>targets=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Association" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associates an SSM Document to an instance or EC2 tag.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>association_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the association.</li>
 <li><strong>document_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The document version you want to associate with the target(s). Can be a specific version or the default version.</li>
-<li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID to apply an SSM document to. Use <cite>targets</cite> with key <cite>InstanceIds</cite> for document schema versions 2.0 and above.</li>
+<li><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSM document to apply.</li>
 <li><strong>output_location</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An output location block. Output Location is documented below.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of arbitrary string parameters to pass to the SSM document.</li>
@@ -148,7 +148,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Association.instance_id">
 <code class="descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Association.instance_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The instance ID to apply an SSM document to. Use <cite>targets</cite> with key <cite>InstanceIds</cite> for document schema versions 2.0 and above.</p>
+<dd><p>The instance ID to apply an SSM document to. Use <code class="docutils literal notranslate"><span class="pre">targets</span></code> with key <code class="docutils literal notranslate"><span class="pre">InstanceIds</span></code> for document schema versions 2.0 and above.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -223,21 +223,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Document">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Document</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>content=None</em>, <em>document_format=None</em>, <em>document_type=None</em>, <em>name=None</em>, <em>permissions=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Document</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>content=None</em>, <em>document_format=None</em>, <em>document_type=None</em>, <em>name=None</em>, <em>permissions=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Document resource</p>
-<p>&gt; <strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
+<blockquote>
+<div><strong>NOTE on updating SSM documents:</strong> Only documents with a schema version of 2.0
 or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
-schema version you must recreate the resource.</p>
+schema version you must recreate the resource.</div></blockquote>
+<p>The permissions attribute specifies how you want to share the document. If you share a document privately,
+you must specify the AWS user account IDs for those people who can use the document. If you share a document
+publicly, you must specify All as the account ID.</p>
+<p>The permissions mapping supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code> - The permission type for the document. The permission type can be <code class="docutils literal notranslate"><span class="pre">Share</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">account_ids</span></code> - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON or YAML content of the document.</li>
-<li><strong>document_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the document. Valid document types include: <cite>JSON</cite> and <cite>YAML</cite></li>
-<li><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <cite>Command</cite>, <cite>Policy</cite>, <cite>Automation</cite> and <cite>Session</cite></li>
+<li><strong>document_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The format of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">JSON</span></code> and <code class="docutils literal notranslate"><span class="pre">YAML</span></code></li>
+<li><strong>document_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code></li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the document.</li>
 <li><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Additional Permissions to attach to the document. See Permissions below for details.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
@@ -273,13 +282,13 @@ schema version you must recreate the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Document.document_format">
 <code class="descname">document_format</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.document_format" title="Permalink to this definition">¶</a></dt>
-<dd><p>The format of the document. Valid document types include: <cite>JSON</cite> and <cite>YAML</cite></p>
+<dd><p>The format of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">JSON</span></code> and <code class="docutils literal notranslate"><span class="pre">YAML</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Document.document_type">
 <code class="descname">document_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Document.document_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the document. Valid document types include: <cite>Command</cite>, <cite>Policy</cite>, <cite>Automation</cite> and <cite>Session</cite></p>
+<dd><p>The type of the document. Valid document types include: <code class="docutils literal notranslate"><span class="pre">Command</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Automation</span></code> and <code class="docutils literal notranslate"><span class="pre">Session</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -432,24 +441,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.MaintenanceWindow">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindow</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_unassociated_targets=None</em>, <em>cutoff=None</em>, <em>duration=None</em>, <em>enabled=None</em>, <em>end_date=None</em>, <em>name=None</em>, <em>schedule=None</em>, <em>schedule_timezone=None</em>, <em>start_date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindow</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_unassociated_targets=None</em>, <em>cutoff=None</em>, <em>duration=None</em>, <em>enabled=None</em>, <em>end_date=None</em>, <em>name=None</em>, <em>schedule=None</em>, <em>schedule_timezone=None</em>, <em>start_date=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_unassociated_targets</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.</li>
 <li><strong>cutoff</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.</li>
 <li><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The duration of the Maintenance Window in hours.</li>
-<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the maintenance window is enabled. Default: <cite>true</cite>.</li>
-<li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Timestamp in [ISO-8601 extended format](<a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</a>) when to no longer run the maintenance window.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the maintenance window is enabled. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to no longer run the maintenance window.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the maintenance window.</li>
-<li><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schedule of the Maintenance Window in the form of a [cron](<a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html</a>) or rate expression.</li>
-<li><strong>schedule_timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](<a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>). For example: <cite>America/Los_Angeles</cite>, <cite>etc/UTC</cite>, or <cite>Asia/Seoul</cite>.</li>
-<li><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Timestamp in [ISO-8601 extended format](<a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</a>) when to begin the maintenance window.</li>
+<li><strong>schedule</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schedule of the Maintenance Window in the form of a <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html">cron</a> or rate expression.</li>
+<li><strong>schedule_timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Timezone for schedule in <a class="reference external" href="https://www.iana.org/time-zones">Internet Assigned Numbers Authority (IANA) Time Zone Database format</a>. For example: <code class="docutils literal notranslate"><span class="pre">America/Los_Angeles</span></code>, <code class="docutils literal notranslate"><span class="pre">etc/UTC</span></code>, or <code class="docutils literal notranslate"><span class="pre">Asia/Seoul</span></code>.</li>
+<li><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to begin the maintenance window.</p>
+</li>
 </ul>
 </td>
 </tr>
@@ -476,13 +486,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.enabled">
 <code class="descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether the maintenance window is enabled. Default: <cite>true</cite>.</p>
+<dd><p>Whether the maintenance window is enabled. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.end_date">
 <code class="descname">end_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.end_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>Timestamp in [ISO-8601 extended format](<a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</a>) when to no longer run the maintenance window.</p>
+<dd><p>Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to no longer run the maintenance window.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -494,19 +504,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.schedule">
 <code class="descname">schedule</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.schedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>The schedule of the Maintenance Window in the form of a [cron](<a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html</a>) or rate expression.</p>
+<dd><p>The schedule of the Maintenance Window in the form of a <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html">cron</a> or rate expression.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.schedule_timezone">
 <code class="descname">schedule_timezone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.schedule_timezone" title="Permalink to this definition">¶</a></dt>
-<dd><p>Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](<a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>). For example: <cite>America/Los_Angeles</cite>, <cite>etc/UTC</cite>, or <cite>Asia/Seoul</cite>.</p>
+<dd><p>Timezone for schedule in <a class="reference external" href="https://www.iana.org/time-zones">Internet Assigned Numbers Authority (IANA) Time Zone Database format</a>. For example: <code class="docutils literal notranslate"><span class="pre">America/Los_Angeles</span></code>, <code class="docutils literal notranslate"><span class="pre">etc/UTC</span></code>, or <code class="docutils literal notranslate"><span class="pre">Asia/Seoul</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindow.start_date">
 <code class="descname">start_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindow.start_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>Timestamp in [ISO-8601 extended format](<a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</a>) when to begin the maintenance window.</p>
+<dd><p>Timestamp in <a class="reference external" href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO-8601 extended format</a> when to begin the maintenance window.</p>
 </dd></dl>
 
 <dl class="method">
@@ -551,17 +561,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTarget</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>owner_information=None</em>, <em>resource_type=None</em>, <em>targets=None</em>, <em>window_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTarget</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>owner_information=None</em>, <em>resource_type=None</em>, <em>targets=None</em>, <em>window_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window Target resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>owner_information</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.</li>
-<li><strong>resource_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of target being registered with the Maintenance Window. Possible values <cite>INSTANCE</cite>.</li>
+<li><strong>resource_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of target being registered with the Maintenance Window. Possible values <code class="docutils literal notranslate"><span class="pre">INSTANCE</span></code>.</li>
 <li><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The targets (either instances or tags). Instances are specified using Key=instanceids,Values=instanceid1,instanceid2. Tags are specified using Key=tag name,Values=tag value.</li>
 <li><strong>window_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of the maintenance window to register the target with.</li>
 </ul>
@@ -578,7 +588,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTarget.resource_type">
 <code class="descname">resource_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTarget.resource_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of target being registered with the Maintenance Window. Possible values <cite>INSTANCE</cite>.</p>
+<dd><p>The type of target being registered with the Maintenance Window. Possible values <code class="docutils literal notranslate"><span class="pre">INSTANCE</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -635,15 +645,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTask</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>logging_info=None</em>, <em>max_concurrency=None</em>, <em>max_errors=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>service_role_arn=None</em>, <em>targets=None</em>, <em>task_arn=None</em>, <em>task_parameters=None</em>, <em>task_type=None</em>, <em>window_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">MaintenanceWindowTask</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>logging_info=None</em>, <em>max_concurrency=None</em>, <em>max_errors=None</em>, <em>name=None</em>, <em>priority=None</em>, <em>service_role_arn=None</em>, <em>targets=None</em>, <em>task_arn=None</em>, <em>task_parameters=None</em>, <em>task_type=None</em>, <em>window_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Maintenance Window Task resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the maintenance window task.</li>
 <li><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.</li>
 <li><strong>max_concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of targets this task can be run for in parallel.</li>
@@ -658,8 +668,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 :param pulumi.Input[str] service_role_arn: The role that should be assumed when executing the task.
 :param pulumi.Input[list] targets: The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 :param pulumi.Input[str] task_arn: The ARN of the task to execute.
-:param pulumi.Input[list] task_parameters: A structure containing information about parameters required by the particular <cite>task_arn</cite>. Documented below.
-:param pulumi.Input[str] task_type: The type of task being registered. The only allowed value is <cite>RUN_COMMAND</cite>.
+:param pulumi.Input[list] task_parameters: A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Documented below.
+:param pulumi.Input[str] task_type: The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.
 :param pulumi.Input[str] window_id: The Id of the maintenance window to register the task with.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.description">
@@ -712,13 +722,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.task_parameters">
 <code class="descname">task_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.task_parameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A structure containing information about parameters required by the particular <cite>task_arn</cite>. Documented below.</p>
+<dd><p>A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.task_type">
 <code class="descname">task_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.task_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of task being registered. The only allowed value is <cite>RUN_COMMAND</cite>.</p>
+<dd><p>The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -769,23 +779,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.Parameter">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Parameter</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allowed_pattern=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>key_id=None</em>, <em>name=None</em>, <em>overwrite=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Parameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">Parameter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_pattern=None</em>, <em>arn=None</em>, <em>description=None</em>, <em>key_id=None</em>, <em>name=None</em>, <em>overwrite=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.Parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Parameter resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allowed_pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A regular expression used to validate the parameter value.</li>
 <li><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the parameter.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the parameter.</li>
 <li><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The KMS key id or arn for encrypting a SecureString.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter.</li>
-<li><strong>overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Overwrite an existing parameter. If not specified, will default to <cite>false</cite> if the resource has not been created by terraform to avoid overwrite of existing resource and will default to <cite>true</cite> otherwise (terraform lifecycle rules should then be used to manage the update behavior).</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter. If the name contains a path (e.g. any forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)), it must be fully qualified with a leading forward slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). For additional requirements and constraints, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html">AWS SSM User Guide</a>.</li>
+<li><strong>overwrite</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Overwrite an existing parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">false</span></code> if the resource has not been created by terraform to avoid overwrite of existing resource and will default to <code class="docutils literal notranslate"><span class="pre">true</span></code> otherwise (terraform lifecycle rules should then be used to manage the update behavior).</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
-<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the parameter. Valid types are <cite>String</cite>, <cite>StringList</cite> and <cite>SecureString</cite>.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the parameter. Valid types are <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">StringList</span></code> and <code class="docutils literal notranslate"><span class="pre">SecureString</span></code>.</li>
 <li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the parameter.</li>
 </ul>
 </td>
@@ -819,13 +829,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Parameter.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the parameter.</p>
+<dd><p>The name of the parameter. If the name contains a path (e.g. any forward slashes (<code class="docutils literal notranslate"><span class="pre">/</span></code>)), it must be fully qualified with a leading forward slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). For additional requirements and constraints, see the <a class="reference external" href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html">AWS SSM User Guide</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Parameter.overwrite">
 <code class="descname">overwrite</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.overwrite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overwrite an existing parameter. If not specified, will default to <cite>false</cite> if the resource has not been created by terraform to avoid overwrite of existing resource and will default to <cite>true</cite> otherwise (terraform lifecycle rules should then be used to manage the update behavior).</p>
+<dd><p>Overwrite an existing parameter. If not specified, will default to <code class="docutils literal notranslate"><span class="pre">false</span></code> if the resource has not been created by terraform to avoid overwrite of existing resource and will default to <code class="docutils literal notranslate"><span class="pre">true</span></code> otherwise (terraform lifecycle rules should then be used to manage the update behavior).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -837,7 +847,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.Parameter.type">
 <code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.Parameter.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of the parameter. Valid types are <cite>String</cite>, <cite>StringList</cite> and <cite>SecureString</cite>.</p>
+<dd><p>The type of the parameter. Valid types are <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">StringList</span></code> and <code class="docutils literal notranslate"><span class="pre">SecureString</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -888,25 +898,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.PatchBaseline">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">PatchBaseline</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>approval_rules=None</em>, <em>approved_patches=None</em>, <em>approved_patches_compliance_level=None</em>, <em>description=None</em>, <em>global_filters=None</em>, <em>name=None</em>, <em>operating_system=None</em>, <em>rejected_patches=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">PatchBaseline</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>approval_rules=None</em>, <em>approved_patches=None</em>, <em>approved_patches_compliance_level=None</em>, <em>description=None</em>, <em>global_filters=None</em>, <em>name=None</em>, <em>operating_system=None</em>, <em>rejected_patches=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Patch Baseline resource</p>
-<p>&gt; <strong>NOTE on Patch Baselines:</strong> The <cite>approved_patches</cite> and <cite>approval_rule</cite> are 
+<blockquote>
+<div><strong>NOTE on Patch Baselines:</strong> The <code class="docutils literal notranslate"><span class="pre">approved_patches</span></code> and <code class="docutils literal notranslate"><span class="pre">approval_rule</span></code> are 
 both marked as optional fields, but the Patch Baseline requires that at least one
-of them is specified.</p>
+of them is specified.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>approval_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.</li>
 <li><strong>approved_patches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of explicitly approved patches for the baseline.</li>
-<li><strong>approved_patches_compliance_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <cite>CRITICAL</cite>, <cite>HIGH</cite>, <cite>MEDIUM</cite>, <cite>LOW</cite>, <cite>INFORMATIONAL</cite>, <cite>UNSPECIFIED</cite>. The default value is <cite>UNSPECIFIED</cite>.</li>
+<li><strong>approved_patches_compliance_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">INFORMATIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the patch baseline.</li>
-<li><strong>global_filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <cite>PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID</cite>.</li>
+<li><strong>global_filters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the patch baseline.</li>
-<li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the operating system the patch baseline applies to. Supported operating systems include <cite>WINDOWS</cite>, <cite>AMAZON_LINUX</cite>, <cite>AMAZON_LINUX_2</cite>, <cite>SUSE</cite>, <cite>UBUNTU</cite>, <cite>CENTOS</cite>, and <cite>REDHAT_ENTERPRISE_LINUX</cite>. The Default value is <cite>WINDOWS</cite>.</li>
+<li><strong>operating_system</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the operating system the patch baseline applies to. Supported operating systems include <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX_2</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">UBUNTU</span></code>, <code class="docutils literal notranslate"><span class="pre">CENTOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">REDHAT_ENTERPRISE_LINUX</span></code>. The Default value is <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>.</li>
 <li><strong>rejected_patches</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of rejected patches.</li>
 </ul>
 </td>
@@ -928,7 +939,7 @@ of them is specified.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.PatchBaseline.approved_patches_compliance_level">
 <code class="descname">approved_patches_compliance_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.approved_patches_compliance_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <cite>CRITICAL</cite>, <cite>HIGH</cite>, <cite>MEDIUM</cite>, <cite>LOW</cite>, <cite>INFORMATIONAL</cite>, <cite>UNSPECIFIED</cite>. The default value is <cite>UNSPECIFIED</cite>.</p>
+<dd><p>Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code>, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code>, <code class="docutils literal notranslate"><span class="pre">INFORMATIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">UNSPECIFIED</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -940,7 +951,7 @@ of them is specified.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.PatchBaseline.global_filters">
 <code class="descname">global_filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.global_filters" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <cite>PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID</cite>.</p>
+<dd><p>A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are <code class="docutils literal notranslate"><span class="pre">PRODUCT</span> <span class="pre">|</span> <span class="pre">CLASSIFICATION</span> <span class="pre">|</span> <span class="pre">MSRC_SEVERITY</span> <span class="pre">|</span> <span class="pre">PATCH_ID</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -952,7 +963,7 @@ of them is specified.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.PatchBaseline.operating_system">
 <code class="descname">operating_system</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.PatchBaseline.operating_system" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the operating system the patch baseline applies to. Supported operating systems include <cite>WINDOWS</cite>, <cite>AMAZON_LINUX</cite>, <cite>AMAZON_LINUX_2</cite>, <cite>SUSE</cite>, <cite>UBUNTU</cite>, <cite>CENTOS</cite>, and <cite>REDHAT_ENTERPRISE_LINUX</cite>. The Default value is <cite>WINDOWS</cite>.</p>
+<dd><p>Defines the operating system the patch baseline applies to. Supported operating systems include <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX</span></code>, <code class="docutils literal notranslate"><span class="pre">AMAZON_LINUX_2</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code>, <code class="docutils literal notranslate"><span class="pre">UBUNTU</span></code>, <code class="docutils literal notranslate"><span class="pre">CENTOS</span></code>, and <code class="docutils literal notranslate"><span class="pre">REDHAT_ENTERPRISE_LINUX</span></code>. The Default value is <code class="docutils literal notranslate"><span class="pre">WINDOWS</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1003,15 +1014,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.PatchGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">PatchGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>baseline_id=None</em>, <em>patch_group=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">PatchGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>baseline_id=None</em>, <em>patch_group=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.PatchGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Patch Group resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>baseline_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the patch baseline to register the patch group with.</li>
 <li><strong>patch_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the patch group that should be registered with the patch baseline.</li>
 </ul>
@@ -1073,15 +1084,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ssm.ResourceDataSync">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">ResourceDataSync</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>s3_destination=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ssm.</code><code class="descname">ResourceDataSync</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>s3_destination=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.ResourceDataSync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a SSM resource data sync.</p>
+<p><code class="docutils literal notranslate"><span class="pre">s3_destination</span></code> supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">bucket_name</span></code> - (Required) Name of S3 bucket where the aggregated data is stored.</li>
+<li><code class="docutils literal notranslate"><span class="pre">region</span></code> - (Required) Region with the bucket targeted by the Resource Data Sync.</li>
+<li><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> - (Optional) ARN of an encryption key for a destination in Amazon S3.</li>
+<li><code class="docutils literal notranslate"><span class="pre">prefix</span></code> - (Optional) Prefix for the bucket.</li>
+<li><code class="docutils literal notranslate"><span class="pre">sync_format</span></code> - (Optional) A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the configuration.</li>
 <li><strong>s3_destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Amazon S3 configuration details for the sync.</li>
 </ul>

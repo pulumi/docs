@@ -68,27 +68,28 @@ the image or image</p>
 <dt id="pulumi_openstack.images.Image">
 <em class="property">class </em><code class="descclassname">pulumi_openstack.images.</code><code class="descname">Image</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>container_format=None</em>, <em>disk_format=None</em>, <em>image_cache_path=None</em>, <em>image_source_url=None</em>, <em>local_file_path=None</em>, <em>min_disk_gb=None</em>, <em>min_ram_mb=None</em>, <em>name=None</em>, <em>properties=None</em>, <em>protected=None</em>, <em>region=None</em>, <em>tags=None</em>, <em>verify_checksum=None</em>, <em>visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 Image resource within OpenStack Glance.</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] container_format: The container format. Must be one of</p>
+<blockquote>
+<div>“ami”, “ari”, “aki”, “bare”, “ovf”.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>container_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container format. Must be one of
-“ami”, “ari”, “aki”, “bare”, “ovf”.</li>
 <li><strong>disk_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The disk format. Must be one of
 “ami”, “ari”, “aki”, “vhd”, “vmdk”, “raw”, “qcow2”, “vdi”, “iso”.</li>
 <li><strong>image_cache_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the directory where the images will
 be downloaded. Images will be stored with a filename corresponding to
 the url’s md5 hash. Defaults to “$HOME/.terraform/image_cache”</li>
 <li><strong>image_source_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the url of the raw image that will
-be downloaded in the <cite>image_cache_path</cite> before being uploaded to Glance.
-Glance is able to download image from internet but the <cite>gophercloud</cite> library
+be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
+Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
 does not yet provide a way to do so.
-Conflicts with <cite>local_file_path</cite>.</li>
+Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</li>
 <li><strong>local_file_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with <cite>image_source_url</cite>.</li>
+that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</li>
 <li><strong>min_disk_gb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of disk space (in GB) required to boot image.
 Defaults to 0.</li>
 <li><strong>min_ram_mb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of ram (in MB) required to boot image.
@@ -101,7 +102,7 @@ information about properties.</li>
 Defaults to false.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 Glance client.
 A Glance client is needed to create an Image that can be used with
-a compute instance. If omitted, the <cite>region</cite> argument of the provider
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
 is used. Changing this creates a new Image.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.</li>
@@ -161,17 +162,17 @@ the url’s md5 hash. Defaults to “$HOME/.terraform/image_cache”</p>
 <dt id="pulumi_openstack.images.Image.image_source_url">
 <code class="descname">image_source_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.image_source_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the url of the raw image that will
-be downloaded in the <cite>image_cache_path</cite> before being uploaded to Glance.
-Glance is able to download image from internet but the <cite>gophercloud</cite> library
+be downloaded in the <code class="docutils literal notranslate"><span class="pre">image_cache_path</span></code> before being uploaded to Glance.
+Glance is able to download image from internet but the <code class="docutils literal notranslate"><span class="pre">gophercloud</span></code> library
 does not yet provide a way to do so.
-Conflicts with <cite>local_file_path</cite>.</p>
+Conflicts with <code class="docutils literal notranslate"><span class="pre">local_file_path</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.images.Image.local_file_path">
 <code class="descname">local_file_path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.local_file_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is the filepath of the raw image file
-that will be uploaded to Glance. Conflicts with <cite>image_source_url</cite>.</p>
+that will be uploaded to Glance. Conflicts with <code class="docutils literal notranslate"><span class="pre">image_source_url</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -228,7 +229,7 @@ Defaults to false.</p>
 <code class="descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.images.Image.region" title="Permalink to this definition">¶</a></dt>
 <dd><p>The region in which to obtain the V2 Glance client.
 A Glance client is needed to create an Image that can be used with
-a compute instance. If omitted, the <cite>region</cite> argument of the provider
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
 is used. Changing this creates a new Image.</p>
 </dd></dl>
 

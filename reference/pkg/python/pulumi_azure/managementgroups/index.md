@@ -32,16 +32,16 @@
 
 <dl class="class">
 <dt id="pulumi_azure.managementgroups.ManagementGroup">
-<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">ManagementGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">ManagementGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>display_name=None</em>, <em>group_id=None</em>, <em>parent_management_group_id=None</em>, <em>subscription_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Group.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for this Management Group. If not specified, this’ll be the same as the <cite>group_id</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for this Management Group. If not specified, this’ll be the same as the <code class="docutils literal notranslate"><span class="pre">group_id</span></code>.</li>
 <li><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.</li>
 <li><strong>parent_management_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Parent Management Group. Changing this forces a new resource to be created.</li>
 <li><strong>subscription_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Subscription ID’s which should be assigned to the Management Group.</li>
@@ -53,7 +53,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.managementgroups.ManagementGroup.display_name">
 <code class="descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementgroups.ManagementGroup.display_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A friendly name for this Management Group. If not specified, this’ll be the same as the <cite>group_id</cite>.</p>
+<dd><p>A friendly name for this Management Group. If not specified, this’ll be the same as the <code class="docutils literal notranslate"><span class="pre">group_id</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">

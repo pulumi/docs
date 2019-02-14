@@ -13,7 +13,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.GetJobCollectionResult.quotas">
 <code class="descname">quotas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.GetJobCollectionResult.quotas" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Job collection quotas as documented in the <cite>quota</cite> block below.</p>
+<dd><p>The Job collection quotas as documented in the <code class="docutils literal notranslate"><span class="pre">quota</span></code> block below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -44,27 +44,28 @@
 
 <dl class="class">
 <dt id="pulumi_azure.scheduler.Job">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">Job</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>action_storage_queue=None</em>, <em>action_web=None</em>, <em>error_action_storage_queue=None</em>, <em>error_action_web=None</em>, <em>job_collection_name=None</em>, <em>name=None</em>, <em>recurrence=None</em>, <em>resource_group_name=None</em>, <em>retry=None</em>, <em>start_time=None</em>, <em>state=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Scheduler Job.</p>
-<p>&gt; <strong>NOTE:</strong> Support for Scheduler Job has been deprecated by Microsoft in favour of Logic Apps ([more information can be found at this link](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps</a>)) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Support for Scheduler Job has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>action_storage_queue</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>action_storage_queue</cite> block defining a storage queue job action as described below. Note this is identical to an <cite>error_action_storage_queue</cite> block.</li>
-<li><strong>action_web</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>action_web</cite> block defining the job action as described below. Note this is identical to an <cite>error_action_web</cite> block.</li>
-<li><strong>error_action_storage_queue</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>error_action_storage_queue</cite> block defining the a web action to take on an error as described below. Note this is identical to an <cite>action_storage_queue</cite> block.</li>
-<li><strong>error_action_web</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>error_action_web</cite> block defining the action to take on an error as described below. Note this is identical to an <cite>action_web</cite> block.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>action_storage_queue</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">action_storage_queue</span></code> block defining a storage queue job action as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">error_action_storage_queue</span></code> block.</li>
+<li><strong>action_web</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">action_web</span></code> block defining the job action as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">error_action_web</span></code> block.</li>
+<li><strong>error_action_storage_queue</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">error_action_storage_queue</span></code> block defining the a web action to take on an error as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">action_storage_queue</span></code> block.</li>
+<li><strong>error_action_web</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">error_action_web</span></code> block defining the action to take on an error as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">action_web</span></code> block.</li>
 <li><strong>job_collection_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Scheduler Job Collection in which the Job should exist. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Scheduler Job. Changing this forces a new resource to be created.</li>
-<li><strong>recurrence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>recurrence</cite> block defining a job occurrence schedule.</li>
+<li><strong>recurrence</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block defining a job occurrence schedule.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Scheduler Job. Changing this forces a new resource to be created.</li>
-<li><strong>retry</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>retry</cite> block defining how to retry as described below.</li>
+<li><strong>retry</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">retry</span></code> block defining how to retry as described below.</li>
 <li><strong>start_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The time the first instance of the job is to start running at.</li>
-<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sets or gets the current state of the job. Can be set to either <cite>Enabled</cite> or <cite>Completed</cite></li>
+<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The sets or gets the current state of the job. Can be set to either <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Completed</span></code></li>
 </ul>
 </td>
 </tr>
@@ -73,25 +74,25 @@
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.action_storage_queue">
 <code class="descname">action_storage_queue</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.action_storage_queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>action_storage_queue</cite> block defining a storage queue job action as described below. Note this is identical to an <cite>error_action_storage_queue</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">action_storage_queue</span></code> block defining a storage queue job action as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">error_action_storage_queue</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.action_web">
 <code class="descname">action_web</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.action_web" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>action_web</cite> block defining the job action as described below. Note this is identical to an <cite>error_action_web</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">action_web</span></code> block defining the job action as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">error_action_web</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.error_action_storage_queue">
 <code class="descname">error_action_storage_queue</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.error_action_storage_queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>error_action_storage_queue</cite> block defining the a web action to take on an error as described below. Note this is identical to an <cite>action_storage_queue</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">error_action_storage_queue</span></code> block defining the a web action to take on an error as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">action_storage_queue</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.error_action_web">
 <code class="descname">error_action_web</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.error_action_web" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>error_action_web</cite> block defining the action to take on an error as described below. Note this is identical to an <cite>action_web</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">error_action_web</span></code> block defining the action to take on an error as described below. Note this is identical to an <code class="docutils literal notranslate"><span class="pre">action_web</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -109,7 +110,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.recurrence">
 <code class="descname">recurrence</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.recurrence" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>recurrence</cite> block defining a job occurrence schedule.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block defining a job occurrence schedule.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -121,7 +122,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.retry">
 <code class="descname">retry</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.retry" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>retry</cite> block defining how to retry as described below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">retry</span></code> block defining how to retry as described below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -133,7 +134,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.Job.state">
 <code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.Job.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>The sets or gets the current state of the job. Can be set to either <cite>Enabled</cite> or <cite>Completed</cite></p>
+<dd><p>The sets or gets the current state of the job. Can be set to either <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Completed</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -178,22 +179,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.scheduler.JobCollection">
-<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">JobCollection</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">JobCollection</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>location=None</em>, <em>name=None</em>, <em>quota=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Scheduler Job Collection.</p>
-<p>&gt; <strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps ([more information can be found at this link](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps</a>)) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this resource as a part of version 2.0 of the AzureRM Provider.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Scheduler Job Collection. Changing this forces a new resource to be created.</li>
-<li><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures the Job collection quotas as documented in the <cite>quota</cite> block below.</li>
+<li><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configures the Job collection quotas as documented in the <code class="docutils literal notranslate"><span class="pre">quota</span></code> block below.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Scheduler Job Collection. Changing this forces a new resource to be created.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the Job Collection’s pricing level’s SKU. Possible values include: <cite>Standard</cite>, <cite>Free</cite>, <cite>P10Premium</cite>, <cite>P20Premium</cite>.</li>
-<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets Job Collection’s state. Possible values include: <cite>Enabled</cite>, <cite>Disabled</cite>, <cite>Suspended</cite>.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the Job Collection’s pricing level’s SKU. Possible values include: <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">P10Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">P20Premium</span></code>.</li>
+<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets Job Collection’s state. Possible values include: <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -215,7 +217,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.JobCollection.quota">
 <code class="descname">quota</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection.quota" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures the Job collection quotas as documented in the <cite>quota</cite> block below.</p>
+<dd><p>Configures the Job collection quotas as documented in the <code class="docutils literal notranslate"><span class="pre">quota</span></code> block below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -227,13 +229,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.JobCollection.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the Job Collection’s pricing level’s SKU. Possible values include: <cite>Standard</cite>, <cite>Free</cite>, <cite>P10Premium</cite>, <cite>P20Premium</cite>.</p>
+<dd><p>Sets the Job Collection’s pricing level’s SKU. Possible values include: <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Free</span></code>, <code class="docutils literal notranslate"><span class="pre">P10Premium</span></code>, <code class="docutils literal notranslate"><span class="pre">P20Premium</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.scheduler.JobCollection.state">
 <code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.scheduler.JobCollection.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets Job Collection’s state. Possible values include: <cite>Enabled</cite>, <cite>Disabled</cite>, <cite>Suspended</cite>.</p>
+<dd><p>Sets Job Collection’s state. Possible values include: <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>, <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -286,7 +288,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.scheduler.get_job_collection">
 <code class="descclassname">pulumi_azure.scheduler.</code><code class="descname">get_job_collection</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.scheduler.get_job_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Scheduler Job Collection.</p>
-<p>&gt; <strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps ([more information can be found at this link](<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps</a>)) - as such we plan to remove support for this data source as a part of version 2.0 of the AzureRM Provider.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Support for Scheduler Job Collections has been deprecated by Microsoft in favour of Logic Apps (<a class="reference external" href="https://docs.microsoft.com/en-us/azure/scheduler/migrate-from-scheduler-to-logic-apps">more information can be found at this link</a>) - as such we plan to remove support for this data source as a part of version 2.0 of the AzureRM Provider.</div></blockquote>
 </dd></dl>
 
 </div>

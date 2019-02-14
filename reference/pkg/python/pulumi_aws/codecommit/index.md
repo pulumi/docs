@@ -38,18 +38,19 @@
 
 <dl class="class">
 <dt id="pulumi_aws.codecommit.Repository">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Repository</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_branch=None</em>, <em>description=None</em>, <em>repository_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Repository Resource.</p>
-<p>&gt; <strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
+<blockquote>
+<div><strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
 in all regions - available regions are listed
-[the AWS Docs](<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region</a>).</p>
+<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_branch</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default branch of the repository. The branch specified here needs to exist.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the repository. This needs to be less than 1000 characters</li>
 <li><strong>repository_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the repository. This needs to be less than 100 characters.</li>
@@ -142,18 +143,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.codecommit.Trigger">
-<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>repository_name=None</em>, <em>triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.codecommit.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>repository_name=None</em>, <em>triggers=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeCommit Trigger Resource.</p>
-<p>&gt; <strong>NOTE on CodeCommit</strong>: The CodeCommit is not yet rolled out
+<blockquote>
+<div><strong>NOTE on CodeCommit</strong>: The CodeCommit is not yet rolled out
 in all regions - available regions are listed
-[the AWS Docs](<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region</a>).</p>
+<a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>repository_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the repository. This needs to be less than 100 characters.</li>
 </ul>
 </td>

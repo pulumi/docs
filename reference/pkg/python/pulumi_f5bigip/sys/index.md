@@ -4,19 +4,9 @@
 <dt id="pulumi_f5bigip.sys.BigIpLicense">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">BigIpLicense</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>command=None</em>, <em>registration_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.BigIpLicense" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a BigIpLicense resource with the given unique name, props, and options.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] command
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] command
 :param pulumi.Input[str] registration_key</p>
 <dl class="method">
 <dt id="pulumi_f5bigip.sys.BigIpLicense.translate_output_property">
@@ -61,20 +51,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.Dns">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">Dns</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name_servers=None</em>, <em>number_of_dots=None</em>, <em>searches=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Dns" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>bigip_ltm_dns</cite> Configures DNS server on F5 BIG-IP</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] description
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_ltm_dns</span></code> Configures DNS server on F5 BIG-IP</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description
 :param pulumi.Input[list] name_servers: Name or IP address of the DNS server
 :param pulumi.Input[int] number_of_dots: Configures the number of dots needed in a name before an initial absolute query will be made.
 :param pulumi.Input[list] searches: Specify what domains you want to search</p>
@@ -139,8 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.IApp">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">IApp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>devicegroup=None</em>, <em>execute_action=None</em>, <em>inherited_devicegroup=None</em>, <em>inherited_traffic_group=None</em>, <em>jsonfile=None</em>, <em>lists=None</em>, <em>metadatas=None</em>, <em>name=None</em>, <em>partition=None</em>, <em>strict_updates=None</em>, <em>tables=None</em>, <em>template=None</em>, <em>template_modified=None</em>, <em>template_prerequisite_errors=None</em>, <em>traffic_group=None</em>, <em>variables=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.IApp" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>bigip_sys_iapp</cite> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network. More information on iApp 2.0 is at <a class="reference external" href="https://devcentral.f5.com/wiki/iApp.AppSvcsiApp_userguide_userguide.ashx">https://devcentral.f5.com/wiki/iApp.AppSvcsiApp_userguide_userguide.ashx</a> This resource requires a iApp template already imported on BIG-IP, the template can be found at <a class="reference external" href="https://github.com/F5Networks/f5-application-services-integration-iApp/releases/download/v2.0.003/appsvcs_integration_v2.0.003.tmpl">https://github.com/F5Networks/f5-application-services-integration-iApp/releases/download/v2.0.003/appsvcs_integration_v2.0.003.tmpl</a></p>
-<p>## Example Usage of Json file</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_iapp</span></code> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network. More information on iApp 2.0 is at <a class="reference external" href="https://devcentral.f5.com/wiki/iApp.AppSvcsiApp_userguide_userguide.ashx">https://devcentral.f5.com/wiki/iApp.AppSvcsiApp_userguide_userguide.ashx</a> This resource requires a iApp template already imported on BIG-IP, the template can be found at <a class="reference external" href="https://github.com/F5Networks/f5-application-services-integration-iApp/releases/download/v2.0.003/appsvcs_integration_v2.0.003.tmpl">https://github.com/F5Networks/f5-application-services-integration-iApp/releases/download/v2.0.003/appsvcs_integration_v2.0.003.tmpl</a></p>
 <dl class="docutils">
 <dt>{</dt>
 <dd><dl class="first last docutils">
@@ -154,580 +133,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote class="last">
 <div><dl class="docutils">
 <dt>“tables”: [{</dt>
-<dd><blockquote class="first">
-<div><p>“name”: “feature__easyL4FirewallBlacklist”,
+<dd><p class="first">“name”: “feature__easyL4FirewallBlacklist”,
 “columnNames”: [</p>
 <blockquote>
 <div>“CIDRRange”</div></blockquote>
-<p>],
+<p class="last">],
 “rows”: [</p>
-<p>]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “feature__easyL4FirewallSourceList”,
-“columnNames”: [</p>
-<blockquote>
-<div>“CIDRRange”</div></blockquote>
-<p>],
-“rows”: [{</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>“row”: [</dt>
-<dd>“0.0.0.0/0”</dd>
-</dl>
-<p>]</p>
-</div></blockquote>
-<p>}]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “l7policy__rulesAction”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Group”,
-“Target”,
-“Parameter”</div></blockquote>
-<p>],
-“rows”: [</p>
-<blockquote>
-<div>{“row”: [“0”, “asm/request/enable/policy”, “/Common/Demo”]},
-{“row”: [“0”, “forward/request/select/pool”, “pool:0”]},
-{“row”: [“default”, “forward/request/select/pool”, “pool:0”]}</div></blockquote>
-<p>]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “l7policy__rulesMatch”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Group”,
-“Operand”,
-“Negate”,
-“Condition”,
-“Value”,
-“CaseSensitive”,
-“Missing”</div></blockquote>
-<p>],
-“rows”: [</p>
-<blockquote>
-<div>{“row”: [“0”,”http-uri/request/path”,”no”,”equals”,”/”,”no”,”no”]},
-{“row”: [“default”,”“,”no”,”equals”,”“,”no”,”no”]}</div></blockquote>
-<p>]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “monitor__Monitors”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Index”,
-“Name”,
-“Type”,
-“Options”</div></blockquote>
-<p>],
-“rows”: [{</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>“row”: [</dt>
-<dd>“0”,
-“/Common/http”,
-“none”,
-“none”</dd>
-</dl>
-<p>]</p>
-</div></blockquote>
-<p>}]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “pool__Members”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Index”,
-“IPAddress”,
-“Port”,
-“ConnectionLimit”,
-“Ratio”,
-“PriorityGroup”,
-“State”,
-“AdvOptions”</div></blockquote>
-<p>],
-“rows”: [</p>
-<blockquote>
-<div>{“row”: [“0”,”192.168.69.140”,”80”,”0”,”1”,”0”,”enabled”,”none”]},
-{“row”: [“0”,”192.168.69.141”,”80”,”0”,”1”,”0”,”enabled”,”none”]},
-{“row”: [“0”,”192.168.68.142”,”80”,”0”,”1”,”0”,”enabled”,”none”]},
-{“row”: [“0”,”192.168.68.143”,”80”,”0”,”1”,”0”,”enabled”,”none”]},
-{“row”: [“0”,”192.168.68.144”,”80”,”0”,”1”,”0”,”enabled”,”none”]}</div></blockquote>
-<p>]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “pool__Pools”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Index”,
-“Name”,
-“Description”,
-“LbMethod”,
-“Monitor”,
-“AdvOptions”</div></blockquote>
-<p>],
-“rows”: [{</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>“row”: [</dt>
-<dd>“0”,
-“”,
-“”,
-“round-robin”,
-“0”,
-“none”</dd>
-</dl>
-<p>]</p>
-</div></blockquote>
-<p>}]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “vs__BundledItems”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Resource”</div></blockquote>
-<p>],
-“rows”: [</p>
-<p>]</p>
-</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div><p>“name”: “vs__Listeners”,
-“columnNames”: [</p>
-<blockquote>
-<div>“Listener”,
-“Destination”</div></blockquote>
-<p>],
-“rows”: [</p>
-<p>]</p>
-</div></blockquote>
-<p class="last">}</p>
 </dd>
 </dl>
-<p>],
-“variables”: [{</p>
-<blockquote>
-<div><blockquote>
-<div>“name”: “extensions__Field1”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “extensions__Field2”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “extensions__Field3”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__easyL4Firewall”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__insertXForwardedFor”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__redirectToHTTPS”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__securityEnableHSTS”,
-“encrypted”: “no”,
-“value”: “disabled”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__sslEasyCipher”,
-“encrypted”: “no”,
-“value”: “disabled”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__statsHTTP”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “feature__statsTLS”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__apmDeployMode”,
-“encrypted”: “no”,
-“value”: “preserve-bypass”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__appStats”,
-“encrypted”: “no”,
-“value”: “enabled”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__asmDeployMode”,
-“encrypted”: “no”,
-“value”: “preserve-bypass”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__logLevel”,
-“encrypted”: “no”,
-“value”: “7”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__mode”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__routeDomain”,
-“encrypted”: “no”,
-“value”: “auto”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “iapp__strictUpdates”,
-“encrypted”: “no”,
-“value”: “enabled”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “l7policy__defaultASM”,
-“encrypted”: “no”,
-“value”: “bypass”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “l7policy__defaultL7DOS”,
-“encrypted”: “no”,
-“value”: “bypass”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “l7policy__strategy”,
-“encrypted”: “no”,
-“value”: “/Common/first-match”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “pool__DefaultPoolIndex”,
-“encrypted”: “no”,
-“value”: “0”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “pool__MemberDefaultPort”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “pool__addr”,
-“encrypted”: “no”,
-“value”: “10.168.68.100”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “pool__mask”,
-“encrypted”: “no”,
-“value”: “255.255.255.255”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “pool__port”,
-“encrypted”: “no”,
-“value”: “80”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__AdvOptions”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__AdvPolicies”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__AdvProfiles”,
-“value”: “/Common/websecurity”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ConnectionLimit”,
-“encrypted”: “no”,
-“value”: “0”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__Description”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__IpProtocol”,
-“encrypted”: “no”,
-“value”: “tcp”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__Irules”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__Name”,
-“encrypted”: “no”,
-“value”: “VS_80”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__OptionConnectionMirroring”,
-“encrypted”: “no”,
-“value”: “disabled”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__OptionSourcePort”,
-“encrypted”: “no”,
-“value”: “preserve”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileAccess”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileAnalytics”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientProtocol”,
-“encrypted”: “no”,
-“value”: “/Common/tcp”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientSSL”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientSSLAdvOptions”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientSSLCert”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientSSLChain”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientSSLCipherString”,
-“encrypted”: “no”,
-“value”: “DEFAULT”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileClientSSLKey”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileCompression”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileConnectivity”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileDefaultPersist”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileFallbackPersist”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileHTTP”,
-“value”: “/Common/http”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileOneConnect”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfilePerRequest”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileRequestLogging”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileSecurityDoS”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileSecurityIPBlacklist”,
-“encrypted”: “no”,
-“value”: “none”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileSecurityLogProfiles”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileServerProtocol”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__ProfileServerSSL”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__RouteAdv”,
-“encrypted”: “no”,
-“value”: “disabled”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__SNATConfig”,
-“encrypted”: “no”,
-“value”: “automap”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__SourceAddress”,
-“encrypted”: “no”,
-“value”: “0.0.0.0/0”</div></blockquote>
-<p>},
-{</p>
-<blockquote>
-<div>“name”: “vs__VirtualAddrAdvOptions”,
-“value”: “”,
-“encrypted”: “no”</div></blockquote>
-<p>}</p>
-</div></blockquote>
-<p>]</p>
 </div></blockquote>
 </dd>
 </dl>
 </dd>
 </dl>
 <p>}</p>
-<blockquote>
-<div><ul class="simple">
-<li><cite>description</cite> - User defined description.</li>
-<li><cite>deviceGroup</cite> - The name of the device group that the application service is assigned to.</li>
-<li><cite>executeAction</cite> - Run the specified template action associated with the application.</li>
-<li><cite>inheritedDevicegroup</cite>- Read-only. Shows whether the application folder will automatically remain with the same device-group as its parent folder. Use ‘device-group default’ or ‘device-group non-default’ to set this.</li>
-<li><cite>inheritedTrafficGroup</cite> - Read-only. Shows whether the application folder will automatically remain with the same traffic-group as its parent folder. Use ‘traffic-group default’ or ‘traffic-group non-default’ to set this.</li>
-<li><cite>partition</cite> - Displays the administrative partition within which the application resides.</li>
-<li><cite>strictUpdates</cite> - Specifies whether configuration objects contained in the application may be directly modified, outside the context of the system’s application management interfaces.</li>
-<li><cite>template</cite> - The template defines the configuration for the application. This may be changed after the application has been created to move the application to a new template.</li>
-<li><cite>templateModified</cite> - Indicates that the application template used to deploy the application has been modified. The application should be updated to make use of the latest changes.</li>
-<li><cite>templatePrerequisiteErrors</cite> - Indicates any missing prerequisites associated with the template that defines this application.</li>
-<li><cite>trafficGroup</cite> - The name of the traffic group that the application service is assigned to.</li>
-<li><cite>lists</cite> - string values</li>
-<li><cite>metadata</cite> - User defined generic data for the application service. It is a name and value pair.</li>
-<li><cite>tables</cite> - Values provided like pool name, nodes etc.</li>
-<li><cite>variables</cite> - Name, values, encrypted or not</li>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">description</span></code> - User defined description.</li>
+<li><code class="docutils literal notranslate"><span class="pre">deviceGroup</span></code> - The name of the device group that the application service is assigned to.</li>
+<li><code class="docutils literal notranslate"><span class="pre">executeAction</span></code> - Run the specified template action associated with the application.</li>
+<li><code class="docutils literal notranslate"><span class="pre">inheritedDevicegroup</span></code>- Read-only. Shows whether the application folder will automatically remain with the same device-group as its parent folder. Use ‘device-group default’ or ‘device-group non-default’ to set this.</li>
+<li><code class="docutils literal notranslate"><span class="pre">inheritedTrafficGroup</span></code> - Read-only. Shows whether the application folder will automatically remain with the same traffic-group as its parent folder. Use ‘traffic-group default’ or ‘traffic-group non-default’ to set this.</li>
+<li><code class="docutils literal notranslate"><span class="pre">partition</span></code> - Displays the administrative partition within which the application resides.</li>
+<li><code class="docutils literal notranslate"><span class="pre">strictUpdates</span></code> - Specifies whether configuration objects contained in the application may be directly modified, outside the context of the system’s application management interfaces.</li>
+<li><code class="docutils literal notranslate"><span class="pre">template</span></code> - The template defines the configuration for the application. This may be changed after the application has been created to move the application to a new template.</li>
+<li><code class="docutils literal notranslate"><span class="pre">templateModified</span></code> - Indicates that the application template used to deploy the application has been modified. The application should be updated to make use of the latest changes.</li>
+<li><code class="docutils literal notranslate"><span class="pre">templatePrerequisiteErrors</span></code> - Indicates any missing prerequisites associated with the template that defines this application.</li>
+<li><code class="docutils literal notranslate"><span class="pre">trafficGroup</span></code> - The name of the traffic group that the application service is assigned to.</li>
+<li><code class="docutils literal notranslate"><span class="pre">lists</span></code> - string values</li>
+<li><code class="docutils literal notranslate"><span class="pre">metadata</span></code> - User defined generic data for the application service. It is a name and value pair.</li>
+<li><code class="docutils literal notranslate"><span class="pre">tables</span></code> - Values provided like pool name, nodes etc.</li>
+<li><code class="docutils literal notranslate"><span class="pre">variables</span></code> - Name, values, encrypted or not</li>
 </ul>
-</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] description
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description
 :param pulumi.Input[str] devicegroup
 :param pulumi.Input[str] execute_action
 :param pulumi.Input[str] inherited_devicegroup
@@ -799,21 +238,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.Ntp">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">Ntp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>servers=None</em>, <em>timezone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>bigip_sys_ntp</cite> provides details about a specific bigip</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_ntp</span></code> provides details about a specific bigip</p>
 <p>This resource is helpful when configuring NTP server on the BIG-IP.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] description
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] description
 :param pulumi.Input[list] servers: Adds NTP servers to or deletes NTP servers from the BIG-IP system.
 :param pulumi.Input[str] timezone: Specifies the time zone that you want to use for the system time.</p>
 <dl class="attribute">
@@ -871,20 +300,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.Provision">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">Provision</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>cpu_ratio=None</em>, <em>disk_ratio=None</em>, <em>full_path=None</em>, <em>level=None</em>, <em>memory_ratio=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Provision" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>bigip_sys_provision</cite> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] cpu_ratio
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_provision</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[int] cpu_ratio
 :param pulumi.Input[int] disk_ratio
 :param pulumi.Input[str] full_path
 :param pulumi.Input[str] level
@@ -933,22 +352,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.Snmp">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">Snmp</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allowedaddresses=None</em>, <em>sys_contact=None</em>, <em>sys_location=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Snmp" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>bigip_sys_snmp</cite> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allowedaddresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.</li>
-<li><strong>sys_contact</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the contact information for the system administrator.</li>
-<li><strong>sys_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Describes the system’s physical location.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_snmp</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[list] allowedaddresses: Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
+:param pulumi.Input[str] sys_contact: Specifies the contact information for the system administrator.
+:param pulumi.Input[str] sys_location: Describes the system’s physical location.</p>
 <dl class="attribute">
 <dt id="pulumi_f5bigip.sys.Snmp.allowedaddresses">
 <code class="descname">allowedaddresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_f5bigip.sys.Snmp.allowedaddresses" title="Permalink to this definition">¶</a></dt>
@@ -1010,20 +419,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_f5bigip.sys.SnmpTraps">
 <em class="property">class </em><code class="descclassname">pulumi_f5bigip.sys.</code><code class="descname">SnmpTraps</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>auth_passwordencrypted=None</em>, <em>auth_protocol=None</em>, <em>community=None</em>, <em>description=None</em>, <em>engine_id=None</em>, <em>host=None</em>, <em>name=None</em>, <em>port=None</em>, <em>privacy_password=None</em>, <em>privacy_password_encrypted=None</em>, <em>privacy_protocol=None</em>, <em>security_level=None</em>, <em>security_name=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps" title="Permalink to this definition">¶</a></dt>
-<dd><p><cite>bigip_sys_snmp_traps</cite> provides details bout how to enable snmp_traps resource on BIG-IP</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] auth_passwordencrypted
+<dd><p><code class="docutils literal notranslate"><span class="pre">bigip_sys_snmp_traps</span></code> provides details bout how to enable snmp_traps resource on BIG-IP</p>
+<p>:param str <strong>name</strong>: The name of the resource.
+:param pulumi.ResourceOptions <strong>opts</strong>: Options for the resource.
+:param pulumi.Input[str] auth_passwordencrypted
 :param pulumi.Input[str] auth_protocol
 :param pulumi.Input[str] community: Specifies the community string used for this trap.
 :param pulumi.Input[str] description: The port that the trap will be sent to.

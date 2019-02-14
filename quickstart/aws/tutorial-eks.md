@@ -11,21 +11,44 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 
 1.  In a new folder `eks-hello-world`, create an empty project with `pulumi new`.
 
+    This will create a base Pulumi program in TypeScript, and is great
+    recommendation to begin your journey.
+
     ```bash
     $ pulumi new aws-typescript --dir eks-hello-world
     ```
 
-    Enter in a project name, description, stack name, and AWS region to
-    deploy into. We recommend using `us-west-2` to host your EKS cluster.
+    * Enter in a Pulumi project name, and description to detail what this
+      Pulumi program does
+    * Enter in a name for the [Pulumi stack](https://pulumi.io/reference/stack.html), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Select 'no' when prompted to 'perform this update,' as we'll be
+    interactively editing files in the upcoming steps.
 
-    Select 'no' when prompted to 'perform this update,' as we'll be editing files in the
-    next steps.
+    Change directories to the newly created Pulumi project.
 
     ```bash
     $ cd eks-hello-world
     ```
 
+1. Add the required dependencies:
+
+    This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
+
+	```bash
+	$ npm install --save @pulumi/pulumi @pulumi/aws-infra @pulumi/eks @pulumi/kubernetes
+	```
+
 1.  Open the existing file `index.ts`, and replace the contents with the following:
+
+    The `index.ts` occupies the role as the *main* entrypoint in our Pulumi
+    program. In it, we are going to declare:
+
+	* The resources we want in AWS to provision the EKS cluster based on our
+      cluster configuration settings,
+	* The `kubeconfig` file to access the cluster, and
+	* The initialization of a Pulumi Kubernetes provider with the
+	`kubeconfig`, so that we can deploy Kubernetes resources to the cluster
+    once its ready in the next steps.
 
     ```typescript
     import * as pulumi from "@pulumi/pulumi";
@@ -50,19 +73,18 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
     // Export the clusters' kubeconfig.
     export const kubeconfig = cluster.kubeconfig
     ```
-
-1. Add the required dependencies:
-
-	```bash
-	$ npm install --save @pulumi/pulumi @pulumi/aws-infra @pulumi/eks @pulumi/kubernetes
-	```
-
 1.  To preview and deploy changes, run `pulumi update` and select "yes."
 
     The `update` sub-command shows a preview of the resources that will be created
     and prompts on whether to proceed with the deployment. Note that the stack
     itself is counted as a resource, though it does not correspond
     to a physical cloud resource.
+
+    You can also run `pulumi up --diff` to see and inspect the diffs of the
+    overall changes expected to take place.
+
+    Running `pulumi up` will deploy the EKS cluster. Note, provisioning a
+    new EKS cluster takes between 10-15 minutes.
 
     ```bash
     $ pulumi update
@@ -216,9 +238,13 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Elastic Conta
 ## Access the Kubernetes Cluster using Pulumi Providers
 
 Now that we have an instance of Kubernetes running, we may want to create API resources in Kubernetes to manage our workloads through Pulumi.
-We can do this by configuring a Pulumi provider to our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program.
+
+We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are indendent of their underyling cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
 
 1.  Create a new Kubernetes Namespace and Deployment:
+
+	This declares a new Kubernetes Namespace, Deployment and Service to be
+	created using the Pulumi Kubernetes provider to our cluster.
 
     Open the existing file `index.ts`, and append the following:
 
@@ -298,21 +324,16 @@ We can do this by configuring a Pulumi provider to our newly created cluster, an
     the minimally disruptive change to achieve the desired state. The CLI
     will also output incremental status updates, as the Kubernetes changes progress.
 
-	> **Note:** Pulumi auto-generates a suffix for all objects. Pulumi's object model does
-	> create-before-delete replacements by default on updates, but this will only work if
-	> you are using name auto-generation so that the newly created resource is
-	> guaranteed to have a differing, non-conflicting name. Doing this
-	> allows a new resource to be created, and dependencies to be updated to
-	> point to the new resource, before the old resource is deleted.
-	> This is generally quite useful.
+	> **Note:** Pulumi auto-generates a suffix for all objects.
+    > See the [Pulumi Programming Model](../../reference/programming-model.md#autonaming) for more info.
 	>
 	> ```
 	> ...
 	> deploymentName : "helloworld-tlsr4sg5"
 	> ...
 	> namespaceName  : "helloworld-pz4u5kyq"
+	> serviceHostname: "a71f5ab3f2a6e11e3ac39200f4a9ad5d-1297981966.us-west-2.elb.amazonaws.com"
 	> serviceName    : "helloworld-l61b5dby"
-	> servicePublicIP: "35.236.26.151"
 	> ```
 
     If you visit the FQDN listed in `serviceHostname` you should land on the
@@ -416,6 +437,16 @@ Run the following command to tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and launch a Managed Kubernetes cluster on AWS EKS.
+In this tutorial, we saw how to use Pulumi programs to create and launch a
+Managed Kubernetes cluster on AWS EKS.
 
-For a follow-up example on how to use Pulumi programs to create a Kubernetes apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
+For a follow-up example on how to use Pulumi programs to create a Kubernetes
+apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
+
+We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
+take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ILMK65YVSKw" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>

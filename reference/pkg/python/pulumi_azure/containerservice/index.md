@@ -7,13 +7,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.addon_profiles">
 <code class="descname">addon_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.addon_profiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>addon_profile</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.agent_pool_profiles">
 <code class="descname">agent_pool_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.agent_pool_profiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>agent_profile_pool</cite> blocks as documented below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">agent_profile_pool</span></code> blocks as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -31,19 +31,19 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_configs">
 <code class="descname">kube_admin_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_configs" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>kube_admin_config</cite> block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_admin_config</span></code> block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_config_raw">
 <code class="descname">kube_admin_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_admin_config_raw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raw Kubernetes config for the admin account to be used by [kubectl](<a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">https://kubernetes.io/docs/reference/kubectl/overview/</a>) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
+<dd><p>Raw Kubernetes config for the admin account to be used by <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a> and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.kube_configs">
 <code class="descname">kube_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.kube_configs" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>kube_config</cite> block as defined below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_config</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -61,7 +61,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.linux_profiles">
 <code class="descname">linux_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.linux_profiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>linux_profile</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -73,7 +73,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.network_profiles">
 <code class="descname">network_profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.network_profiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>network_profile</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -85,13 +85,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.role_based_access_controls">
 <code class="descname">role_based_access_controls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.role_based_access_controls" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>role_based_access_control</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">role_based_access_control</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetKubernetesClusterResult.service_principals">
 <code class="descname">service_principals</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetKubernetesClusterResult.service_principals" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>service_principal</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">service_principal</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -145,13 +145,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU of this Container Registry, such as <cite>Basic</cite>.</p>
+<dd><p>The SKU of this Container Registry, such as <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.GetRegistryResult.storage_account_id">
 <code class="descname">storage_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.GetRegistryResult.storage_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the Storage Account used for this Container Registry. This is only returned for <cite>Classic</cite> SKU’s.</p>
+<dd><p>The ID of the Storage Account used for this Container Registry. This is only returned for <code class="docutils literal notranslate"><span class="pre">Classic</span></code> SKU’s.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -170,24 +170,24 @@
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Group">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>containers=None</em>, <em>dns_name_label=None</em>, <em>image_registry_credentials=None</em>, <em>ip_address_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>restart_policy=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Group</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>containers=None</em>, <em>dns_name_label=None</em>, <em>image_registry_credentials=None</em>, <em>ip_address_type=None</em>, <em>location=None</em>, <em>name=None</em>, <em>os_type=None</em>, <em>resource_group_name=None</em>, <em>restart_policy=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manage as an Azure Container Group instance.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>containers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The definition of a container that is part of the group as documented in the <cite>container</cite> block below. Changing this forces a new resource to be created.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>containers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The definition of a container that is part of the group as documented in the <code class="docutils literal notranslate"><span class="pre">container</span></code> block below. Changing this forces a new resource to be created.</li>
 <li><strong>dns_name_label</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS label/name for the container groups IP.</li>
-<li><strong>image_registry_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set image registry credentials for the group as documented in the <cite>image_registry_credential</cite> block below</li>
-<li><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ip address type of the container. <cite>Public</cite> is the only acceptable value at this time. Changing this forces a new resource to be created.</li>
+<li><strong>image_registry_credentials</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set image registry credentials for the group as documented in the <code class="docutils literal notranslate"><span class="pre">image_registry_credential</span></code> block below</li>
+<li><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ip address type of the container. <code class="docutils literal notranslate"><span class="pre">Public</span></code> is the only acceptable value at this time. Changing this forces a new resource to be created.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Container Group. Changing this forces a new resource to be created.</li>
-<li><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OS for the container group. Allowed values are <cite>Linux</cite> and <cite>Windows</cite>. Changing this forces a new resource to be created.</li>
+<li><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The OS for the container group. Allowed values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.</li>
-<li><strong>restart_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Restart policy for the container group. Allowed values are <cite>Always</cite>, <cite>Never</cite>, <cite>OnFailure</cite>. Defaults to <cite>Always</cite>.</li>
+<li><strong>restart_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Restart policy for the container group. Allowed values are <code class="docutils literal notranslate"><span class="pre">Always</span></code>, <code class="docutils literal notranslate"><span class="pre">Never</span></code>, <code class="docutils literal notranslate"><span class="pre">OnFailure</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Always</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -197,7 +197,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.containers">
 <code class="descname">containers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.containers" title="Permalink to this definition">¶</a></dt>
-<dd><p>The definition of a container that is part of the group as documented in the <cite>container</cite> block below. Changing this forces a new resource to be created.</p>
+<dd><p>The definition of a container that is part of the group as documented in the <code class="docutils literal notranslate"><span class="pre">container</span></code> block below. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -209,13 +209,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.fqdn">
 <code class="descname">fqdn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.fqdn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The FQDN of the container group derived from <cite>dns_name_label</cite>.</p>
+<dd><p>The FQDN of the container group derived from <code class="docutils literal notranslate"><span class="pre">dns_name_label</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.image_registry_credentials">
 <code class="descname">image_registry_credentials</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.image_registry_credentials" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set image registry credentials for the group as documented in the <cite>image_registry_credential</cite> block below</p>
+<dd><p>Set image registry credentials for the group as documented in the <code class="docutils literal notranslate"><span class="pre">image_registry_credential</span></code> block below</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -227,7 +227,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.ip_address_type">
 <code class="descname">ip_address_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.ip_address_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the ip address type of the container. <cite>Public</cite> is the only acceptable value at this time. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the ip address type of the container. <code class="docutils literal notranslate"><span class="pre">Public</span></code> is the only acceptable value at this time. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -245,7 +245,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.os_type">
 <code class="descname">os_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.os_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The OS for the container group. Allowed values are <cite>Linux</cite> and <cite>Windows</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>The OS for the container group. Allowed values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -257,7 +257,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.restart_policy">
 <code class="descname">restart_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.restart_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restart policy for the container group. Allowed values are <cite>Always</cite>, <cite>Never</cite>, <cite>OnFailure</cite>. Defaults to <cite>Always</cite>.</p>
+<dd><p>Restart policy for the container group. Allowed values are <code class="docutils literal notranslate"><span class="pre">Always</span></code>, <code class="docutils literal notranslate"><span class="pre">Never</span></code>, <code class="docutils literal notranslate"><span class="pre">OnFailure</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Always</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -308,27 +308,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.KubernetesCluster">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>addon_profile=None</em>, <em>agent_pool_profile=None</em>, <em>dns_prefix=None</em>, <em>kubernetes_version=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profile=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_control=None</em>, <em>service_principal=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">KubernetesCluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>addon_profile=None</em>, <em>agent_pool_profile=None</em>, <em>dns_prefix=None</em>, <em>kubernetes_version=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>name=None</em>, <em>network_profile=None</em>, <em>resource_group_name=None</em>, <em>role_based_access_control=None</em>, <em>service_principal=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</p>
-<p>&gt; <strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text. [Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>addon_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>addon_profile</cite> block.</li>
-<li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <cite>agent_pool_profile</cite> blocks as documented below.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>addon_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block.</li>
+<li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> blocks as documented below.</li>
 <li><strong>dns_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.</li>
 <li><strong>kubernetes_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of Kubernetes specified when creating the AKS managed cluster. If not specified, the latest recommended version will be used at provisioning time (but won’t auto-upgrade).</li>
-<li><strong>linux_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>linux_profile</cite> block.</li>
+<li><strong>linux_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.</li>
-<li><strong>network_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>network_profile</cite> block.</li>
+<li><strong>network_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</li>
-<li><strong>role_based_access_control</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>role_based_access_control</cite> block. Changing this forces a new resource to be created.</li>
-<li><strong>service_principal</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <cite>service_principal</cite> block as documented below.</li>
+<li><strong>role_based_access_control</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">role_based_access_control</span></code> block. Changing this forces a new resource to be created.</li>
+<li><strong>service_principal</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">service_principal</span></code> block as documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
@@ -338,13 +339,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.addon_profile">
 <code class="descname">addon_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.addon_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>addon_profile</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.agent_pool_profile">
 <code class="descname">agent_pool_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.agent_pool_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more <cite>agent_pool_profile</cite> blocks as documented below.</p>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">agent_pool_profile</span></code> blocks as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -362,25 +363,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_admin_config">
 <code class="descname">kube_admin_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_admin_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>kube_admin_config</cite> block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_admin_config</span></code> block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_admin_config_raw">
 <code class="descname">kube_admin_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_admin_config_raw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raw Kubernetes config for the admin account to be used by [kubectl](<a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">https://kubernetes.io/docs/reference/kubectl/overview/</a>) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
+<dd><p>Raw Kubernetes config for the admin account to be used by <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a> and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_config">
 <code class="descname">kube_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>kube_config</cite> block as defined below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">kube_config</span></code> block as defined below.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.kube_config_raw">
 <code class="descname">kube_config_raw</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.kube_config_raw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raw Kubernetes config to be used by [kubectl](<a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">https://kubernetes.io/docs/reference/kubectl/overview/</a>) and other compatible tools</p>
+<dd><p>Raw Kubernetes config to be used by <a class="reference external" href="https://kubernetes.io/docs/reference/kubectl/overview/">kubectl</a> and other compatible tools</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -392,7 +393,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.linux_profile">
 <code class="descname">linux_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.linux_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>linux_profile</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -410,7 +411,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.network_profile">
 <code class="descname">network_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.network_profile" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>network_profile</cite> block.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -428,13 +429,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.role_based_access_control">
 <code class="descname">role_based_access_control</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.role_based_access_control" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>role_based_access_control</cite> block. Changing this forces a new resource to be created.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">role_based_access_control</span></code> block. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.service_principal">
 <code class="descname">service_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.service_principal" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <cite>service_principal</cite> block as documented below.</p>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">service_principal</span></code> block as documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -485,23 +486,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Registry">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Registry</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_enabled=None</em>, <em>georeplication_locations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>storage_account=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Registry</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_enabled=None</em>, <em>georeplication_locations=None</em>, <em>location=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>sku=None</em>, <em>storage_account=None</em>, <em>storage_account_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry.</p>
-<p>&gt; <strong>Note:</strong> All arguments including the access key will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the access key will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>admin_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the admin user is enabled. Defaults to <cite>false</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>admin_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the admin user is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>georeplication_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Azure locations where the container registry should be geo-replicated.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Container Registry. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.</li>
-<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the the container registry. Possible values are <cite>Classic</cite> (which was previously <cite>Basic</cite>), <cite>Basic</cite>, <cite>Standard</cite> and <cite>Premium</cite>.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU name of the the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -513,7 +515,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Registry.admin_enabled">
 <code class="descname">admin_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.admin_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the admin user is enabled. Defaults to <cite>false</cite>.</p>
+<dd><p>Specifies whether the admin user is enabled. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -561,7 +563,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Registry.sku">
 <code class="descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Registry.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SKU name of the the container registry. Possible values are <cite>Classic</cite> (which was previously <cite>Basic</cite>), <cite>Basic</cite>, <cite>Standard</cite> and <cite>Premium</cite>.</p>
+<dd><p>The SKU name of the the container registry. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code> (which was previously <code class="docutils literal notranslate"><span class="pre">Basic</span></code>), <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -618,75 +620,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.containerservice.Service">
-<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>agent_pool_profile=None</em>, <em>diagnostics_profile=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>master_profile=None</em>, <em>name=None</em>, <em>orchestration_platform=None</em>, <em>resource_group_name=None</em>, <em>service_principal=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">Service</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>agent_pool_profile=None</em>, <em>diagnostics_profile=None</em>, <em>linux_profile=None</em>, <em>location=None</em>, <em>master_profile=None</em>, <em>name=None</em>, <em>orchestration_platform=None</em>, <em>resource_group_name=None</em>, <em>service_principal=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Service Instance</p>
-<p>&gt; <strong>NOTE:</strong> All arguments including the client secret will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
-<p>&gt; <strong>DEPRECATED:</strong> [Azure Container Service (ACS) has been deprecated by Azure in favour of Azure (Managed) Kubernetes Service (AKS)](<a class="reference external" href="https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/">https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/</a>). Support for ACS will be removed in the next major version of the AzureRM Provider (2.0) - and we <strong>strongly recommend</strong> you consider using Azure Kubernetes Service (AKS) for new deployments.</p>
-<p>##&nbsp;Example Usage (DCOS)</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>hcl
-resource “azurerm_resource_group” “test” {</p>
 <blockquote>
-<div>name     = “acctestRG1”
-location = “West US”</div></blockquote>
-<p>}</p>
-<dl class="docutils">
-<dt>resource “azurerm_container_service” “test” {</dt>
-<dd><p class="first">name                   = “acctestcontservice1”
-location               = “${azurerm_resource_group.test.location}”
-resource_group_name    = “${azurerm_resource_group.test.name}”
-orchestration_platform = “DCOS”</p>
-<dl class="docutils">
-<dt>master_profile {</dt>
-<dd>count      = 1
-dns_prefix = “acctestmaster1”</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>linux_profile {</dt>
-<dd><p class="first">admin_username = “acctestuser1”</p>
-<dl class="docutils">
-<dt>ssh_key {</dt>
-<dd>key_data = “ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqaZoyiz1qbdOQ8xEf6uEu1cCwYowo5FHtsBhqLoDnnp7KUTEBN+L2NxRIfQ781rxV6Iq5jSav6b2Q8z5KiseOlvKA/RF2wqU0UPYqQviQhLmW6THTpmrv/YkUCuzxDpsH7DUDhZcwySLKVVe0Qm3+5N2Ta6UYH3lsDf9R9wTP2K/+vAnflKebuypNlmocIvakFWoZda18FOmsOoIVXQ8HWFNCuw9ZCunMSN62QGamCe3dL5cXlkgHYv7ekJE15IA9aOJcM7e90oeTqo+7HTcWfdu0qQqPWY5ujyMw/llas8tsXY85LFqRnr3gJ02bAscjc477+X+j/gkpFoN1QEmt <a class="reference external" href="mailto:terraform&#37;&#52;&#48;demo&#46;tld">terraform<span>&#64;</span>demo<span>&#46;</span>tld</a>”</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>agent_pool_profile {</dt>
-<dd>name       = “default”
-count      = 1
-dns_prefix = “acctestagent1”
-vm_size    = “Standard_F2”</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>diagnostics_profile {</dt>
-<dd>enabled = false</dd>
-</dl>
-<p>}</p>
-<dl class="docutils">
-<dt>tags {</dt>
-<dd>Environment = “Production”</dd>
-</dl>
-<p class="last">}</p>
-</dd>
-</dl>
+<div><p><strong>NOTE:</strong> All arguments including the client secret will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+<p><strong>DEPRECATED:</strong> <a class="reference external" href="https://azure.microsoft.com/en-us/updates/azure-container-service-will-retire-on-january-31-2020/">Azure Container Service (ACS) has been deprecated by Azure in favour of Azure (Managed) Kubernetes Service (AKS)</a>. Support for ACS will be removed in the next major version of the AzureRM Provider (2.0) - and we <strong>strongly recommend</strong> you consider using Azure Kubernetes Service (AKS) for new deployments.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>agent_pool_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Agent Pool Profile’s block as documented below.</li>
 <li><strong>diagnostics_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A VM Diagnostics Profile block as documented below.</li>
 <li><strong>linux_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Linux Profile block as documented below.</li>
 <li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the Container Service instance should be created. Changing this forces a new resource to be created.</li>
 <li><strong>master_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Master Profile block as documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Unique name of the agent pool profile in the context of the subscription and resource group.</li>
-<li><strong>orchestration_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Container Orchestration Platform to use. Currently can be either <cite>DCOS</cite>, <cite>Kubernetes</cite> or <cite>Swarm</cite>. Changing this forces a new resource to be created.</li>
+<li><strong>orchestration_platform</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Container Orchestration Platform to use. Currently can be either <code class="docutils literal notranslate"><span class="pre">DCOS</span></code>, <code class="docutils literal notranslate"><span class="pre">Kubernetes</span></code> or <code class="docutils literal notranslate"><span class="pre">Swarm</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the resource group where the resource exists. Changing this forces a new resource to be created.</li>
 <li><strong>service_principal</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Service Principal block as documented below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -734,7 +688,7 @@ vm_size    = “Standard_F2”</dd>
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Service.orchestration_platform">
 <code class="descname">orchestration_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Service.orchestration_platform" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Container Orchestration Platform to use. Currently can be either <cite>DCOS</cite>, <cite>Kubernetes</cite> or <cite>Swarm</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the Container Orchestration Platform to use. Currently can be either <code class="docutils literal notranslate"><span class="pre">DCOS</span></code>, <code class="docutils literal notranslate"><span class="pre">Kubernetes</span></code> or <code class="docutils literal notranslate"><span class="pre">Swarm</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -799,8 +753,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.containerservice.get_kubernetes_cluster">
 <code class="descclassname">pulumi_azure.containerservice.</code><code class="descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).</p>
-<p>&gt; <strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text.
-[Read more about sensitive data in state](<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">https://www.terraform.io/docs/state/sensitive-data.html</a>).</p>
+<blockquote>
+<div><strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text.
+<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</div></blockquote>
 </dd></dl>
 
 <dl class="function">

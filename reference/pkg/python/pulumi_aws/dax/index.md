@@ -2,15 +2,15 @@
 <span id="dax"></span><h1>dax<a class="headerlink" href="#module-pulumi_aws.dax" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.dax.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zones=None</em>, <em>cluster_name=None</em>, <em>description=None</em>, <em>iam_role_arn=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>parameter_group_name=None</em>, <em>replication_factor=None</em>, <em>security_group_ids=None</em>, <em>server_side_encryption=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zones=None</em>, <em>cluster_name=None</em>, <em>description=None</em>, <em>iam_role_arn=None</em>, <em>maintenance_window=None</em>, <em>node_type=None</em>, <em>notification_topic_arn=None</em>, <em>parameter_group_name=None</em>, <em>replication_factor=None</em>, <em>security_group_ids=None</em>, <em>server_side_encryption=None</em>, <em>subnet_group_name=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Cluster resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Availability Zones in which the
 nodes will be created</li>
 <li><strong>cluster_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group identifier. DAX converts this name to
@@ -20,14 +20,14 @@ lowercase</li>
 an IAM role. At runtime, DAX will assume this role and use the role’s
 permissions to access DynamoDB on your behalf</li>
 <li><strong>maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the weekly time range for when
-maintenance on the cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh24:mi</cite>
+maintenance on the cluster is performed. The format is <code class="docutils literal notranslate"><span class="pre">ddd:hh24:mi-ddd:hh24:mi</span></code>
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
-<cite>sun:05:00-sun:09:00</cite></li>
+<code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></li>
 <li><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The compute and memory capacity of the nodes. See
 [Nodes][1] for supported node types</li>
 <li><strong>notification_topic_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
-<cite>arn:aws:sns:us-east-1:012345678999:my_sns_topic</cite></li>
+<code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></li>
 <li><strong>parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the parameter group to associate
 with this DAX cluster</li>
 <li><strong>replication_factor</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of nodes in the DAX cluster. A
@@ -95,9 +95,9 @@ permissions to access DynamoDB on your behalf</p>
 <dt id="pulumi_aws.dax.Cluster.maintenance_window">
 <code class="descname">maintenance_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.Cluster.maintenance_window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the weekly time range for when
-maintenance on the cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh24:mi</cite>
+maintenance on the cluster is performed. The format is <code class="docutils literal notranslate"><span class="pre">ddd:hh24:mi-ddd:hh24:mi</span></code>
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
-<cite>sun:05:00-sun:09:00</cite></p>
+<code class="docutils literal notranslate"><span class="pre">sun:05:00-sun:09:00</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -110,9 +110,9 @@ maintenance on the cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh2
 <dl class="attribute">
 <dt id="pulumi_aws.dax.Cluster.nodes">
 <code class="descname">nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.Cluster.nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of node objects including <cite>id</cite>, <cite>address</cite>, <cite>port</cite> and
-<cite>availability_zone</cite>. Referenceable e.g. as
-<cite>${aws_dax_cluster.test.nodes.0.address}</cite></p>
+<dd><p>List of node objects including <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">address</span></code>, <code class="docutils literal notranslate"><span class="pre">port</span></code> and
+<code class="docutils literal notranslate"><span class="pre">availability_zone</span></code>. Referenceable e.g. as
+<code class="docutils literal notranslate"><span class="pre">${aws_dax_cluster.test.nodes.0.address}</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -120,7 +120,7 @@ maintenance on the cluster is performed. The format is <cite>ddd:hh24:mi-ddd:hh2
 <code class="descname">notification_topic_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dax.Cluster.notification_topic_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
-<cite>arn:aws:sns:us-east-1:012345678999:my_sns_topic</cite></p>
+<code class="docutils literal notranslate"><span class="pre">arn:aws:sns:us-east-1:012345678999:my_sns_topic</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -212,15 +212,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dax.ParameterGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>parameters=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">ParameterGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>parameters=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Parameter Group resource.</p>
+<p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> supports the following:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) The name of the parameter.</li>
+<li><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The value for the parameter.</li>
+</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the parameter group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter group.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The parameters of the parameter group.</li>
@@ -289,15 +294,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dax.SubnetGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dax.</code><code class="descname">SubnetGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>subnet_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Subnet Group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the subnet group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the subnet group.</li>
 <li><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of VPC subnet IDs for the subnet group.</li>

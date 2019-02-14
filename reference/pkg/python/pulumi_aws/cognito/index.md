@@ -20,15 +20,15 @@
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.IdentityPool">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">IdentityPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allow_unauthenticated_identities=None</em>, <em>cognito_identity_providers=None</em>, <em>developer_provider_name=None</em>, <em>identity_pool_name=None</em>, <em>openid_connect_provider_arns=None</em>, <em>saml_provider_arns=None</em>, <em>supported_login_providers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">IdentityPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_unauthenticated_identities=None</em>, <em>cognito_identity_providers=None</em>, <em>developer_provider_name=None</em>, <em>identity_pool_name=None</em>, <em>openid_connect_provider_arns=None</em>, <em>saml_provider_arns=None</em>, <em>supported_login_providers=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Cognito Identity Pool.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_unauthenticated_identities</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the identity pool supports unauthenticated logins or not.</li>
 <li><strong>cognito_identity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of Amazon Cognito Identity user pools and their client IDs.</li>
 <li><strong>developer_provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The “domain” by which Cognito will refer to your users. This name acts as a placeholder that allows your
@@ -133,15 +133,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">IdentityPoolRoleAttachment</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>identity_pool_id=None</em>, <em>role_mappings=None</em>, <em>roles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">IdentityPoolRoleAttachment</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>identity_pool_id=None</em>, <em>role_mappings=None</em>, <em>roles=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Cognito Identity Pool Roles Attachment.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>identity_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An identity pool ID in the format REGION:GUID.</li>
 <li><strong>role_mappings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A List of Role Mapping.</li>
 <li><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of roles associated with this pool. For a given role, the key will be either “authenticated” or “unauthenticated” and the value will be the Role ARN.</li>
@@ -210,20 +210,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.IdentityProvider">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">IdentityProvider</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attribute_mapping=None</em>, <em>idp_identifiers=None</em>, <em>provider_details=None</em>, <em>provider_name=None</em>, <em>provider_type=None</em>, <em>user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">IdentityProvider</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attribute_mapping=None</em>, <em>idp_identifiers=None</em>, <em>provider_details=None</em>, <em>provider_name=None</em>, <em>provider_type=None</em>, <em>user_pool_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Identity Provider resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>attribute_mapping</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](<a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping">https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping</a>)</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>attribute_mapping</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of attribute mapping of user pool attributes. <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping">AttributeMapping in AWS API documentation</a></li>
 <li><strong>idp_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of identity providers.</li>
 <li><strong>provider_details</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of identity details, such as access token</li>
 <li><strong>provider_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The provider name</li>
-<li><strong>provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The provider type.  [See AWS API for valid values](<a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType">https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType</a>)</li>
+<li><strong>provider_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The provider type.  <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType">See AWS API for valid values</a></li>
 <li><strong>user_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user pool id</li>
 </ul>
 </td>
@@ -233,7 +233,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.IdentityProvider.attribute_mapping">
 <code class="descname">attribute_mapping</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider.attribute_mapping" title="Permalink to this definition">¶</a></dt>
-<dd><p>The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](<a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping">https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping</a>)</p>
+<dd><p>The map of attribute mapping of user pool attributes. <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping">AttributeMapping in AWS API documentation</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -257,7 +257,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.IdentityProvider.provider_type">
 <code class="descname">provider_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider.provider_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The provider type.  [See AWS API for valid values](<a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType">https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType</a>)</p>
+<dd><p>The provider type.  <a class="reference external" href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType">See AWS API for valid values</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -308,15 +308,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.ResourceServer">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">ResourceServer</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>identifier=None</em>, <em>name=None</em>, <em>scopes=None</em>, <em>user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">ResourceServer</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>identifier=None</em>, <em>name=None</em>, <em>scopes=None</em>, <em>user_pool_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito Resource Server.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An identifier for the resource server.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the resource server.</li>
 <li><strong>scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Authorization Scope.</li>
@@ -392,15 +392,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserGroup">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserGroup</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>name=None</em>, <em>precedence=None</em>, <em>role_arn=None</em>, <em>user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserGroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserGroup</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>name=None</em>, <em>precedence=None</em>, <em>role_arn=None</em>, <em>user_pool_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Group resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the user group.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the user group.</li>
 <li><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The precedence of the user group.</li>
@@ -483,22 +483,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserPool">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPool</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>admin_create_user_config=None</em>, <em>alias_attributes=None</em>, <em>auto_verified_attributes=None</em>, <em>device_configuration=None</em>, <em>email_configuration=None</em>, <em>email_verification_message=None</em>, <em>email_verification_subject=None</em>, <em>lambda_config=None</em>, <em>mfa_configuration=None</em>, <em>name=None</em>, <em>password_policy=None</em>, <em>schemas=None</em>, <em>sms_authentication_message=None</em>, <em>sms_configuration=None</em>, <em>sms_verification_message=None</em>, <em>tags=None</em>, <em>username_attributes=None</em>, <em>verification_message_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_create_user_config=None</em>, <em>alias_attributes=None</em>, <em>auto_verified_attributes=None</em>, <em>device_configuration=None</em>, <em>email_configuration=None</em>, <em>email_verification_message=None</em>, <em>email_verification_subject=None</em>, <em>lambda_config=None</em>, <em>mfa_configuration=None</em>, <em>name=None</em>, <em>password_policy=None</em>, <em>schemas=None</em>, <em>sms_authentication_message=None</em>, <em>sms_configuration=None</em>, <em>sms_verification_message=None</em>, <em>tags=None</em>, <em>username_attributes=None</em>, <em>verification_message_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>admin_create_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for AdminCreateUser requests.</li>
-<li><strong>alias_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with <cite>username_attributes</cite>.</li>
+<li><strong>alias_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with <code class="docutils literal notranslate"><span class="pre">username_attributes</span></code>.</li>
 <li><strong>auto_verified_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The attributes to be auto-verified. Possible values: email, phone_number.</li>
 <li><strong>device_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The configuration for the user pool’s device tracking.</li>
 <li><strong>email_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Email Configuration.</li>
-<li><strong>email_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification message. Must contain the <cite>{####}</cite> placeholder. <strong>NOTE:</strong> - If <cite>email_verification_message</cite> and <cite>verification_message_template.email_message</cite> are specified and the values are different, either one is prioritized and updated.</li>
-<li><strong>email_verification_subject</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification subject. <strong>NOTE:</strong> - If <cite>email_verification_subject</cite> and <cite>verification_message_template.email_subject</cite> are specified and the values are different, either one is prioritized and updated.</li>
+<li><strong>email_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification message. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. <strong>NOTE:</strong> - If <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> and <code class="docutils literal notranslate"><span class="pre">verification_message_template.email_message</span></code> are specified and the values are different, either one is prioritized and updated.</li>
+<li><strong>email_verification_subject</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification subject. <strong>NOTE:</strong> - If <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> and <code class="docutils literal notranslate"><span class="pre">verification_message_template.email_subject</span></code> are specified and the values are different, either one is prioritized and updated.</li>
 <li><strong>lambda_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for the AWS Lambda triggers associated with the user pool.</li>
 <li><strong>mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attribute.</li>
@@ -508,7 +508,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SMS Configuration.</li>
 <li><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</li>
-<li><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <cite>alias_attributes</cite>.</li>
+<li><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</li>
 <li><strong>verification_message_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The verification message templates configuration.</li>
 </ul>
 </td>
@@ -524,7 +524,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.alias_attributes">
 <code class="descname">alias_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.alias_attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with <cite>username_attributes</cite>.</p>
+<dd><p>Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with <code class="docutils literal notranslate"><span class="pre">username_attributes</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -560,13 +560,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.email_verification_message">
 <code class="descname">email_verification_message</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.email_verification_message" title="Permalink to this definition">¶</a></dt>
-<dd><p>A string representing the email verification message. Must contain the <cite>{####}</cite> placeholder. <strong>NOTE:</strong> - If <cite>email_verification_message</cite> and <cite>verification_message_template.email_message</cite> are specified and the values are different, either one is prioritized and updated.</p>
+<dd><p>A string representing the email verification message. Must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder. <strong>NOTE:</strong> - If <code class="docutils literal notranslate"><span class="pre">email_verification_message</span></code> and <code class="docutils literal notranslate"><span class="pre">verification_message_template.email_message</span></code> are specified and the values are different, either one is prioritized and updated.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.email_verification_subject">
 <code class="descname">email_verification_subject</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.email_verification_subject" title="Permalink to this definition">¶</a></dt>
-<dd><p>A string representing the email verification subject. <strong>NOTE:</strong> - If <cite>email_verification_subject</cite> and <cite>verification_message_template.email_subject</cite> are specified and the values are different, either one is prioritized and updated.</p>
+<dd><p>A string representing the email verification subject. <strong>NOTE:</strong> - If <code class="docutils literal notranslate"><span class="pre">email_verification_subject</span></code> and <code class="docutils literal notranslate"><span class="pre">verification_message_template.email_subject</span></code> are specified and the values are different, either one is prioritized and updated.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -638,7 +638,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.username_attributes">
 <code class="descname">username_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.username_attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <cite>alias_attributes</cite>.</p>
+<dd><p>Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -689,15 +689,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserPoolClient">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPoolClient</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>allowed_oauth_flows=None</em>, <em>allowed_oauth_flows_user_pool_client=None</em>, <em>allowed_oauth_scopes=None</em>, <em>callback_urls=None</em>, <em>default_redirect_uri=None</em>, <em>explicit_auth_flows=None</em>, <em>generate_secret=None</em>, <em>logout_urls=None</em>, <em>name=None</em>, <em>read_attributes=None</em>, <em>refresh_token_validity=None</em>, <em>supported_identity_providers=None</em>, <em>user_pool_id=None</em>, <em>write_attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPoolClient</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allowed_oauth_flows=None</em>, <em>allowed_oauth_flows_user_pool_client=None</em>, <em>allowed_oauth_scopes=None</em>, <em>callback_urls=None</em>, <em>default_redirect_uri=None</em>, <em>explicit_auth_flows=None</em>, <em>generate_secret=None</em>, <em>logout_urls=None</em>, <em>name=None</em>, <em>read_attributes=None</em>, <em>refresh_token_validity=None</em>, <em>supported_identity_providers=None</em>, <em>user_pool_id=None</em>, <em>write_attributes=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool Client resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allowed_oauth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth flows (code, implicit, client_credentials).</li>
 <li><strong>allowed_oauth_flows_user_pool_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</li>
 <li><strong>allowed_oauth_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</li>
@@ -849,15 +849,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserPoolDomain">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPoolDomain</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>certificate_arn=None</em>, <em>domain=None</em>, <em>user_pool_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolDomain" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPoolDomain</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>certificate_arn=None</em>, <em>domain=None</em>, <em>user_pool_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolDomain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool Domain resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.</li>
 <li><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain string.</li>
 <li><strong>user_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user pool ID.</li>

@@ -2,17 +2,17 @@
 <span id="cosmosdb"></span><h1>cosmosdb<a class="headerlink" href="#module-pulumi_azure.cosmosdb" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.cosmosdb.Account">
-<em class="property">class </em><code class="descclassname">pulumi_azure.cosmosdb.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>capabilities=None</em>, <em>consistency_policy=None</em>, <em>enable_automatic_failover=None</em>, <em>enable_multiple_write_locations=None</em>, <em>failover_policies=None</em>, <em>geo_locations=None</em>, <em>ip_range_filter=None</em>, <em>is_virtual_network_filter_enabled=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>offer_type=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>virtual_network_rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.cosmosdb.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>capabilities=None</em>, <em>consistency_policy=None</em>, <em>enable_automatic_failover=None</em>, <em>enable_multiple_write_locations=None</em>, <em>failover_policies=None</em>, <em>geo_locations=None</em>, <em>ip_range_filter=None</em>, <em>is_virtual_network_filter_enabled=None</em>, <em>kind=None</em>, <em>location=None</em>, <em>name=None</em>, <em>offer_type=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>virtual_network_rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.cosmosdb.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a CosmosDB (formally DocumentDB) Account.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Enable capabilities for this Cosmos DB account. Possible values are <cite>EnableTable</cite> and <cite>EnableGremlin</cite>.</li>
-<li><strong>consistency_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a <cite>consistency_policy</cite> resource, used to define the consistency policy for this CosmosDB account.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The capabilities which should be enabled for this Cosmos DB account. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</li>
+<li><strong>consistency_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies a <code class="docutils literal notranslate"><span class="pre">consistency_policy</span></code> resource, used to define the consistency policy for this CosmosDB account.</li>
 <li><strong>enable_automatic_failover</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable automatic fail over for this Cosmos DB account.</li>
 <li><strong>enable_multiple_write_locations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable multi-master support for this Cosmos DB account.</li>
 </ul>
@@ -21,32 +21,32 @@
 </tbody>
 </table>
 <p>:param pulumi.Input[list] failover_policies
-:param pulumi.Input[list] geo_locations: Specifies a <cite>geo_location</cite> resource, used to define where data should be replicated with the <cite>failover_priority</cite> 0 specifying the primary location.
+:param pulumi.Input[list] geo_locations: Specifies a <code class="docutils literal notranslate"><span class="pre">geo_location</span></code> resource, used to define where data should be replicated with the <code class="docutils literal notranslate"><span class="pre">failover_priority</span></code> 0 specifying the primary location.
 :param pulumi.Input[str] ip_range_filter: CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP’s for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 :param pulumi.Input[bool] is_virtual_network_filter_enabled: Enables virtual network filtering for this Cosmos DB account.
-:param pulumi.Input[str] kind: Specifies the Kind of CosmosDB to create - possible values are <cite>GlobalDocumentDB</cite> and <cite>MongoDB</cite>. Defaults to <cite>GlobalDocumentDB</cite>. Changing this forces a new resource to be created.
+:param pulumi.Input[str] kind: Specifies the Kind of CosmosDB to create - possible values are <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code> and <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code>. Changing this forces a new resource to be created.
 :param pulumi.Input[str] location: The name of the Azure region to host replicated data.
-:param pulumi.Input[str] name: Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
-:param pulumi.Input[str] offer_type: Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to <cite>Standard</cite>.
+:param pulumi.Input[str] name: The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, and <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>.
+:param pulumi.Input[str] offer_type: Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.
 :param pulumi.Input[str] resource_group_name: The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 :param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[list] virtual_network_rules: Specifies a <cite>virtual_network_rules</cite> resource, used to define which subnets are allowed to access this CosmosDB account.</p>
+:param pulumi.Input[list] virtual_network_rules: Specifies a <code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> resource, used to define which subnets are allowed to access this CosmosDB account.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.capabilities">
 <code class="descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.capabilities" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable capabilities for this Cosmos DB account. Possible values are <cite>EnableTable</cite> and <cite>EnableGremlin</cite>.</p>
+<dd><p>The capabilities which should be enabled for this Cosmos DB account. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.connection_strings">
 <code class="descname">connection_strings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.connection_strings" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of connection strings available for this CosmosDB account. If the kind is <cite>GlobalDocumentDB</cite>, this will be empty.</p>
+<dd><p>A list of connection strings available for this CosmosDB account. If the kind is <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code>, this will be empty.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.consistency_policy">
 <code class="descname">consistency_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.consistency_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a <cite>consistency_policy</cite> resource, used to define the consistency policy for this CosmosDB account.</p>
+<dd><p>Specifies a <code class="docutils literal notranslate"><span class="pre">consistency_policy</span></code> resource, used to define the consistency policy for this CosmosDB account.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -70,7 +70,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.geo_locations">
 <code class="descname">geo_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.geo_locations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a <cite>geo_location</cite> resource, used to define where data should be replicated with the <cite>failover_priority</cite> 0 specifying the primary location.</p>
+<dd><p>Specifies a <code class="docutils literal notranslate"><span class="pre">geo_location</span></code> resource, used to define where data should be replicated with the <code class="docutils literal notranslate"><span class="pre">failover_priority</span></code> 0 specifying the primary location.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -88,7 +88,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.kind">
 <code class="descname">kind</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.kind" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Kind of CosmosDB to create - possible values are <cite>GlobalDocumentDB</cite> and <cite>MongoDB</cite>. Defaults to <cite>GlobalDocumentDB</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the Kind of CosmosDB to create - possible values are <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code> and <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -100,13 +100,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p>
+<dd><p>The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, and <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.offer_type">
 <code class="descname">offer_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.offer_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to <cite>Standard</cite>.</p>
+<dd><p>Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -154,7 +154,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.virtual_network_rules">
 <code class="descname">virtual_network_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.virtual_network_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies a <cite>virtual_network_rules</cite> resource, used to define which subnets are allowed to access this CosmosDB account.</p>
+<dd><p>Specifies a <code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> resource, used to define which subnets are allowed to access this CosmosDB account.</p>
 </dd></dl>
 
 <dl class="attribute">

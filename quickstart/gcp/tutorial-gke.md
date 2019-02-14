@@ -11,75 +11,70 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1.  In a new folder `gke-hello-world`, create an empty project with `pulumi new`.
 
+    This will create a base Pulumi program in TypeScript, and is great
+    recommendation to begin your journey.
+
     ```bash
     $ pulumi new typescript --dir gke-hello-world
     ```
 
-    Enter in a project name, description, and stack name. Select 'no' when prompted to 'perform this update,' as we'll be editing files in the next steps.
+    * Enter in a Pulumi project name, and description to detail what this
+      Pulumi program does
+    * Enter in a name for the [Pulumi stack](https://pulumi.io/reference/stack.html), which is an instance of our Pulumi program, and is used to distinguish amongst different development phases and environments of your work streams.
+    * Select 'no' when prompted to 'perform this update,' as we'll be
+    interactively editing files in the upcoming steps.
+
+    Change directories to the newly created Pulumi project.
 
     ```bash
     $ cd gke-hello-world
     ```
 
+1. Add the required dependencies:
+
+    This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
+
+	```bash
+	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
+	```
+
 1. Set the required GCP configuration variables:
 
-    This sets the GCP project and zone for our GKE cluster.
+    This sets the GCP project and zone for our GKE cluster used in the current
+    stack instance of our Pulumi program. This can used as a means to define
+    defaults, and differentiate between settings across several Pulumi stacks.
 
     ```bash
-    $ pulumi config set gcp:project <your-gcp-project-here>
+    $ pulumi config set gcp:project <YOUR_GCP_PROJECT_HERE>
     $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
 
-1.  Create a new file named `config.ts`, and insert the following content:
+1.  Open the existing file `index.ts`, and replace the contents with the following below.
 
-    This sets some configuration options and default values for our GKE
-    cluster.
+    The `index.ts` occupies the role as the *main* entrypoint in our Pulumi
+    program. In it, we are going to declare:
 
-    ```typescript
-    import { Config } from "@pulumi/pulumi";
-
-    const config = new Config();
-
-    export const clusterConfig = {
-        // nodeCount is the number of cluster nodes to provision. Defaults to 2 if unspecified.
-        nodeCount: config.getNumber("nodeCount") || 2,
-
-        // nodeMachineType is the machine type to use for cluster nodes. Defaults to n1-standard-1 if unspecified.
-        // See https://cloud.google.com/compute/docs/machine-types for more details on available machine types.
-        nodeMachineType: config.get("nodeMachineType") || "n1-standard-1",
-
-        // minMasterVersion is the minimum master version used in the cluster. Defaults to 'latest' if unspecified.
-        minMasterVersion: config.get("minMasterVersion") || "latest",
-
-        // nodeVersion is the node version used in the cluster. Defaults to 'latest' if unspecified.
-        nodeVersion: config.get("nodeVersion") || "latest"
-    };
-    ```
-
-1.  Open the existing file `index.ts`, and replace the contents with the following:
-
-    This declares:
-	* The resources we want in GCP to provision the GKE cluster,
+	* The resources we want in GCP to provision the GKE cluster based on our
+      cluster configuration settings,
 	* The `kubeconfig` file to access the cluster, and
 	* The initialization of a Pulumi Kubernetes provider with the
-	`kubeconfig` so that we can deploy Kubernetes resources to it in
-	the next steps.
+	`kubeconfig`, so that we can deploy Kubernetes resources to the cluster
+    once its ready in the next steps.
 
     ```typescript
     import * as k8s from "@pulumi/kubernetes";
     import * as pulumi from "@pulumi/pulumi";
     import * as gcp from "@pulumi/gcp";
-    import { clusterConfig } from "./config";
 
     const name = "helloworld";
 
     // Create a GKE cluster
     const cluster = new gcp.container.Cluster(name, {
-        initialNodeCount: clusterConfig.nodeCount,
-        minMasterVersion: clusterConfig.minMasterVersion,
-        nodeVersion: clusterConfig.nodeVersion,
+        initialNodeCount: 2,
+        minMasterVersion: "latest",
+        nodeVersion: "latest",
         nodeConfig: {
-            machineType: clusterConfig.nodeMachineType,
+            machineType: "n1-standard-1",
             oauthScopes: [
                 "https://www.googleapis.com/auth/compute",
                 "https://www.googleapis.com/auth/devstorage.read_only",
@@ -132,14 +127,6 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     });
     ```
 
-1. Add the required dependencies:
-
-    This installs the dependent packages needed for our Pulumi program.
-
-	```bash
-	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
-	```
-
 1.  To preview and deploy changes, run `pulumi up` and select "yes."
 
     The `up` sub-command shows a preview of the resources that will be created
@@ -147,8 +134,11 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     itself is counted as a resource, though it does not correspond
     to a physical cloud resource.
 
+    You can also run `pulumi up --diff` to see and inspect the diffs of the
+    overall changes expected to take place.
+
     Running `pulumi up` will deploy the GKE cluster. Note, provisioning a
-    new GKE cluster takes between 2-5 minutes.
+    new GKE cluster takes between 3-5 minutes.
 
 	```bash
 	$ pulumi up
@@ -179,20 +169,11 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 	Duration: 4m37s
 	```
 
-	> *Note*: By default, your cluster's config will be set to use 2 nodes of
-	> type `n1-standard-1`. This is configurable, however; for instance if
-	> we'd like to choose 3 nodes of type `n1-standard-2` instead,
-	> we can run these commands and then `pulumi up` on a future run:
-	>
-	> ```bash
-	> $ pulumi config set nodeCount 3
-	> $ pulumi config set nodeMachineType n1-standard-2
-	> ```
-
 ## Access the Kubernetes Cluster using Pulumi Providers
 
 Now that we have an instance of Kubernetes running, we may want to create API resources in Kubernetes to manage our workloads through Pulumi.
-We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program.
+
+We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are indendent of their underyling cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
 
 1.  Create a new Kubernetes Namespace and Deployment:
 
@@ -277,13 +258,8 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
     the minimally disruptive change to achieve the desired state. The CLI will
     also output incremental status updates, as the Kubernetes changes progress.
 
-    > **Note:** Pulumi auto-generates a suffix for all objects. Pulumi's object model does
-    > create-before-delete replacements by default on updates, but this will only work if
-    > you are using name auto-generation so that the newly created resource is
-    > guaranteed to have a differing, non-conflicting name. Doing this
-    > allows a new resource to be created, and dependencies to be updated to
-    > point to the new resource, before the old resource is deleted.
-    > This is generally quite useful.
+	> **Note:** Pulumi auto-generates a suffix for all objects.
+    > See the [Pulumi Programming Model](../../reference/programming-model.md#autonaming) for more info.
     >
     > ```
     > ...
@@ -294,7 +270,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
 	> servicePublicIP: "35.236.26.151"
     > ```
 
-    If you visit the FQDN listed in `serviceHostname` you should land on the
+    If you visit the FQDN listed in `servicePublicIP` you should land on the
     NGINX welcome page. Note, that it may take a minute or so for the
     LoadBalancer to become active on GCP.
 
@@ -401,3 +377,11 @@ Managed Kubernetes cluster on GCP GKE.
 
 For a follow-up example on how to use Pulumi programs to create a Kubernetes
 apps on your new cluster, see [Kubernetes Tutorial: Getting Started With Pulumi](../kubernetes/tutorial-configmap-rollout.html).
+
+We also encourage you to watch Joe Beda, co-founder of Kubernetes and Heptio,
+take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik).
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ILMK65YVSKw" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>

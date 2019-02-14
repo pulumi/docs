@@ -2,16 +2,17 @@
 <span id="securitycenter"></span><h1>securitycenter<a class="headerlink" href="#module-pulumi_azure.securitycenter" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.securitycenter.Contact">
-<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Contact</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>alert_notifications=None</em>, <em>alerts_to_admins=None</em>, <em>email=None</em>, <em>phone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Contact" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Contact</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alert_notifications=None</em>, <em>alerts_to_admins=None</em>, <em>email=None</em>, <em>phone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Contact" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the subscription’s Security Center Contact.</p>
-<p>&gt; <strong>NOTE:</strong> Owner access permission is required.</p>
+<blockquote>
+<div><strong>NOTE:</strong> Owner access permission is required.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>alert_notifications</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to send security alerts notifications to the security contact.</li>
 <li><strong>alerts_to_admins</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to send security alerts notifications to subscription admins.</li>
 <li><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email of the Security Center Contact.</li>
@@ -87,18 +88,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.securitycenter.SubscriptionPricing">
-<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">SubscriptionPricing</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>tier=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">SubscriptionPricing</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>tier=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the Pricing Tier for Azure Security Center in the current subscription.</p>
-<p>&gt; <strong>NOTE:</strong> This resource requires the <cite>Owner</cite> permission on the Subscription.</p>
-<p>&gt; <strong>NOTE:</strong> Deletion of this resource does not change or reset the pricing tier to <cite>Free</cite></p>
+<blockquote>
+<div><p><strong>NOTE:</strong> This resource requires the <code class="docutils literal notranslate"><span class="pre">Owner</span></code> permission on the Subscription.</p>
+<p><strong>NOTE:</strong> Deletion of this resource does not change or reset the pricing tier to <code class="docutils literal notranslate"><span class="pre">Free</span></code></p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pricing tier to use. Possible values are <cite>Free</cite> and <cite>Standard</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>tier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The pricing tier to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -107,7 +110,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.securitycenter.SubscriptionPricing.tier">
 <code class="descname">tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.securitycenter.SubscriptionPricing.tier" title="Permalink to this definition">¶</a></dt>
-<dd><p>The pricing tier to use. Possible values are <cite>Free</cite> and <cite>Standard</cite>.</p>
+<dd><p>The pricing tier to use. Possible values are <code class="docutils literal notranslate"><span class="pre">Free</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -152,17 +155,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.securitycenter.Workspace">
-<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Workspace</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>scope=None</em>, <em>workspace_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Workspace" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.securitycenter.</code><code class="descname">Workspace</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>scope=None</em>, <em>workspace_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.Workspace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages the subscription’s Security Center Workspace.</p>
-<p>&gt; <strong>NOTE:</strong> Owner access permission is required.</p>
-<p>&gt; <strong>NOTE:</strong> The subscription’s pricing model can not be <cite>Free</cite> for this to have any affect.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Owner access permission is required.</p>
+<p><strong>NOTE:</strong> The subscription’s pricing model can not be <code class="docutils literal notranslate"><span class="pre">Free</span></code> for this to have any affect.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.</li>
 <li><strong>workspace_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Log Analytics Workspace to save the data in.</li>
 </ul>

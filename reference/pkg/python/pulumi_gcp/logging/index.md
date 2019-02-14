@@ -2,25 +2,25 @@
 <span id="logging"></span><h1>logging<a class="headerlink" href="#module-pulumi_gcp.logging" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.logging.BillingAccountExclusion">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">BillingAccountExclusion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>billing_account=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountExclusion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">BillingAccountExclusion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_account=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a billing account logging exclusion. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Excluding Logs](<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">https://cloud.google.com/logging/docs/exclusions</a>).</p>
-<p>Note that you must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with Terraform.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing account to create the exclusion for.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description.</li>
 <li><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this exclusion rule should be disabled or not. This defaults to
 false.</li>
 <li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
 write a filter.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging exclusion.</li>
 </ul>
@@ -51,7 +51,7 @@ false.</p>
 <dt id="pulumi_gcp.logging.BillingAccountExclusion.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountExclusion.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -103,33 +103,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.BillingAccountSink">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">BillingAccountSink</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>billing_account=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">BillingAccountSink</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>billing_account=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a billing account logging sink. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Exporting Logs in the API](<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">https://cloud.google.com/logging/docs/api/tasks/exporting-logs</a>).</p>
-<p>&gt; <strong>Note</strong> You must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
-[granted on the billing account](<a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/billingAccounts/getIamPolicy">https://cloud.google.com/billing/reference/rest/v1/billingAccounts/getIamPolicy</a>) to
-the credentials used with Terraform. [IAM roles granted on a billing account](<a class="reference external" href="https://cloud.google.com/billing/docs/how-to/billing-access">https://cloud.google.com/billing/docs/how-to/billing-access</a>) are separate from the
-typical IAM roles granted on a project.</p>
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<blockquote>
+<div><strong>Note</strong> You must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
+<a class="reference external" href="https://cloud.google.com/billing/reference/rest/v1/billingAccounts/getIamPolicy">granted on the billing account</a> to
+the credentials used with Terraform. <a class="reference external" href="https://cloud.google.com/billing/docs/how-to/billing-access">IAM roles granted on a billing account</a> are separate from the
+typical IAM roles granted on a project.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>billing_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing account exported to the sink.</li>
 <li><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging sink.</li>
 </ul>
 </td>
@@ -147,11 +144,6 @@ write a filter.</li>
 <code class="descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
@@ -159,7 +151,7 @@ The writer associated with the sink must have access to write to the above resou
 <dt id="pulumi_gcp.logging.BillingAccountSink.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -173,7 +165,7 @@ write a filter.</p>
 <dt id="pulumi_gcp.logging.BillingAccountSink.writer_identity">
 <code class="descname">writer_identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.BillingAccountSink.writer_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identity associated with this sink. This identity must be granted write access to the
-configured <cite>destination</cite>.</p>
+configured <code class="docutils literal notranslate"><span class="pre">destination</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -218,25 +210,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.FolderExclusion">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">FolderExclusion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>folder=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderExclusion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">FolderExclusion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>folder=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a folder-level logging exclusion. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Excluding Logs](<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">https://cloud.google.com/logging/docs/exclusions</a>).</p>
-<p>Note that you must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with Terraform.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description.</li>
 <li><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this exclusion rule should be disabled or not. This defaults to
 false.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder to be exported to the sink. Note that either [FOLDER_ID] or “folders/[FOLDER_ID]” is
 accepted.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging exclusion.</li>
@@ -262,7 +255,7 @@ false.</p>
 <dt id="pulumi_gcp.logging.FolderExclusion.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderExclusion.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -321,30 +314,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.FolderSink">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">FolderSink</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>folder=None</em>, <em>include_children=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderSink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">FolderSink</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>folder=None</em>, <em>include_children=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderSink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a folder-level logging sink. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Exporting Logs in the API](<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">https://cloud.google.com/logging/docs/api/tasks/exporting-logs</a>).</p>
-<p>Note that you must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with terraform.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder to be exported to the sink. Note that either [FOLDER_ID] or “folders/[FOLDER_ID]” is
 accepted.</li>
 <li><strong>include_children</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to include children folders in the sink export. If true, logs
@@ -360,11 +349,6 @@ associated with child projects are also exported; otherwise only logs relating t
 <code class="descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
@@ -372,7 +356,7 @@ The writer associated with the sink must have access to write to the above resou
 <dt id="pulumi_gcp.logging.FolderSink.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderSink.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -400,7 +384,7 @@ associated with child projects are also exported; otherwise only logs relating t
 <dt id="pulumi_gcp.logging.FolderSink.writer_identity">
 <code class="descname">writer_identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.FolderSink.writer_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identity associated with this sink. This identity must be granted write access to the
-configured <cite>destination</cite>.</p>
+configured <code class="docutils literal notranslate"><span class="pre">destination</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -445,25 +429,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.OrganizationExclusion">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">OrganizationExclusion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>org_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationExclusion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">OrganizationExclusion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>org_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an organization-level logging exclusion. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Excluding Logs](<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">https://cloud.google.com/logging/docs/exclusions</a>).</p>
-<p>Note that you must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with Terraform.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description.</li>
 <li><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this exclusion rule should be disabled or not. This defaults to
 false.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging exclusion.</li>
 <li><strong>org_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The organization to create the exclusion in.</li>
 </ul>
@@ -488,7 +473,7 @@ false.</p>
 <dt id="pulumi_gcp.logging.OrganizationExclusion.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationExclusion.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -546,30 +531,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.OrganizationSink">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">OrganizationSink</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>include_children=None</em>, <em>name=None</em>, <em>org_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">OrganizationSink</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>include_children=None</em>, <em>name=None</em>, <em>org_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a organization-level logging sink. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Exporting Logs in the API](<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">https://cloud.google.com/logging/docs/api/tasks/exporting-logs</a>).</p>
-<p>Note that you must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with terraform.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>include_children</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging sink.</li>
@@ -584,11 +565,6 @@ associated with child projects are also exported; otherwise only logs relating t
 <code class="descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
@@ -596,7 +572,7 @@ The writer associated with the sink must have access to write to the above resou
 <dt id="pulumi_gcp.logging.OrganizationSink.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -623,7 +599,7 @@ associated with child projects are also exported; otherwise only logs relating t
 <dt id="pulumi_gcp.logging.OrganizationSink.writer_identity">
 <code class="descname">writer_identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink.writer_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identity associated with this sink. This identity must be granted write access to the
-configured <cite>destination</cite>.</p>
+configured <code class="docutils literal notranslate"><span class="pre">destination</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -668,25 +644,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.ProjectExclusion">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">ProjectExclusion</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectExclusion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">ProjectExclusion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectExclusion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a project-level logging exclusion. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>) and
-[Excluding Logs](<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">https://cloud.google.com/logging/docs/exclusions</a>).</p>
-<p>Note that you must have the “Logs Configuration Writer” IAM role (<cite>roles/logging.configWriter</cite>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
 granted to the credentials used with Terraform.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description.</li>
 <li><strong>disabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this exclusion rule should be disabled or not. This defaults to
 false.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging exclusion.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project to create the exclusion in. If omitted, the project associated with the provider is
 used.</li>
@@ -712,7 +689,7 @@ false.</p>
 <dt id="pulumi_gcp.logging.ProjectExclusion.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectExclusion.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -771,39 +748,37 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.logging.ProjectSink">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">ProjectSink</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>project=None</em>, <em>unique_writer_identity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.logging.</code><code class="descname">ProjectSink</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>destination=None</em>, <em>filter=None</em>, <em>name=None</em>, <em>project=None</em>, <em>unique_writer_identity=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a project-level logging sink. For more information see
-[the official documentation](<a class="reference external" href="https://cloud.google.com/logging/docs/">https://cloud.google.com/logging/docs/</a>),
-[Exporting Logs in the API](<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">https://cloud.google.com/logging/docs/api/tasks/exporting-logs</a>)
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a>,
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>
 and
-[API](<a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/">https://cloud.google.com/logging/docs/reference/v2/rest/</a>).</p>
-<p>&gt; <strong>Note:</strong> You must have [granted the “Logs Configuration Writer”](<a class="reference external" href="https://cloud.google.com/logging/docs/access-control">https://cloud.google.com/logging/docs/access-control</a>) IAM role (<cite>roles/logging.configWriter</cite>) to the credentials used with terraform.</p>
-<p>&gt; <strong>Note</strong> You must [enable the Cloud Resource Manager API](<a class="reference external" href="https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com">https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com</a>)</p>
+<a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/">API</a>.</p>
+<blockquote>
+<div><p><strong>Note:</strong> You must have <a class="reference external" href="https://cloud.google.com/logging/docs/access-control">granted the “Logs Configuration Writer”</a> IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>) to the credentials used with terraform.</p>
+<p><strong>Note</strong> You must <a class="reference external" href="https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com">enable the Cloud Resource Manager API</a></p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</li>
-<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
-write a filter.</li>
+<li><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
+write a filter.</p>
+</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the logging sink.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project to create the sink in. If omitted, the project associated with the provider is
 used.</li>
-<li><strong>unique_writer_identity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to create a unique identity associated with this sink. If <cite>false</cite>
-(the default), then the <cite>writer_identity</cite> used is <cite>serviceAccount:cloud-logs&#64;system.gserviceaccount.com</cite>. If <cite>true</cite>,
+<li><strong>unique_writer_identity</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to create a unique identity associated with this sink. If <code class="docutils literal notranslate"><span class="pre">false</span></code>
+(the default), then the <code class="docutils literal notranslate"><span class="pre">writer_identity</span></code> used is <code class="docutils literal notranslate"><span class="pre">serviceAccount:cloud-logs&#64;system.gserviceaccount.com</span></code>. If <code class="docutils literal notranslate"><span class="pre">true</span></code>,
 then a unique service account is created and used for this sink. If you wish to publish logs across projects, you
-must set <cite>unique_writer_identity</cite> to true.</li>
+must set <code class="docutils literal notranslate"><span class="pre">unique_writer_identity</span></code> to true.</li>
 </ul>
 </td>
 </tr>
@@ -814,11 +789,6 @@ must set <cite>unique_writer_identity</cite> to true.</li>
 <code class="descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">&quot;storage.googleapis.com/[GCS_BUCKET]&quot;</span>
-<span class="pre">&quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;</span>
-<span class="pre">&quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</span>
-<span class="pre">`</span></code>
 The writer associated with the sink must have access to write to the above resource.</p>
 </dd></dl>
 
@@ -826,7 +796,7 @@ The writer associated with the sink must have access to write to the above resou
 <dt id="pulumi_gcp.logging.ProjectSink.filter">
 <code class="descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">https://cloud.google.com/logging/docs/view/advanced_filters</a>) for information on how to
+See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
 </dd></dl>
 
@@ -846,17 +816,17 @@ used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.ProjectSink.unique_writer_identity">
 <code class="descname">unique_writer_identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.unique_writer_identity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether or not to create a unique identity associated with this sink. If <cite>false</cite>
-(the default), then the <cite>writer_identity</cite> used is <cite>serviceAccount:cloud-logs&#64;system.gserviceaccount.com</cite>. If <cite>true</cite>,
+<dd><p>Whether or not to create a unique identity associated with this sink. If <code class="docutils literal notranslate"><span class="pre">false</span></code>
+(the default), then the <code class="docutils literal notranslate"><span class="pre">writer_identity</span></code> used is <code class="docutils literal notranslate"><span class="pre">serviceAccount:cloud-logs&#64;system.gserviceaccount.com</span></code>. If <code class="docutils literal notranslate"><span class="pre">true</span></code>,
 then a unique service account is created and used for this sink. If you wish to publish logs across projects, you
-must set <cite>unique_writer_identity</cite> to true.</p>
+must set <code class="docutils literal notranslate"><span class="pre">unique_writer_identity</span></code> to true.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_gcp.logging.ProjectSink.writer_identity">
 <code class="descname">writer_identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink.writer_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The identity associated with this sink. This identity must be granted write access to the
-configured <cite>destination</cite>.</p>
+configured <code class="docutils literal notranslate"><span class="pre">destination</span></code>.</p>
 </dd></dl>
 
 <dl class="method">

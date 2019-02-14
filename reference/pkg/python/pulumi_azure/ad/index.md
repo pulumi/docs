@@ -2,22 +2,24 @@
 <span id="ad"></span><h1>ad<a class="headerlink" href="#module-pulumi_azure.ad" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.ad.Application">
-<em class="property">class </em><code class="descclassname">pulumi_azure.ad.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>available_to_other_tenants=None</em>, <em>homepage=None</em>, <em>identifier_uris=None</em>, <em>name=None</em>, <em>oauth2_allow_implicit_flow=None</em>, <em>reply_urls=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.Application" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.ad.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>available_to_other_tenants=None</em>, <em>homepage=None</em>, <em>identifier_uris=None</em>, <em>name=None</em>, <em>oauth2_allow_implicit_flow=None</em>, <em>reply_urls=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Application within Azure Active Directory.</p>
-<p>&gt; <strong>NOTE:</strong> The Azure Active Directory resources have been split out into [a new AzureAD Provider](<a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">http://terraform.io/docs/providers/azuread/index.html</a>) - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
-<p>-&gt; <strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <cite>Read and write all applications</cite> and <cite>Sign in and read user profile</cite> within the <cite>Windows Azure Active Directory</cite> API.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
+<p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>available_to_other_tenants</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application available to other tenants? Defaults to <cite>false</cite>.</li>
-<li><strong>homepage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the application’s home page. If no homepage is specified this defaults to <cite>https://{name}</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>available_to_other_tenants</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application available to other tenants? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>homepage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to the application’s home page. If no homepage is specified this defaults to <code class="docutils literal notranslate"><span class="pre">https://{name}</span></code>.</li>
 <li><strong>identifier_uris</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of user-defined URI(s) that uniquely identify a Web application within it’s Azure AD tenant, or within a verified custom domain if the application is multi-tenant.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the application.</li>
-<li><strong>oauth2_allow_implicit_flow</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <cite>false</cite>.</li>
+<li><strong>oauth2_allow_implicit_flow</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>reply_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.</li>
 </ul>
 </td>
@@ -33,13 +35,13 @@
 <dl class="attribute">
 <dt id="pulumi_azure.ad.Application.available_to_other_tenants">
 <code class="descname">available_to_other_tenants</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.ad.Application.available_to_other_tenants" title="Permalink to this definition">¶</a></dt>
-<dd><p>Is this Azure AD Application available to other tenants? Defaults to <cite>false</cite>.</p>
+<dd><p>Is this Azure AD Application available to other tenants? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.ad.Application.homepage">
 <code class="descname">homepage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.ad.Application.homepage" title="Permalink to this definition">¶</a></dt>
-<dd><p>The URL to the application’s home page. If no homepage is specified this defaults to <cite>https://{name}</cite>.</p>
+<dd><p>The URL to the application’s home page. If no homepage is specified this defaults to <code class="docutils literal notranslate"><span class="pre">https://{name}</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -57,7 +59,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.ad.Application.oauth2_allow_implicit_flow">
 <code class="descname">oauth2_allow_implicit_flow</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.ad.Application.oauth2_allow_implicit_flow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <cite>false</cite>.</p>
+<dd><p>Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -168,17 +170,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.ad.ServicePrincipal">
-<em class="property">class </em><code class="descclassname">pulumi_azure.ad.</code><code class="descname">ServicePrincipal</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>application_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.ServicePrincipal" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.ad.</code><code class="descname">ServicePrincipal</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>application_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.ServicePrincipal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Service Principal associated with an Application within Azure Active Directory.</p>
-<p>&gt; <strong>NOTE:</strong> The Azure Active Directory resources have been split out into [a new AzureAD Provider](<a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">http://terraform.io/docs/providers/azuread/index.html</a>) - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
-<p>-&gt; <strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <cite>Read and write all applications</cite> and <cite>Sign in and read user profile</cite> within the <cite>Windows Azure Active Directory</cite> API.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
+<p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Azure AD Application for which to create a Service Principal.</li>
 </ul>
 </td>
@@ -239,21 +243,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.ad.ServicePrincipalPassword">
-<em class="property">class </em><code class="descclassname">pulumi_azure.ad.</code><code class="descname">ServicePrincipalPassword</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>end_date=None</em>, <em>key_id=None</em>, <em>service_principal_id=None</em>, <em>start_date=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.ServicePrincipalPassword" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.ad.</code><code class="descname">ServicePrincipalPassword</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>end_date=None</em>, <em>key_id=None</em>, <em>service_principal_id=None</em>, <em>start_date=None</em>, <em>value=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.ServicePrincipalPassword" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Password associated with a Service Principal within Azure Active Directory.</p>
-<p>&gt; <strong>NOTE:</strong> The Azure Active Directory resources have been split out into [a new AzureAD Provider](<a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">http://terraform.io/docs/providers/azuread/index.html</a>) - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
-<p>-&gt; <strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <cite>Read and write all applications</cite> and <cite>Sign in and read user profile</cite> within the <cite>Windows Azure Active Directory</cite> API.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
+<p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <cite>2018-01-01T01:02:03Z</cite>). Changing this field forces a new resource to be created.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>end_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</li>
 <li><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A GUID used to uniquely identify this Key. If not specified a GUID will be created. Changing this field forces a new resource to be created.</li>
 <li><strong>service_principal_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Service Principal for which this password should be created. Changing this field forces a new resource to be created.</li>
-<li><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <cite>2018-01-01T01:02:03Z</cite>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</li>
+<li><strong>start_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</li>
 <li><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password for this Service Principal.</li>
 </ul>
 </td>
@@ -263,7 +269,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.ad.ServicePrincipalPassword.end_date">
 <code class="descname">end_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.ad.ServicePrincipalPassword.end_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <cite>2018-01-01T01:02:03Z</cite>). Changing this field forces a new resource to be created.</p>
+<dd><p>The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). Changing this field forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -281,7 +287,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.ad.ServicePrincipalPassword.start_date">
 <code class="descname">start_date</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.ad.ServicePrincipalPassword.start_date" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <cite>2018-01-01T01:02:03Z</cite>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p>
+<dd><p>The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. <code class="docutils literal notranslate"><span class="pre">2018-01-01T01:02:03Z</span></code>). If this isn’t specified, the current date is used.  Changing this field forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -334,16 +340,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.ad.get_application">
 <code class="descclassname">pulumi_azure.ad.</code><code class="descname">get_application</code><span class="sig-paren">(</span><em>name=None</em>, <em>object_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application within Azure Active Directory.</p>
-<p>&gt; <strong>NOTE:</strong> The Azure Active Directory resources have been split out into [a new AzureAD Provider](<a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">http://terraform.io/docs/providers/azuread/index.html</a>) - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
-<p>-&gt; <strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <cite>Read and write all applications</cite> and <cite>Sign in and read user profile</cite> within the <cite>Windows Azure Active Directory</cite> API.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
+<p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.ad.get_service_principal">
 <code class="descclassname">pulumi_azure.ad.</code><code class="descname">get_service_principal</code><span class="sig-paren">(</span><em>application_id=None</em>, <em>display_name=None</em>, <em>object_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.get_service_principal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about an existing Service Principal associated with an Application within Azure Active Directory.</p>
-<p>&gt; <strong>NOTE:</strong> The Azure Active Directory resources have been split out into [a new AzureAD Provider](<a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">http://terraform.io/docs/providers/azuread/index.html</a>) - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
-<p>-&gt; <strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <cite>Read and write all applications</cite> and <cite>Sign in and read user profile</cite> within the <cite>Windows Azure Active Directory</cite> API.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
+<p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

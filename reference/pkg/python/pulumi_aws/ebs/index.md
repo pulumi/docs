@@ -43,7 +43,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.GetSnapshotResult.owner_alias">
 <code class="descname">owner_alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.GetSnapshotResult.owner_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>Value from an Amazon-maintained list (<cite>amazon</cite>, <cite>aws-marketplace</cite>, <cite>microsoft</cite>) of snapshot owners.</p>
+<dd><p>Value from an Amazon-maintained list (<code class="docutils literal notranslate"><span class="pre">amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">aws-marketplace</span></code>, <code class="docutils literal notranslate"><span class="pre">microsoft</span></code>) of snapshot owners.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -164,15 +164,15 @@
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.Snapshot">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>tags=None</em>, <em>volume_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Snapshot of an EBS Volume.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of what the snapshot is.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the snapshot</li>
 <li><strong>volume_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Volume ID of which to make a snapshot.</li>
@@ -208,7 +208,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Snapshot.owner_alias">
 <code class="descname">owner_alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Snapshot.owner_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>Value from an Amazon-maintained list (<cite>amazon</cite>, <cite>aws-marketplace</cite>, <cite>microsoft</cite>) of snapshot owners.</p>
+<dd><p>Value from an Amazon-maintained list (<code class="docutils literal notranslate"><span class="pre">amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">aws-marketplace</span></code>, <code class="docutils literal notranslate"><span class="pre">microsoft</span></code>) of snapshot owners.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -277,20 +277,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.SnapshotCopy">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">SnapshotCopy</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>source_region=None</em>, <em>source_snapshot_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">SnapshotCopy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>encrypted=None</em>, <em>kms_key_id=None</em>, <em>source_region=None</em>, <em>source_snapshot_id=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Snapshot of a snapshot.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of what the snapshot is.</li>
 <li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the snapshot is encrypted.</li>
-<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key.
-* <cite>source_snapshot_id</cite> The ARN for the snapshot to be copied.
-* <cite>source_region</cite> The region of the source snapshot.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key.</li>
 </ul>
 </td>
 </tr>
@@ -302,9 +300,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id">
 <code class="descname">data_encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data encryption key identifier for the snapshot.
-* <cite>source_snapshot_id</cite> The ARN of the copied snapshot.
-* <cite>source_region</cite> The region of the source snapshot.</p>
+<dd><p>The data encryption key identifier for the snapshot.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">source_snapshot_id</span></code> The ARN of the copied snapshot.</li>
+<li><code class="docutils literal notranslate"><span class="pre">source_region</span></code> The region of the source snapshot.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -322,15 +322,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.SnapshotCopy.kms_key_id">
 <code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.kms_key_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN for the KMS encryption key.
-* <cite>source_snapshot_id</cite> The ARN for the snapshot to be copied.
-* <cite>source_region</cite> The region of the source snapshot.</p>
+<dd><p>The ARN for the KMS encryption key.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">source_snapshot_id</span></code> The ARN for the snapshot to be copied.</li>
+<li><code class="docutils literal notranslate"><span class="pre">source_region</span></code> The region of the source snapshot.</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.SnapshotCopy.owner_alias">
 <code class="descname">owner_alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.owner_alias" title="Permalink to this definition">¶</a></dt>
-<dd><p>Value from an Amazon-maintained list (<cite>amazon</cite>, <cite>aws-marketplace</cite>, <cite>microsoft</cite>) of snapshot owners.</p>
+<dd><p>Value from an Amazon-maintained list (<code class="docutils literal notranslate"><span class="pre">amazon</span></code>, <code class="docutils literal notranslate"><span class="pre">aws-marketplace</span></code>, <code class="docutils literal notranslate"><span class="pre">microsoft</span></code>) of snapshot owners.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -393,19 +395,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ebs.Volume">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.ebs.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>availability_zone=None</em>, <em>encrypted=None</em>, <em>iops=None</em>, <em>kms_key_id=None</em>, <em>size=None</em>, <em>snapshot_id=None</em>, <em>tags=None</em>, <em>type=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a single EBS volume.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ where the EBS volume will exist.</li>
 <li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the disk will be encrypted.</li>
 <li><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of IOPS to provision for the disk.</li>
-<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <cite>kms_key_id</cite>, <cite>encrypted</cite> needs to be set to true.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> needs to be set to true.</li>
 <li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the drive in GiBs.</li>
 <li><strong>snapshot_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A snapshot to base the EBS volume off of.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
@@ -442,7 +444,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.Volume.kms_key_id">
 <code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.Volume.kms_key_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN for the KMS encryption key. When specifying <cite>kms_key_id</cite>, <cite>encrypted</cite> needs to be set to true.</p>
+<dd><p>The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> needs to be set to true.</p>
 </dd></dl>
 
 <dl class="attribute">

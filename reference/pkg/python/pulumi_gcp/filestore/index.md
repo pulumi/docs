@@ -2,41 +2,32 @@
 <span id="filestore"></span><h1>filestore<a class="headerlink" href="#module-pulumi_gcp.filestore" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.filestore.Instance">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.filestore.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>description=None</em>, <em>file_shares=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>project=None</em>, <em>tier=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.filestore.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>description=None</em>, <em>file_shares=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>networks=None</em>, <em>project=None</em>, <em>tier=None</em>, <em>zone=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.filestore.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Google Cloud Filestore instance.</p>
-<p>&gt; <strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
-See [Provider Versions](<a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">https://terraform.io/docs/providers/google/provider_versions.html</a>) for more details on beta resources.</p>
+<blockquote>
+<div><strong>Warning:</strong> This resource is in beta, and should be used with the terraform-provider-google-beta provider.
+See <a class="reference external" href="https://terraform.io/docs/providers/google/provider_versions.html">Provider Versions</a> for more details on beta resources.</div></blockquote>
 <p>To get more information about Instance, see:</p>
 <ul class="simple">
-<li>[API documentation](<a class="reference external" href="https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create">https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create</a>)</li>
-<li><dl class="first docutils">
-<dt>How-to Guides</dt>
-<dd><ul class="first last">
-<li>[Official Documentation](<a class="reference external" href="https://cloud.google.com/filestore/docs/creating-instances">https://cloud.google.com/filestore/docs/creating-instances</a>)</li>
-<li>[Use with Kubernetes](<a class="reference external" href="https://cloud.google.com/filestore/docs/accessing-fileshares">https://cloud.google.com/filestore/docs/accessing-fileshares</a>)</li>
-<li>[Copying Data In/Out](<a class="reference external" href="https://cloud.google.com/filestore/docs/copying-data">https://cloud.google.com/filestore/docs/copying-data</a>)</li>
+<li><a class="reference external" href="https://cloud.google.com/filestore/docs/reference/rest/v1beta1/projects.locations.instances/create">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/filestore/docs/creating-instances">Official Documentation</a></li>
+<li><a class="reference external" href="https://cloud.google.com/filestore/docs/accessing-fileshares">Use with Kubernetes</a></li>
+<li><a class="reference external" href="https://cloud.google.com/filestore/docs/copying-data">Copying Data In/Out</a></li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
-<dl class="docutils">
-<dt>&lt;div class = “oics-button” style=”float: right; margin: 0 0 -15px”&gt;</dt>
-<dd><dl class="first docutils">
-<dt>&lt;a href=”<a class="reference external" href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&amp;cloudshell_working_dir=filestore_instance_basic&amp;cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&amp;open_in_editor=main.tf&amp;cloudshell_print=.%2Fmotd&amp;cloudshell_tutorial=.%2Ftutorial.md">https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&amp;cloudshell_working_dir=filestore_instance_basic&amp;cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&amp;open_in_editor=main.tf&amp;cloudshell_print=.%2Fmotd&amp;cloudshell_tutorial=.%2Ftutorial.md</a>” target=”_blank”&gt;</dt>
-<dd>&lt;img alt=”Open in Cloud Shell” src=”//gstatic.com/cloudssh/images/open-btn.svg” style=”max-height: 44px; margin: 32px auto; max-width: 100%;”&gt;</dd>
-</dl>
-<p class="last">&lt;/a&gt;</p>
-</dd>
-</dl>
-<p>&lt;/div&gt;</p>
-<table class="docutils field-list" frame="void" rules="none">
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=filestore_instance_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 </ul>
 </td>
 </tr>

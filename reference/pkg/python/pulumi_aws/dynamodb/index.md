@@ -14,16 +14,17 @@
 
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.GlobalTable">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">GlobalTable</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>name=None</em>, <em>replicas=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">GlobalTable</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>name=None</em>, <em>replicas=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a DynamoDB Global Table. These are layered on top of existing DynamoDB Tables.</p>
-<p>&gt; Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the [AWS DynamoDB Global Table Requirements](<a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html</a>) for more information.</p>
+<blockquote>
+<div>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the global table. Must match underlying DynamoDB Table names in all regions.</li>
 <li><strong>replicas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Underlying DynamoDB Table. At least 1 replica must be defined. See below.</li>
 </ul>
@@ -91,18 +92,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.Table">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>attributes=None</em>, <em>billing_mode=None</em>, <em>global_secondary_indexes=None</em>, <em>hash_key=None</em>, <em>local_secondary_indexes=None</em>, <em>name=None</em>, <em>point_in_time_recovery=None</em>, <em>range_key=None</em>, <em>read_capacity=None</em>, <em>server_side_encryption=None</em>, <em>stream_enabled=None</em>, <em>stream_view_type=None</em>, <em>tags=None</em>, <em>ttl=None</em>, <em>write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>billing_mode=None</em>, <em>global_secondary_indexes=None</em>, <em>hash_key=None</em>, <em>local_secondary_indexes=None</em>, <em>name=None</em>, <em>point_in_time_recovery=None</em>, <em>range_key=None</em>, <em>read_capacity=None</em>, <em>server_side_encryption=None</em>, <em>stream_enabled=None</em>, <em>stream_view_type=None</em>, <em>tags=None</em>, <em>ttl=None</em>, <em>write_capacity=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DynamoDB table resource</p>
-<p>&gt; <strong>Note:</strong> It is recommended to use <cite>lifecycle</cite> [<cite>ignore_changes</cite>](<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes">https://www.terraform.io/docs/configuration/resources.html#ignore_changes</a>) for <cite>read_capacity</cite> and/or <cite>write_capacity</cite> if there’s [autoscaling policy](<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html</a>) attached to the table.</p>
+<blockquote>
+<div><strong>Note:</strong> It is recommended to use <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> <cite>``ignore_changes`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/configuration/resources.html#ignore_changes">https://www.terraform.io/docs/configuration/resources.html#ignore_changes</a>&gt;`_ for <code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> and/or <code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> if there’s <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested attribute definitions. Only required for <cite>hash_key</cite> and <cite>range_key</cite> attributes. Each attribute has two properties:</li>
-<li><strong>billing_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls how you are charged for read and write throughput and how you manage capacity. The valid values are <cite>PROVISIONED</cite> and <cite>PAY_PER_REQUEST</cite>. Defaults to <cite>PROVISIONED</cite>.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested attribute definitions. Only required for <code class="docutils literal notranslate"><span class="pre">hash_key</span></code> and <code class="docutils literal notranslate"><span class="pre">range_key</span></code> attributes. Each attribute has two properties:</li>
+<li><strong>billing_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls how you are charged for read and write throughput and how you manage capacity. The valid values are <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code> and <code class="docutils literal notranslate"><span class="pre">PAY_PER_REQUEST</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code>.</li>
 <li><strong>global_secondary_indexes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Describe a GSO for the table;
 subject to the normal limits on the number of GSIs, projected
 attributes, etc.</li>
@@ -117,7 +119,7 @@ definition after you have created the resource.</li>
 <li><strong>read_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</li>
 <li><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options.</li>
 <li><strong>stream_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Streams are to be enabled (true) or disabled (false).</li>
-<li><strong>stream_view_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When an item in the table is modified, StreamViewType determines what information is written to the table’s stream. Valid values are <cite>KEYS_ONLY</cite>, <cite>NEW_IMAGE</cite>, <cite>OLD_IMAGE</cite>, <cite>NEW_AND_OLD_IMAGES</cite>.</li>
+<li><strong>stream_view_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When an item in the table is modified, StreamViewType determines what information is written to the table’s stream. Valid values are <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">OLD_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_AND_OLD_IMAGES</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to populate on the created table.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines ttl, has two properties, and can only be specified once:</li>
 <li><strong>write_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.</li>
@@ -135,13 +137,13 @@ definition after you have created the resource.</li>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.attributes">
 <code class="descname">attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.attributes" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of nested attribute definitions. Only required for <cite>hash_key</cite> and <cite>range_key</cite> attributes. Each attribute has two properties:</p>
+<dd><p>List of nested attribute definitions. Only required for <code class="docutils literal notranslate"><span class="pre">hash_key</span></code> and <code class="docutils literal notranslate"><span class="pre">range_key</span></code> attributes. Each attribute has two properties:</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.billing_mode">
 <code class="descname">billing_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.billing_mode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Controls how you are charged for read and write throughput and how you manage capacity. The valid values are <cite>PROVISIONED</cite> and <cite>PAY_PER_REQUEST</cite>. Defaults to <cite>PROVISIONED</cite>.</p>
+<dd><p>Controls how you are charged for read and write throughput and how you manage capacity. The valid values are <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code> and <code class="docutils literal notranslate"><span class="pre">PAY_PER_REQUEST</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PROVISIONED</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -200,7 +202,7 @@ definition after you have created the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.stream_arn">
 <code class="descname">stream_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.stream_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN of the Table Stream. Only available when <cite>stream_enabled = true</cite></p>
+<dd><p>The ARN of the Table Stream. Only available when <code class="docutils literal notranslate"><span class="pre">stream_enabled</span> <span class="pre">=</span> <span class="pre">true</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -215,13 +217,13 @@ definition after you have created the resource.</p>
 <dd><p>A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
 a unique identifier for the stream on its own. However, the combination of AWS customer ID,
 table name and this field is guaranteed to be unique.
-It can be used for creating CloudWatch Alarms. Only available when <cite>stream_enabled = true</cite></p>
+It can be used for creating CloudWatch Alarms. Only available when <code class="docutils literal notranslate"><span class="pre">stream_enabled</span> <span class="pre">=</span> <span class="pre">true</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.stream_view_type">
 <code class="descname">stream_view_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.stream_view_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>When an item in the table is modified, StreamViewType determines what information is written to the table’s stream. Valid values are <cite>KEYS_ONLY</cite>, <cite>NEW_IMAGE</cite>, <cite>OLD_IMAGE</cite>, <cite>NEW_AND_OLD_IMAGES</cite>.</p>
+<dd><p>When an item in the table is modified, StreamViewType determines what information is written to the table’s stream. Valid values are <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">OLD_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_AND_OLD_IMAGES</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -284,19 +286,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.TableItem">
-<em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">TableItem</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>hash_key=None</em>, <em>item=None</em>, <em>range_key=None</em>, <em>table_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.TableItem" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.dynamodb.</code><code class="descname">TableItem</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>hash_key=None</em>, <em>item=None</em>, <em>range_key=None</em>, <em>table_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.TableItem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DynamoDB table item resource</p>
-<dl class="docutils">
-<dt>-&gt; <strong>Note:</strong> This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.</dt>
-<dd>You should perform <strong>regular backups</strong> of all data in the table, see [AWS docs for more](<a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html">https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html</a>).</dd>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>Note:</strong> This resource is not meant to be used for managing large amounts of data in your table, it is not designed to scale.</dt>
+<dd>You should perform <strong>regular backups</strong> of all data in the table, see <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html">AWS docs for more</a>.</dd>
 </dl>
+</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>hash_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Hash key to use for lookups and identification of the item</li>
 <li><strong>item</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.</li>

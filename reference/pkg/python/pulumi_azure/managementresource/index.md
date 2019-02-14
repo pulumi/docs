@@ -2,16 +2,16 @@
 <span id="managementresource"></span><h1>managementresource<a class="headerlink" href="#module-pulumi_azure.managementresource" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_azure.managementresource.ManangementLock">
-<em class="property">class </em><code class="descclassname">pulumi_azure.managementresource.</code><code class="descname">ManangementLock</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>lock_level=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_azure.managementresource.</code><code class="descname">ManangementLock</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>lock_level=None</em>, <em>name=None</em>, <em>notes=None</em>, <em>scope=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>__name__</strong> (<em>str</em>) – The name of the resource.</li>
-<li><strong>__opts__</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>lock_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Level to be used for this Lock. Possible values are <cite>CanNotDelete</cite> and <cite>ReadOnly</cite>. Changing this forces a new resource to be created.</li>
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>lock_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Level to be used for this Lock. Possible values are <code class="docutils literal notranslate"><span class="pre">CanNotDelete</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Management Lock. Changing this forces a new resource to be created.</li>
 <li><strong>notes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.</li>
 <li><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.</li>
@@ -23,7 +23,7 @@
 <dl class="attribute">
 <dt id="pulumi_azure.managementresource.ManangementLock.lock_level">
 <code class="descname">lock_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.managementresource.ManangementLock.lock_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the Level to be used for this Lock. Possible values are <cite>CanNotDelete</cite> and <cite>ReadOnly</cite>. Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the Level to be used for this Lock. Possible values are <code class="docutils literal notranslate"><span class="pre">CanNotDelete</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
