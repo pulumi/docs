@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Runs typedoc on various Pulumi repos and copies them to 
+# Runs typedoc on various Pulumi repos and copies them to
 # the /libraries folder.
 
 # NOTE: typedoc needs to be installed globally (see README.md) rather than
@@ -70,5 +70,6 @@ generate_docs "openstack" "pulumi-openstack" "sdk/nodejs"
 generate_docs "vsphere" "pulumi-vsphere" "sdk/nodejs"
 generate_docs "f5bigip" "pulumi-f5bigip" "sdk/nodejs"
 generate_docs "packet" "pulumi-packet" "sdk/nodejs"
+generate_docs "random" "pulumi-random" "sdk/nodejs"
 
 echo "Done"
