@@ -46,7 +46,7 @@ different dimensions. This approach has several advantages:
 
 * **Independence.** Although Pulumi can diff changes and make only those updates mandated by a code edit,
   certain projects sometimes deploy at radically different cadences and it makes sense to enforce this separation
-  in project structure. For instance, a service that revs every day may not be appropriate to live alongside
+  in project structure. For instance, a service that revs every day may not be appropriate to live in the same project as
   critical infrastructure that changes infrequently and which demands intense scrutiny whenever it does.
 
 * **Security.** In large organizations, it's important to use RBAC to secure access to individual aspects
