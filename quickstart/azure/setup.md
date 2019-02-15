@@ -95,14 +95,16 @@ For example, a common Service Principal as displayed by the Azure CLI looks some
 The environment variables would then be set as such:
 
 ```bash
-$ export ARM_CLIENT_ID="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
-$ export ARM_CLIENT_SECRET="YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
-$ export ARM_TENANT_ID="ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
+$ export ARM_CLIENT_ID="WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
+$ export ARM_CLIENT_SECRET="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+$ export ARM_TENANT_ID="YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+$ export ARM_SUBSCRIPTION_ID="ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 ```
 
 Or configuration variables, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
 ```bash
+$ pulumi config set azure:subscriptionId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
 $ pulumi config set azure:clientId "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 $ pulumi config set azure:clientSecret "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY" --secret
 $ pulumi config set azure:tenantId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
