@@ -56,11 +56,12 @@ Service Principal is the recommended way to connect Pulumi to Azure in a team or
 
 Once obtained, there are two ways to communicate your authorization tokens to Pulumi:
 
-1. Set the environment variables `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID`, respectively
+1. Set the environment variables `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, and `ARM_SUBSCRIPTION_ID` respectively
 
 2. Set them using configuration
 
     ```bash
+    $ pulumi config set azure:subscriptionId <subscriptionId>
     $ pulumi config set azure:clientId <clientID>
     $ pulumi config set azure:clientSecret <clientSecret> --secret
     $ pulumi config set azure:tenantId <tenantID>
@@ -72,6 +73,7 @@ To use a Service Principal, you must first create one.  This can be done using t
 Please refer to the Azure documentation for detailed instructions:
 
 * [Using the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
+* Alternatively you can use [Azure Cloud Shell](https://shell.azure.com/) if you do not want to install Azure CLI 
 * [Using the Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal?view=azure-cli-latest)
 
 After creating a Service Principal, you will obtain three important tokens, mapping to the three shown earlier:
@@ -90,6 +92,18 @@ For example, a common Service Principal as displayed by the Azure CLI looks some
   "password": "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY",
   "tenant": "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 }
+```
+
+However, you also need to obtain subscription id. To get current subscription Id you can use:
+
+```
+az account show --query id -o tsv
+```
+
+To list available subscriptions use:
+
+```
+az account list --query '[].{subscriptionName:name,subscriptionId:id}' -o tsv
 ```
 
 The environment variables would then be set as such:
