@@ -2,14 +2,14 @@
 title: "Tutorial: Web Server Container Instance"
 ---
 
-In this tutorial, we'll use JavaScript to deploy a simple webserver Container Instance to Azure.
+In this tutorial, we'll use JavaScript to deploy a simple nginx container to Azure Container Instance (ACI).
 
 ## Prerequisites
 
 1.  [Install Pulumi](../install.html)
 1.  [Configure Azure credentials](./setup.html)
 
-## Create a Azure Container Instances Web Server {#webserver}
+## Create a container in Azure Container Instance {#ACI}
 
 1.  In a new folder `webserver`, create an empty project with `pulumi new`. Make sure you have run `az login` or configured credentials for Azure.
     ```
@@ -46,9 +46,9 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
     exports.publicIP = container.ipAddress;
     ```
 
-    This example uses the [@pulumi/azure](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/) package to create and manage two Azure resources including an [azure.containerservice.Group](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/containerservice/#Group) which will run an `nginx` Docker container using the Azure Container Instances.
+    This example uses the [@pulumi/azure](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/) package to create and manage two Azure resources including: an [azure.core.ResourceGroup](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/core/#ResourceGroup) which will contain the ACI instance and [azure.containerservice.Group](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/containerservice/#Group) which will run an `nginx` Docker container.
 
-1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to an actual cloud resource.
 
     ```bash
     $ pulumi update
@@ -87,7 +87,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output](/reference/stack.html#output) corresponding to the private IP address of the virtual machine instance we've created.  
+1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output](/reference/stack.html#output) corresponding to the private IP address of the nginx container we've created.  
 
     ```
     $ pulumi stack
@@ -104,7 +104,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
         publicIP                                         13.66.202.166
     ```
 
-1.  Test out the web server by `curl`ing the endpoint:
+1.  Test out the container by `curl`ing the endpoint:
 
     ```
     $ curl $(pulumi stack output publicIP)
@@ -139,7 +139,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
 
 Before moving on, let's tear down the resources that are part of our stack.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes about 60 seconds; Pulumi waits for the virtual machine instance to shutdown and for the compute network to be removed before it considers the destroy operation to be complete.
+1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these resources. This takes some time; Pulumi waits for the ACI to shutdown and for the resource group to be removed before it considers the destroy operation to be complete.
 
 1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
 
