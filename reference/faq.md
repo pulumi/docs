@@ -51,7 +51,7 @@ We think that using the Pulumi service and the Pulumi tool together provides the
 
 When you use Pulumi without pulumi.com, the checkpoint for your stack is stored locally. If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, pulumi.com features, such as the deployment history and resource view, will not be available.
 
-To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends](./state.html).
+To use Pulumi without pulumi.com, log in using `pulumi login --local`. For more information, read more at [State and Backends](./state.md).
 
 ## How can I go back to using the Pulumi service?
 
