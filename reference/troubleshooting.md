@@ -51,7 +51,7 @@ service is unable to process an update, it is possible that users of the command
 throughout the course of an update.
 
 We take great pride in service uptime and work rapidly to fix service interruption and use our [status page](https://status.pulumi.com) to
-communicate information about service outages.
+communicate information about service incidents.
 
 
 ### post-step event returned an error {#post-step-event}
