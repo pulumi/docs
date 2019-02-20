@@ -61,15 +61,15 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
 2. Set them using configuration
 
     ```bash
-    $ pulumi config set azure:subscriptionId <subscriptionId>
     $ pulumi config set azure:clientId <clientID>
     $ pulumi config set azure:clientSecret <clientSecret> --secret
     $ pulumi config set azure:tenantId <tenantID>
+    $ pulumi config set azure:subscriptionId <subscriptionId>
     ```
 
 ### Creating a Service Principal
 
-To use a Service Principal, you must first create one.  This can be done using the Azure CLI or the Azure Portal.
+To use a Service Principal, you must first create one.  This can be done using the Azure CLI, the Azure Cloud Shell, or the Azure Portal.
 Please refer to the Azure documentation for detailed instructions:
 
 * [Using the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
@@ -86,11 +86,11 @@ For example, a common Service Principal as displayed by the Azure CLI looks some
 
 ```json
 {
-  "appId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+  "appId": "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW",
   "displayName": "ServicePrincipalName",
   "name": "http://ServicePrincipalName",
-  "password": "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY",
-  "tenant": "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
+  "password": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+  "tenant": "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 }
 ```
 
@@ -118,10 +118,10 @@ $ export ARM_SUBSCRIPTION_ID="ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 Or configuration variables, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
 ```bash
-$ pulumi config set azure:subscriptionId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
-$ pulumi config set azure:clientId "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
-$ pulumi config set azure:clientSecret "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY" --secret
-$ pulumi config set azure:tenantId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
+$ pulumi config set azure:clientId "WWWWWWWW-WWWW-WWWW-WWWW-WWWWWWWWWWWW"
+$ pulumi config set azure:clientSecret "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" --secret
+$ pulumi config set azure:tenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+$ pulumi config set azure:subscriptionId "ZZZZZZZZ-ZZZZ-ZZZZ-ZZZZ-ZZZZZZZZZZZZ"
 ```
 
 Remember to pass `--secret` when setting `clientSecret` so that it is properly encrypted.
