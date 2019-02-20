@@ -100,7 +100,7 @@ You also need to obtain a Subscription ID. To retrieve your current Subscription
 az account show --query id -o tsv
 ```
 
-To list available subscriptions use:
+To list all available subscriptions, you can use:
 
 ```
 az account list --query '[].{subscriptionName:name,subscriptionId:id}' -o tsv
