@@ -97,7 +97,7 @@ For example, a common Service Principal as displayed by the Azure CLI looks some
 You also need to obtain a Subscription ID. To retrieve your current Subscription ID, you can use:
 
 ```
-az account show --query id -o tsv
+$ az account show --query id -o tsv
 ```
 
 To list all available subscriptions, you can use:
