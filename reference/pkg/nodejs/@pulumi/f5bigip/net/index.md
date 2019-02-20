@@ -31,7 +31,7 @@ title: Module net
 
 
 <h2 class="pdoc-module-header" id="Route">
-<a class="pdoc-member-name" href="/net/route.ts#L27">class <b>Route</b></a>
+<a class="pdoc-member-name" href="/net/route.ts#L26">class <b>Route</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -48,15 +48,14 @@ For resources should be named with their "full path". The full path is the combi
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
 
-const bigip_net_route_route2 = new f5bigip.net.Route("route2", {
+const route2 = new f5bigip.net.Route("route2", {
     gw: "1.1.1.2",
-    name: "external-route",
     network: "10.10.10.0/24",
 });
 ```
 
 <h3 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="/net/route.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L50"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -71,7 +70,7 @@ Create a Route resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="/net/route.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L35">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -103,7 +102,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-gw">
-<a class="pdoc-child-name" href="/net/route.ts#L43">property <b>gw</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L42">property <b>gw</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>gw: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -122,7 +121,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Route-name">
-<a class="pdoc-child-name" href="/net/route.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L46">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -131,7 +130,7 @@ Name of the route
 
 </div>
 <h3 class="pdoc-member-header" id="Route-network">
-<a class="pdoc-child-name" href="/net/route.ts#L51">property <b>network</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L50">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>network: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -265,7 +264,7 @@ Specifies the VLAN for which you are setting a self IP address. This setting mus
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Vlan">
-<a class="pdoc-member-name" href="/net/vlan.ts#L30">class <b>Vlan</b></a>
+<a class="pdoc-member-name" href="/net/vlan.ts#L29">class <b>Vlan</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -282,18 +281,17 @@ For resources should be named with their "full path". The full path is the combi
 import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
 
-const bigip_net_vlan_vlan1 = new f5bigip.net.Vlan("vlan1", {
+const vlan1 = new f5bigip.net.Vlan("vlan1", {
     interfaces: [{
         tagged: false,
-        vlanport: "1.200000",
+        vlanport: "1.2",
     }],
-    name: "/Common/Internal",
     tag: 101,
 });
 ```
 
 <h3 class="pdoc-member-header" id="Vlan-constructor">
-<a class="pdoc-child-name" href="/net/vlan.ts#L54"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L53"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -308,7 +306,7 @@ Create a Vlan resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Vlan-get">
-<a class="pdoc-child-name" href="/net/vlan.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -350,7 +348,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Vlan-interfaces">
-<a class="pdoc-child-name" href="/net/vlan.ts#L46">property <b>interfaces</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L45">property <b>interfaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>interfaces: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -362,7 +360,7 @@ Specifies which interfaces you want this VLAN to use for traffic management.
 
 </div>
 <h3 class="pdoc-member-header" id="Vlan-name">
-<a class="pdoc-child-name" href="/net/vlan.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L49">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -371,7 +369,7 @@ Name of the vlan
 
 </div>
 <h3 class="pdoc-member-header" id="Vlan-tag">
-<a class="pdoc-child-name" href="/net/vlan.ts#L54">property <b>tag</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L53">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>tag: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -391,14 +389,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteArgs">
-<a class="pdoc-member-name" href="/net/route.ts#L105">interface <b>RouteArgs</b></a>
+<a class="pdoc-member-name" href="/net/route.ts#L104">interface <b>RouteArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Route resource.
 
 <h3 class="pdoc-member-header" id="RouteArgs-gw">
-<a class="pdoc-child-name" href="/net/route.ts#L109">property <b>gw</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L108">property <b>gw</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>gw?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -407,7 +405,7 @@ Gateway address
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-name">
-<a class="pdoc-child-name" href="/net/route.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L112">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -416,7 +414,7 @@ Name of the route
 
 </div>
 <h3 class="pdoc-member-header" id="RouteArgs-network">
-<a class="pdoc-child-name" href="/net/route.ts#L117">property <b>network</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L116">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>network: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -426,14 +424,14 @@ Specifies a gateway address for the route.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RouteState">
-<a class="pdoc-member-name" href="/net/route.ts#L87">interface <b>RouteState</b></a>
+<a class="pdoc-member-name" href="/net/route.ts#L86">interface <b>RouteState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Route resources.
 
 <h3 class="pdoc-member-header" id="RouteState-gw">
-<a class="pdoc-child-name" href="/net/route.ts#L91">property <b>gw</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L90">property <b>gw</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>gw?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -442,7 +440,7 @@ Gateway address
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-name">
-<a class="pdoc-child-name" href="/net/route.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L94">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -451,7 +449,7 @@ Name of the route
 
 </div>
 <h3 class="pdoc-member-header" id="RouteState-network">
-<a class="pdoc-child-name" href="/net/route.ts#L99">property <b>network</b></a>
+<a class="pdoc-child-name" href="/net/route.ts#L98">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>network?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -549,14 +547,14 @@ Specifies the VLAN for which you are setting a self IP address. This setting mus
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VlanArgs">
-<a class="pdoc-member-name" href="/net/vlan.ts#L105">interface <b>VlanArgs</b></a>
+<a class="pdoc-member-name" href="/net/vlan.ts#L104">interface <b>VlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Vlan resource.
 
 <h3 class="pdoc-member-header" id="VlanArgs-interfaces">
-<a class="pdoc-child-name" href="/net/vlan.ts#L109">property <b>interfaces</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L108">property <b>interfaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>interfaces?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -568,7 +566,7 @@ Specifies which interfaces you want this VLAN to use for traffic management.
 
 </div>
 <h3 class="pdoc-member-header" id="VlanArgs-name">
-<a class="pdoc-child-name" href="/net/vlan.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L112">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -577,7 +575,7 @@ Name of the vlan
 
 </div>
 <h3 class="pdoc-member-header" id="VlanArgs-tag">
-<a class="pdoc-child-name" href="/net/vlan.ts#L117">property <b>tag</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L116">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tag?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -587,14 +585,14 @@ Specifies a number that the system adds into the header of any frame passing thr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VlanState">
-<a class="pdoc-member-name" href="/net/vlan.ts#L87">interface <b>VlanState</b></a>
+<a class="pdoc-member-name" href="/net/vlan.ts#L86">interface <b>VlanState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Vlan resources.
 
 <h3 class="pdoc-member-header" id="VlanState-interfaces">
-<a class="pdoc-child-name" href="/net/vlan.ts#L91">property <b>interfaces</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L90">property <b>interfaces</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>interfaces?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -606,7 +604,7 @@ Specifies which interfaces you want this VLAN to use for traffic management.
 
 </div>
 <h3 class="pdoc-member-header" id="VlanState-name">
-<a class="pdoc-child-name" href="/net/vlan.ts#L95">property <b>name</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L94">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -615,7 +613,7 @@ Name of the vlan
 
 </div>
 <h3 class="pdoc-member-header" id="VlanState-tag">
-<a class="pdoc-child-name" href="/net/vlan.ts#L99">property <b>tag</b></a>
+<a class="pdoc-child-name" href="/net/vlan.ts#L98">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tag?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>

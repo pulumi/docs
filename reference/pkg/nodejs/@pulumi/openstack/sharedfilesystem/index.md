@@ -43,7 +43,7 @@ title: Module sharedfilesystem
 
 
 <h2 class="pdoc-module-header" id="SecurityService">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L36">class <b>SecurityService</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L35">class <b>SecurityService</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -63,11 +63,10 @@ Minimum supported Manila microversion is 2.7.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_sharedfilesystem_securityservice_v2_securityservice_1 = new openstack.SharedfilesystemSecurityserviceV2("securityservice_1", {
+const securityservice1 = new openstack.sharedfilesystem.SecurityService("securityservice_1", {
     description: "created by terraform",
     dnsIp: "192.168.199.10",
     domain: "example.com",
-    name: "security",
     ou: "CN=Computers,DC=example,DC=com",
     password: "s8cret",
     server: "192.168.199.10",
@@ -77,7 +76,7 @@ const openstack_sharedfilesystem_securityservice_v2_securityservice_1 = new open
 ```
 
 <h3 class="pdoc-member-header" id="SecurityService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L101"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L100"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -92,7 +91,7 @@ Create a SecurityService resource with the given unique name, arguments, and opt
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -124,7 +123,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L53">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L52">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -134,7 +133,7 @@ Changing this updates the description of the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-dnsIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L58">property <b>dnsIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L57">property <b>dnsIp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>dnsIp: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -144,7 +143,7 @@ tenant network.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L62">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L61">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -163,7 +162,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -173,7 +172,7 @@ of the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L72">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L71">property <b>ou</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ou: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -183,7 +182,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L76">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L75">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -192,7 +191,7 @@ The user password, if you specify a user.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L80">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L79">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -201,7 +200,7 @@ The owner of the Security Service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L87">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L86">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -213,7 +212,7 @@ security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L91">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L90">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>server: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -222,7 +221,7 @@ The security service host name or IP address.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L96">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L95">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -242,7 +241,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityService-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L101">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L100">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>user: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -253,7 +252,7 @@ tenant.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Share">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L41">class <b>Share</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L37">class <b>Share</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -266,33 +265,29 @@ Use this resource to configure a share.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_networking_network_v2_network_1 = new openstack.networking.Network("network_1", {
-    adminStateUp: "true",
-    name: "network_1",
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
 });
-const openstack_networking_subnet_v2_subnet_1 = new openstack.networking.Subnet("subnet_1", {
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
     cidr: "192.168.199.0/24",
     ipVersion: 4,
-    name: "subnet_1",
-    networkId: openstack_networking_network_v2_network_1.id,
+    networkId: network1.id,
 });
-const openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1 = new openstack.SharedfilesystemSharenetworkV2("sharenetwork_1", {
+const sharenetwork1 = new openstack.sharedfilesystem.ShareNetwork("sharenetwork_1", {
     description: "test share network with security services",
-    name: "test_sharenetwork",
-    neutronNetId: openstack_networking_network_v2_network_1.id,
-    neutronSubnetId: openstack_networking_subnet_v2_subnet_1.id,
+    neutronNetId: network1.id,
+    neutronSubnetId: subnet1.id,
 });
-const openstack_sharedfilesystem_share_v2_share_1 = new openstack.SharedfilesystemShareV2("share_1", {
+const share1 = new openstack.sharedfilesystem.Share("share_1", {
     description: "test share description",
-    name: "nfs_share",
-    shareNetworkId: openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1.id,
+    shareNetworkId: sharenetwork1.id,
     shareProto: "NFS",
     size: 1,
 });
 ```
 
 <h3 class="pdoc-member-header" id="Share-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L135"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L132"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -307,7 +302,7 @@ Create a Share resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L46">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -339,7 +334,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L58">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L54">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>availabilityZone: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -349,7 +344,7 @@ new share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L59">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -359,7 +354,7 @@ Changing this updates the description of the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-exportLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L68">property <b>exportLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L64">property <b>exportLocations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>exportLocations: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
@@ -372,7 +367,7 @@ has more than one network interface, it can have multiple export locations.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-hasReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L72">property <b>hasReplicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L68">property <b>hasReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>hasReplicas: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -381,7 +376,7 @@ Indicates whether a share has replicas or not.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L76">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L72">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>host: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -400,7 +395,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L82">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L78">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>isPublic: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -411,7 +406,7 @@ updates the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L87">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L83">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -421,7 +416,7 @@ strings.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L88">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -431,7 +426,7 @@ of the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L96">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L92">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -440,17 +435,18 @@ The owner of the Share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L101">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L98">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share network.
+A Shared File System client is needed to create a share. Changing this
+creates a new share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-replicationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L105">property <b>replicationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L102">property <b>replicationType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>replicationType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -459,7 +455,7 @@ The share replication type.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-shareNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L111">property <b>shareNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L108">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shareNetworkId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -470,7 +466,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
 </div>
 <h3 class="pdoc-member-header" id="Share-shareProto">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L116">property <b>shareProto</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L113">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shareProto: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -480,7 +476,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-shareServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L120">property <b>shareServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L117">property <b>shareServerId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shareServerId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -489,7 +485,7 @@ The UUID of the share server.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L125">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L122">property <b>shareType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shareType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -499,7 +495,7 @@ share type is used.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L130">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L127">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>size: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -509,7 +505,7 @@ than the allowed GB quota. Changing this resizes the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="Share-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L135">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L132">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -530,7 +526,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareAccess">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L104">class <b>ShareAccess</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L96">class <b>ShareAccess</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -545,94 +541,86 @@ Use this resource to control the share access lists.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_networking_network_v2_network_1 = new openstack.networking.Network("network_1", {
-    adminStateUp: "true",
-    name: "network_1",
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
 });
-const openstack_networking_subnet_v2_subnet_1 = new openstack.networking.Subnet("subnet_1", {
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
     cidr: "192.168.199.0/24",
     ipVersion: 4,
-    name: "subnet_1",
-    networkId: openstack_networking_network_v2_network_1.id,
+    networkId: network1.id,
 });
-const openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1 = new openstack.SharedfilesystemSharenetworkV2("sharenetwork_1", {
+const sharenetwork1 = new openstack.sharedfilesystem.ShareNetwork("sharenetwork_1", {
     description: "test share network with security services",
-    name: "test_sharenetwork",
-    neutronNetId: openstack_networking_network_v2_network_1.id,
-    neutronSubnetId: openstack_networking_subnet_v2_subnet_1.id,
+    neutronNetId: network1.id,
+    neutronSubnetId: subnet1.id,
 });
-const openstack_sharedfilesystem_share_v2_share_1 = new openstack.SharedfilesystemShareV2("share_1", {
+const share1 = new openstack.sharedfilesystem.Share("share_1", {
     description: "test share description",
-    name: "nfs_share",
-    shareNetworkId: openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1.id,
+    shareNetworkId: sharenetwork1.id,
     shareProto: "NFS",
     size: 1,
 });
-const openstack_sharedfilesystem_share_access_v2_share_access_1 = new openstack.SharedfilesystemShareAccessV2("share_access_1", {
+const shareAccess1 = new openstack.sharedfilesystem.ShareAccess("share_access_1", {
     accessLevel: "rw",
     accessTo: "192.168.199.10",
     accessType: "ip",
-    shareId: openstack_sharedfilesystem_share_v2_share_1.id,
+    shareId: share1.id,
 });
 ```
+
 ### CIFS
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_networking_network_v2_network_1 = new openstack.networking.Network("network_1", {
-    adminStateUp: "true",
-    name: "network_1",
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
 });
-const openstack_sharedfilesystem_securityservice_v2_securityservice_1 = new openstack.SharedfilesystemSecurityserviceV2("securityservice_1", {
+const securityservice1 = new openstack.sharedfilesystem.SecurityService("securityservice_1", {
     description: "created by terraform",
     dnsIp: "192.168.199.10",
     domain: "example.com",
-    name: "security",
     ou: "CN=Computers,DC=example,DC=com",
     password: "s8cret",
     server: "192.168.199.10",
     type: "active_directory",
     user: "joinDomainUser",
 });
-const openstack_networking_subnet_v2_subnet_1 = new openstack.networking.Subnet("subnet_1", {
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
     cidr: "192.168.199.0/24",
     ipVersion: 4,
-    name: "subnet_1",
-    networkId: openstack_networking_network_v2_network_1.id,
+    networkId: network1.id,
 });
-const openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1 = new openstack.SharedfilesystemSharenetworkV2("sharenetwork_1", {
+const sharenetwork1 = new openstack.sharedfilesystem.ShareNetwork("sharenetwork_1", {
     description: "share the secure love",
-    name: "test_sharenetwork_secure",
-    neutronNetId: openstack_networking_network_v2_network_1.id,
-    neutronSubnetId: openstack_networking_subnet_v2_subnet_1.id,
-    securityServiceIds: [openstack_sharedfilesystem_securityservice_v2_securityservice_1.id],
+    neutronNetId: network1.id,
+    neutronSubnetId: subnet1.id,
+    securityServiceIds: [securityservice1.id],
 });
-const openstack_sharedfilesystem_share_v2_share_1 = new openstack.SharedfilesystemShareV2("share_1", {
-    name: "cifs_share",
-    shareNetworkId: openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1.id,
+const share1 = new openstack.sharedfilesystem.Share("share_1", {
+    shareNetworkId: sharenetwork1.id,
     shareProto: "CIFS",
     size: 1,
 });
-const openstack_sharedfilesystem_share_access_v2_share_access_1 = new openstack.SharedfilesystemShareAccessV2("share_access_1", {
+const shareAccess1 = new openstack.sharedfilesystem.ShareAccess("share_access_1", {
     accessLevel: "ro",
     accessTo: "windows",
     accessType: "user",
-    shareId: openstack_sharedfilesystem_share_v2_share_1.id,
+    shareId: share1.id,
 });
-const openstack_sharedfilesystem_share_access_v2_share_access_2 = new openstack.SharedfilesystemShareAccessV2("share_access_2", {
+const shareAccess2 = new openstack.sharedfilesystem.ShareAccess("share_access_2", {
     accessLevel: "rw",
     accessTo: "linux",
     accessType: "user",
-    shareId: openstack_sharedfilesystem_share_v2_share_1.id,
+    shareId: share1.id,
 });
 
-export const exportLocations = openstack_sharedfilesystem_share_v2_share_1.exportLocations;
+export const exportLocations = share1.exportLocations;
 ```
 
 <h3 class="pdoc-member-header" id="ShareAccess-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L131"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -647,7 +635,7 @@ Create a ShareAccess resource with the given unique name, arguments, and options
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L113">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L105">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -679,16 +667,16 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L120">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L112">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>accessLevel: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The access level to the share. Can either be rw or ro.
+The access level to the share. Can either be `rw` or `ro`.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-accessTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L125">property <b>accessTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L117">property <b>accessTo</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>accessTo: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -698,7 +686,7 @@ address or a username verified by configured Security Service of the Share Netwo
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccess-accessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L129">property <b>accessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L121">property <b>accessType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>accessType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -716,8 +704,19 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 </div>
+<h3 class="pdoc-member-header" id="ShareAccess-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L127">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>region: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to create a share access. Changing this
+creates a new share access.
+
+</div>
 <h3 class="pdoc-member-header" id="ShareAccess-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L133">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L131">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>shareId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -737,7 +736,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareNetwork">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L74">class <b>ShareNetwork</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L68">class <b>ShareNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -755,61 +754,55 @@ shares are created.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_networking_network_v2_network_1 = new openstack.networking.Network("network_1", {
-    adminStateUp: "true",
-    name: "network_1",
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
 });
-const openstack_networking_subnet_v2_subnet_1 = new openstack.networking.Subnet("subnet_1", {
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
     cidr: "192.168.199.0/24",
     ipVersion: 4,
-    name: "subnet_1",
-    networkId: openstack_networking_network_v2_network_1.id,
+    networkId: network1.id,
 });
-const openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1 = new openstack.SharedfilesystemSharenetworkV2("sharenetwork_1", {
+const sharenetwork1 = new openstack.sharedfilesystem.ShareNetwork("sharenetwork_1", {
     description: "test share network",
-    name: "test_sharenetwork",
-    neutronNetId: openstack_networking_network_v2_network_1.id,
-    neutronSubnetId: openstack_networking_subnet_v2_subnet_1.id,
+    neutronNetId: network1.id,
+    neutronSubnetId: subnet1.id,
 });
 ```
+
 ### Share network with associated security services
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_networking_network_v2_network_1 = new openstack.networking.Network("network_1", {
-    adminStateUp: "true",
-    name: "network_1",
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
 });
-const openstack_sharedfilesystem_securityservice_v2_securityservice_1 = new openstack.SharedfilesystemSecurityserviceV2("securityservice_1", {
+const securityservice1 = new openstack.sharedfilesystem.SecurityService("securityservice_1", {
     description: "created by terraform",
     dnsIp: "192.168.199.10",
     domain: "example.com",
-    name: "security",
     ou: "CN=Computers,DC=example,DC=com",
     password: "s8cret",
     server: "192.168.199.10",
     type: "active_directory",
     user: "joinDomainUser",
 });
-const openstack_networking_subnet_v2_subnet_1 = new openstack.networking.Subnet("subnet_1", {
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
     cidr: "192.168.199.0/24",
     ipVersion: 4,
-    name: "subnet_1",
-    networkId: openstack_networking_network_v2_network_1.id,
+    networkId: network1.id,
 });
-const openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1 = new openstack.SharedfilesystemSharenetworkV2("sharenetwork_1", {
+const sharenetwork1 = new openstack.sharedfilesystem.ShareNetwork("sharenetwork_1", {
     description: "test share network with security services",
-    name: "test_sharenetwork",
-    neutronNetId: openstack_networking_network_v2_network_1.id,
-    neutronSubnetId: openstack_networking_subnet_v2_subnet_1.id,
-    securityServiceIds: [openstack_sharedfilesystem_securityservice_v2_securityservice_1.id],
+    neutronNetId: network1.id,
+    neutronSubnetId: subnet1.id,
+    securityServiceIds: [securityservice1.id],
 });
 ```
 
 <h3 class="pdoc-member-header" id="ShareNetwork-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L140"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L134"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -824,7 +817,7 @@ Create a ShareNetwork resource with the given unique name, arguments, and option
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L83">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -856,7 +849,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L90">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L84">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cidr: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -865,7 +858,7 @@ The share network CIDR.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L89">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>description: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -885,7 +878,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L99">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L93">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -894,7 +887,7 @@ The IP version of the share network. Can either be 4 or 6.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L98">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -904,7 +897,7 @@ of the existing share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L108">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L102">property <b>networkType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>networkType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -913,7 +906,7 @@ The share network type. Can either be VLAN, VXLAN, GRE, or flat.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-neutronNetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L114">property <b>neutronNetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L108">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>neutronNetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -924,7 +917,7 @@ shares.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-neutronSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L120">property <b>neutronSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L114">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>neutronSubnetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -935,7 +928,7 @@ not used by shares.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L124">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L118">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -944,7 +937,7 @@ The owner of the Share Network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L131">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L125">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>region: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -956,7 +949,7 @@ share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-securityServiceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L136">property <b>securityServiceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L130">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityServiceIds: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -966,7 +959,7 @@ the share network. The security service must be specified by ID and not name.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetwork-segmentationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L140">property <b>segmentationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L134">property <b>segmentationId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>segmentationId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1001,7 +994,7 @@ Use this data source to get the ID of an available Shared File System share.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_sharedfilesystem_share_v2_share_1 = pulumi.output(openstack.SharedfilesystemShareV2({
+const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
     name: "share_1",
 }));
 ```
@@ -1023,7 +1016,7 @@ Use this data source to get the ID of an available Shared File System share netw
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_sharedfilesystem_sharenetwork_v2_sharenetwork_1 = pulumi.output(openstack.SharedfilesystemSharenetworkV2({
+const sharenetwork1 = pulumi.output(openstack.sharedfilesystem.getShareNetwork({
     name: "sharenetwork_1",
 }));
 ```
@@ -1045,7 +1038,7 @@ Use this data source to get the ID of an available Shared File System snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const openstack_sharedfilesystem_snapshot_v2_snapshot_1 = pulumi.output(openstack.SharedfilesystemSnapshotV2({
+const snapshot1 = pulumi.output(openstack.sharedfilesystem.getSnapshot({
     name: "snapshot_1",
 }));
 ```
@@ -1641,14 +1634,14 @@ See Argument Reference above.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityServiceArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L209">interface <b>SecurityServiceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L208">interface <b>SecurityServiceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a SecurityService resource.
 
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L214">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L213">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1658,7 +1651,7 @@ Changing this updates the description of the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-dnsIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L219">property <b>dnsIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L218">property <b>dnsIp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsIp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1668,7 +1661,7 @@ tenant network.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L223">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L222">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1677,7 +1670,7 @@ The security service domain.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L227">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1687,7 +1680,7 @@ of the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L233">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L232">property <b>ou</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ou?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1697,7 +1690,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L237">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L236">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>password?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1706,7 +1699,7 @@ The user password, if you specify a user.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L244">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L243">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1718,7 +1711,7 @@ security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L248">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L247">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>server?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1727,7 +1720,7 @@ The security service host name or IP address.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L253">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L252">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1737,7 +1730,7 @@ kerberos or ldap.  Changing this updates the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L258">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L257">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1748,14 +1741,14 @@ tenant.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityServiceState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L150">interface <b>SecurityServiceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L149">interface <b>SecurityServiceState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering SecurityService resources.
 
 <h3 class="pdoc-member-header" id="SecurityServiceState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L155">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L154">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1765,7 +1758,7 @@ Changing this updates the description of the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-dnsIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L160">property <b>dnsIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L159">property <b>dnsIp</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dnsIp?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1775,7 +1768,7 @@ tenant network.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L164">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L163">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>domain?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1784,7 +1777,7 @@ The security service domain.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L168">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1794,7 +1787,7 @@ of the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L174">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L173">property <b>ou</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ou?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1804,7 +1797,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L178">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L177">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>password?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1813,7 +1806,7 @@ The user password, if you specify a user.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L182">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L181">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1822,7 +1815,7 @@ The owner of the Security Service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L189">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L188">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1834,7 +1827,7 @@ security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-server">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L193">property <b>server</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L192">property <b>server</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>server?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1843,7 +1836,7 @@ The security service host name or IP address.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L198">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L197">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>type?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1853,7 +1846,7 @@ kerberos or ldap.  Changing this updates the existing security service.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityServiceState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L203">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/securityService.ts#L202">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>user?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1864,23 +1857,23 @@ tenant.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareAccessArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L200">interface <b>ShareAccessArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L206">interface <b>ShareAccessArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ShareAccess resource.
 
 <h3 class="pdoc-member-header" id="ShareAccessArgs-accessLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L204">property <b>accessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L210">property <b>accessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accessLevel: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The access level to the share. Can either be rw or ro.
+The access level to the share. Can either be `rw` or `ro`.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccessArgs-accessTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L209">property <b>accessTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L215">property <b>accessTo</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accessTo: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1890,7 +1883,7 @@ address or a username verified by configured Security Service of the Share Netwo
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccessArgs-accessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L213">property <b>accessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L219">property <b>accessType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accessType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1898,8 +1891,19 @@ address or a username verified by configured Security Service of the Share Netwo
 The access rule type. Can either be an ip, user or cert.
 
 </div>
+<h3 class="pdoc-member-header" id="ShareAccessArgs-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L225">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to create a share access. Changing this
+creates a new share access.
+
+</div>
 <h3 class="pdoc-member-header" id="ShareAccessArgs-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L217">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L229">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1921,7 +1925,7 @@ Input properties used for looking up and filtering ShareAccess resources.
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accessLevel?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
-The access level to the share. Can either be rw or ro.
+The access level to the share. Can either be `rw` or `ro`.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareAccessState-accessTo">
@@ -1943,8 +1947,19 @@ address or a username verified by configured Security Service of the Share Netwo
 The access rule type. Can either be an ip, user or cert.
 
 </div>
+<h3 class="pdoc-member-header" id="ShareAccessState-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L196">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to create a share access. Changing this
+creates a new share access.
+
+</div>
 <h3 class="pdoc-member-header" id="ShareAccessState-shareId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L194">property <b>shareId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareAccess.ts#L200">property <b>shareId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1954,14 +1969,14 @@ The UUID of the share to which you are granted access.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L287">interface <b>ShareArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L285">interface <b>ShareArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a Share resource.
 
 <h3 class="pdoc-member-header" id="ShareArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L292">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L290">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1971,7 +1986,7 @@ new share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L297">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L295">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1981,7 +1996,7 @@ Changing this updates the description of the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L303">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L301">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>isPublic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1992,7 +2007,7 @@ updates the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L308">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L306">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2002,7 +2017,7 @@ strings.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L313">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L311">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2011,8 +2026,19 @@ The name of the share. Changing this updates the name
 of the existing share.
 
 </div>
+<h3 class="pdoc-member-header" id="ShareArgs-region">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L317">property <b>region</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to create a share. Changing this
+creates a new share.
+
+</div>
 <h3 class="pdoc-member-header" id="ShareArgs-shareNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L319">property <b>shareNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L323">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareNetworkId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2023,7 +2049,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-shareProto">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L324">property <b>shareProto</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L328">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareProto: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2033,7 +2059,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L329">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L333">property <b>shareType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2043,7 +2069,7 @@ share type is used.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L334">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L338">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>size: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2053,7 +2079,7 @@ than the allowed GB quota. Changing this resizes the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareArgs-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L339">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L343">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2064,14 +2090,14 @@ a new share.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareNetworkArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L252">interface <b>ShareNetworkArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L246">interface <b>ShareNetworkArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 The set of arguments for constructing a ShareNetwork resource.
 
 <h3 class="pdoc-member-header" id="ShareNetworkArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L257">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L251">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2081,7 +2107,7 @@ Changing this updates the description of the existing share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L262">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L256">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2091,7 +2117,7 @@ of the existing share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkArgs-neutronNetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L268">property <b>neutronNetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L262">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>neutronNetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2102,7 +2128,7 @@ shares.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkArgs-neutronSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L274">property <b>neutronSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L268">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>neutronSubnetId: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2113,7 +2139,7 @@ not used by shares.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L281">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L275">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2125,7 +2151,7 @@ share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkArgs-securityServiceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L286">property <b>securityServiceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L280">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityServiceIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2136,14 +2162,14 @@ the share network. The security service must be specified by ID and not name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareNetworkState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L192">interface <b>ShareNetworkState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L186">interface <b>ShareNetworkState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering ShareNetwork resources.
 
 <h3 class="pdoc-member-header" id="ShareNetworkState-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L196">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L190">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>cidr?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2152,7 +2178,7 @@ The share network CIDR.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L201">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L195">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2162,7 +2188,7 @@ Changing this updates the description of the existing share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L205">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L199">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2171,7 +2197,7 @@ The IP version of the share network. Can either be 4 or 6.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L204">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2181,7 +2207,7 @@ of the existing share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L214">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L208">property <b>networkType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>networkType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2190,7 +2216,7 @@ The share network type. Can either be VLAN, VXLAN, GRE, or flat.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-neutronNetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L220">property <b>neutronNetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L214">property <b>neutronNetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>neutronNetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2201,7 +2227,7 @@ shares.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-neutronSubnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L226">property <b>neutronSubnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L220">property <b>neutronSubnetId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>neutronSubnetId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2212,7 +2238,7 @@ not used by shares.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L230">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L224">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2221,7 +2247,7 @@ The owner of the Share Network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L237">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L231">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2233,7 +2259,7 @@ share network.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-securityServiceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L242">property <b>securityServiceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L236">property <b>securityServiceIds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityServiceIds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2243,7 +2269,7 @@ the share network. The security service must be specified by ID and not name.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareNetworkState-segmentationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L246">property <b>segmentationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/shareNetwork.ts#L240">property <b>segmentationId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>segmentationId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2253,14 +2279,14 @@ The share network segmentation ID.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ShareState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L199">interface <b>ShareState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L196">interface <b>ShareState</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Input properties used for looking up and filtering Share resources.
 
 <h3 class="pdoc-member-header" id="ShareState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L204">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L201">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2270,7 +2296,7 @@ new share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L209">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L206">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>description?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2280,7 +2306,7 @@ Changing this updates the description of the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-exportLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L214">property <b>exportLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L211">property <b>exportLocations</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>exportLocations?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -2293,7 +2319,7 @@ has more than one network interface, it can have multiple export locations.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-hasReplicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L218">property <b>hasReplicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L215">property <b>hasReplicas</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hasReplicas?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2302,7 +2328,7 @@ Indicates whether a share has replicas or not.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L222">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L219">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>host?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2311,7 +2337,7 @@ The share host name.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L228">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L225">property <b>isPublic</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>isPublic?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2322,7 +2348,7 @@ updates the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L233">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L230">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
@@ -2332,7 +2358,7 @@ strings.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L235">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2342,7 +2368,7 @@ of the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L242">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L239">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2351,17 +2377,18 @@ The owner of the Share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L247">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L245">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>region?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 
 The region in which to obtain the V2 Shared File System client.
-A Shared File System client is needed to create a share network.
+A Shared File System client is needed to create a share. Changing this
+creates a new share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-replicationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L251">property <b>replicationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L249">property <b>replicationType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>replicationType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2370,7 +2397,7 @@ The share replication type.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-shareNetworkId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L257">property <b>shareNetworkId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L255">property <b>shareNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareNetworkId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2381,7 +2408,7 @@ the share_network_id value from the snapshot is used. Changing this creates a ne
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-shareProto">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L262">property <b>shareProto</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L260">property <b>shareProto</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareProto?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2391,7 +2418,7 @@ CEPHFS, GLUSTERFS, HDFS or MAPRFS. Changing this creates a new share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-shareServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L266">property <b>shareServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L264">property <b>shareServerId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareServerId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2400,7 +2427,7 @@ The UUID of the share server.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L271">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L269">property <b>shareType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>shareType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2410,7 +2437,7 @@ share type is used.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L276">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L274">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>size?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2420,7 +2447,7 @@ than the allowed GB quota. Changing this resizes the existing share.
 
 </div>
 <h3 class="pdoc-member-header" id="ShareState-snapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L281">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/sharedfilesystem/share.ts#L279">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
