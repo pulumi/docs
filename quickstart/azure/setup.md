@@ -73,7 +73,7 @@ To use a Service Principal, you must first create one.  This can be done using t
 Please refer to the Azure documentation for detailed instructions:
 
 * [Using the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest)
-* Alternatively you can use [Azure Cloud Shell](https://shell.azure.com/) if you do not want to install Azure CLI 
+* [Using the Azure Cloud Shell](https://shell.azure.com/)
 * [Using the Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal?view=azure-cli-latest)
 
 After creating a Service Principal, you will obtain three important tokens, mapping to the three shown earlier:
