@@ -103,7 +103,7 @@ az account show --query id -o tsv
 To list all available subscriptions, you can use:
 
 ```
-az account list --query '[].{subscriptionName:name,subscriptionId:id}' -o tsv
+$ az account list --query '[].{subscriptionName:name,subscriptionId:id}' -o tsv
 ```
 
 The environment variables would then be set as such:
