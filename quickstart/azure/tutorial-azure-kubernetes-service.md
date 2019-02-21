@@ -2,7 +2,7 @@
 title: "Tutorial: Azure Kubernetes Service"
 ---
 
-In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Service (AKS).
+In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Service (AKS). You can find this code on the in the [examples repo](https://github.com/pulumi/examples/tree/master/azure-py-aks).
 
 ## Prerequisites
 
@@ -145,7 +145,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
         ), __opts__=ResourceOptions(depends_on=[acr_assignment, subnet_assignment])
     )
 
-    pulumi.export('kubecfg', aks.kube_config_raw)
+    pulumi.export('kubeconfig', aks.kube_config_raw)
     ```
 
     This example uses the [@pulumi_azure](https://pulumi.io/reference/pkg/python/pulumi_azure/index.html) package to create and manage several Azure resources including: a [pulumi_azure.containerservice.KubernetesCluster](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.KubernetesCluster), [pulumi_azure.containerservice.Registry](https://pulumi.io/reference/pkg/python/pulumi_azure/containerservice/#pulumi_azure.containerservice.Registry) which will store Docker images and [pulumi_azure.network.VirtualNetwork](https://pulumi.io/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.VirtualNetwork) that will contain AKS worker nodes and several others. We are using implicit and explicit dependencies in this configuration. For example, resource outputs can be used as inputs to imply dependency between resources, but you can also declare dependency using [ResourceOptions](/reference/programming-model.html#resources) passed to the resource as additional argumanets.
@@ -245,6 +245,13 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     ```
 
     You are all set after this. There are alternative ways of setting up Kubernetes provider. We have [kubernetes tutotials](/quickstart/kubernetes/) which you can follow to get a better understanding of setting up and working with Kubernetes.
+
+7.  If you want to use kubectl to access the cluster you can save kubeconfig to a file and use kubectl like you normally would:
+
+    ```bash
+    pulumi stack output kubeconfig >kubeconfig.yaml
+    KUBECONFIG=./kubeconfig.json kubectl get nodes
+    ```
 
 ## Clean up
 
