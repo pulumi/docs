@@ -99,7 +99,7 @@ res, err := NewResource(ctx, name, args, opt1, opt2)
 
 All resources have a [`name`](#names), which must be unique in the Pulumi program.
 
-The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typicaly be either raw values or [outputs from other resources](#outputs). 
+The `args` provided to a resource determine what inputs will be used to initialize the resource.  These can typically be either raw values or [outputs from other resources](#outputs). 
 
 ### Resource options {#resourceoptions}
 
