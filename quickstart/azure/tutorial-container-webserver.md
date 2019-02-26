@@ -9,7 +9,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
 1.  [Install Pulumi](../install.html)
 1.  [Configure Azure credentials](./setup.html)
 
-## Create a Virtual Machine with SSH access {#webserver}
+## Create a Azure Container Instances Web Server {#webserver}
 
 1.  In a new folder `webserver`, create an empty project with `pulumi new`. Make sure you have run `az login` or configured credentials for Azure.
     ```
@@ -33,7 +33,10 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
             image: "nginx",
             memory: 1,
             cpu: 1,
-            port: 80,
+            ports: [{
+                    port: 80,
+                    protocol: "TCP"
+            }],
         }],
         osType: "Linux",
         resourceGroupName: resourceGroup.name,
@@ -43,7 +46,7 @@ In this tutorial, we'll use JavaScript to deploy a simple webserver Container In
     exports.publicIP = container.ipAddress;
     ```
 
-    This example uses the [@pulumi/azure](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/) package to create and manage two Azure resources including: an [azure.containerservice.Group](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/core/#ResourceGroup) which will run an `nginx` Docker container using the Azure Container Instances.
+    This example uses the [@pulumi/azure](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/) package to create and manage two Azure resources including an [azure.containerservice.Group](https://pulumi.io/reference/pkg/nodejs/@pulumi/azure/containerservice/#Group) which will run an `nginx` Docker container using the Azure Container Instances.
 
 1.  To preview and deploy changes, run `pulumi update`. The command shows a preview of the resources that will be created and prompts on whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 

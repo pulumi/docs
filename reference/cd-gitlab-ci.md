@@ -12,7 +12,7 @@ altered to fit into any existing type of deployment setup.
 
 ## Prerequisites
 - An account on https://app.pulumi.com and that you have created a new project.
-  - This just means you will sign-in using your GitHub credentials.
+  - This just means you will sign-in using your GitLab credentials.
   - However, pulumi can be run from anywhere and your infrastrucutre code itself can be hosted anywhere.
 - The latest CLI. Installation instructions are [here](https://pulumi.io/quickstart/install.html).
 - A bare repo and set the remote URL to be your GitLab project.
