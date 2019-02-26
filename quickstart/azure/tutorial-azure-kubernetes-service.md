@@ -207,32 +207,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     To see the full details of the deployment and the resources that are now part of the stack, open the update permalink in a browser.
 
-5.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see a [stack output](/reference/stack.html#output) corresponding to the kubernetes config file you can use to access the AKS cluster we created.  
-
-    ```
-    $ pulumi stack
-    ...
-    Current stack resources (12):
-        TYPE                                                        NAME
-        pulumi:pulumi:Stack                                         aks-dev
-        pulumi:providers:azure                                      default
-        azure:core/resourceGroup:ResourceGroup                      rg
-        azure:ad/application:Application                            aks-app
-        azure:ad/servicePrincipal:ServicePrincipal                  aks-sp
-        azure:ad/servicePrincipalPassword:ServicePrincipalPassword  aks-sp-pwd
-        azure:containerservice/registry:Registry                    acr
-        azure:network/virtualNetwork:VirtualNetwork                 vnet
-        azure:network/subnet:Subnet                                 subnet
-        azure:role/assignment:Assignment                            subnet-permissions
-        azure:role/assignment:Assignment                            acr-permissions
-        azure:containerservice/kubernetesCluster:KubernetesCluster  aks
-
-    Current stack outputs (1):
-        OUTPUT   VALUE
-        kubecfg  ommited
-    ```
-
-6.  If you want to provision Kubernetes resources, you need to create a Kubernetes provider using the following:
+5.  If you want to provision Kubernetes resources, you need to create a Kubernetes provider using the following:
 
     ```
     aks = KubernetesCluster(
@@ -246,7 +221,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     You are all set after this. There are alternative ways of setting up Kubernetes provider. We have [kubernetes tutotials](/quickstart/kubernetes/) which you can follow to get a better understanding of setting up and working with Kubernetes.
 
-7.  If you want to use kubectl to access the cluster you can save kubeconfig to a file and use kubectl like you normally would:
+6.  If you want to use kubectl to access the cluster you can save kubeconfig to a file and use kubectl like you normally would:
 
     ```bash
     pulumi stack output kubeconfig >kubeconfig.yaml
