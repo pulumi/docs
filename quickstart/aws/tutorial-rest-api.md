@@ -86,7 +86,7 @@ The `pulumi new` command created a new project and instructed Pulumi to determin
 
 ![Stack preview](https://user-images.githubusercontent.com/4564579/46554998-da6c9980-c896-11e8-8530-6ca4c8db8123.png){:width="700px"}
 
-Pulumi will ask if you want to perform the update.  Choosing `yes` will create resources in AWS. This may take a minute or two..
+Pulumi will ask if you want to perform the update.  Choosing `yes` will create resources in AWS. This may take a minute or two.
 
 ![Stack update](https://user-images.githubusercontent.com/4564579/46555042-fcfeb280-c896-11e8-8731-51c9ee78af23.png){:width="700px"}
 
