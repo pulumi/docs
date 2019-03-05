@@ -4,7 +4,7 @@ title: "Tutorial: Azure Kubernetes Service"
 
 In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Service (AKS). You can find this code on the in the [examples repo](https://github.com/pulumi/examples/tree/master/azure-py-aks).
 
-{% include aks-prereqs.md %}
+{% include azure-aks-prereqs.md %}
 
 ## Create a new EKS cluster {#new-aks-cluster}
 
@@ -34,7 +34,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
 
 	```bash
-	$ pup install pulumi pulumi_azure pulumi_kubernetes
+	$ pip install pulumi pulumi_azure pulumi_kubernetes
 	```
 
 3. Open the existing file `__main__.py`, and replace the contents with the following:
@@ -174,6 +174,10 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
         ), __opts__=ResourceOptions(depends_on=[acr_assignment, subnet_assignment])
     )
 
+    custom_provider = Provider(
+        "inflation_provider", kubeconfig=aks.kube_config_raw
+    )
+
     pulumi.export('kubeconfig', aks.kube_config_raw)
     ```
 
@@ -212,20 +216,6 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     Resources:
         + 11 to create
     ```
-
-5.  If you want to provision Kubernetes resources, you need to create a Kubernetes provider using the following:
-
-    ```
-    aks = KubernetesCluster(
-        omitted
-    )
-
-    custom_provider = Provider(
-        "inflation_provider", kubeconfig=aks.kube_config_raw
-    )
-    ```
-
-    You are all set after this. There are alternative ways of setting up Kubernetes provider. We have [kubernetes tutotials](/quickstart/kubernetes/) which you can follow to get a better understanding of setting up and working with Kubernetes.
 
 ## Access the Kubernetes Cluster using `kubectl`
 
