@@ -25,6 +25,7 @@ If you're not yet set up, you'll need to do two things:
     * For **Azure**, there is [AKS](https://docs.microsoft.com/en-us/azure/aks/).
     * For **GCP**, there is [GKE](https://cloud.google.com/kubernetes-engine/docs/tutorials/).
 1.  Download `kubectl`, the Kubernetes CLI. There is an extensive tutorial available [in the Kubernetes docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/). If you're using [Homebrew](https://brew.sh/) on macOS, you can install the community-managed `kubectl` formula via `brew install kubectl`.
+1. Create new pulumi project in [Pulumi UI](https://app.pulumi.com/welcome) or with Pulumi CLI `pulumi new` and select desired template. 
 
 ## Configuration
 
