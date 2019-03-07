@@ -758,21 +758,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.wafregional.WebAcl">
-<em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">WebAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_action=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">WebAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_action=None</em>, <em>logging_configuration=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.</p>
-<p>See <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_ActivatedRule.html">docs</a> for all details and supported values.</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">action</span></code> - (Required) The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">override_action</span></code> - (Required) Override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>.</li>
-<li><code class="docutils literal notranslate"><span class="pre">priority</span></code> - (Required) Specifies the order in which the rules in a WebACL are evaluated.
-Rules with a lower value are evaluated before rules with a higher value.</li>
-<li><code class="docutils literal notranslate"><span class="pre">rule_id</span></code> - (Required) ID of the associated WAF (Regional) rule (e.g. <cite>``aws_wafregional_rule`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html">https://www.terraform.io/docs/providers/aws/r/wafregional_rule.html</a>&gt;`_). WAF (Global) rules cannot be used.</li>
-<li><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) The rule type, either <code class="docutils literal notranslate"><span class="pre">REGULAR</span></code>, as defined by <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_Rule.html">Rule</a>, <code class="docutils literal notranslate"><span class="pre">RATE_BASED</span></code>, as defined by <a class="reference external" href="http://docs.aws.amazon.com/waf/latest/APIReference/API_RateBasedRule.html">RateBasedRule</a>, or <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>, as defined by <a class="reference external" href="https://docs.aws.amazon.com/waf/latest/APIReference/API_RuleGroup.html">RuleGroup</a>. The default is REGULAR. If you add a RATE_BASED rule, you need to set <code class="docutils literal notranslate"><span class="pre">type</span></code> as <code class="docutils literal notranslate"><span class="pre">RATE_BASED</span></code>. If you add a GROUP rule, you need to set <code class="docutils literal notranslate"><span class="pre">type</span></code> as <code class="docutils literal notranslate"><span class="pre">GROUP</span></code>.</li>
-</ul>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Required) Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule.
-e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">BLOCK</span></code> or <code class="docutils literal notranslate"><span class="pre">COUNT</span></code></li>
-</ul>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -781,18 +768,31 @@ e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The action that you want AWS WAF Regional to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.</li>
+<li><strong>logging_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to enable WAF logging. Detailed below.</li>
 <li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this web ACL.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the web ACL.</li>
-<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The rules to associate with the web ACL and the settings for each rule.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set of configuration blocks containing rules for the web ACL. Detailed below.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
+<dt id="pulumi_aws.wafregional.WebAcl.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of the WAF Regional WebACL.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.wafregional.WebAcl.default_action">
 <code class="descname">default_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.default_action" title="Permalink to this definition">¶</a></dt>
 <dd><p>The action that you want AWS WAF Regional to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.wafregional.WebAcl.logging_configuration">
+<code class="descname">logging_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.logging_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block to enable WAF logging. Detailed below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -810,7 +810,7 @@ e.g. <code class="docutils literal notranslate"><span class="pre">ALLOW</span></
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.WebAcl.rules">
 <code class="descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.WebAcl.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>The rules to associate with the web ACL and the settings for each rule.</p>
+<dd><p>Set of configuration blocks containing rules for the web ACL. Detailed below.</p>
 </dd></dl>
 
 <dl class="method">

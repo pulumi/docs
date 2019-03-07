@@ -1187,7 +1187,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.s3.get_bucket">
-<code class="descclassname">pulumi_aws.s3.</code><code class="descname">get_bucket</code><span class="sig-paren">(</span><em>bucket=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.get_bucket" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.s3.</code><code class="descname">get_bucket</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.get_bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific S3 bucket.</p>
 <p>This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.</p>
@@ -1195,7 +1195,7 @@ Distribution.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.s3.get_bucket_object">
-<code class="descclassname">pulumi_aws.s3.</code><code class="descname">get_bucket_object</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>key=None</em>, <em>range=None</em>, <em>tags=None</em>, <em>version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.get_bucket_object" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.s3.</code><code class="descname">get_bucket_object</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>key=None</em>, <em>range=None</em>, <em>tags=None</em>, <em>version_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.get_bucket_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>The S3 object data source allows access to the metadata and
 <em>optionally</em> (see below) content of an object stored inside S3 bucket.</p>
 <blockquote>

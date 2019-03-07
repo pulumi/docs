@@ -16,12 +16,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] grpc_config
-:param pulumi.Input[str] openapi_config
-:param pulumi.Input[str] project
-:param pulumi.Input[str] protoc_output
-:param pulumi.Input[str] protoc_output_base64
-:param pulumi.Input[str] service_name</p>
 <dl class="method">
 <dt id="pulumi_gcp.endpoints.Service.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.endpoints.Service.translate_output_property" title="Permalink to this definition">¶</a></dt>

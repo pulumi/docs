@@ -24,6 +24,36 @@ redirect_from: /install/changelog.html
     </thead>
     <tbody>
         <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0171-released-march-6-2019">0.17.1</a></th>
+            <td>2019/06/05</td>
+            <td>{% include sdk-links.html version='0.17.1' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#0170-released-march-5-2019">0.17.0</a></th>
+            <td>2019/03/05</td>
+            <td>{% include sdk-links.html version='0.17.0' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01618-released-march-1-2019">0.16.18</a></th>
+            <td>2019/03/01</td>
+            <td>{% include sdk-links.html version='0.16.18' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01617-released-february-27th-2019">0.16.17</a></th>
+            <td>2019/02/27</td>
+            <td>{% include sdk-links.html version='0.16.17' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01616-released-february-24th-2019">0.16.16</a></th>
+            <td>2019/02/24</td>
+            <td>{% include sdk-links.html version='0.16.16' %}</td>
+        </tr>
+        <tr>
+            <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#01615-released-february-22nd-2019">0.16.15</a></th>
+            <td>2019/02/22</td>
+            <td>{% include sdk-links.html version='0.16.15' %}</td>
+        </tr>
+        <tr>
             <th scope="row"><a href="https://github.com/pulumi/pulumi/blob/v0.16.14/CHANGELOG.md#01614-released-january-31th-2019">0.16.14</a></th>
             <td>2019/01/31</td>
             <td>{% include sdk-links.html version='0.16.14' %}</td>

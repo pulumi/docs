@@ -2431,14 +2431,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_account_alias">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_account_alias</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_account_alias" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_account_alias</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_account_alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IAM Account Alias data source allows access to the account alias
 for the effective account in which Terraform is working.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_group">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM group. By using this data source, you can reference IAM group
 properties without having to hard code ARNs as input.</p>
@@ -2446,7 +2446,7 @@ properties without having to hard code ARNs as input.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_instance_profile">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_instance_profile</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_instance_profile" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_instance_profile</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_instance_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM instance profile. By using this data source, you can reference IAM
 instance profile properties without having to hard code ARNs as input.</p>
@@ -2454,14 +2454,14 @@ instance profile properties without having to hard code ARNs as input.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_policy">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_policy</code><span class="sig-paren">(</span><em>arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_policy</code><span class="sig-paren">(</span><em>arn=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM policy.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_policy_document">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_policy_document</code><span class="sig-paren">(</span><em>override_json=None</em>, <em>policy_id=None</em>, <em>source_json=None</em>, <em>statements=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy_document" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_policy_document</code><span class="sig-paren">(</span><em>override_json=None</em>, <em>policy_id=None</em>, <em>source_json=None</em>, <em>statements=None</em>, <em>version=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_policy_document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates an IAM policy document in JSON format.</p>
 <p>This is a data source which can be used to construct a JSON representation of
 an IAM policy document, for use with resources which expect policy documents,
@@ -2487,7 +2487,7 @@ like <code class="docutils literal notranslate"><span class="pre">type</span> <s
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_role">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>name=None</em>, <em>role_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_role" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>name=None</em>, <em>role_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM role. By using this data source, you can reference IAM role
 properties without having to hard code ARNs as input.</p>
@@ -2495,7 +2495,7 @@ properties without having to hard code ARNs as input.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_server_certificate">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_server_certificate</code><span class="sig-paren">(</span><em>latest=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path_prefix=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_server_certificate" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_server_certificate</code><span class="sig-paren">(</span><em>latest=None</em>, <em>name=None</em>, <em>name_prefix=None</em>, <em>path_prefix=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_server_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to lookup information about IAM Server Certificates.</p>
 <p>The terraform import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
 It will not retrieve the private key which is not available through the AWS API.</p>
@@ -2503,7 +2503,7 @@ It will not retrieve the private key which is not available through the AWS API.
 
 <dl class="function">
 <dt id="pulumi_aws.iam.get_user">
-<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>user_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_user" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iam.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>user_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iam.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source can be used to fetch information about a specific
 IAM user. By using this data source, you can reference IAM user
 properties without having to hard code ARNs or unique IDs as input.</p>

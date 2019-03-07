@@ -1265,7 +1265,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.directconnect.get_gateway">
-<code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">get_gateway</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.get_gateway" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.directconnect.</code><code class="descname">get_gateway</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directconnect.get_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Direct Connect Gateway.</p>
 </dd></dl>
 

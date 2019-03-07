@@ -1050,13 +1050,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.elasticache.get_cluster">
-<code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Cluster</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticache.get_replication_group">
-<code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">get_replication_group</code><span class="sig-paren">(</span><em>replication_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticache.</code><code class="descname">get_replication_group</code><span class="sig-paren">(</span><em>replication_group_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Replication Group.</p>
 </dd></dl>
 

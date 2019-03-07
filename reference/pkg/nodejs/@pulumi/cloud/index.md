@@ -66,7 +66,6 @@ import * as cloud from "@pulumi/cloud";
 * <a href="#TaskRunOptions">interface TaskRunOptions</a>
 * <a href="#Topic">interface Topic</a>
 * <a href="#TopicConstructor">interface TopicConstructor</a>
-* <a href="#Volume">interface Volume</a>
 * <a href="#Action">type Action</a>
 * <a href="#BucketHandler">type BucketHandler</a>
 * <a href="#ContainerProtocol">type ContainerProtocol</a>
@@ -74,6 +73,7 @@ import * as cloud from "@pulumi/cloud";
 * <a href="#HttpEndpoint">type HttpEndpoint</a>
 * <a href="#PrimaryKeyType">type PrimaryKeyType</a>
 * <a href="#RouteHandler">type RouteHandler</a>
+* <a href="#Volume">type Volume</a>
 * <a href="#VolumeKind">type VolumeKind</a>
 
 <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/api.ts">api.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/bucket.ts">bucket.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts">service.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/table.ts">table.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts">timer.ts</a> <a href="https://github.com/pulumi/pulumi-cloud/blob/master/api/topic.ts">topic.ts</a> 
@@ -830,10 +830,9 @@ The domain name to associate with the API.
 <div class="pdoc-module-contents" markdown="1">
 </div>
 <h2 class="pdoc-module-header" id="HostPathVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L231">interface <b>HostPathVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L230">interface <b>HostPathVolume</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Volume'>Volume</a></pre>
 
 A volume mounted from a path on the host machine.
 
@@ -842,10 +841,10 @@ across different hosts.  This is not something that most containers will need, b
 a powerful escape hatch for some applications.
 
 <h3 class="pdoc-member-header" id="HostPathVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L199">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L231">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <a href='#VolumeKind'>VolumeKind</a>;</pre>
+<pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"HostPathVolume"</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="HostPathVolume-path">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L235">property <b>path</b></a>
@@ -1454,32 +1453,31 @@ Construct a new Service, which is one or more managed replicas of a group of one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L205">interface <b>SharedVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L203">interface <b>SharedVolume</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Volume'>Volume</a></pre>
 
 A shared volume that can be mounted into one or more containers.
 
 <h3 class="pdoc-member-header" id="SharedVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L199">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L204">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <a href='#VolumeKind'>VolumeKind</a>;</pre>
+<pre class="highlight"><span class='kd'></span>kind: <span class='s2'>"SharedVolume"</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SharedVolume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L209">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L208">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedVolumeConstructor">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L212">interface <b>SharedVolumeConstructor</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L211">interface <b>SharedVolumeConstructor</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="SharedVolumeConstructor-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L212"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L211"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1757,17 +1755,6 @@ Allocate a new Topic with a given name.
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L198">interface <b>Volume</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<h3 class="pdoc-member-header" id="Volume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L199">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: <a href='#VolumeKind'>VolumeKind</a>;</pre>
-</div>
-</div>
 <h2 class="pdoc-module-header" id="Action">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/timer.ts#L20">type <b>Action</b></a>
 </h2>
@@ -1826,6 +1813,12 @@ Implementations should invoke methods on `res` to respond to the request, or
 invoke `next` to pass control to the next available handler on the route for
 further processing.
 
+</div>
+<h2 class="pdoc-module-header" id="Volume">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L198">type <b>Volume</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> Volume = <a href='#SharedVolume'>SharedVolume</a> | <a href='#HostPathVolume'>HostPathVolume</a>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="VolumeKind">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/api/service.ts#L196">type <b>VolumeKind</b></a>

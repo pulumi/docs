@@ -751,14 +751,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.route53.get_delegation_set">
-<code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_delegation_set</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_delegation_set" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_delegation_set</code><span class="sig-paren">(</span><em>id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_delegation_set" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route53_delegation_set</span></code> provides details about a specific Route 53 Delegation Set.</p>
 <p>This data source allows to find a list of name servers associated with a specific delegation set.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.route53.get_zone">
-<code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_zone</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.route53.</code><code class="descname">get_zone</code><span class="sig-paren">(</span><em>caller_reference=None</em>, <em>comment=None</em>, <em>name=None</em>, <em>private_zone=None</em>, <em>resource_record_set_count=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>zone_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route53_zone</span></code> provides details about a specific Route 53 Hosted Zone.</p>
 <p>This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.</p>
 </dd></dl>

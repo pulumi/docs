@@ -249,7 +249,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.dns.get_managed_zone">
-<code class="descclassname">pulumi_gcp.dns.</code><code class="descname">get_managed_zone</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.get_managed_zone" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.dns.</code><code class="descname">get_managed_zone</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dns.get_managed_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to a zone’s attributes within Google Cloud DNS.
 For more information see
 <a class="reference external" href="https://cloud.google.com/dns/zones/">the official documentation</a>

@@ -749,7 +749,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.waf.WebAcl">
-<em class="property">class </em><code class="descclassname">pulumi_aws.waf.</code><code class="descname">WebAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_action=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.WebAcl" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.waf.</code><code class="descname">WebAcl</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>default_action=None</em>, <em>logging_configuration=None</em>, <em>metric_name=None</em>, <em>name=None</em>, <em>rules=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.waf.WebAcl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Web ACL Resource</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -758,10 +758,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The action that you want AWS WAF to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.</li>
+<li><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with action that you want AWS WAF to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL. Detailed below.</li>
+<li><strong>logging_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to enable WAF logging. Detailed below.</li>
 <li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description for the Amazon CloudWatch metric of this web ACL.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the web ACL.</li>
-<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The rules to associate with the web ACL and the settings for each rule.</li>
+<li><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.</li>
 </ul>
 </td>
 </tr>
@@ -770,7 +771,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.waf.WebAcl.default_action">
 <code class="descname">default_action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.WebAcl.default_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>The action that you want AWS WAF to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL.</p>
+<dd><p>Configuration block with action that you want AWS WAF to take when a request doesn’t match the criteria in any of the rules that are associated with the web ACL. Detailed below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.waf.WebAcl.logging_configuration">
+<code class="descname">logging_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.WebAcl.logging_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block to enable WAF logging. Detailed below.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -788,7 +795,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.waf.WebAcl.rules">
 <code class="descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.waf.WebAcl.rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>The rules to associate with the web ACL and the settings for each rule.</p>
+<dd><p>Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.</p>
 </dd></dl>
 
 <dl class="method">

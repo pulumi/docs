@@ -35,21 +35,13 @@ static.</p>
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IP of the created resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] address_type
-:param pulumi.Input[str] description
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network_tier
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[str] subnetwork</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Address.address">
 <code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Address.address" title="Permalink to this definition">¶</a></dt>
@@ -138,12 +130,6 @@ numbers of disks using the <code class="docutils literal notranslate"><span clas
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] device_name
-:param pulumi.Input[str] disk
-:param pulumi.Input[str] instance
-:param pulumi.Input[str] mode
-:param pulumi.Input[str] project
-:param pulumi.Input[str] zone</p>
 <dl class="method">
 <dt id="pulumi_gcp.compute.AttachedDisk.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.AttachedDisk.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -215,12 +201,6 @@ define.</p>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] autoscaling_policy
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project
-:param pulumi.Input[str] target
-:param pulumi.Input[str] zone</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Autoscalar.self_link">
 <code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Autoscalar.self_link" title="Permalink to this definition">¶</a></dt>
@@ -295,18 +275,13 @@ a virtual machine instance.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] bucket_name
-:param pulumi.Input[str] description
-:param pulumi.Input[bool] enable_cdn
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.BackendBucket.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.BackendBucket.project" title="Permalink to this definition">¶</a></dt>
@@ -601,26 +576,13 @@ state as plain-text.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[dict] disk_encryption_key
-:param pulumi.Input[str] disk_encryption_key_raw
-:param pulumi.Input[str] image
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[int] size
-:param pulumi.Input[str] snapshot
-:param pulumi.Input[dict] source_image_encryption_key
-:param pulumi.Input[dict] source_snapshot_encryption_key
-:param pulumi.Input[str] type
-:param pulumi.Input[str] zone</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Disk.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Disk.project" title="Permalink to this definition">¶</a></dt>
@@ -706,29 +668,13 @@ you need.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] allows
-:param pulumi.Input[list] denies
-:param pulumi.Input[str] description
-:param pulumi.Input[list] destination_ranges
-:param pulumi.Input[str] direction
-:param pulumi.Input[bool] disabled
-:param pulumi.Input[bool] enable_logging
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[int] priority
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[list] source_ranges
-:param pulumi.Input[str] source_service_accounts
-:param pulumi.Input[list] source_tags
-:param pulumi.Input[str] target_service_accounts
-:param pulumi.Input[list] target_tags</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Firewall.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Firewall.project" title="Permalink to this definition">¶</a></dt>
@@ -807,30 +753,13 @@ of target virtual machines to forward a packet to if it matches the given
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] backend_service
-:param pulumi.Input[str] description
-:param pulumi.Input[str] ip_address
-:param pulumi.Input[str] ip_protocol
-:param pulumi.Input[str] ip_version
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] load_balancing_scheme
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[str] network_tier
-:param pulumi.Input[str] port_range
-:param pulumi.Input[list] ports
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[str] service_label
-:param pulumi.Input[str] subnetwork
-:param pulumi.Input[str] target</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.ForwardingRule.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.ForwardingRule.project" title="Permalink to this definition">¶</a></dt>
@@ -1765,22 +1694,13 @@ HTTP(S) load balancing.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] address_type
-:param pulumi.Input[str] description
-:param pulumi.Input[str] ip_version
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[int] prefix_length
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] purpose</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.GlobalAddress.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.GlobalAddress.project" title="Permalink to this definition">¶</a></dt>
@@ -2039,24 +1959,13 @@ healthy again and can receive new connections.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] check_interval_sec
-:param pulumi.Input[str] description
-:param pulumi.Input[int] healthy_threshold
-:param pulumi.Input[dict] http_health_check
-:param pulumi.Input[dict] https_health_check
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[dict] ssl_health_check
-:param pulumi.Input[dict] tcp_health_check
-:param pulumi.Input[int] timeout_sec
-:param pulumi.Input[int] unhealthy_threshold</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HealthCheck.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HealthCheck.project" title="Permalink to this definition">¶</a></dt>
@@ -2140,23 +2049,13 @@ which still require the legacy version.</div></blockquote>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] check_interval_sec
-:param pulumi.Input[str] description
-:param pulumi.Input[int] healthy_threshold
-:param pulumi.Input[str] host
-:param pulumi.Input[str] name
-:param pulumi.Input[int] port
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] request_path
-:param pulumi.Input[int] timeout_sec
-:param pulumi.Input[int] unhealthy_threshold</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HttpHealthCheck.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HttpHealthCheck.project" title="Permalink to this definition">¶</a></dt>
@@ -2240,23 +2139,13 @@ which still require the legacy version.</div></blockquote>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] check_interval_sec
-:param pulumi.Input[str] description
-:param pulumi.Input[int] healthy_threshold
-:param pulumi.Input[str] host
-:param pulumi.Input[str] name
-:param pulumi.Input[int] port
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] request_path
-:param pulumi.Input[int] timeout_sec
-:param pulumi.Input[int] unhealthy_threshold</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.HttpsHealthCheck.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.HttpsHealthCheck.project" title="Permalink to this definition">¶</a></dt>
@@ -2756,38 +2645,17 @@ and
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the resource, required by GCE.
+Changing this forces a new resource to be created.</li>
+<li><strong>source_instance_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or self link of an instance
+template to create the instance based on.</li>
+<li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the machine should be created in. If not
+set, the provider zone is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[bool] allow_stopping_for_update
-:param pulumi.Input[list] attached_disks
-:param pulumi.Input[dict] boot_disk
-:param pulumi.Input[bool] can_ip_forward
-:param pulumi.Input[bool] deletion_protection
-:param pulumi.Input[str] description
-:param pulumi.Input[list] guest_accelerators
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] machine_type
-:param pulumi.Input[dict] metadata
-:param pulumi.Input[str] metadata_startup_script
-:param pulumi.Input[str] min_cpu_platform
-:param pulumi.Input[str] name: A unique name for the resource, required by GCE.</p>
-<blockquote>
-<div>Changing this forces a new resource to be created.</div></blockquote>
-<p>:param pulumi.Input[list] network_interfaces
-:param pulumi.Input[str] project
-:param pulumi.Input[dict] scheduling
-:param pulumi.Input[list] scratch_disks
-:param pulumi.Input[dict] service_account
-:param pulumi.Input[str] source_instance_template: Name or self link of an instance</p>
-<blockquote>
-<div>template to create the instance based on.</div></blockquote>
-<p>:param pulumi.Input[list] tags
-:param pulumi.Input[str] zone: The zone that the machine should be created in. If not</p>
-<blockquote>
-<div>set, the provider zone is used.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InstanceFromTemplate.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InstanceFromTemplate.name" title="Permalink to this definition">¶</a></dt>
@@ -3512,19 +3380,13 @@ information, see Creating VLAN Attachments.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] interconnect
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[str] router</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.InterconnectAttachment.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.InterconnectAttachment.project" title="Permalink to this definition">¶</a></dt>
@@ -4010,12 +3872,6 @@ define.</p>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] autoscaling_policy
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project
-:param pulumi.Input[str] region
-:param pulumi.Input[str] target</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionAutoscaler.self_link">
 <code class="descname">self_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionAutoscaler.self_link" title="Permalink to this definition">¶</a></dt>
@@ -4267,24 +4123,13 @@ state as plain-text.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[dict] disk_encryption_key
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[list] replica_zones
-:param pulumi.Input[int] size
-:param pulumi.Input[str] snapshot
-:param pulumi.Input[dict] source_snapshot_encryption_key
-:param pulumi.Input[str] type</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.RegionDisk.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.RegionDisk.project" title="Permalink to this definition">¶</a></dt>
@@ -4654,29 +4499,17 @@ nextHopGateway, nextHopInstance, nextHopIp, or nextHopVpnTunnel.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>next_hop_instance_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional when <code class="docutils literal notranslate"><span class="pre">next_hop_instance</span></code> is
+specified)  The zone of the instance specified in
+<code class="docutils literal notranslate"><span class="pre">next_hop_instance</span></code>.  Omit if <code class="docutils literal notranslate"><span class="pre">next_hop_instance</span></code> is specified as
+a URL.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] dest_range
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[str] next_hop_gateway
-:param pulumi.Input[str] next_hop_instance
-:param pulumi.Input[str] next_hop_instance_zone: (Optional when <code class="docutils literal notranslate"><span class="pre">next_hop_instance</span></code> is</p>
-<blockquote>
-<div>specified)  The zone of the instance specified in
-<code class="docutils literal notranslate"><span class="pre">next_hop_instance</span></code>.  Omit if <code class="docutils literal notranslate"><span class="pre">next_hop_instance</span></code> is specified as
-a URL.</div></blockquote>
-<p>:param pulumi.Input[str] next_hop_ip
-:param pulumi.Input[str] next_hop_vpn_tunnel
-:param pulumi.Input[int] priority
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[list] tags</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Route.next_hop_instance_zone">
 <code class="descname">next_hop_instance_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Route.next_hop_instance_zone" title="Permalink to this definition">¶</a></dt>
@@ -4762,19 +4595,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] bgp
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Router.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Router.project" title="Permalink to this definition">¶</a></dt>
@@ -4959,19 +4786,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] icmp_idle_timeout_sec
-:param pulumi.Input[int] min_ports_per_vm
-:param pulumi.Input[str] name
-:param pulumi.Input[str] nat_ip_allocate_option
-:param pulumi.Input[list] nat_ips
-:param pulumi.Input[str] project
-:param pulumi.Input[str] region
-:param pulumi.Input[str] router
-:param pulumi.Input[str] source_subnetwork_ip_ranges_to_nat
-:param pulumi.Input[list] subnetworks
-:param pulumi.Input[int] tcp_established_idle_timeout_sec
-:param pulumi.Input[int] tcp_transitory_idle_timeout_sec
-:param pulumi.Input[int] udp_idle_timeout_sec</p>
 <dl class="method">
 <dt id="pulumi_gcp.compute.RouterNat.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.RouterNat.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -5176,21 +4990,15 @@ the load balancer to serve secure connections from the user.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the
+specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] certificate
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the</p>
-<blockquote>
-<div>specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</div></blockquote>
-<p>:param pulumi.Input[str] private_key
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SSLCertificate.name_prefix">
 <code class="descname">name_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLCertificate.name_prefix" title="Permalink to this definition">¶</a></dt>
@@ -5275,19 +5083,13 @@ features of SSL that your SSL proxy or HTTPS load balancer negotiates.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_features
-:param pulumi.Input[str] description
-:param pulumi.Input[str] min_tls_version
-:param pulumi.Input[str] name
-:param pulumi.Input[str] profile
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.SSLPolicy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.SSLPolicy.project" title="Permalink to this definition">¶</a></dt>
@@ -5617,23 +5419,13 @@ created a full image of the disk.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[dict] snapshot_encryption_key
-:param pulumi.Input[str] snapshot_encryption_key_raw
-:param pulumi.Input[str] source_disk
-:param pulumi.Input[dict] source_disk_encryption_key
-:param pulumi.Input[str] source_disk_encryption_key_raw
-:param pulumi.Input[str] zone</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Snapshot.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Snapshot.project" title="Permalink to this definition">¶</a></dt>
@@ -5729,22 +5521,13 @@ of the network, even entire subnets, using firewall rules.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[bool] enable_flow_logs
-:param pulumi.Input[str] ip_cidr_range
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[bool] private_ip_google_access
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[list] secondary_ip_ranges</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.Subnetwork.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.Subnetwork.project" title="Permalink to this definition">¶</a></dt>
@@ -5821,20 +5604,8 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[list] members
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs. If it</p>
-<blockquote>
-<div>is not provided, the provider project is used.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -5943,20 +5714,8 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] member
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs. If it</p>
-<blockquote>
-<div>is not provided, the provider project is used.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
+is not provided, the provider project is used.</li>
 <li><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of the subnetwork. If
 unspecified, this defaults to the region configured in the provider.</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -6174,17 +5933,13 @@ forwarding rule to route incoming HTTP requests to a URL map.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] url_map</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetHttpProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -6262,20 +6017,13 @@ global forwarding rule to route incoming HTTPS requests to a URL map.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] quic_override
-:param pulumi.Input[list] ssl_certificates
-:param pulumi.Input[str] ssl_policy
-:param pulumi.Input[str] url_map</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetHttpsProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetHttpsProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -6507,20 +6255,13 @@ service.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] backend_service
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] proxy_header
-:param pulumi.Input[str] ssl_certificates
-:param pulumi.Input[str] ssl_policy</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetSSLProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetSSLProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -6599,18 +6340,13 @@ service.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] backend_service
-:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] proxy_header</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.TargetTCPProxy.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.TargetTCPProxy.project" title="Permalink to this definition">¶</a></dt>
@@ -6814,18 +6550,13 @@ by Google, but used only by you.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.VPNGateway.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNGateway.project" title="Permalink to this definition">¶</a></dt>
@@ -6907,25 +6638,13 @@ state as plain-text.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[int] ike_version
-:param pulumi.Input[dict] labels
-:param pulumi.Input[list] local_traffic_selectors
-:param pulumi.Input[str] name
-:param pulumi.Input[str] peer_ip
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[list] remote_traffic_selectors
-:param pulumi.Input[str] router
-:param pulumi.Input[str] shared_secret
-:param pulumi.Input[str] target_vpn_gateway</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.compute.VPNTunnel.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.compute.VPNTunnel.project" title="Permalink to this definition">¶</a></dt>
@@ -6981,14 +6700,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_address">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_address</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_address" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_address</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the IP address from a static address. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/addresses/get">API</a> documentation.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_backend_service">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_backend_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_backend_service" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_backend_service</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_backend_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provide acces to a Backend Service’s attribute. For more information
 see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/http/backend-service">the official documentation</a>
 and the <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/backendServices">API</a>.</p>
@@ -6996,33 +6715,33 @@ and the <a class="reference external" href="https://cloud.google.com/compute/doc
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_default_service_account">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_default_service_account</code><span class="sig-paren">(</span><em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_default_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_default_service_account</code><span class="sig-paren">(</span><em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_default_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve default service account for this project</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_forwarding_rule">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_forwarding_rule</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_forwarding_rule" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_forwarding_rule</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_forwarding_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a forwarding rule within GCE from its name.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_global_address">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_global_address</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_global_address" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_global_address</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_global_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/globalAddresses">API</a> documentation.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_image">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>family=None</em>, <em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>family=None</em>, <em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about a Google Compute Image. Check that your service account has the <code class="docutils literal notranslate"><span class="pre">compute.imageUser</span></code> role if you want to share <a class="reference external" href="https://cloud.google.com/compute/docs/images/sharing-images-across-projects">custom images</a> from another project. If you want to use [public images][pubimg], do not forget to specify the dedicated project. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/images">the official documentation</a> and its <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/images">API</a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_instance">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_instance" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about a VM instance resource within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/compute/docs/instances">the official documentation</a>
 and
@@ -7031,7 +6750,7 @@ and
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_instance_group">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_instance_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_instance_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_instance_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>self_link=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_instance_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Compute Instance Group within GCE.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups">the official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/instanceGroups">API</a></p>
@@ -7039,27 +6758,27 @@ and <a class="reference external" href="https://cloud.google.com/compute/docs/re
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_lbip_ranges">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_lbip_ranges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_lbip_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_lbip_ranges</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_lbip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access IP ranges in your firewall rules.</p>
 <p><a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules">https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules</a></p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_netblock_ip_ranges">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_netblock_ip_ranges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_netblock_ip_ranges" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_netblock_ip_ranges</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_netblock_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the IP ranges from the sender policy framework (SPF) record of _cloud-netblocks.googleusercontent</p>
 <p><a class="reference external" href="https://cloud.google.com/compute/docs/faq#where_can_i_find_product_name_short_ip_ranges">https://cloud.google.com/compute/docs/faq#where_can_i_find_product_name_short_ip_ranges</a></p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_network">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_network" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a network within GCE from its name.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_region_instance_group">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_region_instance_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_region_instance_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_region_instance_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>self_link=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_region_instance_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Compute Region Instance Group within GCE.
 For more information, see <a class="reference external" href="https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups">API</a>.</p>
 <p>The most common use of this datasource will be to fetch information about the instances inside regional managed instance groups, for instance:</p>
@@ -7067,14 +6786,14 @@ For more information, see <a class="reference external" href="https://cloud.goog
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_regions">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_regions</code><span class="sig-paren">(</span><em>project=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_regions" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_regions</code><span class="sig-paren">(</span><em>project=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute regions for a given project.
 See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">regions and regions</a> in the upstream docs.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_ssl_policy">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_ssl_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_ssl_policy" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_ssl_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_ssl_policy" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
 <dt>Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.</dt>
 <dd>For more information see <a class="reference external" href="https://cloud.google.com/compute/docs/load-balancing/ssl-policies">the official documentation</a>.</dd>
@@ -7083,19 +6802,19 @@ See more about <a class="reference external" href="https://cloud.google.com/comp
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_subnetwork">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_subnetwork</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_subnetwork" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_subnetwork</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_subnetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a subnetwork within GCE from its name and region.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_vpn_gateway">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_vpn_gateway</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_vpn_gateway</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a VPN gateway within GCE from its name.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.compute.get_zones">
-<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_zones</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_zones" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.compute.</code><code class="descname">get_zones</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>status=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.compute.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Compute zones in a region for a given project.
 See more about <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/regions-zones">regions and zones</a> in the upstream docs.</p>
 </dd></dl>

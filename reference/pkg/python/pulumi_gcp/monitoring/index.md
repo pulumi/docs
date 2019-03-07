@@ -26,13 +26,6 @@ about this state.</p>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] combiner
-:param pulumi.Input[list] conditions
-:param pulumi.Input[str] display_name
-:param pulumi.Input[bool] enabled
-:param pulumi.Input[list] labels
-:param pulumi.Input[list] notification_channels
-:param pulumi.Input[str] project</p>
 <dl class="method">
 <dt id="pulumi_gcp.monitoring.AlertPolicy.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -99,18 +92,13 @@ resource, then that resource is a member of that group.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] display_name
-:param pulumi.Input[str] filter
-:param pulumi.Input[bool] is_cluster
-:param pulumi.Input[str] parent_name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.Group.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.Group.project" title="Permalink to this definition">¶</a></dt>
@@ -184,20 +172,13 @@ like authentication tokens or contact info are only partially populated on retri
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] description
-:param pulumi.Input[str] display_name
-:param pulumi.Input[bool] enabled
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[str] type
-:param pulumi.Input[dict] user_labels</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.NotificationChannel.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.NotificationChannel.project" title="Permalink to this definition">¶</a></dt>
@@ -268,25 +249,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] content_matchers
-:param pulumi.Input[str] display_name
-:param pulumi.Input[dict] http_check
-:param pulumi.Input[list] internal_checkers
-:param pulumi.Input[bool] is_internal
-:param pulumi.Input[dict] monitored_resource
-:param pulumi.Input[str] period
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[dict] resource_group
-:param pulumi.Input[list] selected_regions
-:param pulumi.Input[dict] tcp_check
-:param pulumi.Input[str] timeout</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.monitoring.UptimeCheckConfig.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.UptimeCheckConfig.project" title="Permalink to this definition">¶</a></dt>

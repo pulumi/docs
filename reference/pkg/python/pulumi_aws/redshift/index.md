@@ -32,28 +32,16 @@ The version selected runs on all the nodes in the cluster.</li>
 <li><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the first database to be created when the cluster is created.
 If you do not provide a name, Amazon Redshift will create a default database called <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</li>
 <li><strong>elastic_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Elastic IP (EIP) address for the cluster.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] enable_logging
-:param pulumi.Input[bool] encrypted: If true , the data in the cluster is encrypted at rest.
-:param pulumi.Input[str] endpoint: The connection endpoint
-:param pulumi.Input[bool] enhanced_vpc_routing: If true , enhanced VPC routing is enabled.
-:param pulumi.Input[str] final_snapshot_identifier: The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, <code class="docutils literal notranslate"><span class="pre">skip_final_snapshot</span></code> must be false.
-:param pulumi.Input[list] iam_roles: A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
-:param pulumi.Input[str] kms_key_id: The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> needs to be set to true.
-:param pulumi.Input[dict] logging: Logging, documented below.
-:param pulumi.Input[str] master_password: Password for the master DB user.</p>
-<blockquote>
-<div>Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
-contain at least one uppercase letter, one lowercase letter, and one number.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true , the data in the cluster is encrypted at rest.</li>
+<li><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The connection endpoint</li>
+<li><strong>enhanced_vpc_routing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true , enhanced VPC routing is enabled.</li>
+<li><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, <code class="docutils literal notranslate"><span class="pre">skip_final_snapshot</span></code> must be false.</li>
+<li><strong>iam_roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.</li>
+<li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. When specifying <code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> needs to be set to true.</li>
+<li><strong>logging</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Logging, documented below.</li>
+<li><strong>master_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the master DB user.
+Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 chars and
+contain at least one uppercase letter, one lowercase letter, and one number.</li>
 <li><strong>master_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username for the master DB user.</li>
 <li><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The node type to be provisioned for the cluster.</li>
 <li><strong>number_of_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.</li>
@@ -979,13 +967,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.redshift.get_cluster">
-<code class="descclassname">pulumi_aws.redshift.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_identifier=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.redshift.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_identifier=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific redshift cluster.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.redshift.get_service_account">
-<code class="descclassname">pulumi_aws.redshift.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.redshift.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">AWS Redshift Service Account</a>
 in a given region for the purpose of allowing Redshift to store audit data in S3.</p>
 </dd></dl>

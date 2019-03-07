@@ -36,15 +36,13 @@ in the Git repo. This is mutually exclusive with <code class="docutils literal n
 <code class="docutils literal notranslate"><span class="pre">cloudbuild.yaml</span></code> however it can be specified by the user.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project that the trigger will be created in.
 Defaults to the provider project configuration.</li>
+<li><strong>trigger_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Location of the source in a Google
+Cloud Source Repository. Structure is documented below.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] substitutions
-:param pulumi.Input[dict] trigger_template: Location of the source in a Google</p>
-<blockquote>
-<div>Cloud Source Repository. Structure is documented below.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.build">
 <code class="descname">build</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.build" title="Permalink to this definition">¶</a></dt>

@@ -693,28 +693,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ecs.get_cluster">
-<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>cluster_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ecs.get_container_definition">
-<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_container_definition</code><span class="sig-paren">(</span><em>container_name=None</em>, <em>task_definition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_container_definition" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_container_definition</code><span class="sig-paren">(</span><em>container_name=None</em>, <em>task_definition=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_container_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ecs.get_service">
-<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_service</code><span class="sig-paren">(</span><em>cluster_arn=None</em>, <em>service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_service" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_service</code><span class="sig-paren">(</span><em>cluster_arn=None</em>, <em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ecs.get_task_definition">
-<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_task_definition</code><span class="sig-paren">(</span><em>task_definition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_task_definition" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ecs.</code><code class="descname">get_task_definition</code><span class="sig-paren">(</span><em>task_definition=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_task_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.</p>
 </dd></dl>

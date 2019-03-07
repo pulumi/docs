@@ -648,7 +648,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.sns.get_topic">
-<code class="descclassname">pulumi_aws.sns.</code><code class="descname">get_topic</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.get_topic" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.sns.</code><code class="descname">get_topic</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.get_topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of a topic in AWS Simple Notification
 Service (SNS). By using this data source, you can reference SNS topics
 without having to hard code the ARNs as input.</p>

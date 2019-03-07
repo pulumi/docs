@@ -847,14 +847,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancing.get_hosted_zone_id">
-<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_hosted_zone_id</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_hosted_zone_id" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_hosted_zone_id</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_hosted_zone_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancing.get_load_balancer">
-<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_load_balancer" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_load_balancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a “classic” Elastic Load Balancer (ELB).
 See <a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/lb.html">LB Data Source</a> if you are looking for “v2”
 Application Load Balancer (ALB) or Network Load Balancer (NLB).</p>
@@ -865,7 +865,7 @@ with it, etc.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancing.get_service_account">
-<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancing.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancing.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-access-logs.html#attach-bucket-policy">AWS Elastic Load Balancing Service Account</a>
 in a given region for the purpose of whitelisting in S3 bucket policy.</p>
 </dd></dl>

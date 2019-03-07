@@ -237,15 +237,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>gateway_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the gateway.</li>
 <li><strong>gateway_timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time zone for the gateway. The time zone is of the format “GMT”, “GMT-hr:mm”, or “GMT+hr:mm”. For example, <code class="docutils literal notranslate"><span class="pre">GMT-4:00</span></code> indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway’s maintenance schedule.</li>
 <li><strong>gateway_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the gateway. The default value is <code class="docutils literal notranslate"><span class="pre">STORED</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">CACHED</span></code>, <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">STORED</span></code>, <code class="docutils literal notranslate"><span class="pre">VTL</span></code>.</li>
+<li><strong>smb_active_directory_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.</li>
+<li><strong>smb_guest_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Guest password for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code> authentication SMB file shares. Terraform can only detect drift of the existence of a guest password, not its actual value from the gateway. Terraform can however update the password with changing the argument.</li>
+<li><strong>tape_drive_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of tape drive to use for tape gateway. Terraform cannot detect drift of this argument. Valid values: <code class="docutils literal notranslate"><span class="pre">IBM-ULT3580-TD5</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] medium_changer_type
-:param pulumi.Input[dict] smb_active_directory_settings: Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">ActiveDirectory</span></code> authentication SMB file shares. More details below.
-:param pulumi.Input[str] smb_guest_password: Guest password for Server Message Block (SMB) file shares. Only valid for <code class="docutils literal notranslate"><span class="pre">FILE_S3</span></code> gateway type. Must be set before creating <code class="docutils literal notranslate"><span class="pre">GuestAccess</span></code> authentication SMB file shares. Terraform can only detect drift of the existence of a guest password, not its actual value from the gateway. Terraform can however update the password with changing the argument.
-:param pulumi.Input[str] tape_drive_type: Type of tape drive to use for tape gateway. Terraform cannot detect drift of this argument. Valid values: <code class="docutils literal notranslate"><span class="pre">IBM-ULT3580-TD5</span></code>.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.storagegateway.Gateway.activation_key">
 <code class="descname">activation_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.Gateway.activation_key" title="Permalink to this definition">¶</a></dt>
@@ -828,7 +827,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.storagegateway.get_local_disk">
-<code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">get_local_disk</code><span class="sig-paren">(</span><em>disk_node=None</em>, <em>disk_path=None</em>, <em>gateway_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.storagegateway.</code><code class="descname">get_local_disk</code><span class="sig-paren">(</span><em>disk_node=None</em>, <em>disk_path=None</em>, <em>gateway_arn=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.</p>
 </dd></dl>
 

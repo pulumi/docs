@@ -259,7 +259,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.sqs.get_queue">
-<code class="descclassname">pulumi_aws.sqs.</code><code class="descname">get_queue</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.get_queue" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.sqs.</code><code class="descname">get_queue</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.get_queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN and URL of queue in AWS Simple Queue Service (SQS).
 By using this data source, you can reference SQS queues without having to hardcode
 the ARNs as input.</p>
