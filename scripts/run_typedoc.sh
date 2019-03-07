@@ -55,8 +55,7 @@ generate_docs() {
 
 generate_docs "pulumi" "pulumi/sdk/nodejs"
 generate_docs "aws" "pulumi-aws" "sdk/nodejs"
-generate_docs "aws-infra" "pulumi-aws-infra/nodejs/aws-infra"
-generate_docs "aws-serverless" "pulumi-aws-serverless/nodejs/aws-serverless"
+generate_docs "awsx" "pulumi-awsx/nodejs/awsx"
 generate_docs "azure" "pulumi-azure" "sdk/nodejs"
 generate_docs "azure-serverless" "pulumi-azure-serverless/nodejs/azure-serverless"
 generate_docs "cloud" "pulumi-cloud/api"
