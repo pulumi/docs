@@ -751,7 +751,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancingv2.get_listener">
-<code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">get_listener</code><span class="sig-paren">(</span><em>arn=None</em>, <em>load_balancer_arn=None</em>, <em>port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.get_listener" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">get_listener</code><span class="sig-paren">(</span><em>arn=None</em>, <em>load_balancer_arn=None</em>, <em>port=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.get_listener" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">aws_alb_listener</span></code> is known as <code class="docutils literal notranslate"><span class="pre">aws_lb_listener</span></code>. The functionality is identical.</div></blockquote>
 <p>Provides information about a Load Balancer Listener.</p>
@@ -762,7 +762,7 @@ information specific to the listener in question.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancingv2.get_load_balancer">
-<code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.get_load_balancer" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">get_load_balancer</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.get_load_balancer" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">aws_alb</span></code> is known as <code class="docutils literal notranslate"><span class="pre">aws_lb</span></code>. The functionality is identical.</div></blockquote>
 <p>Provides information about a Load Balancer.</p>
@@ -773,7 +773,7 @@ with it, etc.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticloadbalancingv2.get_target_group">
-<code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">get_target_group</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.get_target_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticloadbalancingv2.</code><code class="descname">get_target_group</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticloadbalancingv2.get_target_group" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> is known as <code class="docutils literal notranslate"><span class="pre">aws_lb_target_group</span></code>. The functionality is identical.</div></blockquote>
 <p>Provides information about a Load Balancer Target Group.</p>

@@ -18,7 +18,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] unique_id</p>
 <dl class="attribute">
 <dt id="pulumi_aws.codedeploy.Application.compute_platform">
 <code class="descname">compute_platform</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.Application.compute_platform" title="Permalink to this definition">¶</a></dt>

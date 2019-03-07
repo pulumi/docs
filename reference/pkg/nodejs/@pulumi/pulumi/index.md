@@ -27,7 +27,6 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="#ComponentResource">class ComponentResource</a>
 * <a href="#Config">class Config</a>
 * <a href="#CustomResource">class CustomResource</a>
-* <a href="#Output">class Output</a>
 * <a href="#ProviderResource">class ProviderResource</a>
 * <a href="#Resource">class Resource</a>
 * <a href="#ResourceError">class ResourceError</a>
@@ -40,22 +39,30 @@ import * as pulumi from "@pulumi/pulumi";
 * <a href="#concat">function concat</a>
 * <a href="#getProject">function getProject</a>
 * <a href="#getStack">function getStack</a>
+* <a href="#hasTrueBooleanMember">function hasTrueBooleanMember</a>
 * <a href="#interpolate">function interpolate</a>
+* <a href="#isInstance">function isInstance</a>
 * <a href="#output">function output</a>
 * <a href="#ComponentResourceOptions">interface ComponentResourceOptions</a>
 * <a href="#CustomResourceOptions">interface CustomResourceOptions</a>
+* <a href="#OutputConstructor">interface OutputConstructor</a>
+* <a href="#OutputInstance">interface OutputInstance</a>
 * <a href="#ResourceOptions">interface ResourceOptions</a>
 * <a href="#StackReferenceArgs">interface StackReferenceArgs</a>
 * <a href="#UnwrappedArray">interface UnwrappedArray</a>
 * <a href="#ID">type ID</a>
 * <a href="#Input">type Input</a>
 * <a href="#Inputs">type Inputs</a>
+* <a href="#Lifted">type Lifted</a>
+* <a href="#LiftedArray">type LiftedArray</a>
+* <a href="#LiftedObject">type LiftedObject</a>
+* <a href="#Output">type Output</a>
 * <a href="#URN">type URN</a>
 * <a href="#Unwrap">type Unwrap</a>
 * <a href="#UnwrapSimple">type UnwrapSimple</a>
 * <a href="#UnwrappedObject">type UnwrappedObject</a>
 
-<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts">config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts">errors.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/metadata.ts">metadata.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts">output.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts">resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts">stackReference.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/version.ts">version.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/config.ts">config.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts">errors.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/index.ts">index.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/metadata.ts">metadata.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts">output.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts">resource.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/stackReference.ts">stackReference.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/utils.ts">utils.ts</a> <a href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/version.ts">version.ts</a> 
 </div>
 </div>
 </div>
@@ -79,7 +86,7 @@ import * as pulumi from "@pulumi/pulumi";
 </div>
 
 <h2 class="pdoc-module-header" id="ComponentResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L283">class <b>ComponentResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L315">class <b>ComponentResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Resource'>Resource</a></pre>
@@ -89,7 +96,7 @@ level abstraction. The component resource itself is a resource, but does not req
 operations for provisioning.
 
 <h3 class="pdoc-member-header" id="ComponentResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L283"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L328"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -109,7 +116,7 @@ perform resource operations.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L102">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -117,15 +124,19 @@ perform resource operations.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L326">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L319">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L366">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -133,18 +144,50 @@ perform resource operations.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-__childResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L51">property <b>__childResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L77">property <b>__childResources</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__childResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 
-The child resources of this resource.  Used so that if any resource wants to wait on this
-resource being complete, they will logically wait on all our child resources being complete
-as well.
+The child resources of this resource.  We use these (only from a ComponentResource) to allow
+code to dependOn a ComponentResource and have that effectively mean that it is depending on
+all the CustomResource children of that component.
+
+Important!  We only walk through ComponentResources.  They're the only resources that serve
+as an aggregation of other primitive (i.e. custom) resources.  While a custom resource can be
+a parent of other resources, we don't want to ever depend on those child resource.  If we do,
+it's simple to end up in a situation where we end up depending on a child resource that has a
+data cycle dependency due to the data passed into it.
+
+An example of how this would be bad is:
+
+```ts
+    var c1 = new CustomResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.id }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.id }, { parent: c1 });
+```
+
+The problem here is that 'c2' has a data dependency on 'c1'.  If it tries to wait on 'c1' it
+will walk to the children and wait on them.  This will mean it will wait on 'c3'.  But 'c3'
+will be waiting in the same manner on 'c2', and a cycle forms.
+
+This normally does not happen with ComponentResources as they do not have any data flowing
+into them. The only way you would be able to have a problem is if you had this sort of coding
+pattern:
+
+```ts
+    var c1 = new ComponentResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.urn }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.urn }, { parent: c1 });
+```
+
+However, this would be pretty nonsensical as there is zero need for a custom resource to ever
+need to reference the urn of a component resource.  So it's acceptable if that sort of
+pattern failed in practice.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-__parentResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L43">property <b>__parentResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L37">property <b>__parentResource</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__parentResource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -152,8 +195,26 @@ as well.
 The optional parent of this resource.
 
 </div>
+<h3 class="pdoc-member-header" id="ComponentResource-__pulumiComponentResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L320">property <b>__pulumiComponentResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiComponentResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
+<h3 class="pdoc-member-header" id="ComponentResource-__pulumiResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L31">property <b>__pulumiResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="ComponentResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L83">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
@@ -288,7 +349,7 @@ project.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L215">class <b>CustomResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L247">class <b>CustomResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Resource'>Resource</a></pre>
@@ -299,7 +360,7 @@ and perform partial updates of them, and these CRUD operations are implemented i
 loaded plugin for the defining package.
 
 <h3 class="pdoc-member-header" id="CustomResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L234"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L266"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -320,7 +381,7 @@ upon the diffing of the new goal state compared to the current known resource st
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L102">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -328,7 +389,7 @@ upon the diffing of the new goal state compared to the current known resource st
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L232">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L264">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -340,18 +401,50 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-__childResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L51">property <b>__childResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L77">property <b>__childResources</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__childResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 
-The child resources of this resource.  Used so that if any resource wants to wait on this
-resource being complete, they will logically wait on all our child resources being complete
-as well.
+The child resources of this resource.  We use these (only from a ComponentResource) to allow
+code to dependOn a ComponentResource and have that effectively mean that it is depending on
+all the CustomResource children of that component.
+
+Important!  We only walk through ComponentResources.  They're the only resources that serve
+as an aggregation of other primitive (i.e. custom) resources.  While a custom resource can be
+a parent of other resources, we don't want to ever depend on those child resource.  If we do,
+it's simple to end up in a situation where we end up depending on a child resource that has a
+data cycle dependency due to the data passed into it.
+
+An example of how this would be bad is:
+
+```ts
+    var c1 = new CustomResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.id }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.id }, { parent: c1 });
+```
+
+The problem here is that 'c2' has a data dependency on 'c1'.  If it tries to wait on 'c1' it
+will walk to the children and wait on them.  This will mean it will wait on 'c3'.  But 'c3'
+will be waiting in the same manner on 'c2', and a cycle forms.
+
+This normally does not happen with ComponentResources as they do not have any data flowing
+into them. The only way you would be able to have a problem is if you had this sort of coding
+pattern:
+
+```ts
+    var c1 = new ComponentResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.urn }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.urn }, { parent: c1 });
+```
+
+However, this would be pretty nonsensical as there is zero need for a custom resource to ever
+need to reference the urn of a component resource.  So it's acceptable if that sort of
+pattern failed in practice.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-__parentResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L43">property <b>__parentResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L37">property <b>__parentResource</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__parentResource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -359,8 +452,26 @@ as well.
 The optional parent of this resource.
 
 </div>
+<h3 class="pdoc-member-header" id="CustomResource-__pulumiCustomResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L252">property <b>__pulumiCustomResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiCustomResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
+<h3 class="pdoc-member-header" id="CustomResource-__pulumiResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L31">property <b>__pulumiResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="CustomResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L226">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>id: <a href='#Output'>Output</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
@@ -370,7 +481,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L83">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
@@ -380,149 +491,8 @@ deployments.
 
 </div>
 </div>
-<h2 class="pdoc-module-header" id="Output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L25">class <b>Output</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-
-Output helps encode the relationship between Resources in a Pulumi application. Specifically an
-Output holds onto a piece of Data and the Resource it was generated from. An Output value can
-then be provided when constructing new Resources, allowing that new Resource to know both the
-value as well as the Resource the value came from.  This allows for a precise 'Resource
-dependency graph' to be created, which properly tracks the relationship between resources.
-
-<h3 class="pdoc-member-header" id="Output-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L115"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>public </span><span class='kd'>new</span> Output(resources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <a href='#Resource'>Resource</a>[] | <a href='#Resource'>Resource</a>, promise: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;, isKnown: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;)</pre>
-
-</div>
-<h3 class="pdoc-member-header" id="Output-create">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L103">method <b>create</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>public static </span>create&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
-
-
-create takes any Input value and converts it into an Output, deeply unwrapping nested Input
-values as necessary.
-
-
-<pre class="highlight"><span class='kd'>public static </span>create&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</pre>
-
-</div>
-<h3 class="pdoc-member-header" id="Output-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L113">method <b>isInstance</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'>public static </span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-
-Returns true if the given object is an instance of Output<T>.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-</div>
-<h3 class="pdoc-member-header" id="Output-__pulumiOutput">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L32">property <b>__pulumiOutput</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>__pulumiOutput?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span> = true;</pre>
-
-A private field to help with RTTI that works in SxS scenarios.
-
-This is internal instead of being truly private, to support mixins and our serialization model.
-
-</div>
-<h3 class="pdoc-member-header" id="Output-apply">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L84">property <b>apply</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>apply: (func: (t: T) => <a href='#Input'>Input</a>&lt;U&gt;) => <a href='#Output'>Output</a>&lt;U&gt;;</pre>
-
-Transforms the data of the output with the provided func.  The result remains a
-Output so that dependent resources can be properly tracked.
-
-'func' is not allowed to make resources.
-
-'func' can return other Outputs.  This can be handy if you have a Output<SomeVal>
-and you want to get a transitive dependency of it.  i.e.
-
-```ts
-var d1: Output<SomeVal>;
-var d2 = d1.apply(v => v.x.y.OtherOutput); // getting an output off of 'v'.
-```
-
-In this example, taking a dependency on d2 means a resource will depend on all the resources
-of d1.  It will *not* depend on the resources of v.x.y.OtherDep.
-
-Importantly, the Resources that d2 feels like it will depend on are the same resources as d1.
-If you need have multiple Outputs and a single Output is needed that combines both
-set of resources, then 'pulumi.all' should be used instead.
-
-This function will only be called execution of a 'pulumi update' request.  It will not run
-during 'pulumi preview' (as the values of resources are of course not known then). It is not
-available for functions that end up executing in the cloud during runtime.  To get the value
-of the Output during cloud runtime execution, use `get()`.
-
-</div>
-<h3 class="pdoc-member-header" id="Output-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L95">property <b>get</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>get: () => T;</pre>
-
-Retrieves the underlying value of this dependency.
-
-This function is only callable in code that runs in the cloud post-deployment.  At this
-point all Output values will be known and can be safely retrieved. During pulumi deployment
-or preview execution this must not be called (and will throw).  This is because doing so
-would allow Output values to flow into Resources while losing the data that would allow
-the dependency graph to be changed.
-
-</div>
-<h3 class="pdoc-member-header" id="Output-isKnown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L41">property <b>isKnown</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>isKnown: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-
-Whether or not this 'Output' should actually perform .apply calls.  During a preview,
-an Output value may not be known (because it would have to actually be computed by doing an
-'update').  In that case, we don't want to perform any .apply calls as the callbacks
-may not expect an undefined value.  So, instead, we just transition to another Output
-value that itself knows it should not perform .apply calls.
-
-</div>
-<h3 class="pdoc-member-header" id="Output-promise">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L49">property <b>promise</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>promise: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;;</pre>
-
-Method that actually produces the concrete value of this output, as well as the total
-deployment-time set of resources this output depends on.
-
-Only callable on the outside.
-
-</div>
-<h3 class="pdoc-member-header" id="Output-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L56">property <b>resources</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>resources: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
-
-The list of resource that this output value depends on.
-
-Only callable on the outside.
-
-</div>
-</div>
 <h2 class="pdoc-module-header" id="ProviderResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L260">class <b>ProviderResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L292">class <b>ProviderResource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CustomResource'>CustomResource</a></pre>
@@ -531,7 +501,7 @@ ProviderResource is a resource that implements CRUD operations for other custom 
 managed similarly to other resources, including the usual diffing and update semantics.
 
 <h3 class="pdoc-member-header" id="ProviderResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L260"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L292"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -547,7 +517,7 @@ Creates and registers a new provider resource for a particular package.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L102">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -555,7 +525,7 @@ Creates and registers a new provider resource for a particular package.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L232">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L264">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -567,18 +537,50 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderResource-__childResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L51">property <b>__childResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L77">property <b>__childResources</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__childResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 
-The child resources of this resource.  Used so that if any resource wants to wait on this
-resource being complete, they will logically wait on all our child resources being complete
-as well.
+The child resources of this resource.  We use these (only from a ComponentResource) to allow
+code to dependOn a ComponentResource and have that effectively mean that it is depending on
+all the CustomResource children of that component.
+
+Important!  We only walk through ComponentResources.  They're the only resources that serve
+as an aggregation of other primitive (i.e. custom) resources.  While a custom resource can be
+a parent of other resources, we don't want to ever depend on those child resource.  If we do,
+it's simple to end up in a situation where we end up depending on a child resource that has a
+data cycle dependency due to the data passed into it.
+
+An example of how this would be bad is:
+
+```ts
+    var c1 = new CustomResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.id }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.id }, { parent: c1 });
+```
+
+The problem here is that 'c2' has a data dependency on 'c1'.  If it tries to wait on 'c1' it
+will walk to the children and wait on them.  This will mean it will wait on 'c3'.  But 'c3'
+will be waiting in the same manner on 'c2', and a cycle forms.
+
+This normally does not happen with ComponentResources as they do not have any data flowing
+into them. The only way you would be able to have a problem is if you had this sort of coding
+pattern:
+
+```ts
+    var c1 = new ComponentResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.urn }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.urn }, { parent: c1 });
+```
+
+However, this would be pretty nonsensical as there is zero need for a custom resource to ever
+need to reference the urn of a component resource.  So it's acceptable if that sort of
+pattern failed in practice.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderResource-__parentResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L43">property <b>__parentResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L37">property <b>__parentResource</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__parentResource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -586,8 +588,26 @@ as well.
 The optional parent of this resource.
 
 </div>
+<h3 class="pdoc-member-header" id="ProviderResource-__pulumiCustomResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L252">property <b>__pulumiCustomResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiCustomResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
+<h3 class="pdoc-member-header" id="ProviderResource-__pulumiResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L31">property <b>__pulumiResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="ProviderResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L226">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>id: <a href='#Output'>Output</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
@@ -597,7 +617,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="ProviderResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L83">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
@@ -608,14 +628,14 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Resource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L25">class <b>Resource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L26">class <b>Resource</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 Resource represents a class whose CRUD operations are implemented by a provider plugin.
 
 <h3 class="pdoc-member-header" id="Resource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L110"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -635,7 +655,7 @@ the order in which we perform resource operations.
 
 </div>
 <h3 class="pdoc-member-header" id="Resource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L102">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -643,7 +663,7 @@ the order in which we perform resource operations.
 
 </div>
 <h3 class="pdoc-member-header" id="Resource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L97">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -651,18 +671,50 @@ the order in which we perform resource operations.
 
 </div>
 <h3 class="pdoc-member-header" id="Resource-__childResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L51">property <b>__childResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L77">property <b>__childResources</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__childResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 
-The child resources of this resource.  Used so that if any resource wants to wait on this
-resource being complete, they will logically wait on all our child resources being complete
-as well.
+The child resources of this resource.  We use these (only from a ComponentResource) to allow
+code to dependOn a ComponentResource and have that effectively mean that it is depending on
+all the CustomResource children of that component.
+
+Important!  We only walk through ComponentResources.  They're the only resources that serve
+as an aggregation of other primitive (i.e. custom) resources.  While a custom resource can be
+a parent of other resources, we don't want to ever depend on those child resource.  If we do,
+it's simple to end up in a situation where we end up depending on a child resource that has a
+data cycle dependency due to the data passed into it.
+
+An example of how this would be bad is:
+
+```ts
+    var c1 = new CustomResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.id }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.id }, { parent: c1 });
+```
+
+The problem here is that 'c2' has a data dependency on 'c1'.  If it tries to wait on 'c1' it
+will walk to the children and wait on them.  This will mean it will wait on 'c3'.  But 'c3'
+will be waiting in the same manner on 'c2', and a cycle forms.
+
+This normally does not happen with ComponentResources as they do not have any data flowing
+into them. The only way you would be able to have a problem is if you had this sort of coding
+pattern:
+
+```ts
+    var c1 = new ComponentResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.urn }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.urn }, { parent: c1 });
+```
+
+However, this would be pretty nonsensical as there is zero need for a custom resource to ever
+need to reference the urn of a component resource.  So it's acceptable if that sort of
+pattern failed in practice.
 
 </div>
 <h3 class="pdoc-member-header" id="Resource-__parentResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L43">property <b>__parentResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L37">property <b>__parentResource</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__parentResource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -670,8 +722,17 @@ as well.
 The optional parent of this resource.
 
 </div>
+<h3 class="pdoc-member-header" id="Resource-__pulumiResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L31">property <b>__pulumiResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="Resource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L83">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
@@ -682,7 +743,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ResourceError">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">class <b>ResourceError</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L50">class <b>ResourceError</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a></pre>
@@ -693,7 +754,7 @@ not a call stack should be returned as well.  This should be very rare, and woul
 no usefulness of presenting that stack to the user.
 
 <h3 class="pdoc-member-header" id="ResourceError-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -701,7 +762,7 @@ no usefulness of presenting that stack to the user.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L61">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -713,44 +774,53 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-Error">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property <b>Error</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L50">property <b>Error</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>static </span>Error: ErrorConstructor;</pre>
 </div>
+<h3 class="pdoc-member-header" id="ResourceError-__pulumResourceError">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L55">property <b>__pulumResourceError</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumResourceError: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="ResourceError-hideStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L64">property <b>hideStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L65">property <b>hideStack</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>hideStack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L50">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L64">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L65">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>resource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-stack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L49">property <b>stack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L50">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="RunError">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">class <b>RunError</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L24">class <b>RunError</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a></pre>
@@ -761,7 +831,7 @@ stack trace.  This type should be rarely used.  Ideally ResourceError should alw
 that as many errors as possible can be associated with a Resource.
 
 <h3 class="pdoc-member-header" id="RunError-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L36"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L37"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -769,7 +839,7 @@ that as many errors as possible can be associated with a Resource.
 
 </div>
 <h3 class="pdoc-member-header" id="RunError-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L35">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -781,25 +851,34 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="RunError-Error">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property <b>Error</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L24">property <b>Error</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>static </span>Error: ErrorConstructor;</pre>
 </div>
+<h3 class="pdoc-member-header" id="RunError-__pulumiRunError">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L29">property <b>__pulumiRunError</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiRunError: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="RunError-message">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property <b>message</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L24">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="RunError-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L24">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="RunError-stack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L23">property <b>stack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/errors.ts#L24">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -843,7 +922,7 @@ Fetches the value of the named stack output.
 
 </div>
 <h3 class="pdoc-member-header" id="StackReference-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L70">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L102">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -851,7 +930,7 @@ Fetches the value of the named stack output.
 
 </div>
 <h3 class="pdoc-member-header" id="StackReference-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L232">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L264">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -863,18 +942,50 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="StackReference-__childResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L51">property <b>__childResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L77">property <b>__childResources</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__childResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
 
-The child resources of this resource.  Used so that if any resource wants to wait on this
-resource being complete, they will logically wait on all our child resources being complete
-as well.
+The child resources of this resource.  We use these (only from a ComponentResource) to allow
+code to dependOn a ComponentResource and have that effectively mean that it is depending on
+all the CustomResource children of that component.
+
+Important!  We only walk through ComponentResources.  They're the only resources that serve
+as an aggregation of other primitive (i.e. custom) resources.  While a custom resource can be
+a parent of other resources, we don't want to ever depend on those child resource.  If we do,
+it's simple to end up in a situation where we end up depending on a child resource that has a
+data cycle dependency due to the data passed into it.
+
+An example of how this would be bad is:
+
+```ts
+    var c1 = new CustomResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.id }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.id }, { parent: c1 });
+```
+
+The problem here is that 'c2' has a data dependency on 'c1'.  If it tries to wait on 'c1' it
+will walk to the children and wait on them.  This will mean it will wait on 'c3'.  But 'c3'
+will be waiting in the same manner on 'c2', and a cycle forms.
+
+This normally does not happen with ComponentResources as they do not have any data flowing
+into them. The only way you would be able to have a problem is if you had this sort of coding
+pattern:
+
+```ts
+    var c1 = new ComponentResource("c1");
+    var c2 = new CustomResource("c2", { parentId: c1.urn }, { parent: c1 });
+    var c3 = new CustomResource("c3", { parentId: c1.urn }, { parent: c1 });
+```
+
+However, this would be pretty nonsensical as there is zero need for a custom resource to ever
+need to reference the urn of a component resource.  So it's acceptable if that sort of
+pattern failed in practice.
 
 </div>
 <h3 class="pdoc-member-header" id="StackReference-__parentResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L43">property <b>__parentResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L37">property <b>__parentResource</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>__parentResource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
@@ -882,8 +993,26 @@ as well.
 The optional parent of this resource.
 
 </div>
+<h3 class="pdoc-member-header" id="StackReference-__pulumiCustomResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L252">property <b>__pulumiCustomResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiCustomResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
+<h3 class="pdoc-member-header" id="StackReference-__pulumiResource">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L31">property <b>__pulumiResource</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>__pulumiResource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = true;</pre>
+
+A private field to help with RTTI that works in SxS scenarios.
+
+</div>
 <h3 class="pdoc-member-header" id="StackReference-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L226">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L258">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>id: <a href='#Output'>Output</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
@@ -911,7 +1040,7 @@ The outputs of the referenced stack.
 
 </div>
 <h3 class="pdoc-member-header" id="StackReference-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L83">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
@@ -928,11 +1057,11 @@ deployments.
 <pre class="highlight"><span class='kd'>const</span> deploymentOnlyModule: <span class='kd'>true</span> = <span class='s2'>true</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="testingOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L328">const <b>testingOptions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L375">const <b>testingOptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="isDryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L329">let <b>isDryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L376">let <b>isDryRun</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>let</span> isDryRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'>false</span>;</pre>
@@ -945,7 +1074,7 @@ deployments.
 <pre class="highlight"><span class='kd'>const</span> version: <span class='s2'>"${VERSION}"</span> = <span class='s2'>&#34;${VERSION}&#34;</span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="all">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L268">function <b>all</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L360">function <b>all</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -989,11 +1118,11 @@ d1 and d2.
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;]&gt;</pre>
 
 
-<pre class="highlight"><span class='kd'></span>all&lt;T&gt;(ds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#Output'>Output</a>&lt;T&gt;[]): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]&gt;</pre>
+<pre class="highlight"><span class='kd'></span>all&lt;T&gt;(ds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt;[]): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]&gt;</pre>
 
 </div>
 <h2 class="pdoc-module-header" id="concat">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L396">function <b>concat</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L663">function <b>concat</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1033,8 +1162,16 @@ getProject returns the current project name.  It throws an exception if none is 
 getStack returns the current stack name.  It throws an exception if none is registered.
 
 </div>
+<h2 class="pdoc-module-header" id="hasTrueBooleanMember">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/utils.ts#L30">function <b>hasTrueBooleanMember</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>hasTrueBooleanMember(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, memberName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'>symbol</span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+</div>
 <h2 class="pdoc-module-header" id="interpolate">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L412">function <b>interpolate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L679">function <b>interpolate</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1053,8 +1190,16 @@ As with [concat] the 'placeholders' between `${}` can be any Inputs.  i.e. they 
 [Promise]s, [Output]s, or just plain JavaScript values.
 
 </div>
+<h2 class="pdoc-module-header" id="isInstance">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/utils.ts#L25">function <b>isInstance</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, name: keyof T): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+</div>
 <h2 class="pdoc-module-header" id="output">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L211">function <b>output</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L303">function <b>output</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1082,7 +1227,7 @@ The expected way to use this function is like so:
 
 </div>
 <h2 class="pdoc-module-header" id="ComponentResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L202">interface <b>ComponentResourceOptions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L234">interface <b>ComponentResourceOptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ResourceOptions'>ResourceOptions</a></pre>
@@ -1090,7 +1235,7 @@ The expected way to use this function is like so:
 ComponentResourceOptions is a bag of optional settings that control a component resource's behavior.
 
 <h3 class="pdoc-member-header" id="ComponentResourceOptions-dependsOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L174">property <b>dependsOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L206">property <b>dependsOn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dependsOn?: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;[]&gt; | <a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
@@ -1099,7 +1244,7 @@ An optional additional explicit dependencies on other resources.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResourceOptions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L166">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L198">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id?: <a href='#Input'>Input</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
@@ -1108,7 +1253,7 @@ An optional existing ID to load, rather than create.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResourceOptions-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L170">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L202">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a>;</pre>
@@ -1117,7 +1262,7 @@ An optional parent resource to which this resource belongs.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResourceOptions-protect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L178">property <b>protect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L210">property <b>protect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1126,7 +1271,7 @@ When set to true, protect ensures this resource cannot be deleted.
 
 </div>
 <h3 class="pdoc-member-header" id="ComponentResourceOptions-providers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L206">property <b>providers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L238">property <b>providers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>providers?: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#ProviderResource'>ProviderResource</a>&gt;;</pre>
@@ -1136,7 +1281,7 @@ An optional set of providers to use for child resources. Keyed by package name (
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L184">interface <b>CustomResourceOptions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L216">interface <b>CustomResourceOptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ResourceOptions'>ResourceOptions</a></pre>
@@ -1144,7 +1289,7 @@ An optional set of providers to use for child resources. Keyed by package name (
 CustomResourceOptions is a bag of optional settings that control a custom resource's behavior.
 
 <h3 class="pdoc-member-header" id="CustomResourceOptions-deleteBeforeReplace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L196">property <b>deleteBeforeReplace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L228">property <b>deleteBeforeReplace</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deleteBeforeReplace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1154,7 +1299,7 @@ is created when replacement is necessary.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceOptions-dependsOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L174">property <b>dependsOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L206">property <b>dependsOn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dependsOn?: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;[]&gt; | <a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
@@ -1163,7 +1308,7 @@ An optional additional explicit dependencies on other resources.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceOptions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L166">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L198">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id?: <a href='#Input'>Input</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
@@ -1172,7 +1317,7 @@ An optional existing ID to load, rather than create.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceOptions-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L170">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L202">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a>;</pre>
@@ -1181,7 +1326,7 @@ An optional parent resource to which this resource belongs.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceOptions-protect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L178">property <b>protect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L210">property <b>protect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1190,7 +1335,7 @@ When set to true, protect ensures this resource cannot be deleted.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceOptions-provider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L190">property <b>provider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L222">property <b>provider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>provider?: <a href='#ProviderResource'>ProviderResource</a>;</pre>
@@ -1201,15 +1346,139 @@ provider bag (see also ComponentResourceOptions.providers).
 
 </div>
 </div>
+<h2 class="pdoc-module-header" id="OutputConstructor">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L533">interface <b>OutputConstructor</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+Static side of the [Output<T>] type.  Can be used to [create] Outputs as well as test
+arbitrary values to see if they are [Output]s.
+
+<h3 class="pdoc-member-header" id="OutputConstructor-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L537"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> OutputConstructor&lt;T&gt;(resources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt; | <a href='#Resource'>Resource</a>[] | <a href='#Resource'>Resource</a>, promise: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;, isKnown: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;)</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="OutputConstructor-create">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L534">method <b>create</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>create&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+
+
+<pre class="highlight"><span class='kd'></span>create&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="OutputConstructor-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L537">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+
+</div>
+</div>
+<h2 class="pdoc-module-header" id="OutputInstance">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L482">interface <b>OutputInstance</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+
+Instance side of the [Output<T>] type.  Exposes the deployment-time and run-time mechanisms
+for working with the underlying value of an [Output<T>].
+
+<h3 class="pdoc-member-header" id="OutputInstance-apply">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L513">method <b>apply</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>apply&lt;U&gt;(func: (t: T) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;U&gt;): <a href='#Output'>Output</a>&lt;U&gt;</pre>
+
+
+Transforms the data of the output with the provided func.  The result remains a
+Output so that dependent resources can be properly tracked.
+
+'func' is not allowed to make resources.
+
+'func' can return other Outputs.  This can be handy if you have a Output<SomeVal>
+and you want to get a transitive dependency of it.  i.e.
+
+```ts
+var d1: Output<SomeVal>;
+var d2 = d1.apply(v => v.x.y.OtherOutput); // getting an output off of 'v'.
+```
+
+In this example, taking a dependency on d2 means a resource will depend on all the resources
+of d1.  It will *not* depend on the resources of v.x.y.OtherDep.
+
+Importantly, the Resources that d2 feels like it will depend on are the same resources as d1.
+If you need have multiple Outputs and a single Output is needed that combines both
+set of resources, then 'pulumi.all' should be used instead.
+
+This function will only be called execution of a 'pulumi update' request.  It will not run
+during 'pulumi preview' (as the values of resources are of course not known then). It is not
+available for functions that end up executing in the cloud during runtime.  To get the value
+of the Output during cloud runtime execution, use `get()`.
+
+
+<pre class="highlight"><span class='kd'></span>apply&lt;U&gt;(func: (t: T) => <a href='#OutputInstance'>OutputInstance</a>&lt;U&gt;): <a href='#Output'>Output</a>&lt;U&gt;</pre>
+
+
+<pre class="highlight"><span class='kd'></span>apply&lt;U&gt;(func: (t: T) => U): <a href='#Output'>Output</a>&lt;U&gt;</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="OutputInstance-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L526">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>get(): T</pre>
+
+
+Retrieves the underlying value of this dependency.
+
+This function is only callable in code that runs in the cloud post-deployment.  At this
+point all Output values will be known and can be safely retrieved. During pulumi deployment
+or preview execution this must not be called (and will throw).  This is because doing so
+would allow Output values to flow into Resources while losing the data that would allow
+the dependency graph to be changed.
+
+</div>
+<h3 class="pdoc-member-header" id="OutputInstance-promise">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L484">method <b>promise</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>promise(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="OutputInstance-resources">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L485">method <b>resources</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+
+<pre class="highlight"><span class='kd'></span>resources(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;</pre>
+
+</div>
+<h3 class="pdoc-member-header" id="OutputInstance-isKnown">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L483">property <b>isKnown</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>isKnown: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+</div>
+</div>
 <h2 class="pdoc-module-header" id="ResourceOptions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L162">interface <b>ResourceOptions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L194">interface <b>ResourceOptions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
 ResourceOptions is a bag of optional settings that control a resource's behavior.
 
 <h3 class="pdoc-member-header" id="ResourceOptions-dependsOn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L174">property <b>dependsOn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L206">property <b>dependsOn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>dependsOn?: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;[]&gt; | <a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
@@ -1218,7 +1487,7 @@ An optional additional explicit dependencies on other resources.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceOptions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L166">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L198">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id?: <a href='#Input'>Input</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
@@ -1227,7 +1496,7 @@ An optional existing ID to load, rather than create.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceOptions-parent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L170">property <b>parent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L202">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a>;</pre>
@@ -1236,7 +1505,7 @@ An optional parent resource to which this resource belongs.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourceOptions-protect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L178">property <b>protect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L210">property <b>protect</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1263,12 +1532,12 @@ The name of the stack to reference.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UnwrappedArray">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">interface <b>UnwrappedArray</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">interface <b>UnwrappedArray</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array'>Array</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
 <h3 class="pdoc-member-header" id="UnwrappedArray-__@iterator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>__@iterator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>__@iterator</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1279,7 +1548,7 @@ Iterator
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-__@unscopables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>__@unscopables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>__@unscopables</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1299,7 +1568,7 @@ when they will be absent when used in a 'with' statement.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-concat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>concat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>concat</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1316,7 +1585,7 @@ Combines two or more arrays.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-copyWithin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>copyWithin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>copyWithin</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1328,7 +1597,7 @@ to the same array starting at position target
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-entries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>entries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>entries</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1339,7 +1608,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-every">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>every</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>every</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1350,7 +1619,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-fill">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>fill</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>fill</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1361,7 +1630,7 @@ Returns the this object after filling the section identified by start and end wi
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1378,7 +1647,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-find">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>find</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>find</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1393,7 +1662,7 @@ otherwise.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-findIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>findIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>findIndex</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1405,7 +1674,7 @@ otherwise.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-forEach">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>forEach</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>forEach</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1416,7 +1685,7 @@ Performs the specified action for each element in an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-indexOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>indexOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>indexOf</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1427,7 +1696,7 @@ Returns the index of the first occurrence of a value in an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-join">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>join</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>join</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1438,7 +1707,7 @@ Adds all the elements of an array separated by the specified separator string.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>keys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>keys</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1449,7 +1718,7 @@ Returns an iterable of keys in the array
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-lastIndexOf">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>lastIndexOf</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>lastIndexOf</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1460,7 +1729,7 @@ Returns the index of the last occurrence of a specified value in an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-map">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>map</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>map</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1471,7 +1740,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-pop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>pop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>pop</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1482,7 +1751,7 @@ Removes the last element from an array and returns it.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-push">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>push</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>push</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1493,7 +1762,7 @@ Appends new elements to an array, and returns the new length of the array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-reduce">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>reduce</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>reduce</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1513,7 +1782,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-reduceRight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>reduceRight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>reduceRight</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1533,7 +1802,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-reverse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>reverse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>reverse</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1544,7 +1813,7 @@ Reverses the elements in an Array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-shift">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>shift</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>shift</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1555,7 +1824,7 @@ Removes the first element from an array and returns it.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-slice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>slice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>slice</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1566,7 +1835,7 @@ Returns a section of an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-some">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>some</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>some</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1577,7 +1846,7 @@ Determines whether the specified callback function returns true for any element 
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-sort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>sort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>sort</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1588,7 +1857,7 @@ Sorts an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-splice">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>splice</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>splice</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1605,7 +1874,7 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-toLocaleString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>toLocaleString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>toLocaleString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1616,7 +1885,7 @@ Returns a string representation of an array. The elements are converted to strin
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-toString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>toString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>toString</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1627,7 +1896,7 @@ Returns a string representation of an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-unshift">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>unshift</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>unshift</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1638,7 +1907,7 @@ Inserts new elements at the start of an array.
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">method <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">method <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1649,13 +1918,13 @@ Returns an iterable of values in the array
 
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-Array">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">property <b>Array</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">property <b>Array</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>Array: ArrayConstructor;</pre>
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-length">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L379">property <b>length</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L472">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>length: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
@@ -1665,39 +1934,139 @@ Gets or sets the length of the array. This is a number one higher than the highe
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ID">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L19">type <b>ID</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L20">type <b>ID</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> ID = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Input">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L319">type <b>Input</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L413">type <b>Input</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>type</span> Input = T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#Output'>Output</a>&lt;T&gt;;</pre>
+<pre class="highlight"><span class='kd'>type</span> Input = T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt;;</pre>
 
-Input is a property input for a resource.  It may be a promptly available T, a promise
-for one, or the output from a existing Resource.
+[Input] is a property input for a resource.  It may be a promptly available T, a promise for one,
+or the output from a existing Resource.
 
 </div>
 <h2 class="pdoc-module-header" id="Inputs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L325">type <b>Inputs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L418">type <b>Inputs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Inputs = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
 
-Inputs is a map of property name to property input, one for each resource
-property value.
+[Inputs] is a map of property name to property input, one for each resource property value.
+
+</div>
+<h2 class="pdoc-module-header" id="Lifted">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L624">type <b>Lifted</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> Lifted = Lifted<T>;</pre>
+
+The [Lifted] type allows us to express the operation of taking a type, with potentially deeply
+nested objects and arrays and to then get a type with the same properties, except whose property
+types are now [Output]s of the original property type.
+
+For example:
+
+
+     `type X = { A: string, B: { c: boolean } }`
+
+Then `Lifted<X>` would be equivalent to:
+
+     `...    = { A: Output<string>, B: Output<{ C: Output<boolean> }> }`
+
+[Lifted] is somewhat the opposite of [Unwrap].  It's primary purpose is to allow an instance of
+[Output<SomeType>] to provide simple access to the properties of [SomeType] directly on the instance
+itself (instead of haveing to use [.apply]).
+
+This lifting only happens through simple pojo objects and arrays.  Functions, for example, are not
+lifted.  So you cannot do:
+
+```ts
+     const o: Output<string> = ...;
+     const c: Output<number> = o.charCodeAt(0);
+```
+
+Instead, you still need to write;
+
+```ts
+     const o: Output<string> = ...;
+     const c: Output<number> = o.apply(v => v.charCodeAt(0));
+```
+
+</div>
+<h2 class="pdoc-module-header" id="LiftedArray">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L642">type <b>LiftedArray</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> LiftedArray = {
+    length: <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
+};</pre>
+</div>
+<h2 class="pdoc-module-header" id="LiftedObject">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L638">type <b>LiftedObject</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> LiftedObject = { ... };</pre>
+</div>
+<h2 class="pdoc-module-header" id="Output">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L587">type <b>Output</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> Output = <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt; &amp; <a href='#Lifted'>Lifted</a>&lt;T&gt;;</pre>
+
+[Output] helps encode the relationship between Resources in a Pulumi application. Specifically an
+[Output] holds onto a piece of Data and the Resource it was generated from. An [Output] value can
+then be provided when constructing new Resources, allowing that new Resource to know both the
+value as well as the Resource the value came from.  This allows for a precise 'Resource
+dependency graph' to be created, which properly tracks the relationship between resources.
+
+An [Output] is used in a Pulumi program differently depending on if the application is executing
+at 'deployment time' (i.e. when actually running the 'pulumi' executable), or at 'run time' (i.e.
+a piece of code running in some Cloud).
+
+At 'deployment time', the correct way to work with the underlying value is to call
+[Output.apply(func)].  This allows the value to be accessed and manipulated, while still
+resulting in an [Output] that is keeping track of [Resource]s appropriately.  At deployment time
+the underlying value may or may not exist (for example, if a preview is being performed).  In
+this case, the 'func' callback will not be executed, and calling [.apply] will immediately return
+an [Output] that points to the [undefined] value.  During a normal [update] though, the 'func'
+callbacks should always be executed.
+
+At 'run time', the correct way to work with the underlying value is to simply call [Output.get]
+which will be promptly return the entire value.  This will be a simple JavaScript object that can
+be manipulated as necessary.
+
+To ease with using [Output]s at 'deployment time', pulumi will 'lift' simple data properties of
+an underlying value to the [Output] itself.  For example:
+
+```ts
+     const o: Output<{ name: string, age: number, orders: Order[] }> = ...;
+     const name : Output<string> = o.name;
+     const age  : Output<number> = o.age;
+     const first: Output<Order>  = o.orders[0];
+```
+
+Instead of having to write:
+
+```ts
+     const o: Output<{ name: string, age: number, orders: Order[] }> = ...;
+     const name : Output<string> = o.apply(v => v.name);
+     const age  : Output<number> = o.apply(v => v.age);
+     const first: Output<Order> = o.apply(v => v.orders[0]);
+```
 
 </div>
 <h2 class="pdoc-module-header" id="URN">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L20">type <b>URN</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/resource.ts#L21">type <b>URN</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> URN = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Unwrap">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L351">type <b>Unwrap</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L444">type <b>Unwrap</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Unwrap = Unwrap<T>;</pre>
@@ -1727,7 +2096,7 @@ It should always either be `{ a: Promise<NonOutput> }` or just `{ a: Output<...>
 
 </div>
 <h2 class="pdoc-module-header" id="UnwrapSimple">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L364">type <b>UnwrapSimple</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L457">type <b>UnwrapSimple</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> UnwrapSimple = UnwrapSimple<T>;</pre>
@@ -1736,7 +2105,7 @@ Handles encountering basic types when unwrapping.
 
 </div>
 <h2 class="pdoc-module-header" id="UnwrappedObject">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L381">type <b>UnwrappedObject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/master/sdk/nodejs/output.ts#L474">type <b>UnwrappedObject</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> UnwrappedObject = { ... };</pre>

@@ -261,7 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.cloudformation.get_export">
-<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_export</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_export</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_export" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Export data source allows access to stack
 exports specified in the <a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Output</a> section of the Cloudformation Template using the optional Export Property.</p>
 <blockquote>
@@ -270,7 +270,7 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 
 <dl class="function">
 <dt id="pulumi_aws.cloudformation.get_stack">
-<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_stack</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudformation.</code><code class="descname">get_stack</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
 </dd></dl>

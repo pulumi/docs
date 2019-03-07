@@ -157,7 +157,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -165,7 +165,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -177,7 +177,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -241,7 +241,7 @@ address-scope.
 
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -301,7 +301,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -309,7 +309,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -362,7 +362,7 @@ the port has multiple fixed IPs.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -436,7 +436,7 @@ may or may not have a different address)
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -508,7 +508,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -516,7 +516,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -537,7 +537,7 @@ IP Address of an existing floating IP.
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -570,7 +570,7 @@ floating IP (which may or may not have a different address).
 
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -656,7 +656,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -664,7 +664,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -730,7 +730,7 @@ false. Changing this updates the external attribute of the existing network.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -817,7 +817,7 @@ network.
 
 </div>
 <h3 class="pdoc-member-header" id="Network-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -895,7 +895,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Port-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -903,7 +903,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Port-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1028,7 +1028,7 @@ this port. The structure is described below.
 
 </div>
 <h3 class="pdoc-member-header" id="Port-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1135,7 +1135,7 @@ to create a port for another tenant. Changing this creates a new port.
 
 </div>
 <h3 class="pdoc-member-header" id="Port-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1252,7 +1252,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1260,7 +1260,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1292,7 +1292,7 @@ groups, specified in the `security_group_ids`. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1334,7 +1334,7 @@ opposed to how they are configured with the Compute Instance).
 
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1392,7 +1392,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Router-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1400,7 +1400,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Router-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1515,7 +1515,7 @@ this updates the external gateway of the router.
 
 </div>
 <h3 class="pdoc-member-header" id="Router-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1566,7 +1566,7 @@ to create a router for another tenant. Changing this creates a new router.
 
 </div>
 <h3 class="pdoc-member-header" id="Router-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1656,7 +1656,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1664,7 +1664,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1676,7 +1676,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1728,7 +1728,7 @@ this creates a new router interface.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1808,7 +1808,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1816,7 +1816,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1838,7 +1838,7 @@ this creates a new routing entry.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1880,7 +1880,7 @@ this creates a new routing entry.
 
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1969,7 +1969,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1977,7 +1977,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2019,7 +2019,7 @@ A unique name for the security group.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2070,7 +2070,7 @@ security group.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2138,7 +2138,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2146,7 +2146,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2187,7 +2187,7 @@ or __IPv6__. Changing this creates a new security group rule.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2304,7 +2304,7 @@ security group rule.
 
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2365,7 +2365,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2373,7 +2373,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2479,7 +2479,7 @@ for the existing subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2589,7 +2589,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 </div>
 <h3 class="pdoc-member-header" id="Subnet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2680,7 +2680,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2688,7 +2688,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2763,7 +2763,7 @@ Changing this updates the description of the existing subnetpool.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2899,7 +2899,7 @@ The time at which subnetpool was created.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2978,7 +2978,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2986,7 +2986,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3008,7 +3008,7 @@ this creates a new routing entry.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3050,7 +3050,7 @@ this creates a new routing entry.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3137,7 +3137,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Trunk-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3145,7 +3145,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Trunk-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3188,7 +3188,7 @@ updates the name of the existing trunk.
 
 </div>
 <h3 class="pdoc-member-header" id="Trunk-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3264,7 +3264,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 </div>
 <h3 class="pdoc-member-header" id="Trunk-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

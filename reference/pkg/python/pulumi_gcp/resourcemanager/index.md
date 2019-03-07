@@ -16,10 +16,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] origin
-:param pulumi.Input[str] parent
-:param pulumi.Input[str] reason
-:param pulumi.Input[list] restrictions</p>
 <dl class="method">
 <dt id="pulumi_gcp.resourcemanager.Lien.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.resourcemanager.Lien.translate_output_property" title="Permalink to this definition">¶</a></dt>

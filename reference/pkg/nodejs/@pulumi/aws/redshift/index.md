@@ -100,7 +100,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -108,7 +108,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -310,7 +310,7 @@ A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be as
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -476,7 +476,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -522,7 +522,7 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
         "security",
     ],
     severity: "INFO",
-    snsTopic: defaultTopic.arn,
+    snsTopicArn: defaultTopic.arn,
     sourceIds: [defaultCluster.id],
     sourceType: "cluster",
     tags: {
@@ -566,7 +566,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -574,7 +574,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -610,7 +610,7 @@ A list of event categories for a SourceType that you want to subscribe to. See h
 
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -680,7 +680,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -751,7 +751,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ParameterGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -759,7 +759,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ParameterGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -789,7 +789,7 @@ The family of the Redshift parameter group.
 
 </div>
 <h3 class="pdoc-member-header" id="ParameterGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -820,7 +820,7 @@ A list of Redshift parameters to apply.
 
 </div>
 <h3 class="pdoc-member-header" id="ParameterGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -879,7 +879,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -887,7 +887,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -908,7 +908,7 @@ The description of the Redshift security group. Defaults to "Managed by Terrafor
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -940,7 +940,7 @@ The name of the Redshift security group.
 
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1006,7 +1006,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotCopyGrant-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1014,7 +1014,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotCopyGrant-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1026,7 +1026,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotCopyGrant-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1063,7 +1063,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SnapshotCopyGrant-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1145,7 +1145,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1153,7 +1153,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1174,7 +1174,7 @@ The description of the Redshift Subnet group. Defaults to "Managed by Terraform"
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1211,7 +1211,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="SubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>

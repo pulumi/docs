@@ -49,7 +49,6 @@ import * as cloudAws from "@pulumi/cloud-aws";
 * <a href="#Route">interface Route</a>
 * <a href="#ServiceArguments">interface ServiceArguments</a>
 * <a href="#StaticRoute">interface StaticRoute</a>
-* <a href="#Volume">interface Volume</a>
 * <a href="#Domain">type Domain</a>
 * <a href="#Endpoints">type Endpoints</a>
 * <a href="#HttpEndpoint">type HttpEndpoint</a>
@@ -193,7 +192,7 @@ import * as cloudAws from "@pulumi/cloud-aws";
 
 </div>
 <h3 class="pdoc-member-header" id="Function-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -201,26 +200,30 @@ import * as cloudAws from "@pulumi/cloud-aws";
 
 </div>
 <h3 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="Function-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Function-handler">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/function.ts#L69">property <b>handler</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>handler: aws.serverless.Handler;</pre>
+<pre class="highlight"><span class='kd'>public </span>handler: aws.serverless.Handler | aws.serverless.HandlerFactory;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Function-lambda">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/function.ts#L70">property <b>lambda</b></a>
@@ -229,7 +232,7 @@ import * as cloudAws from "@pulumi/cloud-aws";
 <pre class="highlight"><span class='kd'>public </span>lambda: aws.lambda.Function;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Function-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -240,42 +243,26 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="HostPathVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L834">class <b>HostPathVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L815">class <b>HostPathVolume</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>implements</span> HostPathVolume</pre>
 <h3 class="pdoc-member-header" id="HostPathVolume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L836"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L817"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HostPathVolume(path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>)</pre>
 
 </div>
-<h3 class="pdoc-member-header" id="HostPathVolume-getHostPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L847">method <b>getHostPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getHostPath(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="HostPathVolume-getVolumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L843">method <b>getVolumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getVolumeName(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
 <h3 class="pdoc-member-header" id="HostPathVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L835">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L816">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>kind: cloud.VolumeKind;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <span class='s2'>"HostPathVolume"</span> = &#34;HostPathVolume&#34;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="HostPathVolume-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L836">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L817">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -288,7 +275,7 @@ deployments.
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <pre class="highlight"><span class='kd'>implements</span> HttpDeployment</pre>
 <h3 class="pdoc-member-header" id="HttpDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L188"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L189"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -296,7 +283,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -304,59 +291,69 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-api">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L142">property <b>api</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L143">property <b>api</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>api: x.API;</pre>
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-customDomainNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L144">property <b>customDomainNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L145">property <b>customDomainNames</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>customDomainNames: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-customDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L145">property <b>customDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L146">property <b>customDomains</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>customDomains: aws.apigateway.DomainName[];</pre>
 </div>
+<h3 class="pdoc-member-header" id="HttpDeployment-proxyRoutes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L140">property <b>proxyRoutes</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'>public </span>proxyRoutes: <a href='#ProxyRoute'>ProxyRoute</a>[];</pre>
+</div>
 <h3 class="pdoc-member-header" id="HttpDeployment-routes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L139">property <b>routes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L141">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>routes: <a href='#Route'>Route</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-staticRoutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L140">property <b>staticRoutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L139">property <b>staticRoutes</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>staticRoutes: <a href='#StaticRoute'>StaticRoute</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L143">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L144">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>url: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="HttpDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -367,13 +364,13 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Service">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L620">class <b>Service</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L621">class <b>Service</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <pre class="highlight"><span class='kd'>implements</span> Service</pre>
 <h3 class="pdoc-member-header" id="Service-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L637"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L638"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -381,7 +378,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Service-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -389,7 +386,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Service-getTaskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L635">method <b>getTaskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L636">method <b>getTaskRole</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -397,71 +394,75 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Service-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="Service-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Service-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L624">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L625">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cluster: CloudCluster;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-containers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L622">property <b>containers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L623">property <b>containers</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>containers: cloud.Containers;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-defaultEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L628">property <b>defaultEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L629">property <b>defaultEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultEndpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Endpoint'>Endpoint</a>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-ecsService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L625">property <b>ecsService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L626">property <b>ecsService</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>ecsService: aws.ecs.Service;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L627">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L628">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endpoints: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Endpoints'>Endpoints</a>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-getEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L630">property <b>getEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L631">property <b>getEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>getEndpoint: (containerName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, containerPort?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#Endpoint'>Endpoint</a>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L621">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L622">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L623">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L624">property <b>replicas</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>replicas: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Service-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -472,73 +473,61 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SharedVolume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L801">class <b>SharedVolume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L798">class <b>SharedVolume</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
-<pre class="highlight"><span class='kd'>implements</span> <a href='#Volume'>Volume</a>, SharedVolume</pre>
+<pre class="highlight"><span class='kd'>implements</span> SharedVolume</pre>
 <h3 class="pdoc-member-header" id="SharedVolume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L803"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L800"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SharedVolume(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
 
 </div>
-<h3 class="pdoc-member-header" id="SharedVolume-getHostPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L821">method <b>getHostPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getHostPath(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
 <h3 class="pdoc-member-header" id="SharedVolume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
 
 </div>
-<h3 class="pdoc-member-header" id="SharedVolume-getVolumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L815">method <b>getVolumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getVolumeName(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-
-</div>
 <h3 class="pdoc-member-header" id="SharedVolume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="SharedVolume-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="SharedVolume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L802">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L799">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'>public </span>kind: cloud.VolumeKind;</pre>
+<pre class="highlight"><span class='kd'>public </span>kind: <span class='s2'>"SharedVolume"</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SharedVolume-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L803">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L800">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="SharedVolume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -563,7 +552,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Table-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -571,19 +560,23 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Table-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="Table-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Table-delete">
@@ -635,7 +628,7 @@ deployments.
 <pre class="highlight"><span class='kd'>public </span>update: (query: Object, updates: Object) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Table-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -646,7 +639,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Task">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L855">class <b>Task</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L859">class <b>Task</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -655,7 +648,7 @@ deployments.
 A Task represents a container which can be [run] dynamically whenever (and as many times as) needed.
 
 <h3 class="pdoc-member-header" id="Task-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L864"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L868"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -663,7 +656,7 @@ A Task represents a container which can be [run] dynamically whenever (and as ma
 
 </div>
 <h3 class="pdoc-member-header" id="Task-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -671,7 +664,7 @@ A Task represents a container which can be [run] dynamically whenever (and as ma
 
 </div>
 <h3 class="pdoc-member-header" id="Task-getTaskRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L862">method <b>getTaskRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L866">method <b>getTaskRole</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -679,41 +672,45 @@ A Task represents a container which can be [run] dynamically whenever (and as ma
 
 </div>
 <h3 class="pdoc-member-header" id="Task-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="Task-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Task-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L856">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L860">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>cluster: CloudCluster;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Task-run">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L859">property <b>run</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L863">property <b>run</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>run: (options?: cloud.TaskRunOptions) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Task-taskDefinition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L857">property <b>taskDefinition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L861">property <b>taskDefinition</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>taskDefinition: aws.ecs.TaskDefinition;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Task-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -738,7 +735,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -746,19 +743,23 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L12">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
 
+
+Returns true if the given object is an instance of CustomResource.  This is designed to work even when
+multiple copies of the Pulumi SDK have been loaded into the same process.
+
 </div>
 <h3 class="pdoc-member-header" id="Topic-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L135">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
 
 </div>
 <h3 class="pdoc-member-header" id="Topic-subscribe">
@@ -788,7 +789,7 @@ deployments.
 <pre class="highlight"><span class='kd'>public </span>topic: aws.sns.Topic;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -896,7 +897,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Endpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L606">interface <b>Endpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L607">interface <b>Endpoint</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> Endpoint</pre>
@@ -907,7 +908,7 @@ deployments.
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L607">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L608">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancer: aws.elasticloadbalancingv2.LoadBalancer;</pre>
@@ -960,7 +961,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServiceArguments">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L612">interface <b>ServiceArguments</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L613">interface <b>ServiceArguments</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> ServiceArguments</pre>
@@ -1043,7 +1044,7 @@ neither `image` nor `build` are legal.
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceArguments-healthCheckGracePeriodSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L617">property <b>healthCheckGracePeriodSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L618">property <b>healthCheckGracePeriodSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheckGracePeriodSeconds?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1168,34 +1169,6 @@ set to false, the service may complete its deployment before it is fully ready t
 <pre class="highlight"><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
-<h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L788">interface <b>Volume</b></a>
-</h2>
-<div class="pdoc-module-contents" markdown="1">
-<pre class="highlight"><span class='kd'>extends</span> Volume</pre>
-<h3 class="pdoc-member-header" id="Volume-getHostPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L790">method <b>getHostPath</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getHostPath(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-getVolumeName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L789">method <b>getVolumeName</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-
-<pre class="highlight"><span class='kd'></span>getVolumeName(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span></pre>
-
-</div>
-<h3 class="pdoc-member-header" id="Volume-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/node_modules/@pulumi/cloud/service.d.ts#L180">property <b>kind</b></a>
-</h3>
-<div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>kind: VolumeKind;</pre>
-</div>
-</div>
 <h2 class="pdoc-module-header" id="Domain">
 <a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L54">type <b>Domain</b></a>
 </h2>
@@ -1203,13 +1176,13 @@ set to false, the service may complete its deployment before it is fully ready t
 <pre class="highlight"><span class='kd'>type</span> Domain = cloud.Domain | <a href='#AWSDomain'>AWSDomain</a>;</pre>
 </div>
 <h2 class="pdoc-module-header" id="Endpoints">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L610">type <b>Endpoints</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/service.ts#L611">type <b>Endpoints</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> Endpoints = {[containerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: {[port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>]: <a href='#Endpoint'>Endpoint</a>}};</pre>
 </div>
 <h2 class="pdoc-module-header" id="HttpEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L403">type <b>HttpEndpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-cloud/blob/master/aws/api.ts#L404">type <b>HttpEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> HttpEndpoint = <a href='#API'>API</a>;</pre>

@@ -658,19 +658,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A structure containing information about an Amazon S3 bucket to write instance-level logs to. Documented below.</li>
 <li><strong>max_concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of targets this task can be run for in parallel.</li>
 <li><strong>max_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum number of errors allowed before this task stops being scheduled.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</li>
+<li><strong>service_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be assumed when executing the task.</li>
+<li><strong>targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.</li>
+<li><strong>task_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the task to execute.</li>
+<li><strong>task_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Documented below.</li>
+<li><strong>task_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.</li>
+<li><strong>window_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of the maintenance window to register the task with.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] name
-:param pulumi.Input[int] priority: The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
-:param pulumi.Input[str] service_role_arn: The role that should be assumed when executing the task.
-:param pulumi.Input[list] targets: The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
-:param pulumi.Input[str] task_arn: The ARN of the task to execute.
-:param pulumi.Input[list] task_parameters: A structure containing information about parameters required by the particular <code class="docutils literal notranslate"><span class="pre">task_arn</span></code>. Documented below.
-:param pulumi.Input[str] task_type: The type of task being registered. The only allowed value is <code class="docutils literal notranslate"><span class="pre">RUN_COMMAND</span></code>.
-:param pulumi.Input[str] window_id: The Id of the maintenance window to register the task with.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ssm.MaintenanceWindowTask.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ssm.MaintenanceWindowTask.description" title="Permalink to this definition">¶</a></dt>
@@ -1162,13 +1161,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ssm.get_document">
-<code class="descclassname">pulumi_aws.ssm.</code><code class="descname">get_document</code><span class="sig-paren">(</span><em>document_format=None</em>, <em>document_version=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_document" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ssm.</code><code class="descname">get_document</code><span class="sig-paren">(</span><em>document_format=None</em>, <em>document_version=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_document" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the contents of the specified Systems Manager document.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ssm.get_parameter">
-<code class="descclassname">pulumi_aws.ssm.</code><code class="descname">get_parameter</code><span class="sig-paren">(</span><em>name=None</em>, <em>with_decryption=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_parameter" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ssm.</code><code class="descname">get_parameter</code><span class="sig-paren">(</span><em>name=None</em>, <em>with_decryption=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ssm.get_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SSM Parameter data source.</p>
 </dd></dl>
 

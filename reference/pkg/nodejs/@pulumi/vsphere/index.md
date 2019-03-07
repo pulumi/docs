@@ -250,11 +250,11 @@ const dc = pulumi.output(vsphere.getDatacenter({
 }));
 const hostsHost: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(pulumi.output(vsphere.getHost({
-        datacenterId: dc.apply(dc => dc.id),
+    hostsHost.push(vsphere.getHost);
+%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
         name: hosts[i],
-    })));
-}
+    })))}
 const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
     datacenterId: dc.apply(dc => dc.id),
     drsAutomationLevel: "fullyAutomated",
@@ -333,7 +333,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -341,7 +341,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -872,7 +872,7 @@ the hosts to put in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -971,7 +971,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1034,11 +1034,11 @@ const dc = pulumi.output(vsphere.getDatacenter({
 }));
 const hostsHost: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(pulumi.output(vsphere.getHost({
-        datacenterId: dc.apply(dc => dc.id),
+    hostsHost.push(vsphere.getHost);
+%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
         name: hosts[i],
-    })));
-}
+    })))}
 const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
     datacenterId: dc.apply(dc => dc.id),
     drsAutomationLevel: "fullyAutomated",
@@ -1080,7 +1080,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1088,7 +1088,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1121,7 +1121,7 @@ the hosts to put in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1141,7 +1141,7 @@ cluster. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterHostGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1202,16 +1202,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm: vsphere.VirtualMachine[] = [];
@@ -1265,7 +1265,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1273,7 +1273,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1305,7 +1305,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1334,7 +1334,7 @@ The name of the rule. This must be unique in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAffinityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1406,16 +1406,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm: vsphere.VirtualMachine[] = [];
@@ -1469,7 +1469,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1477,7 +1477,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1509,7 +1509,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1538,7 +1538,7 @@ The name of the rule. This must be unique in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmAntiAffinityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1606,16 +1606,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm1 = new vsphere.VirtualMachine("vm1", {
@@ -1689,7 +1689,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1697,7 +1697,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1741,7 +1741,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1771,7 +1771,7 @@ cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmDependencyRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1838,16 +1838,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm: vsphere.VirtualMachine[] = [];
@@ -1901,7 +1901,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1909,7 +1909,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1932,7 +1932,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1952,7 +1952,7 @@ cluster. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2032,20 +2032,20 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const host = pulumi.output(vsphere.getHost({
-    datacenterId: dc.apply(dc => dc.id),
+const host = dc.apply(dc => vsphere.getHost({
+    datacenterId: dc.id,
     name: "esxi1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const clusterHostGroup = new vsphere.ComputeClusterHostGroup("cluster_host_group", {
@@ -2105,7 +2105,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2113,7 +2113,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2167,7 +2167,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2197,7 +2197,7 @@ cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="ComputeClusterVmHostRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2303,7 +2303,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2311,7 +2311,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2323,7 +2323,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2354,7 +2354,7 @@ The name of the custom attribute.
 
 </div>
 <h3 class="pdoc-member-header" id="CustomAttribute-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2423,7 +2423,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2431,7 +2431,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2465,7 +2465,7 @@ Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2504,7 +2504,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="Datacenter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2558,11 +2558,11 @@ const hosts = config.get("hosts") || [
 const datacenter = pulumi.output(vsphere.getDatacenter({}));
 const esxiHosts: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    esxiHosts.push(pulumi.output(vsphere.getHost({
-        datacenterId: datacenter.apply(datacenter => datacenter.id),
+    esxiHosts.push(vsphere.getHost);
+%!(EXTRA string=datacenter.apply(datacenter => vsphere.getHost({
+        datacenterId: datacenter.id,
         name: hosts[i],
-    })));
-}
+    })))}
 const datastoreCluster = new vsphere.DatastoreCluster("datastore_cluster", {
     datacenterId: datacenter.apply(datacenter => datacenter.id),
     sdrsEnabled: true,
@@ -2611,7 +2611,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2619,7 +2619,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2669,7 +2669,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -2910,7 +2910,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -2964,16 +2964,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastoreCluster = pulumi.output(vsphere.getDatastoreCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+    datacenterId: dc.id,
     name: "datastore-cluster1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm: vsphere.VirtualMachine[] = [];
@@ -3027,7 +3027,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3035,7 +3035,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3067,7 +3067,7 @@ Enable this rule in the cluster. Default: `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3096,7 +3096,7 @@ The name of the rule. This must be unique in the cluster.
 
 </div>
 <h3 class="pdoc-member-header" id="DatastoreClusterVmAntiAffinityRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3171,11 +3171,11 @@ const dc = pulumi.output(vsphere.getDatacenter({
 }));
 const host: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < esxiHosts.length; i++) {
-    host.push(pulumi.output(vsphere.getHost({
-        datacenterId: dc.apply(dc => dc.id),
+    host.push(vsphere.getHost);
+%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
         name: esxiHosts[i],
-    })));
-}
+    })))}
 const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
     activeUplinks: [
         "uplink1",
@@ -3280,7 +3280,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3288,7 +3288,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3468,7 +3468,7 @@ If true, the teaming policy will re-activate failed interfaces higher in precede
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -3741,7 +3741,7 @@ individual port.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedPortGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -3840,11 +3840,11 @@ const dc = pulumi.output(vsphere.getDatacenter({
 }));
 const host: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < esxiHosts.length; i++) {
-    host.push(pulumi.output(vsphere.getHost({
-        datacenterId: dc.apply(dc => dc.id),
+    host.push(vsphere.getHost);
+%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
         name: esxiHosts[i],
-    })));
-}
+    })))}
 const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
     activeUplinks: [
         "uplink1",
@@ -3935,7 +3935,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3943,7 +3943,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4234,7 +4234,7 @@ options are:
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -4664,7 +4664,7 @@ use this option.
 
 </div>
 <h3 class="pdoc-member-header" id="DistributedVirtualSwitch-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -4906,11 +4906,11 @@ const dc = pulumi.output(vsphere.getDatacenter({
 }));
 const hostsHost: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(pulumi.output(vsphere.getHost({
-        datacenterId: dc.apply(dc => dc.id),
+    hostsHost.push(vsphere.getHost);
+%!(EXTRA string=dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
         name: hosts[i],
-    })));
-}
+    })))}
 const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
     datacenterId: dc.apply(dc => dc.id),
     drsAutomationLevel: "fullyAutomated",
@@ -4953,7 +4953,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -4961,7 +4961,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5014,7 +5014,7 @@ The managed object ID of the host.
 
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5024,7 +5024,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="DpmHostOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5079,20 +5079,20 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const host = pulumi.output(vsphere.getHost({
-    datacenterId: dc.apply(dc => dc.id),
+const host = dc.apply(dc => vsphere.getHost({
+    datacenterId: dc.id,
     name: "esxi1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -5145,7 +5145,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5153,7 +5153,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5197,7 +5197,7 @@ machine. Can be either `true` or `false`. Default: `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5207,7 +5207,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="DrsVmOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5306,7 +5306,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="File-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5314,7 +5314,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="File-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5366,7 +5366,7 @@ or copied to on vSphere.
 
 </div>
 <h3 class="pdoc-member-header" id="File-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5407,7 +5407,7 @@ changed.
 
 </div>
 <h3 class="pdoc-member-header" id="File-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5506,7 +5506,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Folder-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5514,7 +5514,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Folder-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5548,7 +5548,7 @@ resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="Folder-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5594,7 +5594,7 @@ The type of folder to create. Allowed options are
 
 </div>
 <h3 class="pdoc-member-header" id="Folder-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5650,16 +5650,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -5711,7 +5711,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5719,7 +5719,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -5900,7 +5900,7 @@ specify the cluster default.  Default: `-1`.
 
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -5910,7 +5910,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="HaVmOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -5957,8 +5957,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const esxiHost = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
@@ -5991,8 +5991,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const esxiHost = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
@@ -6040,7 +6040,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6048,7 +6048,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6137,7 +6137,7 @@ the host to set the port group up on. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6243,7 +6243,7 @@ failover_explicit.
 
 </div>
 <h3 class="pdoc-member-header" id="HostPortGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6303,8 +6303,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const host = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const host = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
@@ -6327,8 +6327,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const host = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const host = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
@@ -6378,7 +6378,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6386,7 +6386,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6484,7 +6484,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6625,7 +6625,7 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 
 </div>
 <h3 class="pdoc-member-header" id="HostVirtualSwitch-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6686,7 +6686,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="License-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6694,7 +6694,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="License-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6715,7 +6715,7 @@ The product edition of the license key.
 
 </div>
 <h3 class="pdoc-member-header" id="License-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -6761,7 +6761,7 @@ Total number of units (example: CPUs) contained in the license.
 
 </div>
 <h3 class="pdoc-member-header" id="License-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -6817,11 +6817,11 @@ const hosts = config.get("hosts") || [
 const datacenter = pulumi.output(vsphere.getDatacenter({}));
 const esxiHosts: Output<vsphere.GETHOSTResult>[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    esxiHosts.push(pulumi.output(vsphere.getHost({
-        datacenterId: datacenter.apply(datacenter => datacenter.id),
+    esxiHosts.push(vsphere.getHost);
+%!(EXTRA string=datacenter.apply(datacenter => vsphere.getHost({
+        datacenterId: datacenter.id,
         name: hosts[i],
-    })));
-}
+    })))}
 const datastore = new vsphere.NasDatastore("datastore", {
     hostSystemIds: pulumi.all(esxiHosts).apply(esxiHosts => esxiHosts.map(v => v.id)),
     remoteHosts: ["nfs"],
@@ -6858,7 +6858,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6866,7 +6866,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -6966,7 +6966,7 @@ the hosts to mount the datastore on.
 
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7087,7 +7087,7 @@ The unique locator for the datastore.
 
 </div>
 <h3 class="pdoc-member-header" id="NasDatastore-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7124,7 +7124,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7132,7 +7132,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7144,7 +7144,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7154,7 +7154,7 @@ deployments and may be missing (undefined) during planning phases.
 
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7195,8 +7195,8 @@ const datacenter = config.get("datacenter") || "dc1";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
 }));
-const computeCluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: cluster,
 }));
 const resourcePool = new vsphere.ResourcePool("resource_pool", {
@@ -7232,7 +7232,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7240,7 +7240,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7317,7 +7317,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7415,7 +7415,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="ResourcePool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7467,20 +7467,20 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const memberDatastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const memberDatastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore-cluster1-member1",
 }));
-const datastoreCluster = pulumi.output(vsphere.getDatastoreCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+    datacenterId: dc.id,
     name: "datastore-cluster1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "public",
 }));
-const pool = pulumi.output(vsphere.getResourcePool({
-    datacenterId: dc.apply(dc => dc.id),
+const pool = dc.apply(dc => vsphere.getResourcePool({
+    datacenterId: dc.id,
     name: "cluster1/Resources",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -7532,7 +7532,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7540,7 +7540,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7563,7 +7563,7 @@ Forces a new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7609,7 +7609,7 @@ requirements. When not specified, the datastore cluster's settings are used.
 
 </div>
 <h3 class="pdoc-member-header" id="StorageDrsVmOverride-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7703,7 +7703,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Tag-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7711,7 +7711,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="Tag-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7742,7 +7742,7 @@ A description for the tag.
 
 </div>
 <h3 class="pdoc-member-header" id="Tag-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7762,7 +7762,7 @@ within its category.
 
 </div>
 <h3 class="pdoc-member-header" id="Tag-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7841,7 +7841,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7849,7 +7849,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -7893,7 +7893,7 @@ A description for the category.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -7912,7 +7912,7 @@ The name of the category.
 
 </div>
 <h3 class="pdoc-member-header" id="TagCategory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -7953,8 +7953,8 @@ const datacenter = config.get("datacenter") || "dc1";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
 }));
-const computeCluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: cluster,
 }));
 const vappContainer = new vsphere.VappContainer("vapp_container", {
@@ -7979,16 +7979,16 @@ const datacenter = config.get("datacenter") || "dc1";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
 }));
-const computeCluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: cluster,
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vappContainer = new vsphere.VappContainer("vapp_container", {
@@ -8038,7 +8038,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8046,7 +8046,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8124,7 +8124,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8233,7 +8233,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="VappContainer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8279,16 +8279,16 @@ const vappEntity = new vsphere.VappEntity("vapp_entity", {
 const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
 }));
-const computeCluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: cluster,
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "network1",
 }));
 const vappContainer = new vsphere.VappContainer("vapp_container", {
@@ -8338,7 +8338,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8346,7 +8346,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8377,7 +8377,7 @@ A list of custom attributes to set on this resource.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8458,7 +8458,7 @@ to power on or power off. This can be a virtual machine or a vApp.
 
 </div>
 <h3 class="pdoc-member-header" id="VappEntity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8536,7 +8536,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8544,7 +8544,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -8598,7 +8598,7 @@ disk.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -8629,7 +8629,7 @@ information on what each kind of disk provisioning policy means, click
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualDisk-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -8775,16 +8775,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "public",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -8824,20 +8824,20 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "public",
 }));
-const template = pulumi.output(vsphere.getVirtualMachine({
-    datacenterId: dc.apply(dc => dc.id),
+const template = dc.apply(dc => vsphere.getVirtualMachine({
+    datacenterId: dc.id,
     name: "ubuntu-16.04",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -8902,20 +8902,20 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: dc.apply(dc => dc.id),
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
     name: "datastore1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "public",
 }));
-const tempateFromOvf = pulumi.output(vsphere.getVirtualMachine({
-    datacenterId: dc.apply(dc => dc.id),
+const tempateFromOvf = dc.apply(dc => vsphere.getVirtualMachine({
+    datacenterId: dc.id,
     name: "template_from_ovf",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -8985,16 +8985,16 @@ import * as vsphere from "@pulumi/vsphere";
 const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const cluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
     name: "cluster1",
 }));
-const datastoreCluster = pulumi.output(vsphere.getDatastoreCluster({
-    datacenterId: dc.apply(dc => dc.id),
+const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+    datacenterId: dc.id,
     name: "datastore-cluster1",
 }));
-const network = pulumi.output(vsphere.getNetwork({
-    datacenterId: dc.apply(dc => dc.id),
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
     name: "public",
 }));
 const vm = new vsphere.VirtualMachine("vm", {
@@ -9179,7 +9179,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -9187,7 +9187,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -9615,7 +9615,7 @@ this virtual machine. Can be one of `hvAuto`, `hvOn`, or `hvOff`. Default:
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -9945,7 +9945,7 @@ The IDs of any tags to attach to this resource. See
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -10108,7 +10108,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -10116,7 +10116,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -10148,7 +10148,7 @@ A description for the snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -10198,7 +10198,7 @@ The name of the snapshot.
 
 </div>
 <h3 class="pdoc-member-header" id="VirtualMachineSnapshot-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -10281,8 +10281,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
 const datacenter = pulumi.output(vsphere.getDatacenter({}));
-const esxiHost = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
 }));
 const datastore = new vsphere.VmfsDatastore("datastore", {
     disks: [
@@ -10312,13 +10312,13 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const esxiHost = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
-const available = pulumi.output(vsphere.getVmfsDisks({
+const available = esxiHost.apply(esxiHost => vsphere.getVmfsDisks({
     filter: "naa.60a98000",
-    hostSystemId: esxiHost.apply(esxiHost => esxiHost.id),
+    hostSystemId: esxiHost.id,
     rescan: true,
 }));
 const datastore = new vsphere.VmfsDatastore("datastore", {
@@ -10356,7 +10356,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -10364,7 +10364,7 @@ properties used to qualify the lookup.
 
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L85">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L91">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -10464,7 +10464,7 @@ new resource if changed.
 
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L80">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>id: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -10532,7 +10532,7 @@ The unique locator for the datastore.
 
 </div>
 <h3 class="pdoc-member-header" id="VmfsDatastore-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -10573,8 +10573,8 @@ details about clusters or how to work with them in Terraform.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const computeCluster = pulumi.output(vsphere.getComputeCluster({
-    datacenterId: vsphere_datacenter_dc.id.apply(id => id),
+const computeCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getComputeCluster({
+    datacenterId: id,
     name: "compute-cluster1",
 }));
 const datacenter = pulumi.output(vsphere.getDatacenter({
@@ -10665,8 +10665,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const datastore = pulumi.output(vsphere.getDatastore({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
+    datacenterId: datacenter.id,
     name: "datastore1",
 }));
 ```
@@ -10701,8 +10701,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const datastoreCluster = pulumi.output(vsphere.getDatastoreCluster({
-    datacenterId: vsphere_datacenter_dc.id.apply(id => id),
+const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatastoreCluster({
+    datacenterId: id,
     name: "datastore-cluster1",
 }));
 ```
@@ -10741,8 +10741,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const dvs = pulumi.output(vsphere.getDistributedVirtualSwitch({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const dvs = datacenter.apply(datacenter => vsphere.getDistributedVirtualSwitch({
+    datacenterId: datacenter.id,
     name: "terraform-test-dvs",
 }));
 const pg = new vsphere.DistributedPortGroup("pg", {
@@ -10798,8 +10798,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const host = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const host = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
 ```
@@ -10828,8 +10828,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const net = pulumi.output(vsphere.getNetwork({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const net = datacenter.apply(datacenter => vsphere.getNetwork({
+    datacenterId: datacenter.id,
     name: "terraform-test-net",
 }));
 ```
@@ -10859,8 +10859,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const pool = pulumi.output(vsphere.getResourcePool({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const pool = datacenter.apply(datacenter => vsphere.getResourcePool({
+    datacenterId: datacenter.id,
     name: "resource-pool-1",
 }));
 ```
@@ -10882,8 +10882,8 @@ by specifying the path as per the example below:
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const pool = pulumi.output(vsphere.getResourcePool({
-    datacenterId: vsphere_datacenter_dc.id.apply(id => id),
+const pool = vsphere_datacenter_dc.id.apply(id => vsphere.getResourcePool({
+    datacenterId: id,
     name: "esxi1/Resources",
 }));
 ```
@@ -10922,8 +10922,8 @@ import * as vsphere from "@pulumi/vsphere";
 const category = pulumi.output(vsphere.getTagCategory({
     name: "terraform-test-category",
 }));
-const tag = pulumi.output(vsphere.getTag({
-    categoryId: category.apply(category => category.id),
+const tag = category.apply(category => vsphere.getTag({
+    categoryId: category.id,
     name: "terraform-test-tag",
 }));
 ```
@@ -10984,8 +10984,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const pool = pulumi.output(vsphere.getVappContainer({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const pool = datacenter.apply(datacenter => vsphere.getVappContainer({
+    datacenterId: datacenter.id,
     name: "vapp-container-1",
 }));
 ```
@@ -11016,8 +11016,8 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const template = pulumi.output(vsphere.getVirtualMachine({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
+    datacenterId: datacenter.id,
     name: "test-vm-template",
 }));
 ```
@@ -11047,13 +11047,13 @@ import * as vsphere from "@pulumi/vsphere";
 const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
 }));
-const host = pulumi.output(vsphere.getHost({
-    datacenterId: datacenter.apply(datacenter => datacenter.id),
+const host = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
     name: "esxi1",
 }));
-const available = pulumi.output(vsphere.getVmfsDisks({
+const available = host.apply(host => vsphere.getVmfsDisks({
     filter: "mpx.vmhba1:C0:T[12]:L0",
-    hostSystemId: host.apply(host => host.id),
+    hostSystemId: host.id,
     rescan: true,
 }));
 ```

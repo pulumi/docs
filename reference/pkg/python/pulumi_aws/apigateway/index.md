@@ -2573,21 +2573,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_key">
-<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_key</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_key" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_key</code><span class="sig-paren">(</span><em>id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name and value of a pre-existing API Key, for
 example to supply credentials for a dependency microservice.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_resource">
-<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_resource</code><span class="sig-paren">(</span><em>path=None</em>, <em>rest_api_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_resource" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_resource</code><span class="sig-paren">(</span><em>path=None</em>, <em>rest_api_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id of a Resource in API Gateway. 
 To fetch the Resource, you must provide the REST API id as well as the full path.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_rest_api">
-<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_rest_api</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_rest_api" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_rest_api</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_rest_api" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id and root_resource_id of a REST API in
 API Gateway. To fetch the REST API you must provide a name to match against. 
 As there is no unique name constraint on REST APIs this data source will 
@@ -2596,7 +2596,7 @@ error if there is more than one match.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.apigateway.get_vpc_link">
-<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_vpc_link</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_vpc_link" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.apigateway.</code><code class="descname">get_vpc_link</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigateway.get_vpc_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the id of a VPC Link in
 API Gateway. To fetch the VPC Link you must provide a name to match against. 
 As there is no unique name constraint on API Gateway VPC Links this data source will 

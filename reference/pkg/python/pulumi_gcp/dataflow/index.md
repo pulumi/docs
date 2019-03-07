@@ -21,15 +21,14 @@ the official documentation for
 <li><strong>on_delete</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – One of “drain” or “cancel”.  Specifies behavior of deletion during <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">destroy</span></code>.  See above note.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/Value pairs to be passed to the Dataflow job (as used in the template).</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project in which the resource belongs. If it is not provided, the provider project is used.</li>
+<li><strong>temp_gcs_location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A writeable location on GCS for the Dataflow job to dump its temporary data.</li>
+<li><strong>template_gcs_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GCS path to the Dataflow job template.</li>
+<li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone in which the created job should run. If it is not provided, the provider zone is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[str] temp_gcs_location: A writeable location on GCS for the Dataflow job to dump its temporary data.
-:param pulumi.Input[str] template_gcs_path: The GCS path to the Dataflow job template.
-:param pulumi.Input[str] zone: The zone in which the created job should run. If it is not provided, the provider zone is used.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.dataflow.Job.max_workers">
 <code class="descname">max_workers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.dataflow.Job.max_workers" title="Permalink to this definition">¶</a></dt>

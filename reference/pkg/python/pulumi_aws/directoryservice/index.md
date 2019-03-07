@@ -165,7 +165,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.directoryservice.Directory.security_group_id">
 <code class="descname">security_group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.directoryservice.Directory.security_group_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the security group created by the directory (<code class="docutils literal notranslate"><span class="pre">SimpleAD</span></code> or <code class="docutils literal notranslate"><span class="pre">MicrosoftAD</span></code> only).</p>
+<dd><p>The ID of the security group created by the directory.</p>
 </dd></dl>
 
 <dl class="attribute">

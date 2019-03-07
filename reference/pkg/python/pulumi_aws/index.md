@@ -26,6 +26,7 @@
 <li class="toctree-l1"><a class="reference internal" href="codedeploy/">codedeploy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codepipeline/">codepipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cognito/">cognito</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cur/">cur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasync/">datasync</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dax/">dax</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devicefarm/">devicefarm</a></li>
@@ -60,6 +61,7 @@
 <li class="toctree-l1"><a class="reference internal" href="iot/">iot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kinesis/">kinesis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kms/">kms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lambda_/">lambda</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licensemanager/">licensemanager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lightsail/">lightsail</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macie/">macie</a></li>

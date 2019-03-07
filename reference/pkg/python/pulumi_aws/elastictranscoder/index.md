@@ -143,15 +143,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the preset (maximum 255 characters)</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the preset. (maximum 40 characters)</li>
 <li><strong>thumbnails</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Thumbnail parameters object (documented below)</li>
+<li><strong>video</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Video parameters object (documented below)</li>
+<li><strong>video_watermarks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Watermark parameters for the video parameters (documented below)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] type
-:param pulumi.Input[dict] video: Video parameters object (documented below)
-:param pulumi.Input[dict] video_codec_options
-:param pulumi.Input[list] video_watermarks: Watermark parameters for the video parameters (documented below)</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elastictranscoder.Preset.audio">
 <code class="descname">audio</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elastictranscoder.Preset.audio" title="Permalink to this definition">¶</a></dt>

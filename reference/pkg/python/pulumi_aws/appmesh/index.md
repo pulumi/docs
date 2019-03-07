@@ -100,7 +100,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] virtual_router_name</p>
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.Route.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.arn" title="Permalink to this definition">¶</a></dt>

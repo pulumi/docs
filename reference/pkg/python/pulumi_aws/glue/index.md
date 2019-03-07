@@ -905,7 +905,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.glue.get_script">
-<code class="descclassname">pulumi_aws.glue.</code><code class="descname">get_script</code><span class="sig-paren">(</span><em>dag_edges=None</em>, <em>dag_nodes=None</em>, <em>language=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.get_script" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.glue.</code><code class="descname">get_script</code><span class="sig-paren">(</span><em>dag_edges=None</em>, <em>dag_nodes=None</em>, <em>language=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.get_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).</p>
 </dd></dl>
 

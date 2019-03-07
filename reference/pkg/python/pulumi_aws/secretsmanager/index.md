@@ -328,13 +328,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.secretsmanager.get_secret">
-<code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>arn=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the <cite>``aws_secretsmanager_secret_version`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html</a>&gt;`_.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.secretsmanager.get_secret_version">
-<code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">get_secret_version</code><span class="sig-paren">(</span><em>secret_id=None</em>, <em>version_id=None</em>, <em>version_stage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.secretsmanager.</code><code class="descname">get_secret_version</code><span class="sig-paren">(</span><em>secret_id=None</em>, <em>version_id=None</em>, <em>version_stage=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.secretsmanager.get_secret_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the <cite>``aws_secretsmanager_secret`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html">https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html</a>&gt;`_.</p>
 </dd></dl>
 

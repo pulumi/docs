@@ -50,7 +50,7 @@
 
 <dl class="function">
 <dt id="pulumi_aws.workspaces.get_bundle">
-<code class="descclassname">pulumi_aws.workspaces.</code><code class="descname">get_bundle</code><span class="sig-paren">(</span><em>bundle_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.workspaces.</code><code class="descname">get_bundle</code><span class="sig-paren">(</span><em>bundle_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.workspaces.get_bundle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Workspaces Bundle.</p>
 </dd></dl>
 

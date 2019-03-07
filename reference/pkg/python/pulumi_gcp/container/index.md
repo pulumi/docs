@@ -117,24 +117,15 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</li>
+<li><strong>remove_default_node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, deletes the default node pool upon cluster creation.</li>
+<li><strong>resource_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The GCE resource labels (a map of key/value pairs) to be applied to the cluster.</li>
+<li><strong>subnetwork</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or self_link of the Google Compute Engine subnetwork in
+which the cluster’s instances are launched.</li>
+<li><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the master and the number of nodes specified
+in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> should be created in. Only one of <code class="docutils literal notranslate"><span class="pre">zone</span></code> and <code class="docutils literal notranslate"><span class="pre">region</span></code>
+may be set. If neither zone nor region are set, the provider zone is used.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[bool] remove_default_node_pool: If true, deletes the default node pool upon cluster creation.
-:param pulumi.Input[dict] resource_labels: The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
-:param pulumi.Input[str] subnetwork: The name or self_link of the Google Compute Engine subnetwork in</p>
-<blockquote>
-<div>which the cluster’s instances are launched.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone that the master and the number of nodes specified
-in <code class="docutils literal notranslate"><span class="pre">initial_node_count</span></code> should be created in. Only one of <code class="docutils literal notranslate"><span class="pre">zone</span></code> and <code class="docutils literal notranslate"><span class="pre">region</span></code>
-may be set. If neither zone nor region are set, the provider zone is used.</td>
 </tr>
 </tbody>
 </table>
@@ -719,26 +710,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.container.get_cluster">
-<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get info about a cluster within GKE from its name and zone.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.container.get_engine_versions">
-<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_engine_versions</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>zone=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_engine_versions</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>zone=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_engine_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Google Container Engine versions in a zone or region for a given project.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.container.get_registry_image">
-<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_registry_image</code><span class="sig-paren">(</span><em>digest=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_registry_image</code><span class="sig-paren">(</span><em>digest=None</em>, <em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>tag=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.container.get_registry_repository">
-<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_registry_repository</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_repository" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.container.</code><code class="descname">get_registry_repository</code><span class="sig-paren">(</span><em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.container.get_registry_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.</p>
 <p>The URLs are computed entirely offline - as long as the project exists, they will be valid, but this data source does not contact Google Container Registry (GCR) at any point.</p>
 </dd></dl>

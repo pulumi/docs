@@ -735,19 +735,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ec2transitgateway.get_route_table">
-<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_route_table</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_route_table" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_route_table</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_route_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway Route Table.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2transitgateway.get_transit_gateway">
-<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_transit_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_transit_gateway" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_transit_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_transit_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2transitgateway.get_vpc_attachment">
-<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_vpc_attachment</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_vpc_attachment" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2transitgateway.</code><code class="descname">get_vpc_attachment</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2transitgateway.get_vpc_attachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an EC2 Transit Gateway VPC Attachment.</p>
 </dd></dl>
 

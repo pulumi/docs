@@ -117,10 +117,8 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/pulumi/index.html
       - title: aws
         path: /reference/pkg/nodejs/@pulumi/aws/index.html
-      - title: aws-infra
-        path: /reference/pkg/nodejs/@pulumi/aws-infra/index.html
-      - title: aws-serverless
-        path: /reference/pkg/nodejs/@pulumi/aws-serverless/index.html
+      - title: awsx
+        path: /reference/pkg/nodejs/@pulumi/awsx/index.html
       - title: azure
         path: /reference/pkg/nodejs/@pulumi/azure/index.html
       - title: azure-serverless

@@ -23,26 +23,13 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] alternative_location_id
-:param pulumi.Input[str] authorized_network
-:param pulumi.Input[str] display_name
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] location_id
-:param pulumi.Input[int] memory_size_gb
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
-<blockquote>
-<div>If it is not provided, the provider project is used.</div></blockquote>
-<p>:param pulumi.Input[dict] redis_configs
-:param pulumi.Input[str] redis_version
-:param pulumi.Input[str] region
-:param pulumi.Input[str] reserved_ip_range
-:param pulumi.Input[str] tier</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.redis.Instance.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.redis.Instance.project" title="Permalink to this definition">¶</a></dt>

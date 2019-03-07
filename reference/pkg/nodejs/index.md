@@ -31,7 +31,7 @@ cloud-specific behavior, in addition to extensions for accessing more cloud-spec
 
 These libraries help with common cloud programming patterns and practices:
 
-* [AWS Infrastructure Components (`@pulumi/aws-infra`)](@pulumi/aws-infra): common AWS networking and
+* [AWS Infrastructure Components (`@pulumi/awsx`)](@pulumi/awsx): common AWS networking and
   infrastructure patterns
 * [AWS EKS Cluster (`@pulumi/eks`)](@pulumi/eks): simple creation and management of AWS EKS clusters
 * [Azure Serverless Components (`@pulumi/azure-serverless`)](@pulumi/azure-serverless): components for writing

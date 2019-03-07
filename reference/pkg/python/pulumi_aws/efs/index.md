@@ -344,13 +344,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.efs.get_file_system">
-<code class="descclassname">pulumi_aws.efs.</code><code class="descname">get_file_system</code><span class="sig-paren">(</span><em>creation_token=None</em>, <em>file_system_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_file_system" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.efs.</code><code class="descname">get_file_system</code><span class="sig-paren">(</span><em>creation_token=None</em>, <em>file_system_id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_file_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about an Elastic File System (EFS).</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.efs.get_mount_target">
-<code class="descclassname">pulumi_aws.efs.</code><code class="descname">get_mount_target</code><span class="sig-paren">(</span><em>mount_target_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_mount_target" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.efs.</code><code class="descname">get_mount_target</code><span class="sig-paren">(</span><em>mount_target_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_mount_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about an Elastic File System Mount Target (EFS).</p>
 </dd></dl>
 
