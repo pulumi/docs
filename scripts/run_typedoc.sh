@@ -62,6 +62,7 @@ generate_docs "azure-serverless" "pulumi-azure-serverless/nodejs/azure-serverles
 generate_docs "cloud" "pulumi-cloud/api"
 generate_docs "cloud-aws" "pulumi-cloud/aws"
 generate_docs "cloud-azure" "pulumi-cloud/azure"
+generate_docs "cloudflare" "pulumi-cloudflare" "sdk/nodejs"
 generate_docs "docker" "pulumi-docker" "sdk/nodejs"
 generate_docs "eks" "pulumi-eks/nodejs/eks"
 generate_docs "kubernetes" "pulumi-kubernetes" "sdk/nodejs"
