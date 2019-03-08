@@ -188,13 +188,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.eks.get_cluster">
-<code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EKS Cluster.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.eks.get_cluster_auth">
-<code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster_auth</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster_auth" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.eks.</code><code class="descname">get_cluster_auth</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.get_cluster_auth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an authentication token to communicate with an EKS cluster.</p>
 <p>Uses IAM credentials from the AWS provider to generate a temporary token that is compatible with
 <a class="reference external" href="https://github.com/kubernetes-sigs/aws-iam-authenticator">AWS IAM Authenticator</a> authentication.

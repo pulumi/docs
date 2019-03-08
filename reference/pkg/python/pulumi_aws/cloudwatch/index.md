@@ -1033,7 +1033,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">MetricAlarm</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions_enabled=None</em>, <em>alarm_actions=None</em>, <em>alarm_description=None</em>, <em>name=None</em>, <em>comparison_operator=None</em>, <em>datapoints_to_alarm=None</em>, <em>dimensions=None</em>, <em>evaluate_low_sample_count_percentiles=None</em>, <em>evaluation_periods=None</em>, <em>extended_statistic=None</em>, <em>insufficient_data_actions=None</em>, <em>metric_name=None</em>, <em>namespace=None</em>, <em>ok_actions=None</em>, <em>period=None</em>, <em>statistic=None</em>, <em>threshold=None</em>, <em>treat_missing_data=None</em>, <em>unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">MetricAlarm</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>actions_enabled=None</em>, <em>alarm_actions=None</em>, <em>alarm_description=None</em>, <em>name=None</em>, <em>comparison_operator=None</em>, <em>datapoints_to_alarm=None</em>, <em>dimensions=None</em>, <em>evaluate_low_sample_count_percentiles=None</em>, <em>evaluation_periods=None</em>, <em>extended_statistic=None</em>, <em>insufficient_data_actions=None</em>, <em>metric_name=None</em>, <em>metric_queries=None</em>, <em>namespace=None</em>, <em>ok_actions=None</em>, <em>period=None</em>, <em>statistic=None</em>, <em>threshold=None</em>, <em>treat_missing_data=None</em>, <em>unit=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Metric Alarm resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1048,7 +1048,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the alarm. This name must be unique within the user’s AWS account</li>
 <li><strong>comparison_operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqualToThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqualToThreshold</span></code>.</li>
 <li><strong>datapoints_to_alarm</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of datapoints that must be breaching to trigger the alarm.</li>
-<li><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The dimensions for the alarm’s associated metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</li>
+<li><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</li>
 <li><strong>evaluate_low_sample_count_percentiles</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used only for alarms
 based on percentiles. If you specify <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, the alarm state will not
 change during periods with too few data points to be statistically significant.
@@ -1058,18 +1058,19 @@ The following values are supported: <code class="docutils literal notranslate"><
 <li><strong>evaluation_periods</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of periods over which data is compared to the specified threshold.</li>
 <li><strong>extended_statistic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.</li>
 <li><strong>insufficient_data_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Number (ARN).</li>
-<li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the alarm’s associated metric.
+<li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for this metric.
 See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</li>
-<li><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The namespace for the alarm’s associated metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
+<li><strong>metric_queries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Enables you to create an alarm based on a metric math expression. You may specify at most 20.</li>
+<li><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The namespace for this metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
 See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p>
 </li>
 <li><strong>ok_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Number (ARN).</li>
-<li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">statistic</span></code> is applied.</li>
+<li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</li>
 <li><strong>statistic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The statistic to apply to the alarm’s associated metric.
 Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></li>
 <li><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value against which the specified statistic is compared.</li>
 <li><strong>treat_missing_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets how this alarm is to handle missing data points. The following values are supported: <code class="docutils literal notranslate"><span class="pre">missing</span></code>, <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, <code class="docutils literal notranslate"><span class="pre">breaching</span></code> and <code class="docutils literal notranslate"><span class="pre">notBreaching</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">missing</span></code>.</li>
-<li><strong>unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unit for the alarm’s associated metric.</li>
+<li><strong>unit</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unit for this metric.</li>
 </ul>
 </td>
 </tr>
@@ -1120,7 +1121,7 @@ Either of the following is supported: <code class="docutils literal notranslate"
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.dimensions">
 <code class="descname">dimensions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.dimensions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The dimensions for the alarm’s associated metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</p>
+<dd><p>The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1155,14 +1156,20 @@ The following values are supported: <code class="docutils literal notranslate"><
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.metric_name">
 <code class="descname">metric_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.metric_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name for the alarm’s associated metric.
+<dd><p>The name for this metric.
 See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudwatch.MetricAlarm.metric_queries">
+<code class="descname">metric_queries</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.metric_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables you to create an alarm based on a metric math expression. You may specify at most 20.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.namespace">
 <code class="descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>The namespace for the alarm’s associated metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
+<dd><p>The namespace for this metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
 See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p>
 </dd></dl>
 
@@ -1175,7 +1182,7 @@ See docs for <a class="reference external" href="https://docs.aws.amazon.com/Ama
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.period">
 <code class="descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.period" title="Permalink to this definition">¶</a></dt>
-<dd><p>The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">statistic</span></code> is applied.</p>
+<dd><p>The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1200,7 +1207,7 @@ Either of the following is supported: <code class="docutils literal notranslate"
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.unit">
 <code class="descname">unit</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.unit" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unit for the alarm’s associated metric.</p>
+<dd><p>The unit for this metric.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1245,7 +1252,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.cloudwatch.get_log_group">
-<code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">get_log_group</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.get_log_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudwatch.</code><code class="descname">get_log_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.get_log_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an AWS Cloudwatch Log Group</p>
 </dd></dl>
 

@@ -109,8 +109,6 @@ is not provided, the provider project is used.</li>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] text
-:param pulumi.Input[str] value</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.runtimeconfig.Variavble.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.runtimeconfig.Variavble.name" title="Permalink to this definition">¶</a></dt>

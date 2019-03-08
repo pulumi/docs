@@ -206,7 +206,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.cloudtrail.get_service_account">
-<code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.get_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cloudtrail.</code><code class="descname">get_service_account</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html">AWS CloudTrail Service Account</a>
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.</p>
 </dd></dl>

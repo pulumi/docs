@@ -31,9 +31,6 @@ See <a class="reference external" href="https://terraform.io/docs/providers/goog
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] attestation_authority
-:param pulumi.Input[str] name
-:param pulumi.Input[str] project</p>
 <dl class="method">
 <dt id="pulumi_gcp.containeranalysis.Note.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.translate_output_property" title="Permalink to this definition">¶</a></dt>

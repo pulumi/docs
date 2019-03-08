@@ -325,7 +325,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] user_pool_id</p>
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.ResourceServer.identifier">
 <code class="descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer.identifier" title="Permalink to this definition">¶</a></dt>
@@ -483,7 +482,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserPool">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_create_user_config=None</em>, <em>alias_attributes=None</em>, <em>auto_verified_attributes=None</em>, <em>device_configuration=None</em>, <em>email_configuration=None</em>, <em>email_verification_message=None</em>, <em>email_verification_subject=None</em>, <em>lambda_config=None</em>, <em>mfa_configuration=None</em>, <em>name=None</em>, <em>password_policy=None</em>, <em>schemas=None</em>, <em>sms_authentication_message=None</em>, <em>sms_configuration=None</em>, <em>sms_verification_message=None</em>, <em>tags=None</em>, <em>username_attributes=None</em>, <em>verification_message_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cognito.</code><code class="descname">UserPool</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>admin_create_user_config=None</em>, <em>alias_attributes=None</em>, <em>auto_verified_attributes=None</em>, <em>device_configuration=None</em>, <em>email_configuration=None</em>, <em>email_verification_message=None</em>, <em>email_verification_subject=None</em>, <em>lambda_config=None</em>, <em>mfa_configuration=None</em>, <em>name=None</em>, <em>password_policy=None</em>, <em>schemas=None</em>, <em>sms_authentication_message=None</em>, <em>sms_configuration=None</em>, <em>sms_verification_message=None</em>, <em>tags=None</em>, <em>user_pool_add_ons=None</em>, <em>username_attributes=None</em>, <em>verification_message_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool resource.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -508,6 +507,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SMS Configuration.</li>
 <li><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</li>
+<li><strong>user_pool_add_ons</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for user pool add-ons to enable user pool advanced security mode features.</li>
 <li><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</li>
 <li><strong>verification_message_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The verification message templates configuration.</li>
 </ul>
@@ -636,6 +636,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cognito.UserPool.user_pool_add_ons">
+<code class="descname">user_pool_add_ons</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.user_pool_add_ons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block for user pool add-ons to enable user pool advanced security mode features.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.username_attributes">
 <code class="descname">username_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.username_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p>
@@ -704,7 +710,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>callback_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed callback URLs for the identity providers.</li>
 <li><strong>default_redirect_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default redirect URI. Must be in the list of callback URLs.</li>
 <li><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH).</li>
-<li><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated. AWS JavaScript SDK requires this to be false.</li>
+<li><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated.</li>
 <li><strong>logout_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed logout URLs for the identity providers.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application client.</li>
 <li><strong>read_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user pool attributes the application client can read from.</li>
@@ -762,7 +768,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPoolClient.generate_secret">
 <code class="descname">generate_secret</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.generate_secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>Should an application secret be generated. AWS JavaScript SDK requires this to be false.</p>
+<dd><p>Should an application secret be generated.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -950,7 +956,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.cognito.get_user_pools">
-<code class="descclassname">pulumi_aws.cognito.</code><code class="descname">get_user_pools</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.get_user_pools" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.cognito.</code><code class="descname">get_user_pools</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.get_user_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of cognito user pools.</p>
 </dd></dl>
 

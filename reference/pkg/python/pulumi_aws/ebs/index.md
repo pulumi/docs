@@ -294,9 +294,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] source_region
-:param pulumi.Input[str] source_snapshot_id
-:param pulumi.Input[dict] tags: A mapping of tags for the snapshot.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags for the snapshot.</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id">
 <code class="descname">data_encryption_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ebs.SnapshotCopy.data_encryption_key_id" title="Permalink to this definition">¶</a></dt>
@@ -513,20 +518,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ebs.get_snapshot">
-<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>filters=None</em>, <em>most_recent=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>snapshot_ids=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>filters=None</em>, <em>most_recent=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>snapshot_ids=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ebs.get_snapshot_ids">
-<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_snapshot_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot_ids" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_snapshot_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>owners=None</em>, <em>restorable_by_user_ids=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_snapshot_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of EBS Snapshot IDs matching the specified
 criteria.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ebs.get_volume">
-<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_volume</code><span class="sig-paren">(</span><em>filters=None</em>, <em>most_recent=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_volume" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ebs.</code><code class="descname">get_volume</code><span class="sig-paren">(</span><em>filters=None</em>, <em>most_recent=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ebs.get_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an EBS volume for use in other
 resources.</p>
 </dd></dl>

@@ -189,29 +189,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] short_name: A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.CustomLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -362,31 +357,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to use for Ganglia.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL path to use for Ganglia. Defaults to “/ganglia”.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
+<li><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to use for Ganglia. Defaults to “opsworks”.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] password: The password to use for Ganglia.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[str] url: The URL path to use for Ganglia. Defaults to “/ganglia”.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.
-:param pulumi.Input[str] username: The username to use for Ganglia. Defaults to “opsworks”.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.GangliaLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -549,34 +539,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>healthcheck_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – HTTP method to use for instance healthchecks. Defaults to “OPTIONS”.</li>
+<li><strong>healthcheck_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL path to use for instance healthchecks. Defaults to “/”.</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>stats_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable HAProxy stats.</li>
+<li><strong>stats_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to use for HAProxy stats.</li>
+<li><strong>stats_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HAProxy stats URL. Defaults to “/haproxy?stats”.</li>
+<li><strong>stats_user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username for HAProxy stats. Defaults to “opsworks”.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[str] healthcheck_method: HTTP method to use for instance healthchecks. Defaults to “OPTIONS”.
-:param pulumi.Input[str] healthcheck_url: URL path to use for instance healthchecks. Defaults to “/”.
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[bool] stats_enabled: Whether to enable HAProxy stats.
-:param pulumi.Input[str] stats_password: The password to use for HAProxy stats.
-:param pulumi.Input[str] stats_url: The HAProxy stats URL. Defaults to “/haproxy?stats”.
-:param pulumi.Input[str] stats_user: The username for HAProxy stats. Defaults to “opsworks”.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.HaproxyLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -808,93 +793,39 @@ using the <cite>``taint`</cite> command &lt;<a class="reference external" href="
 <li><strong>auto_scaling_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates load-based or time-based instances.  If set, can be either: <code class="docutils literal notranslate"><span class="pre">&quot;load&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;timer&quot;</span></code>.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the availability zone where instances will be created
 by default.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] created_at
-:param pulumi.Input[bool] delete_ebs
-:param pulumi.Input[bool] delete_eip
-:param pulumi.Input[list] ebs_block_devices: Additional EBS block devices to attach to the</p>
-<blockquote>
-<div>instance.  See Block Devices below for details.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will be EBS-optimized.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] ecs_cluster_arn
-:param pulumi.Input[str] elastic_ip
-:param pulumi.Input[list] ephemeral_block_devices: Customize Ephemeral (also known as</p>
-<blockquote>
-<div>“Instance Store”) volumes on the instance. See Block Devices below for details.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance’s host name.</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] infrastructure_class
-:param pulumi.Input[bool] install_updates_on_boot: Controls where to install OS and package updates when the instance boots.  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] instance_profile_arn
-:param pulumi.Input[str] instance_type: The type of instance to start
-:param pulumi.Input[str] last_service_error_id
-:param pulumi.Input[list] layer_ids: The ids of the layers the instance will belong to.
-:param pulumi.Input[str] os: Name of operating system that will be installed.
-:param pulumi.Input[str] platform
-:param pulumi.Input[str] private_dns: The private DNS name assigned to the instance. Can only be</p>
-<blockquote>
-<div>used inside the Amazon EC2, and only available if you’ve enabled DNS hostnames
-for your VPC</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ebs_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Additional EBS block devices to attach to the
+instance.  See Block Devices below for details.</li>
+<li><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will be EBS-optimized.</li>
+<li><strong>ephemeral_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize Ephemeral (also known as
+“Instance Store”) volumes on the instance. See Block Devices below for details.</li>
+<li><strong>hostname</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance’s host name.</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls where to install OS and package updates when the instance boots.  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start</li>
+<li><strong>layer_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ids of the layers the instance will belong to.</li>
+<li><strong>os</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of operating system that will be installed.</li>
+<li><strong>private_dns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private DNS name assigned to the instance. Can only be
+used inside the Amazon EC2, and only available if you’ve enabled DNS hostnames
+for your VPC</li>
 <li><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private IP address assigned to the instance</li>
 <li><strong>public_dns</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you’ve enabled DNS hostnames for your VPC</li>
 <li><strong>public_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public IP address assigned to the instance, if applicable.</li>
+<li><strong>root_block_devices</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize details about the root block
+device of the instance. See Block Devices below for details.</li>
+<li><strong>root_device_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the type of root device instances will have by default.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;ebs&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;instance-store&quot;</span></code></li>
+<li><strong>security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The associated security groups.</li>
+<li><strong>ssh_key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the SSH keypair that instances will have by default.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the instance will belong to.</li>
+<li><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The desired state of the instance.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;running&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;stopped&quot;</span></code>.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to attach to</li>
+<li><strong>tenancy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Instance tenancy to use. Can be one of <code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;host&quot;</span></code></li>
+<li><strong>virtualization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword to choose what virtualization mode created instances
+will use. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;paravirtual&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;hvm&quot;</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] registered_by
-:param pulumi.Input[str] reported_agent_version
-:param pulumi.Input[str] reported_os_family
-:param pulumi.Input[str] reported_os_name
-:param pulumi.Input[str] reported_os_version
-:param pulumi.Input[list] root_block_devices: Customize details about the root block</p>
-<blockquote>
-<div>device of the instance. See Block Devices below for details.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>root_device_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the type of root device instances will have by default.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;ebs&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;instance-store&quot;</span></code></td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] root_device_volume_id
-:param pulumi.Input[list] security_group_ids: The associated security groups.
-:param pulumi.Input[str] ssh_host_dsa_key_fingerprint
-:param pulumi.Input[str] ssh_host_rsa_key_fingerprint
-:param pulumi.Input[str] ssh_key_name: Name of the SSH keypair that instances will have by default.
-:param pulumi.Input[str] stack_id: The id of the stack the instance will belong to.
-:param pulumi.Input[str] state: The desired state of the instance.  Can be either <code class="docutils literal notranslate"><span class="pre">&quot;running&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;stopped&quot;</span></code>.
-:param pulumi.Input[str] status
-:param pulumi.Input[str] subnet_id: Subnet ID to attach to
-:param pulumi.Input[str] tenancy: Instance tenancy to use. Can be one of <code class="docutils literal notranslate"><span class="pre">&quot;default&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;dedicated&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;host&quot;</span></code>
-:param pulumi.Input[str] virtualization_type: Keyword to choose what virtualization mode created instances</p>
-<blockquote>
-<div>will use. Can be either <code class="docutils literal notranslate"><span class="pre">&quot;paravirtual&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;hvm&quot;</span></code>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Instance.agent_version">
 <code class="descname">agent_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Instance.agent_version" title="Permalink to this definition">¶</a></dt>
@@ -1121,31 +1052,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>jvm_options</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Options to set for the JVM.</li>
+<li><strong>jvm_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword for the type of JVM to use. Defaults to <code class="docutils literal notranslate"><span class="pre">openjdk</span></code>.</li>
+<li><strong>jvm_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of JVM to use. Defaults to “7”.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] jvm_options: Options to set for the JVM.
-:param pulumi.Input[str] jvm_type: Keyword for the type of JVM to use. Defaults to <code class="docutils literal notranslate"><span class="pre">openjdk</span></code>.
-:param pulumi.Input[str] jvm_version: Version of JVM to use. Defaults to “7”.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.app_server">
 <code class="descname">app_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.app_server" title="Permalink to this definition">¶</a></dt>
@@ -1321,28 +1247,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MemcachedLayer.allocated_memory">
 <code class="descname">allocated_memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.allocated_memory" title="Permalink to this definition">¶</a></dt>
@@ -1496,30 +1417,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>root_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Root password to use for MySQL.</li>
+<li><strong>root_password_on_all_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to set the root user password to all instances in the stack so they can access the instances in this layer.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] root_password: Root password to use for MySQL.
-:param pulumi.Input[bool] root_password_on_all_instances: Whether to set the root user password to all instances in the stack so they can access the instances in this layer.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MysqlLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -1676,29 +1592,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>nodejs_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of NodeJS to use. Defaults to “0.10.38”.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] nodejs_version: The version of NodeJS to use. Defaults to “0.10.38”.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -1940,28 +1851,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.PhpAppLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2108,32 +2014,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
 <li><strong>bundler_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When OpsWorks is managing Bundler, which version to use. Defaults to “1.5.3”.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_json</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Custom JSON attributes to apply to the layer.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>manage_bundler</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether OpsWorks should manage bundler. On by default.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>passenger_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Passenger to use. Defaults to “4.0.46”.</li>
+<li><strong>ruby_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Ruby to use. Defaults to “2.0.0”.</li>
+<li><strong>rubygems_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of RubyGems to use. Defaults to “2.2.2”.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json: Custom JSON attributes to apply to the layer.
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[bool] manage_bundler: Whether OpsWorks should manage bundler. On by default.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] passenger_version: The version of Passenger to use. Defaults to “4.0.46”.
-:param pulumi.Input[str] ruby_version: The version of Ruby to use. Defaults to “2.0.0”.
-:param pulumi.Input[str] rubygems_version: The version of RubyGems to use. Defaults to “2.2.2”.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.RailsAppLayer.app_server">
 <code class="descname">app_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.app_server" title="Permalink to this definition">¶</a></dt>
@@ -2625,28 +2526,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
+<li><strong>custom_instance_profile_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of an IAM profile that will be used for the layer’s instances.</li>
+<li><strong>custom_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Ids for a set of security groups to apply to the layer’s instances.</li>
+<li><strong>drain_elb_on_shutdown</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable Elastic Load Balancing connection draining.</li>
+<li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
+<li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
+<li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
+<li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
+<li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
+<li><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] custom_configure_recipes
-:param pulumi.Input[list] custom_deploy_recipes
-:param pulumi.Input[str] custom_instance_profile_arn: The ARN of an IAM profile that will be used for the layer’s instances.
-:param pulumi.Input[str] custom_json
-:param pulumi.Input[list] custom_security_group_ids: Ids for a set of security groups to apply to the layer’s instances.
-:param pulumi.Input[list] custom_setup_recipes
-:param pulumi.Input[list] custom_shutdown_recipes
-:param pulumi.Input[list] custom_undeploy_recipes
-:param pulumi.Input[bool] drain_elb_on_shutdown: Whether to enable Elastic Load Balancing connection draining.
-:param pulumi.Input[list] ebs_volumes: <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.
-:param pulumi.Input[str] elastic_load_balancer: Name of an Elastic Load Balancer to attach to this layer
-:param pulumi.Input[bool] install_updates_on_boot: Whether to install OS and package updates on each instance when it boots.
-:param pulumi.Input[int] instance_shutdown_timeout: The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-:param pulumi.Input[str] name: A human-readable name for the layer.
-:param pulumi.Input[str] stack_id: The id of the stack the layer will belong to.
-:param pulumi.Input[list] system_packages: Names of a set of system packages to install on the layer’s instances.
-:param pulumi.Input[bool] use_ebs_optimized_instances: Whether to use EBS-optimized instances.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.StaticWebLayer.auto_assign_elastic_ips">
 <code class="descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>

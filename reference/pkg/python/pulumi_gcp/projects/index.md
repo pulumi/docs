@@ -20,22 +20,13 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified, uses the
+ID of the project configured with the provider.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[list] members
-:param pulumi.Input[str] project: The project ID. If not specified, uses the</p>
-<blockquote>
-<div>ID of the project configured with the provider.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
-<code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -124,22 +115,10 @@ by Terraform, and new roles cannot share that name.</dd>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] deleted
-:param pulumi.Input[str] description: A human-readable description for the role.
-:param pulumi.Input[list] permissions: The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
-:param pulumi.Input[str] project: The project that the service account will be created in.</p>
-<blockquote>
-<div>Defaults to the provider project configuration.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description for the role.</li>
+<li><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project that the service account will be created in.
+Defaults to the provider project configuration.</li>
 <li><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role id to use for this role.</li>
 <li><strong>stage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current launch stage of the role.
 Defaults to <code class="docutils literal notranslate"><span class="pre">GA</span></code>.
@@ -249,22 +228,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID. If not specified, uses the
+ID of the project configured with the provider.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] member
-:param pulumi.Input[str] project: The project ID. If not specified, uses the</p>
-<blockquote>
-<div>ID of the project configured with the provider.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
-<code class="docutils literal notranslate"><span class="pre">google_project_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -687,22 +657,13 @@ google_project_service resource, one resource per API.</dd>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project ID.
+Changing this forces Terraform to attempt to disable all previously managed
+API services in the previous project.</li>
+<li><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of services that are enabled. Supports
+update.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[bool] disable_on_destroy
-:param pulumi.Input[str] project: The project ID.</p>
-<blockquote>
-<div>Changing this forces Terraform to attempt to disable all previously managed
-API services in the previous project.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of services that are enabled. Supports
-update.</td>
 </tr>
 </tbody>
 </table>
@@ -801,9 +762,6 @@ Terraform. Only newly added projects are affected.</div></blockquote>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] bucket_name
-:param pulumi.Input[str] prefix
-:param pulumi.Input[str] project</p>
 <dl class="method">
 <dt id="pulumi_gcp.projects.UsageExportBucket.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.UsageExportBucket.translate_output_property" title="Permalink to this definition">¶</a></dt>

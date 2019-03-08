@@ -23,13 +23,12 @@ Terraform is not able to delete App Engine applications.</dd>
 <li><strong>feature_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A block of optional settings to configure specific App Engine features:</li>
 <li><strong>location_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/appengine/docs/locations">location</a>
 to serve the app from.</li>
+<li><strong>serving_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The serving status of the app.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] project
-:param pulumi.Input[str] serving_status: The serving status of the app.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.appengine.Application.auth_domain">
 <code class="descname">auth_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.appengine.Application.auth_domain" title="Permalink to this definition">¶</a></dt>

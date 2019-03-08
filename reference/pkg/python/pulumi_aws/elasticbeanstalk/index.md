@@ -15,14 +15,13 @@ the infrastructure that runs those applications.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Short description of the application</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application, must be unique within your account</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] appversion_lifecycle
-:param pulumi.Input[str] description: Short description of the application
-:param pulumi.Input[str] name: The name of the application, must be unique within your account</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticbeanstalk.Application.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.Application.description" title="Permalink to this definition">¶</a></dt>
@@ -600,19 +599,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_application">
-<code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_application</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_application" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_application</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an Elastic Beanstalk Application.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_hosted_zone">
-<code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_hosted_zone</code><span class="sig-paren">(</span><em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_hosted_zone" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_hosted_zone</code><span class="sig-paren">(</span><em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_hosted_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an <a class="reference external" href="http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region">elastic beanstalk hosted zone</a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.elasticbeanstalk.get_solution_stack">
-<code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_solution_stack</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name_regex=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_solution_stack" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.elasticbeanstalk.</code><code class="descname">get_solution_stack</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name_regex=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticbeanstalk.get_solution_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the name of a elastic beanstalk solution stack.</p>
 </dd></dl>
 

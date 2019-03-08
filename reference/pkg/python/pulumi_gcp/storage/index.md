@@ -271,15 +271,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] members
-:param pulumi.Input[str] role: The role that should be applied. Note that custom roles must be of the format</p>
-<blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMBinding.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMBinding.bucket" title="Permalink to this definition">¶</a></dt>
@@ -358,15 +356,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket it applies to.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] member
-:param pulumi.Input[str] role: The role that should be applied. Note that custom roles must be of the format</p>
-<blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMMember.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMMember.bucket" title="Permalink to this definition">¶</a></dt>
@@ -450,7 +446,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] policy_data</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.storage.BucketIAMPolicy.bucket">
 <code class="descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.storage.BucketIAMPolicy.bucket" title="Permalink to this definition">¶</a></dt>
@@ -529,23 +524,14 @@ directive to specify caching behavior of object data. If omitted and object is a
 <li><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2">Content-Encoding</a> of the object data.</li>
 <li><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">Content-Language</a> of the object data.</li>
 <li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <a class="reference external" href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Content-Type</a> of the object data. Defaults to “application/octet-stream” or “text/plain; charset=utf-8”.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object.</li>
+<li><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.Archive</em><em>]</em>) – A path to the data you want to upload. Must be defined
+if <code class="docutils literal notranslate"><span class="pre">content</span></code> is not.</li>
+<li><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">StorageClass</a> of the new bucket object.
+Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>. If not provided, this defaults to the bucket’s default
+storage class or to a <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes#standard">standard</a> class.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] detect_md5hash
-:param pulumi.Input[str] name: The name of the object.
-:param pulumi.Input[pulumi.Archive] source: A path to the data you want to upload. Must be defined</p>
-<blockquote>
-<div>if <code class="docutils literal notranslate"><span class="pre">content</span></code> is not.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>storage_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes">StorageClass</a> of the new bucket object.
-Supported values include: <code class="docutils literal notranslate"><span class="pre">MULTI_REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>, <code class="docutils literal notranslate"><span class="pre">NEARLINE</span></code>, <code class="docutils literal notranslate"><span class="pre">COLDLINE</span></code>. If not provided, this defaults to the bucket’s default
-storage class or to a <a class="reference external" href="https://cloud.google.com/storage/docs/storage-classes#standard">standard</a> class.</td>
 </tr>
 </tbody>
 </table>
@@ -784,10 +770,6 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] bucket
-:param pulumi.Input[str] entity
-:param pulumi.Input[str] object
-:param pulumi.Input[str] role</p>
 <dl class="method">
 <dt id="pulumi_gcp.storage.DefaultObjectAccessControl.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.DefaultObjectAccessControl.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1110,10 +1092,6 @@ uses READER and OWNER instead of READ and FULL_CONTROL.</p>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] bucket
-:param pulumi.Input[str] entity
-:param pulumi.Input[str] object
-:param pulumi.Input[str] role</p>
 <dl class="method">
 <dt id="pulumi_gcp.storage.ObjectAccessControl.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.ObjectAccessControl.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -1156,14 +1134,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.storage.get_object_signed_url">
-<code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_object_signed_url</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>content_md5=None</em>, <em>content_type=None</em>, <em>credentials=None</em>, <em>duration=None</em>, <em>extension_headers=None</em>, <em>http_method=None</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_object_signed_url" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_object_signed_url</code><span class="sig-paren">(</span><em>bucket=None</em>, <em>content_md5=None</em>, <em>content_type=None</em>, <em>credentials=None</em>, <em>duration=None</em>, <em>extension_headers=None</em>, <em>http_method=None</em>, <em>path=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_object_signed_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Google Cloud storage signed URL data source generates a signed URL for a given storage object. Signed URLs provide a way to give time-limited read or write access to anyone in possession of the URL, regardless of whether they have a Google account.</p>
 <p>For more info about signed URL’s is available <a class="reference external" href="https://cloud.google.com/storage/docs/access-control/signed-urls">here</a>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_gcp.storage.get_project_service_account">
-<code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_project_service_account</code><span class="sig-paren">(</span><em>project=None</em>, <em>user_project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_project_service_account" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.storage.</code><code class="descname">get_project_service_account</code><span class="sig-paren">(</span><em>project=None</em>, <em>user_project=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.storage.get_project_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the email address of a project’s unique Google Cloud Storage service account.</p>
 <p>Each Google Cloud project has a unique service account for use with Google Cloud Storage. Only this
 special service account can be used to set up <code class="docutils literal notranslate"><span class="pre">google_storage_notification</span></code> resources.</p>

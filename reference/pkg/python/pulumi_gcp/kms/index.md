@@ -439,16 +439,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{key_ring_name}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">{location_name}/{key_ring_name}</span></code>. In the second form, the provider’s
 project setting will be used as a fallback.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_kms_key_ring_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] members
-:param pulumi.Input[str] role: The role that should be applied. Only one</p>
-<blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">google_kms_key_ring_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRingIAMBinding.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRingIAMBinding.etag" title="Permalink to this definition">¶</a></dt>
@@ -536,16 +534,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="docutils literal notranslate"><span class="pre">{project_id}/{location_name}/{key_ring_name}</span></code> or
 <code class="docutils literal notranslate"><span class="pre">{location_name}/{key_ring_name}</span></code>. In the second form, the provider’s
 project setting will be used as a fallback.</li>
+<li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
+<code class="docutils literal notranslate"><span class="pre">google_kms_key_ring_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
+<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] member
-:param pulumi.Input[str] role: The role that should be applied. Only one</p>
-<blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">google_kms_key_ring_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
-<code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_gcp.kms.KeyRingIAMMember.etag">
 <code class="descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.kms.KeyRingIAMMember.etag" title="Permalink to this definition">¶</a></dt>
@@ -821,7 +817,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.kms.get_kms_secret">
-<code class="descclassname">pulumi_gcp.kms.</code><code class="descname">get_kms_secret</code><span class="sig-paren">(</span><em>ciphertext=None</em>, <em>crypto_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.get_kms_secret" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.kms.</code><code class="descname">get_kms_secret</code><span class="sig-paren">(</span><em>ciphertext=None</em>, <em>crypto_key=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.kms.get_kms_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source allows you to use data encrypted with Google Cloud KMS
 within your resource definitions.</p>
 <p>For more information see

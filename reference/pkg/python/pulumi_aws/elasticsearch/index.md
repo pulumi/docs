@@ -17,21 +17,20 @@ Note that the values for these configuration options must be strings (wrapped in
 may be wrong and cause a perpetual diff, causing Terraform to want to recreate your Elasticsearch
 domain on every apply.</li>
 <li><strong>cluster_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Cluster configuration of the domain, see below.</li>
+<li><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the domain.</li>
+<li><strong>ebs_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – EBS related options, may be required based on chosen <a class="reference external" href="https://aws.amazon.com/elasticsearch-service/pricing/">instance size</a>. See below.</li>
+<li><strong>elasticsearch_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Elasticsearch to deploy. Defaults to <code class="docutils literal notranslate"><span class="pre">1.5</span></code></li>
+<li><strong>encrypt_at_rest</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options. Only available for <a class="reference external" href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html">certain instance types</a>. See below.</li>
+<li><strong>log_publishing_options</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Options for publishing slow logs to CloudWatch Logs.</li>
+<li><strong>node_to_node_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Node-to-node encryption options. See below.</li>
+<li><strong>snapshot_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Snapshot related options, see below.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</li>
+<li><strong>vpc_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – VPC related options, see below. Adding or removing this configuration forces a new resource (<a class="reference external" href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations">documentation</a>).</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] cognito_options
-:param pulumi.Input[str] domain_name: Name of the domain.
-:param pulumi.Input[dict] ebs_options: EBS related options, may be required based on chosen <a class="reference external" href="https://aws.amazon.com/elasticsearch-service/pricing/">instance size</a>. See below.
-:param pulumi.Input[str] elasticsearch_version: The version of Elasticsearch to deploy. Defaults to <code class="docutils literal notranslate"><span class="pre">1.5</span></code>
-:param pulumi.Input[dict] encrypt_at_rest: Encrypt at rest options. Only available for <a class="reference external" href="http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html">certain instance types</a>. See below.
-:param pulumi.Input[list] log_publishing_options: Options for publishing slow logs to CloudWatch Logs.
-:param pulumi.Input[dict] node_to_node_encryption: Node-to-node encryption options. See below.
-:param pulumi.Input[dict] snapshot_options: Snapshot related options, see below.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource
-:param pulumi.Input[dict] vpc_options: VPC related options, see below. Adding or removing this configuration forces a new resource (<a class="reference external" href="https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations">documentation</a>).</p>
 <dl class="attribute">
 <dt id="pulumi_aws.elasticsearch.Domain.access_policies">
 <code class="descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.access_policies" title="Permalink to this definition">¶</a></dt>

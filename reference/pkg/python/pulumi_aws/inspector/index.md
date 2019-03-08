@@ -255,7 +255,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.inspector.get_rules_packages">
-<code class="descclassname">pulumi_aws.inspector.</code><code class="descname">get_rules_packages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.get_rules_packages" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.inspector.</code><code class="descname">get_rules_packages</code><span class="sig-paren">(</span><em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.get_rules_packages" title="Permalink to this definition">¶</a></dt>
 <dd><p>The AWS Inspector Rules Packages data source allows access to the list of AWS
 Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.</p>

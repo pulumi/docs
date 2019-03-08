@@ -30,21 +30,9 @@ instances in the DB cluster can be created in.</li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifer</span></code>.</li>
 <li><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of DocDB Instances that are a part of this cluster</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] db_cluster_parameter_group_name
-:param pulumi.Input[str] db_subnet_group_name: A DB subnet group to associate with this DB instance.* <code class="docutils literal notranslate"><span class="pre">db_cluster_parameter_group_name</span></code> - (Optional) A cluster parameter group to associate with the cluster.
-:param pulumi.Input[list] enabled_cloudwatch_logs_exports: List of log types to export to cloudwatch. If omitted, no logs will be exported.</p>
-<blockquote>
-<div>The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>db_subnet_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A DB subnet group to associate with this DB instance.* <code class="docutils literal notranslate"><span class="pre">db_cluster_parameter_group_name</span></code> - (Optional) A cluster parameter group to associate with the cluster.</li>
+<li><strong>enabled_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of log types to export to cloudwatch. If omitted, no logs will be exported.
+The following log types are supported: <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</li>
 <li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this DB cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code></li>
 <li><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version. Updating this argument results in an outage.</li>
 <li><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
@@ -57,19 +45,17 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
 <li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00</li>
+<li><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.</li>
+<li><strong>storage_encrypted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the DB cluster.</li>
+<li><strong>vpc_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of VPC security groups to associate
+with the Cluster</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] preferred_maintenance_window
-:param pulumi.Input[bool] skip_final_snapshot: Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from <code class="docutils literal notranslate"><span class="pre">final_snapshot_identifier</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] snapshot_identifier: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
-:param pulumi.Input[bool] storage_encrypted: Specifies whether the DB cluster is encrypted. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the DB cluster.
-:param pulumi.Input[list] vpc_security_group_ids: List of VPC security groups to associate</p>
-<blockquote>
-<div>with the Cluster</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.docdb.Cluster.apply_immediately">
 <code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.Cluster.apply_immediately" title="Permalink to this definition">¶</a></dt>
@@ -257,6 +243,229 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.docdb.Cluster.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.docdb.Cluster.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.docdb.ClusterInstance">
+<em class="property">class </em><code class="descclassname">pulumi_aws.docdb.</code><code class="descname">ClusterInstance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>apply_immediately=None</em>, <em>auto_minor_version_upgrade=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>engine=None</em>, <em>identifier=None</em>, <em>identifier_prefix=None</em>, <em>instance_class=None</em>, <em>preferred_maintenance_window=None</em>, <em>promotion_tier=None</em>, <em>tags=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines
+attributes that are specific to a single instance in a [DocDB Cluster][1].</p>
+<p>You do not designate a primary and subsequent replicas. Instead, you simply add DocDB
+Instances and DocDB manages the replication. You can use the [count][3]
+meta-parameter to make multiple instances and join them all to the same DocDB
+Cluster, or you may specify different Cluster Instance resources with various
+<code class="docutils literal notranslate"><span class="pre">instance_class</span></code> sizes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
+<li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonDocDB/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</li>
+<li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``aws_docdb_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html</a>&gt;`_ in which to launch this instance.</li>
+<li><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for the DocDB instance. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code>.</li>
+<li><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The indentifier for the DocDB instance, if omitted, Terraform will assign a random, unique identifier.</li>
+<li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifer</span></code>.</li>
+<li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
+supports the below instance classes. Please see [AWS Documentation][4] for complete details.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
+Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
+<li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the instance.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.apply_immediately">
+<code class="descname">apply_immediately</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.apply_immediately" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amazon Resource Name (ARN) of cluster instance</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.auto_minor_version_upgrade">
+<code class="descname">auto_minor_version_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.auto_minor_version_upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.availability_zone">
+<code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.availability_zone" title="Permalink to this definition">¶</a></dt>
+<dd><p>The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonDocDB/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.cluster_identifier">
+<code class="descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.cluster_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of the <cite>``aws_docdb_cluster`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html">https://www.terraform.io/docs/providers/aws/r/docdb_cluster.html</a>&gt;`_ in which to launch this instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.db_subnet_group_name">
+<code class="descname">db_subnet_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.db_subnet_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DB subnet group to associate with this DB instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.dbi_resource_id">
+<code class="descname">dbi_resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.dbi_resource_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region-unique, immutable identifier for the DB instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.endpoint">
+<code class="descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS address for this instance. May not be writable</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.engine">
+<code class="descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the database engine to be used for the DocDB instance. Defaults to <code class="docutils literal notranslate"><span class="pre">docdb</span></code>. Valid Values: <code class="docutils literal notranslate"><span class="pre">docdb</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.engine_version">
+<code class="descname">engine_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.engine_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database engine version</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.identifier">
+<code class="descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The indentifier for the DocDB instance, if omitted, Terraform will assign a random, unique identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.identifier_prefix">
+<code class="descname">identifier_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.identifier_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a unique identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifer</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.instance_class">
+<code class="descname">instance_class</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.instance_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>The instance class to use. For details on CPU and memory, see [Scaling for DocDB Instances][2]. DocDB currently
+supports the below instance classes. Please see [AWS Documentation][4] for complete details.</p>
+<ul class="simple">
+<li>db.r4.large</li>
+<li>db.r4.xlarge</li>
+<li>db.r4.2xlarge</li>
+<li>db.r4.4xlarge</li>
+<li>db.r4.8xlarge</li>
+<li>db.r4.16xlarge</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.kms_key_id">
+<code class="descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN for the KMS encryption key if one is set to the cluster.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>The database port</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.preferred_backup_window">
+<code class="descname">preferred_backup_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.preferred_backup_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>The daily time range during which automated backups are created if automated backups are enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.preferred_maintenance_window">
+<code class="descname">preferred_maintenance_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.preferred_maintenance_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>The window to perform maintenance in.
+Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.promotion_tier">
+<code class="descname">promotion_tier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.promotion_tier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.storage_encrypted">
+<code class="descname">storage_encrypted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.storage_encrypted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether the DB cluster is encrypted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.docdb.ClusterInstance.writer">
+<code class="descname">writer</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.writer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean indicating if this instance is writable. <code class="docutils literal notranslate"><span class="pre">False</span></code> indicates this instance is a read replica.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.docdb.ClusterInstance.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.docdb.ClusterInstance.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.docdb.ClusterInstance.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

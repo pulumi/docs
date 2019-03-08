@@ -258,6 +258,83 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.iot.RoleAlias">
+<em class="property">class </em><code class="descclassname">pulumi_aws.iot.</code><code class="descname">RoleAlias</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>alias=None</em>, <em>credential_duration=None</em>, <em>role_arn=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.RoleAlias" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an IoT role alias.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role alias.</li>
+<li><strong>credential_duration</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The duration of the credential, in seconds. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 900 seconds (15 minutes) to 3600 seconds (60 minutes).</li>
+<li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identity of the role to which the alias refers.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.iot.RoleAlias.alias">
+<code class="descname">alias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the role alias.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iot.RoleAlias.credential_duration">
+<code class="descname">credential_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.credential_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The duration of the credential, in seconds. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 900 seconds (15 minutes) to 3600 seconds (60 minutes).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.iot.RoleAlias.role_arn">
+<code class="descname">role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.role_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identity of the role to which the alias refers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.iot.RoleAlias.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.iot.RoleAlias.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.RoleAlias.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.iot.Thing">
 <em class="property">class </em><code class="descclassname">pulumi_aws.iot.</code><code class="descname">Thing</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>attributes=None</em>, <em>name=None</em>, <em>thing_type_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Thing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT Thing.</p>
@@ -440,7 +517,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] properties</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.ThingType.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.ThingType.arn" title="Permalink to this definition">¶</a></dt>
@@ -510,27 +586,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the rule.</li>
+<li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the rule is enabled.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the rule.</li>
+<li><strong>sql</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (<a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference">http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference</a>) in the AWS IoT Developer Guide.</li>
+<li><strong>sql_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the SQL rules engine to use when evaluating the rule.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] cloudwatch_alarm
-:param pulumi.Input[dict] cloudwatch<em>metric
-:param pulumi.Input[str] description: The description of the rule.
-:param pulumi.Input[dict] dynamodb
-:param pulumi.Input[dict] elasticsearch
-:param pulumi.Input[bool] enabled: Specifies whether the rule is enabled.
-:param pulumi.Input[dict] firehose
-:param pulumi.Input[dict] kinesis
-:param pulumi.Input[dict] lambda</em>
-:param pulumi.Input[str] name: The name of the rule.
-:param pulumi.Input[dict] republish
-:param pulumi.Input[dict] s3
-:param pulumi.Input[dict] sns
-:param pulumi.Input[str] sql: The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (<a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference">http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference</a>) in the AWS IoT Developer Guide.
-:param pulumi.Input[str] sql_version: The version of the SQL rules engine to use when evaluating the rule.
-:param pulumi.Input[dict] sqs</p>
 <dl class="attribute">
 <dt id="pulumi_aws.iot.TopicRule.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.TopicRule.arn" title="Permalink to this definition">¶</a></dt>
@@ -609,7 +674,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.iot.get_endpoint">
-<code class="descclassname">pulumi_aws.iot.</code><code class="descname">get_endpoint</code><span class="sig-paren">(</span><em>endpoint_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.get_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.iot.</code><code class="descname">get_endpoint</code><span class="sig-paren">(</span><em>endpoint_type=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.get_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a unique endpoint specific to the AWS account making the call.</p>
 </dd></dl>
 

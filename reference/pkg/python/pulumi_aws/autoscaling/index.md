@@ -297,18 +297,16 @@ Note that if you suspend either the <code class="docutils literal notranslate"><
 <li><strong>target_group_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of <code class="docutils literal notranslate"><span class="pre">aws_alb_target_group</span></code> ARNs, for use with Application Load Balancing.</li>
 <li><strong>termination_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are <code class="docutils literal notranslate"><span class="pre">OldestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestInstance</span></code>, <code class="docutils literal notranslate"><span class="pre">OldestLaunchConfiguration</span></code>, <code class="docutils literal notranslate"><span class="pre">ClosestToNextInstanceHour</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code>.</li>
 <li><strong>vpc_zone_identifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of subnet IDs to launch resources in.</li>
+<li><strong>wait_for_elb_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Setting this will cause Terraform to wait
+for exactly this number of healthy instances in all attached load balancers
+on both create and update operations. (Takes precedence over
+<code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
+(See also Waiting for Capacity below.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] wait_for_capacity_timeout
-:param pulumi.Input[int] wait_for_elb_capacity: Setting this will cause Terraform to wait</p>
-<blockquote>
-<div>for exactly this number of healthy instances in all attached load balancers
-on both create and update operations. (Takes precedence over
-<code class="docutils literal notranslate"><span class="pre">min_elb_capacity</span></code> behavior.)
-(See also Waiting for Capacity below.)</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Group.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Group.arn" title="Permalink to this definition">¶</a></dt>
@@ -782,21 +780,18 @@ or <a class="reference external" href="https://docs.aws.amazon.com/AutoScaling/l
 <li><strong>cooldown</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.</li>
 <li><strong>estimated_instance_warmup</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group’s specified cooldown period.</li>
 <li><strong>metric_aggregation_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The aggregation type for the policy’s metrics. Valid values are “Minimum”, “Maximum”, and “Average”. Without a value, AWS will treat the aggregation type as “Average”.</li>
+<li><strong>min_adjustment_step</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Use <code class="docutils literal notranslate"><span class="pre">min_adjustment_magnitude</span></code> instead.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the dimension.</li>
+<li><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy type, either “SimpleScaling”, “StepScaling” or “TargetTrackingScaling”. If this value isn’t provided, AWS will default to “SimpleScaling.”</li>
+<li><strong>scaling_adjustment</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of members by which to
+scale, when the adjustment bounds are breached. A positive value scales
+up. A negative value scales down.</li>
+<li><strong>target_tracking_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A target tracking policy. These have the following structure:</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] min_adjustment_magnitude
-:param pulumi.Input[int] min_adjustment_step: Use <code class="docutils literal notranslate"><span class="pre">min_adjustment_magnitude</span></code> instead.
-:param pulumi.Input[str] name: The name of the dimension.
-:param pulumi.Input[str] policy_type: The policy type, either “SimpleScaling”, “StepScaling” or “TargetTrackingScaling”. If this value isn’t provided, AWS will default to “SimpleScaling.”
-:param pulumi.Input[int] scaling_adjustment: The number of members by which to</p>
-<blockquote>
-<div>scale, when the adjustment bounds are breached. A positive value scales
-up. A negative value scales down.</div></blockquote>
-<p>:param pulumi.Input[list] step_adjustments
-:param pulumi.Input[dict] target_tracking_configuration: A target tracking policy. These have the following structure:</p>
 <dl class="attribute">
 <dt id="pulumi_aws.autoscaling.Policy.adjustment_type">
 <code class="descname">adjustment_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.autoscaling.Policy.adjustment_type" title="Permalink to this definition">¶</a></dt>
@@ -1033,7 +1028,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.autoscaling.get_group">
-<code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.get_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.autoscaling.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.autoscaling.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information on an existing autoscaling group.</p>
 </dd></dl>
 

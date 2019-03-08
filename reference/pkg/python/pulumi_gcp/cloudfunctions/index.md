@@ -283,7 +283,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_gcp.cloudfunctions.get_function">
-<code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">get_function</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.get_function" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.cloudfunctions.</code><code class="descname">get_function</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.get_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information about a Google Cloud Function. For more information see
 the <a class="reference external" href="https://cloud.google.com/functions/docs/">official documentation</a>
 and <a class="reference external" href="https://cloud.google.com/functions/docs/apis">API</a>.</p>

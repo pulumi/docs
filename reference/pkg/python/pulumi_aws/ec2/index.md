@@ -1115,17 +1115,15 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 egress rule. Each egress block supports fields documented below.</li>
 <li><strong>ingress</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID. <strong>Note that changing
+the ``vpc_id`` will *not* restore any default security group rules that were
+modified, added, or removed.</strong> It will be left in its current state</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[bool] revoke_rules_on_delete
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] vpc_id: The VPC ID. <a href="#id2"><span class="problematic" id="id3">**</span></a>Note that changing</p>
-<blockquote>
-<div>the <code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> will <em>not</em> restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultSecurityGroup.egress">
 <code class="descname">egress</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultSecurityGroup.egress" title="Permalink to this definition">¶</a></dt>
@@ -1221,21 +1219,12 @@ into management.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>map_public_ip_on_launch</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specify true to indicate
+that instances launched into the subnet should be assigned
+a public IP address.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] availability_zone
-:param pulumi.Input[bool] map_public_ip_on_launch: Specify true to indicate</p>
-<blockquote>
-<div>that instances launched into the subnet should be assigned
-a public IP address.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</td>
 </tr>
 </tbody>
 </table>
@@ -1338,15 +1327,14 @@ into management.</p>
 <li><strong>enable_classiclink</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable ClassicLink
 for the VPC. Only valid in regions and accounts that support EC2 Classic.
 See the [ClassicLink documentation][1] for more information. Defaults false.</li>
+<li><strong>enable_dns_hostnames</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.</li>
+<li><strong>enable_dns_support</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean flag to enable/disable DNS support in the VPC. Defaults true.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[bool] enable_classiclink_dns_support
-:param pulumi.Input[bool] enable_dns_hostnames: A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-:param pulumi.Input[bool] enable_dns_support: A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.DefaultVpc.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.DefaultVpc.arn" title="Permalink to this definition">¶</a></dt>
@@ -3273,25 +3261,13 @@ instance. Amazon defaults this to <code class="docutils literal notranslate"><sp
 <code class="docutils literal notranslate"><span class="pre">terminate</span></code> for instance-store instances. Cannot be set on instance-store
 instances. See <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior">Shutdown Behavior</a> for more information.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] ipv6_address_count
-:param pulumi.Input[list] ipv6_addresses: Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-:param pulumi.Input[str] key_name: The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.
-:param pulumi.Input[bool] monitoring: If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
-:param pulumi.Input[list] network_interfaces: Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
-:param pulumi.Input[str] placement_group: The Placement Group to start the instance in.
-:param pulumi.Input[str] private_ip: Private IP address to associate with the</p>
-<blockquote>
-<div>instance in a VPC.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ipv6_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</li>
+<li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.</li>
+<li><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)</li>
+<li><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.</li>
+<li><strong>placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Placement Group to start the instance in.</li>
+<li><strong>private_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Private IP address to associate with the
+instance in a VPC.</li>
 <li><strong>root_block_device</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Customize details about the root block
 device of the instance. See Block Devices below for details.</li>
 <li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.</li>
@@ -4742,18 +4718,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Block to define the attachment of the ENI. Documented below.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the network interface.</li>
+<li><strong>private_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of private IPs to assign to the ENI.</li>
+<li><strong>private_ips_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of private IPs to assign to the ENI.</li>
+<li><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of security group IDs to assign to the ENI.</li>
+<li><strong>source_dest_check</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable source destination checking for the ENI. Default true.</li>
+<li><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet ID to create the ENI in.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] private_ip
-:param pulumi.Input[list] private_ips: List of private IPs to assign to the ENI.
-:param pulumi.Input[int] private_ips_count: Number of private IPs to assign to the ENI.
-:param pulumi.Input[list] security_groups: List of security group IDs to assign to the ENI.
-:param pulumi.Input[bool] source_dest_check: Whether to enable source destination checking for the ENI. Default true.
-:param pulumi.Input[str] subnet_id: Subnet ID to create the ENI in.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.NetworkInterface.attachments">
 <code class="descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.NetworkInterface.attachments" title="Permalink to this definition">¶</a></dt>
@@ -6309,22 +6284,10 @@ instances. See <a class="reference external" href="https://docs.aws.amazon.com/A
 </li>
 <li><strong>instance_interruption_behaviour</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates whether a Spot instance stops or terminates when it is interrupted. Default is <code class="docutils literal notranslate"><span class="pre">terminate</span></code> as this is the current AWS behaviour.</li>
 <li><strong>instance_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[int] ipv6_address_count
-:param pulumi.Input[list] ipv6_addresses: Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-:param pulumi.Input[str] key_name: The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.
-:param pulumi.Input[str] launch_group: A launch group is a group of spot instances that launch together and terminate together.</p>
-<blockquote>
-<div>If left empty instances are launched and terminated individually.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ipv6_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface</li>
+<li><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key name of the Key Pair to use for the instance; which can be managed using the <code class="docutils literal notranslate"><span class="pre">aws_key_pair</span></code> resource.</li>
+<li><strong>launch_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A launch group is a group of spot instances that launch together and terminate together.
+If left empty instances are launched and terminated individually.</li>
 <li><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)</li>
 <li><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.</li>
 <li><strong>placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Placement Group to start the instance in.</li>
@@ -8269,22 +8232,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>customer_gateway_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The configuration information for the VPN connection’s customer gateway (in the native XML format).</li>
 <li><strong>customer_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the customer gateway.</li>
+<li><strong>static_routes_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don’t support BGP.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Tags to apply to the connection.</li>
+<li><strong>transit_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the EC2 Transit Gateway.</li>
+<li><strong>tunnel1_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the inside IP addresses for the first VPN tunnel.</li>
+<li><strong>tunnel1_preshared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preshared key of the first VPN tunnel.</li>
+<li><strong>tunnel2_inside_cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block of the second IP addresses for the first VPN tunnel.</li>
+<li><strong>tunnel2_preshared_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The preshared key of the second VPN tunnel.</li>
+<li><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of VPN connection. The only type AWS supports at this time is “ipsec.1”.</li>
+<li><strong>vpn_gateway_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Virtual Private Gateway.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[list] routes
-:param pulumi.Input[bool] static_routes_only: Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don’t support BGP.
-:param pulumi.Input[dict] tags: Tags to apply to the connection.
-:param pulumi.Input[str] transit_gateway_id: The ID of the EC2 Transit Gateway.
-:param pulumi.Input[str] tunnel1_inside_cidr: The CIDR block of the inside IP addresses for the first VPN tunnel.
-:param pulumi.Input[str] tunnel1_preshared_key: The preshared key of the first VPN tunnel.
-:param pulumi.Input[str] tunnel2_inside_cidr: The CIDR block of the second IP addresses for the first VPN tunnel.
-:param pulumi.Input[str] tunnel2_preshared_key: The preshared key of the second VPN tunnel.
-:param pulumi.Input[str] type: The type of VPN connection. The only type AWS supports at this time is “ipsec.1”.
-:param pulumi.Input[list] vgw_telemetries
-:param pulumi.Input[str] vpn_gateway_id: The ID of the Virtual Private Gateway.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.VpnConnection.customer_gateway_configuration">
 <code class="descname">customer_gateway_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.VpnConnection.customer_gateway_configuration" title="Permalink to this definition">¶</a></dt>
@@ -8756,14 +8717,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_instance">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>filters=None</em>, <em>get_password_data=None</em>, <em>instance_id=None</em>, <em>instance_tags=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instance</code><span class="sig-paren">(</span><em>filters=None</em>, <em>get_password_data=None</em>, <em>instance_id=None</em>, <em>instance_tags=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_instances">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instances</code><span class="sig-paren">(</span><em>filters=None</em>, <em>instance_state_names=None</em>, <em>instance_tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instances" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_instances</code><span class="sig-paren">(</span><em>filters=None</em>, <em>instance_state_names=None</em>, <em>instance_tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
 e.g. to allow easier migration from another management solution
 or to make it easier for an operator to connect through bastion host(s).</p>
@@ -8780,37 +8741,37 @@ and you’d need to re-run <code class="docutils literal notranslate"><span clas
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_internet_gateway">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_internet_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>internet_gateway_id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_internet_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>internet_gateway_id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_internet_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_internet_gateway</span></code> provides details about a specific Internet Gateway.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_launch_configuration">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_launch_configuration</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_configuration" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_launch_configuration</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Configuration.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_launch_template">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_launch_template</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_template" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_launch_template</code><span class="sig-paren">(</span><em>name=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_launch_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Launch Template.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_nat_gateway">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_nat_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_nat_gateway" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_nat_gateway</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_nat_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific Nat Gateway.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_network_interface">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_network_interface</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interface" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_network_interface</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Network Interface.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route</code><span class="sig-paren">(</span><em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route</code><span class="sig-paren">(</span><em>destination_cidr_block=None</em>, <em>destination_ipv6_cidr_block=None</em>, <em>egress_only_gateway_id=None</em>, <em>gateway_id=None</em>, <em>instance_id=None</em>, <em>nat_gateway_id=None</em>, <em>network_interface_id=None</em>, <em>route_table_id=None</em>, <em>transit_gateway_id=None</em>, <em>vpc_peering_connection_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route</span></code> provides details about a specific Route.</p>
 <p>This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
@@ -8819,7 +8780,7 @@ connection associated with a CIDR value.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route_table">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route_table</code><span class="sig-paren">(</span><em>filters=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_table" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route_table</code><span class="sig-paren">(</span><em>filters=None</em>, <em>route_table_id=None</em>, <em>subnet_id=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_table" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_route_table</span></code> provides details about a specific Route Table.</p>
 <p>This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
@@ -8828,13 +8789,13 @@ the Route Table.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_route_tables">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route_tables</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_tables" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_route_tables</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_route_tables" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of route table ids to be referenced elsewhere.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_security_group">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_group</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_group</code><span class="sig-paren">(</span><em>filters=None</em>, <em>id=None</em>, <em>name=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_group" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_security_group</span></code> provides details about a specific Security Group.</p>
 <p>This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
@@ -8843,14 +8804,14 @@ VPC that the security group belongs to.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_security_groups">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_groups</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_security_groups</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get IDs and VPC membership of Security Groups that are created
 outside of Terraform.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_subnet">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>default_for_az=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ipv6_cidr_block=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>availability_zone=None</em>, <em>availability_zone_id=None</em>, <em>cidr_block=None</em>, <em>default_for_az=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>ipv6_cidr_block=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_subnet</span></code> provides details about a specific VPC subnet.</p>
 <p>This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
@@ -8859,14 +8820,14 @@ VPC that the subnet belongs to.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_subnet_ids">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_subnet_ids</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_subnet_ids</span></code> provides a list of ids for a vpc_id</p>
 <p>This resource can be useful for getting back a list of subnet ids for a vpc.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc</code><span class="sig-paren">(</span><em>cidr_block=None</em>, <em>default=None</em>, <em>dhcp_options_id=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc</code><span class="sig-paren">(</span><em>cidr_block=None</em>, <em>default=None</em>, <em>dhcp_options_id=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">aws_vpc</span></code> provides details about a specific VPC.</p>
 <p>This resource can prove useful when a module accepts a vpc id as
 an input variable and needs to, for example, determine the CIDR block of that
@@ -8875,41 +8836,41 @@ VPC.</p>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_dhcp_options">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_dhcp_options</code><span class="sig-paren">(</span><em>dhcp_options_id=None</em>, <em>filters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_dhcp_options" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_dhcp_options</code><span class="sig-paren">(</span><em>dhcp_options_id=None</em>, <em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_dhcp_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about an EC2 DHCP Options configuration.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_endpoint">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em>id=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint</code><span class="sig-paren">(</span><em>id=None</em>, <em>service_name=None</em>, <em>state=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint data source provides details about
 a specific VPC endpoint.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_endpoint_service">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em>service=None</em>, <em>service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_endpoint_service</code><span class="sig-paren">(</span><em>service=None</em>, <em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_endpoint_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpc_peering_connection">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em>cidr_block=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>peer_cidr_block=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpc_peering_connection</code><span class="sig-paren">(</span><em>cidr_block=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>owner_id=None</em>, <em>peer_cidr_block=None</em>, <em>peer_owner_id=None</em>, <em>peer_region=None</em>, <em>peer_vpc_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>vpc_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpc_peering_connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPC Peering Connection data source provides details about
 a specific VPC peering connection.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpcs">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpcs</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpcs</code><span class="sig-paren">(</span><em>filters=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpcs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource can be useful for getting back a list of VPC Ids for a region.</p>
 <p>The following example retrieves a list of VPC Ids with a custom tag of <code class="docutils literal notranslate"><span class="pre">service</span></code> set to a value of “production”.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_aws.ec2.get_vpn_gateway">
-<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpn_gateway</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>attached_vpc_id=None</em>, <em>availability_zone=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.ec2.</code><code class="descname">get_vpn_gateway</code><span class="sig-paren">(</span><em>amazon_side_asn=None</em>, <em>attached_vpc_id=None</em>, <em>availability_zone=None</em>, <em>filters=None</em>, <em>id=None</em>, <em>state=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.get_vpn_gateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>The VPN Gateway data source provides details about
 a specific VPN gateway.</p>
 </dd></dl>
