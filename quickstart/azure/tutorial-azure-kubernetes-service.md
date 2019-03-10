@@ -6,11 +6,11 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
 {% include azure-aks-prereqs.md %}
 
-## Create a new EKS cluster {#new-aks-cluster}
+## Create a new AKS cluster {#new-aks-cluster}
 
 1.  In a new folder `aks-hello-world`, create an empty project with `pulumi new`.
 
-    This will create a base Pulumi program in TypeScript, and is great
+    This will create a base Pulumi program in Python, and is great
     recommendation to begin your journey.
 
     ```bash
@@ -216,6 +216,91 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     Resources:
         + 11 to create
     ```
+
+## Access the Kubernetes Cluster using Pulumi Providers
+
+Now that we have an instance of Kubernetes running, we may want to create API resources in Kubernetes to manage our workloads through Pulumi.
+
+We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are indendent of their underyling cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
+
+1.  Create a new Kubernetes Namespace and Deployment:
+
+	This declares a new Kubernetes Namespace, Deployment and Service to be
+	created using the Pulumi Kubernetes provider to our cluster.
+
+    Open the existing file `__main__.py`, and append the following:
+
+    ```python
+    from pulumi_kubernetes.apps.v1 import Deployment
+    from pulumi_kubernetes.core.v1 import Service
+
+    name = 'replaceme'
+
+    # Create a Kubernetes Namespace
+    namespace = Namespace(name,
+        metadata={},
+        __opts__=ResourceOptions(provider=custom_provider)
+    )
+
+    # Create a NGINX Deployment
+    appLabels = { "appClass": name }
+    deployment = Deployment(name,
+                metadata={
+                    "labels": appLabels
+                },
+                spec={
+                    "selector": {
+                        "match_labels": appLabels
+                    },
+                    "replicas": 1,
+                    "template": {
+                        "metadata": {
+                            "labels": appLabels
+                        },
+                        "spec": {
+                            "containers": [
+                                {
+                                    "name": name,
+                                    "image": "nginx",
+                                    "ports": [
+                                        {
+                                            "name": "http",
+                                            "containerPort": 80
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                __opts__=ResourceOptions(provider=custom_provider)
+                )
+
+    # Create nginx service
+    service = Service(name,
+        metadata={
+            "labels": appLabels
+        },
+        spec={
+            "ports": [
+                {
+                    "name": "http",
+                    "port": 80
+                }
+            ],
+            "selector": appLabels,
+            "type": "LoadBalancer",
+        },
+        __opts__=ResourceOptions(provider=custom_provider)
+    )
+
+    pulumi.export('namespace_name', namespace.metadata.apply(lambda resource: resource['name']))
+    pulumi.export('deployment_name', deployment.metadata.apply(lambda resource: resource['name']))
+    pulumi.export('service_name', service.metadata.apply(lambda resource: resource['name']))
+    pulumi.export('service_public_endpoint', service.status.apply(lambda status: status['load_balancer']['ingress'][0]['ip']))
+    ```
+
+    If you visit the ip address listed in `service_public_endpoint` you should land on the NGINX welcome page. Note, that it may take a minute or so for the LoadBalancer to become active on Azure.
 
 ## Access the Kubernetes Cluster using `kubectl`
 
