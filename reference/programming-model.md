@@ -224,7 +224,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 ```python
 certificate = aws.acm.Certificate("cert",
   domainName: "example.com",
-  validationMethod: "DNS",
+  validation_method="DNS",
   
 record = aws.route53.Record("validation",
   # Need to pass along a deep subproperty of this Output
