@@ -240,7 +240,7 @@ record = aws.route53.Record("validation",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-To make this kind of property and array-element access more simple, `Outputs` 'lift' the properties of the values they wrap to themselves as well.  For example, if the wrapped property contains a value `prop: string`, then the `Output` wrapping that has a property `prop: Output<string>`.  This 'lifting' is just shorthand for writing out the full `.apply` call.  In other words, an expression of the form `someOutput.someProp` is equivalent to `someOutput.apply(o => o.someProp)`.  Similarly, `someOutput[val]` is equivalent to writing `someOutput.apply(o => o[val])` (with the right syntax for each respective language).  Given this, the above examples can be rewritten into:
+To make this kind of property and array-element access more simple, `Outputs` 'lift' the properties of the values they wrap allowing you to access them directly off of the `Output`.  This allows the above to be more simply written as:
 
 {% include langchoose.html %}
 
