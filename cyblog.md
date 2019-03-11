@@ -1,6 +1,6 @@
 ### Simplified Outputs in Pulumi 0.17.0
 
-The `Output<T>` type is used an enormous amount in any Pulumi application.  It is the way that Resources expose their values, and it is commonly used to pass values from one Resource to another.  Importantly `Outputs` are a key part of how Pulumi tracks dependencies between resources.  In fact, Outputs are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
+The `Output<T>` type is used an enormous amount in any Pulumi application.  It is the way that Resources expose their values and it is commonly used to pass values from one Resource to another.  Importantly, `Outputs` are a key part of how Pulumi tracks dependencies between resources.  In fact, Outputs are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
 
 In 0.17.0 of the `@pulumi/pulumi` package, we've made a very common pattern for working with Outputs much simpler.  Prior to this release of  `@pulumi/pulumi` package, it wasn't uncommon to find yourself having to write code like the following:
 
