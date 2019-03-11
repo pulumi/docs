@@ -52,5 +52,20 @@ That's a lot nicer than before!  The following improvements happened:
 
 Importantly, no information has been lost here.  The exact same dependency information flows along here like it did before.  And, thanks to TypeScript's flexible type system, the above it totally typesafe and will let you know the right types of things and will still error if you happen to make mistakes.
 
-So, how was this done?  
+So, how was this done?  Well, the core part of the change is thanks to a little-known feature of JavaScript: (Proxies)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy].
 
+Proxies allow you to return objects where you can control many facets of how JavaScript works at runtime.  There are many things a Proxy lets you control, however for our needs the most important bit was that it allows you to override how member-lookup works.  In other words, when you write `someProxy.someMember` you get a chance to determine what should happen an what `someMember` should actually return!  With that flexible interception point available, we actually took our core `Output` type and made it into a `Proxy`.  We then added the right interception code so that if you ever write `someOutput.someMember` that that gets translated exactly into `someOutput.apply(o => o.someMember)`.   his also works just fine for array-accesses (which are just property-lookups from JavaScript's perspective).  In other words, at runtime, the member-lookup form and the `.apply` form will be equivalent (except that the former is so much nicer to write!).  This is why, for example, `certCertificate.domainValidationOptions[0].resourceRecordValue` will have the correct value (with all the right dependency information).  At runtime it really will be equivalent to the original `certCertificate.apply(certCertificate => certCertificate.domainValidationOptions[0].resourceRecordValue)` form.
+
+Now, while this was fairly easy to get working at runtime from a JavaScript perspective, it was a little more challenging to figure out how to make this work in TypeScript's typing system.  For example, if you had a value like so:
+
+```ts
+const cert: Output<{ domainValidationOptions: pulumi.Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }[]> }>;
+const firstOption: Output<{ domainName: string, resourceRecordName: string, resourceRecordType: string, resourceRecordValue: string }> = cert[0];
+const domainName = firstOption.domainName;
+```
+
+Then how do you let TypeScript know that `cert` should have a property on it called `domainValidationOptions`?  And how can it know that `domainValidationOptions` can be indexed into?  And how would it know that once indexed, that Output would have a `domainName` property?  Clearly, these are all `Outputs`.  Yet, each `Output<...>` has a different set of properties exposed off of it!
+
+To do this required taking advantage of some very interesting and advanced parts of TypeScript's type system.  If this is a part of TypeScript that interests you, or you just want to see how we did this, you can dive in deep into the source (here)[https://github.com/pulumi/pulumi/blob/7d7e104ee3184d1244ea3517ab5cae5f52170dba/sdk/nodejs/output.ts#L624-L631]!  And, if you want to see how we did the actual runtime Proxy work, that code is self-contained (https://github.com/pulumi/pulumi/blob/7d7e104ee3184d1244ea3517ab5cae5f52170dba/sdk/nodejs/output.ts#L220-L282)[here].
+
+We definitely hope these changes to `@pulumi/pulumi` in 0.17.0 will make the programming experience more pleasant and much less clunky.  And, if you've ever wanted to do some fancy tricks like what we're doing here, these updates can show you how you too can do approach some of these advanced techniques for both JavaScript and TypeScript!
