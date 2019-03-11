@@ -195,7 +195,7 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 ##### Accessing properties of an Output {#lifting}
 
-It is common to need to only access some subproperty of an `Output` in order to pass in that subproperty to another `Resource`.  For example, when using ACM certificates one might write:
+It is common to need to only access some property of an `Output's` value in order to pass in that property to another `Resource`.  For example, when using ACM certificates one might write:
 
 {% include langchoose.html %}
 
