@@ -161,7 +161,7 @@ In fact, `Output`s are similar to promises/futures that you may be familiar with
 
 The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.  
 
-#### Apply {#apply}
+##### Apply {#apply}
 
 To transform an output into a new value, use the [`apply` method](pkg/nodejs/@pulumi/pulumi/#property-apply). For example, use the following to create an HTTPS URL from the DNS name of a virtual machine: 
 
@@ -189,9 +189,99 @@ url := virtualmachine.DnsName().Apply(func(dnsName string) (interface{}, error) 
 
 The `apply` method accepts a callback which will be passed the value of the `Output` when it is available, and which returns the new value.  The result of the call to `apply` is a new `Output` whose value is the value returned from the callback, and which includes the dependencies of the original `Output`.  If the callback itself returns an `Output`, the dependencies of that output are unioned into the dependencies of the returned `Output`.
 
-> Note: The `Output` itself cannot be used directly in string concatenation or other operations, as it is not itself the value of the output.  To transform the value of the output (when it becomes available), the `apply` method should be used instead.
+> Note: The `Output` itself cannot be used directly in string concatenation or other operations, as it is not itself the value of the output.  To transform the value of the output (when it becomes available), the `apply` method should be used instead.  
 
-#### All {#all}
+`.apply` is the most general way to transform one `Output` into another.  However, several common types of transoformations can be done more conveinently.  See (Accessing properties of an Output)[#lifting] and (Working with Outputs and strings)[#ouputs-and-strings] for examples of this.
+
+##### Accessing properties of an Output {#lifting}
+
+It is common to need to only access some subproperty of an `Output` in order to pass in that subproperty to another `Resource`.  For example, when using ACM certificates one would need to write:
+
+{% include langchoose.html %}
+
+```javascript
+let certCertificate = new aws.acm.Certificate("cert", {
+  domainName: "example.com",
+  validationMethod: "DNS",
+});
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
+  ...
+```
+
+```typescript
+let certCertificate = new aws.acm.Certificate("cert", {
+  domainName: "example.com",
+  validationMethod: "DNS",
+});
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
+  ...
+```
+
+```python
+certificate = aws.acm.Certificate("cert",
+  domainName: "example.com",
+  validationMethod: "DNS",
+  
+record = aws.route53.Record("validation",
+  records: [certificate.domain_validation_options.apply(
+      lambda domain_validation_options => domain_validation_options[0].resource_record_value
+  )],
+  ...
+```
+
+```go
+// Helpers for accessing properties are not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+To make this kind of property and array-element access more simple, `Outputs` 'lift' the properties of the values they wrap to themselves as well.  For example, if the wrapped property contains a value `prop: string`, then the `Output` wrapping that has a property `prop: Output<string>`.  This 'lifting' is just shorthand for writing out the full `.apply` call.  In other words, an expression of the form `someOutput.someProp` is equivalent to `someOutput.apply(o => o.someProp)`.  Similarly, `someOutput[val]` is equivalent to writing `someOutput.apply(o => o[val])` (with the right syntax for each respective language).  Given this, the above examples can be rewritten into:
+
+{% include langchoose.html %}
+
+```javascript
+let certCertificate = new aws.acm.Certificate("cert", {
+  domainName: "example.com",
+  validationMethod: "DNS",
+});
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
+  ...
+```
+
+```typescript
+let certCertificate = new aws.acm.Certificate("cert", {
+  domainName: "example.com",
+  validationMethod: "DNS",
+});
+let certValidation = new aws.route53.Record("cert_validation", {
+  records: [certCertificate.domainValidationOptions[0].resourceRecordValue],
+  ...
+```
+
+```python
+certificate = aws.acm.Certificate("cert",
+  domainName: "example.com",
+  validationMethod: "DNS",
+  
+record = aws.route53.Record("validation",
+  records: [certificate.domain_validation_options[0].resource_record_value],
+  ...
+```
+
+```go
+// Helpers for accessing properties are not yet available in Go.
+// 
+// See https://github.com/pulumi/pulumi/issues/1614.
+```
+
+This greatly helps the clarity of the final code, while not losing any important dependency information that is needed for properly creating and maintaining the stack.
+
+
+
+##### All {#all}
 
 To combine multiple `Output`s into a transformed value, use [pulumi.all].  This allows a new value to be constructed from several inputs, such as concatenating outputs from two different resources together, or constructing a policy document using information from several other resources.
 
@@ -220,7 +310,7 @@ connection_string = Output.all(sql_server.name, database.name) \
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-#### Convert Input to Output {#frominput}
+##### Convert Input to Output {#frominput}
 
 To turn an `Input` into an `Output`, use [pulumi.output].  This can be useful when you want to transform an input value that could either be a raw value or an `Output`:
 
@@ -253,7 +343,7 @@ def split(input):
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-#### Working with Outputs and strings {#ouputs-and-strings}
+##### Working with Outputs and strings {#ouputs-and-strings}
 
 It's very common want to build a string to use out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input) to another Resource.  For example, say you had the following:
 
