@@ -280,7 +280,7 @@ record = aws.route53.Record("validation",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-This greatly helps the clarity of the final code, while not losing any important dependency information that is needed for properly creating and maintaining the stack.
+This helps the clarity of the final code, while not losing any important dependency information that is needed for properly creating and maintaining the stack.
 
 ##### All {#all}
 
