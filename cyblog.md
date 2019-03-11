@@ -52,9 +52,9 @@ const certValidation = new aws.route53.Record("cert_validation", {
 That's a lot nicer than before!  The following improvements happened:
 1. there's no more lambda!
 2. there's no need for a repetive lambda parameter (which might conflict with some other name in scope).
-3. the code *is* just pure simple *idiomatic* JavaScript/TypeScript that clearly conveys its intent
+3. the code *is* just pure simple *idiomatic* JavaScript/TypeScript that clearly conveys its intent.
 
-Importantly, no information has been lost here.  The exact same dependency information flows along here like it did before.  And, thanks to TypeScript's flexible type system, the above it totally typesafe and will let you know the right types of things and will still error if you happen to make mistakes.
+Importantly, no information has been lost here.  The exact same dependency information flows along here like it did before.  And, thanks to TypeScript's flexible type system, the above is totally typesafe and will let you know the right types of things and will still error if you happen to make mistakes.
 
 So, how was this done?  Well, the core part of the change is thanks to a little-known feature of JavaScript: (Proxies)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy].
 
