@@ -194,7 +194,7 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 ##### Accessing properties of an Output {#lifting}
 
-It is common to need to only access some property of an `Output's` value in order to pass in that property to another `Resource`.  For example, when using ACM certificates one might write:
+It is common to need to only access some property of the value of an `Output` in order to pass in that property to another `Resource`.  For example, when using ACM certificates one might write:
 
 {% include langchoose.html %}
 
@@ -239,7 +239,7 @@ record = aws.route53.Record("validation",
 // See https://github.com/pulumi/pulumi/issues/1614.
 ```
 
-To make this kind of property and array-element access more simple, `Outputs` 'lift' the properties of the values they wrap allowing you to access them directly off of the `Output`.  This allows the above to be more simply written as:
+To make this kind of property and array-element access more simple, an `Output` 'lifts' the properties of the value that is wrapped, allowing you to access them directly off of the `Output` itself.  This allows the above to be more simply written as:
 
 {% include langchoose.html %}
 
