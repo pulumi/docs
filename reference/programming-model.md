@@ -195,7 +195,7 @@ The `apply` method accepts a callback which will be passed the value of the `Out
 
 ##### Accessing properties of an Output {#lifting}
 
-It is common to need to only access some subproperty of an `Output` in order to pass in that subproperty to another `Resource`.  For example, when using ACM certificates one would need to write:
+It is common to need to only access some subproperty of an `Output` in order to pass in that subproperty to another `Resource`.  For example, when using ACM certificates one might write:
 
 {% include langchoose.html %}
 
@@ -205,6 +205,7 @@ let certCertificate = new aws.acm.Certificate("cert", {
   validationMethod: "DNS",
 });
 let certValidation = new aws.route53.Record("cert_validation", {
+  // Need to pass along this Output's deep subproperty
   records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
   ...
 ```
@@ -215,6 +216,7 @@ let certCertificate = new aws.acm.Certificate("cert", {
   validationMethod: "DNS",
 });
 let certValidation = new aws.route53.Record("cert_validation", {
+  // Need to pass along this Output's deep subproperty
   records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
   ...
 ```
@@ -225,6 +227,7 @@ certificate = aws.acm.Certificate("cert",
   validationMethod: "DNS",
   
 record = aws.route53.Record("validation",
+  #Need to pass along this Output's deep subproperty
   records: [certificate.domain_validation_options.apply(
       lambda domain_validation_options => domain_validation_options[0].resource_record_value
   )],
