@@ -205,7 +205,7 @@ let certCertificate = new aws.acm.Certificate("cert", {
   validationMethod: "DNS",
 });
 let certValidation = new aws.route53.Record("cert_validation", {
-  // Need to pass along this Output's deep subproperty
+  // Need to pass along a deep subproperty of this Output
   records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
   ...
 ```
@@ -216,7 +216,7 @@ let certCertificate = new aws.acm.Certificate("cert", {
   validationMethod: "DNS",
 });
 let certValidation = new aws.route53.Record("cert_validation", {
-  // Need to pass along this Output's deep subproperty
+  // Need to pass along a deep subproperty of this Output
   records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
   ...
 ```
@@ -227,7 +227,7 @@ certificate = aws.acm.Certificate("cert",
   validationMethod: "DNS",
   
 record = aws.route53.Record("validation",
-  #Need to pass along this Output's deep subproperty
+  # Need to pass along a deep subproperty of this Output
   records: [certificate.domain_validation_options.apply(
       lambda domain_validation_options => domain_validation_options[0].resource_record_value
   )],
