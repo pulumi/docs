@@ -229,7 +229,7 @@ certificate = aws.acm.Certificate("cert",
 record = aws.route53.Record("validation",
   # Need to pass along a deep subproperty of this Output
   records: [certificate.domain_validation_options.apply(
-      lambda domain_validation_options => domain_validation_options[0].resource_record_value
+      lambda domain_validation_options: domain_validation_options[0].resource_record_value
   )],
   ...
 ```
