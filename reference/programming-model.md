@@ -270,7 +270,7 @@ certificate = aws.acm.Certificate("cert",
   validation_method="DNS",
   
 record = aws.route53.Record("validation",
-  records: [certificate.domain_validation_options[0].resource_record_value],
+  records=[certificate.domain_validation_options[0].resource_record_value],
   ...
 ```
 
