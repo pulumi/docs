@@ -34,7 +34,7 @@ In particular, creating the `aws.route53.Record` involves a fair amount of compl
 
 Yikes!  This is so verbose, it doesn't even fit on the width of the page!
 
-The idea of the `.apply` function is similar to `Promise.then`.  It allows one to pass a piece of code that will be applied to the underlying value, and will return an `Output` that then points to the transformed underlying value.  Importantly, the new `Output` will still track dependency information properly.  In the above example the `aws.route53.Record` will know that it both depends on `certCertificate` and on `zone`, even though neither of those resources (or their direct Outputs) are passed directly do the constructor.  
+The idea of the `.apply` function is similar to `Promise.then`.  It allows one to pass a piece of code that will be applied to the underlying value and will return an `Output` that then points to the transformed underlying value.  Importantly, the new `Output` will still track dependency information properly.  In the above example the `aws.route53.Record` will know that it both depends on `certCertificate` and on `zone`, even though neither of those resources (or their direct Outputs) are passed directly do the constructor.  
 
 Unfortunately, while `.apply` gives a lot of power and flexibility, it is also somewhat verbose and clunky for describing such a simple concept.  Fortunately, we found a way to improve the situation greatly.  This realization came about from great work done in our Python package.  First, before diving into the low level details, let's first see what the above code would now look like in 0.17.0:
 
