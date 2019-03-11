@@ -23,7 +23,7 @@ const certValidation = new aws.route53.Record("cert_validation", {
 });
 ```
 
-In particular, creating the `aws.route53.Record` involve a fair amount of complexity with those arrow functions.  i.e.:
+In particular, creating the `aws.route53.Record` involves a fair amount of complexity with those arrow functions.  i.e.:
 
 ```ts
     records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
