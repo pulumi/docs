@@ -9,10 +9,12 @@ const certCertificate = new aws.acm.Certificate("cert", {
     domainName: "example.com",
     validationMethod: "DNS",
 });
+
 const zone = pulumi.output(aws.route53.getZone({
     name: "example.com.",
     privateZone: false,
 }));
+
 const certValidation = new aws.route53.Record("cert_validation", {
     records: [certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordValue)],
     ttl: 60,
@@ -29,6 +31,8 @@ In particular, creating the `aws.route53.Record` involve a fair amount of comple
     type: certCertificate.domainValidationOptions.apply(domainValidationOptions => domainValidationOptions[0].resourceRecordType),
     zoneId: zone.apply(zone => zone.id),
 ```
+
+Yikes!  This is so verbose, it doesn't even fit on the width of the page!
 
 The idea of the `.apply` function is similar to `Promise.then`.  It allows one to pass a piece of code that will be applied to the underlying value, and will return an `Output` that then points to the transformed underlying value.  Importantly, the new `Output` will still track dependency information properly.  In the above example the `aws.route53.Record` will know that it both depends on `certCertificate` and on `zone`, even though neither of those resources (or their direct Outputs) are passed directly do the constructor.  
 
