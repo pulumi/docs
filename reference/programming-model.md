@@ -223,7 +223,7 @@ let certValidation = new aws.route53.Record("cert_validation", {
 
 ```python
 certificate = aws.acm.Certificate("cert",
-  domainName: "example.com",
+  domain_name="example.com",
   validation_method="DNS",
   
 record = aws.route53.Record("validation",
