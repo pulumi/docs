@@ -282,8 +282,6 @@ record = aws.route53.Record("validation",
 
 This greatly helps the clarity of the final code, while not losing any important dependency information that is needed for properly creating and maintaining the stack.
 
-
-
 ##### All {#all}
 
 To combine multiple `Output`s into a transformed value, use [pulumi.all].  This allows a new value to be constructed from several inputs, such as concatenating outputs from two different resources together, or constructing a policy document using information from several other resources.
