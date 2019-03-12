@@ -6,7 +6,10 @@ title: "Programming Model"
 
 ## Overview {#overview}
 
-In Pulumi, [resources](#resources) are defined by allocating resource objects in a [program](#programs), such as `new aws.ec2.Instance(...)`.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. To create dependencies between resources, just reference the [output properties](#outputs) of a resource. For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
+In Pulumi, [resources](#resources) are defined by allocating resource objects in a program.  For example, your program would contain a statement such as `new aws.ec2.Instance(...)` in order to create a new AWS EC2 instance.  The first argument passed to the resource constructor is its `name`, which must be unique within the Pulumi program. 
+
+Dependencies between resources are expressed in Pulumi by using the [output properties](#outputs) of one resource in the construction of another resource.  For example, this definition of an EC2 instance creates a dependency on a `SecurityGroup`:
+
 
 {% include langchoose.html %}
 
@@ -122,9 +125,10 @@ Optionally specify that replacements of the resource will delete the existing re
 
 ### Resource names {#names}
 
-Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in two ways:
+Every resource managed by Pulumi has a name.  This name is used to track the identity of a resource across multiple deployments of the same program.  The name that is specified when a resource is created is used in three ways:
 1. It is used as part of constructing the Universal Resource Name (URN) used by the Pulumi engine to track the resource across updates.
 2. Most resource providers will use it as a default prefix for constructing the cloud-provider name of the resource.
+3. Some CLI commands use the URN.
 
 #### URNs {#urns}
 
@@ -153,13 +157,15 @@ In cases where the two proprties above are not required, and where it would be u
 
 ## Outputs {#outputs}
 
-Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, they are represented using a special [`Output`][pulumi.Output] type which internally represents two things:
+Outputs are a key part of how Pulumi tracks dependencies between resources.  Because the values of Outputs are not available until resources are created, these are represented using the special [`Output`][pulumi.Output] type, which internally represents two things:
 1. An eventually available value of the output
 2. The dependency on the source(s) of the output value
 
-In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models but also carry along dependency information.
+In fact, `Output`s are similar to promises/futures that you may be familiar with from other programming models. Additionally, they carry along dependency information.
 
-The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output]. Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.
+The output properties of all resource objects in Pulumi have type [`Output`][pulumi.Output].
+
+Resource inputs have type [`Input`][pulumi.Input], which accepts either a raw value, a `Promise`, or an output from another resource. This allows dependencies to be inferred, including ensuring that resources are not created or updated until all their dependencies are available and up to date.
 
 ##### Apply {#apply}
 
