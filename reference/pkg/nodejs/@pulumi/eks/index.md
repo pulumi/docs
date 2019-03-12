@@ -75,7 +75,7 @@ requested.
 
 * `name` The _unique_ name of this component.
 * `args` The arguments for this cluster.
-* `opts` A bag of options that control this copmonent&#39;s behavior.
+* `opts` A bag of options that control this component&#39;s behavior.
 
 </div>
 <h3 class="pdoc-member-header" id="Cluster-createNodeGroup">
@@ -234,7 +234,7 @@ requested.
 
 * `name` The _unique_ name of this component.
 * `args` The arguments for this cluster.
-* `opts` A bag of options that control this copmonent&#39;s behavior.
+* `opts` A bag of options that control this component&#39;s behavior.
 
 </div>
 <h3 class="pdoc-member-header" id="NodeGroup-getProvider">
@@ -324,7 +324,7 @@ Create a new ServiceRole.
 
 * `name` The _unique_ name of this component.
 * `args` The arguments for this cluster.
-* `opts` A bag of options that control this copmonent&#39;s behavior.
+* `opts` A bag of options that control this component&#39;s behavior.
 
 </div>
 <h3 class="pdoc-member-header" id="ServiceRole-getProvider">
@@ -634,7 +634,7 @@ accessed as follows:
     $ kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}'
     $ kubectl -n kube-system describe secret <output from previous command>
 
-2. Start the kubectl proxt:
+2. Start the kubectl proxy:
 
     $ kubectl proxy
 
