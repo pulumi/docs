@@ -20,6 +20,10 @@
       "package_name": "pulumi_azure"
     },
     {
+      "name": "Pulumi Cloudflare",
+      "package_name": "pulumi_cloudflare"
+    },
+    {
       "name": "Pulumi GCP",
       "package_name": "pulumi_gcp"
     },

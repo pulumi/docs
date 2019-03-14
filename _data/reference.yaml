@@ -159,6 +159,8 @@ toc:
         path: /reference/pkg/python/pulumi_aws/index.html
       - title: pulumi_azure
         path: /reference/pkg/python/pulumi_azure/index.html
+      - title: pulumi_cloudflare
+        path: /reference/pkg/python/pulumi_cloudflare/index.html
       - title: pulumi_f5bigip
         path: /reference/pkg/python/pulumi_f5bigip/index.html
       - title: pulumi_gcp
