@@ -24,19 +24,24 @@
 <td>50</td>
 <td>200</td>
 </tr>
-<tr class="row-odd"><td>maxmemory_delta</td>
+<tr class="row-odd"><td>maxfragmentationmemory_reserved</td>
 <td>2</td>
 <td>50</td>
 <td>200</td>
 </tr>
-<tr class="row-even"><td>maxmemory_policy</td>
+<tr class="row-even"><td>maxmemory_delta</td>
+<td>2</td>
+<td>50</td>
+<td>200</td>
+</tr>
+<tr class="row-odd"><td>maxmemory_policy</td>
 <td>volatile-lru</td>
 <td>volatile-lru</td>
 <td>volatile-lru</td>
 </tr>
 </tbody>
 </table>
-<p>_<em>Important</em>: The <code class="docutils literal notranslate"><span class="pre">maxmemory_reserved</span></code> and <code class="docutils literal notranslate"><span class="pre">maxmemory_delta</span></code> settings are only available for Standard and Premium caches. More details are available in the Relevant Links section below._</p>
+<p>_<em>Important</em>: The <code class="docutils literal notranslate"><span class="pre">maxmemory_reserved</span></code>, <code class="docutils literal notranslate"><span class="pre">maxmemory_delta</span></code> and <code class="docutils literal notranslate"><span class="pre">maxfragmentationmemory-reserved</span></code> settings are only available for Standard and Premium caches. More details are available in the Relevant Links section below._</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">patch_schedule</span></code> supports the following:</li>
 <li><code class="docutils literal notranslate"><span class="pre">day_of_week</span></code> (Required) the Weekday name - possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code> etc.</li>

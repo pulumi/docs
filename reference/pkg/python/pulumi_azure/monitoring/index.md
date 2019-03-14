@@ -1105,19 +1105,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.monitoring.get_action_group">
-<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_action_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_action_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_action_group</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_action_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of an Action Group.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.monitoring.get_diagnostic_categories">
-<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_diagnostic_categories</code><span class="sig-paren">(</span><em>resource_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_diagnostic_categories" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_diagnostic_categories</code><span class="sig-paren">(</span><em>resource_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_diagnostic_categories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.monitoring.get_log_profile">
-<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_log_profile</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_log_profile" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.monitoring.</code><code class="descname">get_log_profile</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_log_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of a Log Profile.</p>
 </dd></dl>
 

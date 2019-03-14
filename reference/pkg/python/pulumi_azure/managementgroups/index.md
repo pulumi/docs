@@ -116,7 +116,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.managementgroups.get_management_group">
-<code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">get_management_group</code><span class="sig-paren">(</span><em>group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.get_management_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.managementgroups.</code><code class="descname">get_management_group</code><span class="sig-paren">(</span><em>group_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managementgroups.get_management_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Management Group.</p>
 </dd></dl>
 

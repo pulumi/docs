@@ -368,6 +368,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetAvailabilitySetResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>managed=None</em>, <em>platform_fault_domain_count=None</em>, <em>platform_update_domain_count=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAvailabilitySet.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The supported Azure location where the Availability Set exists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.managed">
+<code class="descname">managed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.managed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the availability set is managed or not.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.platform_fault_domain_count">
+<code class="descname">platform_fault_domain_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.platform_fault_domain_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of fault domains that are used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.platform_update_domain_count">
+<code class="descname">platform_update_domain_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.platform_update_domain_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of update domains that are used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.GetAvailabilitySetResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.GetAvailabilitySetResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.compute.GetImageResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.compute.</code><code class="descname">GetImageResult</code><span class="sig-paren">(</span><em>data_disks=None</em>, <em>location=None</em>, <em>os_disks=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.GetImageResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getImage.</p>
@@ -938,33 +980,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code> and <code class="docutils literal notranslate"><span class="pre">Delete</span></code>.</li>
 <li><strong>extensions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Can be specified multiple times to add extension profiles to the scale set. Each <code class="docutils literal notranslate"><span class="pre">extension</span></code> block supports the fields documented below.</li>
 <li><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the identifier for the load balancer health probe. Required when using <code class="docutils literal notranslate"><span class="pre">Rolling</span></code> as your <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code>.</li>
+<li><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Windows OS license type. If supplied, the only allowed values are <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>.</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the image from the marketplace.</li>
+<li><strong>network_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of network profile block as documented below.</li>
+<li><strong>os_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Virtual Machine OS Profile block as documented below.</li>
+<li><strong>os_profile_linux_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Linux config block as documented below.</li>
+<li><strong>os_profile_secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of Secret blocks as documented below.</li>
+<li><strong>os_profile_windows_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Windows config block as documented below.</li>
+<li><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the virtual machine scale set should be overprovisioned.</li>
+<li><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A plan block as documented below.</li>
+<li><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the priority for the Virtual Machines in the Scale Set. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Low</span></code> and <code class="docutils literal notranslate"><span class="pre">Regular</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.</li>
+<li><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is only applicable when the <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</li>
+<li><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a class="reference external" href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.</li>
+<li><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the SKU of the image used to create the virtual machines.</li>
+<li><strong>storage_profile_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A storage profile data disk block as documented below</li>
+<li><strong>storage_profile_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A storage profile image reference block as documented below.</li>
+<li><strong>storage_profile_os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A storage profile os disk block as documented below</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
+<li><strong>upgrade_policy_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, or <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>. When choosing <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>, you will need to set a health probe.</li>
+<li><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of availability zones to spread the Virtual Machines over.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] identity
-:param pulumi.Input[str] license_type: Specifies the Windows OS license type. If supplied, the only allowed values are <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the image from the marketplace.
-:param pulumi.Input[list] network_profiles: A collection of network profile block as documented below.
-:param pulumi.Input[dict] os_profile: A Virtual Machine OS Profile block as documented below.
-:param pulumi.Input[dict] os_profile_linux_config: A Linux config block as documented below.
-:param pulumi.Input[list] os_profile_secrets: A collection of Secret blocks as documented below.
-:param pulumi.Input[dict] os_profile_windows_config: A Windows config block as documented below.
-:param pulumi.Input[bool] overprovision: Specifies whether the virtual machine scale set should be overprovisioned.
-:param pulumi.Input[dict] plan: A plan block as documented below.
-:param pulumi.Input[str] priority: Specifies the priority for the Virtual Machines in the Scale Set. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Low</span></code> and <code class="docutils literal notranslate"><span class="pre">Regular</span></code>.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] rolling_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is only applicable when the <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
-:param pulumi.Input[bool] single_placement_group: Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a class="reference external" href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.
-:param pulumi.Input[dict] sku: Specifies the SKU of the image used to create the virtual machines.
-:param pulumi.Input[list] storage_profile_data_disks: A storage profile data disk block as documented below
-:param pulumi.Input[dict] storage_profile_image_reference: A storage profile image reference block as documented below.
-:param pulumi.Input[dict] storage_profile_os_disk: A storage profile os disk block as documented below
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] upgrade_policy_mode: Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, or <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>. When choosing <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>, you will need to set a health probe.
-:param pulumi.Input[list] zones: A collection of availability zones to spread the Virtual Machines over.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ScaleSet.automatic_os_upgrade">
 <code class="descname">automatic_os_upgrade</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.automatic_os_upgrade" title="Permalink to this definition">¶</a></dt>
@@ -1177,19 +1218,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this Shared Image.</li>
 <li><strong>eula</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The End User Licence Agreement for the Shared Image.</li>
 <li><strong>gallery_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the Shared Image Gallery exists. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Shared Image. Changing this forces a new resource to be created.</li>
+<li><strong>os_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of Operating System present in this Shared Image. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>.</li>
+<li><strong>privacy_statement_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI containing the Privacy Statement associated with this Shared Image.</li>
+<li><strong>release_note_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI containing the Release Notes associated with this Shared Image.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Shared Image.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] identifier
-:param pulumi.Input[str] location: Specifies the supported Azure location where the Shared Image Gallery exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Shared Image. Changing this forces a new resource to be created.
-:param pulumi.Input[str] os_type: The type of Operating System present in this Shared Image. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>.
-:param pulumi.Input[str] privacy_statement_uri: The URI containing the Privacy Statement associated with this Shared Image.
-:param pulumi.Input[str] release_note_uri: The URI containing the Release Notes associated with this Shared Image.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which the Shared Image Gallery exists. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the Shared Image.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.SharedImage.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImage.description" title="Permalink to this definition">¶</a></dt>
@@ -1341,6 +1381,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.SharedImageGallery.tags">
 <code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the Shared Image Gallery.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.SharedImageGallery.unique_name">
+<code class="descname">unique_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImageGallery.unique_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Unique Name for this Shared Image Gallery.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1517,19 +1563,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Indicates how the snapshot is to be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">Import</span></code>. Changing this forces a new resource to be created.</li>
 <li><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The size of the Snapshotted Disk in GB.</li>
+<li><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Snapshot resource. Changing this forces a new resource to be created.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Snapshot. Changing this forces a new resource to be created.</li>
+<li><strong>source_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a reference to an existing snapshot, when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code>. Changing this forces a new resource to be created.</li>
+<li><strong>source_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the URI to a Managed or Unmanaged Disk. Changing this forces a new resource to be created.</li>
+<li><strong>storage_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of an storage account. Used with <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> to allow authorization during import of unmanaged blobs from a different subscription. Changing this forces a new resource to be created.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[dict] encryption_settings
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Snapshot resource. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Snapshot. Changing this forces a new resource to be created.
-:param pulumi.Input[str] source_resource_id: Specifies a reference to an existing snapshot, when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] source_uri: Specifies the URI to a Managed or Unmanaged Disk. Changing this forces a new resource to be created.
-:param pulumi.Input[str] storage_account_id: Specifies the ID of an storage account. Used with <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> to allow authorization during import of unmanaged blobs from a different subscription. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.Snapshot.create_option">
 <code class="descname">create_option</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.Snapshot.create_option" title="Permalink to this definition">¶</a></dt>
@@ -1837,26 +1882,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="function">
+<dt id="pulumi_azure.compute.get_availability_set">
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_availability_set</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_availability_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Availability Set.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pulumi_azure.compute.get_image">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>name=None</em>, <em>name_regex=None</em>, <em>resource_group_name=None</em>, <em>sort_descending=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_image</code><span class="sig-paren">(</span><em>name=None</em>, <em>name_regex=None</em>, <em>resource_group_name=None</em>, <em>sort_descending=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Image.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_managed_disk">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_managed_disk</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_managed_disk" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_managed_disk</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>tags=None</em>, <em>zones=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_managed_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Disk.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_platform_image">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_platform_image</code><span class="sig-paren">(</span><em>location=None</em>, <em>offer=None</em>, <em>publisher=None</em>, <em>sku=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_platform_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_platform_image</code><span class="sig-paren">(</span><em>location=None</em>, <em>offer=None</em>, <em>publisher=None</em>, <em>sku=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_platform_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Platform Image.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image</code><span class="sig-paren">(</span><em>gallery_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image</code><span class="sig-paren">(</span><em>gallery_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image within a Shared Image Gallery.</p>
 <blockquote>
 <div><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</div></blockquote>
@@ -1864,7 +1915,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image_gallery">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image_gallery</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_gallery" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image_gallery</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Shared Image Gallery.</p>
 <blockquote>
 <div><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</div></blockquote>
@@ -1872,7 +1923,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_shared_image_version">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image_version</code><span class="sig-paren">(</span><em>gallery_name=None</em>, <em>image_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_version" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_shared_image_version</code><span class="sig-paren">(</span><em>gallery_name=None</em>, <em>image_name=None</em>, <em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_shared_image_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.</p>
 <blockquote>
 <div><strong>NOTE</strong> Shared Image Galleries are currently in Public Preview. You can find more information, including <a class="reference external" href="https://azure.microsoft.com/en-gb/blog/announcing-the-public-preview-of-shared-image-gallery/">how to register for the Public Preview here</a>.</div></blockquote>
@@ -1880,13 +1931,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_snapshot">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_snapshot</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Snapshot.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.compute.get_virtual_machine">
-<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_virtual_machine</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.compute.</code><code class="descname">get_virtual_machine</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.get_virtual_machine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Virtual Machine.</p>
 </dd></dl>
 

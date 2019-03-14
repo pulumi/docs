@@ -30,6 +30,7 @@
 <li class="toctree-l1"><a class="reference internal" href="managementgroups/">managementgroups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementresource/">managementresource</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mariadb/">mariadb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mediaservices/">mediaservices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring/">monitoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="msi/">msi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mssql/">mssql</a></li>
