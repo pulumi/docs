@@ -129,6 +129,8 @@ toc:
         path: /reference/pkg/nodejs/@pulumi/cloud-aws/index.html
       - title: cloud-azure
         path: /reference/pkg/nodejs/@pulumi/cloud-azure/index.html
+      - title: cloudflare
+        path: /reference/pkg/nodejs/@pulumi/cloudflare/index.html
       - title: docker
         path: /reference/pkg/nodejs/@pulumi/docker/index.html
       - title: eks
@@ -158,19 +160,19 @@ toc:
       - title: pulumi_azure
         path: /reference/pkg/python/pulumi_azure/index.html
       - title: pulumi_f5bigip
-        path: /reference/pkg/python/pulumi_f5bigip/index.html 
+        path: /reference/pkg/python/pulumi_f5bigip/index.html
       - title: pulumi_gcp
         path: /reference/pkg/python/pulumi_gcp/index.html
       - title: pulumi_kubernetes
         path: /reference/pkg/python/pulumi_kubernetes/index.html
       - title: pulumi_openstack
-        path: /reference/pkg/python/pulumi_openstack/index.html 
+        path: /reference/pkg/python/pulumi_openstack/index.html
       # - title: pulumi_packet
-      #   path: /reference/pkg/python/pulumi_packet/index.html 
+      #   path: /reference/pkg/python/pulumi_packet/index.html
       - title: pulumi_random
-        path: /reference/pkg/python/pulumi_random/index.html 
+        path: /reference/pkg/python/pulumi_random/index.html
       # - title: pulumi_vsphere
-      #   path: /reference/pkg/python/pulumi_vsphere/index.html 
+      #   path: /reference/pkg/python/pulumi_vsphere/index.html
 - title: FAQ
   path: /reference/faq
   toplevel: true

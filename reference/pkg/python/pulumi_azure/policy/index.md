@@ -24,7 +24,6 @@
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] scope</p>
 <dl class="attribute">
 <dt id="pulumi_azure.policy.Assignment.description">
 <code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.policy.Assignment.description" title="Permalink to this definition">¶</a></dt>
@@ -423,7 +422,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.policy.get_policy_defintion">
-<code class="descclassname">pulumi_azure.policy.</code><code class="descname">get_policy_defintion</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>management_group_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.policy.</code><code class="descname">get_policy_defintion</code><span class="sig-paren">(</span><em>display_name=None</em>, <em>management_group_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.policy.get_policy_defintion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a Policy Definition, both custom and built in. Retrieves Policy Definitions from your current subscription by default.</p>
 </dd></dl>
 

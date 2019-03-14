@@ -6,7 +6,7 @@
 <dd><p>Manages a Key Vault Access Policy.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> It’s possible to define Key Vault Access Policies both within the <code class="docutils literal notranslate"><span class="pre">azurerm_key_vault</span></code> resource via the <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block and by using the <code class="docutils literal notranslate"><span class="pre">azurerm_key_vault_access_policy</span></code> resource. However it’s not possible to use both methods to manage Access Policies within a KeyVault, since there’ll be conflicts.</p>
-<p><strong>NOTE:</strong> Azure permits a maximum of 16 Access Policies per Key Vault - <a class="reference external" href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control">more information can be found in this document</a>.</p>
+<p><strong>NOTE:</strong> Azure permits a maximum of 1024 Access Policies per Key Vault - <a class="reference external" href="https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control">more information can be found in this document</a>.</p>
 </div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -22,22 +22,10 @@ the following: <code class="docutils literal notranslate"><span class="pre">back
 <li><strong>key_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of key permissions, must be one or more from
 the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">decrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>,
 <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code>, <code class="docutils literal notranslate"><span class="pre">sign</span></code>, <code class="docutils literal notranslate"><span class="pre">unwrapKey</span></code>, <code class="docutils literal notranslate"><span class="pre">update</span></code>, <code class="docutils literal notranslate"><span class="pre">verify</span></code> and <code class="docutils literal notranslate"><span class="pre">wrapKey</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:param pulumi.Input[str] key_vault_id
-:param pulumi.Input[str] object_id: The object ID of a user, service principal or security</p>
-<blockquote>
-<div>group in the Azure Active Directory tenant for the vault. The object ID must
+<li><strong>object_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object ID of a user, service principal or security
+group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
-to be created.</div></blockquote>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+to be created.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.</li>
 <li><strong>secret_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of secret permissions, must be one or more
@@ -173,7 +161,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] vault_uri</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Certifiate.certificate">
 <code class="descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.certificate" title="Permalink to this definition">¶</a></dt>
@@ -476,7 +463,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] vault_uri</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Key.e">
 <code class="descname">e</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Key.e" title="Permalink to this definition">¶</a></dt>
@@ -736,7 +722,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] vault_uri</p>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Secret.content_type">
 <code class="descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Secret.content_type" title="Permalink to this definition">¶</a></dt>
@@ -815,13 +800,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.keyvault.get_access_policy">
-<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_access_policy</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_access_policy" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_access_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_access_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the permissions from the Management Key Vault Templates.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.keyvault.get_key">
-<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_key</code><span class="sig-paren">(</span><em>key_vault_id=None</em>, <em>name=None</em>, <em>vault_uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_key</code><span class="sig-paren">(</span><em>key_vault_id=None</em>, <em>name=None</em>, <em>vault_uri=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault Key.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the secret value will be stored in the raw state as plain-text.
@@ -830,13 +815,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.keyvault.get_key_vault">
-<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_key_vault</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key_vault" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_key_vault</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key_vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.keyvault.get_secret">
-<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>key_vault_id=None</em>, <em>name=None</em>, <em>vault_uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_secret" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.keyvault.</code><code class="descname">get_secret</code><span class="sig-paren">(</span><em>key_vault_id=None</em>, <em>name=None</em>, <em>vault_uri=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault Secret.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the secret value will be stored in the raw state as plain-text.

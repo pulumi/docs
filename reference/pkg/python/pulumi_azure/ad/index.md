@@ -338,7 +338,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.ad.get_application">
-<code class="descclassname">pulumi_azure.ad.</code><code class="descname">get_application</code><span class="sig-paren">(</span><em>name=None</em>, <em>object_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.get_application" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.ad.</code><code class="descname">get_application</code><span class="sig-paren">(</span><em>name=None</em>, <em>object_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.get_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>
@@ -348,7 +348,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.ad.get_service_principal">
-<code class="descclassname">pulumi_azure.ad.</code><code class="descname">get_service_principal</code><span class="sig-paren">(</span><em>application_id=None</em>, <em>display_name=None</em>, <em>object_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.get_service_principal" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.ad.</code><code class="descname">get_service_principal</code><span class="sig-paren">(</span><em>application_id=None</em>, <em>display_name=None</em>, <em>object_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.ad.get_service_principal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets information about an existing Service Principal associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Azure Active Directory resources have been split out into <a class="reference external" href="http://terraform.io/docs/providers/azuread/index.html">a new AzureAD Provider</a> - as such the AzureAD resources within the AzureRM Provider are deprecated and will be removed in the next major version (2.0). Information on how to migrate from the existing resources to the new AzureAD Provider can be found here.</p>

@@ -263,7 +263,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.role.get_builtin_role_definition">
-<code class="descclassname">pulumi_azure.role.</code><code class="descname">get_builtin_role_definition</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.get_builtin_role_definition" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.role.</code><code class="descname">get_builtin_role_definition</code><span class="sig-paren">(</span><em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.get_builtin_role_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about a built-in Role Definition. To access information about a custom Role Definition, please see the <code class="docutils literal notranslate"><span class="pre">azurerm_role_definition</span></code> data source instead.</p>
 <blockquote>
 <div><strong>NOTE:</strong> The this datasource has been deprecated in favour of <code class="docutils literal notranslate"><span class="pre">azurerm_role_definition</span></code> that now can look up role definitions by name. As such this data source will be removed in version 2.0 of the AzureRM Provider.</div></blockquote>
@@ -271,7 +271,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.role.get_role_definition">
-<code class="descclassname">pulumi_azure.role.</code><code class="descname">get_role_definition</code><span class="sig-paren">(</span><em>name=None</em>, <em>role_definition_id=None</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.get_role_definition" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.role.</code><code class="descname">get_role_definition</code><span class="sig-paren">(</span><em>name=None</em>, <em>role_definition_id=None</em>, <em>scope=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.role.get_role_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Role Definition.</p>
 </dd></dl>
 

@@ -14,14 +14,13 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer in which to create the Backend Address Pool.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Backend Address Pool.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] location
-:param pulumi.Input[str] name: Specifies the name of the Backend Address Pool.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.BackendAddressPool.backend_ip_configurations">
 <code class="descname">backend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.BackendAddressPool.backend_ip_configurations" title="Permalink to this definition">¶</a></dt>
@@ -280,15 +279,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>frontend_port_end</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with this Load Balancer. Possible values range between 1 and 65534, inclusive.</li>
 <li><strong>frontend_port_start</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with this Load Balancer. Possible values range between 1 and 65534, inclusive.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer in which to create the NAT pool.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the NAT pool.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] location
-:param pulumi.Input[str] name: Specifies the name of the NAT pool.
-:param pulumi.Input[str] protocol: The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.NatPool.backend_port">
 <code class="descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatPool.backend_port" title="Permalink to this definition">¶</a></dt>
@@ -395,15 +393,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>frontend_ip_configuration_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the frontend IP configuration exposing this rule.</li>
 <li><strong>frontend_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port for the external endpoint. Port numbers for each Rule must be unique within the Load Balancer. Possible values range between 1 and 65534, inclusive.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer in which to create the NAT Rule.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the NAT Rule.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code>, <code class="docutils literal notranslate"><span class="pre">Tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] location
-:param pulumi.Input[str] name: Specifies the name of the NAT Rule.
-:param pulumi.Input[str] protocol: The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code>, <code class="docutils literal notranslate"><span class="pre">Tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.NatRule.backend_port">
 <code class="descname">backend_port</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.NatRule.backend_port" title="Permalink to this definition">¶</a></dt>
@@ -493,6 +490,127 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.lb.OutboundRule">
+<em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">OutboundRule</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allocated_outbound_ports=None</em>, <em>backend_address_pool_id=None</em>, <em>enable_tcp_reset=None</em>, <em>frontend_ip_configurations=None</em>, <em>idle_timeout_in_minutes=None</em>, <em>loadbalancer_id=None</em>, <em>name=None</em>, <em>protocol=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Load Balancer Outbound Rule.</p>
+<blockquote>
+<div><strong>NOTE</strong> When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration and a Backend Address Pool Attached.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>allocated_outbound_ports</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of outbound ports to be used for NAT.</li>
+<li><strong>backend_address_pool_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Backend Address Pool. Outbound traffic is randomly load balanced across IPs in the backend IPs.</li>
+<li><strong>enable_tcp_reset</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.</li>
+<li><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</li>
+<li><strong>idle_timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The timeout for the TCP idle connection</li>
+<li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer in which to create the Outbound Rule. Changing this forces a new resource to be created.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Outbound Rule. Changing this forces a new resource to be created.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code>, <code class="docutils literal notranslate"><span class="pre">Tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.allocated_outbound_ports">
+<code class="descname">allocated_outbound_ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.allocated_outbound_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of outbound ports to be used for NAT.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.backend_address_pool_id">
+<code class="descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Backend Address Pool. Outbound traffic is randomly load balanced across IPs in the backend IPs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.enable_tcp_reset">
+<code class="descname">enable_tcp_reset</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.enable_tcp_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.frontend_ip_configurations">
+<code class="descname">frontend_ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.frontend_ip_configurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.idle_timeout_in_minutes">
+<code class="descname">idle_timeout_in_minutes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.idle_timeout_in_minutes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The timeout for the TCP idle connection</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.loadbalancer_id">
+<code class="descname">loadbalancer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.loadbalancer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Load Balancer in which to create the Outbound Rule. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Outbound Rule. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.protocol">
+<code class="descname">protocol</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Udp</span></code>, <code class="docutils literal notranslate"><span class="pre">Tcp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.lb.OutboundRule.resource_group_name">
+<code class="descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the resource. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.lb.OutboundRule.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.lb.OutboundRule.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.OutboundRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.lb.Probe">
 <em class="property">class </em><code class="descclassname">pulumi_azure.lb.</code><code class="descname">Probe</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>interval_in_seconds=None</em>, <em>loadbalancer_id=None</em>, <em>location=None</em>, <em>name=None</em>, <em>number_of_probes=None</em>, <em>port=None</em>, <em>protocol=None</em>, <em>request_path=None</em>, <em>resource_group_name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.Probe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a LoadBalancer Probe Resource.</p>
@@ -507,18 +625,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>interval_in_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds between probes to the backend endpoint for health status. The default value is 15, the minimum value is 5.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the LoadBalancer in which to create the NAT Rule.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Probe.</li>
+<li><strong>number_of_probes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of failed probe attempts after which the backend endpoint is removed from rotation. The default value is 2. NumberOfProbes multiplied by intervalInSeconds value must be greater or equal to 10.Endpoints are returned to rotation when at least one probe is successful.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Port on which the Probe queries the backend endpoint. Possible values range from 1 to 65535, inclusive.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the protocol of the end point. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code>, <code class="docutils literal notranslate"><span class="pre">Https</span></code> or <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>. If Tcp is specified, a received ACK is required for the probe to be successful. If Http is specified, a 200 OK response from the specified URI is required for the probe to be successful.</li>
+<li><strong>request_path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI used for requesting health status from the backend endpoint. Required if protocol is set to Http. Otherwise, it is not allowed.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] location
-:param pulumi.Input[str] name: Specifies the name of the Probe.
-:param pulumi.Input[int] number_of_probes: The number of failed probe attempts after which the backend endpoint is removed from rotation. The default value is 2. NumberOfProbes multiplied by intervalInSeconds value must be greater or equal to 10.Endpoints are returned to rotation when at least one probe is successful.
-:param pulumi.Input[int] port: Port on which the Probe queries the backend endpoint. Possible values range from 1 to 65535, inclusive.
-:param pulumi.Input[str] protocol: Specifies the protocol of the end point. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code>, <code class="docutils literal notranslate"><span class="pre">Https</span></code> or <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>. If Tcp is specified, a received ACK is required for the probe to be successful. If Http is specified, a 200 OK response from the specified URI is required for the probe to be successful.
-:param pulumi.Input[str] request_path: The URI used for requesting health status from the backend endpoint. Required if protocol is set to Http. Otherwise, it is not allowed.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.Probe.interval_in_seconds">
 <code class="descname">interval_in_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Probe.interval_in_seconds" title="Permalink to this definition">¶</a></dt>
@@ -628,16 +745,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>idle_timeout_in_minutes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp.</li>
 <li><strong>load_distribution</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the load balancing distribution type to be used by the Load Balancer. Possible values are: <code class="docutils literal notranslate"><span class="pre">Default</span></code> – The load balancer is configured to use a 5 tuple hash to map traffic to available servers. <code class="docutils literal notranslate"><span class="pre">SourceIP</span></code> – The load balancer is configured to use a 2 tuple hash to map traffic to available servers. <code class="docutils literal notranslate"><span class="pre">SourceIPProtocol</span></code> – The load balancer is configured to use a 3 tuple hash to map traffic to available servers. Also known as Session Persistence, where  the options are called <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">IP</span></code> and <code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">IP</span> <span class="pre">and</span> <span class="pre">Protocol</span></code> respectively.</li>
 <li><strong>loadbalancer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Load Balancer in which to create the Rule.</li>
+<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the LB Rule.</li>
+<li><strong>probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A reference to a Probe used by this Load Balancing Rule.</li>
+<li><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.</li>
+<li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the resource.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] location
-:param pulumi.Input[str] name: Specifies the name of the LB Rule.
-:param pulumi.Input[str] probe_id: A reference to a Probe used by this Load Balancing Rule.
-:param pulumi.Input[str] protocol: The transport protocol for the external endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">Udp</span></code> or <code class="docutils literal notranslate"><span class="pre">All</span></code>.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the resource.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.Rule.backend_address_pool_id">
 <code class="descname">backend_address_pool_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.Rule.backend_address_pool_id" title="Permalink to this definition">¶</a></dt>
@@ -752,13 +868,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.lb.get_backend_address_pool">
-<code class="descclassname">pulumi_azure.lb.</code><code class="descname">get_backend_address_pool</code><span class="sig-paren">(</span><em>loadbalancer_id=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_backend_address_pool" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.lb.</code><code class="descname">get_backend_address_pool</code><span class="sig-paren">(</span><em>loadbalancer_id=None</em>, <em>name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_backend_address_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer Backend Address Pool.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_azure.lb.get_lb">
-<code class="descclassname">pulumi_azure.lb.</code><code class="descname">get_lb</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_lb" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.lb.</code><code class="descname">get_lb</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.lb.get_lb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Load Balancer</p>
 </dd></dl>
 

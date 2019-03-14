@@ -1,6 +1,24 @@
 <div class="section" id="module-pulumi_azure.recoveryservices">
 <span id="recoveryservices"></span><h1>recoveryservices<a class="headerlink" href="#module-pulumi_azure.recoveryservices" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_azure.recoveryservices.GetVMProtectionPolicyResult">
+<em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVMProtectionPolicyResult</code><span class="sig-paren">(</span><em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVMProtectionPolicyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVMProtectionPolicy.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.GetVMProtectionPolicyResult.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVMProtectionPolicyResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.recoveryservices.GetVMProtectionPolicyResult.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVMProtectionPolicyResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.recoveryservices.GetVaultResult">
 <em class="property">class </em><code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">GetVaultResult</code><span class="sig-paren">(</span><em>location=None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.GetVaultResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getVault.</p>
@@ -340,8 +358,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_azure.recoveryservices.get_vault">
-<code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">get_vault</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.get_vault" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">get_vault</code><span class="sig-paren">(</span><em>name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.get_vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Recovery Services Vault.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.recoveryservices.get_vm_protection_policy">
+<code class="descclassname">pulumi_azure.recoveryservices.</code><code class="descname">get_vm_protection_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>recovery_vault_name=None</em>, <em>resource_group_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.recoveryservices.get_vm_protection_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Recovery Services VM Protection Policy.</p>
 </dd></dl>
 
 </div>
