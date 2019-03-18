@@ -89,6 +89,6 @@ Each Kubernetes resource managed by Pulumi will have a link on the corresponding
 to view the Kubernetes Dashboard page for that resource. These links are only valid after the following
 prerequisite steps are taken:
 
-1. Install the [Kubernetes dashboard](https://github.com/kubernetes/dashboard).
-1. Use `kubectl proxy` to expose the dashboard on `localhost`.
-1. [Authenticate](https://github.com/kubernetes/dashboard/wiki/Access-control#authentication) to the dashboard.
+1. Install the [Kubernetes Dashboard](https://github.com/kubernetes/dashboard).
+1. Use `kubectl proxy` to expose the Dashboard on `localhost`.
+1. [Authenticate](https://github.com/kubernetes/dashboard/wiki/Access-control#authentication) to the Dashboard.
