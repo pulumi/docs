@@ -128,7 +128,7 @@ Every resource managed by Pulumi has a name.  This name is used to track the ide
 
 #### URNs {#urns}
 
-The URN of a resource is constructed from the name provided by the resource, the type of the resource, and the types of all the parent component resources.  It also include information about the project and stack.  For example:
+The URN of a resource is constructed from the name provided by the resource, the type of the resource, and the types of all the parent component resources.  It also includes information about the project and stack.  For example:
 
 ```
 urn:pulumi:thumbnailer-twitch::video-thumbnailer::cloud:bucket:Bucket$cloud:function:Function::onNewThumbnail
@@ -145,7 +145,7 @@ Resources constructed as children of a [component](#components) should make sure
 
 #### Auto-naming {#autonaming}
 
-The name of a resource is also used by many providers as a default prefix for constructing the cloud-provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` wil result in an AWS bucket named something like `mybucket-eb24ea8`.  
+The name of a resource is also used by many providers as a default prefix for constructing the cloud-provider name for the resource.  For example, constructing a `new aws.s3.Bucket("mybucket")` will result in an AWS bucket named something like `mybucket-eb24ea8`.  
 
 This random postfix is added by default for two reasons.  First, it ensures that two instances of a program can be deployed to the same environment without risk of name collisions.  Second, it ensures that it will be possible to do zero-downtime replacements when needed, by creating the new resource first, updating any references to point to it, and then deleting the old resource.
 
@@ -345,7 +345,7 @@ def split(input):
 
 ##### Working with Outputs and strings {#ouputs-and-strings}
 
-It's very common want to build a string to use out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input) to another Resource.  For example, say you had the following:
+It's very common to want to build a string out of the values contained in `Outputs`.  Common uses for this are to either provide a custom [stack output](#stack-outputs), or to provide a dynamically computed string as an [Input](https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input) to another Resource.  For example, say you had the following:
 
 {% include langchoose.html %}
 
