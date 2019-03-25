@@ -320,9 +320,9 @@ Pulumi to aid in your transition, append the following code block to the existin
 `index.ts` file and run `pulumi up`.
 
 This is an example of how to create the standard Kubernetes Guestbook manifests in
-Pulumi using the Guestbook YAML manifests. We take the additional steps of transforming
-its properties to use the same Namespace and metadata labels that
-the NGINX stack uses, and also make its frontend service use a
+Pulumi using the [Guestbook YAML manifests][guestbook]. We take the additional
+steps of transforming its properties to use the same Namespace and metadata labels
+that the NGINX stack uses, and also make its frontend service use a
 LoadBalancer typed Service to expose it publicly.
 
 ```typescript
@@ -385,3 +385,5 @@ take Pulumi for a spin in an episode of [TGIK8s](https://github.com/heptio/tgik)
 src="https://www.youtube.com/embed/ILMK65YVSKw" frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
+
+[guestbook]: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/master/tests/examples/yaml-guestbook/yaml/guestbook.yaml
