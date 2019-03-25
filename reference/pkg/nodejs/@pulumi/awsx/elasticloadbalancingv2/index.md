@@ -41,21 +41,22 @@ title: Module elasticloadbalancingv2
 * <a href="#NetworkTargetGroupArgs">interface NetworkTargetGroupArgs</a>
 * <a href="#TargetGroupArgs">interface TargetGroupArgs</a>
 * <a href="#ApplicationProtocol">type ApplicationProtocol</a>
+* <a href="#NetworkProtocol">type NetworkProtocol</a>
 
-<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts">elasticloadbalancingv2/application.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts">elasticloadbalancingv2/listener.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts">elasticloadbalancingv2/listenerRule.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts">elasticloadbalancingv2/loadBalancer.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts">elasticloadbalancingv2/network.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts">elasticloadbalancingv2/targetGroup.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts">elasticloadbalancingv2/application.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts">elasticloadbalancingv2/listener.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts">elasticloadbalancingv2/listenerRule.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts">elasticloadbalancingv2/loadBalancer.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts">elasticloadbalancingv2/network.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts">elasticloadbalancingv2/targetGroup.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ApplicationListener">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L151">class <b>ApplicationListener</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L151">class <b>ApplicationListener</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Listener'>Listener</a></pre>
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></pre>
 <h3 class="pdoc-member-header" id="ApplicationListener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L153"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L153"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -63,7 +64,7 @@ title: Module elasticloadbalancingv2
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-addListenerRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L92">method <b>addListenerRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L92">method <b>addListenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -71,7 +72,7 @@ title: Module elasticloadbalancingv2
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L84">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L84">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -79,7 +80,7 @@ title: Module elasticloadbalancingv2
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L76">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L76">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -87,7 +88,7 @@ title: Module elasticloadbalancingv2
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -95,7 +96,7 @@ title: Module elasticloadbalancingv2
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -107,7 +108,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -115,31 +116,31 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-defaultTargetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L153">property <b>defaultTargetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L153">property <b>defaultTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultTargetGroup?: x.elasticloadbalancingv2.ApplicationTargetGroup;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L35">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L35">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListenerEndpoint'>ListenerEndpoint</a>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-listener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L32">property <b>listener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L32">property <b>listener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listener: aws.elasticloadbalancingv2.Listener;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L152">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L152">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -150,7 +151,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationLoadBalancer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L34">class <b>ApplicationLoadBalancer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L34">class <b>ApplicationLoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#LoadBalancer'>LoadBalancer</a></pre>
@@ -164,7 +165,7 @@ See https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduc
 more details.
 
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L36"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L36"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -172,7 +173,7 @@ more details.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-createListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L56">method <b>createListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L56">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -184,7 +185,7 @@ details.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-createTargetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L67">method <b>createTargetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L67">method <b>createTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -196,7 +197,7 @@ details.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -204,7 +205,7 @@ details.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -216,7 +217,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -224,31 +225,31 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L35">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L35">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listeners: <a href='#ApplicationListener'>ApplicationListener</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L22">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L22">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: aws.elasticloadbalancingv2.LoadBalancer;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L24">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L24">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-targetGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L36">property <b>targetGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L36">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetGroups: <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -258,14 +259,14 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L23">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L23">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationTargetGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L82">class <b>ApplicationTargetGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L82">class <b>ApplicationTargetGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetGroup'>TargetGroup</a></pre>
@@ -278,7 +279,7 @@ on all targets registered to a target group that is specified in a listener rule
 balancer.
 
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L85"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L85"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -286,7 +287,7 @@ balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L65">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L65">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -294,7 +295,7 @@ balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L59">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L59">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -302,7 +303,7 @@ balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-createListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L104">method <b>createListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L104">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -310,7 +311,7 @@ balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -318,7 +319,7 @@ balancer.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -330,7 +331,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-listenerDefaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L72">method <b>listenerDefaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L72">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -458,7 +459,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-registerListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L80">method <b>registerListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L80">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -469,7 +470,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -477,25 +478,25 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L85">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L85">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listeners: x.elasticloadbalancingv2.ApplicationListener[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L83">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L83">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-targetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L29">property <b>targetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L29">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetGroup: aws.elasticloadbalancingv2.TargetGroup;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -505,20 +506,20 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L30">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L30">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Listener">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L28">class <b>Listener</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L28">class <b>Listener</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></pre>
 <h3 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L37"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L37"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -526,7 +527,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-addListenerRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L92">method <b>addListenerRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L92">method <b>addListenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -534,7 +535,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L84">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L84">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -542,7 +543,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L76">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L76">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -550,7 +551,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -558,7 +559,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -570,7 +571,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -578,25 +579,25 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="Listener-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L35">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L35">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListenerEndpoint'>ListenerEndpoint</a>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Listener-listener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L32">property <b>listener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L32">property <b>listener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listener: aws.elasticloadbalancingv2.Listener;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Listener-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L33">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L33">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: x.elasticloadbalancingv2.LoadBalancer;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -607,7 +608,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerRule">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L31">class <b>ListenerRule</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L31">class <b>ListenerRule</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
@@ -620,7 +621,7 @@ optional path condition. For more information, see
 https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-update-rules.html
 
 <h3 class="pdoc-member-header" id="ListenerRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L32"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L32"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -628,7 +629,7 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-upd
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -636,7 +637,7 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-upd
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -648,7 +649,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -656,13 +657,13 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-listenerRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L32">property <b>listenerRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L32">property <b>listenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listenerRule: aws.elasticloadbalancingv2.ListenerRule;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -673,12 +674,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L21">class <b>LoadBalancer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L21">class <b>LoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L24"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L24"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -686,7 +687,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -694,7 +695,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -706,7 +707,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -714,19 +715,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L22">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L22">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: aws.elasticloadbalancingv2.LoadBalancer;</pre>
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L24">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L24">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -736,14 +737,14 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L23">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L23">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkListener">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L110">class <b>NetworkListener</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L116">class <b>NetworkListener</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Listener'>Listener</a></pre>
@@ -757,7 +758,7 @@ See https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balance
 for more details.
 
 <h3 class="pdoc-member-header" id="NetworkListener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L121"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -765,7 +766,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-addListenerRule">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L92">method <b>addListenerRule</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L92">method <b>addListenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -773,7 +774,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L84">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L84">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -781,7 +782,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L76">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L76">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -789,7 +790,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -797,7 +798,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -809,7 +810,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -817,7 +818,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L136">method <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L143">method <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -825,31 +826,31 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-defaultTargetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L115">property <b>defaultTargetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L121">property <b>defaultTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>defaultTargetGroup?: x.elasticloadbalancingv2.NetworkTargetGroup;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L35">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L35">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListenerEndpoint'>ListenerEndpoint</a>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-listener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L32">property <b>listener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L32">property <b>listener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listener: aws.elasticloadbalancingv2.Listener;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L114">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L120">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -860,12 +861,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkLoadBalancer">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L23">class <b>NetworkLoadBalancer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L27">class <b>NetworkLoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#LoadBalancer'>LoadBalancer</a></pre>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L25"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L29"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -873,7 +874,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-createListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L41">method <b>createListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L45">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -881,7 +882,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-createTargetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L48">method <b>createTargetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L52">method <b>createTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -889,7 +890,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -897,7 +898,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -909,7 +910,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -917,31 +918,31 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L24">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L28">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listeners: <a href='#NetworkListener'>NetworkListener</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L22">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L22">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: aws.elasticloadbalancingv2.LoadBalancer;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L24">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L24">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-targetGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L25">property <b>targetGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L29">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetGroups: <a href='#NetworkTargetGroup'>NetworkTargetGroup</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -951,14 +952,14 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L23">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L23">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkTargetGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L73">class <b>NetworkTargetGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L77">class <b>NetworkTargetGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetGroup'>TargetGroup</a></pre>
@@ -981,7 +982,7 @@ See https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balance
 for more details.
 
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L80"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -989,7 +990,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L65">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L65">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -997,7 +998,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L59">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L59">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1005,7 +1006,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-createListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L92">method <b>createListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L98">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1013,7 +1014,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1021,7 +1022,7 @@ for more details.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1033,7 +1034,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-listenerDefaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L72">method <b>listenerDefaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L72">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1161,7 +1162,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-registerListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L80">method <b>registerListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L80">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1172,7 +1173,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1180,25 +1181,25 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L76">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L80">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listeners: x.elasticloadbalancingv2.NetworkListener[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L74">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L78">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-targetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L29">property <b>targetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L29">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetGroup: aws.elasticloadbalancingv2.TargetGroup;</pre>
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1208,20 +1209,20 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L30">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L30">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L23">class <b>TargetGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L23">class <b>TargetGroup</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></pre>
 <h3 class="pdoc-member-header" id="TargetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L32"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L32"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1229,7 +1230,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-containerLoadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L65">method <b>containerLoadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L65">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1237,7 +1238,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-containerPortMapping">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L59">method <b>containerPortMapping</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L59">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1245,7 +1246,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1253,7 +1254,7 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L132">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1265,7 +1266,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-listenerDefaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L72">method <b>listenerDefaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L72">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1393,7 +1394,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-registerListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L80">method <b>registerListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L80">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1404,7 +1405,7 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L147">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -1412,19 +1413,19 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L32">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L32">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>listeners: x.elasticloadbalancingv2.Listener[] =  [];</pre>
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-targetGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L29">property <b>targetGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L29">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>targetGroup: aws.elasticloadbalancingv2.TargetGroup;</pre>
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/node_modules/@pulumi/pulumi/resource.d.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>urn: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Output'>Output</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1434,14 +1435,14 @@ deployments.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L30">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L30">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="isListenerActions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L113">function <b>isListenerActions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L113">function <b>isListenerActions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1449,7 +1450,7 @@ deployments.
 
 </div>
 <h2 class="pdoc-module-header" id="isListenerDefaultAction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L108">function <b>isListenerDefaultAction</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L108">function <b>isListenerDefaultAction</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 
@@ -1457,11 +1458,11 @@ deployments.
 
 </div>
 <h2 class="pdoc-module-header" id="ApplicationListenerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L360">interface <b>ApplicationListenerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L360">interface <b>ApplicationListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L397">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L397">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1473,7 +1474,7 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L387">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L387">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultAction?: {
@@ -1603,7 +1604,7 @@ defaultAction will be chosen that forwards to a new [NetworkTargetGroup] created
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L415">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L415">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1620,7 +1621,7 @@ Defaults to [true].
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L371">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L371">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
@@ -1630,7 +1631,7 @@ will be automatically created.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L376">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L376">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1639,7 +1640,7 @@ The port. Specify a value from `1` to `65535`.  Computed from "protocol" if not 
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L381">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L381">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationProtocol'>ApplicationProtocol</a>&gt;;</pre>
@@ -1648,7 +1649,7 @@ The protocol. Valid values are `HTTP`, `HTTPS`.  Computed from "port" if not pro
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-sslPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L402">property <b>sslPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L402">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1657,7 +1658,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListenerArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L365">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L365">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -1668,11 +1669,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationLoadBalancerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L215">interface <b>ApplicationLoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L215">interface <b>ApplicationLoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-accessLogs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L264">property <b>accessLogs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L264">property <b>accessLogs</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>accessLogs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1693,7 +1694,7 @@ An Access Logs block. Access Logs documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-enableDeletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L234">property <b>enableDeletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L234">property <b>enableDeletionProtection</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDeletionProtection?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1703,7 +1704,7 @@ Terraform from deleting the load balancer. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-enableHttp2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L269">property <b>enableHttp2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L269">property <b>enableHttp2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableHttp2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1712,7 +1713,7 @@ Indicates whether HTTP/2 is enabled. Defaults to `true`.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L228">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L228">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -1722,7 +1723,7 @@ unspecified.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-idleTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L274">property <b>idleTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L274">property <b>idleTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>idleTimeout?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1731,7 +1732,7 @@ The time in seconds that the connection is allowed to be idle. Default: 60.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L240">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L240">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>&gt;;</pre>
@@ -1741,7 +1742,7 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L279">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L279">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityGroups?: x.ec2.SecurityGroupOrId[];</pre>
@@ -1750,7 +1751,7 @@ A list of security group IDs to assign to the LB.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-subnetMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L245">property <b>subnetMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L245">property <b>subnetMappings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1786,7 +1787,7 @@ A subnet mapping block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L252">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L252">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | x.elasticloadbalancingv2.LoadBalancerSubnets;</pre>
@@ -1797,7 +1798,7 @@ recreation of the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L257">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L257">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
@@ -1806,7 +1807,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancerArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L222">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L222">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -1817,11 +1818,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationTargetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L282">interface <b>ApplicationTargetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L282">interface <b>ApplicationTargetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-deregistrationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L302">property <b>deregistrationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L302">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1832,7 +1833,7 @@ is 300 seconds.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L307">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L307">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheck?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1868,7 +1869,7 @@ A Health Check block. Health Check blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L293">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L293">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
@@ -1878,7 +1879,7 @@ will be automatically created.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L352">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L352">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1888,7 +1889,7 @@ unspecified will be inferred from the [protocol].
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L357">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L357">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationProtocol'>ApplicationProtocol</a>&gt;;</pre>
@@ -1897,7 +1898,7 @@ The protocol to use to connect with the target.  If unspecified will be inferred
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-proxyProtocolV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L314">property <b>proxyProtocolV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L314">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1908,7 +1909,7 @@ for more information.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L320">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L320">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -1918,7 +1919,7 @@ requests. The range is 30-900 seconds or 0 to disable. The default value is 0 se
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L326">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L326">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -1940,7 +1941,7 @@ used with Load Balancers of type `Application`
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L331">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L331">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
@@ -1949,7 +1950,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L344">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L344">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"instance"</span> | <span class='s2'>"ip"</span>&gt;;</pre>
@@ -1966,7 +1967,7 @@ IP addresses.
 
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroupArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L287">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L287">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -1977,11 +1978,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerActions">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L102">interface <b>ListenerActions</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L102">interface <b>ListenerActions</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ListenerActions-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L103">method <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L103">method <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2349,7 +2350,7 @@ unspecified.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerActions-registerListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L104">method <b>registerListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L104">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2358,11 +2359,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L127">interface <b>ListenerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L127">interface <b>ListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ListenerArgs-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L136">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L136">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2374,7 +2375,7 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L141">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L141">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultAction: {
@@ -2503,13 +2504,13 @@ An Action block. Action blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L128">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L128">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancer: x.elasticloadbalancingv2.LoadBalancer;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L146">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L146">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -2518,16 +2519,16 @@ The port. Specify a value from `1` to `65535`.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L151">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L151">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span> | <span class='s2'>"TCP"</span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span> | <span class='s2'>"TCP"</span> | <span class='s2'>"TLS"</span>&gt;;</pre>
 
 The protocol.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerArgs-sslPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L156">property <b>sslPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L156">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2537,11 +2538,11 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerDefaultAction">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L97">interface <b>ListenerDefaultAction</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L97">interface <b>ListenerDefaultAction</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ListenerDefaultAction-listenerDefaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L98">method <b>listenerDefaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L98">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2669,7 +2670,7 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerDefaultAction-registerListener">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L99">method <b>registerListener</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L99">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -2678,28 +2679,28 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerEndpoint">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L23">interface <b>ListenerEndpoint</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L23">interface <b>ListenerEndpoint</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ListenerEndpoint-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L24">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L24">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ListenerEndpoint-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listener.ts#L25">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listener.ts#L25">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ListenerRuleArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L65">interface <b>ListenerRuleArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L65">interface <b>ListenerRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="ListenerRuleArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L69">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L69">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>actions: {
@@ -3068,7 +3069,7 @@ An Action block. Action blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerRuleArgs-conditions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L73">property <b>conditions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L73">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>conditions: {
@@ -3104,7 +3105,7 @@ A Condition block. Condition blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="ListenerRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/listenerRule.ts#L77">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/listenerRule.ts#L77">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>priority?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3114,11 +3115,11 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L73">interface <b>LoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L73">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-enableDeletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L95">property <b>enableDeletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L95">property <b>enableDeletionProtection</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDeletionProtection?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3128,7 +3129,7 @@ Terraform from deleting the load balancer. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L84">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L84">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -3138,7 +3139,7 @@ unspecified.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L101">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L101">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>&gt;;</pre>
@@ -3148,7 +3149,7 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-loadBalancerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L89">property <b>loadBalancerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L89">property <b>loadBalancerType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancerType: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"application"</span> | <span class='s2'>"network"</span>&gt;;</pre>
@@ -3157,7 +3158,7 @@ The type of load balancer to create. Possible values are `application` or `netwo
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-securityGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L123">property <b>securityGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L123">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>securityGroups?: x.ec2.SecurityGroupOrId[];</pre>
@@ -3167,7 +3168,7 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-subnetMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L112">property <b>subnetMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L112">property <b>subnetMappings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -3203,7 +3204,7 @@ A subnet mapping block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L107">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L107">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | <a href='#LoadBalancerSubnets'>LoadBalancerSubnets</a>;</pre>
@@ -3213,7 +3214,7 @@ internal subnets of the [network] will be used.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L117">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L117">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
@@ -3222,7 +3223,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L78">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L78">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -3233,11 +3234,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerSubnets">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L126">interface <b>LoadBalancerSubnets</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L126">interface <b>LoadBalancerSubnets</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="LoadBalancerSubnets-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/loadBalancer.ts#L127">method <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/loadBalancer.ts#L127">method <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 
@@ -3246,11 +3247,23 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkListenerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L289">interface <b>NetworkListenerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L302">interface <b>NetworkListenerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
+<h3 class="pdoc-member-header" id="NetworkListenerArgs-certificateArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L338">property <b>certificateArn</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>certificateArn?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The ARN of the default SSL server certificate. Exactly one certificate is required if the
+protocol is HTTPS. For adding additional SSL certificates, see the
+[`aws_lb_listener_certificate`
+resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.html).
+
+</div>
 <h3 class="pdoc-member-header" id="NetworkListenerArgs-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L311">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L330">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>defaultAction?: {
@@ -3380,7 +3393,7 @@ defaultAction will be chosen that forwards to a new [NetworkTargetGroup] created
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListenerArgs-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L300">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L313">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
@@ -3390,7 +3403,7 @@ will be automatically created.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkListenerArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L305">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L318">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3398,8 +3411,27 @@ will be automatically created.
 The port. Specify a value from `1` to `65535`.
 
 </div>
+<h3 class="pdoc-member-header" id="NetworkListenerArgs-protocol">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L324">property <b>protocol</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkProtocol'>NetworkProtocol</a>&gt;;</pre>
+
+The protocol for connections from clients to the load balancer. Valid values are TCP, TLS,
+HTTP and HTTPS. Defaults to TCP.
+
+</div>
+<h3 class="pdoc-member-header" id="NetworkListenerArgs-sslPolicy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L343">property <b>sslPolicy</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+
+The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
+
+</div>
 <h3 class="pdoc-member-header" id="NetworkListenerArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L294">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L307">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -3410,11 +3442,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkLoadBalancerArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L166">interface <b>NetworkLoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L173">interface <b>NetworkLoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-enableCrossZoneLoadBalancing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L215">property <b>enableCrossZoneLoadBalancing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L222">property <b>enableCrossZoneLoadBalancing</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableCrossZoneLoadBalancing?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3423,7 +3455,7 @@ If true, cross-zone load balancing of the load balancer will be enabled.  Defaul
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-enableDeletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L185">property <b>enableDeletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L192">property <b>enableDeletionProtection</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>enableDeletionProtection?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3433,7 +3465,7 @@ Terraform from deleting the load balancer. Defaults to `false`.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-external">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L179">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L186">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -3443,7 +3475,7 @@ unspecified.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-ipAddressType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L191">property <b>ipAddressType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L198">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>&gt;;</pre>
@@ -3453,7 +3485,7 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-subnetMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L196">property <b>subnetMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L203">property <b>subnetMappings</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -3489,7 +3521,7 @@ A subnet mapping block as documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-subnets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L203">property <b>subnets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L210">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | x.elasticloadbalancingv2.LoadBalancerSubnets;</pre>
@@ -3500,7 +3532,7 @@ recreation of the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L208">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L215">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
@@ -3509,7 +3541,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancerArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L173">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L180">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -3520,11 +3552,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NetworkTargetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L218">interface <b>NetworkTargetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L225">interface <b>NetworkTargetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-deregistrationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L244">property <b>deregistrationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L257">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3535,7 +3567,7 @@ is 300 seconds.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L249">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L262">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheck?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -3571,7 +3603,7 @@ A Health Check block. Health Check blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-loadBalancer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L229">property <b>loadBalancer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L236">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
@@ -3581,7 +3613,7 @@ will be automatically created.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L237">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L244">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3590,8 +3622,18 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 `traffic-port`. Defaults to `traffic-port`.
 
 </div>
+<h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-protocol">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L250">property <b>protocol</b></a>
+</h3>
+<div class="pdoc-member-contents" markdown="1">
+<pre class="highlight"><span class='kd'></span>protocol?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkProtocol'>NetworkProtocol</a>&gt;;</pre>
+
+The protocol for connections from clients to the load balancer. Valid values are TCP, TLS,
+HTTP and HTTPS. Defaults to TCP.
+
+</div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-proxyProtocolV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L256">property <b>proxyProtocolV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L269">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3602,7 +3644,7 @@ for more information.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L262">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L275">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3612,7 +3654,7 @@ requests. The range is 30-900 seconds or 0 to disable. The default value is 0 se
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L268">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L281">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -3634,7 +3676,7 @@ used with Load Balancers of type `Application`
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L273">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L286">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
@@ -3643,7 +3685,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L286">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L299">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"instance"</span> | <span class='s2'>"ip"</span>&gt;;</pre>
@@ -3660,7 +3702,7 @@ IP addresses.
 
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroupArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/network.ts#L223">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L230">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
@@ -3671,11 +3713,11 @@ unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TargetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L85">interface <b>TargetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L85">interface <b>TargetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <h3 class="pdoc-member-header" id="TargetGroupArgs-deregistrationDelay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L96">property <b>deregistrationDelay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L96">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3686,7 +3728,7 @@ is 300 seconds.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L101">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L101">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>healthCheck?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -3722,7 +3764,7 @@ A Health Check block. Health Check blocks are documented below.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L107">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L107">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>port: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3732,16 +3774,16 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L112">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L112">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
-<pre class="highlight"><span class='kd'></span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span> | <span class='s2'>"TCP"</span>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>protocol: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span> | <span class='s2'>"TCP"</span> | <span class='s2'>"TLS"</span>&gt;;</pre>
 
 The protocol to use to connect with the target.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-proxyProtocolV2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L119">property <b>proxyProtocolV2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L119">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3752,7 +3794,7 @@ for more information.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-slowStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L125">property <b>slowStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L125">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
@@ -3762,7 +3804,7 @@ requests. The range is 30-900 seconds or 0 to disable. The default value is 0 se
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L131">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L131">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -3784,7 +3826,7 @@ used with Load Balancers of type `Application`
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L136">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L136">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
@@ -3793,7 +3835,7 @@ A mapping of tags to assign to the resource.
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L147">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L147">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='https://pulumi.io/reference/pkg/nodejs/@pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"instance"</span> | <span class='s2'>"ip"</span>&gt;;</pre>
@@ -3808,7 +3850,7 @@ RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16), and the RFC 6598
 
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupArgs-vpc">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/targetGroup.ts#L89">property <b>vpc</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/targetGroup.ts#L89">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents" markdown="1">
 <pre class="highlight"><span class='kd'></span>vpc: x.ec2.Vpc;</pre>
@@ -3818,8 +3860,14 @@ The vpc for this target group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationProtocol">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/elasticloadbalancingv2/application.ts#L23">type <b>ApplicationProtocol</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/application.ts#L23">type <b>ApplicationProtocol</b></a>
 </h2>
 <div class="pdoc-module-contents" markdown="1">
 <pre class="highlight"><span class='kd'>type</span> ApplicationProtocol = <span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span>;</pre>
+</div>
+<h2 class="pdoc-module-header" id="NetworkProtocol">
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx/elasticloadbalancingv2/network.ts#L25">type <b>NetworkProtocol</b></a>
+</h2>
+<div class="pdoc-module-contents" markdown="1">
+<pre class="highlight"><span class='kd'>type</span> NetworkProtocol = <span class='s2'>"TCP"</span> | <span class='s2'>"TLS"</span> | <span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span>;</pre>
 </div>

@@ -76,7 +76,7 @@ func loadAndParseDoc(filename string) (*typeDocNode, error) {
 var gitHubBaseURLs = map[string]string{
 	"@pulumi/pulumi":           "https://github.com/pulumi/pulumi/blob/master/sdk/nodejs",
 	"@pulumi/aws":              "https://github.com/pulumi/pulumi-aws/blob/master/sdk/nodejs",
-	"@pulumi/awsx"     :        "https://github.com/pulumi/pulumi-awsx/blob/master/nodejs",
+	"@pulumi/awsx":             "https://github.com/pulumi/pulumi-awsx/blob/master/nodejs/awsx",
 	"@pulumi/azure":            "https://github.com/pulumi/pulumi-azure/blob/master/sdk/nodejs",
 	"@pulumi/azure-serverless": "https://github.com/pulumi/pulumi-azure-serverless/blob/master/nodejs",
 	"@pulumi/cloud":            "https://github.com/pulumi/pulumi-cloud/blob/master/api",
