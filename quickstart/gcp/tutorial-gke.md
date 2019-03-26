@@ -11,11 +11,10 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 1.  In a new folder `gke-hello-world`, create an empty project with `pulumi new`.
 
-    This will create a base Pulumi program in TypeScript, and is great
-    recommendation to begin your journey.
+    Alternatively, the following command will create a base Pulumi program in TypeScript as well as the `gke-hello-world` folder:
 
     ```bash
-    $ pulumi new typescript --dir gke-hello-world
+    pulumi new typescript --dir gke-hello-world
     ```
 
     * Enter in a Pulumi project name, and description to detail what this
@@ -27,7 +26,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     Change directories to the newly created Pulumi project.
 
     ```bash
-    $ cd gke-hello-world
+    cd gke-hello-world
     ```
 
 1. Add the required dependencies:
@@ -35,7 +34,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     This installs the dependent packages [needed](https://pulumi.io/reference/how.html) for our Pulumi program.
 
 	```bash
-	$ npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
+	npm install --save @pulumi/pulumi @pulumi/gcp @pulumi/kubernetes
 	```
 
 1. Set the required GCP configuration variables:
@@ -45,8 +44,8 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
     defaults, and differentiate between settings across several Pulumi stacks.
 
     ```bash
-    $ pulumi config set gcp:project <YOUR_GCP_PROJECT_HERE>
-    $ pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
+    pulumi config set gcp:project <YOUR_GCP_PROJECT_HERE>
+    pulumi config set gcp:zone us-west1-a     // any valid GCP Zone here
     ```
 
 1.  Open the existing file `index.ts`, and replace the contents with the following below.
@@ -276,34 +275,38 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
 
 ## Access the Kubernetes Cluster using `kubectl`
 
-To access your new Kubernetes cluster using `kubectl`, we need to setup the
-`kubeconfig` file and download `kubectl`. We can leverage the Pulumi
+You may access your new Kubernetes cluster using `kubectl`. Install `kubectl` as follows:
+
+```bash
+export KUBERNETES_VERSION=1.11.6 && sudo curl -s -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl && sudo chmod +x /usr/local/bin/kubectl
+```
+
+Next, we need to setup the `kubeconfig` file to configure `kubectl`. We can leverage the Pulumi
 stack output in the CLI, as Pulumi facilitates exporting these objects for us.
 
 ```bash
-$ pulumi stack output kubeconfig > kubeconfig
-$ export KUBECONFIG=$PWD/kubeconfig
-$ export KUBERNETES_VERSION=1.11.6 && sudo curl -s -o /usr/local/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v${KUBERNETES_VERSION}/bin/linux/amd64/kubectl && sudo chmod +x /usr/local/bin/kubectl
+pulumi stack output kubeconfig > kubeconfig
+export KUBECONFIG=$PWD/kubeconfig
 
-$ kubectl version
-$ kubectl cluster-info
-$ kubectl get nodes
+kubectl version
+kubectl cluster-info
+kubectl get nodes
 ```
 
 We can also use the stack output to query the cluster for our newly created Deployment:
 
 ```bash
-$ kubectl get deployment $(pulumi stack output deploymentName) --namespace=$(pulumi stack output namespaceName)
-$ kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi stack output namespaceName)
+kubectl get deployment $(pulumi stack output deploymentName) --namespace=$(pulumi stack output namespaceName)
+kubectl get service $(pulumi stack output serviceName) --namespace=$(pulumi stack output namespaceName)
 ```
 
 We can also create another NGINX Deployment into the `default` namespace using
 `kubectl` natively:
 
 ```bash
-$ kubectl create deployment my-nginx --image=nginx
-$ kubectl get pods
-$ kubectl delete deployment my-nginx
+kubectl create deployment my-nginx --image=nginx
+kubectl get pods
+kubectl delete deployment my-nginx
 ```
 
 Of course, by doing so, resources are outside of Pulumi's purview, but this simply
