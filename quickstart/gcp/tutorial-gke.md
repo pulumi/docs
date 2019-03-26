@@ -173,7 +173,7 @@ In this tutorial, we'll launch a new Managed Kubernetes cluster in Google Kubern
 
 Now that we have an instance of Kubernetes running, we may want to create API resources in Kubernetes to manage our workloads through Pulumi.
 
-We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are indendent of their underyling cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
+We can do this by configuring a Pulumi provider for our newly created cluster, and instantiating a new Kubernetes resource object in our Pulumi program. The concept of a provider allows us to abstract away Kubernetes clusters in Pulumi that are independent of their underlying cloud provider, so that you can operate on and work with your Kubernetes clusters in a standard manner.
 
 1.  Create a new Kubernetes Namespace and Deployment:
 
@@ -278,7 +278,7 @@ We can do this by configuring a Pulumi provider for our newly created cluster, a
 
 To access your new Kubernetes cluster using `kubectl`, we need to setup the
 `kubeconfig` file and download `kubectl`. We can leverage the Pulumi
-stack output in the CLI, as Pulumi faciliates exporting these objects for us.
+stack output in the CLI, as Pulumi facilitates exporting these objects for us.
 
 ```bash
 $ pulumi stack output kubeconfig > kubeconfig
