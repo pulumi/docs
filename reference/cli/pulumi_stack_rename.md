@@ -1,25 +1,25 @@
-## pulumi stack select
+## pulumi stack rename
 
-Switch the current workspace to the given stack
+Rename an existing stack
 
 ### Synopsis
 
 
-Switch the current workspace to the given stack.
+Rename an existing stack.
 
-Selecting a stack allows you to use commands like `config`, `preview`, and `update`
-without needing to type the stack name each time.
-
-If no <stack> argument is supplied, you will be prompted to select one interactively.
+Note: Because renaming a stack will change the value of `getStack()` inside a Pulumi program, if this
+name is used as part of a resource's name, the next `pulumi up` will want to delete the old resource and
+create a new copy. For now, if you don't want these changes to be applied, you should rename your stack
+back to its previous name.
 
 ```
-pulumi stack select [<stack>] [flags]
+pulumi stack rename <new-stack-name> [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help   help for select
+  -h, --help   help for rename
 ```
 
 ### Options inherited from parent commands
