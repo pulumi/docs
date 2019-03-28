@@ -227,13 +227,12 @@ or “false” if provided). If this is “true” the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 <code class="docutils literal notranslate"><span class="pre">shared</span></code> status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.</li>
+<li><strong>value_specs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of additional options.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] tenant_id
-:param pulumi.Input[dict] value_specs: Map of additional options.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.firewall.Policy.audited">
 <code class="descname">audited</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.firewall.Policy.audited" title="Permalink to this definition">¶</a></dt>
@@ -524,7 +523,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.firewall.get_policy">
-<code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">get_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.get_policy" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.firewall.</code><code class="descname">get_policy</code><span class="sig-paren">(</span><em>name=None</em>, <em>policy_id=None</em>, <em>region=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get firewall policy information of an available OpenStack firewall policy.</p>
 </dd></dl>
 

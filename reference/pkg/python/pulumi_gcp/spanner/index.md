@@ -3,59 +3,38 @@
 <dl class="class">
 <dt id="pulumi_gcp.spanner.Database">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.spanner.</code><code class="descname">Database</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>ddls=None</em>, <em>instance=None</em>, <em>name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.spanner.Database" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a Google Spanner Database within a Spanner Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/spanner/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases">JSON API</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><p>A Cloud Spanner Database which is hosted on a Spanner instance.</p>
+<p>To get more information about Database, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances.databases">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/spanner/">Official Documentation</a></li>
+</ul>
+</li>
+</ul>
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=spanner_database_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>ddls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An optional list of DDL statements to run inside the newly created
-database. Statements can create tables, indexes, etc. These statements execute atomically
-with the creation of the database: if there is an error in any statement, the database
-is not created.</li>
-<li><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will serve the new database.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which to look for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> specified. If it
-is not provided, the provider project is used.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.spanner.Database.ddls">
-<code class="descname">ddls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.ddls" title="Permalink to this definition">¶</a></dt>
-<dd><p>An optional list of DDL statements to run inside the newly created
-database. Statements can create tables, indexes, etc. These statements execute atomically
-with the creation of the database: if there is an error in any statement, the database
-is not created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Database.instance">
-<code class="descname">instance</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance that will serve the new database.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Database.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the database.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.spanner.Database.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which to look for the <code class="docutils literal notranslate"><span class="pre">instance</span></code> specified. If it
-is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Database.state">
-<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Database.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>The current state of the database.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -426,85 +405,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.spanner.Instance">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.spanner.</code><code class="descname">Instance</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>config=None</em>, <em>display_name=None</em>, <em>labels=None</em>, <em>name=None</em>, <em>num_nodes=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.spanner.Instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates and manages a Google Spanner Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/spanner/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances">JSON API</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<dd><p>An isolated set of Cloud Spanner resources on which databases can be
+hosted.</p>
+<p>To get more information about Instance, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/spanner/">Official Documentation</a></li>
+</ul>
+</li>
+</ul>
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=spanner_instance_basic&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance’s configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
-replication of your databases in this instance. It determines where your data
-is stored. Values are typically of the form <code class="docutils literal notranslate"><span class="pre">regional-europe-west1</span></code> , <code class="docutils literal notranslate"><span class="pre">us-central</span></code> etc.
-In order to obtain a valid list please consult the
-<a class="reference external" href="https://cloud.google.com/spanner/docs/instances">Configuration section of the docs</a>.</li>
-<li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for this instance as it appears
-in UIs. Can be updated, however should be kept globally unique to avoid confusion.</li>
-<li><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping (key/value pairs) of labels to assign to the instance.</li>
-<li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique name (ID) of the instance. If the name is left
-blank, Terraform will randomly generate one when the instance is first
-created.</li>
-<li><strong>num_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of nodes allocated to this instance.
-Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. This can be updated after creation.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="attribute">
-<dt id="pulumi_gcp.spanner.Instance.config">
-<code class="descname">config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.config" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance’s configuration (similar but not
-quite the same as a region) which defines defines the geographic placement and
-replication of your databases in this instance. It determines where your data
-is stored. Values are typically of the form <code class="docutils literal notranslate"><span class="pre">regional-europe-west1</span></code> , <code class="docutils literal notranslate"><span class="pre">us-central</span></code> etc.
-In order to obtain a valid list please consult the
-<a class="reference external" href="https://cloud.google.com/spanner/docs/instances">Configuration section of the docs</a>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Instance.display_name">
-<code class="descname">display_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.display_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The descriptive name for this instance as it appears
-in UIs. Can be updated, however should be kept globally unique to avoid confusion.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Instance.labels">
-<code class="descname">labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping (key/value pairs) of labels to assign to the instance.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Instance.name">
-<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The unique name (ID) of the instance. If the name is left
-blank, Terraform will randomly generate one when the instance is first
-created.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Instance.num_nodes">
-<code class="descname">num_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.num_nodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of nodes allocated to this instance.
-Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>. This can be updated after creation.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_gcp.spanner.Instance.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.spanner.Instance.state">
-<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.spanner.Instance.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>The current state of the instance.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="method">

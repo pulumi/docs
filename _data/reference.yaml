@@ -173,8 +173,8 @@ toc:
       #   path: /reference/pkg/python/pulumi_packet/index.html
       - title: pulumi_random
         path: /reference/pkg/python/pulumi_random/index.html
-      # - title: pulumi_vsphere
-      #   path: /reference/pkg/python/pulumi_vsphere/index.html
+      - title: pulumi_vsphere
+        path: /reference/pkg/python/pulumi_vsphere/index.html
 - title: FAQ
   path: /reference/faq
   toplevel: true

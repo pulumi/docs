@@ -2,7 +2,7 @@
 <span id="redshift"></span><h1>redshift<a class="headerlink" href="#module-pulumi_aws.redshift" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.redshift.Cluster">
-<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_version_upgrade=None</em>, <em>automated_snapshot_retention_period=None</em>, <em>availability_zone=None</em>, <em>bucket_name=None</em>, <em>cluster_identifier=None</em>, <em>cluster_parameter_group_name=None</em>, <em>cluster_public_key=None</em>, <em>cluster_revision_number=None</em>, <em>cluster_security_groups=None</em>, <em>cluster_subnet_group_name=None</em>, <em>cluster_type=None</em>, <em>cluster_version=None</em>, <em>database_name=None</em>, <em>elastic_ip=None</em>, <em>enable_logging=None</em>, <em>encrypted=None</em>, <em>endpoint=None</em>, <em>enhanced_vpc_routing=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>logging=None</em>, <em>master_password=None</em>, <em>master_username=None</em>, <em>node_type=None</em>, <em>number_of_nodes=None</em>, <em>owner_account=None</em>, <em>port=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>s3_key_prefix=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_cluster_identifier=None</em>, <em>snapshot_copy=None</em>, <em>snapshot_identifier=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.redshift.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>allow_version_upgrade=None</em>, <em>automated_snapshot_retention_period=None</em>, <em>availability_zone=None</em>, <em>cluster_identifier=None</em>, <em>cluster_parameter_group_name=None</em>, <em>cluster_public_key=None</em>, <em>cluster_revision_number=None</em>, <em>cluster_security_groups=None</em>, <em>cluster_subnet_group_name=None</em>, <em>cluster_type=None</em>, <em>cluster_version=None</em>, <em>database_name=None</em>, <em>elastic_ip=None</em>, <em>encrypted=None</em>, <em>endpoint=None</em>, <em>enhanced_vpc_routing=None</em>, <em>final_snapshot_identifier=None</em>, <em>iam_roles=None</em>, <em>kms_key_id=None</em>, <em>logging=None</em>, <em>master_password=None</em>, <em>master_username=None</em>, <em>node_type=None</em>, <em>number_of_nodes=None</em>, <em>owner_account=None</em>, <em>port=None</em>, <em>preferred_maintenance_window=None</em>, <em>publicly_accessible=None</em>, <em>skip_final_snapshot=None</em>, <em>snapshot_cluster_identifier=None</em>, <em>snapshot_copy=None</em>, <em>snapshot_identifier=None</em>, <em>tags=None</em>, <em>vpc_security_group_ids=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift Cluster Resource.</p>
 <blockquote>
 <div><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
@@ -15,10 +15,8 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>allow_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true</li>
-<li><strong>automated_snapshot_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.</li>
+<li><strong>automated_snapshot_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.</li>
-<li><strong>bucket_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
-For more information on the permissions required for the bucket, please read the AWS <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">documentation</a></li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cluster Identifier. Must be a lower case
 string.</li>
 <li><strong>cluster_parameter_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the parameter group to be associated with this cluster.</li>
@@ -44,14 +42,13 @@ Note that this may show up in logs, and it will be stored in the state file. Pas
 contain at least one uppercase letter, one lowercase letter, and one number.</li>
 <li><strong>master_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username for the master DB user.</li>
 <li><strong>node_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The node type to be provisioned for the cluster.</li>
-<li><strong>number_of_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.</li>
+<li><strong>number_of_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.</li>
 <li><strong>owner_account</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port number on which the cluster accepts incoming connections.
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port number on which the cluster accepts incoming connections.
 The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range (in UTC) during which automated cluster maintenance can occur.
 Format: ddd:hh24:mi-ddd:hh24:mi</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, the cluster can be accessed from a public network. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>s3_key_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix applied to the log file names.</li>
 <li><strong>skip_final_snapshot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.</li>
 <li><strong>snapshot_cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the cluster the source snapshot was created from.</li>
 <li><strong>snapshot_copy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration of automatic copy of snapshots from one region to another. Documented below.</li>
@@ -79,13 +76,6 @@ Format: ddd:hh24:mi-ddd:hh24:mi</li>
 <dt id="pulumi_aws.redshift.Cluster.availability_zone">
 <code class="descname">availability_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.availability_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.redshift.Cluster.bucket_name">
-<code class="descname">bucket_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.bucket_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
-For more information on the permissions required for the bucket, please read the AWS <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">documentation</a></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -249,12 +239,6 @@ Format: ddd:hh24:mi-ddd:hh24:mi</p>
 <dt id="pulumi_aws.redshift.Cluster.publicly_accessible">
 <code class="descname">publicly_accessible</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.publicly_accessible" title="Permalink to this definition">¶</a></dt>
 <dd><p>If true, the cluster can be accessed from a public network. Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.redshift.Cluster.s3_key_prefix">
-<code class="descname">s3_key_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.Cluster.s3_key_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>The prefix applied to the log file names.</p>
 </dd></dl>
 
 <dl class="attribute">

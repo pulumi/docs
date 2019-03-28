@@ -50,7 +50,7 @@ region or in all regions. Defaults to <code class="docutils literal notranslate"
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the KMS key ARN to use to encrypt the logs delivered by CloudTrail.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the trail.</li>
 <li><strong>s3_bucket_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the S3 bucket designated for publishing log files.</li>
-<li><strong>s3_key_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the S3 key prefix that precedes
+<li><strong>s3_key_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.</li>
 <li><strong>sns_topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Amazon SNS topic
 defined for notification of log file delivery.</li>
@@ -147,7 +147,7 @@ region or in all regions. Defaults to <code class="docutils literal notranslate"
 <dl class="attribute">
 <dt id="pulumi_aws.cloudtrail.Trail.s3_key_prefix">
 <code class="descname">s3_key_prefix</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudtrail.Trail.s3_key_prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the S3 key prefix that precedes
+<dd><p>Specifies the S3 key prefix that follows
 the name of the bucket you have designated for log file delivery.</p>
 </dd></dl>
 

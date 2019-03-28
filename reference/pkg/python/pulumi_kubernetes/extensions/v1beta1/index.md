@@ -184,7 +184,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_kubernetes.extensions.v1beta1.</code><code class="descname">Ingress</code><span class="sig-paren">(</span><em>__name__</em>, <em>__opts__=None</em>, <em>metadata=None</em>, <em>spec=None</em>, <em>status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.Ingress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined
 by a backend. An Ingress can be configured to give services externally-reachable urls, load
-balance traffic, terminate SSL, offer name based virtual hosting etc.</p>
+balance traffic, terminate SSL, offer name based virtual hosting etc. DEPRECATED - This group
+version of Ingress is deprecated by networking.k8s.io/v1beta1 Ingress. See the release notes for
+more information.</p>
 <dl class="method">
 <dt id="pulumi_kubernetes.extensions.v1beta1.Ingress.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.Ingress.translate_output_property" title="Permalink to this definition">¶</a></dt>

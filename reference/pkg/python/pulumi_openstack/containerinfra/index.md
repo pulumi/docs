@@ -119,18 +119,6 @@ new cluster.</dd>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] cluster_template_id
-:param pulumi.Input[int] create_timeout
-:param pulumi.Input[str] discovery_url
-:param pulumi.Input[int] docker_volume_size
-:param pulumi.Input[str] flavor
-:param pulumi.Input[str] keypair
-:param pulumi.Input[dict] labels
-:param pulumi.Input[int] master_count
-:param pulumi.Input[str] master_flavor
-:param pulumi.Input[str] name
-:param pulumi.Input[int] node_count
-:param pulumi.Input[str] region</p>
 <dl class="method">
 <dt id="pulumi_openstack.containerinfra.Cluster.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -401,34 +389,6 @@ the existing cluster template.</dd>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[int] apiserver_port
-:param pulumi.Input[str] cluster_distro
-:param pulumi.Input[str] coe
-:param pulumi.Input[str] dns_nameserver
-:param pulumi.Input[str] docker_storage_driver
-:param pulumi.Input[int] docker_volume_size
-:param pulumi.Input[str] external_network_id
-:param pulumi.Input[str] fixed_network
-:param pulumi.Input[str] fixed_subnet
-:param pulumi.Input[str] flavor
-:param pulumi.Input[bool] floating_ip_enabled
-:param pulumi.Input[str] http_proxy
-:param pulumi.Input[str] https_proxy
-:param pulumi.Input[str] image
-:param pulumi.Input[str] insecure_registry
-:param pulumi.Input[str] keypair_id
-:param pulumi.Input[dict] labels
-:param pulumi.Input[str] master_flavor
-:param pulumi.Input[bool] master_lb_enabled
-:param pulumi.Input[str] name
-:param pulumi.Input[str] network_driver
-:param pulumi.Input[str] no_proxy
-:param pulumi.Input[bool] public
-:param pulumi.Input[str] region
-:param pulumi.Input[bool] registry_enabled
-:param pulumi.Input[str] server_type
-:param pulumi.Input[bool] tls_disabled
-:param pulumi.Input[str] volume_driver</p>
 <dl class="method">
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate.translate_output_property">
 <code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -814,13 +774,13 @@ cluster nodes.</p>
 
 <dl class="function">
 <dt id="pulumi_openstack.containerinfra.get_cluster">
-<code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">get_cluster</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack Magnum cluster.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.containerinfra.get_cluster_template">
-<code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">get_cluster_template</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster_template" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.containerinfra.</code><code class="descname">get_cluster_template</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack Magnum cluster
 template.</p>
 </dd></dl>

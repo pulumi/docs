@@ -2,94 +2,39 @@
 <span id="cloudbuild"></span><h1>cloudbuild<a class="headerlink" href="#module-pulumi_gcp.cloudbuild" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.cloudbuild.Trigger">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudbuild.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new build trigger within GCR. For more information, see
-<a class="reference external" href="https://cloud.google.com/container-builder/docs/running-builds/automate-builds">the official documentation</a>
-and
-<a class="reference external" href="https://godoc.org/google.golang.org/api/cloudbuild/v1#BuildTrigger">API</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<em class="property">class </em><code class="descclassname">pulumi_gcp.cloudbuild.</code><code class="descname">Trigger</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>build=None</em>, <em>description=None</em>, <em>disabled=None</em>, <em>filename=None</em>, <em>ignored_files=None</em>, <em>included_files=None</em>, <em>project=None</em>, <em>substitutions=None</em>, <em>trigger_template=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration for an automated build in response to source repository changes.</p>
+<p>To get more information about Trigger, see:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.google.com/cloud-build/docs/api/reference/rest/">API documentation</a></li>
+<li>How-to Guides<ul>
+<li><a class="reference external" href="https://cloud.google.com/cloud-build/docs/running-builds/automate-builds">Automating builds using build triggers</a></li>
+</ul>
+</li>
+</ul>
+<div class = "oics-button" style="float: right; margin: 0 0 -15px">
+  <a href="https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fterraform-google-modules%2Fdocs-examples.git&cloudshell_working_dir=cloudbuild_trigger_filename&cloudshell_image=gcr.io%2Fgraphite-cloud-shell-images%2Fterraform%3Alatest&open_in_editor=main.tf&cloudshell_print=.%2Fmotd&cloudshell_tutorial=.%2Ftutorial.md" target="_blank">
+    <img alt="Open in Cloud Shell" src="//gstatic.com/cloudssh/images/open-btn.svg" style="max-height: 44px; margin: 32px auto; max-width: 100%;">
+  </a>
+</div><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>build</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A build resource in the Container Builder API.
-Structure is documented below. At a high
-level, a <code class="docutils literal notranslate"><span class="pre">build</span></code> describes where to find source code, how to build it (for
-example, the builder image to run on the source), and where to store
-the built artifacts. Fields can include the following variables, which
-will be expanded when the build is created:</li>
+<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A brief description of this resource.</li>
-<li><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the path to a Cloud Build configuration file
-in the Git repo. This is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">build</span></code>. This is typically
-<code class="docutils literal notranslate"><span class="pre">cloudbuild.yaml</span></code> however it can be specified by the user.</li>
-<li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project that the trigger will be created in.
-Defaults to the provider project configuration.</li>
-<li><strong>trigger_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Location of the source in a Google
-Cloud Source Repository. Structure is documented below.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudbuild.Trigger.build">
-<code class="descname">build</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.build" title="Permalink to this definition">¶</a></dt>
-<dd><p>A build resource in the Container Builder API.
-Structure is documented below. At a high
-level, a <code class="docutils literal notranslate"><span class="pre">build</span></code> describes where to find source code, how to build it (for
-example, the builder image to run on the source), and where to store
-the built artifacts. Fields can include the following variables, which
-will be expanded when the build is created:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">$PROJECT_ID</span></code>: the project ID of the build.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$BUILD_ID</span></code>: the autogenerated ID of the build.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$REPO_NAME</span></code>: the source repository name specified by RepoSource.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$BRANCH_NAME</span></code>: the branch name specified by RepoSource.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$TAG_NAME</span></code>: the tag name specified by RepoSource.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$REVISION_ID</span></code> or <code class="docutils literal notranslate"><span class="pre">$COMMIT_SHA</span></code>: the commit SHA specified by RepoSource
-or resolved from the specified branch or tag.</li>
-<li><code class="docutils literal notranslate"><span class="pre">$SHORT_SHA</span></code>: first 7 characters of <code class="docutils literal notranslate"><span class="pre">$REVISION_ID</span></code> or <code class="docutils literal notranslate"><span class="pre">$COMMIT_SHA</span></code>.</li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudbuild.Trigger.description">
-<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.description" title="Permalink to this definition">¶</a></dt>
-<dd><p>A brief description of this resource.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudbuild.Trigger.filename">
-<code class="descname">filename</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.filename" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify the path to a Cloud Build configuration file
-in the Git repo. This is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">build</span></code>. This is typically
-<code class="docutils literal notranslate"><span class="pre">cloudbuild.yaml</span></code> however it can be specified by the user.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudbuild.Trigger.project">
 <code class="descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the project that the trigger will be created in.
-Defaults to the provider project configuration.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.cloudbuild.Trigger.trigger_template">
-<code class="descname">trigger_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudbuild.Trigger.trigger_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>Location of the source in a Google
-Cloud Source Repository. Structure is documented below.</p>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
 </dd></dl>
 
 <dl class="method">

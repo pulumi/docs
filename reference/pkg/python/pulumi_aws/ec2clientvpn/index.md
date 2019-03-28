@@ -2,8 +2,8 @@
 <span id="ec2clientvpn"></span><h1>ec2clientvpn<a class="headerlink" href="#module-pulumi_aws.ec2clientvpn" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.ec2clientvpn.Endpoint">
-<em class="property">class </em><code class="descclassname">pulumi_aws.ec2clientvpn.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_options=None</em>, <em>client_cidr_block=None</em>, <em>connection_log_options=None</em>, <em>description=None</em>, <em>dns_servers=None</em>, <em>server_certificate_arn=None</em>, <em>transport_protocol=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the 
+<em class="property">class </em><code class="descclassname">pulumi_aws.ec2clientvpn.</code><code class="descname">Endpoint</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>authentication_options=None</em>, <em>client_cidr_block=None</em>, <em>connection_log_options=None</em>, <em>description=None</em>, <em>dns_servers=None</em>, <em>server_certificate_arn=None</em>, <em>tags=None</em>, <em>transport_protocol=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the
 <a class="reference external" href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html">AWS Client VPN Administrator’s Guide</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -18,6 +18,7 @@
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the repository.</li>
 <li><strong>dns_servers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.</li>
 <li><strong>server_certificate_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the ACM server certificate.</li>
+<li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>transport_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The transport protocol to be used by the VPN session. Default value is <code class="docutils literal notranslate"><span class="pre">udp</span></code>.</li>
 </ul>
 </td>
@@ -70,6 +71,12 @@
 <dt id="pulumi_aws.ec2clientvpn.Endpoint.status">
 <code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current state of the Client VPN endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ec2clientvpn.Endpoint.tags">
+<code class="descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2clientvpn.Endpoint.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="attribute">

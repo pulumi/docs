@@ -32,8 +32,8 @@ are applied immediately, or during the next maintenance window. Default is
 <code class="docutils literal notranslate"><span class="pre">false</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more information.</a></li>
 <li><strong>availability_zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of EC2 Availability Zones that
 instances in the DB cluster can be created in</li>
-<li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</li>
-<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
+<li><strong>backtrack_window</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The target backtrack window, in seconds. Only available for <code class="docutils literal notranslate"><span class="pre">aurora</span></code> engine currently. To disable backtracking, set this value to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>. Must be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">259200</span></code> (72 hours)</li>
+<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></li>
 <li><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</li>
 <li><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of RDS Instances that are a part of this cluster</li>
@@ -56,7 +56,7 @@ made.</li>
 <li><strong>master_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints][5]</li>
 <li><strong>master_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username for the master DB user. Please refer to the [RDS Naming Constraints][5]</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which the DB accepts connections</li>
 <li><strong>preferred_backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30</li>
@@ -507,7 +507,7 @@ supports the below instance classes. Please see [AWS Documentation][7] for compl
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</li>
+<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</li>
 <li><strong>monitoring_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN for the IAM role that permits RDS to send
 enhanced monitoring metrics to CloudWatch Logs. You can find more information on the <a class="reference external" href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS Documentation</a>
 what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
@@ -518,7 +518,7 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.<
 Eg: “04:00-09:00”</li>
 <li><strong>preferred_maintenance_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The window to perform maintenance in.
 Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”.</li>
-<li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
+<li><strong>promotion_tier</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly accessible.
 Default <code class="docutils literal notranslate"><span class="pre">false</span></code>. See the documentation on [Creating DB Instances][6] for more
 details on controlling this property.</li>
@@ -1712,7 +1712,7 @@ about <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or
+<li><strong>allocated_storage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or
 <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code> is provided) The allocated storage in gibibytes.</li>
 <li><strong>allow_major_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that major version
 upgrades are allowed. Changing this parameter does not result in an outage and
@@ -1727,7 +1727,7 @@ for more information.</p>
 will be applied automatically to the DB instance during the maintenance window.
 Defaults to true.</li>
 <li><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AZ for the RDS instance.</li>
-<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The days to retain backups for. Must be
+<li><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Must be
 between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">35</span></code>. When creating a Read Replica the value must be greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>. [See Read Replica][1].</li>
 <li><strong>backup_window</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The daily time range (in UTC) during which
 automated backups are created if they are enabled. Example: “09:46-10:16”. Must
@@ -1772,7 +1772,7 @@ if omitted, Terraform will assign a random, unique identifier.</li>
 <li><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique
 identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</li>
 <li><strong>instance_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance type of the RDS instance.</li>
-<li><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of provisioned IOPS. Setting this implies a
+<li><strong>iops</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of provisioned IOPS. Setting this implies a
 storage_type of “io1”.</li>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key. If creating an
 encrypted replica, set this to the destination KMS ARN.</li>
@@ -1783,7 +1783,7 @@ Syntax: “ddd:hh24:mi-ddd:hh24:mi”. Eg: “Mon:00:00-Mon:03:00”. See <a cla
 Maintenance Window
 docs</a>
 for more information.</li>
-<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The interval, in seconds, between points
+<li><strong>monitoring_interval</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The interval, in seconds, between points
 when Enhanced Monitoring metrics are collected for the DB instance. To disable
 collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
 Values: 0, 1, 5, 10, 15, 30, 60.</li>
@@ -1802,7 +1802,7 @@ associate.</li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless a <code class="docutils literal notranslate"><span class="pre">snapshot_identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">replicate_source_db</span></code>
 is provided) Password for the master DB user. Note that this may show up in
 logs, and it will be stored in the state file.</li>
-<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The port on which the DB accepts connections.</li>
+<li><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port on which the DB accepts connections.</li>
 <li><strong>publicly_accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Bool to control if instance is publicly
 accessible. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
 <li><strong>replicate_source_db</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies that this resource is a Replicate

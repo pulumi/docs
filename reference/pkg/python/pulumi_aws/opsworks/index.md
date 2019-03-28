@@ -196,7 +196,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
@@ -364,7 +364,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to use for Ganglia.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
@@ -548,7 +548,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>healthcheck_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – HTTP method to use for instance healthchecks. Defaults to “OPTIONS”.</li>
 <li><strong>healthcheck_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL path to use for instance healthchecks. Defaults to “/”.</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
 <li><strong>stats_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable HAProxy stats.</li>
@@ -1059,7 +1059,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>jvm_options</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Options to set for the JVM.</li>
 <li><strong>jvm_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword for the type of JVM to use. Defaults to <code class="docutils literal notranslate"><span class="pre">openjdk</span></code>.</li>
 <li><strong>jvm_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of JVM to use. Defaults to “7”.</li>
@@ -1243,7 +1243,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocated_memory</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</li>
+<li><strong>allocated_memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</li>
 <li><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</li>
 <li><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</li>
 <li><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</li>
@@ -1254,7 +1254,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
 <li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
@@ -1424,7 +1424,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>root_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Root password to use for MySQL.</li>
 <li><strong>root_password_on_all_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to set the root user password to all instances in the stack so they can access the instances in this layer.</li>
@@ -1599,7 +1599,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>nodejs_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of NodeJS to use. Defaults to “0.10.38”.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
@@ -1858,7 +1858,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
 <li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>
@@ -2021,7 +2021,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>manage_bundler</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether OpsWorks should manage bundler. On by default.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>passenger_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of Passenger to use. Defaults to “4.0.46”.</li>
@@ -2532,7 +2532,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>ebs_volumes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</li>
 <li><strong>elastic_load_balancer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of an Elastic Load Balancer to attach to this layer</li>
 <li><strong>install_updates_on_boot</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to install OS and package updates on each instance when it boots.</li>
-<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
+<li><strong>instance_shutdown_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</li>
 <li><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</li>
 <li><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</li>

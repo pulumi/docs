@@ -2003,7 +2003,8 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.</li>
 Leaving this blank and not setting <code class="docutils literal notranslate"><span class="pre">no_gateway</span></code> will cause a default
 gateway of <code class="docutils literal notranslate"><span class="pre">.1</span></code> to be used. Changing this updates the gateway IP of the
 existing subnet.</li>
-<li><strong>host_routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of routes that should be used by devices
+<li><strong>host_routes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – (<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">openstack_networking_subnet_route_v2</span></code>
+instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.</li>
@@ -2091,7 +2092,8 @@ existing subnet.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.host_routes">
 <code class="descname">host_routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Subnet.host_routes" title="Permalink to this definition">¶</a></dt>
-<dd><p>An array of routes that should be used by devices
+<dd><p>(<strong>Deprecated</strong> - use <code class="docutils literal notranslate"><span class="pre">openstack_networking_subnet_route_v2</span></code>
+instead) An array of routes that should be used by devices
 with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.</p>
@@ -2690,50 +2692,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_floating_ip">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_floating_ip</code><span class="sig-paren">(</span><em>address=None</em>, <em>description=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_floating_ip" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_floating_ip</code><span class="sig-paren">(</span><em>address=None</em>, <em>description=None</em>, <em>fixed_ip=None</em>, <em>pool=None</em>, <em>port_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_floating_ip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack floating IP.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_network">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>description=None</em>, <em>external=None</em>, <em>matching_subnet_cidr=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_network" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_network</code><span class="sig-paren">(</span><em>description=None</em>, <em>external=None</em>, <em>matching_subnet_cidr=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>transparent_vlan=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack network.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_port">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_port</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_port</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>port_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack port.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_port_ids">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_port_ids</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port_ids" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_port_ids</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>device_id=None</em>, <em>device_owner=None</em>, <em>fixed_ip=None</em>, <em>mac_address=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>security_group_ids=None</em>, <em>sort_direction=None</em>, <em>sort_key=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_port_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Openstack Port IDs matching the
 specified criteria.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_router">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_router</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_router" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_router</code><span class="sig-paren">(</span><em>admin_state_up=None</em>, <em>description=None</em>, <em>distributed=None</em>, <em>enable_snat=None</em>, <em>name=None</em>, <em>region=None</em>, <em>router_id=None</em>, <em>status=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_router" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack router.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_sec_group">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_sec_group</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>secgroup_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_sec_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_sec_group</code><span class="sig-paren">(</span><em>description=None</em>, <em>name=None</em>, <em>region=None</em>, <em>secgroup_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_sec_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack security group.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_subnet">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>cidr=None</em>, <em>description=None</em>, <em>dhcp_disabled=None</em>, <em>dhcp_enabled=None</em>, <em>gateway_ip=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_subnet</code><span class="sig-paren">(</span><em>cidr=None</em>, <em>description=None</em>, <em>dhcp_disabled=None</em>, <em>dhcp_enabled=None</em>, <em>gateway_ip=None</em>, <em>ip_version=None</em>, <em>ipv6_address_mode=None</em>, <em>ipv6_ra_mode=None</em>, <em>name=None</em>, <em>network_id=None</em>, <em>region=None</em>, <em>subnet_id=None</em>, <em>subnetpool_id=None</em>, <em>tags=None</em>, <em>tenant_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack subnet.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.networking.get_subnet_pool">
-<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_subnet_pool</code><span class="sig-paren">(</span><em>address_scope_id=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet_pool" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.networking.</code><code class="descname">get_subnet_pool</code><span class="sig-paren">(</span><em>address_scope_id=None</em>, <em>default_prefixlen=None</em>, <em>default_quota=None</em>, <em>description=None</em>, <em>ip_version=None</em>, <em>is_default=None</em>, <em>max_prefixlen=None</em>, <em>min_prefixlen=None</em>, <em>name=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>shared=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.networking.get_subnet_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack subnetpool.</p>
 </dd></dl>
 

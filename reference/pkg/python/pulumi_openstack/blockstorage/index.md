@@ -998,13 +998,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v2">
-<code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_snapshot_v2</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>status=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v2" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_snapshot_v2</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v3">
-<code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_snapshot_v3</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>status=None</em>, <em>volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v3" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.blockstorage.</code><code class="descname">get_snapshot_v3</code><span class="sig-paren">(</span><em>most_recent=None</em>, <em>name=None</em>, <em>region=None</em>, <em>status=None</em>, <em>volume_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
 </dd></dl>
 

@@ -109,7 +109,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>owner</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Owner of the table.</li>
 <li><strong>parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of initialization parameters for the SerDe, in key-value form.</li>
 <li><strong>partition_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.</li>
-<li><strong>retention</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Retention time for this table.</li>
+<li><strong>retention</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Retention time for this table.</li>
 <li><strong>storage_descriptor</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A storage descriptor object containing information about the physical storage of this table. You can refer to the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor">Glue Developer Guide</a> for a full explanation of this object.</p>
 </li>
 <li><strong>table_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).</li>
@@ -453,6 +453,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <dl class="attribute">
+<dt id="pulumi_aws.glue.Crawler.arn">
+<code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the crawler</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.glue.Crawler.classifiers">
 <code class="descname">classifiers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.classifiers" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.</p>
@@ -605,17 +611,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</li>
+<li><strong>allocated_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.</li>
 <li><strong>command</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The command of the job. Defined below.</li>
 <li><strong>connections</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of connections used for this job.</li>
 <li><strong>default_arguments</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html">Calling AWS Glue APIs in Python</a> topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the developer guide.</li>
 <li><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the job.</li>
 <li><strong>execution_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Execution property of the job. Defined below.</li>
-<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of times to retry this job if it fails.</li>
+<li><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code></li>
 <li><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</li>
 <li><strong>security_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Security Configuration to be associated with the job.</li>
-<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The job timeout in minutes. The default is 2880 minutes (48 hours).</li>
 </ul>
 </td>
 </tr>

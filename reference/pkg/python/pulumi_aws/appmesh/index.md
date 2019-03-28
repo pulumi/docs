@@ -180,6 +180,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualNode">
 <em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">VirtualNode</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh virtual node resource.</p>
+<blockquote>
+<div><strong>Note:</strong> Backward incompatible API changes have been announced for AWS App Mesh which will affect this resource. Read more about the changes <a class="reference external" href="https://github.com/awslabs/aws-app-mesh-examples/issues/92">here</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -275,6 +277,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualRouter">
 <em class="property">class </em><code class="descclassname">pulumi_aws.appmesh.</code><code class="descname">VirtualRouter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>mesh_name=None</em>, <em>name=None</em>, <em>spec=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualRouter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh virtual router resource.</p>
+<blockquote>
+<div><strong>Note:</strong> Backward incompatible API changes have been announced for AWS App Mesh which will affect this resource. Read more about the changes <a class="reference external" href="https://github.com/awslabs/aws-app-mesh-examples/issues/92">here</a>.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

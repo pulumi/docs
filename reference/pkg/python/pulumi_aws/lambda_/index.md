@@ -119,7 +119,7 @@ For information about event source mappings, see [CreateEventSourceMapping][2] i
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>batch_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code> for DynamoDB and Kinesis, <code class="docutils literal notranslate"><span class="pre">10</span></code> for SQS.</li>
+<li><strong>batch_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code> for DynamoDB and Kinesis, <code class="docutils literal notranslate"><span class="pre">10</span></code> for SQS.</li>
 <li><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the mapping will be enabled on creation. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
 <li><strong>event_source_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The event source ARN - can either be a Kinesis or DynamoDB stream.</li>
 <li><strong>function_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or the ARN of the Lambda function that will be subscribing to events.</li>
@@ -271,17 +271,17 @@ large files efficiently.</p>
 <li><strong>handler</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The function [entrypoint][3] in your code.</li>
 <li><strong>kms_key_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN for the KMS encryption key.</li>
 <li><strong>layers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers][10]</li>
-<li><strong>memory_size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Amount of memory in MB your Lambda Function can use at runtime. Defaults to``128<a href="#id8"><span class="problematic" id="id9">``</span></a>. See [Limits][5]</li>
+<li><strong>memory_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory in MB your Lambda Function can use at runtime. Defaults to``128<a href="#id8"><span class="problematic" id="id9">``</span></a>. See [Limits][5]</li>
 <li><strong>publish</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to publish creation/change as new Lambda Function Version. Defaults to``false<a href="#id10"><span class="problematic" id="id11">``</span></a>.</li>
-<li><strong>reserved_concurrent_executions</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of reserved concurrent executions for this lambda function. Defaults to Unreserved Concurrency Limits. See [Managing Concurrency][9]</li>
+<li><strong>reserved_concurrent_executions</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of reserved concurrent executions for this lambda function. A value of``0<code class="docutils literal notranslate"><span class="pre">disables</span> <span class="pre">lambda</span> <span class="pre">from</span> <span class="pre">being</span> <span class="pre">triggered</span> <span class="pre">and</span></code>-1<code class="docutils literal notranslate"><span class="pre">removes</span> <span class="pre">any</span> <span class="pre">concurrency</span> <span class="pre">limitations.</span> <span class="pre">Defaults</span> <span class="pre">to</span> <span class="pre">Unreserved</span> <span class="pre">Concurrency</span> <span class="pre">Limits</span></code>-1<a href="#id12"><span class="problematic" id="id13">``</span></a>. See [Managing Concurrency][9]</li>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model][4] for more details.</li>
 <li><strong>runtime</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – See [Runtimes][6] for valid values.</li>
-<li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id12"><span class="problematic" id="id13">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
-<li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id14"><span class="problematic" id="id15">``</span></a>.</li>
-<li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id16"><span class="problematic" id="id17">``</span></a>.</li>
-<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${base64sha256(file(“file.zip”))}<a href="#id18"><span class="problematic" id="id19">``</span></a>, where “file.zip” is the local filename of the lambda function source archive.</li>
+<li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id14"><span class="problematic" id="id15">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
+<li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id16"><span class="problematic" id="id17">``</span></a>.</li>
+<li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id18"><span class="problematic" id="id19">``</span></a>.</li>
+<li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${base64sha256(file(“file.zip”))}<a href="#id20"><span class="problematic" id="id21">``</span></a>, where “file.zip” is the local filename of the lambda function source archive.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</li>
-<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The amount of time your Lambda Function has to run in seconds. Defaults to``3`. See [Limits][5]</li>
+<li><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time your Lambda Function has to run in seconds. Defaults to``3`. See [Limits][5]</li>
 <li><strong>vpc_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC][7]</li>
 </ul>
 </td>
@@ -376,7 +376,7 @@ large files efficiently.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.Function.reserved_concurrent_executions">
 <code class="descname">reserved_concurrent_executions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.Function.reserved_concurrent_executions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The amount of reserved concurrent executions for this lambda function. Defaults to Unreserved Concurrency Limits. See [Managing Concurrency][9]</p>
+<dd><p>The amount of reserved concurrent executions for this lambda function. A value of <code class="docutils literal notranslate"><span class="pre">0</span></code> disables lambda from being triggered and <code class="docutils literal notranslate"><span class="pre">-1</span></code> removes any concurrency limitations. Defaults to Unreserved Concurrency Limits <code class="docutils literal notranslate"><span class="pre">-1</span></code>. See [Managing Concurrency][9]</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -487,12 +487,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.lambda_.GetFunctionResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">GetFunctionResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>dead_letter_config=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>handler=None</em>, <em>invoke_arn=None</em>, <em>kms_key_arn=None</em>, <em>last_modified=None</em>, <em>layers=None</em>, <em>memory_size=None</em>, <em>qualified_arn=None</em>, <em>reserved_concurrent_executions=None</em>, <em>role=None</em>, <em>runtime=None</em>, <em>source_code_hash=None</em>, <em>source_code_size=None</em>, <em>timeout=None</em>, <em>tracing_config=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">GetFunctionResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>dead_letter_config=None</em>, <em>description=None</em>, <em>environment=None</em>, <em>handler=None</em>, <em>invoke_arn=None</em>, <em>kms_key_arn=None</em>, <em>last_modified=None</em>, <em>layers=None</em>, <em>memory_size=None</em>, <em>qualified_arn=None</em>, <em>reserved_concurrent_executions=None</em>, <em>role=None</em>, <em>runtime=None</em>, <em>source_code_hash=None</em>, <em>source_code_size=None</em>, <em>tags=None</em>, <em>timeout=None</em>, <em>tracing_config=None</em>, <em>version=None</em>, <em>vpc_config=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunction.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.GetFunctionResult.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetFunctionResult.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) identifying your Lambda Function.</p>
+<dd><p>Unqualified (no <code class="docutils literal notranslate"><span class="pre">:QUALIFIER</span></code> or <code class="docutils literal notranslate"><span class="pre">:VERSION</span></code> suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also <code class="docutils literal notranslate"><span class="pre">qualified_arn</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -552,13 +552,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.GetFunctionResult.qualified_arn">
 <code class="descname">qualified_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetFunctionResult.qualified_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) identifying your Lambda Function Version</p>
+<dd><p>Qualified (<code class="docutils literal notranslate"><span class="pre">:QUALIFIER</span></code> or <code class="docutils literal notranslate"><span class="pre">:VERSION</span></code> suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also <code class="docutils literal notranslate"><span class="pre">arn</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.GetFunctionResult.reserved_concurrent_executions">
 <code class="descname">reserved_concurrent_executions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.GetFunctionResult.reserved_concurrent_executions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The amount of reserved concurrent executions for this lambda function.</p>
+<dd><p>The amount of reserved concurrent executions for this lambda function or <code class="docutils literal notranslate"><span class="pre">-1</span></code> if unreserved.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -646,8 +646,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">LayerVersion</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>compatible_runtimes=None</em>, <em>description=None</em>, <em>filename=None</em>, <em>layer_name=None</em>, <em>license_info=None</em>, <em>s3_bucket=None</em>, <em>s3_key=None</em>, <em>s3_object_version=None</em>, <em>source_code_hash=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</p>
 <p>For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]</p>
-<blockquote>
-<div><strong>NOTE:</strong> The attribute values for <code class="docutils literal notranslate"><span class="pre">arn</span></code> and <code class="docutils literal notranslate"><span class="pre">layer_arn</span></code> will be swapped in version 2.0.0 of the Terraform AWS Provider.</div></blockquote>
 <p>AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which <code class="docutils literal notranslate"><span class="pre">compatible_runtimes</span></code> this layer specifies.
 See [Runtimes][2] for the valid values of <code class="docutils literal notranslate"><span class="pre">compatible_runtimes</span></code>.</p>
 <p>Once you have created your deployment package you can specify it either directly as a local file (using the <code class="docutils literal notranslate"><span class="pre">filename</span></code> argument) or
@@ -668,9 +666,9 @@ large files efficiently.</p>
 <li><strong>filename</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to the function’s deployment package within the local filesystem. If defined, The <cite>s3*`</cite>-prefixed options cannot be used.</li>
 <li><strong>layer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your Lambda Layer</li>
 <li><strong>license_info</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – License info for your Lambda Layer. See [License Info][3].</li>
-<li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id22"><span class="problematic" id="id23">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
-<li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id24"><span class="problematic" id="id25">``</span></a>.</li>
-<li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id26"><span class="problematic" id="id27">``</span></a>.</li>
+<li><strong>s3_bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket location containing the function’s deployment package. Conflicts with``filename<a href="#id24"><span class="problematic" id="id25">``</span></a>. This bucket must reside in the same AWS region where you are creating the Lambda function.</li>
+<li><strong>s3_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 key of an object containing the function’s deployment package. Conflicts with``filename<a href="#id26"><span class="problematic" id="id27">``</span></a>.</li>
+<li><strong>s3_object_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object version containing the function’s deployment package. Conflicts with``filename<a href="#id28"><span class="problematic" id="id29">``</span></a>.</li>
 <li><strong>source_code_hash</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either``filename<code class="docutils literal notranslate"><span class="pre">or</span></code>s3_key<code class="docutils literal notranslate"><span class="pre">.</span> <span class="pre">The</span> <span class="pre">usual</span> <span class="pre">way</span> <span class="pre">to</span> <span class="pre">set</span> <span class="pre">this</span> <span class="pre">is</span></code>${base64sha256(file(“file.zip”))}`, where “file.zip” is the local filename of the lambda layer source archive.</li>
 </ul>
 </td>
@@ -680,7 +678,7 @@ large files efficiently.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.LayerVersion.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) identifying your Lambda Layer.</p>
+<dd><p>The Amazon Resource Name (ARN) of the Lambda Layer with version.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -710,7 +708,7 @@ large files efficiently.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.lambda_.LayerVersion.layer_arn">
 <code class="descname">layer_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lambda_.LayerVersion.layer_arn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Amazon Resource Name (ARN) identifying your specific Lambda Layer version.</p>
+<dd><p>The Amazon Resource Name (ARN) of the Lambda Layer without version.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -941,7 +939,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_aws.lambda_.get_function">
-<code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">get_function</code><span class="sig-paren">(</span><em>function_name=None</em>, <em>qualifier=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_function" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_aws.lambda_.</code><code class="descname">get_function</code><span class="sig-paren">(</span><em>function_name=None</em>, <em>qualifier=None</em>, <em>tags=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.lambda_.get_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a Lambda Function.</p>
 </dd></dl>
 

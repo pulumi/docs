@@ -612,7 +612,7 @@ AWS CloudWatch Logs stops encrypting newly ingested data for the log group. All 
 permissions for the CMK whenever the encrypted data is requested.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log group. If omitted, Terraform will assign a random, unique name.</li>
 <li><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</li>
-<li><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the number of days
+<li><strong>retention_in_days</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the number of days
 you want to retain log events in the specified log group.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 </ul>
@@ -1043,11 +1043,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>actions_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether or not actions should be executed during any changes to the alarm’s state. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>alarm_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Number (ARN).</li>
+<li><strong>alarm_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).</li>
 <li><strong>alarm_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the alarm.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The descriptive name for the alarm. This name must be unique within the user’s AWS account</li>
 <li><strong>comparison_operator</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqualToThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanThreshold</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqualToThreshold</span></code>.</li>
-<li><strong>datapoints_to_alarm</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of datapoints that must be breaching to trigger the alarm.</li>
+<li><strong>datapoints_to_alarm</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of datapoints that must be breaching to trigger the alarm.</li>
 <li><strong>dimensions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The dimensions for this metric.  For the list of available dimensions see the AWS documentation <a class="reference external" href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">here</a>.</li>
 <li><strong>evaluate_low_sample_count_percentiles</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used only for alarms
 based on percentiles. If you specify <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, the alarm state will not
@@ -1055,17 +1055,17 @@ change during periods with too few data points to be statistically significant.
 If you specify <code class="docutils literal notranslate"><span class="pre">evaluate</span></code> or omit this parameter, the alarm will always be
 evaluated and possibly change state no matter how many data points are available.
 The following values are supported: <code class="docutils literal notranslate"><span class="pre">ignore</span></code>, and <code class="docutils literal notranslate"><span class="pre">evaluate</span></code>.</li>
-<li><strong>evaluation_periods</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of periods over which data is compared to the specified threshold.</li>
+<li><strong>evaluation_periods</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of periods over which data is compared to the specified threshold.</li>
 <li><strong>extended_statistic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.</li>
-<li><strong>insufficient_data_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Number (ARN).</li>
+<li><strong>insufficient_data_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).</li>
 <li><strong>metric_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for this metric.
 See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</li>
 <li><strong>metric_queries</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Enables you to create an alarm based on a metric math expression. You may specify at most 20.</li>
 <li><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The namespace for this metric. See docs for the <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html">list of namespaces</a>.
 See docs for <a class="reference external" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html">supported metrics</a>.</p>
 </li>
-<li><strong>ok_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Number (ARN).</li>
-<li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</li>
+<li><strong>ok_actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).</li>
+<li><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The period in seconds over which the specified <code class="docutils literal notranslate"><span class="pre">stat</span></code> is applied.</li>
 <li><strong>statistic</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The statistic to apply to the alarm’s associated metric.
 Either of the following is supported: <code class="docutils literal notranslate"><span class="pre">SampleCount</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Sum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code></li>
 <li><strong>threshold</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The value against which the specified statistic is compared.</li>
@@ -1085,7 +1085,7 @@ Either of the following is supported: <code class="docutils literal notranslate"
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.alarm_actions">
 <code class="descname">alarm_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.alarm_actions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Number (ARN).</p>
+<dd><p>The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1150,7 +1150,7 @@ The following values are supported: <code class="docutils literal notranslate"><
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.insufficient_data_actions">
 <code class="descname">insufficient_data_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.insufficient_data_actions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Number (ARN).</p>
+<dd><p>The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1176,7 +1176,7 @@ See docs for <a class="reference external" href="https://docs.aws.amazon.com/Ama
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.MetricAlarm.ok_actions">
 <code class="descname">ok_actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm.ok_actions" title="Permalink to this definition">¶</a></dt>
-<dd><p>The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Number (ARN).</p>
+<dd><p>The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).</p>
 </dd></dl>
 
 <dl class="attribute">

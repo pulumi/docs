@@ -325,13 +325,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>attempts</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of attempts to make per page or block when uploading. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
+<li><strong>attempts</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of attempts to make per page or block when uploading. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</li>
 <li><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The content type of the storage blob. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined. Defaults to <code class="docutils literal notranslate"><span class="pre">application/octet-stream</span></code>.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the storage blob. Must be unique within the storage container the blob is located.</li>
-<li><strong>parallelism</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of workers per CPU core to run for concurrent uploads. Defaults to <code class="docutils literal notranslate"><span class="pre">8</span></code>.</li>
+<li><strong>parallelism</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers per CPU core to run for concurrent uploads. Defaults to <code class="docutils literal notranslate"><span class="pre">8</span></code>.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the storage container. Changing this forces a new resource to be created.</li>
-<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Used only for <code class="docutils literal notranslate"><span class="pre">page</span></code> blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.</li>
+<li><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Used only for <code class="docutils literal notranslate"><span class="pre">page</span></code> blobs to specify the size in bytes of the blob to be created. Must be a multiple of 512. Defaults to 0.</li>
 <li><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An absolute path to a file on the local system. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source_uri</span></code> is defined.</li>
 <li><strong>source_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of an existing blob, or a file in the Azure File service, to use as the source contents
 for the blob to be created. Changing this forces a new resource to be created. Cannot be defined if <code class="docutils literal notranslate"><span class="pre">source</span></code> is defined.</li>
@@ -879,7 +879,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the share. Must be unique within the storage account where the share is located.</li>
-<li><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.</li>
+<li><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5 TB (5120 GB). Default is 5120.</li>
 <li><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the share. Changing this forces a new resource to be created.</li>
 <li><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the share.

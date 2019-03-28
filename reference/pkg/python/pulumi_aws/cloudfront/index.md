@@ -2,7 +2,7 @@
 <span id="cloudfront"></span><h1>cloudfront<a class="headerlink" href="#module-pulumi_aws.cloudfront" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
-<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>cache_behaviors=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.cloudfront.</code><code class="descname">Distribution</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>aliases=None</em>, <em>comment=None</em>, <em>custom_error_responses=None</em>, <em>default_cache_behavior=None</em>, <em>default_root_object=None</em>, <em>enabled=None</em>, <em>http_version=None</em>, <em>is_ipv6_enabled=None</em>, <em>logging_config=None</em>, <em>ordered_cache_behaviors=None</em>, <em>origins=None</em>, <em>price_class=None</em>, <em>restrictions=None</em>, <em>retain_on_delete=None</em>, <em>tags=None</em>, <em>viewer_certificate=None</em>, <em>web_acl_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
 <p>For information about CloudFront distributions, see the
 [Amazon CloudFront Developer Guide][1]. For specific information about creating
@@ -22,7 +22,6 @@ want to wait, you need to use the <code class="docutils literal notranslate"><sp
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Extra CNAMEs (alternate domain names), if any, for
 this distribution.</li>
-<li><strong>cache_behaviors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <strong>Deprecated</strong>, use <code class="docutils literal notranslate"><span class="pre">ordered_cache_behavior</span></code> instead.</li>
 <li><strong>comment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Any comments you want to include about the
 distribution.</li>
 <li><strong>custom_error_responses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more custom error response elements (multiples allowed).</li>
@@ -40,17 +39,8 @@ distribution. Allowed values are <code class="docutils literal notranslate"><spa
 configuration that controls how logs are written
 to your distribution (maximum one).</li>
 <li><strong>ordered_cache_behaviors</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An ordered list of cache behaviors
-resource for this distribution. List from top to bottom</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+resource for this distribution. List from top to bottom
+in order of precedence. The topmost cache behavior will have precedence 0.</li>
 <li><strong>origins</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more origins for this
 distribution (multiples allowed).</li>
 <li><strong>price_class</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The price class for this distribution. One of
@@ -91,12 +81,6 @@ this distribution.</p>
 <dt id="pulumi_aws.cloudfront.Distribution.arn">
 <code class="descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_aws.cloudfront.Distribution.cache_behaviors">
-<code class="descname">cache_behaviors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.cache_behaviors" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Deprecated</strong>, use <code class="docutils literal notranslate"><span class="pre">ordered_cache_behavior</span></code> instead.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -201,10 +185,8 @@ to your distribution (maximum one).</p>
 <dt id="pulumi_aws.cloudfront.Distribution.ordered_cache_behaviors">
 <code class="descname">ordered_cache_behaviors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.ordered_cache_behaviors" title="Permalink to this definition">¶</a></dt>
 <dd><p>An ordered list of cache behaviors
-resource for this distribution. List from top to bottom</p>
-<ul class="simple">
-<li>in order of precedence. The topmost cache behavior will have precedence 0.</li>
-</ul>
+resource for this distribution. List from top to bottom
+in order of precedence. The topmost cache behavior will have precedence 0.</p>
 </dd></dl>
 
 <dl class="attribute">

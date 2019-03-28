@@ -162,7 +162,7 @@ AWS account and region the Stream is created in.</li>
 <li><strong>redshift_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration options if redshift is the destination.
 Using <code class="docutils literal notranslate"><span class="pre">redshift_configuration</span></code> requires the user to also specify a
 <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> block. More details are given below.</li>
-<li><strong>s3_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration options for the s3 destination (or the intermediate bucket if the destination
+<li><strong>s3_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Required for non-S3 destinations. For S3 destination, use <code class="docutils literal notranslate"><span class="pre">extended_s3_configuration</span></code> instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</li>
 <li><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</li>
@@ -213,7 +213,7 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.s3_configuration">
 <code class="descname">s3_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.s3_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configuration options for the s3 destination (or the intermediate bucket if the destination
+<dd><p>Required for non-S3 destinations. For S3 destination, use <code class="docutils literal notranslate"><span class="pre">extended_s3_configuration</span></code> instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.</p>
 </dd></dl>
 
@@ -347,8 +347,8 @@ scales elastically for real-time processing of streaming big data.</p>
 <li><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias aws/kinesis.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.</li>
-<li><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</li>
-<li><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of shards that the stream will use.
+<li><strong>retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Length of time data records are accessible after they are added to the stream. The maximum value of a stream’s retention period is 168 hours. Minimum value is 24. Default is 24.</li>
+<li><strong>shard_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of shards that the stream will use.
 Amazon has guidlines for specifying the Stream size that should be referenced
 when creating a Kinesis stream. See [Amazon Kinesis Streams][2] for more.</li>
 <li><strong>shard_level_metrics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch][3] for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.</li>

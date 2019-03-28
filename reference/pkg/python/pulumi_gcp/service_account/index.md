@@ -2,8 +2,13 @@
 <span id="service-account"></span><h1>service_account<a class="headerlink" href="#module-pulumi_gcp.service_account" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_gcp.service_account.Account">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>display_name=None</em>, <em>policy_data=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Account" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">Account</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>account_id=None</em>, <em>display_name=None</em>, <em>project=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.Account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows management of a <a class="reference external" href="https://cloud.google.com/compute/docs/access/service-accounts">Google Cloud Platform service account</a></p>
+<blockquote>
+<div>Creation of service accounts is eventually consistent, and that can lead to
+errors when you try to apply ACLs to service accounts immediately after
+creation. If using these resources in the same config, you can add a
+<cite>``sleep`</cite> using <code class="docutils literal notranslate"><span class="pre">local-exec</span></code> &lt;<a class="reference external" href="https://github.com/hashicorp/terraform/issues/17726#issuecomment-377357866">https://github.com/hashicorp/terraform/issues/17726#issuecomment-377357866</a>&gt;`_.</div></blockquote>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -11,13 +16,12 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service account ID.
-Changing this forces a new service account to be created.</li>
+<li><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The account id that is used to generate the service
+account email address and a stable unique id. It is unique within a project,
+must be 6-30 characters long, and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>
+to comply with RFC1035. Changing this forces a new service account to be created.</li>
 <li><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the service account.
 Can be updated without creating a new resource.</li>
-<li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source that represents
-the IAM policy that will be applied to the service account. The policy will be
-merged with any existing policy.</li>
 <li><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.</li>
 </ul>
@@ -28,8 +32,10 @@ Defaults to the provider project configuration.</li>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.Account.account_id">
 <code class="descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Account.account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service account ID.
-Changing this forces a new service account to be created.</p>
+<dd><p>The account id that is used to generate the service
+account email address and a stable unique id. It is unique within a project,
+must be 6-30 characters long, and match the regular expression <code class="docutils literal notranslate"><span class="pre">a-z</span></code>
+to comply with RFC1035. Changing this forces a new service account to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -51,14 +57,6 @@ that would grant the service account privileges.</p>
 <dt id="pulumi_gcp.service_account.Account.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Account.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The fully-qualified name of the service account.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pulumi_gcp.service_account.Account.policy_data">
-<code class="descname">policy_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.Account.policy_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source that represents
-the IAM policy that will be applied to the service account. The policy will be
-merged with any existing policy.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -116,7 +114,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.service_account.GetAccountKeyResult">
-<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountKeyResult</code><span class="sig-paren">(</span><em>key_algorithm=None</em>, <em>name=None</em>, <em>public_key=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountKeyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">GetAccountKeyResult</code><span class="sig-paren">(</span><em>key_algorithm=None</em>, <em>public_key=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.GetAccountKeyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAccountKey.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.GetAccountKeyResult.public_key">
@@ -173,7 +171,7 @@ that would grant the service account privileges.</p>
 <dl class="class">
 <dt id="pulumi_gcp.service_account.IAMBinding">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">IAMBinding</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>members=None</em>, <em>role=None</em>, <em>service_account_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
+<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource <strong>to configure permissions for who can edit the service account</strong>. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
 <p>Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_service_account_iam_policy</span></code>: Authoritative. Sets the IAM policy for the service account and replaces any existing policy already attached.</li>
@@ -194,7 +192,7 @@ that would grant the service account privileges.</p>
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">google_service_account_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
-<li><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service account id to apply policy to.</li>
+<li><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</li>
 </ul>
 </td>
 </tr>
@@ -217,7 +215,7 @@ that would grant the service account privileges.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.IAMBinding.service_account_id">
 <code class="descname">service_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.IAMBinding.service_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service account id to apply policy to.</p>
+<dd><p>The fully-qualified name of the service account to apply policy to.</p>
 </dd></dl>
 
 <dl class="method">
@@ -263,7 +261,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.service_account.IAMMember">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">IAMMember</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>member=None</em>, <em>role=None</em>, <em>service_account_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
+<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource <strong>to configure permissions for who can edit the service account</strong>. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
 <p>Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_service_account_iam_policy</span></code>: Authoritative. Sets the IAM policy for the service account and replaces any existing policy already attached.</li>
@@ -284,7 +282,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">google_service_account_iam_binding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</li>
-<li><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service account id to apply policy to.</li>
+<li><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</li>
 </ul>
 </td>
 </tr>
@@ -307,7 +305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.IAMMember.service_account_id">
 <code class="descname">service_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.IAMMember.service_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service account id to apply policy to.</p>
+<dd><p>The fully-qualified name of the service account to apply policy to.</p>
 </dd></dl>
 
 <dl class="method">
@@ -353,7 +351,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.service_account.IAMPolicy">
 <em class="property">class </em><code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">IAMPolicy</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>policy_data=None</em>, <em>service_account_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.IAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource to configure permissions for who can edit the service account. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
+<dd><p>When managing IAM roles, you can treat a service account either as a resource or as an identity. This resource is to add iam policy bindings to a service account resource <strong>to configure permissions for who can edit the service account</strong>. To configure permissions for a service account to act as an identity that can manage other GCP resources, use the google_project_iam set of resources.</p>
 <p>Three different resources help you manage your IAM policy for a service account. Each of these resources serves a different use case:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">google_service_account_iam_policy</span></code>: Authoritative. Sets the IAM policy for the service account and replaces any existing policy already attached.</li>
@@ -373,7 +371,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
 a <code class="docutils literal notranslate"><span class="pre">google_iam_policy</span></code> data source.</li>
-<li><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service account id to apply policy to.</li>
+<li><strong>service_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-qualified name of the service account to apply policy to.</li>
 </ul>
 </td>
 </tr>
@@ -395,7 +393,7 @@ a <code class="docutils literal notranslate"><span class="pre">google_iam_policy
 <dl class="attribute">
 <dt id="pulumi_gcp.service_account.IAMPolicy.service_account_id">
 <code class="descname">service_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.service_account.IAMPolicy.service_account_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The service account id to apply policy to.</p>
+<dd><p>The fully-qualified name of the service account to apply policy to.</p>
 </dd></dl>
 
 <dl class="method">
@@ -602,7 +600,7 @@ the official <a class="reference external" href="https://cloud.google.com/comput
 
 <dl class="function">
 <dt id="pulumi_gcp.service_account.get_account_key">
-<code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">get_account_key</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>public_key_type=None</em>, <em>service_account_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account_key" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_gcp.service_account.</code><code class="descname">get_account_key</code><span class="sig-paren">(</span><em>name=None</em>, <em>project=None</em>, <em>public_key_type=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.service_account.get_account_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get service account public key. For more information, see <a class="reference external" href="https://cloud.google.com/iam/docs/creating-managing-service-account-keys">the official documentation</a> and <a class="reference external" href="https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get">API</a>.</p>
 </dd></dl>
 

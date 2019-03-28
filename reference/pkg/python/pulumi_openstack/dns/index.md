@@ -337,7 +337,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.dns.get_dns_zone">
-<code class="descclassname">pulumi_openstack.dns.</code><code class="descname">get_dns_zone</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>transferred_at=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>updated_at=None</em>, <em>version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.get_dns_zone" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.dns.</code><code class="descname">get_dns_zone</code><span class="sig-paren">(</span><em>attributes=None</em>, <em>created_at=None</em>, <em>description=None</em>, <em>email=None</em>, <em>masters=None</em>, <em>name=None</em>, <em>pool_id=None</em>, <em>project_id=None</em>, <em>region=None</em>, <em>serial=None</em>, <em>status=None</em>, <em>transferred_at=None</em>, <em>ttl=None</em>, <em>type=None</em>, <em>updated_at=None</em>, <em>version=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.dns.get_dns_zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack DNS zone.</p>
 </dd></dl>
 

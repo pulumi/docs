@@ -14,7 +14,7 @@
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
 <li><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable monitoring and feedback reporting. Setting to <code class="docutils literal notranslate"><span class="pre">false</span></code> is equivalent to “suspending” GuardDuty. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</li>
-<li><strong>finding_publishing_frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the frequency of notifications sent for subsequent finding occurrences. Valid values: <code class="docutils literal notranslate"><span class="pre">FIFTEEN_MINUTES,</span> <span class="pre">ONE_HOUR,</span> <span class="pre">SIX_HOURS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">AWS Documentation</a> for more information.</li>
+<li><strong>finding_publishing_frequency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. For standalone and GuardDuty master accounts, it must be configured in Terraform to enable drift detection. Valid values for standalone and master accounts: <code class="docutils literal notranslate"><span class="pre">FIFTEEN_MINUTES</span></code>, <code class="docutils literal notranslate"><span class="pre">ONE_HOUR</span></code>, <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">AWS Documentation</a> for more information.</li>
 </ul>
 </td>
 </tr>
@@ -35,7 +35,7 @@
 <dl class="attribute">
 <dt id="pulumi_aws.guardduty.Detector.finding_publishing_frequency">
 <code class="descname">finding_publishing_frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.guardduty.Detector.finding_publishing_frequency" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the frequency of notifications sent for subsequent finding occurrences. Valid values: <code class="docutils literal notranslate"><span class="pre">FIFTEEN_MINUTES,</span> <span class="pre">ONE_HOUR,</span> <span class="pre">SIX_HOURS</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">AWS Documentation</a> for more information.</p>
+<dd><p>Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. For standalone and GuardDuty master accounts, it must be configured in Terraform to enable drift detection. Valid values for standalone and master accounts: <code class="docutils literal notranslate"><span class="pre">FIFTEEN_MINUTES</span></code>, <code class="docutils literal notranslate"><span class="pre">ONE_HOUR</span></code>, <code class="docutils literal notranslate"><span class="pre">SIX_HOURS</span></code>. See <a class="reference external" href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency">AWS Documentation</a> for more information.</p>
 </dd></dl>
 
 <dl class="method">
@@ -153,6 +153,76 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.guardduty.IPSet.translate_input_property">
 <code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.IPSet.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.guardduty.InviteAccepter">
+<em class="property">class </em><code class="descclassname">pulumi_aws.guardduty.</code><code class="descname">InviteAccepter</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>detector_id=None</em>, <em>master_account_id=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
+<li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
+<li><strong>detector_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The detector ID of the member GuardDuty account.</li>
+<li><strong>master_account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS account ID for master account.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="pulumi_aws.guardduty.InviteAccepter.detector_id">
+<code class="descname">detector_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter.detector_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The detector ID of the member GuardDuty account.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.guardduty.InviteAccepter.master_account_id">
+<code class="descname">master_account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter.master_account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWS account ID for master account.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.guardduty.InviteAccepter.translate_output_property">
+<code class="descname">translate_output_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prop</strong> (<em>str</em>) – A property name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A potentially transformed property name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.guardduty.InviteAccepter.translate_input_property">
+<code class="descname">translate_input_property</code><span class="sig-paren">(</span><em>prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.guardduty.InviteAccepter.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <table class="docutils field-list" frame="void" rules="none">

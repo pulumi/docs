@@ -2,7 +2,7 @@
 <span id="wafregional"></span><h1>wafregional<a class="headerlink" href="#module-pulumi_aws.wafregional" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_aws.wafregional.ByteMatchSet">
-<em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">ByteMatchSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>byte_match_tuple=None</em>, <em>byte_match_tuples=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.wafregional.</code><code class="descname">ByteMatchSet</code><span class="sig-paren">(</span><em>resource_name</em>, <em>opts=None</em>, <em>byte_match_tuples=None</em>, <em>name=None</em>, <em>__name__=None</em>, <em>__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a WAF Regional Byte Match Set Resource for use with Application Load Balancer.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -11,7 +11,6 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</li>
 <li><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</li>
-<li><strong>byte_match_tuple</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <strong>Deprecated</strong>, use <code class="docutils literal notranslate"><span class="pre">byte_match_tuples</span></code> instead.</li>
 <li><strong>byte_match_tuples</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the ByteMatchSet.</li>
 </ul>
@@ -19,12 +18,6 @@
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="pulumi_aws.wafregional.ByteMatchSet.byte_match_tuple">
-<code class="descname">byte_match_tuple</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet.byte_match_tuple" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Deprecated</strong>, use <code class="docutils literal notranslate"><span class="pre">byte_match_tuples</span></code> instead.</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="pulumi_aws.wafregional.ByteMatchSet.byte_match_tuples">
 <code class="descname">byte_match_tuples</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.wafregional.ByteMatchSet.byte_match_tuples" title="Permalink to this definition">¶</a></dt>
@@ -238,7 +231,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or description of the rule.</li>
 <li><strong>predicates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One of ByteMatchSet, IPSet, SizeConstraintSet, SqlInjectionMatchSet, or XssMatchSet objects to include in a rule.</li>
 <li><strong>rate_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Valid value is IP.</li>
-<li><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.</li>
+<li><strong>rate_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 2000.</li>
 </ul>
 </td>
 </tr>

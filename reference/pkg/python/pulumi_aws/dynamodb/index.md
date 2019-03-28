@@ -116,13 +116,13 @@ definition after you have created the resource.</li>
 <li><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the index</li>
 <li><strong>point_in_time_recovery</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Point-in-time recovery options.</li>
 <li><strong>range_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the range key; must be defined</li>
-<li><strong>read_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</li>
+<li><strong>read_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</li>
 <li><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn’t specified.</li>
 <li><strong>stream_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Streams are to be enabled (true) or disabled (false).</li>
 <li><strong>stream_view_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When an item in the table is modified, StreamViewType determines what information is written to the table’s stream. Valid values are <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">OLD_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_AND_OLD_IMAGES</span></code>.</li>
 <li><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of tags to populate on the created table.</li>
 <li><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Defines ttl, has two properties, and can only be specified once:</li>
-<li><strong>write_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.</li>
+<li><strong>write_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.</li>
 </ul>
 </td>
 </tr>

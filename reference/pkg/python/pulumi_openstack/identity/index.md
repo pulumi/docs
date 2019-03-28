@@ -412,14 +412,13 @@ this resource.</p>
 <li><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to assign the role in.</li>
 <li><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group to assign the role to.</li>
 <li><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project to assign the role in.</li>
+<li><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role to assign.</li>
+<li><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user to assign the role to.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>:param pulumi.Input[str] region
-:param pulumi.Input[str] role_id: The role to assign.
-:param pulumi.Input[str] user_id: The user to assign the role to.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.RoleAssignment.domain_id">
 <code class="descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment.domain_id" title="Permalink to this definition">¶</a></dt>
@@ -661,7 +660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_auth_scope">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_auth_scope</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_auth_scope" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_auth_scope</code><span class="sig-paren">(</span><em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_auth_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.</p>
@@ -669,33 +668,33 @@ the username or project name currently in use.</p>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_endpoint">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_endpoint</code><span class="sig-paren">(</span><em>interface=None</em>, <em>region=None</em>, <em>service_id=None</em>, <em>service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_endpoint" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_endpoint</code><span class="sig-paren">(</span><em>interface=None</em>, <em>region=None</em>, <em>service_id=None</em>, <em>service_name=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack endpoint.</p>
 <p>Note: This usually requires admin privileges.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_group">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_group" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_group</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack group.</p>
 <p>Note: This usually requires admin privileges.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_project">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_project</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_project</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>is_domain=None</em>, <em>name=None</em>, <em>parent_id=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack project.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_role">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_role" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_role</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>name=None</em>, <em>region=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack role.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_openstack.identity.get_user">
-<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>idp_id=None</em>, <em>name=None</em>, <em>password_expires_at=None</em>, <em>protocol_id=None</em>, <em>region=None</em>, <em>unique_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_user" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pulumi_openstack.identity.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>domain_id=None</em>, <em>enabled=None</em>, <em>idp_id=None</em>, <em>name=None</em>, <em>password_expires_at=None</em>, <em>protocol_id=None</em>, <em>region=None</em>, <em>unique_id=None</em>, <em>opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack user.</p>
 </dd></dl>
 

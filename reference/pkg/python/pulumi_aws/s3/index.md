@@ -1027,7 +1027,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.s3.GetBucketResult">
-<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">GetBucketResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>bucket_domain_name=None</em>, <em>hosted_zone_id=None</em>, <em>region=None</em>, <em>website_domain=None</em>, <em>website_endpoint=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pulumi_aws.s3.</code><code class="descname">GetBucketResult</code><span class="sig-paren">(</span><em>arn=None</em>, <em>bucket_domain_name=None</em>, <em>bucket_regional_domain_name=None</em>, <em>hosted_zone_id=None</em>, <em>region=None</em>, <em>website_domain=None</em>, <em>website_endpoint=None</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getBucket.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.GetBucketResult.arn">
@@ -1039,6 +1039,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.GetBucketResult.bucket_domain_name">
 <code class="descname">bucket_domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult.bucket_domain_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bucket domain name. Will be of format <code class="docutils literal notranslate"><span class="pre">bucketname.s3.amazonaws.com</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.GetBucketResult.bucket_regional_domain_name">
+<code class="descname">bucket_regional_domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.GetBucketResult.bucket_regional_domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The bucket region-specific domain name. The bucket domain name including the region name, please refer <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">here</a> for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent <a class="reference external" href="https://forums.aws.amazon.com/thread.jspa?threadID=216814">redirect issues</a> from CloudFront to S3 Origin URL.</p>
 </dd></dl>
 
 <dl class="attribute">
